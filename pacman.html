@@ -303,16 +303,35 @@
             });
         }
         
-        // Create rose
+        // Create rose at a random open location
         function createRose() {
-            const rose = document.createElement('div');
-            rose.className = 'rose';
-            rose.id = 'rose';
-            const randomX = Math.random() * (gameSize - 40) + 20;
-            const randomY = Math.random() * (gameSize - 40) + 20;
-            rose.style.left = randomX + 'px';
-            rose.style.top = randomY + 'px';
-            gameArea.appendChild(rose);
+            if (document.getElementById('rose')) return; // Only one rose at a time
+            let tries = 0;
+            while (tries < 100) {
+                const randomX = Math.floor(Math.random() * 24) * gridSize + 10;
+                const randomY = Math.floor(Math.random() * 24) * gridSize + 10;
+                if (!isInWall(randomX, randomY)) {
+                    const rose = document.createElement('div');
+                    rose.className = 'rose';
+                    rose.id = 'rose';
+                    rose.style.left = randomX + 'px';
+                    rose.style.top = randomY + 'px';
+                    gameArea.appendChild(rose);
+                    break;
+                }
+                tries++;
+            }
+        }
+
+        // Rose respawn timer
+        function scheduleRose() {
+            const minDelay = 7000, maxDelay = 12000;
+            setTimeout(() => {
+                if (!document.getElementById('rose') && !gameState.gameOver) {
+                    createRose();
+                }
+                if (!gameState.gameOver) scheduleRose();
+            }, Math.random() * (maxDelay - minDelay) + minDelay);
         }
         
         function isInWall(x, y) {
@@ -427,7 +446,6 @@
             gameState.poweredUp = true;
             document.getElementById('powerStatus').textContent = 'Yes!';
             document.getElementById('powerIndicator').style.display = 'block';
-            
             setTimeout(() => {
                 gameState.poweredUp = false;
                 document.getElementById('powerStatus').textContent = 'No';
@@ -435,25 +453,50 @@
             }, 5000);
         }
         
+        // Track Pac-Man's facing direction
+        let pacmanDirection = 'up';
+
         function shootHeart() {
             if (!gameState.poweredUp) return;
-            
             const heart = document.createElement('div');
             heart.className = 'heart';
             heart.style.left = gameState.pacmanX + 'px';
             heart.style.top = gameState.pacmanY + 'px';
             gameArea.appendChild(heart);
-            
-            let heartY = gameState.pacmanY;
+            let x = gameState.pacmanX;
+            let y = gameState.pacmanY;
+            let dx = 0, dy = 0;
+            switch (pacmanDirection) {
+                case 'up': dy = -10; break;
+                case 'down': dy = 10; break;
+                case 'left': dx = -10; break;
+                case 'right': dx = 10; break;
+            }
             const interval = setInterval(() => {
-                heartY -= 10;
-                heart.style.top = heartY + 'px';
-                
-                if (heartY < 0) {
+                x += dx;
+                y += dy;
+                heart.style.left = x + 'px';
+                heart.style.top = y + 'px';
+                // Remove if out of bounds or hits wall
+                if (x < 0 || x > 490 || y < 0 || y > 490 || isInWall(x, y)) {
                     heart.remove();
                     clearInterval(interval);
+                    return;
                 }
-            }, 50);
+                // Check for ghost hit
+                const ghosts = document.querySelectorAll('.ghost');
+                ghosts.forEach(ghost => {
+                    const ghostX = parseInt(ghost.style.left);
+                    const ghostY = parseInt(ghost.style.top);
+                    if (Math.abs(x - ghostX) < 18 && Math.abs(y - ghostY) < 18) {
+                        ghost.remove();
+                        heart.remove();
+                        gameState.score += 100;
+                        document.getElementById('score').textContent = gameState.score;
+                        clearInterval(interval);
+                    }
+                });
+            }, 30);
         }
         
         function endGame(won = false) {
@@ -474,6 +517,7 @@
         createPellets();
         createGhosts();
         createRose();
+        scheduleRose();
         
         // Event listeners
         document.addEventListener('keydown', (e) => {
@@ -485,18 +529,22 @@
             switch (e.key) {
                 case 'ArrowUp':
                     newY -= step;
+                    pacmanDirection = 'up';
                     moved = true;
                     break;
                 case 'ArrowDown':
                     newY += step;
+                    pacmanDirection = 'down';
                     moved = true;
                     break;
                 case 'ArrowLeft':
                     newX -= step;
+                    pacmanDirection = 'left';
                     moved = true;
                     break;
                 case 'ArrowRight':
                     newX += step;
+                    pacmanDirection = 'right';
                     moved = true;
                     break;
                 case ' ':
