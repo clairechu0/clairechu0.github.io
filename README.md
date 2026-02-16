@@ -1,3 +1,5 @@
+# clairechu0.github.io
+
 ## Agentic Programming and Workflow: From Planning to Implementation
 
 This project leveraged agentic programming and workflow automation to move from high-level planning to concrete implementation. The process was structured as follows:
@@ -31,7 +33,7 @@ This project leveraged agentic programming and workflow automation to move from 
 
 **Summary:**
 Agentic programming and workflow automation, starting from a comprehensive plan prompt, enabled a seamless transition from requirements to implementation. By modularizing logic into agents, skills, and prompts, and automating updates with workflows and scripts, the project achieved both flexibility and reliability.
-# clairechu0.github.io
+
 
 ## Case Study: Using AI Copilot to Build a Personal Website
 
