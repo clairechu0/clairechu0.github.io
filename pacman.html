@@ -7,184 +7,469 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Valentine's Pac-Man Game Styles */
+        body {
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            font-family: 'Arial', sans-serif;
+        }
+        
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .game-info {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .game-info div {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff1493;
+        }
+        
         #pacman-game {
-            width: 400px;
-            height: 400px;
-            background-color: pink;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(to bottom, #fff0f5, #ffc0cb);
             position: relative;
             margin: 0 auto;
-            border: 5px solid red;
-            display: grid;
-            grid-template-columns: repeat(20, 20px);
-            grid-template-rows: repeat(20, 20px);
+            border: 8px solid #ff1493;
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.6);
+            overflow: hidden;
+            border-radius: 10px;
         }
+        
         .pacman {
             width: 20px;
             height: 20px;
-            background-color: yellow;
+            background-color: #ffff00;
             border-radius: 50%;
             position: absolute;
+            box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+            transition: all 0.1s ease;
         }
+        
         .ghost {
             width: 20px;
             height: 20px;
-            background-color: purple;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), #8B008B);
             border-radius: 50%;
             position: absolute;
+            border: 2px solid #6B0061;
+            box-shadow: 0 0 8px rgba(139, 0, 139, 0.6);
+            transition: all 0.1s ease;
         }
+        
+        .ghost.angry {
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), #FF0000);
+            border: 2px solid #8B0000;
+        }
+        
         .pellet {
-            width: 10px;
-            height: 10px;
-            background-color: white;
+            width: 6px;
+            height: 6px;
+            background-color: #ffffff;
             border-radius: 50%;
             position: absolute;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
         }
+        
         .rose {
-            width: 15px;
-            height: 15px;
-            background-color: red;
+            width: 18px;
+            height: 18px;
+            background: radial-gradient(circle at 30% 30%, #ff9999, #cc0000);
             clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 82%, 18% 100%, 0% 38%);
             position: absolute;
+            box-shadow: 0 0 12px rgba(255, 0, 0, 0.9);
+            animation: pulse 0.6s infinite;
+        }
+        
+        .heart {
+            width: 12px;
+            height: 12px;
+            background: #ff1493;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 82%, 18% 100%, 0% 38%);
+            position: absolute;
+            box-shadow: 0 0 8px rgba(255, 20, 147, 1);
+            animation: shoot 0.3s ease-out;
+        }
+        
+        .wall {
+            background-color: #8B0000;
+            position: absolute;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        @keyframes shoot {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+        
+        .instructions {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            max-width: 500px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .instructions h3 {
+            color: #ff1493;
+            margin-top: 0;
+        }
+        
+        .instructions ul {
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #ff1493;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            z-index: 100;
+            display: none;
+            font-size: 24px;
+        }
+        
+        .power-up-indicator {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 215, 0, 0.9);
+            color: #ff1493;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none;
+            z-index: 50;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Valentine's Pac-Man</h1>
+        <h1>💕 Valentine's Pac-Man 💕</h1>
         <nav>
             <ul>
-                <li><a href="homepage.html">Homepage</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="papers.html">Paper Listing</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Play Valentine's Pac-Man</h2>
-            <p>Instructions:</p>
+        <div class="game-info">
+            <div>Score: <span id="score">0</span></div>
+            <div>Lives: <span id="lives">3</span></div>
+            <div>Powered Up: <span id="powerStatus">No</span></div>
+        </div>
+        
+        <div id="pacman-game">
+            <div class="power-up-indicator" id="powerIndicator">🌹 POWERED UP! 🌹</div>
+            <div class="game-over" id="gameOverScreen"></div>
+        </div>
+        
+        <div class="instructions">
+            <h3>🎮 How to Play:</h3>
             <ul>
-                <li>Use the arrow keys to move Pac-Man around the maze.</li>
-                <li>Eat all the dots (pellets) to win the game.</li>
-                <li>Avoid the ghosts! If they catch you, you lose a life.</li>
-                <li>Collect the Valentine's rose 🌹 to enter a powered-up state.</li>
-                <li>While powered up, press the spacebar to shoot hearts 💕 and eliminate ghosts.</li>
+                <li>✨ Use arrow keys to move Pac-Man around the maze.</li>
+                <li>⚪ Eat all the white dots (pellets) to gain points.</li>
+                <li>👻 Avoid the ghosts! They will chase you!</li>
+                <li>🌹 Collect the rose to enter powered-up mode.</li>
+                <li>💕 While powered up, press spacebar to shoot hearts and eliminate ghosts.</li>
+                <li>❤️ Power-up lasts 5 seconds. Use it wisely!</li>
+                <li>🎯 Eat all pellets to win!</li>
             </ul>
-            <div id="pacman-game">
-                <!-- Maze layout with dots and ghosts -->
-                <div class="pellet" style="grid-column: 1; grid-row: 1;"></div>
-                <div class="pellet" style="grid-column: 2; grid-row: 1;"></div>
-                <div class="pellet" style="grid-column: 3; grid-row: 1;"></div>
-                <div class="ghost" id="ghost1" style="grid-column: 10; grid-row: 10;"></div>
-                <div class="ghost" id="ghost2" style="grid-column: 15; grid-row: 15;"></div>
-                <div class="rose" id="rose" style="grid-column: 5; grid-row: 5;"></div>
-                <div class="pacman" id="pacman" style="grid-column: 1; grid-row: 1;"></div>
-            </div>
-        </section>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2026 My Personal Website</p>
+        <p>&copy; 2026 My Personal Website - Made with ❤️</p>
     </footer>
+    
     <script>
-        // Valentine's Pac-Man Game Logic
-        const pacman = document.getElementById('pacman');
         const gameArea = document.getElementById('pacman-game');
-        const ghosts = document.querySelectorAll('.ghost');
-        const pellets = document.querySelectorAll('.pellet');
-        const rose = document.getElementById('rose');
-        const step = 20;
-        let poweredUp = false;
-
-        document.addEventListener('keydown', (event) => {
-            const pacmanStyle = window.getComputedStyle(pacman);
-            const currentColumn = parseInt(pacmanStyle.gridColumnStart);
-            const currentRow = parseInt(pacmanStyle.gridRowStart);
-
-            switch (event.key) {
-                case 'ArrowUp':
-                    if (currentRow > 1) pacman.style.gridRowStart = currentRow - 1;
-                    break;
-                case 'ArrowDown':
-                    if (currentRow < 20) pacman.style.gridRowStart = currentRow + 1;
-                    break;
-                case 'ArrowLeft':
-                    if (currentColumn > 1) pacman.style.gridColumnStart = currentColumn - 1;
-                    break;
-                case 'ArrowRight':
-                    if (currentColumn < 20) pacman.style.gridColumnStart = currentColumn + 1;
-                    break;
-                case ' ': // Spacebar to shoot hearts
-                    if (poweredUp) shootHeart(currentColumn, currentRow);
-                    break;
-            }
-
-            checkCollisions();
-        });
-
-        function checkCollisions() {
-            // Check for pellet collisions
-            pellets.forEach((pellet) => {
-                const pelletStyle = window.getComputedStyle(pellet);
-                if (
-                    pelletStyle.gridColumnStart === pacman.style.gridColumnStart &&
-                    pelletStyle.gridRowStart === pacman.style.gridRowStart
-                ) {
-                    pellet.remove();
-                }
-            });
-
-            // Check for rose collision
-            const roseStyle = window.getComputedStyle(rose);
-            if (
-                roseStyle.gridColumnStart === pacman.style.gridColumnStart &&
-                roseStyle.gridRowStart === pacman.style.gridRowStart
-            ) {
-                poweredUp = true;
-                rose.remove();
-                setTimeout(() => (poweredUp = false), 5000); // Power-up lasts 5 seconds
-            }
-
-            // Check for ghost collisions
-            ghosts.forEach((ghost) => {
-                const ghostStyle = window.getComputedStyle(ghost);
-                if (
-                    ghostStyle.gridColumnStart === pacman.style.gridColumnStart &&
-                    ghostStyle.gridRowStart === pacman.style.gridRowStart
-                ) {
-                    alert('Game Over! A ghost caught you.');
-                    location.reload();
-                }
+        const pacman = document.createElement('div');
+        pacman.className = 'pacman';
+        pacman.id = 'pacman';
+        gameArea.appendChild(pacman);
+        
+        const gameState = {
+            pacmanX: 240,
+            pacmanY: 240,
+            score: 0,
+            lives: 3,
+            poweredUp: false,
+            gameOver: false,
+            pelletCount: 0
+        };
+        
+        const gridSize = 20;
+        const gameSize = 500;
+        
+        // Create maze walls
+        function createMaze() {
+            const walls = [
+                {x: 0, y: 0, width: 500, height: 20},
+                {x: 0, y: 0, width: 20, height: 500},
+                {x: 480, y: 0, width: 20, height: 500},
+                {x: 0, y: 480, width: 500, height: 20},
+                {x: 100, y: 100, width: 300, height: 20},
+                {x: 100, y: 100, width: 20, height: 200},
+                {x: 100, y: 280, width: 300, height: 20},
+                {x: 380, y: 100, width: 20, height: 200},
+            ];
+            
+            walls.forEach(wall => {
+                const wallEl = document.createElement('div');
+                wallEl.className = 'wall';
+                wallEl.style.left = wall.x + 'px';
+                wallEl.style.top = wall.y + 'px';
+                wallEl.style.width = wall.width + 'px';
+                wallEl.style.height = wall.height + 'px';
+                gameArea.appendChild(wallEl);
             });
         }
-
-        function shootHeart(column, row) {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.style.gridColumnStart = column;
-            heart.style.gridRowStart = row;
-            gameArea.appendChild(heart);
-
-            const interval = setInterval(() => {
-                const heartRow = parseInt(heart.style.gridRowStart);
-                if (heartRow > 1) {
-                    heart.style.gridRowStart = heartRow - 1;
+        
+        // Create pellets
+        function createPellets() {
+            for (let x = gridSize; x < gameSize; x += gridSize) {
+                for (let y = gridSize; y < gameSize; y += gridSize) {
+                    if (!isInWall(x, y)) {
+                        const pellet = document.createElement('div');
+                        pellet.className = 'pellet';
+                        pellet.style.left = (x + 7) + 'px';
+                        pellet.style.top = (y + 7) + 'px';
+                        gameArea.appendChild(pellet);
+                        gameState.pelletCount++;
+                    }
+                }
+            }
+        }
+        
+        // Create ghosts
+        function createGhosts() {
+            const ghostPositions = [{x: 100, y: 100}, {x: 350, y: 350}, {x: 350, y: 100}];
+            ghostPositions.forEach((pos, index) => {
+                const ghost = document.createElement('div');
+                ghost.className = 'ghost';
+                ghost.id = 'ghost' + index;
+                ghost.style.left = pos.x + 'px';
+                ghost.style.top = pos.y + 'px';
+                gameArea.appendChild(ghost);
+            });
+        }
+        
+        // Create rose
+        function createRose() {
+            const rose = document.createElement('div');
+            rose.className = 'rose';
+            rose.id = 'rose';
+            const randomX = Math.random() * (gameSize - 40) + 20;
+            const randomY = Math.random() * (gameSize - 40) + 20;
+            rose.style.left = randomX + 'px';
+            rose.style.top = randomY + 'px';
+            gameArea.appendChild(rose);
+        }
+        
+        function isInWall(x, y) {
+            const walls = [
+                {x: 100, y: 100, width: 300, height: 20},
+                {x: 100, y: 100, width: 20, height: 200},
+                {x: 100, y: 280, width: 300, height: 20},
+                {x: 380, y: 100, width: 20, height: 200},
+            ];
+            return walls.some(w => x >= w.x && x < w.x + w.width && y >= w.y && y < w.y + w.height);
+        }
+        
+        // Move ghosts towards Pac-Man
+        function moveGhosts() {
+            const ghosts = document.querySelectorAll('.ghost');
+            ghosts.forEach(ghost => {
+                const ghostX = parseInt(ghost.style.left);
+                const ghostY = parseInt(ghost.style.top);
+                
+                let newX = ghostX;
+                let newY = ghostY;
+                
+                if (Math.random() > 0.5) {
+                    if (gameState.pacmanX > ghostX) newX += 5;
+                    else if (gameState.pacmanX < ghostX) newX -= 5;
                 } else {
+                    if (gameState.pacmanY > ghostY) newY += 5;
+                    else if (gameState.pacmanY < ghostY) newY -= 5;
+                }
+                
+                newX = Math.max(10, Math.min(470, newX));
+                newY = Math.max(10, Math.min(470, newY));
+                
+                ghost.style.left = newX + 'px';
+                ghost.style.top = newY + 'px';
+            });
+        }
+        
+        // Check collisions
+        function checkCollisions() {
+            // Check pellet collisions
+            const pellets = document.querySelectorAll('.pellet');
+            pellets.forEach(pellet => {
+                const pelletX = parseInt(pellet.style.left);
+                const pelletY = parseInt(pellet.style.top);
+                if (Math.abs(gameState.pacmanX - pelletX) < 15 && Math.abs(gameState.pacmanY - pelletY) < 15) {
+                    pellet.remove();
+                    gameState.score += 10;
+                    document.getElementById('score').textContent = gameState.score;
+                }
+            });
+            
+            // Check rose collision
+            const rose = document.getElementById('rose');
+            if (rose) {
+                const roseX = parseInt(rose.style.left);
+                const roseY = parseInt(rose.style.top);
+                if (Math.abs(gameState.pacmanX - roseX) < 20 && Math.abs(gameState.pacmanY - roseY) < 20) {
+                    activatePowerUp();
+                    rose.remove();
+                }
+            }
+            
+            // Check ghost collisions
+            const ghosts = document.querySelectorAll('.ghost');
+            ghosts.forEach(ghost => {
+                const ghostX = parseInt(ghost.style.left);
+                const ghostY = parseInt(ghost.style.top);
+                if (Math.abs(gameState.pacmanX - ghostX) < 20 && Math.abs(gameState.pacmanY - ghostY) < 20) {
+                    if (gameState.poweredUp) {
+                        ghost.remove();
+                        gameState.score += 100;
+                    } else {
+                        gameState.lives--;
+                        document.getElementById('lives').textContent = gameState.lives;
+                        if (gameState.lives === 0) {
+                            endGame();
+                        }
+                    }
+                }
+            });
+            
+            // Check win condition
+            if (document.querySelectorAll('.pellet').length === 0) {
+                endGame(true);
+            }
+        }
+        
+        function activatePowerUp() {
+            gameState.poweredUp = true;
+            document.getElementById('powerStatus').textContent = 'Yes!';
+            document.getElementById('powerIndicator').style.display = 'block';
+            
+            setTimeout(() => {
+                gameState.poweredUp = false;
+                document.getElementById('powerStatus').textContent = 'No';
+                document.getElementById('powerIndicator').style.display = 'none';
+            }, 5000);
+        }
+        
+        function shootHeart() {
+            if (!gameState.poweredUp) return;
+            
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.left = gameState.pacmanX + 'px';
+            heart.style.top = gameState.pacmanY + 'px';
+            gameArea.appendChild(heart);
+            
+            let heartY = gameState.pacmanY;
+            const interval = setInterval(() => {
+                heartY -= 10;
+                heart.style.top = heartY + 'px';
+                
+                if (heartY < 0) {
                     heart.remove();
                     clearInterval(interval);
                 }
-
-                ghosts.forEach((ghost) => {
-                    const ghostStyle = window.getComputedStyle(ghost);
-                    if (
-                        ghostStyle.gridColumnStart === heart.style.gridColumnStart &&
-                        ghostStyle.gridRowStart === heart.style.gridRowStart
-                    ) {
-                        ghost.remove();
-                        heart.remove();
-                        clearInterval(interval);
-                    }
-                });
-            }, 200);
+            }, 50);
         }
+        
+        function endGame(won = false) {
+            gameState.gameOver = true;
+            const screen = document.getElementById('gameOverScreen');
+            if (won) {
+                screen.textContent = '🎉 YOU WIN! 🎉\nFinal Score: ' + gameState.score;
+            } else {
+                screen.textContent = '💔 GAME OVER 💔\nFinal Score: ' + gameState.score;
+            }
+            screen.style.display = 'block';
+        }
+        
+        // Initialize game
+        pacman.style.left = gameState.pacmanX + 'px';
+        pacman.style.top = gameState.pacmanY + 'px';
+        createMaze();
+        createPellets();
+        createGhosts();
+        createRose();
+        
+        // Event listeners
+        document.addEventListener('keydown', (e) => {
+            if (gameState.gameOver) return;
+            
+            const step = 15;
+            switch (e.key) {
+                case 'ArrowUp':
+                    if (gameState.pacmanY > 10) gameState.pacmanY -= step;
+                    break;
+                case 'ArrowDown':
+                    if (gameState.pacmanY < 470) gameState.pacmanY += step;
+                    break;
+                case 'ArrowLeft':
+                    if (gameState.pacmanX > 10) gameState.pacmanX -= step;
+                    break;
+                case 'ArrowRight':
+                    if (gameState.pacmanX < 470) gameState.pacmanX += step;
+                    break;
+                case ' ':
+                    shootHeart();
+                    e.preventDefault();
+                    break;
+            }
+            
+            pacman.style.left = gameState.pacmanX + 'px';
+            pacman.style.top = gameState.pacmanY + 'px';
+            checkCollisions();
+        });
+        
+        // Game loop
+        setInterval(() => {
+            if (!gameState.gameOver) {
+                moveGhosts();
+                checkCollisions();
+            }
+        }, 300);
     </script>
 </body>
 </html>
