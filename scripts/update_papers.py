@@ -7,7 +7,7 @@ def load_papers():
 
 # Update the HTML file with paper data
 def update_html(papers):
-    html_content = """
+    html_content = '''
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,27 +27,85 @@ def update_html(papers):
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Paper Feed</h2>
-            <ul>
-    """
-
-    for entry in papers['feed']['entry']:
-        title = entry['title']
-        pdf_url = next(link['@href'] for link in entry['link'] if link['@rel'] == 'related' and link['@type'] == 'application/pdf')
-        authors = [author['name'] for author in entry['author']]
-        html_content += f"<li><a href='{pdf_url}'>{title}</a> by {', '.join(authors)}</li>"
-
-    html_content += """
-            </ul>
-        </section>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search papers by title, author, or abstract...">
+            <button onclick="refreshPapers()">Clear</button>
+        </div>
+        <div class="paper-count">
+            Total Papers: <span id="paperCount">0</span>
+        </div>
+        <div class="papers-grid" id="papersContainer">
+            <!-- Papers will be loaded here by JavaScript -->
+        </div>
     </main>
     <footer>
-        <p>&copy; 2026 My Personal Website</p>
+        <p>🚀 This page auto-updates every midnight via GitHub Actions. &copy; 2026 My Personal Website</p>
     </footer>
+    <script>
+        let allPapers = [];
+        fetch('papers.json')
+            .then(response => response.json())
+            .then(data => {
+                const entries = data.feed.entry || [];
+                allPapers = entries.map(entry => {
+                    const links = Array.isArray(entry.link) ? entry.link : [entry.link];
+                    const pdfLink = links.find(link => link['@rel'] === 'related' && link['@type'] === 'application/pdf');
+                    const arxivLink = links.find(link => link['@rel'] === 'alternate');
+                    const authors = Array.isArray(entry.author) ? entry.author : [entry.author];
+                    return {
+                        title: entry.title,
+                        authors: authors.map(a => a.name).join(', '),
+                        abstract: entry.summary,
+                        pdf: pdfLink ? pdfLink['@href'] : '#',
+                        arxiv: arxivLink ? arxivLink['@href'] : '#',
+                        category: entry['arxiv:primary_category'] ? entry['arxiv:primary_category']['@term'] : '',
+                        date: entry.published ? entry.published.substring(0, 10) : ''
+                    };
+                });
+                displayPapers(allPapers);
+            });
+        function displayPapers(papers) {
+            const container = document.getElementById('papersContainer');
+            container.innerHTML = '';
+            if (papers.length === 0) return;
+            papers.forEach(paper => {
+                const card = document.createElement('div');
+                card.className = 'paper-card';
+                card.innerHTML = `
+                    <h3>${paper.title}</h3>
+                    <div class="paper-meta">
+                        <span>📅 ${paper.date}</span>
+                        <span style="background: #667eea; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.85em;">${paper.category}</span>
+                    </div>
+                    <div class="paper-authors">👥 ${paper.authors}</div>
+                    <div class="paper-abstract">${paper.abstract}</div>
+                    <div class="paper-links">
+                        <a href="${paper.pdf}" class="pdf-link" target="_blank">📄 Read PDF</a>
+                        <a href="${paper.arxiv}" class="arxiv-link" target="_blank">🔗 arXiv</a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            document.getElementById('paperCount').textContent = papers.length;
+        }
+        function filterPapers() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = allPapers.filter(paper => 
+                paper.title.toLowerCase().includes(searchTerm) ||
+                paper.authors.toLowerCase().includes(searchTerm) ||
+                paper.abstract.toLowerCase().includes(searchTerm)
+            );
+            displayPapers(filtered);
+        }
+        function refreshPapers() {
+            document.getElementById('searchInput').value = '';
+            displayPapers(allPapers);
+        }
+        document.getElementById('searchInput').addEventListener('input', filterPapers);
+    </script>
 </body>
 </html>
-"""
+'''
 
     with open("papers.html", "w") as file:
         file.write(html_content)
