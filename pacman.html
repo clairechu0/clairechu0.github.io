@@ -14,6 +14,9 @@
             position: relative;
             margin: 0 auto;
             border: 5px solid red;
+            display: grid;
+            grid-template-columns: repeat(20, 20px);
+            grid-template-rows: repeat(20, 20px);
         }
         .pacman {
             width: 20px;
@@ -21,8 +24,6 @@
             background-color: yellow;
             border-radius: 50%;
             position: absolute;
-            top: 190px;
-            left: 190px;
         }
         .ghost {
             width: 20px;
@@ -38,7 +39,7 @@
             border-radius: 50%;
             position: absolute;
         }
-        .heart {
+        .rose {
             width: 15px;
             height: 15px;
             background-color: red;
@@ -60,13 +61,23 @@
     <main>
         <section>
             <h2>Play Valentine's Pac-Man</h2>
-            <p>Collect roses, avoid ghosts, and shoot hearts to win!</p>
+            <p>Instructions:</p>
+            <ul>
+                <li>Use the arrow keys to move Pac-Man around the maze.</li>
+                <li>Eat all the dots (pellets) to win the game.</li>
+                <li>Avoid the ghosts! If they catch you, you lose a life.</li>
+                <li>Collect the Valentine's rose 🌹 to enter a powered-up state.</li>
+                <li>While powered up, press the spacebar to shoot hearts 💕 and eliminate ghosts.</li>
+            </ul>
             <div id="pacman-game">
-                <div class="pacman" id="pacman"></div>
-                <div class="ghost" id="ghost1" style="top: 50px; left: 50px;"></div>
-                <div class="ghost" id="ghost2" style="top: 300px; left: 300px;"></div>
-                <div class="pellet" style="top: 100px; left: 100px;"></div>
-                <div class="pellet" style="top: 200px; left: 200px;"></div>
+                <!-- Maze layout with dots and ghosts -->
+                <div class="pellet" style="grid-column: 1; grid-row: 1;"></div>
+                <div class="pellet" style="grid-column: 2; grid-row: 1;"></div>
+                <div class="pellet" style="grid-column: 3; grid-row: 1;"></div>
+                <div class="ghost" id="ghost1" style="grid-column: 10; grid-row: 10;"></div>
+                <div class="ghost" id="ghost2" style="grid-column: 15; grid-row: 15;"></div>
+                <div class="rose" id="rose" style="grid-column: 5; grid-row: 5;"></div>
+                <div class="pacman" id="pacman" style="grid-column: 1; grid-row: 1;"></div>
             </div>
         </section>
     </main>
@@ -79,69 +90,100 @@
         const gameArea = document.getElementById('pacman-game');
         const ghosts = document.querySelectorAll('.ghost');
         const pellets = document.querySelectorAll('.pellet');
-        const step = 10;
+        const rose = document.getElementById('rose');
+        const step = 20;
+        let poweredUp = false;
 
         document.addEventListener('keydown', (event) => {
-            const rect = pacman.getBoundingClientRect();
-            const gameRect = gameArea.getBoundingClientRect();
+            const pacmanStyle = window.getComputedStyle(pacman);
+            const currentColumn = parseInt(pacmanStyle.gridColumnStart);
+            const currentRow = parseInt(pacmanStyle.gridRowStart);
 
             switch (event.key) {
                 case 'ArrowUp':
-                    if (rect.top > gameRect.top) {
-                        pacman.style.top = `${rect.top - gameRect.top - step}px`;
-                    }
+                    if (currentRow > 1) pacman.style.gridRowStart = currentRow - 1;
                     break;
                 case 'ArrowDown':
-                    if (rect.bottom < gameRect.bottom) {
-                        pacman.style.top = `${rect.top - gameRect.top + step}px`;
-                    }
+                    if (currentRow < 20) pacman.style.gridRowStart = currentRow + 1;
                     break;
                 case 'ArrowLeft':
-                    if (rect.left > gameRect.left) {
-                        pacman.style.left = `${rect.left - gameRect.left - step}px`;
-                    }
+                    if (currentColumn > 1) pacman.style.gridColumnStart = currentColumn - 1;
                     break;
                 case 'ArrowRight':
-                    if (rect.right < gameRect.right) {
-                        pacman.style.left = `${rect.left - gameRect.left + step}px`;
-                    }
+                    if (currentColumn < 20) pacman.style.gridColumnStart = currentColumn + 1;
                     break;
                 case ' ': // Spacebar to shoot hearts
-                    shootHeart(rect);
+                    if (poweredUp) shootHeart(currentColumn, currentRow);
                     break;
             }
+
+            checkCollisions();
         });
 
-        function shootHeart(rect) {
+        function checkCollisions() {
+            // Check for pellet collisions
+            pellets.forEach((pellet) => {
+                const pelletStyle = window.getComputedStyle(pellet);
+                if (
+                    pelletStyle.gridColumnStart === pacman.style.gridColumnStart &&
+                    pelletStyle.gridRowStart === pacman.style.gridRowStart
+                ) {
+                    pellet.remove();
+                }
+            });
+
+            // Check for rose collision
+            const roseStyle = window.getComputedStyle(rose);
+            if (
+                roseStyle.gridColumnStart === pacman.style.gridColumnStart &&
+                roseStyle.gridRowStart === pacman.style.gridRowStart
+            ) {
+                poweredUp = true;
+                rose.remove();
+                setTimeout(() => (poweredUp = false), 5000); // Power-up lasts 5 seconds
+            }
+
+            // Check for ghost collisions
+            ghosts.forEach((ghost) => {
+                const ghostStyle = window.getComputedStyle(ghost);
+                if (
+                    ghostStyle.gridColumnStart === pacman.style.gridColumnStart &&
+                    ghostStyle.gridRowStart === pacman.style.gridRowStart
+                ) {
+                    alert('Game Over! A ghost caught you.');
+                    location.reload();
+                }
+            });
+        }
+
+        function shootHeart(column, row) {
             const heart = document.createElement('div');
             heart.classList.add('heart');
-            heart.style.top = `${rect.top - gameArea.getBoundingClientRect().top}px`;
-            heart.style.left = `${rect.left - gameArea.getBoundingClientRect().left + 10}px`;
+            heart.style.gridColumnStart = column;
+            heart.style.gridRowStart = row;
             gameArea.appendChild(heart);
 
             const interval = setInterval(() => {
-                const heartRect = heart.getBoundingClientRect();
-                if (heartRect.top <= gameArea.getBoundingClientRect().top) {
+                const heartRow = parseInt(heart.style.gridRowStart);
+                if (heartRow > 1) {
+                    heart.style.gridRowStart = heartRow - 1;
+                } else {
                     heart.remove();
                     clearInterval(interval);
-                } else {
-                    heart.style.top = `${heart.offsetTop - 5}px`;
                 }
 
                 ghosts.forEach((ghost) => {
-                    const ghostRect = ghost.getBoundingClientRect();
+                    const ghostStyle = window.getComputedStyle(ghost);
                     if (
-                        heartRect.top < ghostRect.bottom &&
-                        heartRect.bottom > ghostRect.top &&
-                        heartRect.left < ghostRect.right &&
-                        heartRect.right > ghostRect.left
+                        ghostStyle.gridColumnStart === heart.style.gridColumnStart &&
+                        ghostStyle.gridRowStart === heart.style.gridRowStart
                     ) {
                         ghost.remove();
                         heart.remove();
                         clearInterval(interval);
                     }
                 });
-            }, 50);
+            }, 200);
         }
     </script>
 </body>
