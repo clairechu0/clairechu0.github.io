@@ -2,11 +2,11 @@
 
 ## **Project Overview**
 The goal is to create a "Personal Website" that includes a terminal-based copilot to orchestrate a data pipeline. The website will feature:
-1. **Paper Listing**: Display the latest arXiv papers based on user-defined keywords.
-2. **Paper Details**: Each paper entry will include the title, authors, abstract, and a direct link to the PDF.
-3. **Auto-Update**: The paper list will refresh automatically every midnight using GitHub Actions.
-4. **Homepage Link**: A link to this page will be added to the homepage.
-5. **Page Design**: The page will be styled for readability and user engagement.
+1. **Homepage**: A central hub for the website with navigation links.
+2. **Valentine's Pac-Man Game**: A themed Pac-Man game with unique features.
+3. **Paper Listing**: Display the latest arXiv papers based on user-defined keywords.
+4. **Auto-Update**: The paper list will refresh automatically every midnight using GitHub Actions.
+5. **Page Design**: All pages will be styled for readability and user engagement.
 
 ---
 
@@ -104,21 +104,22 @@ Prompts will guide agents in their tasks, defined in `.prompt.md` files. Example
 
 ---
 
-### **9. Homepage Design**
-- The homepage will serve as the central hub for the website.
-- It will include:
-  - A brief introduction about the website and its purpose.
-  - A navigation menu linking to the paper listing page and the Pacman page.
-  - A visually appealing layout with responsive design.
+### **9. Valentine's Pac-Man Game Design**
+- **Core Features**:
+  - Classic Pac-Man mechanics: A maze with dots (pellets) for Pac-Man to eat, and ghosts that chase Pac-Man.
+  - Valentine's Power-Up (Rose 🌹): Grants Pac-Man a powered-up state, allowing it to shoot hearts.
+  - Heart Projectiles 💕: Hearts eliminate ghosts when hit.
+- **Design Considerations**:
+  - Ensure the game is responsive and works on both desktop and mobile devices.
+  - Style the game to match the Valentine's theme.
 
 ---
 
-### **10. Pacman Page**
-- The Pacman page will feature an interactive Pacman game.
-- Key features:
-  - A playable Pacman game embedded directly on the page.
-  - Instructions for how to play the game.
-  - A link back to the homepage for easy navigation.
-- Design considerations:
-  - Ensure the game is responsive and works on both desktop and mobile devices.
-  - Style the page to match the overall theme of the website.
+### **10. Paper Listing Page Design**
+- **Features**:
+  - Display the latest arXiv papers matching user-defined keywords.
+  - Show paper details: Title, authors, abstract, and a direct link to the PDF.
+  - Auto-update the paper list every midnight using GitHub Actions.
+- **Design Considerations**:
+  - Ensure the page is styled for readability and user engagement.
+  - Include a navigation link back to the homepage.

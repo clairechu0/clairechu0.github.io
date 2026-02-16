@@ -1,13 +1,14 @@
 You are an AI System Architect. I would like to build a "Personal Website" project that uses a terminal-based copilot to orchestrate a data pipeline. 
 
-In this website, the goal is to build a system that does the following—all without writing manual code. First, there should be a homepage for the personal website. Next, we must include two additional pages.
+In this website, the goal is to build a system that does the following—all without writing manual code. First, there should be a homepage for the personal website. 
+
+Next, we must include two additional pages.
 
 One additional page must include a Valentine's-themed Pac-Man game. The users can directly play the game on this webpage. The game should include the following core features:
 
 Classic Pac-Man Mechanics: A maze with dots (pellets) for Pac-Man to eat, and ghosts that chase Pac-Man. The game ends when Pac-Man loses all lives. You can decide the maze layout by yourself (classic ok, but maybe even 3D).
 Valentine's Power-Up — Rose 🌹: A rose randomly appears on the maze from time to time. When Pac-Man eats the rose, it enters a powered-up state for a limited duration (e.g., a few seconds), during which Pac-Man continuously shoots hearts in its current facing direction.
 Heart Projectiles 💕: The hearts travel across the maze and eliminate any ghost they hit. Once the power-up expires, Pac-Man returns to normal until it picks up another rose.
-
 
 Another additional page must include an auto-updating arXiv paper feed:
 
