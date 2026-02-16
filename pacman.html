@@ -344,27 +344,30 @@
             return walls.some(w => x >= w.x && x < w.x + w.width && y >= w.y && y < w.y + w.height);
         }
         
-        // Move ghosts towards Pac-Man
+        // Move ghosts towards Pac-Man, but don't cross walls
         function moveGhosts() {
             const ghosts = document.querySelectorAll('.ghost');
             ghosts.forEach(ghost => {
                 const ghostX = parseInt(ghost.style.left);
                 const ghostY = parseInt(ghost.style.top);
-                
                 let newX = ghostX;
                 let newY = ghostY;
-                
+                // Try to move horizontally or vertically toward Pac-Man
                 if (Math.random() > 0.5) {
-                    if (gameState.pacmanX > ghostX) newX += 5;
-                    else if (gameState.pacmanX < ghostX) newX -= 5;
+                    if (gameState.pacmanX > ghostX) {
+                        if (!isInWall(ghostX + 5, ghostY)) newX += 5;
+                    } else if (gameState.pacmanX < ghostX) {
+                        if (!isInWall(ghostX - 5, ghostY)) newX -= 5;
+                    }
                 } else {
-                    if (gameState.pacmanY > ghostY) newY += 5;
-                    else if (gameState.pacmanY < ghostY) newY -= 5;
+                    if (gameState.pacmanY > ghostY) {
+                        if (!isInWall(ghostX, ghostY + 5)) newY += 5;
+                    } else if (gameState.pacmanY < ghostY) {
+                        if (!isInWall(ghostX, ghostY - 5)) newY -= 5;
+                    }
                 }
-                
                 newX = Math.max(10, Math.min(470, newX));
                 newY = Math.max(10, Math.min(470, newY));
-                
                 ghost.style.left = newX + 'px';
                 ghost.style.top = newY + 'px';
             });
