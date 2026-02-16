@@ -1,5 +1,6 @@
 import requests
 import json
+import xmltodict
 
 # Define the arXiv API endpoint and search parameters
 ARXIV_API = "http://export.arxiv.org/api/query"
@@ -16,7 +17,8 @@ def fetch_papers():
     }
     response = requests.get(ARXIV_API, params=params)
     if response.status_code == 200:
-        return response.text
+        # Parse XML response to JSON-like dictionary
+        return xmltodict.parse(response.text)
     else:
         print("Failed to fetch papers.")
         return None
@@ -24,7 +26,7 @@ def fetch_papers():
 # Save fetched papers to a JSON file
 def save_papers(data):
     with open("papers.json", "w") as file:
-        file.write(json.dumps(data, indent=4))
+        json.dump(data, file, indent=4)
 
 # Main execution
 if __name__ == "__main__":

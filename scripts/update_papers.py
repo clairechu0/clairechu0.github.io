@@ -32,8 +32,11 @@ def update_html(papers):
             <ul>
     """
 
-    for paper in papers:
-        html_content += f"<li><a href='{paper['pdf_url']}'>{paper['title']}</a> by {', '.join(paper['authors'])}</li>"
+    for entry in papers['feed']['entry']:
+        title = entry['title']
+        pdf_url = next(link['@href'] for link in entry['link'] if link['@rel'] == 'related' and link['@type'] == 'application/pdf')
+        authors = [author['name'] for author in entry['author']]
+        html_content += f"<li><a href='{pdf_url}'>{title}</a> by {', '.join(authors)}</li>"
 
     html_content += """
             </ul>
@@ -53,4 +56,4 @@ def update_html(papers):
 if __name__ == "__main__":
     papers = load_papers()
     update_html(papers)
-    print("HTML file updated with the latest papers.")
+    print("papers.html updated successfully.")
