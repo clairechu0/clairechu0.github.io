@@ -1,32 +1,272 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper Listing</title>
+    <title>Latest arXiv Papers</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background: rgba(102, 126, 234, 0.8);
+            transform: translateY(-2px);
+        }
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .paper-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .paper-controls input, .paper-controls button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .paper-controls input {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+        }
+        .paper-controls button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .paper-controls button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .paper-count {
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .papers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .paper-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+        .paper-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px rgba(102, 126, 234, 0.3);
+        }
+        .paper-card h3 {
+            color: #333;
+            margin-top: 0;
+            font-size: 1.3em;
+            line-height: 1.4;
+        }
+        .paper-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .paper-authors {
+            color: #667eea;
+            font-weight: bold;
+            margin: 12px 0;
+            font-size: 0.95em;
+        }
+        .paper-abstract {
+            color: #555;
+            line-height: 1.6;
+            margin: 15px 0;
+            font-size: 0.95em;
+            max-height: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        .paper-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .paper-links a {
+            flex: 1;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        .paper-links a.pdf-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .paper-links a.pdf-link:hover {
+            transform: scale(1.05);
+        }
+        .paper-links a.arxiv-link {
+            background: #f0f0f0;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        .paper-links a.arxiv-link:hover {
+            background: #667eea;
+            color: white;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            nav ul { flex-direction: column; gap: 10px; }
+            .papers-grid { grid-template-columns: 1fr; }
+            .paper-controls { flex-direction: column; }
+            .paper-controls input { min-width: 100%; }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Latest arXiv Papers</h1>
+        <h1>📚 Latest arXiv Papers 📚</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pacman.html">Play Pacman</a></li>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="pacman.html">🎮 Play Pac-Man</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Paper Feed</h2>
-            <ul>
-    <li><a href='https://arxiv.org/pdf/2602.13197v1'>Imitating What Works: Simulation-Filtered Modular Policy Learning from Human Videos</a> by Albert J. Zhai, Kuo-Hao Zeng, Jiasen Lu, Ali Farhadi, Shenlong Wang, Wei-Chiu Ma</li><li><a href='https://arxiv.org/pdf/2602.13195v1'>Conversational Image Segmentation: Grounding Abstract Concepts with Scalable Supervision</a> by Aadarsh Sahoo, Georgia Gkioxari</li><li><a href='https://arxiv.org/pdf/2602.13193v1'>Steerable Vision-Language-Action Policies for Embodied Reasoning and Hierarchical Control</a> by William Chen, Jagdeep Singh Bhatia, Catherine Glossop, Nikhil Mathihalli, Ria Doshi, Andy Tang, Danny Driess, Karl Pertsch, Sergey Levine</li><li><a href='https://arxiv.org/pdf/2602.13191v1'>CoPE-VideoLM: Codec Primitives For Efficient Video Language Models</a> by Sayan Deb Sarkar, Rémi Pautrat, Ondrej Miksik, Marc Pollefeys, Iro Armeni, Mahdi Rad, Mihai Dusmanu</li><li><a href='https://arxiv.org/pdf/2602.13190v1'>Disorder viscosity correction approach to calculate spinodal temperature and wavelength</a> by Simon Divilov, Hagen Eckert, Nico Hotz, Xiomara Campilongo, Stefano Curtarolo</li><li><a href='https://arxiv.org/pdf/2602.13187v1'>Nuclear gradients from auxiliary-field quantum Monte Carlo and their application in geometry optimization and transition state search</a> by Jo S. Kurian, Ankit Mahajan, Sandeep Sharma</li><li><a href='https://arxiv.org/pdf/2602.13184v1'>Profiling systematic uncertainties in Simulation-Based Inference with Factorizable Normalizing Flows</a> by Davide Valsecchi, Mauro Donegà, Rainer Wallny</li><li><a href='https://arxiv.org/pdf/2602.13181v1'>Selection of CMIP6 Models for Regional Precipitation Projection and Climate Change Assessment in the Jhelum and Chenab River Basins</a> by Saad Ahmed Jamal, Ammara Nusrat, Muhammad Azmat, Muhammad Osama Nusrat</li><li><a href='https://arxiv.org/pdf/2602.13177v1'>Improved Regret Guarantees for Online Mirror Descent using a Portfolio of Mirror Maps</a> by Swati Gupta, Jai Moondra, Mohit Singh</li><li><a href='https://arxiv.org/pdf/2602.13176v1'>Monocular Markerless Motion Capture Enables Quantitative Assessment of Upper Extremity Reachable Workspace</a> by Seth Donahue, J. D. Peiffer, R. Tyler Richardson, Yishan Zhong, Shaun Q. Y. Tan, Benoit Marteau, Stephanie R. Russo, May D. Wang, R. James Cotton, Ross Chafetz</li>
-            </ul>
-        </section>
+        <div class="paper-controls">
+            <input type="text" id="searchInput" placeholder="🔍 Search papers by title, authors, or keywords...">
+            <button onclick="refreshPapers()">🔄 Refresh</button>
+        </div>
+        <div class="paper-count">
+            Total Papers: <span id="paperCount">10</span>
+        </div>
+        <div class="papers-grid" id="papersContainer">
+            <!-- Papers generated by JavaScript -->
+        </div>
     </main>
     <footer>
-        <p>&copy; 2026 My Personal Website</p>
+        <p>🚀 Auto-updated every midnight via GitHub Actions | &copy; 2026 My Personal Website</p>
     </footer>
+    <script>
+        let allPapers = [];
+        // Sample papers data (replace with fetch in production)
+        const samplePapers = [
+            {title: "Imitating What Works: Simulation-Filtered Modular Policy Learning from Human Videos", authors: "Albert J. Zhai, Kuo-Hao Zeng, Jiasen Lu, Ali Farhadi, Shenlong Wang, Wei-Chiu Ma", abstract: "The ability to learn manipulation skills by watching videos of humans has the potential to unlock a new source of highly scalable data for robot learning.", pdf: "https://arxiv.org/pdf/2602.13197v1", arxiv: "https://arxiv.org/abs/2602.13197v1", category: "cs.RO", date: "2026-02-13"},
+            {title: "Conversational Image Segmentation: Grounding Abstract Concepts with Scalable Supervision", authors: "Aadarsh Sahoo, Georgia Gkioxari", abstract: "Conversational image segmentation grounds abstract, intent-driven concepts into pixel-accurate masks.", pdf: "https://arxiv.org/pdf/2602.13195v1", arxiv: "https://arxiv.org/abs/2602.13195v1", category: "cs.CV", date: "2026-02-13"},
+            {title: "Steerable Vision-Language-Action Policies for Embodied Reasoning and Hierarchical Control", authors: "William Chen, Jagdeep Singh Bhatia, Catherine Glossop, Nikhil Mathihalli, Ria Doshi, Andy Tang, Danny Driess, Karl Pertsch, Sergey Levine", abstract: "Pretrained vision-language models (VLMs) can make semantic and visual inferences across diverse settings", pdf: "https://arxiv.org/pdf/2602.13193v1", arxiv: "https://arxiv.org/abs/2602.13193v1", category: "cs.RO", date: "2026-02-13"},
+            {title: "CoPE-VideoLM: Codec Primitives For Efficient Video Language Models", authors: "Sayan Deb Sarkar, Rémi Pautrat, Ondrej Miksik, Marc Pollefeys, Iro Armeni, Mahdi Rad, Mihai Dusmanu", abstract: "Video Language Models (VideoLMs) empower AI systems to understand temporal dynamics in videos.", pdf: "https://arxiv.org/pdf/2602.13191v1", arxiv: "https://arxiv.org/abs/2602.13191v1", category: "cs.CV", date: "2026-02-13"},
+            {title: "Disorder viscosity correction approach to calculate spinodal temperature and wavelength", authors: "Simon Divilov, Hagen Eckert, Nico Hotz, Xiomara Campilongo, Stefano Curtarolo", abstract: "Spinodal decomposition, a key mechanism to microstructure formation in materials, has long posed challenges for predictive modeling", pdf: "https://arxiv.org/pdf/2602.13190v1", arxiv: "https://arxiv.org/abs/2602.13190v1", category: "cond-mat.mtrl-sci", date: "2026-02-13"},
+            {title: "Nuclear gradients from auxiliary-field quantum Monte Carlo and their application in geometry optimization", authors: "Jo S. Kurian, Ankit Mahajan, Sandeep Sharma", abstract: "In this article, we present a method for computing accurate and scalable nuclear forces", pdf: "https://arxiv.org/pdf/2602.13187v1", arxiv: "https://arxiv.org/abs/2602.13187v1", category: "physics.chem-ph", date: "2026-02-13"},
+            {title: "Profiling systematic uncertainties in Simulation-Based Inference with Factorizable Normalizing Flows", authors: "Davide Valsecchi, Mauro Donegà, Rainer Wallny", abstract: "Unbinned likelihood fits aim at maximizing the information one can extract from experimental data", pdf: "https://arxiv.org/pdf/2602.13184v1", arxiv: "https://arxiv.org/abs/2602.13184v1", category: "hep-ph", date: "2026-02-13"},
+            {title: "Selection of CMIP6 Models for Regional Precipitation Projection and Climate Change Assessment", authors: "Saad Ahmed Jamal, Ammara Nusrat, Muhammad Azmat, Muhammad Osama Nusrat", abstract: "Effective water resource management depends on accurate projections of flows in water channels", pdf: "https://arxiv.org/pdf/2602.13181v1", arxiv: "https://arxiv.org/abs/2602.13181v1", category: "physics.ao-ph", date: "2026-02-13"},
+            {title: "Improved Regret Guarantees for Online Mirror Descent using a Portfolio of Mirror Maps", authors: "Swati Gupta, Jai Moondra, Mohit Singh", abstract: "OMD and its variants give a flexible framework for OCO where the performance depends crucially on the choice of the mirror map", pdf: "https://arxiv.org/pdf/2602.13177v1", arxiv: "https://arxiv.org/abs/2602.13177v1", category: "math.OC", date: "2026-02-13"},
+            {title: "Monocular Markerless Motion Capture Enables Quantitative Assessment of Upper Extremity Reachable Workspace", authors: "Seth Donahue, J. D. Peiffer, R. Tyler Richardson, Yishan Zhong, Shaun Q. Y. Tan, Benoit Marteau, Stephanie R. Russo, May D. Wang, R. James Cotton, Ross Chafetz", abstract: "To validate a clinically accessible approach for quantifying the Upper Extremity Reachable Workspace using a single (monocular) camera", pdf: "https://arxiv.org/pdf/2602.13176v1", arxiv: "https://arxiv.org/abs/2602.13176v1", category: "cs.CV", date: "2026-02-13"}
+        ];
+        function displayPapers(papers) {
+            const container = document.getElementById('papersContainer');
+            container.innerHTML = '';
+            if (papers.length === 0) return;
+            papers.forEach(paper => {
+                const card = document.createElement('div');
+                card.className = 'paper-card';
+                card.innerHTML = `
+                    <h3>${paper.title}</h3>
+                    <div class="paper-meta">
+                        <span>📅 ${paper.date}</span>
+                        <span style="background: #667eea; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.85em;">${paper.category}</span>
+                    </div>
+                    <div class="paper-authors">👥 ${paper.authors}</div>
+                    <div class="paper-abstract">${paper.abstract}</div>
+                    <div class="paper-links">
+                        <a href="${paper.pdf}" class="pdf-link" target="_blank">📄 Read PDF</a>
+                        <a href="${paper.arxiv}" class="arxiv-link" target="_blank">🔗 arXiv</a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            document.getElementById('paperCount').textContent = papers.length;
+        }
+        function filterPapers() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = allPapers.filter(paper => 
+                paper.title.toLowerCase().includes(searchTerm) ||
+                paper.authors.toLowerCase().includes(searchTerm) ||
+                paper.abstract.toLowerCase().includes(searchTerm)
+            );
+            displayPapers(filtered);
+        }
+        function refreshPapers() {
+            document.getElementById('searchInput').value = '';
+            displayPapers(allPapers);
+        }
+        allPapers = samplePapers;
+        displayPapers(allPapers);
+        document.getElementById('searchInput').addEventListener('input', filterPapers);
+    </script>
 </body>
 </html>

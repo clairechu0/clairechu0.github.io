@@ -1,29 +1,180 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Claire's Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            color: #ffffff;
+            font-size: 3em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        header p {
+            color: #ddd;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        nav a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        nav a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        main {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .hero-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .hero-section h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            color: #555;
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #667eea;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 48px rgba(102, 126, 234, 0.3);
+        }
+        .feature-card h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        .feature-card p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .feature-card a {
+            display: inline-block;
+            padding: 10px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        .feature-card a:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+        footer p {
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            .hero-section { padding: 30px; }
+            .hero-section h2 { font-size: 1.8em; }
+            nav ul { flex-direction: column; gap: 10px; }
+            nav a { width: 100%; text-align: center; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Personal Website</h1>
+        <h1>🌟 Welcome to My Personal Website 🌟</h1>
+        <p>Explore Research, Play Games, and Discover Knowledge</p>
         <nav>
             <ul>
-                <li><a href="homepage.html">Homepage</a></li>
-                <li><a href="papers.html">Paper Listing</a></li>
-                <li><a href="pacman.html">Play Pacman</a></li>
+                <li><a href="#papers">📚 Papers</a></li>
+                <li><a href="#pacman">🎮 Pac-Man</a></li>
+                <li><a href="#about">ℹ️ About</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <p>Explore the latest arXiv papers and enjoy an interactive Pacman game!</p>
-        </section>
+        <div class="hero-section">
+            <h2>Welcome! 👋</h2>
+            <p>This is my personal space where I share research, insights, and interactive projects. Explore the latest arXiv papers or take a break with the Valentine's Pac-Man game!</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card" id="papers">
+                <h3>📚 Latest Papers</h3>
+                <p>Discover the latest research papers from arXiv matching my interests in machine learning, AI, and deep learning. Papers are automatically updated every midnight.</p>
+                <a href="papers.html">Browse Papers →</a>
+            </div>
+            <div class="feature-card" id="pacman">
+                <h3>🎮 Valentine's Pac-Man</h3>
+                <p>Play an interactive, themed Pac-Man game! Navigate the maze, collect roses for power-ups, and shoot hearts to eliminate ghosts. Challenge yourself to beat the high score!</p>
+                <a href="pacman.html">Play Game →</a>
+            </div>
+            <div class="feature-card" id="about">
+                <h3>ℹ️ About This Site</h3>
+                <p>Built with HTML, CSS, and JavaScript. Features include an automated arXiv paper pipeline with GitHub Actions, a fully playable themed game, and responsive design for all devices.</p>
+                <a href="https://github.com/clairechu0/clairechu0.github.io" target="_blank">View on GitHub →</a>
+            </div>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2026 My Personal Website</p>
+        <p>💝 Created with passion | Auto-updated with GitHub Actions | &copy; 2026 Claire's Personal Website</p>
     </footer>
 </body>
 </html>
