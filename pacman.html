@@ -3,12 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacman Game</title>
+    <title>Valentine's Pac-Man</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Valentine's Pac-Man Game Styles */
+        #pacman-game {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            position: relative;
+            margin: 0 auto;
+            border: 5px solid red;
+        }
+        .pacman {
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 190px;
+            left: 190px;
+        }
+        .ghost {
+            width: 20px;
+            height: 20px;
+            background-color: purple;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .pellet {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart {
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 82%, 18% 100%, 0% 38%);
+            position: absolute;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Pacman Game</h1>
+        <h1>Valentine's Pac-Man</h1>
         <nav>
             <ul>
                 <li><a href="homepage.html">Homepage</a></li>
@@ -18,15 +59,90 @@
     </header>
     <main>
         <section>
-            <h2>Play Pacman</h2>
-            <p>Use the arrow keys to navigate Pacman and avoid the ghosts!</p>
+            <h2>Play Valentine's Pac-Man</h2>
+            <p>Collect roses, avoid ghosts, and shoot hearts to win!</p>
             <div id="pacman-game">
-                <!-- Pacman game will be embedded here -->
+                <div class="pacman" id="pacman"></div>
+                <div class="ghost" id="ghost1" style="top: 50px; left: 50px;"></div>
+                <div class="ghost" id="ghost2" style="top: 300px; left: 300px;"></div>
+                <div class="pellet" style="top: 100px; left: 100px;"></div>
+                <div class="pellet" style="top: 200px; left: 200px;"></div>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2026 My Personal Website</p>
     </footer>
+    <script>
+        // Valentine's Pac-Man Game Logic
+        const pacman = document.getElementById('pacman');
+        const gameArea = document.getElementById('pacman-game');
+        const ghosts = document.querySelectorAll('.ghost');
+        const pellets = document.querySelectorAll('.pellet');
+        const step = 10;
+
+        document.addEventListener('keydown', (event) => {
+            const rect = pacman.getBoundingClientRect();
+            const gameRect = gameArea.getBoundingClientRect();
+
+            switch (event.key) {
+                case 'ArrowUp':
+                    if (rect.top > gameRect.top) {
+                        pacman.style.top = `${rect.top - gameRect.top - step}px`;
+                    }
+                    break;
+                case 'ArrowDown':
+                    if (rect.bottom < gameRect.bottom) {
+                        pacman.style.top = `${rect.top - gameRect.top + step}px`;
+                    }
+                    break;
+                case 'ArrowLeft':
+                    if (rect.left > gameRect.left) {
+                        pacman.style.left = `${rect.left - gameRect.left - step}px`;
+                    }
+                    break;
+                case 'ArrowRight':
+                    if (rect.right < gameRect.right) {
+                        pacman.style.left = `${rect.left - gameRect.left + step}px`;
+                    }
+                    break;
+                case ' ': // Spacebar to shoot hearts
+                    shootHeart(rect);
+                    break;
+            }
+        });
+
+        function shootHeart(rect) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.top = `${rect.top - gameArea.getBoundingClientRect().top}px`;
+            heart.style.left = `${rect.left - gameArea.getBoundingClientRect().left + 10}px`;
+            gameArea.appendChild(heart);
+
+            const interval = setInterval(() => {
+                const heartRect = heart.getBoundingClientRect();
+                if (heartRect.top <= gameArea.getBoundingClientRect().top) {
+                    heart.remove();
+                    clearInterval(interval);
+                } else {
+                    heart.style.top = `${heart.offsetTop - 5}px`;
+                }
+
+                ghosts.forEach((ghost) => {
+                    const ghostRect = ghost.getBoundingClientRect();
+                    if (
+                        heartRect.top < ghostRect.bottom &&
+                        heartRect.bottom > ghostRect.top &&
+                        heartRect.left < ghostRect.right &&
+                        heartRect.right > ghostRect.left
+                    ) {
+                        ghost.remove();
+                        heart.remove();
+                        clearInterval(interval);
+                    }
+                });
+            }, 50);
+        }
+    </script>
 </body>
 </html>
