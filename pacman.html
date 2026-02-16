@@ -437,27 +437,47 @@
         // Event listeners
         document.addEventListener('keydown', (e) => {
             if (gameState.gameOver) return;
-            
             const step = 15;
+            let newX = gameState.pacmanX;
+            let newY = gameState.pacmanY;
+            let moved = false;
             switch (e.key) {
                 case 'ArrowUp':
-                    if (gameState.pacmanY > 10) gameState.pacmanY -= step;
+                    newY -= step;
+                    moved = true;
                     break;
                 case 'ArrowDown':
-                    if (gameState.pacmanY < 470) gameState.pacmanY += step;
+                    newY += step;
+                    moved = true;
                     break;
                 case 'ArrowLeft':
-                    if (gameState.pacmanX > 10) gameState.pacmanX -= step;
+                    newX -= step;
+                    moved = true;
                     break;
                 case 'ArrowRight':
-                    if (gameState.pacmanX < 470) gameState.pacmanX += step;
+                    newX += step;
+                    moved = true;
                     break;
                 case ' ':
                     shootHeart();
                     e.preventDefault();
                     break;
             }
-            
+            // Prevent page scroll for arrow keys
+            if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.key)) {
+                e.preventDefault();
+            }
+            // Only move if not in wall and within bounds
+            if (moved) {
+                if (
+                    newX >= 10 && newX <= 470 &&
+                    newY >= 10 && newY <= 470 &&
+                    !isInWall(newX, newY)
+                ) {
+                    gameState.pacmanX = newX;
+                    gameState.pacmanY = newY;
+                }
+            }
             pacman.style.left = gameState.pacmanX + 'px';
             pacman.style.top = gameState.pacmanY + 'px';
             checkCollisions();
