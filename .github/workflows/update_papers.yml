@@ -1,0 +1,36 @@
+name: Update Papers
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs every midnight
+
+jobs:
+  update-papers:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.x"
+
+    - name: Install dependencies
+      run: |
+        pip install requests
+
+    - name: Fetch latest papers
+      run: |
+        python scripts/fetch_papers.py
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add .
+        git commit -m "Update paper list"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
