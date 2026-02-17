@@ -1,4 +1,6 @@
 import json
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 # Load papers from JSON file
 def load_papers():
@@ -7,6 +9,8 @@ def load_papers():
 
 # Update the HTML file with paper data
 def update_html(papers):
+    eastern = ZoneInfo("America/New_York")
+    last_updated = datetime.now(eastern).strftime("%Y-%m-%d %I:%M %p %Z")
     html_content = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -187,6 +191,9 @@ def update_html(papers):
         </nav>
     </header>
     <main>
+        <div class="panel">
+            <div class="paper-count">Last updated: ''' + last_updated + '''</div>
+        </div>
         <div class="panel">
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Search by title, author, or abstract">
