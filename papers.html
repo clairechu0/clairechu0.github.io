@@ -4,8 +4,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper Listing</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Papers</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #111827;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 28px 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #ffffff;
+            font-size: 2.2em;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        nav a {
+            display: inline-block;
+            padding: 10px 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        main {
+            max-width: 1100px;
+            margin: 32px auto 60px;
+            padding: 0 20px;
+        }
+        .panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            margin-bottom: 18px;
+        }
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .search-bar input {
+            flex: 1;
+            min-width: 260px;
+            padding: 12px 14px;
+            border: 1px solid rgba(17, 24, 39, 0.12);
+            border-radius: 10px;
+            outline: none;
+            font-size: 1em;
+            background: #fff;
+        }
+        .search-bar button {
+            padding: 12px 14px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(17, 24, 39, 0.92);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .paper-count {
+            color: rgba(17, 24, 39, 0.75);
+            font-size: 0.95em;
+        }
+        .papers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 18px;
+        }
+        .paper-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+            border-top: 5px solid #667eea;
+        }
+        .paper-card h3 {
+            font-size: 1.1em;
+            line-height: 1.35;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+        .paper-meta {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            color: rgba(17, 24, 39, 0.75);
+            font-size: 0.9em;
+        }
+        .badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        .paper-authors {
+            color: rgba(17, 24, 39, 0.85);
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .paper-abstract {
+            color: rgba(17, 24, 39, 0.78);
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .paper-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .paper-links a {
+            display: inline-block;
+            padding: 10px 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        .pdf-link {
+            background: rgba(17, 24, 39, 0.92);
+            color: #fff;
+        }
+        .arxiv-link {
+            background: rgba(102, 126, 234, 0.14);
+            color: #111827;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            text-align: center;
+            padding: 22px 18px;
+        }
+        footer p {
+            font-size: 0.95em;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.7em; }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,24 +173,28 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="pacman.html">Play Pacman</a></li>
+                <li><a href="pacman.html">Pac-Man</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search papers by title, author, or abstract...">
-            <button onclick="refreshPapers()">Clear</button>
+        <div class="panel">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by title, author, or abstract">
+                <button onclick="refreshPapers()">Clear</button>
+            </div>
         </div>
-        <div class="paper-count">
-            Total Papers: <span id="paperCount">0</span>
+        <div class="panel">
+            <div class="paper-count">
+                Total papers: <span id="paperCount">0</span>
+            </div>
         </div>
         <div class="papers-grid" id="papersContainer">
             <!-- Papers will be loaded here by JavaScript -->
         </div>
     </main>
     <footer>
-        <p>🚀 This page auto-updates every midnight via GitHub Actions. &copy; 2026 My Personal Website</p>
+        <p>Updated daily via GitHub Actions. &copy; 2026</p>
     </footer>
     <script>
         let allPapers = [];
@@ -65,14 +229,14 @@
                 card.innerHTML = `
                     <h3>${paper.title}</h3>
                     <div class="paper-meta">
-                        <span>📅 ${paper.date}</span>
-                        <span style="background: #667eea; color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.85em;">${paper.category}</span>
+                        <span>${paper.date}</span>
+                        <span class="badge">${paper.category}</span>
                     </div>
-                    <div class="paper-authors">👥 ${paper.authors}</div>
+                    <div class="paper-authors">${paper.authors}</div>
                     <div class="paper-abstract">${paper.abstract}</div>
                     <div class="paper-links">
-                        <a href="${paper.pdf}" class="pdf-link" target="_blank">📄 Read PDF</a>
-                        <a href="${paper.arxiv}" class="arxiv-link" target="_blank">🔗 arXiv</a>
+                        <a href="${paper.pdf}" class="pdf-link" target="_blank" rel="noopener noreferrer">Read PDF</a>
+                        <a href="${paper.arxiv}" class="arxiv-link" target="_blank" rel="noopener noreferrer">arXiv</a>
                     </div>
                 `;
                 container.appendChild(card);

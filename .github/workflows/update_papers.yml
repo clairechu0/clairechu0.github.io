@@ -1,8 +1,17 @@
 name: Update Papers
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *" # Runs every 5 minutes for testing
+    # Note: GitHub Actions cron schedules run in UTC.
+    - cron: "40 13 * * *" # Daily at 13:40 UTC (08:40 Eastern during standard time)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-papers
+  cancel-in-progress: true
 
 jobs:
   update-papers:
@@ -10,16 +19,19 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: "3.x"
 
     - name: Install dependencies
       run: |
-        pip install requests
+        python -m pip install --upgrade pip
+        pip install requests xmltodict
 
     - name: Fetch latest papers
       run: |
@@ -31,16 +43,12 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        set -e
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        git add .
-        if ! git diff --cached --quiet; then
-          git commit -m "Update paper list" || true
-          git push || true
-        else
+        git add papers.json papers.html
+        if git diff --cached --quiet; then
           echo "No changes to commit."
+          exit 0
         fi
-        exit 0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        git commit -m "Update paper list"
+        git push
