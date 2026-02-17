@@ -2,7 +2,7 @@ name: Update Papers
 
 on:
   schedule:
-    - cron: "0 6 * * *" # Runs every day at 6 AM
+    - cron: "*/5 * * * *" # Runs every 5 minutes for testing
 
 jobs:
   update-papers:
@@ -31,14 +31,16 @@ jobs:
 
     - name: Commit and push changes
       run: |
+        set -e
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
         git add .
         if ! git diff --cached --quiet; then
-          git commit -m "Update paper list"
-          git push
+          git commit -m "Update paper list" || true
+          git push || true
         else
           echo "No changes to commit."
         fi
+        exit 0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
