@@ -60,9 +60,9 @@ jobs:
           echo "No changes to commit."
           exit 0
         fi
+        git commit -m "Update paper list"
 
-        # Rebase onto latest main to avoid non-fast-forward push failures.
+        # Rebase our new commit onto latest main to avoid non-fast-forward push failures.
         git pull --rebase origin main
 
-        git commit -m "Update paper list"
         git push origin HEAD:main
