@@ -55,6 +55,7 @@
             background-color: #ffff00;
             border-radius: 50%;
             position: absolute;
+            z-index: 10;
             box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
             transition: all 0.1s ease;
         }
@@ -65,6 +66,7 @@
             background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), #8B008B);
             border-radius: 50%;
             position: absolute;
+            z-index: 9;
             border: 2px solid #6B0061;
             box-shadow: 0 0 8px rgba(139, 0, 139, 0.6);
             transition: all 0.1s ease;
@@ -81,6 +83,7 @@
             background-color: #ffffff;
             border-radius: 50%;
             position: absolute;
+            z-index: 2;
             box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
         }
         
@@ -90,6 +93,7 @@
             background: radial-gradient(circle at 30% 30%, #ff9999, #cc0000);
             clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 82%, 18% 100%, 0% 38%);
             position: absolute;
+            z-index: 8;
             box-shadow: 0 0 12px rgba(255, 0, 0, 0.9);
             animation: pulse 0.6s infinite;
         }
@@ -100,6 +104,7 @@
             background: #ff1493;
             clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 82%, 18% 100%, 0% 38%);
             position: absolute;
+            z-index: 11;
             box-shadow: 0 0 8px rgba(255, 20, 147, 1);
             animation: shoot 0.3s ease-out;
         }
@@ -107,6 +112,7 @@
         .wall {
             background-color: #8B0000;
             position: absolute;
+            z-index: 5;
             box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
         }
         
@@ -219,8 +225,8 @@
         gameArea.appendChild(pacman);
         
         const gameState = {
-            pacmanX: 240,
-            pacmanY: 240,
+            pacmanX: 220,
+            pacmanY: 220,
             score: 0,
             lives: 3,
             poweredUp: false,
@@ -230,6 +236,11 @@
         
         const gridSize = 20;
         const gameSize = 500;
+        const entitySize = 20;
+        const pelletSize = 6;
+        const wallPadding = 20; // matches the outer border thickness
+        const minPos = wallPadding;
+        const maxPos = gameSize - wallPadding - entitySize;
         
         // Create maze walls (open-corridor style, no closed boxes)
         function createMaze() {
@@ -276,13 +287,14 @@
         
         // Create pellets
         function createPellets() {
-            for (let x = gridSize; x < gameSize; x += gridSize) {
-                for (let y = gridSize; y < gameSize; y += gridSize) {
-                    if (!isInWall(x, y)) {
+            const offset = (gridSize - pelletSize) / 2;
+            for (let x = minPos; x <= maxPos; x += gridSize) {
+                for (let y = minPos; y <= maxPos; y += gridSize) {
+                    if (!collidesWithWall(x, y, gridSize)) {
                         const pellet = document.createElement('div');
                         pellet.className = 'pellet';
-                        pellet.style.left = (x + 7) + 'px';
-                        pellet.style.top = (y + 7) + 'px';
+                        pellet.style.left = (x + offset) + 'px';
+                        pellet.style.top = (y + offset) + 'px';
                         gameArea.appendChild(pellet);
                         gameState.pelletCount++;
                     }
@@ -308,14 +320,19 @@
             if (document.getElementById('rose')) return; // Only one rose at a time
             let tries = 0;
             while (tries < 100) {
-                const randomX = Math.floor(Math.random() * 24) * gridSize + 10;
-                const randomY = Math.floor(Math.random() * 24) * gridSize + 10;
-                if (!isInWall(randomX, randomY)) {
+                const tilesX = Math.floor((maxPos - minPos) / gridSize) + 1;
+                const tilesY = Math.floor((maxPos - minPos) / gridSize) + 1;
+                const tileX = Math.floor(Math.random() * tilesX);
+                const tileY = Math.floor(Math.random() * tilesY);
+                const randomX = minPos + tileX * gridSize;
+                const randomY = minPos + tileY * gridSize;
+                if (!collidesWithWall(randomX, randomY)) {
                     const rose = document.createElement('div');
                     rose.className = 'rose';
                     rose.id = 'rose';
-                    rose.style.left = randomX + 'px';
-                    rose.style.top = randomY + 'px';
+                    const roseOffset = (gridSize - 18) / 2;
+                    rose.style.left = (randomX + roseOffset) + 'px';
+                    rose.style.top = (randomY + roseOffset) + 'px';
                     gameArea.appendChild(rose);
                     break;
                 }
@@ -362,6 +379,37 @@
             ];
             return walls.some(w => x >= w.x && x < w.x + w.width && y >= w.y && y < w.y + w.height);
         }
+
+        function collidesWithWall(x, y, size = entitySize) {
+            const inset = 2;
+            const left = x + inset;
+            const right = x + size - inset;
+            const top = y + inset;
+            const bottom = y + size - inset;
+            return (
+                isInWall(left, top) ||
+                isInWall(right, top) ||
+                isInWall(left, bottom) ||
+                isInWall(right, bottom)
+            );
+        }
+
+        function pickOpenSpawn(preferredX, preferredY) {
+            if (!isInWall(preferredX, preferredY)) return { x: preferredX, y: preferredY };
+            const maxRadius = 12;
+            for (let r = 1; r <= maxRadius; r++) {
+                for (let dx = -r; dx <= r; dx++) {
+                    for (let dy = -r; dy <= r; dy++) {
+                        if (Math.abs(dx) !== r && Math.abs(dy) !== r) continue;
+                        const x = preferredX + dx * gridSize;
+                        const y = preferredY + dy * gridSize;
+                        if (x < 10 || x > 470 || y < 10 || y > 470) continue;
+                        if (!isInWall(x, y)) return { x, y };
+                    }
+                }
+            }
+            return { x: 40, y: 40 };
+        }
         
         // Move ghosts towards Pac-Man, but don't cross walls
         function moveGhosts() {
@@ -374,19 +422,19 @@
                 // Try to move horizontally or vertically toward Pac-Man
                 if (Math.random() > 0.5) {
                     if (gameState.pacmanX > ghostX) {
-                        if (!isInWall(ghostX + 5, ghostY)) newX += 5;
+                        if (!collidesWithWall(ghostX + 5, ghostY)) newX += 5;
                     } else if (gameState.pacmanX < ghostX) {
-                        if (!isInWall(ghostX - 5, ghostY)) newX -= 5;
+                        if (!collidesWithWall(ghostX - 5, ghostY)) newX -= 5;
                     }
                 } else {
                     if (gameState.pacmanY > ghostY) {
-                        if (!isInWall(ghostX, ghostY + 5)) newY += 5;
+                        if (!collidesWithWall(ghostX, ghostY + 5)) newY += 5;
                     } else if (gameState.pacmanY < ghostY) {
-                        if (!isInWall(ghostX, ghostY - 5)) newY -= 5;
+                        if (!collidesWithWall(ghostX, ghostY - 5)) newY -= 5;
                     }
                 }
-                newX = Math.max(10, Math.min(470, newX));
-                newY = Math.max(10, Math.min(470, newY));
+                newX = Math.max(minPos, Math.min(maxPos, newX));
+                newY = Math.max(minPos, Math.min(maxPos, newY));
                 ghost.style.left = newX + 'px';
                 ghost.style.top = newY + 'px';
             });
@@ -399,7 +447,14 @@
             pellets.forEach(pellet => {
                 const pelletX = parseInt(pellet.style.left);
                 const pelletY = parseInt(pellet.style.top);
-                if (Math.abs(gameState.pacmanX - pelletX) < 15 && Math.abs(gameState.pacmanY - pelletY) < 15) {
+                const pacmanCenterX = gameState.pacmanX + entitySize / 2;
+                const pacmanCenterY = gameState.pacmanY + entitySize / 2;
+                const pelletCenterX = pelletX + pelletSize / 2;
+                const pelletCenterY = pelletY + pelletSize / 2;
+                const dx = pacmanCenterX - pelletCenterX;
+                const dy = pacmanCenterY - pelletCenterY;
+                const hitRadius = (entitySize / 2) + (pelletSize / 2) + 1;
+                if ((dx * dx + dy * dy) <= (hitRadius * hitRadius)) {
                     pellet.remove();
                     gameState.score += 10;
                     document.getElementById('score').textContent = gameState.score;
@@ -411,7 +466,14 @@
             if (rose) {
                 const roseX = parseInt(rose.style.left);
                 const roseY = parseInt(rose.style.top);
-                if (Math.abs(gameState.pacmanX - roseX) < 20 && Math.abs(gameState.pacmanY - roseY) < 20) {
+                const pacmanCenterX = gameState.pacmanX + entitySize / 2;
+                const pacmanCenterY = gameState.pacmanY + entitySize / 2;
+                const roseCenterX = roseX + 18 / 2;
+                const roseCenterY = roseY + 18 / 2;
+                const dx = pacmanCenterX - roseCenterX;
+                const dy = pacmanCenterY - roseCenterY;
+                const hitRadius = (entitySize / 2) + (18 / 2) + 1;
+                if ((dx * dx + dy * dy) <= (hitRadius * hitRadius)) {
                     activatePowerUp();
                     rose.remove();
                 }
@@ -511,6 +573,9 @@
         }
         
         // Initialize game
+        const spawn = pickOpenSpawn(gameState.pacmanX, gameState.pacmanY);
+        gameState.pacmanX = spawn.x;
+        gameState.pacmanY = spawn.y;
         pacman.style.left = gameState.pacmanX + 'px';
         pacman.style.top = gameState.pacmanY + 'px';
         createMaze();
@@ -522,7 +587,7 @@
         // Event listeners
         document.addEventListener('keydown', (e) => {
             if (gameState.gameOver) return;
-            const step = 15;
+            const step = gridSize;
             let newX = gameState.pacmanX;
             let newY = gameState.pacmanY;
             let moved = false;
@@ -559,9 +624,9 @@
             // Only move if not in wall and within bounds
             if (moved) {
                 if (
-                    newX >= 10 && newX <= 470 &&
-                    newY >= 10 && newY <= 470 &&
-                    !isInWall(newX, newY)
+                    newX >= minPos && newX <= maxPos &&
+                    newY >= minPos && newY <= maxPos &&
+                    !collidesWithWall(newX, newY)
                 ) {
                     gameState.pacmanX = newX;
                     gameState.pacmanY = newY;
