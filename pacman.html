@@ -225,8 +225,8 @@
         gameArea.appendChild(pacman);
         
         const gameState = {
-            pacmanX: 220,
-            pacmanY: 220,
+            pacmanX: 40,
+            pacmanY: 200,
             score: 0,
             lives: 3,
             poweredUp: false,
@@ -395,20 +395,32 @@
         }
 
         function pickOpenSpawn(preferredX, preferredY) {
-            if (!isInWall(preferredX, preferredY)) return { x: preferredX, y: preferredY };
+            const clampToGrid = (v) => Math.round(v / gridSize) * gridSize;
+            const baseX = Math.max(minPos, Math.min(maxPos, clampToGrid(preferredX)));
+            const baseY = Math.max(minPos, Math.min(maxPos, clampToGrid(preferredY)));
+
+            if (!collidesWithWall(baseX, baseY)) return { x: baseX, y: baseY };
+
             const maxRadius = 12;
             for (let r = 1; r <= maxRadius; r++) {
                 for (let dx = -r; dx <= r; dx++) {
                     for (let dy = -r; dy <= r; dy++) {
                         if (Math.abs(dx) !== r && Math.abs(dy) !== r) continue;
-                        const x = preferredX + dx * gridSize;
-                        const y = preferredY + dy * gridSize;
-                        if (x < 10 || x > 470 || y < 10 || y > 470) continue;
-                        if (!isInWall(x, y)) return { x, y };
+                        const x = baseX + dx * gridSize;
+                        const y = baseY + dy * gridSize;
+                        if (x < minPos || x > maxPos || y < minPos || y > maxPos) continue;
+                        if (!collidesWithWall(x, y)) return { x, y };
                     }
                 }
             }
-            return { x: 40, y: 40 };
+
+            for (let x = minPos; x <= maxPos; x += gridSize) {
+                for (let y = minPos; y <= maxPos; y += gridSize) {
+                    if (!collidesWithWall(x, y)) return { x, y };
+                }
+            }
+
+            return { x: minPos, y: minPos };
         }
         
         // Move ghosts towards Pac-Man, but don't cross walls
