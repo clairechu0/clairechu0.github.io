@@ -22,6 +22,8 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
+        persist-credentials: true
+        token: ${{ github.token }}
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -42,13 +44,25 @@ jobs:
         python scripts/update_papers.py
 
     - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+        GIT_TERMINAL_PROMPT: "0"
       run: |
+        set -euo pipefail
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
+
+        # Ensure pushes authenticate non-interactively (avoids exit code 128 on scheduled runs).
+        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+
         git add papers.json papers.html
         if git diff --cached --quiet; then
           echo "No changes to commit."
           exit 0
         fi
+
+        # Rebase onto latest main to avoid non-fast-forward push failures.
+        git pull --rebase origin main
+
         git commit -m "Update paper list"
-        git push
+        git push origin HEAD:main
