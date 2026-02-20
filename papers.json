@@ -5,48 +5,186 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-02-20T01:27:17Z",
+        "updated": "2026-02-20T04:09:38Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "542380",
+        "opensearch:totalResults": "542710",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2602.16712v1",
-                "title": "One Hand to Rule Them All: Canonical Representations for Unified Dexterous Manipulation",
-                "updated": "2026-02-18T18:59:57Z",
+                "id": "http://arxiv.org/abs/2602.17665v1",
+                "title": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents",
+                "updated": "2026-02-19T18:59:54Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2602.16712v1",
+                        "@href": "https://arxiv.org/abs/2602.17665v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2602.16712v1",
+                        "@href": "https://arxiv.org/pdf/2602.17665v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Dexterous manipulation policies today largely assume fixed hand designs, severely restricting their generalization to new embodiments with varied kinematic and structural layouts. To overcome this limitation, we introduce a parameterized canonical representation that unifies a broad spectrum of dexterous hand architectures. It comprises a unified parameter space and a canonical URDF format, offering three key advantages. 1) The parameter space captures essential morphological and kinematic variations for effective conditioning in learning algorithms. 2) A structured latent manifold can be learned over our space, where interpolations between embodiments yield smooth and physically meaningful morphology transitions. 3) The canonical URDF standardizes the action space while preserving dynamic and functional properties of the original URDFs, enabling efficient and reliable cross-embodiment policy learning. We validate these advantages through extensive analysis and experiments, including grasp policy replay, VAE latent encoding, and cross-embodiment zero-shot transfer. Specifically, we train a VAE on the unified representation to obtain a compact, semantically rich latent embedding, and develop a grasping policy conditioned on the canonical representation that generalizes across dexterous hands. We demonstrate, through simulation and real-world tasks on unseen morphologies (e.g., 81.9% zero-shot success rate on 3-finger LEAP Hand), that our framework unifies both the representational and action spaces of structurally diverse hands, providing a scalable foundation for cross-hand learning toward universal dexterous manipulation.",
+                "summary": "Recent progress in multimodal reasoning has enabled agents that can interpret imagery, connect it with language, and perform structured analytical tasks. Extending such capabilities to the remote sensing domain remains challenging, as models must reason over spatial scale, geographic structures, and multispectral indices while maintaining coherent multi-step logic. To bridge this gap, OpenEarthAgent introduces a unified framework for developing tool-augmented geospatial agents trained on satellite imagery, natural-language queries, and detailed reasoning traces. The training pipeline relies on supervised fine-tuning over structured reasoning trajectories, aligning the model with verified multistep tool interactions across diverse analytical contexts. The accompanying corpus comprises 14,538 training and 1,169 evaluation instances, with more than 100K reasoning steps in the training split and over 7K reasoning steps in the evaluation split. It spans urban, environmental, disaster, and infrastructure domains, and incorporates GIS-based operations alongside index analyses such as NDVI, NBR, and NDBI. Grounded in explicit reasoning traces, the learned agent demonstrates structured reasoning, stable spatial understanding, and interpretable behaviour through tool-driven geospatial interactions across diverse conditions. We report consistent improvements over a strong baseline and competitive performance relative to recent open and closed-source models.",
                 "category": {
-                    "@term": "cs.RO",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-02-18T18:59:57Z",
-                "arxiv:comment": "Project Page: https://zhenyuwei2003.github.io/OHRA/",
+                "published": "2026-02-19T18:59:54Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "cs.CV"
                 },
                 "author": [
+                    {
+                        "name": "Akashah Shabbir"
+                    },
+                    {
+                        "name": "Muhammad Umer Sheikh"
+                    },
+                    {
+                        "name": "Muhammad Akhtar Munir"
+                    },
+                    {
+                        "name": "Hiyam Debary"
+                    },
+                    {
+                        "name": "Mustansar Fiaz"
+                    },
+                    {
+                        "name": "Muhammad Zaigham Zaheer"
+                    },
+                    {
+                        "name": "Paolo Fraccaro"
+                    },
+                    {
+                        "name": "Fahad Shahbaz Khan"
+                    },
+                    {
+                        "name": "Muhammad Haris Khan"
+                    },
+                    {
+                        "name": "Xiao Xiang Zhu"
+                    },
+                    {
+                        "name": "Salman Khan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.17664v1",
+                "title": "Sink-Aware Pruning for Diffusion Language Models",
+                "updated": "2026-02-19T18:59:50Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.17664v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.17664v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Diffusion Language Models (DLMs) incur high inference cost due to iterative denoising, motivating efficient pruning. Existing pruning heuristics largely inherited from autoregressive (AR) LLMs, typically preserve attention sink tokens because AR sinks serve as stable global anchors. We show that this assumption does not hold for DLMs: the attention-sink position exhibits substantially higher variance over the full generation trajectory (measured by how the dominant sink locations shift across timesteps), indicating that sinks are often transient and less structurally essential than in AR models. Based on this observation, we propose ${\\bf \\texttt{Sink-Aware Pruning}}$, which automatically identifies and prunes unstable sinks in DLMs (prior studies usually keep sinks for AR LLMs). Without retraining, our method achieves a better quality-efficiency trade-off and outperforms strong prior pruning baselines under matched compute. Our code is available at https://github.com/VILA-Lab/Sink-Aware-Pruning.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-02-19T18:59:50Z",
+                "arxiv:comment": "Code at: https://github.com/VILA-Lab/Sink-Aware-Pruning",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Aidar Myrzakhan"
+                    },
+                    {
+                        "name": "Tianyi Li"
+                    },
+                    {
+                        "name": "Bowei Guo"
+                    },
+                    {
+                        "name": "Shengkun Tang"
+                    },
+                    {
+                        "name": "Zhiqiang Shen"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.17659v1",
+                "title": "When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs",
+                "updated": "2026-02-19T18:59:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.17659v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.17659v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Vision-Language-Action models (VLAs) promise to ground language instructions in robot control, yet in practice often fail to faithfully follow language. When presented with instructions that lack strong scene-specific supervision, VLAs suffer from counterfactual failures: they act based on vision shortcuts induced by dataset biases, repeatedly executing well-learned behaviors and selecting objects frequently seen during training regardless of language intent. To systematically study it, we introduce LIBERO-CF, the first counterfactual benchmark for VLAs that evaluates language following capability by assigning alternative instructions under visually plausible LIBERO layouts. Our evaluation reveals that counterfactual failures are prevalent yet underexplored across state-of-the-art VLAs. We propose Counterfactual Action Guidance (CAG), a simple yet effective dual-branch inference scheme that explicitly regularizes language conditioning in VLAs. CAG combines a standard VLA policy with a language-unconditioned Vision-Action (VA) module, enabling counterfactual comparison during action selection. This design reduces reliance on visual shortcuts, improves robustness on under-observed tasks, and requires neither additional demonstrations nor modifications to existing architectures or pretrained models. Extensive experiments demonstrate its plug-and-play integration across diverse VLAs and consistent improvements. For example, on LIBERO-CF, CAG improves $\u03c0_{0.5}$ by 9.7% in language following accuracy and 3.6% in task success on under-observed tasks using a training-free strategy, with further gains of 15.5% and 8.5%, respectively, when paired with a VA model. In real-world evaluations, CAG reduces counterfactual failures of 9.4% and improves task success by 17.2% on average.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-02-19T18:59:20Z",
+                "arxiv:comment": "Website: https://vla-va.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yu Fang"
+                    },
+                    {
+                        "name": "Yuchun Feng"
+                    },
+                    {
+                        "name": "Dong Jing"
+                    },
+                    {
+                        "name": "Jiaqi Liu"
+                    },
+                    {
+                        "name": "Yue Yang"
+                    },
                     {
                         "name": "Zhenyu Wei"
                     },
                     {
-                        "name": "Yunchao Yao"
+                        "name": "Daniel Szafir"
                     },
                     {
                         "name": "Mingyu Ding"
@@ -54,475 +192,337 @@
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2602.16710v1",
-                "title": "EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human Data",
-                "updated": "2026-02-18T18:59:05Z",
+                "id": "http://arxiv.org/abs/2602.17658v1",
+                "title": "MARS: Margin-Aware Reward-Modeling with Self-Refinement",
+                "updated": "2026-02-19T18:59:03Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2602.16710v1",
+                        "@href": "https://arxiv.org/abs/2602.17658v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2602.16710v1",
+                        "@href": "https://arxiv.org/pdf/2602.17658v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Human behavior is among the most scalable sources of data for learning physical intelligence, yet how to effectively leverage it for dexterous manipulation remains unclear. While prior work demonstrates human to robot transfer in constrained settings, it is unclear whether large scale human data can support fine grained, high degree of freedom dexterous manipulation. We present EgoScale, a human to dexterous manipulation transfer framework built on large scale egocentric human data. We train a Vision Language Action (VLA) model on over 20,854 hours of action labeled egocentric human video, more than 20 times larger than prior efforts, and uncover a log linear scaling law between human data scale and validation loss. This validation loss strongly correlates with downstream real robot performance, establishing large scale human data as a predictable supervision source. Beyond scale, we introduce a simple two stage transfer recipe: large scale human pretraining followed by lightweight aligned human robot mid training. This enables strong long horizon dexterous manipulation and one shot task adaptation with minimal robot supervision. Our final policy improves average success rate by 54% over a no pretraining baseline using a 22 DoF dexterous robotic hand, and transfers effectively to robots with lower DoF hands, indicating that large scale human motion provides a reusable, embodiment agnostic motor prior.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-02-18T18:59:05Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Ruijie Zheng"
-                    },
-                    {
-                        "name": "Dantong Niu"
-                    },
-                    {
-                        "name": "Yuqi Xie"
-                    },
-                    {
-                        "name": "Jing Wang"
-                    },
-                    {
-                        "name": "Mengda Xu"
-                    },
-                    {
-                        "name": "Yunfan Jiang"
-                    },
-                    {
-                        "name": "Fernando Casta\u00f1eda"
-                    },
-                    {
-                        "name": "Fengyuan Hu"
-                    },
-                    {
-                        "name": "You Liang Tan"
-                    },
-                    {
-                        "name": "Letian Fu"
-                    },
-                    {
-                        "name": "Trevor Darrell"
-                    },
-                    {
-                        "name": "Furong Huang"
-                    },
-                    {
-                        "name": "Yuke Zhu"
-                    },
-                    {
-                        "name": "Danfei Xu"
-                    },
-                    {
-                        "name": "Linxi Fan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.16709v1",
-                "title": "Knowledge-Embedded Latent Projection for Robust Representation Learning",
-                "updated": "2026-02-18T18:58:16Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.16709v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.16709v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Latent space models are widely used for analyzing high-dimensional discrete data matrices, such as patient-feature matrices in electronic health records (EHRs), by capturing complex dependence structures through low-dimensional embeddings. However, estimation becomes challenging in the imbalanced regime, where one matrix dimension is much larger than the other. In EHR applications, cohort sizes are often limited by disease prevalence or data availability, whereas the feature space remains extremely large due to the breadth of medical coding system. Motivated by the increasing availability of external semantic embeddings, such as pre-trained embeddings of clinical concepts in EHRs, we propose a knowledge-embedded latent projection model that leverages semantic side information to regularize representation learning. Specifically, we model column embeddings as smooth functions of semantic embeddings via a mapping in a reproducing kernel Hilbert space. We develop a computationally efficient two-step estimation procedure that combines semantically guided subspace construction via kernel principal component analysis with scalable projected gradient descent. We establish estimation error bounds that characterize the trade-off between statistical error and approximation error induced by the kernel projection. Furthermore, we provide local convergence guarantees for our non-convex optimization procedure. Extensive simulation studies and a real-world EHR application demonstrate the effectiveness of the proposed method.",
+                "summary": "Reward modeling is a core component of modern alignment pipelines including RLHF and RLAIF, underpinning policy optimization methods including PPO and TRPO. However, training reliable reward models relies heavily on human-labeled preference data, which is costly and limited, motivating the use of data augmentation. Existing augmentation approaches typically operate at the representation or semantic level and remain agnostic to the reward model's estimation difficulty. In this paper, we propose MARS, an adaptive, margin-aware augmentation and sampling strategy that explicitly targets ambiguous and failure modes of the reward model. Our proposed framework, MARS, concentrates augmentation on low-margin (ambiguous) preference pairs where the reward model is most uncertain, and iteratively refines the training distribution via hard-sample augmentation. We provide theoretical guarantees showing that this strategy increases the average curvature of the loss function hence enhance information and improves conditioning, along with empirical results demonstrating consistent gains over uniform augmentation for robust reward modeling.",
                 "category": [
                     {
                         "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.ST",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ME",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-02-18T18:58:16Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Weijing Tang"
-                    },
-                    {
-                        "name": "Ming Yuan"
-                    },
-                    {
-                        "name": "Zongqi Xia"
-                    },
-                    {
-                        "name": "Tianxi Cai"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.16705v1",
-                "title": "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
-                "updated": "2026-02-18T18:55:02Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.16705v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.16705v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Visual loco-manipulation of arbitrary objects in the wild with humanoid robots requires accurate end-effector (EE) control and a generalizable understanding of the scene via visual inputs (e.g., RGB-D images). Existing approaches are based on real-world imitation learning and exhibit limited generalization due to the difficulty in collecting large-scale training datasets. This paper presents a new paradigm, HERO, for object loco-manipulation with humanoid robots that combines the strong generalization and open-vocabulary understanding of large vision models with strong control performance from simulated training. We achieve this by designing an accurate residual-aware EE tracking policy. This EE tracking policy combines classical robotics with machine learning. It uses a) inverse kinematics to convert residual end-effector targets into reference trajectories, b) a learned neural forward model for accurate forward kinematics, c) goal adjustment, and d) replanning. Together, these innovations help us cut down the end-effector tracking error by 3.2x. We use this accurate end-effector tracker to build a modular system for loco-manipulation, where we use open-vocabulary large vision models for strong visual generalization. Our system is able to operate in diverse real-world environments, from offices to coffee shops, where the robot is able to reliably manipulate various everyday objects (e.g., mugs, apples, toys) on surfaces ranging from 43cm to 92cm in height. Systematic modular and end-to-end tests in simulation and the real world demonstrate the effectiveness of our proposed design. We believe the advances in this paper can open up new ways of training humanoid robots to interact with daily objects.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-02-18T18:55:02Z",
-                "arxiv:comment": "Project page: https://hero-humanoid.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Runpei Dong"
-                    },
-                    {
-                        "name": "Ziyan Li"
-                    },
-                    {
-                        "name": "Xialin He"
-                    },
-                    {
-                        "name": "Saurabh Gupta"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.16704v1",
-                "title": "Reinforced Fast Weights with Next-Sequence Prediction",
-                "updated": "2026-02-18T18:53:18Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.16704v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.16704v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Fast weight architectures offer a promising alternative to attention-based transformers for long-context modeling by maintaining constant memory overhead regardless of context length. However, their potential is limited by the next-token prediction (NTP) training paradigm. NTP optimizes single-token predictions and ignores semantic coherence across multiple tokens following a prefix. Consequently, fast weight models, which dynamically update their parameters to store contextual information, learn suboptimal representations that fail to capture long-range dependencies. We introduce REFINE (Reinforced Fast weIghts with Next sEquence prediction), a reinforcement learning framework that trains fast weight models under the next-sequence prediction (NSP) objective. REFINE selects informative token positions based on prediction entropy, generates multi-token rollouts, assigns self-supervised sequence-level rewards, and optimizes the model with group relative policy optimization (GRPO). REFINE is applicable throughout the training lifecycle of pre-trained language models: mid-training, post-training, and test-time training. Our experiments on LaCT-760M and DeltaNet-1.3B demonstrate that REFINE consistently outperforms supervised fine-tuning with NTP across needle-in-a-haystack retrieval, long-context question answering, and diverse tasks in LongBench. REFINE provides an effective and versatile framework for improving long-context modeling in fast weight architectures.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-02-18T18:53:18Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Hee Seung Hwang"
-                    },
-                    {
-                        "name": "Xindi Wu"
-                    },
-                    {
-                        "name": "Sanghyuk Chun"
-                    },
-                    {
-                        "name": "Olga Russakovsky"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.16703v1",
-                "title": "Measuring Mid-2025 LLM-Assistance on Novice Performance in Biology",
-                "updated": "2026-02-18T18:51:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.16703v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.16703v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large language models (LLMs) perform strongly on biological benchmarks, raising concerns that they may help novice actors acquire dual-use laboratory skills. Yet, whether this translates to improved human performance in the physical laboratory remains unclear. To address this, we conducted a pre-registered, investigator-blinded, randomized controlled trial (June-August 2025; n = 153) evaluating whether LLMs improve novice performance in tasks that collectively model a viral reverse genetics workflow. We observed no significant difference in the primary endpoint of workflow completion (5.2% LLM vs. 6.6% Internet; P = 0.759), nor in the success rate of individual tasks. However, the LLM arm had numerically higher success rates in four of the five tasks, most notably for the cell culture task (68.8% LLM vs. 55.3% Internet; P = 0.059). Post-hoc Bayesian modeling of pooled data estimates an approximate 1.4-fold increase (95% CrI 0.74-2.62) in success for a \"typical\" reverse genetics task under LLM assistance. Ordinal regression modelling suggests that participants in the LLM arm were more likely to progress through intermediate steps across all tasks (posterior probability of a positive effect: 81%-96%). Overall, mid-2025 LLMs did not substantially increase novice completion of complex laboratory procedures but were associated with a modest performance benefit. These results reveal a gap between in silico benchmarks and real-world utility, underscoring the need for physical-world validation of AI biosecurity assessments as model capabilities and user proficiency evolve.",
-                "category": [
-                    {
-                        "@term": "cs.CY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-02-18T18:51:28Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CY"
-                },
-                "author": [
-                    {
-                        "name": "Shen Zhou Hong"
                     },
-                    {
-                        "name": "Alex Kleinman"
-                    },
-                    {
-                        "name": "Alyssa Mathiowetz"
-                    },
-                    {
-                        "name": "Adam Howes"
-                    },
-                    {
-                        "name": "Julian Cohen"
-                    },
-                    {
-                        "name": "Suveer Ganta"
-                    },
-                    {
-                        "name": "Alex Letizia"
-                    },
-                    {
-                        "name": "Dora Liao"
-                    },
-                    {
-                        "name": "Deepika Pahari"
-                    },
-                    {
-                        "name": "Xavier Roberts-Gaal"
-                    },
-                    {
-                        "name": "Luca Righetti"
-                    },
-                    {
-                        "name": "Joe Torres"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.16700v1",
-                "title": "The Role of Common Randomness Replication in Symmetric PIR on Graph-Based Replicated Systems",
-                "updated": "2026-02-18T18:46:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.16700v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.16700v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In symmetric private information retrieval (SPIR), a user communicates with multiple servers to retrieve from them a message in a database, while not revealing the message index to any individual server (user privacy), and learning no additional information about the database (database privacy). We study the problem of SPIR on graph-replicated database systems, where each node of the graph represents a server and each link represents a message. Each message is replicated at exactly two servers; those at which the link representing the message is incident. To ensure database privacy, the servers share a set of common randomness, independent of the database and the user's desired message index. We study two cases of common randomness distribution to the servers: i) graph-replicated common randomness, and ii) fully-replicated common randomness. Given a graph-replicated database system, in i), we assign one randomness variable independently to every pair of servers sharing a message, while in ii), we assign an identical set of randomness variable to all servers, irrespective of the underlying graph. In both settings, our goal is to characterize the SPIR capacity, i.e., the maximum number of desired message symbols retrieved per downloaded symbol, and quantify the minimum amount of common randomness required to achieve the capacity. To this goal, in setting i), we derive a general lower bound on the SPIR capacity, and show it to be tight for path and regular graphs through a matching converse. Moreover, we establish that the minimum size of common randomness required for SPIR is equal to the message size. In setting ii), the SPIR capacity improves over the first, more restrictive setting. We show this through capacity lower bounds for a class of graphs, by constructing SPIR schemes from PIR schemes.",
-                "category": [
                     {
                         "@term": "cs.IT",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.NI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.SP",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-02-18T18:46:58Z",
+                "published": "2026-02-19T18:59:03Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.IT"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Shreya Meel"
+                        "name": "Payel Bhattacharjee"
                     },
                     {
-                        "name": "Sennur Ulukus"
+                        "name": "Osvaldo Simeone"
+                    },
+                    {
+                        "name": "Ravi Tandon"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2602.16698v1",
-                "title": "Causality is Key for Interpretability Claims to Generalise",
-                "updated": "2026-02-18T18:45:04Z",
+                "id": "http://arxiv.org/abs/2602.17655v1",
+                "title": "What Language is This? Ask Your Tokenizer",
+                "updated": "2026-02-19T18:58:39Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2602.16698v1",
+                        "@href": "https://arxiv.org/abs/2602.17655v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2602.16698v1",
+                        "@href": "https://arxiv.org/pdf/2602.17655v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Interpretability research on large language models (LLMs) has yielded important insights into model behaviour, yet recurring pitfalls persist: findings that do not generalise, and causal interpretations that outrun the evidence. Our position is that causal inference specifies what constitutes a valid mapping from model activations to invariant high-level structures, the data or assumptions needed to achieve it, and the inferences it can support. Specifically, Pearl's causal hierarchy clarifies what an interpretability study can justify. Observations establish associations between model behaviour and internal components. Interventions (e.g., ablations or activation patching) support claims how these edits affect a behavioural metric (\\eg, average change in token probabilities) over a set of prompts. However, counterfactual claims -- i.e., asking what the model output would have been for the same prompt under an unobserved intervention -- remain largely unverifiable without controlled supervision. We show how causal representation learning (CRL) operationalises this hierarchy, specifying which variables are recoverable from activations and under what assumptions. Together, these motivate a diagnostic framework that helps practitioners select methods and evaluations matching claims to evidence such that findings generalise.",
+                "summary": "Language Identification (LID) is an important component of many multilingual natural language processing pipelines, where it facilitates corpus curation, training data analysis, and cross-lingual evaluation of large language models. Despite near-perfect performance on high-resource languages, existing systems remain brittle in low-resource and closely related language settings. We introduce UniLID, a simple and efficient LID method based on the UnigramLM tokenization algorithm, leveraging its probabilistic framing, parameter estimation technique and inference strategy. In short, we learn language-conditional unigram distributions over a shared tokenizer vocabulary but treat segmentation as a language-specific phenomenon. Our formulation is data- and compute-efficient, supports incremental addition of new languages without retraining existing models, and can naturally be integrated into existing language model tokenization pipelines. Empirical evaluations against widely used baselines, including fastText, GlotLID, and CLD3, show that UniLID achieves competitive performance on standard benchmarks, substantially improves sample efficiency in low-resource settings - surpassing 70% accuracy with as few as five labeled samples per language - and delivers large gains on fine-grained dialect identification.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-02-19T18:58:39Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Clara Meister"
+                    },
+                    {
+                        "name": "Ahmetcan Yavuz"
+                    },
+                    {
+                        "name": "Pietro Lesci"
+                    },
+                    {
+                        "name": "Tiago Pimentel"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.17654v1",
+                "title": "Mine and Refine: Optimizing Graded Relevance in E-commerce Search Retrieval",
+                "updated": "2026-02-19T18:56:36Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.17654v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.17654v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We propose a two-stage \"Mine and Refine\" contrastive training framework for semantic text embeddings to enhance multi-category e-commerce search retrieval. Large scale e-commerce search demands embeddings that generalize to long tail, noisy queries while adhering to scalable supervision compatible with product and policy constraints. A practical challenge is that relevance is often graded: users accept substitutes or complements beyond exact matches, and production systems benefit from clear separation of similarity scores across these relevance strata for stable hybrid blending and thresholding. To obtain scalable policy consistent supervision, we fine-tune a lightweight LLM on human annotations under a three-level relevance guideline and further reduce residual noise via engagement driven auditing. In Stage 1, we train a multilingual Siamese two-tower retriever with a label aware supervised contrastive objective that shapes a robust global semantic space. In Stage 2, we mine hard samples via ANN and re-annotate them with the policy aligned LLM, and introduce a multi-class extension of circle loss that explicitly sharpens similarity boundaries between relevance levels, to further refine and enrich the embedding space. Robustness is additionally improved through additive spelling augmentation and synthetic query generation. Extensive offline evaluations and production A/B tests show that our framework improves retrieval relevance and delivers statistically significant gains in engagement and business impact.",
+                "category": [
+                    {
+                        "@term": "cs.IR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-02-19T18:56:36Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.IR"
+                },
+                "author": [
+                    {
+                        "name": "Jiaqi Xi"
+                    },
+                    {
+                        "name": "Raghav Saboo"
+                    },
+                    {
+                        "name": "Luming Chen"
+                    },
+                    {
+                        "name": "Martin Wang"
+                    },
+                    {
+                        "name": "Sudeep Das"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.17653v1",
+                "title": "Differences in Typological Alignment in Language Models' Treatment of Differential Argument Marking",
+                "updated": "2026-02-19T18:56:34Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.17653v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.17653v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent work has shown that language models (LMs) trained on synthetic corpora can exhibit typological preferences that resemble cross-linguistic regularities in human languages, particularly for syntactic phenomena such as word order. In this paper, we extend this paradigm to differential argument marking (DAM), a semantic licensing system in which morphological marking depends on semantic prominence. Using a controlled synthetic learning method, we train GPT-2 models on 18 corpora implementing distinct DAM systems and evaluate their generalization using minimal pairs. Our results reveal a dissociation between two typological dimensions of DAM. Models reliably exhibit human-like preferences for natural markedness direction, favoring systems in which overt marking targets semantically atypical arguments. In contrast, models do not reproduce the strong object preference in human languages, in which overt marking in DAM more often targets objects rather than subjects. These findings suggest that different typological tendencies may arise from distinct underlying sources.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-02-19T18:56:34Z",
+                "arxiv:comment": "15 pages, 7 figures, 7 tables. Under review",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Iskar Deng"
+                    },
+                    {
+                        "name": "Nathalia Xu"
+                    },
+                    {
+                        "name": "Shane Steinert-Threlkeld"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.17652v1",
+                "title": "A Chemodynamical Census of the Milky Way's Ultra-Faint Compact Satellites. I. A First Population-Level Look at the Internal Kinematics and Metallicities of 19 Extremely-Low-Mass Halo Stellar Systems",
+                "updated": "2026-02-19T18:56:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.17652v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.17652v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Deep, wide-area photometric surveys have uncovered a population of compact ($r_{1/2} \\approx$ 1-15 pc), extremely-low-mass ($M_* \\approx$ 20-4000 $M_{\\odot}$) stellar systems in the Milky Way halo that are smaller in size than known ultra-faint dwarf galaxies (UFDs) and substantially fainter than most classical globular clusters (GCs). Very little is known about the nature and origins of this population of \"Ultra-Faint Compact Satellites\" (UFCSs) owing to a dearth of spectroscopic measurements. Here, we present the first spectroscopic census of these compact systems based on Magellan/IMACS and Keck/DEIMOS observations of 19 individual UFCSs, representing $\\sim$2/3 of the known population. We securely measure mean radial velocities for all 19 systems, velocity dispersions for 15 (predominantly upper limits), metallicities for 17, metallicity dispersions for 8, and $\\textit{Gaia}$-based mean proper motions for 18. This large new spectroscopic sample provides the first insights into population-level trends for these extreme satellites. We demonstrate that: (1) the UFCSs are kinematically colder, on average, than the UFDs, disfavoring very dense dark matter halos in most cases, (2) the UFCS population is chemically diverse, spanning a factor of $\\sim$300 in mean iron abundance ($\\rm -3.3 \\lesssim [Fe/H] \\lesssim -0.8$), with multiple systems falling beneath the \"metallicity floor\" proposed for GCs, and (3) while some higher-metallicity and/or younger UFCSs are clearly star clusters, the dynamical and/or chemical evidence allows the possibility that up to $\\sim$50% of the UFCSs in our sample (9 of 19) may represent the smallest and least-massive galaxies yet discovered.",
+                "category": {
+                    "@term": "astro-ph.GA",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-02-19T18:56:28Z",
+                "arxiv:comment": "63 pages (main) + 18 pages (references + appendix), 30 Figures, 6 Tables. Will submit to ApJ in one week; comments welcome. Brief summary available here: https://wcerny.github.io/compactsatellites/. Repository with spectroscopic member catalogs: https://zenodo.org/records/18612486. Forthcoming Paper II will explore the orbits, accretion histories, and tidal influences of the same sample",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.GA"
+                },
+                "author": [
+                    {
+                        "name": "William Cerny"
+                    },
+                    {
+                        "name": "Ting S. Li"
+                    },
+                    {
+                        "name": "Andrew B. Pace"
+                    },
+                    {
+                        "name": "Joshua D. Simon"
+                    },
+                    {
+                        "name": "Marla Geha"
+                    },
+                    {
+                        "name": "Alexander P. Ji"
+                    },
+                    {
+                        "name": "Alex Drlica-Wagner"
+                    },
+                    {
+                        "name": "Jordan Bruce"
+                    },
+                    {
+                        "name": "Oleg Y. Gnedin"
+                    },
+                    {
+                        "name": "Eric F. Bell"
+                    },
+                    {
+                        "name": "Sidney Mau"
+                    },
+                    {
+                        "name": "Ivanna Escala"
+                    },
+                    {
+                        "name": "Daisy Bissonette"
+                    },
+                    {
+                        "name": "Alessandro Savino"
+                    },
+                    {
+                        "name": "Anirudh Chiti"
+                    },
+                    {
+                        "name": "Evan N. Kirby"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.17650v1",
+                "title": "Human-level 3D shape perception emerges from multi-view learning",
+                "updated": "2026-02-19T18:56:05Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.17650v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.17650v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Humans can infer the three-dimensional structure of objects from two-dimensional visual inputs. Modeling this ability has been a longstanding goal for the science and engineering of visual intelligence, yet decades of computational methods have fallen short of human performance. Here we develop a modeling framework that predicts human 3D shape inferences for arbitrary objects, directly from experimental stimuli. We achieve this with a novel class of neural networks trained using a visual-spatial objective over naturalistic sensory data; given a set of images taken from different locations within a natural scene, these models learn to predict spatial information related to these images, such as camera location and visual depth, without relying on any object-related inductive biases. Notably, these visual-spatial signals are analogous to sensory cues readily available to humans. We design a zero-shot evaluation approach to determine the performance of these `multi-view' models on a well established 3D perception task, then compare model and human behavior. Our modeling framework is the first to match human accuracy on 3D shape inferences, even without task-specific training or fine-tuning. Remarkably, independent readouts of model responses predict fine-grained measures of human behavior, including error patterns and reaction times, revealing a natural correspondence between model dynamics and human perception. Taken together, our findings indicate that human-level 3D perception can emerge from a simple, scalable learning objective over naturalistic visual-spatial data. All code, human behavioral data, and experimental stimuli needed to reproduce our findings can be found on our project page.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-02-19T18:56:05Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Tyler Bonnen"
+                    },
+                    {
+                        "name": "Jitendra Malik"
+                    },
+                    {
+                        "name": "Angjoo Kanazawa"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.17646v1",
+                "title": "Multi-Round Human-AI Collaboration with User-Specified Requirements",
+                "updated": "2026-02-19T18:54:34Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.17646v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.17646v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "As humans increasingly rely on multiround conversational AI for high stakes decisions, principled frameworks are needed to ensure such interactions reliably improve decision quality. We adopt a human centric view governed by two principles: counterfactual harm, ensuring the AI does not undermine human strengths, and complementarity, ensuring it adds value where the human is prone to err. We formalize these concepts via user defined rules, allowing users to specify exactly what harm and complementarity mean for their specific task. We then introduce an online, distribution free algorithm with finite sample guarantees that enforces the user-specified constraints over the collaboration dynamics. We evaluate our framework across two interactive settings: LLM simulated collaboration on a medical diagnostic task and a human crowdsourcing study on a pictorial reasoning task. We show that our online procedure maintains prescribed counterfactual harm and complementarity violation rates even under nonstationary interaction dynamics. Moreover, tightening or loosening these constraints produces predictable shifts in downstream human accuracy, confirming that the two principles serve as practical levers for steering multi-round collaboration toward better decision quality without the need to model or constrain human behavior.",
                 "category": {
                     "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-02-18T18:45:04Z",
+                "published": "2026-02-19T18:54:34Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Shruti Joshi"
+                        "name": "Sima Noorani"
                     },
                     {
-                        "name": "Aaron Mueller"
+                        "name": "Shayan Kiyani"
                     },
                     {
-                        "name": "David Klindt"
+                        "name": "Hamed Hassani"
                     },
                     {
-                        "name": "Wieland Brendel"
-                    },
-                    {
-                        "name": "Patrik Reizinger"
-                    },
-                    {
-                        "name": "Dhanya Sridhar"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.16697v1",
-                "title": "Protecting the Undeleted in Machine Unlearning",
-                "updated": "2026-02-18T18:44:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.16697v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.16697v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Machine unlearning aims to remove specific data points from a trained model, often striving to emulate \"perfect retraining\", i.e., producing the model that would have been obtained had the deleted data never been included. We demonstrate that this approach, and security definitions that enable it, carry significant privacy risks for the remaining (undeleted) data points. We present a reconstruction attack showing that for certain tasks, which can be computed securely without deletions, a mechanism adhering to perfect retraining allows an adversary controlling merely $\u03c9(1)$ data points to reconstruct almost the entire dataset merely by issuing deletion requests. We survey existing definitions for machine unlearning, showing they are either susceptible to such attacks or too restrictive to support basic functionalities like exact summation. To address this problem, we propose a new security definition that specifically safeguards undeleted data against leakage caused by the deletion of other points. We show that our definition permits several essential functionalities, such as bulletin boards, summations, and statistical learning.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-02-18T18:44:21Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Aloni Cohen"
-                    },
-                    {
-                        "name": "Refael Kohen"
-                    },
-                    {
-                        "name": "Kobbi Nissim"
-                    },
-                    {
-                        "name": "Uri Stemmer"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.16696v1",
-                "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
-                "updated": "2026-02-18T18:42:29Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.16696v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.16696v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Single-cell RNA sequencing (scRNA-seq) data exhibit strong and reproducible statistical structure. This has motivated the development of large-scale foundation models, such as TranscriptFormer, that use transformer-based architectures to learn a generative model for gene expression by embedding genes into a latent vector space. These embeddings have been used to obtain state-of-the-art (SOTA) performance on downstream tasks such as cell-type classification, disease-state prediction, and cross-species learning. Here, we ask whether similar performance can be achieved without utilizing computationally intensive deep learning-based representations. Using simple, interpretable pipelines that rely on careful normalization and linear methods, we obtain SOTA or near SOTA performance across multiple benchmarks commonly used to evaluate single-cell foundation models, including outperforming foundation models on out-of-distribution tasks involving novel cell types and organisms absent from the training data. Our findings highlight the need for rigorous benchmarking and suggest that the biology of cell identity can be captured by simple linear representations of single cell gene expression data.",
-                "category": [
-                    {
-                        "@term": "q-bio.GN",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "q-bio.QM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-02-18T18:42:29Z",
-                "arxiv:primary_category": {
-                    "@term": "q-bio.GN"
-                },
-                "author": [
-                    {
-                        "name": "Huan Souza"
-                    },
-                    {
-                        "name": "Pankaj Mehta"
+                        "name": "George Pappas"
                     }
                 ]
             }
