@@ -5,427 +5,456 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-02-24T01:28:24Z",
+        "updated": "2026-02-24T04:12:55Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "542991",
+        "opensearch:totalResults": "543635",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2602.18435v1",
-                "title": "Assigning Confidence: K-partition Ensembles",
-                "updated": "2026-02-20T18:59:53Z",
+                "id": "http://arxiv.org/abs/2602.20160v1",
+                "title": "tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction",
+                "updated": "2026-02-23T18:59:45Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2602.18435v1",
+                        "@href": "https://arxiv.org/abs/2602.20160v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2602.18435v1",
+                        "@href": "https://arxiv.org/pdf/2602.20160v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Clustering is widely used for unsupervised structure discovery, yet it offers limited insight into how reliable each individual assignment is. Diagnostics, such as convergence behavior or objective values, may reflect global quality, but they do not indicate whether particular instances are assigned confidently, especially for initialization-sensitive algorithms like k-means. This assignment-level instability can undermine both accuracy and robustness. Ensemble approaches improve global consistency by aggregating multiple runs, but they typically lack tools for quantifying pointwise confidence in a way that combines cross-run agreement with geometric support from the learned cluster structure. We introduce CAKE (Confidence in Assignments via K-partition Ensembles), a framework that evaluates each point using two complementary statistics computed over a clustering ensemble: assignment stability and consistency of local geometric fit. These are combined into a single, interpretable score in [0,1]. Our theoretical analysis shows that CAKE remains effective under noise and separates stable from unstable points. Experiments on synthetic and real-world datasets indicate that CAKE effectively highlights ambiguous points and stable core members, providing a confidence ranking that can guide filtering or prioritization to improve clustering quality.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-02-20T18:59:53Z",
-                "arxiv:comment": "31 pages including appendix",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Aggelos Semoglou"
-                    },
-                    {
-                        "name": "John Pavlopoulos"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.18432v1",
-                "title": "SARAH: Spatially Aware Real-time Agentic Humans",
-                "updated": "2026-02-20T18:59:35Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.18432v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.18432v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "As embodied agents become central to VR, telepresence, and digital human applications, their motion must go beyond speech-aligned gestures: agents should turn toward users, respond to their movement, and maintain natural gaze. Current methods lack this spatial awareness. We close this gap with the first real-time, fully causal method for spatially-aware conversational motion, deployable on a streaming VR headset. Given a user's position and dyadic audio, our approach produces full-body motion that aligns gestures with speech while orienting the agent according to the user. Our architecture combines a causal transformer-based VAE with interleaved latent tokens for streaming inference and a flow matching model conditioned on user trajectory and audio. To support varying gaze preferences, we introduce a gaze scoring mechanism with classifier-free guidance to decouple learning from control: the model captures natural spatial alignment from data, while users can adjust eye contact intensity at inference time. On the Embody 3D dataset, our method achieves state-of-the-art motion quality at over 300 FPS -- 3x faster than non-causal baselines -- while capturing the subtle spatial dynamics of natural conversation. We validate our approach on a live VR system, bringing spatially-aware conversational agents to real-time deployment. Please see https://evonneng.github.io/sarah/ for details.",
+                "summary": "We propose tttLRM, a novel large 3D reconstruction model that leverages a Test-Time Training (TTT) layer to enable long-context, autoregressive 3D reconstruction with linear computational complexity, further scaling the model's capability. Our framework efficiently compresses multiple image observations into the fast weights of the TTT layer, forming an implicit 3D representation in the latent space that can be decoded into various explicit formats, such as Gaussian Splats (GS) for downstream applications. The online learning variant of our model supports progressive 3D reconstruction and refinement from streaming observations. We demonstrate that pretraining on novel view synthesis tasks effectively transfers to explicit 3D modeling, resulting in improved reconstruction quality and faster convergence. Extensive experiments show that our method achieves superior performance in feedforward 3D Gaussian reconstruction compared to state-of-the-art approaches on both objects and scenes.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-02-20T18:59:35Z",
-                "arxiv:comment": "Project page: https://evonneng.github.io/sarah/",
+                "published": "2026-02-23T18:59:45Z",
+                "arxiv:comment": "Accepted by CVPR 2026. Project Page: https://cwchenwang.github.io/tttLRM",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Evonne Ng"
+                        "name": "Chen Wang"
                     },
                     {
-                        "name": "Siwei Zhang"
+                        "name": "Hao Tan"
                     },
                     {
-                        "name": "Zhang Chen"
+                        "name": "Wang Yifan"
                     },
                     {
-                        "name": "Michael Zollhoefer"
+                        "name": "Zhiqin Chen"
                     },
                     {
-                        "name": "Alexander Richard"
+                        "name": "Yuheng Liu"
+                    },
+                    {
+                        "name": "Kalyan Sunkavalli"
+                    },
+                    {
+                        "name": "Sai Bi"
+                    },
+                    {
+                        "name": "Lingjie Liu"
+                    },
+                    {
+                        "name": "Yiwei Hu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2602.18431v1",
-                "title": "SMaRT: Online Reusable Resource Assignment and an Application to Mediation in the Kenyan Judiciary",
-                "updated": "2026-02-20T18:58:05Z",
+                "id": "http://arxiv.org/abs/2602.20159v1",
+                "title": "A Very Big Video Reasoning Suite",
+                "updated": "2026-02-23T18:59:41Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2602.18431v1",
+                        "@href": "https://arxiv.org/abs/2602.20159v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2602.18431v1",
+                        "@href": "https://arxiv.org/pdf/2602.20159v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Motivated by the problem of assigning mediators to cases in the Kenyan judicial, we study an online resource allocation problem where incoming tasks (cases) must be immediately assigned to available, capacity-constrained resources (mediators). The resources differ in their quality, which may need to be learned. In addition, resources can only be assigned to a subset of tasks that overlaps to varying degrees with the subset of tasks other resources can be assigned to. The objective is to maximize task completion while satisfying soft capacity constraints across all the resources. The scale of the real-world problem poses substantial challenges, since there are over 2000 mediators and a multitude of combinations of geographic locations (87) and case types (12) that each mediator is qualified to work on. Together, these features, unknown quality of new resources, soft capacity constraints, and a high-dimensional state space, make existing scheduling and resource allocation algorithms either inapplicable or inefficient. We formalize the problem in a tractable manner using a quadratic program formulation for assignment and a multi-agent bandit-style framework for learning. We demonstrate the key properties and advantages of our new algorithm, SMaRT (Selecting Mediators that are Right for the Task), compared with baselines on stylized instances of the mediator allocation problem. We then consider its application to real-world data on cases and mediators from the Kenyan judiciary. SMaRT outperforms baselines and allows control over the tradeoff between the strictness of capacity constraints and overall case resolution rates, both in settings where mediator quality is known beforehand and in bandit-like settings where learning is part of the problem definition. On the strength of these results, we plan to run a randomized controlled trial with SMaRT in the judiciary in the near future.",
-                "category": {
-                    "@term": "cs.CY",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-02-20T18:58:05Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CY"
-                },
-                "author": [
-                    {
-                        "name": "Shafkat Farabi"
-                    },
-                    {
-                        "name": "Didac Marti Pinto"
-                    },
-                    {
-                        "name": "Wei Lu"
-                    },
-                    {
-                        "name": "Manuel Ramos-Maqueda"
-                    },
-                    {
-                        "name": "Sanmay Das"
-                    },
-                    {
-                        "name": "Antoine Deeb"
-                    },
-                    {
-                        "name": "Anja Sautmann"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.18428v1",
-                "title": "The Geometry of Noise: Why Diffusion Models Don't Need Noise Conditioning",
-                "updated": "2026-02-20T18:49:00Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.18428v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.18428v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Autonomous (noise-agnostic) generative models, such as Equilibrium Matching and blind diffusion, challenge the standard paradigm by learning a single, time-invariant vector field that operates without explicit noise-level conditioning. While recent work suggests that high-dimensional concentration allows these models to implicitly estimate noise levels from corrupted observations, a fundamental paradox remains: what is the underlying landscape being optimized when the noise level is treated as a random variable, and how can a bounded, noise-agnostic network remain stable near the data manifold where gradients typically diverge? We resolve this paradox by formalizing Marginal Energy, $E_{\\text{marg}}(\\mathbf{u}) = -\\log p(\\mathbf{u})$, where $p(\\mathbf{u}) = \\int p(\\mathbf{u}|t)p(t)dt$ is the marginal density of the noisy data integrated over a prior distribution of unknown noise levels. We prove that generation using autonomous models is not merely blind denoising, but a specific form of Riemannian gradient flow on this Marginal Energy. Through a novel relative energy decomposition, we demonstrate that while the raw Marginal Energy landscape possesses a $1/t^p$ singularity normal to the data manifold, the learned time-invariant field implicitly incorporates a local conformal metric that perfectly counteracts the geometric singularity, converting an infinitely deep potential well into a stable attractor. We also establish the structural stability conditions for sampling with autonomous models. We identify a ``Jensen Gap'' in noise-prediction parameterizations that acts as a high-gain amplifier for estimation errors, explaining the catastrophic failure observed in deterministic blind models. Conversely, we prove that velocity-based parameterizations are inherently stable because they satisfy a bounded-gain condition that absorbs posterior uncertainty into a smooth geometric drift.",
+                "summary": "Rapid progress in video models has largely focused on visual quality, leaving their reasoning capabilities underexplored. Video reasoning grounds intelligence in spatiotemporally consistent visual environments that go beyond what text can naturally capture, enabling intuitive reasoning over spatiotemporal structure such as continuity, interaction, and causality. However, systematically studying video reasoning and its scaling behavior is hindered by the lack of large-scale training data. To address this gap, we introduce the Very Big Video Reasoning (VBVR) Dataset, an unprecedentedly large-scale resource spanning 200 curated reasoning tasks following a principled taxonomy and over one million video clips, approximately three orders of magnitude larger than existing datasets. We further present VBVR-Bench, a verifiable evaluation framework that moves beyond model-based judging by incorporating rule-based, human-aligned scorers, enabling reproducible and interpretable diagnosis of video reasoning capabilities. Leveraging the VBVR suite, we conduct one of the first large-scale scaling studies of video reasoning and observe early signs of emergent generalization to unseen reasoning tasks. Together, VBVR lays a foundation for the next stage of research in generalizable video reasoning. The data, benchmark toolkit, and models are publicly available at https://video-reason.com/ .",
                 "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "eess.IV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-02-20T18:49:00Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Mojtaba Sahraee-Ardakan"
-                    },
-                    {
-                        "name": "Mauricio Delbracio"
-                    },
-                    {
-                        "name": "Peyman Milanfar"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.18426v1",
-                "title": "Spatio-Spectroscopic Representation Learning using Unsupervised Convolutional Long-Short Term Memory Networks",
-                "updated": "2026-02-20T18:48:36Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.18426v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.18426v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Integral Field Spectroscopy (IFS) surveys offer a unique new landscape in which to learn in both spatial and spectroscopic dimensions and could help uncover previously unknown insights into galaxy evolution. In this work, we demonstrate a new unsupervised deep learning framework using Convolutional Long-Short Term Memory Network Autoencoders to encode generalized feature representations across both spatial and spectroscopic dimensions spanning $19$ optical emission lines (3800A $< \u03bb<$ 8000A) among a sample of $\\sim 9000$ galaxies from the MaNGA IFS survey. As a demonstrative exercise, we assess our model on a sample of $290$ Active Galactic Nuclei (AGN) and highlight scientifically interesting characteristics of some highly anomalous AGN.",
-                "category": [
-                    {
-                        "@term": "astro-ph.GA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-02-20T18:48:36Z",
-                "arxiv:comment": "This manuscript was previously submitted to ICML for peer review. Reviewers noted that while the underlying VAE-based architecture builds on established methods, its application to spatially-resolved IFS data is promising for unsupervised representation learning in astronomy. This version is released for community visibility. Reviewer decisions: Weak accept and Weak reject (Final: Reject)",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.GA"
-                },
-                "author": [
-                    {
-                        "name": "Kameswara Bharadwaj Mantha"
-                    },
-                    {
-                        "name": "Lucy Fortson"
-                    },
-                    {
-                        "name": "Ramanakumar Sankar"
-                    },
-                    {
-                        "name": "Claudia Scarlata"
-                    },
-                    {
-                        "name": "Chris Lintott"
-                    },
-                    {
-                        "name": "Sandor Kruk"
-                    },
-                    {
-                        "name": "Mike Walmsley"
-                    },
-                    {
-                        "name": "Hugh Dickinson"
-                    },
-                    {
-                        "name": "Karen Masters"
-                    },
-                    {
-                        "name": "Brooke Simmons"
-                    },
-                    {
-                        "name": "Rebecca Smethurst"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.18419v1",
-                "title": "Benchmarking Graph Neural Networks in Solving Hard Constraint Satisfaction Problems",
-                "updated": "2026-02-20T18:41:48Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.18419v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.18419v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Graph neural networks (GNNs) are increasingly applied to hard optimization problems, often claiming superiority over classical heuristics. However, such claims risk being unsolid due to a lack of standard benchmarks on truly hard instances. From a statistical physics perspective, we propose new hard benchmarks based on random problems. We provide these benchmarks, along with performance results from both classical heuristics and GNNs. Our fair comparison shows that classical algorithms still outperform GNNs. We discuss the challenges for neural networks in this domain. Future claims of superiority can be made more robust using our benchmarks, available at https://github.com/ArtLabBocconi/RandCSPBench.",
-                "category": [
-                    {
-                        "@term": "cond-mat.dis-nn",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.MM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-02-20T18:41:48Z",
+                "published": "2026-02-23T18:59:41Z",
+                "arxiv:comment": "Homepage: https://video-reason.com/",
                 "arxiv:primary_category": {
-                    "@term": "cond-mat.dis-nn"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Geri Skenderi"
+                        "name": "Maijunxian Wang"
                     },
                     {
-                        "name": "Lorenzo Buffoni"
+                        "name": "Ruisi Wang"
                     },
                     {
-                        "name": "Francesco D'Amico"
+                        "name": "Juyi Lin"
                     },
                     {
-                        "name": "David Machado"
+                        "name": "Ran Ji"
                     },
                     {
-                        "name": "Raffaele Marino"
+                        "name": "Thadd\u00e4us Wiedemer"
                     },
                     {
-                        "name": "Matteo Negri"
+                        "name": "Qingying Gao"
                     },
                     {
-                        "name": "Federico Ricci-Tersenghi"
+                        "name": "Dezhi Luo"
                     },
                     {
-                        "name": "Carlo Lucibello"
+                        "name": "Yaoyao Qian"
                     },
                     {
-                        "name": "Maria Chiara Angelini"
+                        "name": "Lianyu Huang"
+                    },
+                    {
+                        "name": "Zelong Hong"
+                    },
+                    {
+                        "name": "Jiahui Ge"
+                    },
+                    {
+                        "name": "Qianli Ma"
+                    },
+                    {
+                        "name": "Hang He"
+                    },
+                    {
+                        "name": "Yifan Zhou"
+                    },
+                    {
+                        "name": "Lingzi Guo"
+                    },
+                    {
+                        "name": "Lantao Mei"
+                    },
+                    {
+                        "name": "Jiachen Li"
+                    },
+                    {
+                        "name": "Hanwen Xing"
+                    },
+                    {
+                        "name": "Tianqi Zhao"
+                    },
+                    {
+                        "name": "Fengyuan Yu"
+                    },
+                    {
+                        "name": "Weihang Xiao"
+                    },
+                    {
+                        "name": "Yizheng Jiao"
+                    },
+                    {
+                        "name": "Jianheng Hou"
+                    },
+                    {
+                        "name": "Danyang Zhang"
+                    },
+                    {
+                        "name": "Pengcheng Xu"
+                    },
+                    {
+                        "name": "Boyang Zhong"
+                    },
+                    {
+                        "name": "Zehong Zhao"
+                    },
+                    {
+                        "name": "Gaoyun Fang"
+                    },
+                    {
+                        "name": "John Kitaoka"
+                    },
+                    {
+                        "name": "Yile Xu"
+                    },
+                    {
+                        "name": "Hua Xu"
+                    },
+                    {
+                        "name": "Kenton Blacutt"
+                    },
+                    {
+                        "name": "Tin Nguyen"
+                    },
+                    {
+                        "name": "Siyuan Song"
+                    },
+                    {
+                        "name": "Haoran Sun"
+                    },
+                    {
+                        "name": "Shaoyue Wen"
+                    },
+                    {
+                        "name": "Linyang He"
+                    },
+                    {
+                        "name": "Runming Wang"
+                    },
+                    {
+                        "name": "Yanzhi Wang"
+                    },
+                    {
+                        "name": "Mengyue Yang"
+                    },
+                    {
+                        "name": "Ziqiao Ma"
+                    },
+                    {
+                        "name": "Rapha\u00ebl Milli\u00e8re"
+                    },
+                    {
+                        "name": "Freda Shi"
+                    },
+                    {
+                        "name": "Nuno Vasconcelos"
+                    },
+                    {
+                        "name": "Daniel Khashabi"
+                    },
+                    {
+                        "name": "Alan Yuille"
+                    },
+                    {
+                        "name": "Yilun Du"
+                    },
+                    {
+                        "name": "Ziming Liu"
+                    },
+                    {
+                        "name": "Bo Li"
+                    },
+                    {
+                        "name": "Dahua Lin"
+                    },
+                    {
+                        "name": "Ziwei Liu"
+                    },
+                    {
+                        "name": "Vikash Kumar"
+                    },
+                    {
+                        "name": "Yijiang Li"
+                    },
+                    {
+                        "name": "Lei Yang"
+                    },
+                    {
+                        "name": "Zhongang Cai"
+                    },
+                    {
+                        "name": "Hokin Deng"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2602.18417v1",
-                "title": "Subgroups of $U(d)$ Induce Natural RNN and Transformer Architectures",
-                "updated": "2026-02-20T18:35:43Z",
+                "id": "http://arxiv.org/abs/2602.20157v1",
+                "title": "Flow3r: Factored Flow Prediction for Scalable Visual Geometry Learning",
+                "updated": "2026-02-23T18:59:30Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2602.18417v1",
+                        "@href": "https://arxiv.org/abs/2602.20157v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2602.18417v1",
+                        "@href": "https://arxiv.org/pdf/2602.20157v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "This paper presents a direct framework for sequence models with hidden states on closed subgroups of U(d). We use a minimal axiomatic setup and derive recurrent and transformer templates from a shared skeleton in which subgroup choice acts as a drop-in replacement for state space, tangent projection, and update map. We then specialize to O(d) and evaluate orthogonal-state RNN and transformer models on Tiny Shakespeare and Penn Treebank under parameter-matched settings. We also report a general linear-mixing extension in tangent space, which applies across subgroup choices and improves finite-budget performance in the current O(d) experiments.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-02-20T18:35:43Z",
-                "arxiv:comment": "12 pages, 3 figures, 8 tables",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": {
-                    "name": "Joshua Nunley"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2602.18415v1",
-                "title": "AI-Wrapped: Participatory, Privacy-Preserving Measurement of Longitudinal LLM Use In-the-Wild",
-                "updated": "2026-02-20T18:34:23Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2602.18415v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2602.18415v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Alignment research on large language models (LLMs) increasingly depends on understanding how these systems are used in everyday contexts. yet naturalistic interaction data is difficult to access due to privacy constraints and platform control. We present AI-Wrapped, a prototype workflow for collecting naturalistic LLM usage data while providing participants with an immediate ``wrapped''-style report on their usage statistics, top topics, and safety-relevant behavioral patterns. We report findings from an initial deployment with 82 U.S.-based adults across 48,495 conversations from their 2025 histories. Participants used LLMs for both instrumental and reflective purposes, including creative work, professional tasks, and emotional or existential themes. Some usage patterns were consistent with potential over-reliance or perfectionistic refinement, while heavier users showed comparatively more reflective exchanges than primarily transactional ones. Methodologically, even with zero data retention and PII removal, participants may remain hesitant to share chat data due to perceived privacy and judgment risks, underscoring the importance of trust, agency, and transparent design when building measurement infrastructure for alignment research.",
+                "summary": "Current feed-forward 3D/4D reconstruction systems rely on dense geometry and pose supervision -- expensive to obtain at scale and particularly scarce for dynamic real-world scenes. We present Flow3r, a framework that augments visual geometry learning with dense 2D correspondences (`flow') as supervision, enabling scalable training from unlabeled monocular videos. Our key insight is that the flow prediction module should be factored: predicting flow between two images using geometry latents from one and pose latents from the other. This factorization directly guides the learning of both scene geometry and camera motion, and naturally extends to dynamic scenes. In controlled experiments, we show that factored flow prediction outperforms alternative designs and that performance scales consistently with unlabeled data. Integrating factored flow into existing visual geometry architectures and training with ${\\sim}800$K unlabeled videos, Flow3r achieves state-of-the-art results across eight benchmarks spanning static and dynamic scenes, with its largest gains on in-the-wild dynamic videos where labeled data is most scarce.",
                 "category": {
-                    "@term": "cs.HC",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-02-20T18:34:23Z",
+                "published": "2026-02-23T18:59:30Z",
+                "arxiv:comment": "CVPR 2026. Project website: https://flow3r-project.github.io/",
                 "arxiv:primary_category": {
-                    "@term": "cs.HC"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Cathy Mengying Fang"
+                        "name": "Zhongxiao Cong"
                     },
                     {
-                        "name": "Sheer Karny"
+                        "name": "Qitao Zhao"
                     },
                     {
-                        "name": "Chayapatr Archiwaranguprok"
+                        "name": "Minsik Jeon"
                     },
                     {
-                        "name": "Yasith Samaradivakara"
-                    },
-                    {
-                        "name": "Pat Pataranutaporn"
-                    },
-                    {
-                        "name": "Pattie Maes"
+                        "name": "Shubham Tulsiani"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2602.18409v1",
-                "title": "Unifying approach to uniform expressivity of graph neural networks",
-                "updated": "2026-02-20T18:18:48Z",
+                "id": "http://arxiv.org/abs/2602.20156v1",
+                "title": "Skill-Inject: Measuring Agent Vulnerability to Skill File Attacks",
+                "updated": "2026-02-23T18:59:27Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2602.18409v1",
+                        "@href": "https://arxiv.org/abs/2602.20156v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2602.18409v1",
+                        "@href": "https://arxiv.org/pdf/2602.20156v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The expressive power of Graph Neural Networks (GNNs) is often analysed via correspondence to the Weisfeiler-Leman (WL) algorithm and fragments of first-order logic. Standard GNNs are limited to performing aggregation over immediate neighbourhoods or over global read-outs. To increase their expressivity, recent attempts have been made to incorporate substructural information (e.g. cycle counts and subgraph properties). In this paper, we formalize this architectural trend by introducing Template GNNs (T-GNNs), a generalized framework where node features are updated by aggregating over valid template embeddings from a specified set of graph templates. We propose a corresponding logic, Graded template modal logic (GML(T)), and generalized notions of template-based bisimulation and WL algorithm. We establish an equivalence between the expressive power of T-GNNs and GML(T), and provide a unifying approach for analysing GNN expressivity: we show how standard AC-GNNs and its recent variants can be interpreted as instantiations of T-GNNs.",
+                "summary": "LLM agents are evolving rapidly, powered by code execution, tools, and the recently introduced agent skills feature. Skills allow users to extend LLM applications with specialized third-party code, knowledge, and instructions. Although this can extend agent capabilities to new domains, it creates an increasingly complex agent supply chain, offering new surfaces for prompt injection attacks. We identify skill-based prompt injection as a significant threat and introduce SkillInject, a benchmark evaluating the susceptibility of widely-used LLM agents to injections through skill files. SkillInject contains 202 injection-task pairs with attacks ranging from obviously malicious injections to subtle, context-dependent attacks hidden in otherwise legitimate instructions. We evaluate frontier LLMs on SkillInject, measuring both security in terms of harmful instruction avoidance and utility in terms of legitimate instruction compliance. Our results show that today's agents are highly vulnerable with up to 80% attack success rate with frontier models, often executing extremely harmful instructions including data exfiltration, destructive action, and ransomware-like behavior. They furthermore suggest that this problem will not be solved through model scaling or simple input filtering, but that robust agent security will require context-aware authorization frameworks. Our benchmark is available at https://www.skill-inject.com/.",
+                "category": [
+                    {
+                        "@term": "cs.CR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-02-23T18:59:27Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CR"
+                },
+                "author": [
+                    {
+                        "name": "David Schmotz"
+                    },
+                    {
+                        "name": "Luca Beurer-Kellner"
+                    },
+                    {
+                        "name": "Sahar Abdelnabi"
+                    },
+                    {
+                        "name": "Maksym Andriushchenko"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.20153v1",
+                "title": "JUCAL: Jointly Calibrating Aleatoric and Epistemic Uncertainty in Classification Tasks",
+                "updated": "2026-02-23T18:59:10Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.20153v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.20153v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We study post-calibration uncertainty for trained ensembles of classifiers. Specifically, we consider both aleatoric (label noise) and epistemic (model) uncertainty. Among the most popular and widely used calibration methods in classification are temperature scaling (i.e., pool-then-calibrate) and conformal methods. However, the main shortcoming of these calibration methods is that they do not balance the proportion of aleatoric and epistemic uncertainty. Not balancing these uncertainties can severely misrepresent predictive uncertainty, leading to overconfident predictions in some input regions while being underconfident in others. To address this shortcoming, we present a simple but powerful calibration algorithm Joint Uncertainty Calibration (JUCAL) that jointly calibrates aleatoric and epistemic uncertainty. JUCAL jointly calibrates two constants to weight and scale epistemic and aleatoric uncertainties by optimizing the negative log-likelihood (NLL) on the validation/calibration dataset. JUCAL can be applied to any trained ensemble of classifiers (e.g., transformers, CNNs, or tree-based methods), with minimal computational overhead, without requiring access to the models' internal parameters. We experimentally evaluate JUCAL on various text classification tasks, for ensembles of varying sizes and with different ensembling strategies. Our experiments show that JUCAL significantly outperforms SOTA calibration methods across all considered classification tasks, reducing NLL and predictive set size by up to 15% and 20%, respectively. Interestingly, even applying JUCAL to an ensemble of size 5 can outperform temperature-scaled ensembles of size up to 50 in terms of NLL and predictive set size, resulting in up to 10 times smaller inference costs. Thus, we propose JUCAL as a new go-to method for calibrating ensembles in classification.",
+                "category": [
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-02-23T18:59:10Z",
+                "arxiv:comment": "11 pages + appendix. Preliminary version of an ongoing project that will be expanded with furhter evaluations",
+                "arxiv:primary_category": {
+                    "@term": "stat.ML"
+                },
+                "author": [
+                    {
+                        "name": "Jakob Heiss"
+                    },
+                    {
+                        "name": "S\u00f6ren Lambrecht"
+                    },
+                    {
+                        "name": "Jakob Weissteiner"
+                    },
+                    {
+                        "name": "Hanna Wutte"
+                    },
+                    {
+                        "name": "\u017dan \u017duri\u010d"
+                    },
+                    {
+                        "name": "Josef Teichmann"
+                    },
+                    {
+                        "name": "Bin Yu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.20152v1",
+                "title": "Behavior Learning (BL): Learning Hierarchical Optimization Structures from Data",
+                "updated": "2026-02-23T18:59:04Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.20152v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.20152v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Inspired by behavioral science, we propose Behavior Learning (BL), a novel general-purpose machine learning framework that learns interpretable and identifiable optimization structures from data, ranging from single optimization problems to hierarchical compositions. It unifies predictive performance, intrinsic interpretability, and identifiability, with broad applicability to scientific domains involving optimization. BL parameterizes a compositional utility function built from intrinsically interpretable modular blocks, which induces a data distribution for prediction and generation. Each block represents and can be written in symbolic form as a utility maximization problem (UMP), a foundational paradigm in behavioral science and a universal framework of optimization. BL supports architectures ranging from a single UMP to hierarchical compositions, the latter modeling hierarchical optimization structures. Its smooth and monotone variant (IBL) guarantees identifiability. Theoretically, we establish the universal approximation property of BL, and analyze the M-estimation properties of IBL. Empirically, BL demonstrates strong predictive performance, intrinsic interpretability and scalability to high-dimensional data. Code: https://github.com/MoonYLiang/Behavior-Learning ; install via pip install blnetwork.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -436,61 +465,259 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LO",
+                        "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-02-20T18:18:48Z",
+                "published": "2026-02-23T18:59:04Z",
+                "arxiv:comment": "ICLR 2026",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Huan Luo"
+                        "name": "Zhenyao Ma"
                     },
                     {
-                        "name": "Jonni Virtema"
+                        "name": "Yue Liang"
+                    },
+                    {
+                        "name": "Dongxu Li"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2602.18406v1",
-                "title": "Latent Equivariant Operators for Robust Object Recognition: Promise and Challenges",
-                "updated": "2026-02-20T18:14:05Z",
+                "id": "http://arxiv.org/abs/2602.20151v1",
+                "title": "Conformal Risk Control for Non-Monotonic Losses",
+                "updated": "2026-02-23T18:58:54Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2602.18406v1",
+                        "@href": "https://arxiv.org/abs/2602.20151v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2602.18406v1",
+                        "@href": "https://arxiv.org/pdf/2602.20151v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Despite the successes of deep learning in computer vision, difficulties persist in recognizing objects that have undergone group-symmetric transformations rarely seen during training-for example objects seen in unusual poses, scales, positions, or combinations thereof. Equivariant neural networks are a solution to the problem of generalizing across symmetric transformations, but require knowledge of transformations a priori. An alternative family of architectures proposes to earn equivariant operators in a latent space from examples of symmetric transformations. Here, using simple datasets of rotated and translated noisy MNIST, we illustrate how such architectures can successfully be harnessed for out-of-distribution classification, thus overcoming the limitations of both traditional and equivariant networks. While conceptually enticing, we discuss challenges ahead on the path of scaling these architectures to more complex datasets.",
+                "summary": "Conformal risk control is an extension of conformal prediction for controlling risk functions beyond miscoverage. The original algorithm controls the expected value of a loss that is monotonic in a one-dimensional parameter. Here, we present risk control guarantees for generic algorithms applied to possibly non-monotonic losses with multidimensional parameters. The guarantees depend on the stability of the algorithm -- unstable algorithms have looser guarantees. We give applications of this technique to selective image classification, FDR and IOU control of tumor segmentations, and multigroup debiasing of recidivism predictions across overlapping race and sex groups using empirical risk minimization.",
                 "category": [
                     {
-                        "@term": "cs.CV",
+                        "@term": "stat.ME",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-02-20T18:14:05Z",
+                "published": "2026-02-23T18:58:54Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "stat.ME"
+                },
+                "author": {
+                    "name": "Anastasios N. Angelopoulos"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.20150v1",
+                "title": "Simulation-Ready Cluttered Scene Estimation via Physics-aware Joint Shape and Pose Optimization",
+                "updated": "2026-02-23T18:58:24Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.20150v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.20150v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Estimating simulation-ready scenes from real-world observations is crucial for downstream planning and policy learning tasks. Regretfully, existing methods struggle in cluttered environments, often exhibiting prohibitive computational cost, poor robustness, and restricted generality when scaling to multiple interacting objects. We propose a unified optimization-based formulation for real-to-sim scene estimation that jointly recovers the shapes and poses of multiple rigid objects under physical constraints. Our method is built on two key technical innovations. First, we leverage the recently introduced shape-differentiable contact model, whose global differentiability permits joint optimization over object geometry and pose while modeling inter-object contacts. Second, we exploit the structured sparsity of the augmented Lagrangian Hessian to derive an efficient linear system solver whose computational cost scales favorably with scene complexity. Building on this formulation, we develop an end-to-end real-to-sim scene estimation pipeline that integrates learning-based object initialization, physics-constrained joint shape-pose optimization, and differentiable texture refinement. Experiments on cluttered scenes with up to 5 objects and 22 convex hulls demonstrate that our approach robustly reconstructs physically valid, simulation-ready object shapes and poses.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-02-23T18:58:24Z",
+                "arxiv:comment": "15 pages, 13 figures, in submission",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Minh Dinh"
+                        "name": "Wei-Cheng Huang"
                     },
                     {
-                        "name": "St\u00e9phane Deny"
+                        "name": "Jiaheng Han"
+                    },
+                    {
+                        "name": "Xiaohan Ye"
+                    },
+                    {
+                        "name": "Zherong Pan"
+                    },
+                    {
+                        "name": "Kris Hauser"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.20144v1",
+                "title": "Agentic AI for Scalable and Robust Optical Systems Control",
+                "updated": "2026-02-23T18:54:32Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.20144v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.20144v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present AgentOptics, an agentic AI framework for high-fidelity, autonomous optical system control built on the Model Context Protocol (MCP). AgentOptics interprets natural language tasks and executes protocol-compliant actions on heterogeneous optical devices through a structured tool abstraction layer. We implement 64 standardized MCP tools across 8 representative optical devices and construct a 410-task benchmark to evaluate request understanding, role-aware responses, multi-step coordination, robustness to linguistic variation, and error handling. We assess two deployment configurations--commercial online LLMs and locally hosted open-source LLMs--and compare them with LLM-based code generation baselines. AgentOptics achieves 87.7%--99.0% average task success rates, significantly outperforming code-generation approaches, which reach up to 50% success. We further demonstrate broader applicability through five case studies extending beyond device-level control to system orchestration, monitoring, and closed-loop optimization. These include DWDM link provisioning and coordinated monitoring of coherent 400 GbE and analog radio-over-fiber (ARoF) channels; autonomous characterization and bias optimization of a wideband ARoF link carrying 5G fronthaul traffic; multi-span channel provisioning with launch power optimization; closed-loop fiber polarization stabilization; and distributed acoustic sensing (DAS)-based fiber monitoring with LLM-assisted event detection. These results establish AgentOptics as a scalable, robust paradigm for autonomous control and orchestration of heterogeneous optical systems.",
+                "category": [
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.NI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-02-23T18:54:32Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.SY"
+                },
+                "author": [
+                    {
+                        "name": "Zehao Wang"
+                    },
+                    {
+                        "name": "Mingzhe Han"
+                    },
+                    {
+                        "name": "Wei Cheng"
+                    },
+                    {
+                        "name": "Yue-Kai Huang"
+                    },
+                    {
+                        "name": "Philip Ji"
+                    },
+                    {
+                        "name": "Denton Wu"
+                    },
+                    {
+                        "name": "Mahdi Safari"
+                    },
+                    {
+                        "name": "Flemming Holtorf"
+                    },
+                    {
+                        "name": "Kenaish AlQubaisi"
+                    },
+                    {
+                        "name": "Norbert M. Linke"
+                    },
+                    {
+                        "name": "Danyang Zhuo"
+                    },
+                    {
+                        "name": "Yiran Chen"
+                    },
+                    {
+                        "name": "Ting Wang"
+                    },
+                    {
+                        "name": "Dirk Englund"
+                    },
+                    {
+                        "name": "Tingjun Chen"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2602.20140v1",
+                "title": "PackFlow: Generative Molecular Crystal Structure Prediction via Reinforcement Learning Alignment",
+                "updated": "2026-02-23T18:52:13Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2602.20140v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2602.20140v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Organic molecular crystals underpin technologies ranging from pharmaceuticals to organic electronics, yet predicting solid-state packing of molecules remains challenging because candidate generation is combinatorial and stability is only resolved after costly energy evaluations. Here we introduce PackFlow, a flow matching framework for molecular crystal structure prediction (CSP) that generates heavy-atom crystal proposals by jointly sampling Cartesian coordinates and unit-cell lattice parameters given a molecular graph. This lattice-aware generation interfaces directly with downstream relaxation and lattice-energy ranking, positioning PackFlow as a scalable proposal engine within standard CSP pipelines. To explicitly steer generation toward physically favourable regions, we propose physics alignment, a reinforcement learning post-training stage that uses machine-learned interatomic potential energies and forces as stability proxies. Physics alignment improves physical validity without altering inference-time sampling. We validate PackFlow's performance against heuristic baselines through two distinct evaluations. First, on a broad unseen set of molecular systems, we demonstrate superior candidate generation capability, with proposals exhibiting greater structural similarity to experimental polymorphs. Second, we assess the full end-to-end workflow on two unseen CSP blind-test case studies, including relaxation and lattice-energy analysis. In both settings, PackFlow outperforms heuristics-based methods by concentrating probability mass in low-energy basins, yielding candidates that relax into lower-energy minima and offering a practical route to amortize the relax-and-rank bottleneck.",
+                "category": {
+                    "@term": "physics.chem-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-02-23T18:52:13Z",
+                "arxiv:primary_category": {
+                    "@term": "physics.chem-ph"
+                },
+                "author": [
+                    {
+                        "name": "Akshay Subramanian"
+                    },
+                    {
+                        "name": "Elton Pan"
+                    },
+                    {
+                        "name": "Juno Nam"
+                    },
+                    {
+                        "name": "Maurice Weiler"
+                    },
+                    {
+                        "name": "Shuhui Qu"
+                    },
+                    {
+                        "name": "Cheol Woo Park"
+                    },
+                    {
+                        "name": "Tommi S. Jaakkola"
+                    },
+                    {
+                        "name": "Elsa Olivetti"
+                    },
+                    {
+                        "name": "Rafael Gomez-Bombarelli"
                     }
                 ]
             }
