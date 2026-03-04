@@ -5,406 +5,90 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-04T01:26:05Z",
+        "updated": "2026-03-04T04:03:46Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "545921",
+        "opensearch:totalResults": "546318",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.02208v1",
-                "title": "Reasoning Core: A Scalable Procedural Data Generation Suite for Symbolic Pre-training and Post-Training",
-                "updated": "2026-03-02T18:59:29Z",
+                "id": "http://arxiv.org/abs/2603.03283v1",
+                "title": "Utonia: Toward One Encoder for All Point Clouds",
+                "updated": "2026-03-03T18:59:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.02208v1",
+                        "@href": "https://arxiv.org/abs/2603.03283v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.02208v1",
+                        "@href": "https://arxiv.org/pdf/2603.03283v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Training on verifiable symbolic data is a promising way to expand the reasoning frontier of language models beyond what standard pre-training corpora provide. Yet existing procedural generators often rely on fixed puzzles or templates and do not deliver the distributional breadth needed at scale. We introduce Reasoning Core, a scalable suite that procedurally generates verifiable symbolic reasoning data across core formal domains: PDDL planning over randomized domains, first-order logic with equality, context-free grammar parsing and generation, causal reasoning over random Bayesian networks, and systems of equations. Each task is paired with an external solver for rigorous verification and admits continuous difficulty control for curriculum design. Examples can optionally include solver-derived reasoning traces, enabling supervised training from the earliest pre-training stages, and the same interface provides verifiable reward functions for reinforcement learning. Our experiments show that mixing Reasoning Core data into pre-training improves downstream reasoning while preserving, or slightly improving, language modeling quality. Zero-shot evaluations confirm these tasks challenge frontier models such as GPT-5. The code and data are publicly available under the MIT license.",
+                "summary": "We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Toward this goal, we present Utonia, a first step toward training a single self-supervised point transformer encoder across diverse domains, spanning remote sensing, outdoor LiDAR, indoor RGB-D sequences, object-centric CAD models, and point clouds lifted from RGB-only videos. Despite their distinct sensing geometries, densities, and priors, Utonia learns a consistent representation space that transfers across domains. This unification improves perception capability while revealing intriguing emergent behaviors that arise only when domains are trained jointly. Beyond perception, we observe that Utonia representations can also benefit embodied and multimodal reasoning: conditioning vision-language-action policies on Utonia features improves robotic manipulation, and integrating them into vision-language models yields gains on spatial reasoning. We hope Utonia can serve as a step toward foundation models for sparse 3D data, and support downstream applications in AR/VR, robotics, and autonomous driving.",
                 "category": {
-                    "@term": "cs.CL",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-02T18:59:29Z",
-                "arxiv:comment": "Keywords: LLMs, NLP, Dataset, Corpus, Procedural Pre-training, Reasoning, Logic, Formal Semantics https://github.com/sileod/reasoning_core",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Valentin Lacombe"
-                    },
-                    {
-                        "name": "Valentin Quesnel"
-                    },
-                    {
-                        "name": "Damien Sileo"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.02207v1",
-                "title": "Novel technique based on L\u00e9ja Points Approximation for Log-determinant Estimation of Large matrices",
-                "updated": "2026-03-02T18:59:29Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.02207v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.02207v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The computation of the Log-determinant of large, sparse, symmetric positive definite (SPD) matrices is essential in many scientific computational fields such as numerical linear algebra and machine learning. In low dimensions, Cholesky is preferred, but in high dimensions, its computation may be prohibitive due to memory limitation. To circumvent this, Krylov subspace techniques have proven to be efficient but may be computationally expensive due to the required orthogonalization processes. In this paper, we introduce a novel technique to estimate the Log-determinant of a matrix using L\u00e9ja points, where the implementation is only based on matrix multiplications and a rough estimation of eigenvalue bounds of the matrix. By coupling L\u00e9ja points interpolation with a randomized algorithm called Hutch++, we achieve substantial reductions in computational complexity while preserving significant accuracy compared to the stochastic Lanczos quadrature. We establish the approximation errors of the matrix function together with multiplicative error bounds for the approximations obtained by this method.\n  The effectiveness and scalability of the proposed method on both large sparse synthetic matrices (maximum likelihood in Gaussian Markov Random fields) and large-scale real-world matrices are confirmed through numerical experiments.",
-                "category": {
-                    "@term": "math.NA",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-02T18:59:29Z",
-                "arxiv:primary_category": {
-                    "@term": "math.NA"
-                },
-                "author": [
-                    {
-                        "name": "Verlon Roel Mbingui"
-                    },
-                    {
-                        "name": "Antoine Tambue"
-                    },
-                    {
-                        "name": "Issa Karambal"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.02205v1",
-                "title": "Analytical Exploration of Spatial Audio Cues: A Differentiable Multi-Sphere Scattering Model",
-                "updated": "2026-03-02T18:58:39Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.02205v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.02205v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "A primary challenge in developing synthetic spatial hearing systems, particularly underwater, is accurately modeling sound scattering. Biological organisms achieve 3D spatial hearing by exploiting sound scattering off their bodies to generate location-dependent interaural level and time differences (ITD/ILD). While Head-Related Transfer Function (HRTF) models based on rigid scattering suffice for terrestrial humans, they fail in underwater environments due to the near-impedance match between water and soft tissue. Motivated by the acoustic anatomy of underwater animals, we introduce a novel, analytically derived, closed-form forward model for scattering from a semi-transparent sphere containing two rigid spherical scatterers. This model accurately maps source direction, frequency, and material properties to the pressure field, capturing the complex physics of layered, penetrable structures. Critically, our model is implemented in a fully differentiable setting, enabling its integration with a machine learning algorithm to optimize a cost function for active localization. We demonstrate enhanced convergence for localization under noise using a physics-informed frequency weighting scheme, and present accurate moving-source tracking via an Extended Kalman Filter (EKF) with analytically computed Jacobians. Our work suggests that differentiable models of scattering from layered rigid and transparent geometries offer a promising new foundation for microphone arrays that leverage scattering-based spatial cues over conventional beamforming, applicable to both terrestrial and underwater applications. Our model will be made open source.",
-                "category": {
-                    "@term": "cs.SD",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-02T18:58:39Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.SD"
-                },
-                "author": [
-                    {
-                        "name": "Siminfar Samakoush Galougah"
-                    },
-                    {
-                        "name": "Pranav Pulijala"
-                    },
-                    {
-                        "name": "Ramani Duraiswami"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.02204v1",
-                "title": "Partial Causal Structure Learning for Valid Selective Conformal Inference under Interventions",
-                "updated": "2026-03-02T18:58:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.02204v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.02204v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Selective conformal prediction can yield substantially tighter uncertainty sets when we can identify calibration examples that are exchangeable with the test example. In interventional settings, such as perturbation experiments in genomics, exchangeability often holds only within subsets of interventions that leave a target variable \"unaffected\" (e.g., non-descendants of an intervened node in a causal graph). We study the practical regime where this invariance structure is unknown and must be learned from data. Our contributions are: (i) a contamination-robust conformal coverage theorem that quantifies how misclassification of \"unaffected\" calibration examples degrades coverage via an explicit function $g(\u03b4,n)$ of the contamination fraction and calibration set size, providing a finite-sample lower bound that holds for arbitrary contaminating distributions; (ii) a task-driven partial causal learning formulation that estimates only the binary descendant indicators $Z_{a,i}=\\mathbf{1}\\{i\\in\\mathrm{desc}(a)\\}$ needed for selective calibration, rather than the full causal graph; and (iii) algorithms for descendant discovery via perturbation intersection patterns (differentially affected variable set intersections across interventions), and for approximate distance-to-intervention estimation via local invariant causal prediction. We provide recovery conditions under which contamination is controlled. Experiments on synthetic linear structural equation models (SEMs) validate the bound: under controlled contamination up to $\u03b4=0.30$, the corrected procedure maintains $\\ge 0.95$ coverage while uncorrected selective CP degrades to $0.867$. A proof-of-concept on Replogle K562 CRISPR interference (CRISPRi) perturbation data demonstrates applicability to real genomic screens.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-02T18:58:22Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Amir Asiaee"
-                    },
-                    {
-                        "name": "Kavey Aryan"
-                    },
-                    {
-                        "name": "James P. Long"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.02203v1",
-                "title": "Tool Verification for Test-Time Reinforcement Learning",
-                "updated": "2026-03-02T18:57:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.02203v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.02203v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Test-time reinforcement learning (TTRL) has emerged as a promising paradigm for self-evolving large reasoning models (LRMs), enabling online adaptation on unlabeled test inputs via self-induced rewards through majority voting. However, a spurious yet high-frequency unverified consensus can become a biased and reinforced reward signal, leading to incorrect mode collapse. We address this failure mode with T^3RL (Tool-Verification for Test-Time Reinforcement Learning), which introduces test-time tool verification into reward estimation. Concretely, a verifier uses an external tool as evidence (e.g., from code execution) to upweight verified rollouts in a verification-aware voting, producing more reliable pseudo-labels for training. Across various math difficulties (MATH-500, AMC, and AIME 2024) and diverse backbone types, T^3RL significantly improves over TTRL, with larger gains on harder problems. More broadly, T^3RL can be viewed as verified online data synthesis, highlighting test-time tool verification as a key mechanism for stabilizing self-evolution.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-02T18:57:52Z",
-                "arxiv:comment": "12 pages, 11 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Ruotong Liao"
-                    },
-                    {
-                        "name": "Nikolai R\u00f6hrich"
-                    },
-                    {
-                        "name": "Xiaohan Wang"
-                    },
-                    {
-                        "name": "Yuhui Zhang"
-                    },
-                    {
-                        "name": "Yasaman Samadzadeh"
-                    },
-                    {
-                        "name": "Volker Tresp"
-                    },
-                    {
-                        "name": "Serena Yeung-Levy"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.02202v1",
-                "title": "Frontier Models Can Take Actions at Low Probabilities",
-                "updated": "2026-03-02T18:56:59Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.02202v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.02202v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Pre-deployment evaluations inspect only a limited sample of model actions. A malicious model seeking to evade oversight could exploit this by randomizing when to \"defect\": misbehaving so rarely that no malicious actions are observed during evaluation, but often enough that they occur eventually in deployment. But this requires taking actions at very low rates, while maintaining calibration. Are frontier models even capable of that? We prompt the GPT-5, Claude-4.5 and Qwen-3 families to take a target action at low probabilities (e.g. 0.01%), either given directly or requiring derivation, and evaluate their calibration (i.e. whether they perform the target action roughly 1 in 10,000 times when resampling). We find that frontier models are surprisingly good at this task. If there is a source of entropy in-context (such as a UUID), they maintain high calibration at rates lower than 1 in 100,000 actions. Without external entropy, some models can still reach rates lower than 1 in 10,000. When target rates are given, larger models achieve good calibration at lower rates. Yet, when models must derive the optimal target rate themselves, all models fail to achieve calibration without entropy or hint to generate it. Successful low-rate strategies require explicit Chain-of-Thought (CoT) reasoning, so malicious models attempting this approach could currently be caught by a CoT monitor. However, scaling trends suggest future evaluations may be unable to rely on models' lack of target rate calibration, especially if CoT is no longer legible.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-02T18:56:59Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Alex Serrano"
-                    },
-                    {
-                        "name": "Wen Xing"
-                    },
-                    {
-                        "name": "David Lindner"
-                    },
-                    {
-                        "name": "Erik Jenner"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.02200v1",
-                "title": "Adaptive Confidence Regularization for Multimodal Failure Detection",
-                "updated": "2026-03-02T18:56:38Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.02200v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.02200v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The deployment of multimodal models in high-stakes domains, such as self-driving vehicles and medical diagnostics, demands not only strong predictive performance but also reliable mechanisms for detecting failures. In this work, we address the largely unexplored problem of failure detection in multimodal contexts. We propose Adaptive Confidence Regularization (ACR), a novel framework specifically designed to detect multimodal failures. Our approach is driven by a key observation: in most failure cases, the confidence of the multimodal prediction is significantly lower than that of at least one unimodal branch, a phenomenon we term confidence degradation. To mitigate this, we introduce an Adaptive Confidence Loss that penalizes such degradations during training. In addition, we propose Multimodal Feature Swapping, a novel outlier synthesis technique that generates challenging, failure-aware training examples. By training with these synthetic failures, ACR learns to more effectively recognize and reject uncertain predictions, thereby improving overall reliability. Extensive experiments across four datasets, three modalities, and multiple evaluation settings demonstrate that ACR achieves consistent and robust gains. The source code will be available at https://github.com/mona4399/ACR.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-02T18:56:38Z",
-                "arxiv:comment": "Accepted by CVPR 2026",
+                "published": "2026-03-03T18:59:58Z",
+                "arxiv:comment": "produced by Pointcept, project page: https://pointcept.github.io/Utonia",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Moru Liu"
+                        "name": "Yujia Zhang"
                     },
                     {
-                        "name": "Hao Dong"
+                        "name": "Xiaoyang Wu"
                     },
                     {
-                        "name": "Olga Fink"
+                        "name": "Yunhan Yang"
                     },
                     {
-                        "name": "Mario Trapp"
+                        "name": "Xianzhe Fan"
+                    },
+                    {
+                        "name": "Han Li"
+                    },
+                    {
+                        "name": "Yuechen Zhang"
+                    },
+                    {
+                        "name": "Zehao Huang"
+                    },
+                    {
+                        "name": "Naiyan Wang"
+                    },
+                    {
+                        "name": "Hengshuang Zhao"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.02196v1",
-                "title": "Conformal Policy Control",
-                "updated": "2026-03-02T18:54:36Z",
+                "id": "http://arxiv.org/abs/2603.03281v1",
+                "title": "CFG-Ctrl: Control-Based Classifier-Free Diffusion Guidance",
+                "updated": "2026-03-03T18:59:48Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.02196v1",
+                        "@href": "https://arxiv.org/abs/2603.03281v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.02196v1",
+                        "@href": "https://arxiv.org/pdf/2603.03281v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "An agent must try new behaviors to explore and improve. In high-stakes environments, an agent that violates safety constraints may cause harm and must be taken offline, curtailing any future interaction. Imitating old behavior is safe, but excessive conservatism discourages exploration. How much behavior change is too much? We show how to use any safe reference policy as a probabilistic regulator for any optimized but untested policy. Conformal calibration on data from the safe policy determines how aggressively the new policy can act, while provably enforcing the user's declared risk tolerance. Unlike conservative optimization methods, we do not assume the user has identified the correct model class nor tuned any hyperparameters. Unlike previous conformal methods, our theory provides finite-sample guarantees even for non-monotonic bounded constraint functions. Our experiments on applications ranging from natural language question answering to biomolecular engineering show that safe exploration is not only possible from the first moment of deployment, but can also improve performance.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.ST",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-02T18:54:36Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Drew Prinster"
-                    },
-                    {
-                        "name": "Clara Fannjiang"
-                    },
-                    {
-                        "name": "Ji Won Park"
-                    },
-                    {
-                        "name": "Kyunghyun Cho"
-                    },
-                    {
-                        "name": "Anqi Liu"
-                    },
-                    {
-                        "name": "Suchi Saria"
-                    },
-                    {
-                        "name": "Samuel Stanton"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.02194v1",
-                "title": "From Leaderboard to Deployment: Code Quality Challenges in AV Perception Repositories",
-                "updated": "2026-03-02T18:54:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.02194v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.02194v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Autonomous vehicle (AV) perception models are typically evaluated solely on benchmark performance metrics, with limited attention to code quality, production readiness and long-term maintainability. This creates a significant gap between research excellence and real-world deployment in safety-critical systems subject to international safety standards. To address this gap, we present the first large-scale empirical study of software quality in AV perception repositories, systematically analyzing 178 unique models from the KITTI and NuScenes 3D Object Detection leaderboards. Using static analysis tools (Pylint, Bandit, and Radon), we evaluated code errors, security vulnerabilities, maintainability, and development practices. Our findings revealed that only 7.3% of the studied repositories meet basic production-readiness criteria, defined as having zero critical errors and no high-severity security vulnerabilities. Security issues are highly concentrated, with the top five issues responsible for almost 80% of occurrences, which prompted us to develop a set of actionable guidelines to prevent them. Additionally, the adoption of Continuous Integration/Continuous Deployment pipelines was correlated with better code maintainability. Our findings highlight that leaderboard performance does not reflect production readiness and that targeted interventions could substantially improve the quality and safety of AV perception code.",
+                "summary": "Classifier-Free Guidance (CFG) has emerged as a central approach for enhancing semantic alignment in flow-based diffusion models. In this paper, we explore a unified framework called CFG-Ctrl, which reinterprets CFG as a control applied to the first-order continuous-time generative flow, using the conditional-unconditional discrepancy as an error signal to adjust the velocity field. From this perspective, we summarize vanilla CFG as a proportional controller (P-control) with fixed gain, and typical follow-up variants develop extended control-law designs derived from it. However, existing methods mainly rely on linear control, inherently leading to instability, overshooting, and degraded semantic fidelity especially on large guidance scales. To address this, we introduce Sliding Mode Control CFG (SMC-CFG), which enforces the generative flow toward a rapidly convergent sliding manifold. Specifically, we define an exponential sliding mode surface over the semantic prediction error and introduce a switching control term to establish nonlinear feedback-guided correction. Moreover, we provide a Lyapunov stability analysis to theoretically support finite-time convergence. Experiments across text-to-image generation models including Stable Diffusion 3.5, Flux, and Qwen-Image demonstrate that SMC-CFG outperforms standard CFG in semantic alignment and enhances robustness across a wide range of guidance scales. Project Page: https://hanyang-21.github.io/CFG-Ctrl",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -413,53 +97,175 @@
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-03T18:59:48Z",
+                "arxiv:comment": "Accepted by CVPR 2026; Project Page: https://hanyang-21.github.io/CFG-Ctrl",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Hanyang Wang"
                     },
+                    {
+                        "name": "Yiyang Liu"
+                    },
+                    {
+                        "name": "Jiawei Chi"
+                    },
+                    {
+                        "name": "Fangfu Liu"
+                    },
+                    {
+                        "name": "Ran Xue"
+                    },
+                    {
+                        "name": "Yueqi Duan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.03280v1",
+                "title": "How to Peel with a Knife: Aligning Fine-Grained Manipulation with Human Preference",
+                "updated": "2026-03-03T18:59:32Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.03280v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.03280v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Many essential manipulation tasks - such as food preparation, surgery, and craftsmanship - remain intractable for autonomous robots. These tasks are characterized not only by contact-rich, force-sensitive dynamics, but also by their \"implicit\" success criteria: unlike pick-and-place, task quality in these domains is continuous and subjective (e.g. how well a potato is peeled), making quantitative evaluation and reward engineering difficult. We present a learning framework for such tasks, using peeling with a knife as a representative example. Our approach follows a two-stage pipeline: first, we learn a robust initial policy via force-aware data collection and imitation learning, enabling generalization across object variations; second, we refine the policy through preference-based finetuning using a learned reward model that combines quantitative task metrics with qualitative human feedback, aligning policy behavior with human notions of task quality. Using only 50-200 peeling trajectories, our system achieves over 90% average success rates on challenging produce including cucumbers, apples, and potatoes, with performance improving by up to 40% through preference-based finetuning. Remarkably, policies trained on a single produce category exhibit strong zero-shot generalization to unseen in-category instances and to out-of-distribution produce from different categories while maintaining over 90% success rates.",
+                "category": [
                     {
                         "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.SE",
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-02T18:54:28Z",
+                "published": "2026-03-03T18:59:32Z",
+                "arxiv:comment": "Project page can be found at https://toruowo.github.io/peel",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Mateus Karvat"
+                        "name": "Toru Lin"
                     },
                     {
-                        "name": "Bram Adams"
+                        "name": "Shuying Deng"
                     },
                     {
-                        "name": "Sidney Givigi"
+                        "name": "Zhao-Heng Yin"
+                    },
+                    {
+                        "name": "Pieter Abbeel"
+                    },
+                    {
+                        "name": "Jitendra Malik"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.02193v1",
-                "title": "Symbol-Equivariant Recurrent Reasoning Models",
-                "updated": "2026-03-02T18:53:55Z",
+                "id": "http://arxiv.org/abs/2603.03279v1",
+                "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
+                "updated": "2026-03-03T18:59:29Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.02193v1",
+                        "@href": "https://arxiv.org/abs/2603.03279v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.02193v1",
+                        "@href": "https://arxiv.org/pdf/2603.03279v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Reasoning problems such as Sudoku and ARC-AGI remain challenging for neural networks. The structured problem solving architecture family of Recurrent Reasoning Models (RRMs), including Hierarchical Reasoning Model (HRM) and Tiny Recursive Model (TRM), offer a compact alternative to large language models, but currently handle symbol symmetries only implicitly via costly data augmentation. We introduce Symbol-Equivariant Recurrent Reasoning Models (SE-RRMs), which enforce permutation equivariance at the architectural level through symbol-equivariant layers, guaranteeing identical solutions under symbol or color permutations. SE-RRMs outperform prior RRMs on 9x9 Sudoku and generalize from just training on 9x9 to smaller 4x4 and larger 16x16 and 25x25 instances, to which existing RRMs cannot extrapolate. On ARC-AGI-1 and ARC-AGI-2, SE-RRMs achieve competitive performance with substantially less data augmentation and only 2 million parameters, demonstrating that explicitly encoding symmetry improves the robustness and scalability of neural reasoning. Code is available at https://github.com/ml-jku/SE-RRM.",
+                "summary": "Achieving autonomous and versatile whole-body loco-manipulation remains a central barrier to making humanoids practically useful. Yet existing approaches are fundamentally constrained: retargeted data are often scarce or low-quality; methods struggle to scale to large skill repertoires; and, most importantly, they rely on tracking predefined motion references rather than generating behavior from perception and high-level task specifications. To address these limitations, we propose ULTRA, a unified framework with two key components. First, we introduce a physics-driven neural retargeting algorithm that translates large-scale motion capture to humanoid embodiments while preserving physical plausibility for contact-rich interactions. Second, we learn a unified multimodal controller that supports both dense references and sparse task specifications, under sensing ranging from accurate motion-capture state to noisy egocentric visual inputs. We distill a universal tracking policy into this controller, compress motor skills into a compact latent space, and apply reinforcement learning finetuning to expand coverage and improve robustness under out-of-distribution scenarios. This enables coordinated whole-body behavior from sparse intent without test-time reference motions. We evaluate ULTRA in simulation and on a real Unitree G1 humanoid. Results show that ULTRA generalizes to autonomous, goal-conditioned whole-body loco-manipulation from egocentric perception, consistently outperforming tracking-only baselines with limited skills.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-03T18:59:29Z",
+                "arxiv:comment": "Project Page: https://ultra-humanoid.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Xialin He"
+                    },
+                    {
+                        "name": "Sirui Xu"
+                    },
+                    {
+                        "name": "Xinyao Li"
+                    },
+                    {
+                        "name": "Runpei Dong"
+                    },
+                    {
+                        "name": "Liuyu Bian"
+                    },
+                    {
+                        "name": "Yu-Xiong Wang"
+                    },
+                    {
+                        "name": "Liang-Yan Gui"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.03278v1",
+                "title": "Tether: Autonomous Functional Play with Correspondence-Driven Trajectory Warping",
+                "updated": "2026-03-03T18:59:07Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.03278v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.03278v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The ability to conduct and learn from interaction and experience is a central challenge in robotics, offering a scalable alternative to labor-intensive human demonstrations. However, realizing such \"play\" requires (1) a policy robust to diverse, potentially out-of-distribution environment states, and (2) a procedure that continuously produces useful robot experience. To address these challenges, we introduce Tether, a method for autonomous functional play involving structured, task-directed interactions. First, we design a novel open-loop policy that warps actions from a small set of source demonstrations (<=10) by anchoring them to semantic keypoint correspondences in the target scene. We show that this design is extremely data-efficient and robust even under significant spatial and semantic variations. Second, we deploy this policy for autonomous functional play in the real world via a continuous cycle of task selection, execution, evaluation, and improvement, guided by the visual understanding capabilities of vision-language models. This procedure generates diverse, high-quality datasets with minimal human intervention. In a household-like multi-object setup, our method is the first to perform many hours of autonomous multi-task play in the real world starting from only a handful of demonstrations. This produces a stream of data that consistently improves the performance of closed-loop imitation policies over time, ultimately yielding over 1000 expert-level trajectories and training policies competitive with those learned from human-collected demonstrations.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -467,29 +273,287 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "stat.ML",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-02T18:53:55Z",
+                "published": "2026-03-03T18:59:07Z",
+                "arxiv:comment": "International Conference on Learning Representations (ICLR), 2026. Project website and code: https://tether-research.github.io",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "William Liang"
+                    },
+                    {
+                        "name": "Sam Wang"
+                    },
+                    {
+                        "name": "Hung-Ju Wang"
+                    },
+                    {
+                        "name": "Osbert Bastani"
+                    },
+                    {
+                        "name": "Yecheng Jason Ma"
+                    },
+                    {
+                        "name": "Dinesh Jayaraman"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.03275v1",
+                "title": "Learning Demographic-Conditioned Mobility Trajectories with Aggregate Supervision",
+                "updated": "2026-03-03T18:57:44Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.03275v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.03275v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Human mobility trajectories are widely studied in public health and social science, where different demographic groups exhibit significantly different mobility patterns. However, existing trajectory generation models rarely capture this heterogeneity because most trajectory datasets lack demographic labels. To address this gap in data, we propose ATLAS, a weakly supervised approach for demographic-conditioned trajectory generation using only (i) individual trajectories without demographic labels, (ii) region-level aggregated mobility features, and (iii) region-level demographic compositions from census data. ATLAS trains a trajectory generator and fine-tunes it so that simulated mobility matches observed regional aggregates while conditioning on demographics. Experiments on real trajectory data with demographic labels show that ATLAS substantially improves demographic realism over baselines (JSD $\\downarrow$ 12%--69%) and closes much of the gap to strongly supervised training. We further develop theoretical analyses for when and why ATLAS works, identifying key factors including demographic diversity across regions and the informativeness of the aggregate feature, paired with experiments demonstrating the practical implications of our theory. We release our code at https://github.com/schang-lab/ATLAS.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-03T18:57:44Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Richard Freinschlag"
+                        "name": "Jessie Z. Li"
                     },
                     {
-                        "name": "Timo Bertram"
+                        "name": "Zhiqing Hong"
                     },
                     {
-                        "name": "Erich Kobler"
+                        "name": "Toru Shirakawa"
                     },
                     {
-                        "name": "Andreas Mayr"
+                        "name": "Serina Chang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.03270v1",
+                "title": "Gravity Falls: A Comparative Analysis of Domain-Generation Algorithm (DGA) Detection Methods for Mobile Device Spearphishing",
+                "updated": "2026-03-03T18:55:44Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.03270v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "G\u00fcnter Klambauer"
+                        "@href": "https://arxiv.org/pdf/2603.03270v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Mobile devices are frequent targets of eCrime threat actors through SMS spearphishing (smishing) links that leverage Domain Generation Algorithms (DGA) to rotate hostile infrastructure. Despite this, DGA research and evaluation largely emphasize malware C2 and email phishing datasets, leaving limited evidence on how well detectors generalize to smishing-driven domain tactics outside enterprise perimeters. This work addresses that gap by evaluating traditional and machine-learning DGA detectors against Gravity Falls, a new semi-synthetic dataset derived from smishing links delivered between 2022 and 2025. Gravity Falls captures a single threat actor's evolution across four technique clusters, shifting from short randomized strings to dictionary concatenation and themed combo-squatting variants used for credential theft and fee/fine fraud. Two string-analysis approaches (Shannon entropy and Exp0se) and two ML-based detectors (an LSTM classifier and COSSAS DGAD) are assessed using Top-1M domains as benign baselines. Results are strongly tactic-dependent: performance is highest on randomized-string domains but drops on dictionary concatenation and themed combo-squatting, with low recall across multiple tool/cluster pairings. Overall, both traditional heuristics and recent ML detectors are ill-suited for consistently evolving DGA tactics observed in Gravity Falls, motivating more context-aware approaches and providing a reproducible benchmark for future evaluation.",
+                "category": [
+                    {
+                        "@term": "cs.CR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.NI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-03T18:55:44Z",
+                "arxiv:comment": "Disclaimer: The views expressed are those of the authors and do not necessarily reflect the official policy or position of the U.S. Department of Defense or the U.S. Government. References to external sites do not constitute endorsement. Cleared for release on 24 FEB 2026 (DOPSR 26-T-0771). Gravity Falls Dataset DOI: 10.5281/zenodo.17624554",
+                "arxiv:primary_category": {
+                    "@term": "cs.CR"
+                },
+                "author": [
+                    {
+                        "name": "Adam Dorian Wong"
+                    },
+                    {
+                        "name": "John D. Hastings"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.03269v1",
+                "title": "LoGeR: Long-Context Geometric Reconstruction with Hybrid Memory",
+                "updated": "2026-03-03T18:55:37Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.03269v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.03269v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Feedforward geometric foundation models achieve strong short-window reconstruction, yet scaling them to minutes-long videos is bottlenecked by quadratic attention complexity or limited effective memory in recurrent designs. We present LoGeR (Long-context Geometric Reconstruction), a novel architecture that scales dense 3D reconstruction to extremely long sequences without post-optimization. LoGeR processes video streams in chunks, leveraging strong bidirectional priors for high-fidelity intra-chunk reasoning. To manage the critical challenge of coherence across chunk boundaries, we propose a learning-based hybrid memory module. This dual-component system combines a parametric Test-Time Training (TTT) memory to anchor the global coordinate frame and prevent scale drift, alongside a non-parametric Sliding Window Attention (SWA) mechanism to preserve uncompressed context for high-precision adjacent alignment. Remarkably, this memory architecture enables LoGeR to be trained on sequences of 128 frames, and generalize up to thousands of frames during inference. Evaluated across standard benchmarks and a newly repurposed VBR dataset with sequences of up to 19k frames, LoGeR substantially outperforms prior state-of-the-art feedforward methods--reducing ATE on KITTI by over 74%--and achieves robust, globally consistent reconstruction over unprecedented horizons.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-03T18:55:37Z",
+                "arxiv:comment": "Project page: https://LoGeR-project.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Junyi Zhang"
+                    },
+                    {
+                        "name": "Charles Herrmann"
+                    },
+                    {
+                        "name": "Junhwa Hur"
+                    },
+                    {
+                        "name": "Chen Sun"
+                    },
+                    {
+                        "name": "Ming-Hsuan Yang"
+                    },
+                    {
+                        "name": "Forrester Cole"
+                    },
+                    {
+                        "name": "Trevor Darrell"
+                    },
+                    {
+                        "name": "Deqing Sun"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.03265v1",
+                "title": "DuoMo: Dual Motion Diffusion for World-Space Human Reconstruction",
+                "updated": "2026-03-03T18:54:17Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.03265v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.03265v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present DuoMo, a generative method that recovers human motion in world-space coordinates from unconstrained videos with noisy or incomplete observations. Reconstructing such motion requires solving a fundamental trade-off: generalizing from diverse and noisy video inputs while maintaining global motion consistency. Our approach addresses this problem by factorizing motion learning into two diffusion models. The camera-space model first estimates motion from videos in camera coordinates. The world-space model then lifts this initial estimate into world coordinates and refines it to be globally consistent. Together, the two models can reconstruct motion across diverse scenes and trajectories, even from highly noisy or incomplete observations. Moreover, our formulation is general, generating the motion of mesh vertices directly and bypassing parametric models. DuoMo achieves state-of-the-art performance. On EMDB, our method obtains a 16% reduction in world-space reconstruction error while maintaining low foot skating. On RICH, it obtains a 30% reduction in world-space error. Project page: https://yufu-wang.github.io/duomo/",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-03T18:54:17Z",
+                "arxiv:comment": "CVPR 2026. Project page: https://yufu-wang.github.io/duomo/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yufu Wang"
+                    },
+                    {
+                        "name": "Evonne Ng"
+                    },
+                    {
+                        "name": "Soyong Shin"
+                    },
+                    {
+                        "name": "Rawal Khirodkar"
+                    },
+                    {
+                        "name": "Yuan Dong"
+                    },
+                    {
+                        "name": "Zhaoen Su"
+                    },
+                    {
+                        "name": "Jinhyung Park"
+                    },
+                    {
+                        "name": "Kris Kitani"
+                    },
+                    {
+                        "name": "Alexander Richard"
+                    },
+                    {
+                        "name": "Fabian Prada"
+                    },
+                    {
+                        "name": "Michael Zollhofer"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.03259v1",
+                "title": "Physics-informed post-processing of stabilized finite element solutions for transient convection-dominated problems",
+                "updated": "2026-03-03T18:51:17Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.03259v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.03259v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The numerical simulation of convection-dominated transient transport phenomena poses significant computational challenges due to sharp gradients and propagating fronts across the spatiotemporal domain. Classical discretization methods often generate spurious oscillations, requiring advanced stabilization techniques. However, even stabilized finite element methods may require additional regularization to accurately resolve localized steep layers. On the other hand, standalone physics-informed neural networks (PINNs) struggle to capture sharp solution structures in convection-dominated regimes and typically require a large number of training epochs. This work presents a hybrid computational framework that extends the PINN-Augmented SUPG with Shock-Capturing (PASSC) methodology from steady to unsteady problems. The approach combines a semi-discrete stabilized finite element method with a PINN-based correction strategy for transient convection-diffusion-reaction equations. Stabilization is achieved using the Streamline-Upwind Petrov-Galerkin (SUPG) formulation augmented with a YZbeta shock-capturing operator. Rather than training over the entire space-time domain, the neural network is applied selectively near the terminal time, enhancing the finite element solution using the last K_s temporal snapshots while enforcing residual constraints from the governing equations and boundary conditions. The network incorporates residual blocks with random Fourier features and employs progressive training with adaptive loss weighting. Numerical experiments on five benchmark problems, including boundary and interior layers, traveling waves, and nonlinear Burgers dynamics, demonstrate significant accuracy improvements at the terminal time compared to standalone stabilized finite element solutions.",
+                "category": [
+                    {
+                        "@term": "math.NA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-03T18:51:17Z",
+                "arxiv:primary_category": {
+                    "@term": "math.NA"
+                },
+                "author": [
+                    {
+                        "name": "S\u00fcleyman Cengizci"
+                    },
+                    {
+                        "name": "\u00d6m\u00fcr U\u011fur"
+                    },
+                    {
+                        "name": "Srinivasan Natesan"
                     }
                 ]
             }
