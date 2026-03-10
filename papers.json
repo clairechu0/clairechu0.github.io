@@ -5,541 +5,459 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-09T23:21:54Z",
+        "updated": "2026-03-10T01:23:51Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "547466",
+        "opensearch:totalResults": "547810",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.06576v1",
-                "title": "BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations",
-                "updated": "2026-03-06T18:59:55Z",
+                "id": "http://arxiv.org/abs/2603.07399v1",
+                "title": "Interpretable Aneurysm Classification via 3D Concept Bottleneck Models: Integrating Morphological and Hemodynamic Clinical Features",
+                "updated": "2026-03-08T01:03:48Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.06576v1",
+                        "@href": "https://arxiv.org/abs/2603.07399v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.06576v1",
+                        "@href": "https://arxiv.org/pdf/2603.07399v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoning and fails to maintain geometric coherence across views. On the other hand, Bird's-Eye View (BEV) representations learned from geometrically annotated tasks (e.g., object detection) provide spatial structure but lack the semantic richness of foundation vision encoders. To bridge this gap, we propose BEVLM, a framework that connects a spatially consistent and semantically distilled BEV representation with LLMs. Through extensive experiments, we show that BEVLM enables LLMs to reason more effectively in cross-view driving scenes, improving accuracy by 46%, by leveraging BEV features as unified inputs. Furthermore, by distilling semantic knowledge from LLMs into BEV representations, BEVLM significantly improves closed-loop end-to-end driving performance by 29% in safety-critical scenarios.",
+                "summary": "We are concerned with the challenge of reliably classifying and assessing intracranial aneurysms using deep learning without compromising clinical transparency. While traditional black-box models achieve high predictive accuracy, their lack of inherent interpretability remains a significant barrier to clinical adoption and regulatory approval. Explainability is paramount in medical modeling to ensure that AI-driven diagnoses align with established neurosurgical principles. Unlike traditional eXplainable AI (XAI) methods -- such as saliency maps, which often provide post-hoc, non-causal visual correlations -- Concept Bottleneck Models (CBMs) offer a robust alternative by constraining the model's internal logic to human-understandable clinical indices.\n  In this article, we propose an end-to-end 3D Concept Bottleneck framework that maps high-dimensional neuroimaging features to a discrete set of morphological and hemodynamic concepts for aneurysm identification. We implemented this pipeline using a pre-trained 3D ResNet-34 backbone and a 3D DenseNet-121 to extract features from CTA volumes, which were subsequently processed through a soft bottleneck layer representing human-interpretable clinical concepts. The model was optimized using a joint-loss function to balance diagnostic focal loss and concept mean squared error (MSE), validated via stratified five-fold cross-validation.\n  Our results demonstrate a peak task classification accuracy of 93.33% +/- 4.5% for the ResNet-34 architecture and 91.43% +/- 5.8% for the DenseNet-121 model. Furthermore, the implementation of 8-pass Test-Time Augmentation (TTA) yielded a robust mean accuracy of 88.31%, ensuring diagnostic stability during inference. By maintaining an accuracy-generalization gap of less than 0.04, this framework proves that high predictive performance can be achieved without sacrificing interpretability.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "eess.SP",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-08T01:03:48Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Toqa Khaled"
                     },
                     {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Ahmad Al-Kabbany"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.07393v1",
+                "title": "Underwater Embodied Intelligence for Autonomous Robots: A Constraint-Coupled Perspective on Planning, Control, and Deployment",
+                "updated": "2026-03-08T00:45:06Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.07393v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.07393v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Autonomous underwater robots are increasingly deployed for environmental monitoring, infrastructure inspection, subsea resource exploration, and long-horizon exploration. Yet, despite rapid advances in learning-based planning and control, reliable autonomy in real ocean environments remains fundamentally constrained by tightly coupled physical limits. Hydrodynamic uncertainty, partial observability, bandwidth-limited communication, and energy scarcity are not independent challenges; they interact within the closed perception-planning-control loop and often amplify one another over time. This Review develops a constraint-coupled perspective on underwater embodied intelligence, arguing that planning and control must be understood within tightly coupled sensing, communication, coordination, and resource constraints in real ocean environments. We synthesize recent progress in reinforcement learning, belief-aware planning, hybrid control, multi-robot coordination, and foundation-model integration through this embodied perspective. Across representative application domains, we show how environmental monitoring, inspection, exploration, and cooperative missions expose distinct stress profiles of cross-layer coupling. To unify these observations, we introduce a cross-layer failure taxonomy spanning epistemic, dynamic, and coordination breakdowns, and analyze how errors cascade across autonomy layers under uncertainty. Building on this structure, we outline research directions toward physics-grounded world models, certifiable learning-enabled control, communication-aware coordination, and deployment-aware system design. By internalizing constraint coupling rather than treating it as an external disturbance, underwater embodied intelligence may evolve from performance-driven adaptation toward resilient, scalable, and verifiable autonomy under real ocean conditions.",
+                "category": [
                     {
                         "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-06T18:59:55Z",
-                "arxiv:comment": "4 figures, 6 tables in the main paper, 32 pages in total",
+                "published": "2026-03-08T00:45:06Z",
+                "arxiv:comment": "This article is currently under review",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Thomas Monninger"
+                        "name": "Jingzehua Xu"
                     },
                     {
-                        "name": "Shaoyuan Xie"
+                        "name": "Guanwen Xie"
                     },
                     {
-                        "name": "Qi Alfred Chen"
+                        "name": "Jiwei Tang"
                     },
                     {
-                        "name": "Sihao Ding"
+                        "name": "Shuai Zhang"
+                    },
+                    {
+                        "name": "Xiaofan Li"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.06575v1",
-                "title": "An ode to instantons",
-                "updated": "2026-03-06T18:59:54Z",
+                "id": "http://arxiv.org/abs/2603.07390v1",
+                "title": "Deterministic Fuzzy Triage for Legal Compliance Classification and Evidence Retrieval",
+                "updated": "2026-03-08T00:31:34Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.06575v1",
+                        "@href": "https://arxiv.org/abs/2603.07390v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.06575v1",
+                        "@href": "https://arxiv.org/pdf/2603.07390v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present a formalism for semiclassical time evolution in quantum mechanics, building on a century of work. We identify complex saddle points in real time, real saddle points in complex time, and complex saddle points in complex time that reproduce the known answers in classic problems. For the decay of a metastable state, we find finite time and finite energy analogs of the \"bounce\" which do not have strict zero or negative modes. The one-loop phase of the wave function and the multiplicity of bounce solutions at late times are discussed. The motivation of this work is to learn how to compute decay rates in quantum field theory in situations with non-trivial time dependence, by first taking a humble step backwards to the fascinating world of quantum mechanics.",
-                "category": [
-                    {
-                        "@term": "hep-th",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "quant-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-06T18:59:54Z",
-                "arxiv:comment": "In memory of Sidney Coleman on the occasion of his 89th birthday",
-                "arxiv:primary_category": {
-                    "@term": "hep-th"
-                },
-                "author": [
-                    {
-                        "name": "Oliver Janssen"
-                    },
-                    {
-                        "name": "Joel Karlsson"
-                    },
-                    {
-                        "name": "Flavio Riccardi"
-                    },
-                    {
-                        "name": "Mattia Varrone"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.06572v1",
-                "title": "SCOPE: Scene-Contextualized Incremental Few-Shot 3D Segmentation",
-                "updated": "2026-03-06T18:59:36Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.06572v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.06572v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Incremental Few-Shot (IFS) segmentation aims to learn new categories over time from only a few annotations. Although widely studied in 2D, it remains underexplored for 3D point clouds. Existing methods suffer from catastrophic forgetting or fail to learn discriminative prototypes under sparse supervision, and often overlook a key cue: novel categories frequently appear as unlabelled background in base-training scenes. We introduce SCOPE (Scene-COntextualised Prototype Enrichment), a plug-and-play background-guided prototype enrichment framework that integrates with any prototype-based 3D segmentation method. After base training, a class-agnostic segmentation model extracts high-confidence pseudo-instances from background regions to build a prototype pool. When novel classes arrive with few labelled samples, relevant background prototypes are retrieved and fused with few-shot prototypes to form enriched representations without retraining the backbone or adding parameters. Experiments on ScanNet and S3DIS show that SCOPE achieves SOTA performance, improving novel-class IoU by up to 6.98% and 3.61%, and mean IoU by 2.25% and 1.70%, respectively, while maintaining low forgetting. Code is available https://github.com/Surrey-UP-Lab/SCOPE.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-06T18:59:36Z",
-                "arxiv:comment": "Accepted at CVPR 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Vishal Thengane"
-                    },
-                    {
-                        "name": "Zhaochong An"
-                    },
-                    {
-                        "name": "Tianjin Huang"
-                    },
-                    {
-                        "name": "Son Lam Phung"
-                    },
-                    {
-                        "name": "Abdesselam Bouzerdoum"
-                    },
-                    {
-                        "name": "Lu Yin"
-                    },
-                    {
-                        "name": "Na Zhao"
-                    },
-                    {
-                        "name": "Xiatian Zhu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.06570v1",
-                "title": "SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning",
-                "updated": "2026-03-06T18:58:36Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.06570v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.06570v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Surgeons don't just see -- they interpret. When an expert observes a surgical scene, they understand not only what instrument is being used, but why it was chosen, what risk it poses, and what comes next. Current surgical AI cannot answer such questions, largely because training data that explicitly encodes surgical reasoning is immensely difficult to annotate at scale. Yet surgical video lectures already contain exactly this -- explanations of intent, rationale, and anticipation, narrated by experts for the purpose of teaching. Though inherently noisy and unstructured, these narrations encode the reasoning that surgical AI currently lacks. We introduce SUREON, a large-scale video QA dataset that systematically harvests this training signal from surgical academic videos. SUREON defines 12 question categories covering safety assessment, decision rationale, and forecasting, and uses a multi-agent pipeline to extract and structure supervision at scale. Across 134.7K clips and 170 procedure types, SUREON yields 206.8k QA pairs and an expert-validated benchmark of 354 examples. To evaluate the extent to which this supervision translates to surgical reasoning ability, we introduce two models: SureonVLM, a vision-language model adapted through supervised fine-tuning, and SureonVLM-R1, a reasoning model trained with Group Relative Policy Optimization. Both models can answer complex questions about surgery and substantially outperform larger general-domain models, exceeding 84% accuracy on the SUREON benchmark while outperforming general-domain models on standard surgical perception tasks. Qualitative analysis of SureonVLM-R1 reveals explicit reasoning behavior, such as inferring operative intent from visual context.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-06T18:58:36Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Alejandra Perez"
-                    },
-                    {
-                        "name": "Anita Rau"
-                    },
-                    {
-                        "name": "Lee White"
-                    },
-                    {
-                        "name": "Busisiwe Mlambo"
-                    },
-                    {
-                        "name": "Chinedu Nwoye"
-                    },
-                    {
-                        "name": "Muhammad Abdullah Jamal"
-                    },
-                    {
-                        "name": "Omid Mohareri"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.06569v1",
-                "title": "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
-                "updated": "2026-03-06T18:58:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.06569v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.06569v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized for discrimination, enforces coarse and category-level invariances that suppress fine-grained visual cues needed for dense captioning and complex VLM reasoning. To address this issue, we present Penguin-VL, whose vision encoder is initialized from a text-only LLM. Our experiments reveal that Penguin-Encoder serves as a superior alternative to traditional contrastive pretraining, unlocking a higher degree of visual fidelity and data efficiency for multimodal understanding. Across various image and video benchmarks, Penguin-VL achieves performance comparable to leading VLMs (e.g., Qwen3-VL) in mathematical reasoning and surpasses them in tasks such as document understanding, visual knowledge, and multi-perspective video understanding. Notably, these gains are achieved with a lightweight architecture, demonstrating that improved visual representation rather than model scaling is the primary driver of performance. Our ablations show that Penguin-Encoder consistently outperforms contrastive-pretrained encoders, preserving fine-grained spatial and temporal cues that are critical for dense perception and complex reasoning. This makes it a strong drop-in alternative for compute-efficient VLMs and enables high performance in resource-constrained settings. Code: https://github.com/tencent-ailab/Penguin-VL",
+                "summary": "Legal teams increasingly use machine learning to triage large volumes of contractual evidence, but many models are opaque, non-deterministic, and difficult to align with frameworks such as HIPAA or NERC-CIP. We study a simple, reproducible alternative based on deterministic dual encoders and transparent fuzzy triage bands. We train a RoBERTa-base dual encoder with a 512-dimensional projection and cosine similarity on the ACORD benchmark for graded clause retrieval, then fine-tune it on a CUAD-derived binary compliance dataset. Across five random seeds (40-44) on a single NVIDIA A100 GPU, the model achieves ACORD-style retrieval performance of NDCG@5 0.38-0.42, NDCG@10 0.45-0.50, and 4-star Precision@5 about 0.37 on the test split. On CUAD-derived binary labels, it achieves AUC 0.98-0.99 and F1 0.22-0.30 depending on positive-class weighting, outperforming majority and random baselines in a highly imbalanced setting with a positive rate of about 0.6%. We then map scalar compliance scores into three regions: auto-noncompliant, auto-compliant, and human-review. Thresholds are tuned on validation data to maximize automatic decision coverage subject to an empirical error-rate constraint of at most 2% over auto-decided examples. The result is a seed-stable system summarized by a small number of scalar parameters. We argue that deterministic encoders, calibrated fuzzy bands, and explicit error constraints provide a practical middle ground between hand-crafted rules and opaque large language models, supporting explainable evidence triage, reproducible audit trails, and concrete mappings to legal review concepts.",
                 "category": {
-                    "@term": "cs.CV",
+                    "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-06T18:58:04Z",
-                "arxiv:comment": "Penguin-VL Technical Report; Code: https://github.com/tencent-ailab/Penguin-VL",
+                "published": "2026-03-08T00:31:34Z",
+                "arxiv:comment": "8 pages, 5 figures. Published in the Proceedings of the AAAI Bridge between Artificial Intelligence and Law 2026 (Full papers), pages 51-58",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.LG"
                 },
-                "author": [
-                    {
-                        "name": "Boqiang Zhang"
-                    },
-                    {
-                        "name": "Lei Ke"
-                    },
-                    {
-                        "name": "Ruihan Yang"
-                    },
-                    {
-                        "name": "Qi Gao"
-                    },
-                    {
-                        "name": "Tianyuan Qu"
-                    },
-                    {
-                        "name": "Rossell Chen"
-                    },
-                    {
-                        "name": "Dong Yu"
-                    },
-                    {
-                        "name": "Leoweiliang"
-                    }
-                ]
+                "arxiv:journal_ref": "Proceedings of the AAAI Bridge between Artificial Intelligence and Law 2026 (Full papers), pages 51-58, January 21, 2026, AAAI 2026 Bridge Program, Singapore",
+                "author": {
+                    "name": "Rian Atri"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2603.06567v1",
-                "title": "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention",
-                "updated": "2026-03-06T18:57:04Z",
+                "id": "http://arxiv.org/abs/2603.07389v1",
+                "title": "Feed m Birds with One Scone: Accelerating Multi-task Gradient Balancing via Bi-level Optimization",
+                "updated": "2026-03-08T00:30:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.06567v1",
+                        "@href": "https://arxiv.org/abs/2603.07389v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.06567v1",
+                        "@href": "https://arxiv.org/pdf/2603.07389v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions.",
+                "summary": "In machine learning, the goal of multi-task learning (MTL) is to optimize multiple objectives together. Recent works, for example, Multiple Gradient Descent Algorithm (MGDA) and its variants, show promising results with dynamically adjusted weights for different tasks to mitigate conflicts that may potentially degrade the performance on certain tasks. Despite the empirical success of MGDA-type methods, one major limitation of such methods is their computational inefficiency, as they require access to all task gradients. In this paper we introduce MARIGOLD, a unified algorithmic framework for efficiently solving MTL problems. Our method reveals that multi-task gradient balancing methods have a hierarchical structure, in which the model training and the gradient balancing are coupled during the whole optimization process and can be viewed as a bi-level optimization problem. Moreover, we showcase that the bi-level problem can be solved efficiently by leveraging zeroth-order method. Extensive experiments on both public datasets and industrial-scale datasets demonstrate the efficiency and superiority of our method.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cond-mat.mtrl-sci",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "physics.chem-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "q-bio.QM",
+                        "@term": "math.OC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-06T18:57:04Z",
+                "published": "2026-03-08T00:30:58Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Eric Qu"
+                        "name": "Xuxing Chen"
                     },
                     {
-                        "name": "Brandon M. Wood"
+                        "name": "Yun He"
                     },
                     {
-                        "name": "Aditi S. Krishnapriyan"
+                        "name": "Jiayi Xu"
                     },
                     {
-                        "name": "Zachary W. Ulissi"
+                        "name": "Minhui Huang"
+                    },
+                    {
+                        "name": "Xiaoyi Liu"
+                    },
+                    {
+                        "name": "Boyang Liu"
+                    },
+                    {
+                        "name": "Fei Tian"
+                    },
+                    {
+                        "name": "Xiaohan Wei"
+                    },
+                    {
+                        "name": "Rong Jin"
+                    },
+                    {
+                        "name": "Sem Park"
+                    },
+                    {
+                        "name": "Bo Long"
+                    },
+                    {
+                        "name": "Xue Feng"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.06565v1",
-                "title": "Boosting deep Reinforcement Learning using pretraining with Logical Options",
-                "updated": "2026-03-06T18:55:15Z",
+                "id": "http://arxiv.org/abs/2603.07388v1",
+                "title": "Sparsity and Out-of-Distribution Generalization",
+                "updated": "2026-03-08T00:16:25Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.06565v1",
+                        "@href": "https://arxiv.org/abs/2603.07388v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.06565v1",
+                        "@href": "https://arxiv.org/pdf/2603.07388v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Deep reinforcement learning agents are often misaligned, as they over-exploit early reward signals. Recently, several symbolic approaches have addressed these challenges by encoding sparse objectives along with aligned plans. However, purely symbolic architectures are complex to scale and difficult to apply to continuous settings. Hence, we propose a hybrid approach, inspired by humans' ability to acquire new skills. We use a two-stage framework that injects symbolic structure into neural-based reinforcement learning agents without sacrificing the expressivity of deep policies. Our method, called Hybrid Hierarchical RL (H^2RL), introduces a logical option-based pretraining strategy to steer the learning policy away from short-term reward loops and toward goal-directed behavior while allowing the final policy to be refined via standard environment interaction. Empirically, we show that this approach consistently improves long-horizon decision-making and yields agents that outperform strong neural, symbolic, and neuro-symbolic baselines.",
+                "summary": "Explaining out-of-distribution generalization has been a central problem in epistemology since Goodman's \"grue\" puzzle in 1946. Today it's a central problem in machine learning, including AI alignment.\n  Here we propose a principled account of OOD generalization with three main ingredients. First, the world is always presented to experience not as an amorphous mass, but via distinguished features (for example, visual and auditory channels). Second, Occam's Razor favors hypotheses that are \"sparse,\" meaning that they depend on as few features as possible. Third, sparse hypotheses will generalize from a training to a test distribution, provided the two distributions sufficiently overlap on their restrictions to the features that are either actually relevant or hypothesized to be. The two distributions could diverge arbitrarily on other features.\n  We prove a simple theorem that formalizes the above intuitions, generalizing the classic sample complexity bound of Blumer et al. to an OOD context. We then generalize sparse classifiers to subspace juntas, where the ground truth classifier depends solely on a low-dimensional linear subspace of the features.",
                 "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-06T18:55:15Z",
+                "published": "2026-03-08T00:16:25Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.AI"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Zihan Ye"
+                        "name": "Scott Aaronson"
                     },
                     {
-                        "name": "Phil Chau"
+                        "name": "Lin Lin Lee"
                     },
                     {
-                        "name": "Raban Emunds"
-                    },
-                    {
-                        "name": "Jannis Bl\u00fcml"
-                    },
-                    {
-                        "name": "Cedric Derstroff"
-                    },
-                    {
-                        "name": "Quentin Delfosse"
-                    },
-                    {
-                        "name": "Oleg Arenz"
-                    },
-                    {
-                        "name": "Kristian Kersting"
+                        "name": "Jiawei Li"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.06564v1",
-                "title": "The Pen: Episodic Cognitive Assistance via an Ear-Worn Interface",
-                "updated": "2026-03-06T18:53:04Z",
+                "id": "http://arxiv.org/abs/2603.07387v1",
+                "title": "Approximating Tensor Network Contraction with Sketches",
+                "updated": "2026-03-08T00:04:47Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.06564v1",
+                        "@href": "https://arxiv.org/abs/2603.07387v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.06564v1",
+                        "@href": "https://arxiv.org/pdf/2603.07387v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Wearable AI is often designed as always-available, yet continuous availability can conflict with how people work and socialize, creating discomfort around privacy, disruption, and unclear system boundaries. This paper explores episodic use of wearable AI, where assistance is intentionally invoked for short periods of focused activity and set aside when no longer needed, with a form factor that reflects this paradigm of wearing and taking off a device between sessions. We present The Pen, an ear-worn device resembling a pen, for episodic, situated cognitive assistance. The device supports short, on-demand assistance sessions using voice and visual context, with clear start/end boundaries and local processing. We report findings from an exploratory study showing how layered activation boundaries shape users' sense of agency, cognitive flow, and social comfort.",
+                "summary": "Tensor network contraction is a fundamental mathematical operation that generalizes the dot product and matrix multiplication. It finds applications in numerous domains, such as database systems, graph theory, machine learning, probability theory, and quantum mechanics. Tensor network contractions are computationally expensive, in general requiring exponential time and space. Sketching methods include a number of dimensionality reduction techniques that are widely used in the design of approximation algorithms. The existing sketching methods for tensor network contraction, however, only support acyclic tensor networks. We present the first method capable of approximating arbitrary tensor network contractions, including those of cyclic tensor networks. Additionally, we show that the existing sketching methods require a computational complexity that grows exponentially with the number of contractions. We present a second method, for acyclic tensor networks, whose space and time complexity depends only polynomially on the number of contractions.",
                 "category": {
-                    "@term": "cs.HC",
+                    "@term": "cs.DS",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-06T18:53:04Z",
+                "published": "2026-03-08T00:04:47Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.HC"
+                    "@term": "cs.DS"
                 },
                 "author": [
                     {
-                        "name": "Yonatan Tussa"
+                        "name": "Mike Heddes"
                     },
                     {
-                        "name": "Andy Heredia"
+                        "name": "Igor Nunes"
+                    },
+                    {
+                        "name": "Tony Givargis"
+                    },
+                    {
+                        "name": "Alex Nicolau"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.06563v1",
-                "title": "Convergence of Neural Network Policies for Risk--Reward Optimization",
-                "updated": "2026-03-06T18:49:54Z",
+                "id": "http://arxiv.org/abs/2603.07384v1",
+                "title": "Machine Learning Techniques for Enhancing Quantum Key Distribution",
+                "updated": "2026-03-07T23:51:47Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.06563v1",
+                        "@href": "https://arxiv.org/abs/2603.07384v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.06563v1",
+                        "@href": "https://arxiv.org/pdf/2603.07384v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We develop a neural-network framework for multi-period risk--reward stochastic control problems with constrained two-step feedback policies that may be discontinuous in the state. We allow a broad class of objectives built on a finite-dimensional performance vector, including terminal and path-dependent statistics, with risk functionals admitting auxiliary-variable optimization representations (e.g.\\ Conditional Value-at-Risk and buffered probability of exceedance) and optional moment dependence. Our approach parametrizes the two-step policy using two coupled feedforward networks with constraint-enforcing output layers, reducing the constrained control problem to unconstrained training over network parameters. Under mild regularity conditions, we prove that the empirical optimum of the NN-parametrized objective converges in probability to the true optimal value as network capacity and training sample size increase. The proof is modular, separating policy approximation, propagation through the controlled recursion, and preservation under the scalarized risk--reward objective. Numerical experiments confirm the predicted convergence-in-probability behavior, show close agreement between learned and reference control heat maps, and demonstrate out-of-sample robustness on a large independent scenario set.",
+                "summary": "Quantum Key Distribution (QKD) offers theoretically unbreakable security by leveraging quantum mechanics. However, practical implementation is challenged by environmental vulnerabilities, noise, and hardware imperfections. Recently, Machine Learning (ML) has emerged as a powerful tool to address these limitations and enhance the real-world viability of QKD systems. In this survey, we review ML techniques applied to improve QKD security and performance across five applications. First, parameter optimization, covering signal calibration, polarization alignment, phase stabilization, modulation state tuning, and post-processing enhancements to maximize secure key generation and minimize error rates. Second, attack detection, where ML models identify and classify quantum threats such as photon-number-splitting and Trojan-horse attacks. Third, protocol selection, leveraging ML to dynamically choose QKD protocols based on operational conditions. Fourth, key performance prediction of core metrics such as Secret Key Rate (SKR) and Quantum Bit Error Rate (QBER). Finally, quantum network management, optimizing large-scale QKD deployments through intelligent routing, node management, and resource allocation. Performance improvements are evaluated using accuracy, reduced QBER, and increased SKR. While ML shows significant potential for finance, government, and defense applications, challenges remain in scalability, computational demands, and real-world testing. Ongoing work should focus on lightweight, generalizable models and standardized benchmarks for practical ML-enhanced QKD deployment.",
                 "category": {
-                    "@term": "q-fin.CP",
+                    "@term": "quant-ph",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-06T18:49:54Z",
-                "arxiv:comment": "29 pages, 3 figures",
+                "published": "2026-03-07T23:51:47Z",
                 "arxiv:primary_category": {
-                    "@term": "q-fin.CP"
+                    "@term": "quant-ph"
                 },
                 "author": [
                     {
-                        "name": "Chang Chen"
+                        "name": "Ali Al-Kuwari"
                     },
                     {
-                        "name": "Duy-Minh Dang"
+                        "name": "Safaa Alqrinawi"
+                    },
+                    {
+                        "name": "Lujayn Al-Amir"
+                    },
+                    {
+                        "name": "Amina Mollazehi"
+                    },
+                    {
+                        "name": "Saif Al-Kuwari"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.06561v1",
-                "title": "EgoReasoner: Learning Egocentric 4D Reasoning via Task-Adaptive Structured Thinking",
-                "updated": "2026-03-06T18:49:04Z",
+                "id": "http://arxiv.org/abs/2603.07383v1",
+                "title": "DiffSIM: Unconditional and conditional facies simulation based on denoising diffusion generative models",
+                "updated": "2026-03-07T23:51:16Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.06561v1",
+                        "@href": "https://arxiv.org/abs/2603.07383v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.06561v1",
+                        "@href": "https://arxiv.org/pdf/2603.07383v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Egocentric video understanding is inherently complex due to the dynamic 4D nature of the environment, where camera motion and object displacements necessitate a continuous re-evaluation of spatial relations. In this work, we target a suite of under-explored egocentric 4D reasoning tasks, including fixture interaction counting, viewpoint-relative fixture location, object movement itinerary tracking, and stationary object localization, that require fundamentally different cognitive operations: spatial anchoring, temporal tracking, and duration reasoning. We observe that these structural differences make task-agnostic approaches insufficient: generic Chain-of-Thought methods lack task-appropriate reasoning primitives, and uniform reinforcement learning actively destabilizes performance on spatial tasks. To address this, we propose EgoReasoner, a two-stage framework that aligns both the reasoning scaffold and the reward signal to each task's cognitive structure. In the first stage, Task-Adaptive Thinking Templates guide the synthesis of structured CoT traces that teach the model to reason adaptively across task types via supervised fine-tuning. In the second stage, task-aware reward functions verify entity grounding, temporal alignment, and task-adaptive logical consistency, selectively strengthening each reasoning pathway via reinforcement fine-tuning with GRPO. Our 3B-parameter model, trained on only 16K samples, achieves 37.5% average accuracy on the challenging HD-EPIC benchmark, surpassing Qwen2.5-VL-7B (25.7%) by over 10 points.",
+                "summary": "Constructing subsurface facies models that are geologically plausible and constrained by well facies is essential for analyzing sedimentary evolution, reservoir characterization, and flow simulation. Recent deep generative model-based geomodelling methods have demonstrated promising capabilities for both unconditional and conditional settings. We investigate denoising diffusion models as a generative framework for producing realistic and diverse facies realizations in both settings. Diffusion models generate samples through a fixed forward noising process and a learned reverse denoising process. For unconditional geomodelling, we use denoising diffusion probabilistic models (DDPMs) to learn geological patterns from training facies models, and adopt denoising diffusion implicit models (DDIMs) to accelerate sampling by reducing inference steps from 1500 to 50 (30x fewer steps). We assess the geological plausibility using data distribution, class proportions, variograms, and geometric features. To enable conditional generation, we encode well facies and their spatial locations as conditional indicators and apply a mask-based denoising strategy that generates facies only in between-well regions, guaranteeing hard conditioning without introducing additional loss weights. We evaluate both unconditional and conditional generation on three scenarios: two two-dimensional cases (meandering channels and point bars) and one three-dimensional point-bar case. Across these scenarios, unconditional generation reproduces geological realism, and conditional generation honors well data while producing geologically consistent between-well realizations, demonstrating practical utility for facies geomodelling applications.",
                 "category": {
-                    "@term": "cs.CV",
+                    "@term": "physics.geo-ph",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-06T18:49:04Z",
-                "arxiv:comment": "preprint",
+                "published": "2026-03-07T23:51:16Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "physics.geo-ph"
                 },
                 "author": [
                     {
-                        "name": "Fangrui Zhu"
+                        "name": "Minghui Xu"
                     },
                     {
-                        "name": "Yunfeng Xi"
+                        "name": "Suihong Song"
                     },
                     {
-                        "name": "Jianmo Ni"
+                        "name": "Tapan Mukerji"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.07375v1",
+                "title": "Multi-Agentic AI for Conflict-Aware rApp Policy Orchestration in Open RAN",
+                "updated": "2026-03-07T23:34:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.07375v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Mu Cai"
+                        "@href": "https://arxiv.org/pdf/2603.07375v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Open Radio Access Network (RAN) enables flexible, AI-driven control of mobile networks through disaggregated, multi-vendor components. In this architecture, xApps handle real-time functions, whereas rApps in the non-real-time controller generate strategic policies. However, current rApp development remains largely manual, brittle, and poorly scalable as xApp diversity proliferates. In this work, we propose a Multi-Agentic AI framework to automate rApp policy generation and orchestration. The architecture integrates three specialized large language model (LLM)-based agents, Perception, Reasoning, and Refinement, supported by retrieval-augmented generation (RAG) and memory-based analogical reasoning. These agents collectively analyze potential conflicts, synthesize intent-aligned control pipelines, and incrementally refine deployment decisions. Experiments across diverse deployment scenarios demonstrate that the proposed system achieves over 70% improvement in deployment accuracy and 95% reduction in reasoning cost compared to baseline methods, while maintaining zero-shot generalization to unseen intents. These results establish a scalable and conflict-aware solution for fully autonomous, zero-touch rApp orchestration in Open RAN.",
+                "category": {
+                    "@term": "eess.SY",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-07T23:34:20Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.SY"
+                },
+                "author": [
+                    {
+                        "name": "Haiyuan Li"
                     },
                     {
-                        "name": "Boqing Gong"
+                        "name": "Yulei Wu"
                     },
                     {
-                        "name": "Long Zhao"
+                        "name": "Dimitra Simeonidou"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.07373v1",
+                "title": "Scheduling Parallel Optical Circuit Switches for AI Training",
+                "updated": "2026-03-07T22:57:12Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.07373v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Chen Qu"
+                        "@href": "https://arxiv.org/pdf/2603.07373v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The rapid growth of AI training has dramatically increased datacenter traffic demand and energy consumption, which has motivated renewed interest in optical circuit switches (OCSes) as a high-bandwidth, energy-efficient alternative for AI fabrics. Deploying multiple parallel OCSes is a leading alternative. However, efficiently scheduling time-varying traffic matrices across parallel optical switches with non-negligible reconfiguration delays remains an open challenge.\n  We consider the problem of scheduling a single AI traffic demand matrix $D$ over $s$ parallel OCSes while minimizing the makespan under reconfiguration delay $\u03b4$. Our algorithm Spectra relies on a three-step approach: Decompose $D$ into a minimal set of weighted permutations; Schedule these permutations across parallel switches using load-aware assignment; then Equalize the imbalanced loads on the switches via controlled permutation splitting. Evaluated on realistic AI training workloads (GPT model and Qwen MoE expert routing) as well as standard benchmarks, Spectra vastly outperforms a baseline based on state-of-the-art algorithms, reducing schedule makespan by an average factor of $1.4\\times$ on GPT AI workloads, $1.9\\times$ on MoE AI workloads, and $2.4\\times$ on standard benchmarks. Further, the makespans achieved by Spectra consistently approach newly derived lower bounds.",
+                "category": [
+                    {
+                        "@term": "cs.NI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Ian Miao"
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-07T22:57:12Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.NI"
+                },
+                "author": [
+                    {
+                        "name": "Kevin Liang"
                     },
                     {
-                        "name": "Yi Li"
+                        "name": "Litao Qiao"
                     },
                     {
-                        "name": "Cheng Zhong"
+                        "name": "Isaac Keslassy"
                     },
                     {
-                        "name": "Huaizu Jiang"
-                    },
-                    {
-                        "name": "Shwetak Patel"
+                        "name": "Bill Lin"
                     }
                 ]
             }
