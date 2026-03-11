@@ -5,436 +5,532 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-11T01:24:06Z",
+        "updated": "2026-03-11T04:04:31Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "548618",
+        "opensearch:totalResults": "548706",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.09673v1",
-                "title": "VarSplat: Uncertainty-aware 3D Gaussian Splatting for Robust RGB-D SLAM",
-                "updated": "2026-03-10T13:42:58Z",
+                "id": "http://arxiv.org/abs/2603.09974v1",
+                "title": "Task Aware Modulation Using Representation Learning for Upsaling of Terrestrial Carbon Fluxes",
+                "updated": "2026-03-10T17:59:29Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.09673v1",
+                        "@href": "https://arxiv.org/abs/2603.09974v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.09673v1",
+                        "@href": "https://arxiv.org/pdf/2603.09974v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Simultaneous Localization and Mapping (SLAM) with 3D Gaussian Splatting (3DGS) enables fast, differentiable rendering and high-fidelity reconstruction across diverse real-world scenes. However, existing 3DGS-SLAM approaches handle measurement reliability implicitly, making pose estimation and global alignment susceptible to drift in low-texture regions, transparent surfaces, or areas with complex reflectance properties. To this end, we introduce VarSplat, an uncertainty-aware 3DGS-SLAM system that explicitly learns per-splat appearance variance. By using the law of total variance with alpha compositing, we then render differentiable per-pixel uncertainty map via efficient, single-pass rasterization. This map guides tracking, submap registration, and loop detection toward focusing on reliable regions and contributes to more stable optimization. Experimental results on Replica (synthetic) and TUM-RGBD, ScanNet, and ScanNet++ (real-world) show that VarSplat improves robustness and achieves competitive or superior tracking, mapping, and novel view synthesis rendering compared to existing studies for dense RGB-D SLAM.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-10T13:42:58Z",
-                "arxiv:comment": "Accepted to CVPR 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
+                "summary": "Accurately upscaling terrestrial carbon fluxes is central to estimating the global carbon budget, yet remains challenging due to the sparse and regionally biased distribution of ground measurements. Existing data-driven upscaling products often fail to generalize beyond observed domains, leading to systematic regional biases and high predictive uncertainty. We introduce Task-Aware Modulation with Representation Learning (TAM-RL), a framework that couples spatio-temporal representation learning with knowledge-guided encoder-decoder architecture and loss function derived from the carbon balance equation. Across 150+ flux tower sites representing diverse biomes and climate regimes, TAM-RL improves predictive performance relative to existing state-of-the-art datasets, reducing RMSE by 8-9.6% and increasing explained variance ($R^2$) from 19.4% to 43.8%, depending on the target flux. These results demonstrate that integrating physically grounded constraints with adaptive representation learning can substantially enhance the robustness and transferability of global carbon flux estimates.",
+                "category": [
                     {
-                        "name": "Anh Thuan Tran"
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Jana Kosecka"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.09663v1",
-                "title": "A Least-Squares-Based Regularity-Conforming Neural Networks (LS-ReCoNNs) for Solving Parametric Transmission Problems",
-                "updated": "2026-03-10T13:37:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.09663v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.09663v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
+                        "@term": "physics.ao-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "summary": "This article focuses on solving parametric transmission problems in one and two spatial dimensions. These problems belong to a class of partial differential equations that arise in the modeling of physical systems with heterogeneous materials. They often exhibit discontinuities across interfaces and singularities at points where interfaces intersect. To address these problems, we propose a new deep learning approach named {\\it{Least-Squares-Based Regularity-Conforming Neural Network (LS-ReCoNN)}}. This approach proposes a loss function that is shown to be a consistent upper bound for the energy-norm error. The method represents the solution as the sum of a principal component and a singular component. The principal component is decomposed into smooth and gradient-jump parts, which capture both the regular solution behavior and reduced regularity across interfaces in one- and two-dimensional problems. The singular component is introduced to model junction singularities and it is approximated using basis functions computed from a one-dimensional finite element eigenvalue problem. For the principal component, a separated representation is employed, consisting of parameter-dependent coefficients and space-dependent functions. A deep neural network approximates the space-dependent functions, while the parameter-dependent coefficients are determined by a least-squares solver, where the optimal coefficients for each parameter instance are obtained online by solving a low-dimensional least-squares problem. Numerical experiments in one and two dimensions demonstrate that LS-ReCoNN effectively captures singularities while maintaining solution accuracy across a wide range of parameter values.",
-                "category": {
-                    "@term": "math.NA",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-10T13:37:11Z",
-                "arxiv:comment": "33 pages, 18 figures. Funded by: EU Horizon Europe MSCA-DN-101119556 (IN-DEEP); MICIU/AEI PID2023-146678OB-I00 & CEX2021-001142-S; Basque Govt BERC 2022-2025, ELKARTEK (KK-2023/00012, KK-2024/00086), MATHMODE (IT1866-26); and NextGenerationEU/PRTR",
-                "arxiv:primary_category": {
-                    "@term": "math.NA"
-                },
-                "author": [
-                    {
-                        "name": "Shima Baharlouei"
-                    },
-                    {
-                        "name": "Jamie Taylor"
-                    },
-                    {
-                        "name": "David Pardo"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.09662v1",
-                "title": "No evaluation without fair representation : Impact of label and selection bias on the evaluation, performance and mitigation of classification models",
-                "updated": "2026-03-10T13:34:53Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.09662v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.09662v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Bias can be introduced in diverse ways in machine learning datasets, for example via selection or label bias. Although these bias types in themselves have an influence on important aspects of fair machine learning, their different impact has been understudied. In this work, we empirically analyze the effect of label bias and several subtypes of selection bias on the evaluation of classification models, on their performance, and on the effectiveness of bias mitigation methods. We also introduce a biasing and evaluation framework that allows to model fair worlds and their biased counterparts through the introduction of controlled bias in real-life datasets with low discrimination. Using our framework, we empirically analyze the impact of each bias type independently, while obtaining a more representative evaluation of models and mitigation methods than with the traditional use of a subset of biased data as test set. Our results highlight different factors that influence how impactful bias is on model performance. They also show an absence of trade-off between fairness and accuracy, and between individual and group fairness, when models are evaluated on a test set that does not exhibit unwanted bias. They furthermore indicate that the performance of bias mitigation methods is influenced by the type of bias present in the data. Our findings call for future work to develop more accurate evaluations of prediction models and fairness interventions, but also to better understand other types of bias, more complex scenarios involving the combination of different bias types, and other factors that impact the efficiency of the mitigation methods, such as dataset characteristics.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-10T13:34:53Z",
-                "arxiv:comment": "31 pages, 14 figures + appendix Submitted to the ACM Journal on Responsible Computing",
+                "published": "2026-03-10T17:59:29Z",
+                "arxiv:comment": "Accepted to the KGML Bridge at AAAI 2026 (non-archival)",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Magali Legast"
+                        "name": "Aleksei Rozanov"
                     },
                     {
-                        "name": "Toon Calders"
+                        "name": "Arvind Renganathan"
                     },
                     {
-                        "name": "Fran\u00e7ois Fouss"
+                        "name": "Vipin Kumar"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.09661v1",
-                "title": "FreqCycle: A Multi-Scale Time-Frequency Analysis Method for Time Series Forecasting",
-                "updated": "2026-03-10T13:34:36Z",
+                "id": "http://arxiv.org/abs/2603.09972v1",
+                "title": "From Data Statistics to Feature Geometry: How Correlations Shape Superposition",
+                "updated": "2026-03-10T17:59:02Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.09661v1",
+                        "@href": "https://arxiv.org/abs/2603.09972v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.09661v1",
+                        "@href": "https://arxiv.org/pdf/2603.09972v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Mining time-frequency features is critical for time series forecasting. Existing research has predominantly focused on modeling low-frequency patterns, where most time series energy is concentrated. The overlooking of mid to high frequency continues to limit further performance gains in deep learning models. We propose FreqCycle, a novel framework integrating: (i) a Filter-Enhanced Cycle Forecasting (FECF) module to extract low-frequency features by explicitly learning shared periodic patterns in the time domain, and (ii) a Segmented Frequency-domain Pattern Learning (SFPL) module to enhance mid to high frequency energy proportion via learnable filters and adaptive weighting. Furthermore, time series data often exhibit coupled multi-periodicity, such as intertwined weekly and daily cycles. To address coupled multi-periodicity as well as long lookback window challenges, we extend FreqCycle hierarchically into MFreqCycle, which decouples nested periodic features through cross-scale interactions. Extensive experiments on seven diverse domain benchmarks demonstrate that FreqCycle achieves state-of-the-art accuracy while maintaining faster inference speeds, striking an optimal balance between performance and efficiency.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-10T13:34:36Z",
-                "arxiv:comment": "18 pages, 17 figures, accepted to AAAI 2026. Code available at https://github.com/boya-zhang-ai/FreqCycle",
+                "summary": "A central idea in mechanistic interpretability is that neural networks represent more features than they have dimensions, arranging them in superposition to form an over-complete basis. This framing has been influential, motivating dictionary learning approaches such as sparse autoencoders. However, superposition has mostly been studied in idealized settings where features are sparse and uncorrelated. In these settings, superposition is typically understood as introducing interference that must be minimized geometrically and filtered out by non-linearities such as ReLUs, yielding local structures like regular polytopes. We show that this account is incomplete for realistic data by introducing Bag-of-Words Superposition (BOWS), a controlled setting to encode binary bag-of-words representations of internet text in superposition. Using BOWS, we find that when features are correlated, interference can be constructive rather than just noise to be filtered out. This is achieved by arranging features according to their co-activation patterns, making interference between active features constructive, while still using ReLUs to avoid false positives. We show that this kind of arrangement is more prevalent in models trained with weight decay and naturally gives rise to semantic clusters and cyclical structures which have been observed in real language models yet were not explained by the standard picture of superposition. Code for this paper can be found at https://github.com/LucasPrietoAl/correlations-feature-geometry.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-10T17:59:02Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Boya Zhang"
+                        "name": "Lucas Prieto"
                     },
                     {
-                        "name": "Shuaijie Yin"
+                        "name": "Edward Stevinson"
                     },
                     {
-                        "name": "Huiwen Zhu"
+                        "name": "Melih Barsbey"
                     },
                     {
-                        "name": "Xing He"
+                        "name": "Tolga Birdal"
+                    },
+                    {
+                        "name": "Pedro A. M. Mediano"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.09654v1",
-                "title": "Understanding the Interplay between LLMs' Utilisation of Parametric and Contextual Knowledge: A keynote at ECIR 2025",
-                "updated": "2026-03-10T13:30:21Z",
+                "id": "http://arxiv.org/abs/2603.09971v1",
+                "title": "TiPToP: A Modular Open-Vocabulary Planning System for Robotic Manipulation",
+                "updated": "2026-03-10T17:59:00Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.09654v1",
+                        "@href": "https://arxiv.org/abs/2603.09971v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.09654v1",
+                        "@href": "https://arxiv.org/pdf/2603.09971v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present TiPToP, an extensible modular system that combines pretrained vision foundation models with an existing Task and Motion Planner (TAMP) to solve multi-step manipulation tasks directly from input RGB images and natural-language instructions. Our system aims to be simple and easy-to-use: it can be installed and run on a standard DROID setup in under one hour and adapted to new embodiments with minimal effort. We evaluate TiPToP -- which requires zero robot data -- over 28 tabletop manipulation tasks in simulation and the real world and find it matches or outperforms $\u03c0_{0.5}\\text{-DROID}$, a vision-language-action (VLA) model fine-tuned on 350 hours of embodiment-specific demonstrations. TiPToP's modular architecture enables us to analyze the system's failure modes at the component level. We analyze results from an evaluation of 173 trials and identify directions for improvement. We release TiPToP open-source to further research on modular manipulation systems and tighter integration between learning and planning. Project website and code: https://tiptop-robot.github.io",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-10T17:59:00Z",
+                "arxiv:comment": "Project website: https://tiptop-robot.github.io",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "William Shen"
+                    },
+                    {
+                        "name": "Nishanth Kumar"
+                    },
+                    {
+                        "name": "Sahit Chintalapudi"
+                    },
+                    {
+                        "name": "Jie Wang"
+                    },
+                    {
+                        "name": "Christopher Watson"
+                    },
+                    {
+                        "name": "Edward Hu"
+                    },
+                    {
+                        "name": "Jing Cao"
+                    },
+                    {
+                        "name": "Dinesh Jayaraman"
+                    },
+                    {
+                        "name": "Leslie Pack Kaelbling"
+                    },
+                    {
+                        "name": "Tom\u00e1s Lozano-P\u00e9rez"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09964v1",
+                "title": "Understanding the Use of a Large Language Model-Powered Guide to Make Virtual Reality Accessible for Blind and Low Vision People",
+                "updated": "2026-03-10T17:56:57Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09964v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09964v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     },
                     {
                         "@rel": "related",
-                        "@href": "https://doi.org/10.1145/3799914.3799918",
+                        "@href": "https://doi.org/10.1145/3772318.3791143",
                         "@title": "doi"
                     }
                 ],
-                "summary": "Language Models (LMs) acquire parametric knowledge from their training process, embedding it within their weights. The increasing scalability of LMs, however, poses significant challenges for understanding a model's inner workings and further for updating or correcting this embedded knowledge without the significant cost of retraining. Moreover, when using these language models for knowledge-intensive language understanding tasks, LMs have to integrate relevant context, mitigating their inherent weaknesses, such as incomplete or outdated knowledge. Nevertheless, studies indicate that LMs often ignore the provided context as it can be in conflict with the pre-existing LM's memory learned during pre-training. Conflicting knowledge can also already be present in the LM's parameters, termed intra-memory conflict. This underscores the importance of understanding the interplay between how a language model uses its parametric knowledge and the retrieved contextual knowledge. In this talk, I will aim to shed light on this important issue by presenting our research on evaluating the knowledge present in LMs, diagnostic tests that can reveal knowledge conflicts, as well as on understanding the characteristics of successfully used contextual knowledge.",
+                "summary": "As social virtual reality (VR) grows more popular, addressing accessibility for blind and low vision (BLV) users is increasingly critical. Researchers have proposed an AI \"sighted guide\" to help users navigate VR and answer their questions, but it has not been studied with users. To address this gap, we developed a large language model (LLM)-powered guide and studied its use with 16 BLV participants in virtual environments with confederates posing as other users. We found that when alone, participants treated the guide as a tool, but treated it companionably around others, giving it nicknames, rationalizing its mistakes with its appearance, and encouraging confederate-guide interaction. Our work furthers understanding of guides as a versatile method for VR accessibility and presents design recommendations for future guides.",
                 "category": [
+                    {
+                        "@term": "cs.HC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.ET",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-10T17:56:57Z",
+                "arxiv:comment": "16 pages, 5 figures, 3 tables, Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI '26), April 13-17, 2026, Barcelona, Spain. ACM",
+                "arxiv:primary_category": {
+                    "@term": "cs.HC"
+                },
+                "author": [
+                    {
+                        "name": "Jazmin Collins"
+                    },
+                    {
+                        "name": "Sharon Y Lin"
+                    },
+                    {
+                        "name": "Tianqi Liu"
+                    },
+                    {
+                        "name": "Andrea Stevenson Won"
+                    },
+                    {
+                        "name": "Shiri Azenkot"
+                    }
+                ],
+                "arxiv:doi": "10.1145/3772318.3791143"
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09960v1",
+                "title": "Back-to-back dijet production in DIS with finite-energy corrections and twist-3 gluon TMDs",
+                "updated": "2026-03-10T17:56:13Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09960v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09960v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This work presents the summary of calculation of the cross section of the dijet production in deep inelastic scattering at small x at next-to-eikonal accuracy. The cross section is calculated in the back-to-back limit of the produced jets using results obtained in our previous works. The cross section is expressed via the transverse-momentum-dependent (TMD) parton distributions. Specifically, we show how the next-to-eikonal corrections are related to the $x$ dependent phase of twist-2 gluon TMD and to twist-3 unpolarized gluon TMDs.",
+                "category": {
+                    "@term": "hep-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-10T17:56:13Z",
+                "arxiv:comment": "10 pages, proceedings of \"School and Workshops on Elementary Particle Physics and Gravity\" (CORFU2025)",
+                "arxiv:primary_category": {
+                    "@term": "hep-ph"
+                },
+                "author": [
+                    {
+                        "name": "Tolga Altinoluk"
+                    },
+                    {
+                        "name": "Guillaume Beuf"
+                    },
+                    {
+                        "name": "Alina Czajka"
+                    },
+                    {
+                        "name": "Cyrille Marquet"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09957v1",
+                "title": "Think Before You Lie: How Reasoning Improves Honesty",
+                "updated": "2026-03-10T17:52:49Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09957v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09957v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "While existing evaluations of large language models (LLMs) measure deception rates, the underlying conditions that give rise to deceptive behavior are poorly understood. We investigate this question using a novel dataset of realistic moral trade-offs where honesty incurs variable costs. Contrary to humans, who tend to become less honest given time to deliberate (Capraro, 2017; Capraro et al., 2019), we find that reasoning consistently increases honesty across scales and for several LLM families. This effect is not only a function of the reasoning content, as reasoning traces are often poor predictors of final behaviors. Rather, we show that the underlying geometry of the representational space itself contributes to the effect. Namely, we observe that deceptive regions within this space are metastable: deceptive answers are more easily destabilized by input paraphrasing, output resampling, and activation noise than honest ones. We interpret the effect of reasoning in this vein: generating deliberative tokens as part of moral reasoning entails the traversal of a biased representational space, ultimately nudging the model toward its more stable, honest defaults.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.IR",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-10T13:30:21Z",
+                "published": "2026-03-10T17:52:49Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.AI"
                 },
-                "arxiv:journal_ref": "ACM SIGIR Forum, Volume 59, Issue 2, March 2026",
-                "author": {
-                    "name": "Isabelle Augenstein"
-                },
-                "arxiv:doi": "10.1145/3799914.3799918"
+                "author": [
+                    {
+                        "name": "Ann Yuan"
+                    },
+                    {
+                        "name": "Asma Ghandeharioun"
+                    },
+                    {
+                        "name": "Carter Blum"
+                    },
+                    {
+                        "name": "Alicia Machado"
+                    },
+                    {
+                        "name": "Jessica Hoffmann"
+                    },
+                    {
+                        "name": "Daphne Ippolito"
+                    },
+                    {
+                        "name": "Martin Wattenberg"
+                    },
+                    {
+                        "name": "Lucas Dixon"
+                    },
+                    {
+                        "name": "Katja Filippova"
+                    }
+                ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.09653v1",
-                "title": "OTPL-VIO: Robust Visual-Inertial Odometry with Optimal Transport Line Association and Adaptive Uncertainty",
-                "updated": "2026-03-10T13:30:05Z",
+                "id": "http://arxiv.org/abs/2603.09956v1",
+                "title": "Kinodynamic Motion Retargeting for Humanoid Locomotion via Multi-Contact Whole-Body Trajectory Optimization",
+                "updated": "2026-03-10T17:51:17Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.09653v1",
+                        "@href": "https://arxiv.org/abs/2603.09956v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.09653v1",
+                        "@href": "https://arxiv.org/pdf/2603.09956v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Robust stereo visual-inertial odometry (VIO) remains challenging in low-texture scenes and under abrupt illumination changes, where point features become sparse and unstable, leading to ambiguous association and under-constrained estimation. Line structures offer complementary geometric cues, yet many efficient point-line systems still rely on point-guided line association, which can break down when point support is weak and may lead to biased constraints. We present a stereo point-line VIO system in which line segments are equipped with dedicated deep descriptors and matched using an entropy-regularized optimal transport formulation, enabling globally consistent correspondences under ambiguity, outliers, and partial observations. The proposed descriptor is training-free and is computed by sampling and pooling network feature maps. To improve estimation stability, we analyze the impact of line measurement noise and introduce reliability-adaptive weighting to regulate the influence of line constraints during optimization. Experiments on EuRoC and UMA-VI, together with real-world deployments in low-texture and illumination-challenging environments, demonstrate improved accuracy and robustness over representative baselines while maintaining real-time performance.",
+                "summary": "We present the KinoDynamic Motion Retargeting (KDMR) framework, a novel approach for humanoid locomotion that models the retargeting process as a multi-contact, whole-body trajectory optimization problem. Conventional kinematics-based retargeting methods rely solely on spatial motion capture (MoCap) data, inevitably introducing physically inconsistent artifacts, such as foot sliding and ground penetration, that severely degrade the performance of downstream imitation learning policies. To bridge this gap, KDMR extends beyond pure kinematics by explicitly enforcing rigid-body dynamics and contact complementarity constraints. Further, by integrating ground reaction force (GRF) measurements alongside MoCap data, our method automatically detects heel-toe contact events to accurately replicate complex human-like contact patterns. We evaluate KDMR against the state-of-the-art baseline, GMR, across three key dimensions: 1) the dynamic feasibility and smoothness of the retargeted motions, 2) the accuracy of GRF tracking compared to raw source data, and 3) the training efficiency and final performance of downstream control policies trained via the BeyondMimic framework. Experimental results demonstrate that KDMR significantly outperforms purely kinematic methods, yielding dynamically viable reference trajectories that accelerate policy convergence and enhance overall locomotion stability. Our end-to-end pipeline will be open-sourced upon publication.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-10T17:51:17Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Xiaoyu Zhang"
+                    },
+                    {
+                        "name": "Steven Haener"
+                    },
+                    {
+                        "name": "Varun Madabushi"
+                    },
+                    {
+                        "name": "Maegan Tucker"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09955v1",
+                "title": "From Semantics to Pixels: Coarse-to-Fine Masked Autoencoders for Hierarchical Visual Understanding",
+                "updated": "2026-03-10T17:51:12Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09955v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09955v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Self-supervised visual pre-training methods face an inherent tension: contrastive learning (CL) captures global semantics but loses fine-grained detail, while masked image modeling (MIM) preserves local textures but suffers from \"attention drift\" due to semantically-agnostic random masking. We propose C2FMAE, a coarse-to-fine masked autoencoder that resolves this tension by explicitly learning hierarchical visual representations across three data granularities: semantic masks (scene-level), instance masks (object-level), and RGB images (pixel-level). Two synergistic innovations enforce a strict top-down learning principle. First, a cascaded decoder sequentially reconstructs from scene semantics to object instances to pixel details, establishing explicit cross-granularity dependencies that parallel decoders cannot capture. Second, a progressive masking curriculum dynamically shifts the training focus from semantic-guided to instance-guided and finally to random masking, creating a structured learning path from global context to local features. To support this framework, we construct a large-scale multi-granular dataset with high-quality pseudo-labels for all 1.28M ImageNet-1K images. Extensive experiments show that C2FMAE achieves significant performance gains on image classification, object detection, and semantic segmentation, validating the effectiveness of our hierarchical design in learning more robust and generalizable representations.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.RO",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-10T13:30:05Z",
+                "published": "2026-03-10T17:51:12Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Zikun Chen"
+                        "name": "Wenzhao Xiang"
                     },
                     {
-                        "name": "Wentao Zhao"
+                        "name": "Yue Wu"
                     },
                     {
-                        "name": "Yihe Niu"
+                        "name": "Hongyang Yu"
                     },
                     {
-                        "name": "Tianchen Deng"
+                        "name": "Feng Gao"
                     },
                     {
-                        "name": "Jingchuan Wang"
+                        "name": "Fan Yang"
+                    },
+                    {
+                        "name": "Xilin Chen"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.09652v1",
-                "title": "MiniAppBench: Evaluating the Shift from Text to Interactive HTML Responses in LLM-Powered Assistants",
-                "updated": "2026-03-10T13:30:03Z",
+                "id": "http://arxiv.org/abs/2603.09953v1",
+                "title": "Leveraging whole slide difficulty in Multiple Instance Learning to improve prostate cancer grading",
+                "updated": "2026-03-10T17:49:29Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.09652v1",
+                        "@href": "https://arxiv.org/abs/2603.09953v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.09652v1",
+                        "@href": "https://arxiv.org/pdf/2603.09953v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "With the rapid advancement of Large Language Models (LLMs) in code generation, human-AI interaction is evolving from static text responses to dynamic, interactive HTML-based applications, which we term MiniApps. These applications require models to not only render visual interfaces but also construct customized interaction logic that adheres to real-world principles. However, existing benchmarks primarily focus on algorithmic correctness or static layout reconstruction, failing to capture the capabilities required for this new paradigm. To address this gap, we introduce MiniAppBench, the first comprehensive benchmark designed to evaluate principle-driven, interactive application generation. Sourced from a real-world application with 10M+ generations, MiniAppBench distills 500 tasks across six domains (e.g., Games, Science, and Tools). Furthermore, to tackle the challenge of evaluating open-ended interactions where no single ground truth exists, we propose MiniAppEval, an agentic evaluation framework. Leveraging browser automation, it performs human-like exploratory testing to systematically assess applications across three dimensions: Intention, Static, and Dynamic. Our experiments reveal that current LLMs still face significant challenges in generating high-quality MiniApps, while MiniAppEval demonstrates high alignment with human judgment, establishing a reliable standard for future research. Our code is available in github.com/MiniAppBench.",
+                "summary": "Multiple Instance Learning (MIL) has been widely applied in histopathology to classify Whole Slide Images (WSIs) with slide-level diagnoses. While the ground truth is established by expert pathologists, the slides can be difficult to diagnose for non-experts and lead to disagreements between the annotators. In this paper, we introduce the notion of Whole Slide Difficulty (WSD), based on the disagreement between an expert and a non-expert pathologist. We propose two different methods to leverage WSD, a multi-task approach and a weighted classification loss approach, and we apply them to Gleason grading of prostate cancer slides. Results show that integrating WSD during training consistently improves the classification performance across different feature encoders and MIL methods, particularly for higher Gleason grades (i.e. worse diagnosis).",
                 "category": {
-                    "@term": "cs.AI",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-10T13:30:03Z",
+                "published": "2026-03-10T17:49:29Z",
+                "arxiv:comment": "ISBI 2026",
                 "arxiv:primary_category": {
-                    "@term": "cs.AI"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Zuhao Zhang"
+                        "name": "Marie Arrivat"
                     },
                     {
-                        "name": "Chengyue Yu"
+                        "name": "R\u00e9my Peyret"
                     },
                     {
-                        "name": "Yuante Li"
+                        "name": "Elsa Angelini"
                     },
                     {
-                        "name": "Chenyi Zhuang"
-                    },
-                    {
-                        "name": "Linjian Mo"
-                    },
-                    {
-                        "name": "Shuai Li"
+                        "name": "Pietro Gori"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.09651v1",
-                "title": "Well Log-Guided Synthesis of Subsurface Images from Sparse Petrography Data Using cGANs",
-                "updated": "2026-03-10T13:29:38Z",
+                "id": "http://arxiv.org/abs/2603.09952v1",
+                "title": "On the Width Scaling of Neural Optimizers Under Matrix Operator Norms I: Row/Column Normalization and Hyperparameter Transfer",
+                "updated": "2026-03-10T17:49:19Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.09651v1",
+                        "@href": "https://arxiv.org/abs/2603.09952v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.09651v1",
+                        "@href": "https://arxiv.org/pdf/2603.09952v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Pore-scale imaging of subsurface formations is costly and limited to discrete depths, creating significant gaps in reservoir characterization. To address this, we present a conditional Generative Adversarial Network (cGAN) framework for synthesizing realistic thin section images of carbonate rock formations, conditioned on porosity values derived from well logs. The model is trained on 5,000 sub-images extracted from 15 petrography samples over a depth interval of 1992-2000m, the model generates geologically consistent images across a wide porosity range (0.004-0.745), achieving 81% accuracy within a 10\\% margin of target porosity values. The successful integration of well log data with the trained generator enables continuous pore-scale visualization along the wellbore, bridging gaps between discrete core sampling points and providing valuable insights for reservoir characterization and energy transition applications such as carbon capture and underground hydrogen storage.",
+                "summary": "A central question in modern deep learning is how to design optimizers whose behavior remains stable as the network width $w$ increases. We address this question by interpreting several widely used neural-network optimizers, including \\textrm{AdamW} and \\textrm{Muon}, as instances of steepest descent under matrix operator norms. This perspective links optimizer geometry with the Lipschitz structure of the network forward map, and enables width-independent control of both Lipschitz and smoothness constants. However, steepest-descent rules induced by standard $p \\to q$ operator norms lack layerwise composability and therefore cannot provide width-independent bounds in deep architectures. We overcome this limitation by introducing a family of mean-normalized operator norms, denoted $\\pmean \\to \\qmean$, that admit layerwise composability, yield width-independent smoothness bounds, and give rise to practical optimizers such as \\emph{rescaled} \\textrm{AdamW}, row normalization, and column normalization. The resulting learning rate width-aware scaling rules recover $\u03bc$P scaling~\\cite{yang2021tensor} as a special case and provide a principled mechanism for cross-width learning-rate transfer across a broad class of optimizers. We further show that \\textrm{Muon} can suffer an $\\mathcal{O}(\\sqrt{w})$ worst-case growth in the smoothness constant, whereas a new family of row-normalized optimizers we propose achieves width-independent smoothness guarantees. Based on the observations, we propose MOGA (Matrix Operator Geometry Aware), a width-aware optimizer based only on row/column-wise normalization that enables stable learning-rate transfer across model widths. Large-scale pre-training on GPT-2 and LLaMA shows that MOGA, especially with row normalization, is competitive with Muon while being notably faster in large-token and low-loss regimes.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "physics.geo-ph",
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.NA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.OC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-10T13:29:38Z",
-                "arxiv:comment": "6 pages, 3 figures. Extended abstract presented at the Fifth EAGE Digitalization Conference & Exhibition, 24-26 March 2025, United Kingdom",
+                "published": "2026-03-10T17:49:19Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Ali Sadeghkhani"
+                        "name": "Ruihan Xu"
                     },
                     {
-                        "name": "A. Assadi"
+                        "name": "Jiajin Li"
                     },
                     {
-                        "name": "B. Bennett"
-                    },
-                    {
-                        "name": "A. Rabbani"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.09646v1",
-                "title": "Dimuon production in neutrino-nucleus collisions at next-to-next-to-leading order in perturbative QCD",
-                "updated": "2026-03-10T13:22:41Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.09646v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.09646v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Charm production in charged-current neutrino-nucleus deep-inelastic scattering (DIS), measured through dimuon final states, remains an important constraint of strangeness in global analyses of parton distribution functions (PDFs). This process has traditionally favored a smaller strange-quark PDF at small momentum fractions $x$ than what the LHC heavy-gauge boson data have indicated. Here, we present a self-contained next-to-next-to-leading-order (NNLO) perturbative QCD calculation of dimuon production in neutrino-nucleus DIS based on semi-inclusive DIS (SIDIS). This process has been previously computed at NNLO through fully inclusive charm production. We discuss the shortcomings of this approach and how they are addressed in the SIDIS picture. We study the perturbative convergence and explore new heavy-quark production channels that become available at NNLO. We find that the NNLO corrections significantly reduce the scale uncertainties at large values of $x$ where the cross sections are enhanced by the NNLO corrections. At small $x$, the NNLO corrections tend to be negative instead, which alleviate the tension between the dimuon and LHC data.",
-                "category": {
-                    "@term": "hep-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-10T13:22:41Z",
-                "arxiv:primary_category": {
-                    "@term": "hep-ph"
-                },
-                "author": [
-                    {
-                        "name": "Ilkka Helenius"
-                    },
-                    {
-                        "name": "Hannu Paukkunen"
-                    },
-                    {
-                        "name": "Sami Yrj\u00e4nheikki"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.09645v1",
-                "title": "Evolution of Photonic Quantum Machine Learning under Noise",
-                "updated": "2026-03-10T13:21:23Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.09645v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.09645v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Photonic Quantum Machine Learning (PQML) is an emerging approach that integrates photonic quantum computing technologies with machine learning techniques to enable scalable and energy-efficient quantum information processing. Photonic systems offer advantages such as room-temperature operation, high-speed signal processing, and the ability to represent information in high-dimensional Hilbert spaces. However, noise remains a major challenge affecting the performance, reliability, and scalability of PQML implementations. This review provides a systematic analysis of noise sources in photonic quantum machine learning systems. We discuss photonic quantum computing architectures and examine key quantum machine learning algorithms implemented on photonic platforms, including Variational Quantum Circuits, Quantum Neural Networks, and Quantum Support Vector Machines. The paper categorizes major noise mechanisms and analyzes their impact on learning performance, training stability, and convergence behavior. Furthermore, we review both traditional and advanced noise characterization techniques and survey recent strategies for noise mitigation in photonic quantum systems. Finally, we highlight recent experimental advances and discuss future research directions for developing robust and scalable PQML systems under realistic noise conditions.",
-                "category": [
-                    {
-                        "@term": "quant-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-10T13:21:23Z",
-                "arxiv:comment": "26 pages, 9 figures. Review article. Currently under review at Quantum Machine Intelligence (Springer Nature)",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": [
-                    {
-                        "name": "A. M. A. S. D. Alagiyawanna"
-                    },
-                    {
-                        "name": "Asoka Karunananda"
+                        "name": "Yiping Lu"
                     }
                 ]
             }
