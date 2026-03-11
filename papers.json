@@ -5,514 +5,436 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-10T23:21:29Z",
+        "updated": "2026-03-11T01:24:06Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "548296",
+        "opensearch:totalResults": "548618",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.08707v1",
-                "title": "Impermanent: A Live Benchmark for Temporal Generalization in Time Series Forecasting",
-                "updated": "2026-03-09T17:59:00Z",
+                "id": "http://arxiv.org/abs/2603.09673v1",
+                "title": "VarSplat: Uncertainty-aware 3D Gaussian Splatting for Robust RGB-D SLAM",
+                "updated": "2026-03-10T13:42:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.08707v1",
+                        "@href": "https://arxiv.org/abs/2603.09673v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.08707v1",
+                        "@href": "https://arxiv.org/pdf/2603.09673v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent advances in time-series forecasting increasingly rely on pre-trained foundation-style models. While these models often claim broad generalization, existing evaluation protocols provide limited evidence. Indeed, most current benchmarks use static train-test splits that can easily lead to contamination as foundation models can inadvertently train on test data or perform model selection using test scores, which can inflate performance. We introduce Impermanent, a live benchmark that evaluates forecasting models under open-world temporal change by scoring forecasts sequentially over time on continuously updated data streams, enabling the study of temporal robustness, distributional shift, and performance stability rather than one-off accuracy on a frozen test set. Impermanent is instantiated on GitHub open-source activity, providing a naturally live and highly non-stationary dataset shaped by releases, shifting contributor behavior, platform/tooling changes, and external events. We focus on the top 400 repositories by star count and construct time series from issues opened, pull requests opened, push events, and new stargazers, evaluated over a rolling window with daily updates, alongside standardized protocols and leaderboards for reproducible, ongoing comparison. By shifting evaluation from static accuracy to sustained performance, Impermanent takes a concrete step toward assessing when and whether foundation-level generalization in time-series forecasting can be meaningfully claimed. Code and a live dashboard are available at https://github.com/TimeCopilot/impermanent and https://impermanent.timecopilot.dev.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-09T17:59:00Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Azul Garza"
-                    },
-                    {
-                        "name": "Ren\u00e9e Rosillo"
-                    },
-                    {
-                        "name": "Rodrigo Mendoza-Smith"
-                    },
-                    {
-                        "name": "David Salinas"
-                    },
-                    {
-                        "name": "Andrew Robert Williams"
-                    },
-                    {
-                        "name": "Arjun Ashok"
-                    },
-                    {
-                        "name": "Mononito Goswami"
-                    },
-                    {
-                        "name": "Jos\u00e9 Mart\u00edn Ju\u00e1rez"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.08706v1",
-                "title": "Agentic Critical Training",
-                "updated": "2026-03-09T17:58:56Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.08706v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.08706v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: the model imitates pre-constructed reflection text rather than learning to reason autonomously. We propose Agentic Critical Training (ACT), a reinforcement learning paradigm that trains agents to identify the better action among alternatives. By rewarding whether the model's judgment is correct, ACT drives the model to autonomously develop reasoning about action quality, producing genuine self-reflection rather than imitating it. Across three challenging agent benchmarks, ACT consistently improves agent performance when combined with different post-training methods. It achieves an average improvement of 5.07 points over imitation learning and 4.62 points over reinforcement learning. Compared to approaches that inject reflection capability through knowledge distillation, ACT also demonstrates clear advantages, yielding an average improvement of 2.42 points. Moreover, ACT enables strong out-of-distribution generalization on agentic benchmarks and improves performance on general reasoning benchmarks without any reasoning-specific training data, highlighting the value of our method. These results suggest that ACT is a promising path toward developing more reflective and capable LLM agents.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-09T17:58:56Z",
-                "arxiv:comment": "Project page: https://attention-is-all-i-need.github.io/ACT/",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Weize Liu"
-                    },
-                    {
-                        "name": "Minghui Liu"
-                    },
-                    {
-                        "name": "Sy-Tuyen Ho"
-                    },
-                    {
-                        "name": "Souradip Chakraborty"
-                    },
-                    {
-                        "name": "Xiyao Wang"
-                    },
-                    {
-                        "name": "Furong Huang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.08704v1",
-                "title": "Evaluating Financial Intelligence in Large Language Models: Benchmarking SuperInvesting AI with LLM Engines",
-                "updated": "2026-03-09T17:58:54Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.08704v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.08704v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large language models are increasingly used for financial analysis and investment research, yet systematic evaluation of their financial reasoning capabilities remains limited. In this work, we introduce the AI Financial Intelligence Benchmark (AFIB), a multi-dimensional evaluation framework designed to assess financial analysis capabilities across five dimensions: factual accuracy, analytical completeness, data recency, model consistency, and failure patterns. We evaluate five AI systems: GPT, Gemini, Perplexity, Claude, and SuperInvesting, using a dataset of 95+ structured financial analysis questions derived from real-world equity research tasks. The results reveal substantial differences in performance across models. Within this benchmark setting, SuperInvesting achieves the highest aggregate performance, with an average factual accuracy score of 8.96/10 and the highest completeness score of 56.65/70, while also demonstrating the lowest hallucination rate among evaluated systems. Retrieval-oriented systems such as Perplexity perform strongly on data recency tasks due to live information access but exhibit weaker analytical synthesis and consistency. Overall, the results highlight that financial intelligence in large language models is inherently multi-dimensional, and systems that combine structured financial data access with analytical reasoning capabilities provide the most reliable performance for complex investment research workflows.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-09T17:58:54Z",
-                "arxiv:comment": "12 pages, 6 Figures, 5 Tables",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Akshay Gulati"
-                    },
-                    {
-                        "name": "Kanha Singhania"
-                    },
-                    {
-                        "name": "Tushar Banga"
-                    },
-                    {
-                        "name": "Parth Arora"
-                    },
-                    {
-                        "name": "Anshul Verma"
-                    },
-                    {
-                        "name": "Vaibhav Kumar Singh"
-                    },
-                    {
-                        "name": "Agyapal Digra"
-                    },
-                    {
-                        "name": "Jayant Singh Bisht"
-                    },
-                    {
-                        "name": "Danish Sharma"
-                    },
-                    {
-                        "name": "Varun Singla"
-                    },
-                    {
-                        "name": "Shubh Garg"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.08700v1",
-                "title": "Learning Functions of Halfspaces",
-                "updated": "2026-03-09T17:57:19Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.08700v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.08700v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We give an algorithm that learns arbitrary Boolean functions of $k$ arbitrary halfspaces over $\\mathbb{R}^n$, in the challenging distribution-free Probably Approximately Correct (PAC) learning model, running in time $2^{\\sqrt{n} \\cdot (\\log n)^{O(k)}}$. This is the first algorithm that can PAC learn even intersections of two halfspaces in time $2^{o(n)}.$",
-                "category": [
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-09T17:57:19Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.DS"
-                },
-                "author": [
-                    {
-                        "name": "Josh Alman"
-                    },
-                    {
-                        "name": "Shyamal Patel"
-                    },
-                    {
-                        "name": "Rocco A. Servedio"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.08692v1",
-                "title": "A Multi-Objective Optimization Approach for Sustainable AI-Driven Entrepreneurship in Resilient Economies",
-                "updated": "2026-03-09T17:54:32Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.08692v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.08692v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The rapid advancement of artificial intelligence (AI) technologies presents both unprecedented opportunities and significant challenges for sustainable economic development. While AI offers transformative potential for addressing environmental challenges and enhancing economic resilience, its deployment often involves substantial energy consumption and environmental costs. This research introduces the EcoAI-Resilience framework, a multi-objective optimization approach designed to maximize the sustainability benefits of AI deployment while minimizing environmental costs and enhancing economic resilience. The framework addresses three critical objectives through mathematical optimization: sustainability impact maximization, economic resilience enhancement, and environmental cost minimization. The methodology integrates diverse data sources, including energy consumption metrics, sustainability indicators, economic performance data, and entrepreneurship outcomes across 53 countries and 14 sectors from 2015-2024. Our experimental validation demonstrates exceptional performance with R scores exceeding 0.99 across all model components, significantly outperforming baseline methods, including Linear Regression (R = 0.943), Random Forest (R = 0.957), and Gradient Boosting (R = 0.989). The framework successfully identifies optimal AI deployment strategies featuring 100\\% renewable energy integration, 80% efficiency improvement targets, and optimal investment levels of $202.48 per capita. Key findings reveal strong correlations between economic complexity and resilience (r = 0.82), renewable energy adoption and sustainability outcomes (r = 0.71), and demonstrate significant temporal improvements in AI readiness (+1.12 points/year) and renewable energy adoption (+0.67 year) globally.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-09T17:54:32Z",
-                "arxiv:comment": "35 Pages,",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Anas ALsobeh"
-                    },
-                    {
-                        "name": "Raneem Alkurdi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.08687v1",
-                "title": "Split Federated Learning Architectures for High-Accuracy and Low-Delay Model Training",
-                "updated": "2026-03-09T17:53:20Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.08687v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.08687v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Can we find a network architecture for ML model training so as to optimize training loss (and thus, accuracy) in Split Federated Learning (SFL)? And can this architecture also reduce training delay and communication overhead? While accuracy is not influenced by how we split the model in ordinary, state-of-the-art SFL, in this work we answer the questions above in the affirmative. Recent Hierarchical SFL (HSFL) architectures adopt a three-tier training structure consisting of clients, (local) aggregators, and a central server. In this architecture, the model is partitioned at two partitioning layers into three sub-models, which are executed across the three tiers. Despite their merits, HSFL architectures overlook the impact of the partitioning layers and client-to-aggregator assignments on accuracy, delay, and overhead. This work explicitly captures the impact of the partitioning layers and client-to-aggregator assignments on accuracy, delay and overhead by formulating a joint optimization problem. We prove that the problem is NP-hard and propose the first accuracy-aware heuristic algorithm that explicitly accounts for model accuracy, while remaining delay-efficient. Simulation results on public datasets show that our approach can improve accuracy by 3%, while reducing delay by 20% and overhead by 50%, compared to state-of-the-art SFL and HSFL schemes.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-09T17:53:20Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Yiannis Papageorgiou"
-                    },
-                    {
-                        "name": "Yannis Thomas"
-                    },
-                    {
-                        "name": "Ramin Khalili"
-                    },
-                    {
-                        "name": "Iordanis Koutsopoulos"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.08685v1",
-                "title": "Predicting Conflict Impact on Performance in O-RAN",
-                "updated": "2026-03-09T17:52:19Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.08685v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.08685v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The O-RAN Alliance promotes the integration of intelligent autonomous agents to control the Radio Access Network (RAN). This improves flexibility, performance, and observability in the RAN, but introduces new challenges, such as the detection and management of conflicts among the intelligent autonomous agents. A solution consists of profiling the agents before deployment to gather statistical information about their decision-making behavior, then using the information to estimate the level of conflict among agents with different goals. This approach enables determining the occurrence of conflicts among agents, but does not provide information about the impact on RAN performance, including potential service degradation. The problem becomes more complex when agents generate control actions at different timescales, which makes conflict severity hard to predict. In this paper, we present a novel approach that fills this gap. Our solution leverages the same data used to determine conflict severity but extends its use to predict the impact of such conflicts on RAN performance based on the frequency at which each agent generates actions, giving more weight to faster applications, which exert control more frequently. Via a prototype, we demonstrate that our solution is viable and accurately predicts conflict impact on RAN performance.",
-                "category": {
-                    "@term": "cs.NI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-09T17:52:19Z",
-                "arxiv:comment": "INFOCOM 2026 Workshop - 6G AI-RAN: AI Native Distributed Intelligence for 6G Networks. 6 pages, 5 figures, 3 tables",
-                "arxiv:primary_category": {
-                    "@term": "cs.NI"
-                },
-                "author": [
-                    {
-                        "name": "Pietro Brach del Prever"
-                    },
-                    {
-                        "name": "Niloofar Mohamadi"
-                    },
-                    {
-                        "name": "Salvatore D'Oro"
-                    },
-                    {
-                        "name": "Leonardo Bonati"
-                    },
-                    {
-                        "name": "Michele Polese"
-                    },
-                    {
-                        "name": "\u0141ukasz Ku\u0142acz"
-                    },
-                    {
-                        "name": "Piotr Jaworski"
-                    },
-                    {
-                        "name": "Adrian Kliks"
-                    },
-                    {
-                        "name": "Heiko Lehmann"
-                    },
-                    {
-                        "name": "Tommaso Melodia"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.08683v1",
-                "title": "Benchmarking Language Modeling for Lossless Compression of Full-Fidelity Audio",
-                "updated": "2026-03-09T17:52:02Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.08683v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.08683v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Autoregressive \"language\" models (LMs) trained on raw waveforms can be repurposed for lossless audio compression, but prior work is limited to 8-bit audio, leaving open whether such approaches work for practical settings (16/24-bit) and can compete with existing codecs. We benchmark LM-based compression on full-fidelity audio across diverse domains (music, speech, bioacoustics), sampling rates (16kHz-48kHz), and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable at higher bit depths due to vocabulary size (65K for 16-bit; 16.7M for 24-bit). We propose Trilobyte, a byte-level tokenization schema for full resolution audio, improving vocabulary scaling from $O(2^{b})$ to $O(1)$ and enabling the first tractable 24-bit LM-based lossless compression. While LMs consistently outperform FLAC and yield state-of-the-art compression at 8-bit and 16-bit, we observe that compression gains become more modest as bit depth increases beyond 8-bit.",
-                "category": [
-                    {
-                        "@term": "cs.SD",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.AS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-09T17:52:02Z",
-                "arxiv:comment": "Submitted for review at Interspeech 2026, 7 pages, 5 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.SD"
-                },
-                "author": [
-                    {
-                        "name": "Phillip Long"
-                    },
-                    {
-                        "name": "Zachary Novack"
-                    },
-                    {
-                        "name": "Chris Donahue"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.08682v1",
-                "title": "Structural Causal Bottleneck Models",
-                "updated": "2026-03-09T17:50:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.08682v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.08682v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We introduce structural causal bottleneck models (SCBMs), a novel class of structural causal models. At the core of SCBMs lies the assumption that causal effects between high-dimensional variables only depend on low-dimensional summary statistics, or bottlenecks, of the causes. SCBMs provide a flexible framework for task-specific dimension reduction while being estimable via standard, simple learning algorithms in practice. We analyse identifiability in SCBMs, connect them to information bottlenecks in the sense of Tishby & Zaslavsky (2015), and illustrate how to estimate them experimentally. We also demonstrate the benefit of bottlenecks for effect estimation in low-sample transfer learning settings. We argue that SCBMs provide an alternative to existing causal dimension reduction frameworks like causal representation learning or causal abstraction learning.",
-                "category": [
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-09T17:50:10Z",
-                "arxiv:primary_category": {
-                    "@term": "stat.ML"
-                },
-                "author": [
-                    {
-                        "name": "Simon Bing"
-                    },
-                    {
-                        "name": "Jonas Wahl"
-                    },
-                    {
-                        "name": "Jakob Runge"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.08681v1",
-                "title": "ER-Pose: Rethinking Keypoint-Driven Representation Learning for Real-Time Human Pose Estimation",
-                "updated": "2026-03-09T17:49:46Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.08681v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.08681v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Single-stage multi-person pose estimation aims to jointly perform human localization and keypoint prediction within a unified framework, offering advantages in inference efficiency and architectural simplicity. Consequently, multi-scale real-time detection architectures, such as YOLO-like models, are widely adopted for real-time pose estimation. However, these approaches typically inherit a box-driven modeling paradigm from object detection, in which pose estimation is implicitly constrained by bounding-box supervision during training. This formulation introduces biases in sample assignment and feature representation, resulting in task misalignment and ultimately limiting pose estimation accuracy. In this work, we revisit box-driven single-stage pose estimation from a keypoint-driven perspective and identify semantic conflicts among parallel objectives as a key source of performance degradation. To address this issue, we propose a keypoint-driven learning paradigm that elevates pose estimation to a primary prediction objective. Specifically, we remove bounding-box prediction and redesign the prediction head to better accommodate the high-dimensional structured representations for pose estimation. We further introduce a keypoint-driven dynamic sample assignment strategy to align training objectives with pose evaluation metrics, enabling dense supervision during training and efficient NMS-free inference. In addition, we propose a smooth OKS-based loss function to stabilize optimization in regression-based pose estimation. Based on these designs, we develop a single-stage multi-person pose estimation framework, termed ER-Pose. On MS COCO and CrowdPose, ER-Pose-n achieves AP improvements of 3.2/6.7 without pre-training and 7.4/4.9 with pre-training respectively compared with the baseline YOLO-Pose. These improvements are achieved with fewer parameters and higher inference efficiency.",
+                "summary": "Simultaneous Localization and Mapping (SLAM) with 3D Gaussian Splatting (3DGS) enables fast, differentiable rendering and high-fidelity reconstruction across diverse real-world scenes. However, existing 3DGS-SLAM approaches handle measurement reliability implicitly, making pose estimation and global alignment susceptible to drift in low-texture regions, transparent surfaces, or areas with complex reflectance properties. To this end, we introduce VarSplat, an uncertainty-aware 3DGS-SLAM system that explicitly learns per-splat appearance variance. By using the law of total variance with alpha compositing, we then render differentiable per-pixel uncertainty map via efficient, single-pass rasterization. This map guides tracking, submap registration, and loop detection toward focusing on reliable regions and contributes to more stable optimization. Experimental results on Replica (synthetic) and TUM-RGBD, ScanNet, and ScanNet++ (real-world) show that VarSplat improves robustness and achieves competitive or superior tracking, mapping, and novel view synthesis rendering compared to existing studies for dense RGB-D SLAM.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-09T17:49:46Z",
+                "published": "2026-03-10T13:42:58Z",
+                "arxiv:comment": "Accepted to CVPR 2026",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Nanjun Li"
+                        "name": "Anh Thuan Tran"
                     },
                     {
-                        "name": "Pinqi Cheng"
+                        "name": "Jana Kosecka"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09663v1",
+                "title": "A Least-Squares-Based Regularity-Conforming Neural Networks (LS-ReCoNNs) for Solving Parametric Transmission Problems",
+                "updated": "2026-03-10T13:37:11Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09663v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Zean Liu"
+                        "@href": "https://arxiv.org/pdf/2603.09663v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This article focuses on solving parametric transmission problems in one and two spatial dimensions. These problems belong to a class of partial differential equations that arise in the modeling of physical systems with heterogeneous materials. They often exhibit discontinuities across interfaces and singularities at points where interfaces intersect. To address these problems, we propose a new deep learning approach named {\\it{Least-Squares-Based Regularity-Conforming Neural Network (LS-ReCoNN)}}. This approach proposes a loss function that is shown to be a consistent upper bound for the energy-norm error. The method represents the solution as the sum of a principal component and a singular component. The principal component is decomposed into smooth and gradient-jump parts, which capture both the regular solution behavior and reduced regularity across interfaces in one- and two-dimensional problems. The singular component is introduced to model junction singularities and it is approximated using basis functions computed from a one-dimensional finite element eigenvalue problem. For the principal component, a separated representation is employed, consisting of parameter-dependent coefficients and space-dependent functions. A deep neural network approximates the space-dependent functions, while the parameter-dependent coefficients are determined by a least-squares solver, where the optimal coefficients for each parameter instance are obtained online by solving a low-dimensional least-squares problem. Numerical experiments in one and two dimensions demonstrate that LS-ReCoNN effectively captures singularities while maintaining solution accuracy across a wide range of parameter values.",
+                "category": {
+                    "@term": "math.NA",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-10T13:37:11Z",
+                "arxiv:comment": "33 pages, 18 figures. Funded by: EU Horizon Europe MSCA-DN-101119556 (IN-DEEP); MICIU/AEI PID2023-146678OB-I00 & CEX2021-001142-S; Basque Govt BERC 2022-2025, ELKARTEK (KK-2023/00012, KK-2024/00086), MATHMODE (IT1866-26); and NextGenerationEU/PRTR",
+                "arxiv:primary_category": {
+                    "@term": "math.NA"
+                },
+                "author": [
+                    {
+                        "name": "Shima Baharlouei"
                     },
                     {
-                        "name": "Minghe Tian"
+                        "name": "Jamie Taylor"
                     },
                     {
-                        "name": "Xuanyin Wang"
+                        "name": "David Pardo"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09662v1",
+                "title": "No evaluation without fair representation : Impact of label and selection bias on the evaluation, performance and mitigation of classification models",
+                "updated": "2026-03-10T13:34:53Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09662v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09662v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Bias can be introduced in diverse ways in machine learning datasets, for example via selection or label bias. Although these bias types in themselves have an influence on important aspects of fair machine learning, their different impact has been understudied. In this work, we empirically analyze the effect of label bias and several subtypes of selection bias on the evaluation of classification models, on their performance, and on the effectiveness of bias mitigation methods. We also introduce a biasing and evaluation framework that allows to model fair worlds and their biased counterparts through the introduction of controlled bias in real-life datasets with low discrimination. Using our framework, we empirically analyze the impact of each bias type independently, while obtaining a more representative evaluation of models and mitigation methods than with the traditional use of a subset of biased data as test set. Our results highlight different factors that influence how impactful bias is on model performance. They also show an absence of trade-off between fairness and accuracy, and between individual and group fairness, when models are evaluated on a test set that does not exhibit unwanted bias. They furthermore indicate that the performance of bias mitigation methods is influenced by the type of bias present in the data. Our findings call for future work to develop more accurate evaluations of prediction models and fairness interventions, but also to better understand other types of bias, more complex scenarios involving the combination of different bias types, and other factors that impact the efficiency of the mitigation methods, such as dataset characteristics.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-10T13:34:53Z",
+                "arxiv:comment": "31 pages, 14 figures + appendix Submitted to the ACM Journal on Responsible Computing",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Magali Legast"
+                    },
+                    {
+                        "name": "Toon Calders"
+                    },
+                    {
+                        "name": "Fran\u00e7ois Fouss"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09661v1",
+                "title": "FreqCycle: A Multi-Scale Time-Frequency Analysis Method for Time Series Forecasting",
+                "updated": "2026-03-10T13:34:36Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09661v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09661v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Mining time-frequency features is critical for time series forecasting. Existing research has predominantly focused on modeling low-frequency patterns, where most time series energy is concentrated. The overlooking of mid to high frequency continues to limit further performance gains in deep learning models. We propose FreqCycle, a novel framework integrating: (i) a Filter-Enhanced Cycle Forecasting (FECF) module to extract low-frequency features by explicitly learning shared periodic patterns in the time domain, and (ii) a Segmented Frequency-domain Pattern Learning (SFPL) module to enhance mid to high frequency energy proportion via learnable filters and adaptive weighting. Furthermore, time series data often exhibit coupled multi-periodicity, such as intertwined weekly and daily cycles. To address coupled multi-periodicity as well as long lookback window challenges, we extend FreqCycle hierarchically into MFreqCycle, which decouples nested periodic features through cross-scale interactions. Extensive experiments on seven diverse domain benchmarks demonstrate that FreqCycle achieves state-of-the-art accuracy while maintaining faster inference speeds, striking an optimal balance between performance and efficiency.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-10T13:34:36Z",
+                "arxiv:comment": "18 pages, 17 figures, accepted to AAAI 2026. Code available at https://github.com/boya-zhang-ai/FreqCycle",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Boya Zhang"
+                    },
+                    {
+                        "name": "Shuaijie Yin"
+                    },
+                    {
+                        "name": "Huiwen Zhu"
+                    },
+                    {
+                        "name": "Xing He"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09654v1",
+                "title": "Understanding the Interplay between LLMs' Utilisation of Parametric and Contextual Knowledge: A keynote at ECIR 2025",
+                "updated": "2026-03-10T13:30:21Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09654v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09654v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    },
+                    {
+                        "@rel": "related",
+                        "@href": "https://doi.org/10.1145/3799914.3799918",
+                        "@title": "doi"
+                    }
+                ],
+                "summary": "Language Models (LMs) acquire parametric knowledge from their training process, embedding it within their weights. The increasing scalability of LMs, however, poses significant challenges for understanding a model's inner workings and further for updating or correcting this embedded knowledge without the significant cost of retraining. Moreover, when using these language models for knowledge-intensive language understanding tasks, LMs have to integrate relevant context, mitigating their inherent weaknesses, such as incomplete or outdated knowledge. Nevertheless, studies indicate that LMs often ignore the provided context as it can be in conflict with the pre-existing LM's memory learned during pre-training. Conflicting knowledge can also already be present in the LM's parameters, termed intra-memory conflict. This underscores the importance of understanding the interplay between how a language model uses its parametric knowledge and the retrieved contextual knowledge. In this talk, I will aim to shed light on this important issue by presenting our research on evaluating the knowledge present in LMs, diagnostic tests that can reveal knowledge conflicts, as well as on understanding the characteristics of successfully used contextual knowledge.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-10T13:30:21Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "arxiv:journal_ref": "ACM SIGIR Forum, Volume 59, Issue 2, March 2026",
+                "author": {
+                    "name": "Isabelle Augenstein"
+                },
+                "arxiv:doi": "10.1145/3799914.3799918"
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09653v1",
+                "title": "OTPL-VIO: Robust Visual-Inertial Odometry with Optimal Transport Line Association and Adaptive Uncertainty",
+                "updated": "2026-03-10T13:30:05Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09653v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09653v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Robust stereo visual-inertial odometry (VIO) remains challenging in low-texture scenes and under abrupt illumination changes, where point features become sparse and unstable, leading to ambiguous association and under-constrained estimation. Line structures offer complementary geometric cues, yet many efficient point-line systems still rely on point-guided line association, which can break down when point support is weak and may lead to biased constraints. We present a stereo point-line VIO system in which line segments are equipped with dedicated deep descriptors and matched using an entropy-regularized optimal transport formulation, enabling globally consistent correspondences under ambiguity, outliers, and partial observations. The proposed descriptor is training-free and is computed by sampling and pooling network feature maps. To improve estimation stability, we analyze the impact of line measurement noise and introduce reliability-adaptive weighting to regulate the influence of line constraints during optimization. Experiments on EuRoC and UMA-VI, together with real-world deployments in low-texture and illumination-challenging environments, demonstrate improved accuracy and robustness over representative baselines while maintaining real-time performance.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-10T13:30:05Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zikun Chen"
+                    },
+                    {
+                        "name": "Wentao Zhao"
+                    },
+                    {
+                        "name": "Yihe Niu"
+                    },
+                    {
+                        "name": "Tianchen Deng"
+                    },
+                    {
+                        "name": "Jingchuan Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09652v1",
+                "title": "MiniAppBench: Evaluating the Shift from Text to Interactive HTML Responses in LLM-Powered Assistants",
+                "updated": "2026-03-10T13:30:03Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09652v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09652v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "With the rapid advancement of Large Language Models (LLMs) in code generation, human-AI interaction is evolving from static text responses to dynamic, interactive HTML-based applications, which we term MiniApps. These applications require models to not only render visual interfaces but also construct customized interaction logic that adheres to real-world principles. However, existing benchmarks primarily focus on algorithmic correctness or static layout reconstruction, failing to capture the capabilities required for this new paradigm. To address this gap, we introduce MiniAppBench, the first comprehensive benchmark designed to evaluate principle-driven, interactive application generation. Sourced from a real-world application with 10M+ generations, MiniAppBench distills 500 tasks across six domains (e.g., Games, Science, and Tools). Furthermore, to tackle the challenge of evaluating open-ended interactions where no single ground truth exists, we propose MiniAppEval, an agentic evaluation framework. Leveraging browser automation, it performs human-like exploratory testing to systematically assess applications across three dimensions: Intention, Static, and Dynamic. Our experiments reveal that current LLMs still face significant challenges in generating high-quality MiniApps, while MiniAppEval demonstrates high alignment with human judgment, establishing a reliable standard for future research. Our code is available in github.com/MiniAppBench.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-10T13:30:03Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Zuhao Zhang"
+                    },
+                    {
+                        "name": "Chengyue Yu"
+                    },
+                    {
+                        "name": "Yuante Li"
+                    },
+                    {
+                        "name": "Chenyi Zhuang"
+                    },
+                    {
+                        "name": "Linjian Mo"
+                    },
+                    {
+                        "name": "Shuai Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09651v1",
+                "title": "Well Log-Guided Synthesis of Subsurface Images from Sparse Petrography Data Using cGANs",
+                "updated": "2026-03-10T13:29:38Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09651v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09651v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Pore-scale imaging of subsurface formations is costly and limited to discrete depths, creating significant gaps in reservoir characterization. To address this, we present a conditional Generative Adversarial Network (cGAN) framework for synthesizing realistic thin section images of carbonate rock formations, conditioned on porosity values derived from well logs. The model is trained on 5,000 sub-images extracted from 15 petrography samples over a depth interval of 1992-2000m, the model generates geologically consistent images across a wide porosity range (0.004-0.745), achieving 81% accuracy within a 10\\% margin of target porosity values. The successful integration of well log data with the trained generator enables continuous pore-scale visualization along the wellbore, bridging gaps between discrete core sampling points and providing valuable insights for reservoir characterization and energy transition applications such as carbon capture and underground hydrogen storage.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "physics.geo-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-10T13:29:38Z",
+                "arxiv:comment": "6 pages, 3 figures. Extended abstract presented at the Fifth EAGE Digitalization Conference & Exhibition, 24-26 March 2025, United Kingdom",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Ali Sadeghkhani"
+                    },
+                    {
+                        "name": "A. Assadi"
+                    },
+                    {
+                        "name": "B. Bennett"
+                    },
+                    {
+                        "name": "A. Rabbani"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09646v1",
+                "title": "Dimuon production in neutrino-nucleus collisions at next-to-next-to-leading order in perturbative QCD",
+                "updated": "2026-03-10T13:22:41Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09646v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09646v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Charm production in charged-current neutrino-nucleus deep-inelastic scattering (DIS), measured through dimuon final states, remains an important constraint of strangeness in global analyses of parton distribution functions (PDFs). This process has traditionally favored a smaller strange-quark PDF at small momentum fractions $x$ than what the LHC heavy-gauge boson data have indicated. Here, we present a self-contained next-to-next-to-leading-order (NNLO) perturbative QCD calculation of dimuon production in neutrino-nucleus DIS based on semi-inclusive DIS (SIDIS). This process has been previously computed at NNLO through fully inclusive charm production. We discuss the shortcomings of this approach and how they are addressed in the SIDIS picture. We study the perturbative convergence and explore new heavy-quark production channels that become available at NNLO. We find that the NNLO corrections significantly reduce the scale uncertainties at large values of $x$ where the cross sections are enhanced by the NNLO corrections. At small $x$, the NNLO corrections tend to be negative instead, which alleviate the tension between the dimuon and LHC data.",
+                "category": {
+                    "@term": "hep-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-10T13:22:41Z",
+                "arxiv:primary_category": {
+                    "@term": "hep-ph"
+                },
+                "author": [
+                    {
+                        "name": "Ilkka Helenius"
+                    },
+                    {
+                        "name": "Hannu Paukkunen"
+                    },
+                    {
+                        "name": "Sami Yrj\u00e4nheikki"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.09645v1",
+                "title": "Evolution of Photonic Quantum Machine Learning under Noise",
+                "updated": "2026-03-10T13:21:23Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.09645v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.09645v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Photonic Quantum Machine Learning (PQML) is an emerging approach that integrates photonic quantum computing technologies with machine learning techniques to enable scalable and energy-efficient quantum information processing. Photonic systems offer advantages such as room-temperature operation, high-speed signal processing, and the ability to represent information in high-dimensional Hilbert spaces. However, noise remains a major challenge affecting the performance, reliability, and scalability of PQML implementations. This review provides a systematic analysis of noise sources in photonic quantum machine learning systems. We discuss photonic quantum computing architectures and examine key quantum machine learning algorithms implemented on photonic platforms, including Variational Quantum Circuits, Quantum Neural Networks, and Quantum Support Vector Machines. The paper categorizes major noise mechanisms and analyzes their impact on learning performance, training stability, and convergence behavior. Furthermore, we review both traditional and advanced noise characterization techniques and survey recent strategies for noise mitigation in photonic quantum systems. Finally, we highlight recent experimental advances and discuss future research directions for developing robust and scalable PQML systems under realistic noise conditions.",
+                "category": [
+                    {
+                        "@term": "quant-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-10T13:21:23Z",
+                "arxiv:comment": "26 pages, 9 figures. Review article. Currently under review at Quantum Machine Intelligence (Springer Nature)",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "A. M. A. S. D. Alagiyawanna"
+                    },
+                    {
+                        "name": "Asoka Karunananda"
                     }
                 ]
             }
