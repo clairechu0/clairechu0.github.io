@@ -5,396 +5,140 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-12T21:27:18Z",
+        "updated": "2026-03-13T01:27:34Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "549085",
+        "opensearch:totalResults": "549449",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.11048v1",
-                "title": "COMIC: Agentic Sketch Comedy Generation",
-                "updated": "2026-03-11T17:59:59Z",
+                "id": "http://arxiv.org/abs/2603.12126v1",
+                "title": "Hoi3DGen: Generating High-Quality Human-Object-Interactions in 3D",
+                "updated": "2026-03-12T16:27:35Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.11048v1",
+                        "@href": "https://arxiv.org/abs/2603.12126v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.11048v1",
+                        "@href": "https://arxiv.org/pdf/2603.12126v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We propose a fully automated AI system that produces short comedic videos similar to sketch shows such as Saturday Night Live. Starting with character references, the system employs a population of agents loosely based on real production studio roles, structured to optimize the quality and diversity of ideas and outputs through iterative competition, evaluation, and improvement. A key contribution is the introduction of LLM critics aligned with real viewer preferences through the analysis of a corpus of comedy videos on YouTube to automatically evaluate humor. Our experiments show that our framework produces results approaching the quality of professionally produced sketches while demonstrating state-of-the-art performance in video generation.",
+                "summary": "Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming. Existing approaches often rely on score distillation from text-to-image models, but their results suffer from the Janus problem and do not follow text prompts faithfully due to the scarcity of high-quality interaction data. We introduce Hoi3DGen, a framework that generates high-quality textured meshes of human-object interaction that follow the input interaction descriptions precisely. We first curate realistic and high-quality interaction data leveraging multimodal large language models, and then create a full text-to-3D pipeline, which achieves orders-of-magnitude improvements in interaction fidelity. Our method surpasses baselines by 4-15x in text consistency and 3-7x in 3D model quality, exhibiting strong generalization to diverse categories and interaction types, while maintaining high-quality 3D generation.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.NE",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-11T17:59:59Z",
-                "arxiv:comment": "Project page: https://susunghong.github.io/COMIC/",
+                "published": "2026-03-12T16:27:35Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Susung Hong"
+                        "name": "Agniv Sharma"
                     },
                     {
-                        "name": "Brian Curless"
+                        "name": "Xianghui Xie"
                     },
                     {
-                        "name": "Ira Kemelmacher-Shlizerman"
+                        "name": "Tom Fischer"
                     },
                     {
-                        "name": "Steve Seitz"
+                        "name": "Eddy Ilg"
+                    },
+                    {
+                        "name": "Gerard Pons-Moll"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.11047v1",
-                "title": "LiTo: Surface Light Field Tokenization",
-                "updated": "2026-03-11T17:59:59Z",
+                "id": "http://arxiv.org/abs/2603.12118v1",
+                "title": "Cornserve: A Distributed Serving System for Any-to-Any Multimodal Models",
+                "updated": "2026-03-12T16:20:35Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.11047v1",
+                        "@href": "https://arxiv.org/abs/2603.12118v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.11047v1",
+                        "@href": "https://arxiv.org/pdf/2603.12118v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We propose a 3D latent representation that jointly models object geometry and view-dependent appearance. Most prior works focus on either reconstructing 3D geometry or predicting view-independent diffuse appearance, and thus struggle to capture realistic view-dependent effects. Our approach leverages that RGB-depth images provide samples of a surface light field. By encoding random subsamples of this surface light field into a compact set of latent vectors, our model learns to represent both geometry and appearance within a unified 3D latent space. This representation reproduces view-dependent effects such as specular highlights and Fresnel reflections under complex lighting. We further train a latent flow matching model on this representation to learn its distribution conditioned on a single input image, enabling the generation of 3D objects with appearances consistent with the lighting and materials in the input. Experiments show that our approach achieves higher visual quality and better input fidelity than existing methods.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-11T17:59:59Z",
-                "arxiv:comment": "ICLR 2026; Project page: https://apple.github.io/ml-lito/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Jen-Hao Rick Chang"
-                    },
-                    {
-                        "name": "Xiaoming Zhao"
-                    },
-                    {
-                        "name": "Dorian Chan"
-                    },
-                    {
-                        "name": "Oncel Tuzel"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.11045v1",
-                "title": "Neural Field Thermal Tomography: A Differentiable Physics Framework for Non-Destructive Evaluation",
-                "updated": "2026-03-11T17:59:42Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.11045v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.11045v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We propose Neural Field Thermal Tomography (NeFTY), a differentiable physics framework for the quantitative 3D reconstruction of material properties from transient surface temperature measurements. While traditional thermography relies on pixel-wise 1D approximations that neglect lateral diffusion, and soft-constrained Physics-Informed Neural Networks (PINNs) often fail in transient diffusion scenarios due to gradient stiffness, NeFTY parameterizes the 3D diffusivity field as a continuous neural field optimized through a rigorous numerical solver. By leveraging a differentiable physics solver, our approach enforces thermodynamic laws as hard constraints while maintaining the memory efficiency required for high-resolution 3D tomography. Our discretize-then-optimize paradigm effectively mitigates the spectral bias and ill-posedness inherent in inverse heat conduction, enabling the recovery of subsurface defects at arbitrary scales. Experimental validation on synthetic data demonstrates that NeFTY significantly improves the accuracy of subsurface defect localization over baselines. Additional details at https://cab-lab-princeton.github.io/nefty/",
+                "summary": "Any-to-Any models are an emerging class of multimodal models that accept combinations of multimodal data (e.g., text, image, video, audio) as input and generate them as output. Serving these models are challenging; different requests with different input and output modalities traverse different paths through the model computation graph, and each component of the model have different scaling characteristics.\n  We present Cornserve, a distributed serving system for generic Any-to-Any models. Cornserve provides a flexible task abstraction for expressing Any-to-Any model computation graphs, enabling component disaggregation and independent scaling. The distributed runtime dispatches compute to the data plane via an efficient record-and-replay execution model that keeps track of data dependencies, and forwards tensor data between components directly from the producer to the consumer. Built on Kubernetes with approximately 23K new lines of Python, Cornserve supports diverse Any-to-Any models and delivers up to 3.81$\\times$ higher throughput and 5.79$\\times$ lower tail latency. Cornserve is open-source, and the demo video is available on YouTube.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cond-mat.mtrl-sci",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "physics.ins-det",
+                        "@term": "cs.DC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-11T17:59:42Z",
-                "arxiv:comment": "27 pages, 15 figures",
+                "published": "2026-03-12T16:20:35Z",
+                "arxiv:comment": "Open source https://github.com/cornserve-ai/cornserve / Demo video https://www.youtube.com/watch?v=nb8R-vztLRg",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Tao Zhong"
+                        "name": "Jae-Won Chung"
                     },
                     {
-                        "name": "Yixun Hu"
+                        "name": "Jeff J. Ma"
                     },
                     {
-                        "name": "Dongzhe Zheng"
+                        "name": "Jisang Ahn"
                     },
                     {
-                        "name": "Aditya Sood"
+                        "name": "Yizhuo Liang"
                     },
                     {
-                        "name": "Christine Allen-Blanchette"
+                        "name": "Akshay Jajoo"
+                    },
+                    {
+                        "name": "Myungjin Lee"
+                    },
+                    {
+                        "name": "Mosharaf Chowdhury"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.11044v1",
-                "title": "Agentar-Fin-OCR",
-                "updated": "2026-03-11T17:59:42Z",
+                "id": "http://arxiv.org/abs/2603.12117v1",
+                "title": "SommBench: Assessing Sommelier Expertise of Language Models",
+                "updated": "2026-03-12T16:19:04Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.11044v1",
+                        "@href": "https://arxiv.org/abs/2603.12117v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.11044v1",
+                        "@href": "https://arxiv.org/pdf/2603.12117v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "In this paper, we propose Agentar-Fin-OCR, a document parsing system tailored to financial-domain documents, transforming ultra-long financial PDFs into semantically consistent, highly accurate, structured outputs with auditing-grade provenance. To address finance-specific challenges such as complex layouts, cross-page structural discontinuities, and cell-level referencing capability, Agentar-Fin-OCR combines (1) a Cross-page Contents Consolidation algorithm to restore continuity across pages and a Document-level Heading Hierarchy Reconstruction (DHR) module to build a globally consistent Table of Contents (TOC) tree for structure-aware retrieval, and (2) a difficulty-adaptive curriculum learning training strategy for table parsing, together with a CellBBoxRegressor module that uses structural anchor tokens to localize table cells from decoder hidden states without external detectors. Experiments demonstrate that our model shows high performance on the table parsing metrics of OmniDocBench. To enable realistic evaluation in the financial vertical, we further introduce FinDocBench, a benchmark that includes six financial document categories with expert-verified annotations and evaluation metrics including Table of Contents edit-distance-based similarity (TocEDS), cross-page concatenated TEDS, and Table Cell Intersection over Union (C-IoU). We evaluate a wide range of state-of-the-art models on FinDocBench to assess their capabilities and remaining limitations on financial documents. Overall, Agentar-Fin-OCR and FinDocBench provide a practical foundation for reliable downstream financial document applications.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-11T17:59:42Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Siyi Qian"
-                    },
-                    {
-                        "name": "Xiongfei Bai"
-                    },
-                    {
-                        "name": "Bingtao Fu"
-                    },
-                    {
-                        "name": "Yichen Lu"
-                    },
-                    {
-                        "name": "Gaoyang Zhang"
-                    },
-                    {
-                        "name": "Xudong Yang"
-                    },
-                    {
-                        "name": "Peng Zhang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.11042v1",
-                "title": "V2M-Zero: Zero-Pair Time-Aligned Video-to-Music Generation",
-                "updated": "2026-03-11T17:59:40Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.11042v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.11042v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Generating music that temporally aligns with video events is challenging for existing text-to-music models, which lack fine-grained temporal control. We introduce V2M-Zero, a zero-pair video-to-music generation approach that outputs time-aligned music for video. Our method is motivated by a key observation: temporal synchronization requires matching when and how much change occurs, not what changes. While musical and visual events differ semantically, they exhibit shared temporal structure that can be captured independently within each modality. We capture this structure through event curves computed from intra-modal similarity using pretrained music and video encoders. By measuring temporal change within each modality independently, these curves provide comparable representations across modalities. This enables a simple training strategy: fine-tune a text-to-music model on music-event curves, then substitute video-event curves at inference without cross-modal training or paired data. Across OES-Pub, MovieGenBench-Music, and AIST++, V2M-Zero achieves substantial gains over paired-data baselines: 5-21% higher audio quality, 13-15% better semantic alignment, 21-52% improved temporal synchronization, and 28% higher beat alignment on dance videos. We find similar results via a large crowd-source subjective listening test. Overall, our results validate that temporal alignment through within-modality features, rather than paired cross-modal supervision, is effective for video-to-music generation. Results are available at https://genjib.github.io/v2m_zero/",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SD",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-11T17:59:40Z",
-                "arxiv:comment": "Project page: https://genjib.github.io/v2m_zero/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yan-Bo Lin"
-                    },
-                    {
-                        "name": "Jonah Casebeer"
-                    },
-                    {
-                        "name": "Long Mai"
-                    },
-                    {
-                        "name": "Aniruddha Mahapatra"
-                    },
-                    {
-                        "name": "Gedas Bertasius"
-                    },
-                    {
-                        "name": "Nicholas J. Bryan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.11041v1",
-                "title": "DynVLA: Learning World Dynamics for Action Reasoning in Autonomous Driving",
-                "updated": "2026-03-11T17:59:31Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.11041v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.11041v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We propose DynVLA, a driving VLA model that introduces a new CoT paradigm termed Dynamics CoT. DynVLA forecasts compact world dynamics before action generation, enabling more informed and physically grounded decision-making. To obtain compact dynamics representations, DynVLA introduces a Dynamics Tokenizer that compresses future evolution into a small set of dynamics tokens. Considering the rich environment dynamics in interaction-intensive driving scenarios, DynVLA decouples ego-centric and environment-centric dynamics, yielding more accurate world dynamics modeling. We then train DynVLA to generate dynamics tokens before actions through SFT and RFT, improving decision quality while maintaining latency-efficient inference. Compared to Textual CoT, which lacks fine-grained spatiotemporal understanding, and Visual CoT, which introduces substantial redundancy due to dense image prediction, Dynamics CoT captures the evolution of the world in a compact, interpretable, and efficient form. Extensive experiments on NAVSIM, Bench2Drive, and a large-scale in-house dataset demonstrate that DynVLA consistently outperforms Textual CoT and Visual CoT methods, validating the effectiveness and practical value of Dynamics CoT.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-11T17:59:31Z",
-                "arxiv:comment": "18 pages, 10 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Shuyao Shang"
-                    },
-                    {
-                        "name": "Bing Zhan"
-                    },
-                    {
-                        "name": "Yunfei Yan"
-                    },
-                    {
-                        "name": "Yuqi Wang"
-                    },
-                    {
-                        "name": "Yingyan Li"
-                    },
-                    {
-                        "name": "Yasong An"
-                    },
-                    {
-                        "name": "Xiaoman Wang"
-                    },
-                    {
-                        "name": "Jierui Liu"
-                    },
-                    {
-                        "name": "Lu Hou"
-                    },
-                    {
-                        "name": "Lue Fan"
-                    },
-                    {
-                        "name": "Zhaoxiang Zhang"
-                    },
-                    {
-                        "name": "Tieniu Tan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.11039v1",
-                "title": "Instruction set for the representation of graphs",
-                "updated": "2026-03-11T17:57:44Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.11039v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.11039v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present IsalGraph, a method for representing the structure of any finite, simple graph as a compact string over a nine-character instruction alphabet. The encoding is executed by a small virtual machine comprising a sparse graph, a circular doubly-linked list (CDLL) of graph-node references, and two traversal pointers. Instructions either move a pointer through the CDLL or insert a node or edge into the graph. A key design property is that every string over the alphabet decodes to a valid graph, with no invalid states reachable. A greedy \\emph{GraphToString} algorithm encodes any connected graph into a string in time polynomial in the number of nodes; an exhaustive-backtracking variant produces a canonical string by selecting the lexicographically smallest shortest string across all starting nodes and all valid traversal orders. We evaluate the representation on five real-world graph benchmark datasets (IAM Letter LOW/MED/HIGH, LINUX, and AIDS) and show that the Levenshtein distance between IsalGraph strings correlates strongly with graph edit distance (GED). Together, these properties make IsalGraph strings a compact, isomorphism-invariant, and language-model-compatible sequential encoding of graph structure, with direct applications in graph similarity search, graph generation, and graph-conditioned language modelling",
+                "summary": "With the rapid advances of large language models, it becomes increasingly important to systematically evaluate their multilingual and multicultural capabilities. Previous cultural evaluation benchmarks focus mainly on basic cultural knowledge that can be encoded in linguistic form. Here, we propose SommBench, a multilingual benchmark to assess sommelier expertise, a domain deeply grounded in the senses of smell and taste. While language models learn about sensory properties exclusively through textual descriptions, SommBench tests whether this textual grounding is sufficient to emulate expert-level sensory judgment. SommBench comprises three main tasks: Wine Theory Question Answering (WTQA), Wine Feature Completion (WFC), and Food-Wine Pairing (FWP). SommBench is available in multiple languages: English, Slovak, Swedish, Finnish, German, Danish, Italian, and Spanish. This helps separate a language model's wine expertise from its language skills. The benchmark datasets were developed in close collaboration with a professional sommelier and native speakers of the respective languages, resulting in 1,024 wine theory question-answering questions, 1,000 wine feature-completion examples, and 1,000 food-wine pairing examples. We provide results for the most popular language models, including closed-weights models such as Gemini 2.5, and open-weights models, such as GPT-OSS and Qwen 3. Our results show that the most capable models perform well on wine theory question answering (up to 97% correct with a closed-weights model), yet feature completion (peaking at 65%) and food-wine pairing show (MCC ranging between 0 and 0.39) turn out to be more challenging. These results position SommBench as an interesting and challenging benchmark for evaluating the sommelier expertise of language models. The benchmark is publicly available at https://github.com/sommify/sommbench.",
                 "category": [
                     {
                         "@term": "cs.CL",
@@ -403,153 +147,376 @@
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-11T17:57:44Z",
+                "published": "2026-03-12T16:19:04Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Ezequiel Lopez-Rubio"
+                        "name": "William Brach"
                     },
                     {
-                        "name": "Mario Pascual-Gonzalez"
+                        "name": "Tomas Bedej"
+                    },
+                    {
+                        "name": "Jacob Nielsen"
+                    },
+                    {
+                        "name": "Jacob Pichna"
+                    },
+                    {
+                        "name": "Juraj Bedej"
+                    },
+                    {
+                        "name": "Eemeli Saarensilta"
+                    },
+                    {
+                        "name": "Julie Dupouy"
+                    },
+                    {
+                        "name": "Gianluca Barmina"
+                    },
+                    {
+                        "name": "Andrea Blasi N\u00fa\u00f1ez"
+                    },
+                    {
+                        "name": "Peter Schneider-Kamp"
+                    },
+                    {
+                        "name": "Kristian Ko\u0161\u0165\u00e1l"
+                    },
+                    {
+                        "name": "Michal Ries"
+                    },
+                    {
+                        "name": "Lukas Galke Poech"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.11032v1",
-                "title": "Uncovering statistical structure in large-scale neural activity with Restricted Boltzmann Machines",
-                "updated": "2026-03-11T17:55:45Z",
+                "id": "http://arxiv.org/abs/2603.12110v1",
+                "title": "Taming the Adversary: Stable Minimax Deep Deterministic Policy Gradient via Fractional Objectives",
+                "updated": "2026-03-12T16:15:06Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.11032v1",
+                        "@href": "https://arxiv.org/abs/2603.12110v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.11032v1",
+                        "@href": "https://arxiv.org/pdf/2603.12110v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large-scale electrophysiological recordings now allow simultaneous monitoring of thousands of neurons across multiple brain regions, revealing structured variability in neural population activity. Understanding how these collective patterns emerge from microscopic neural interactions requires models that are scalable, predictive, and interpretable. Statistical physics provides principled frameworks to address this complexity, including maximum-entropy models that offer transparent descriptions of collective neural activity but remain largely limited to pairwise interactions and modest system sizes. Here, we use Restricted Boltzmann Machines (RBMs) to model the activity of $\\sim1500$-$2000$ simultaneously recorded neurons from the Allen Institute Visual Behavior Neuropixels dataset, spanning multiple cortical and subcortical regions of the mouse brain. RBMs extend the maximum-entropy framework through latent variables, enabling the capture of higher-order dependencies while allowing explicit extraction of effective interaction networks. Recent advances in efficient Markov Chain sampling and training enable accurate learning of these models at this scale. RBMs reproduce the complex statistics of neural recordings with high accuracy. Generated samples match empirical pairwise and higher-order correlations, as well as global statistics such as the distribution of population activity. The inferred parameters provide direct access to effective neuronal interactions, revealing coordination patterns in population activity. These couplings display clear anatomical structure: neurons within visual cortical areas show stronger interactions, consistent with visually driven behavior, while cross-area couplings are weaker. Despite being trained on temporally shuffled data, Markov Chain Monte Carlo simulations also reproduce the global relaxation dynamics of neural activity.",
+                "summary": "Reinforcement learning (RL) has achieved remarkable success in a wide range of control and decision-making tasks. However, RL agents often exhibit unstable or degraded performance when deployed in environments subject to unexpected external disturbances and model uncertainties. Consequently, ensuring reliable performance under such conditions remains a critical challenge. In this paper, we propose minimax deep deterministic policy gradient (MMDDPG), a framework for learning disturbance-resilient policies in continuous control tasks. The training process is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy. In this problem, the user learns a robust policy that minimizes the objective function, while the adversary generates disturbances that maximize it. To stabilize this interaction, we introduce a fractional objective that balances task performance and disturbance magnitude. This objective prevents excessively aggressive disturbances and promotes robust learning. Experimental evaluations in MuJoCo environments demonstrate that the proposed MMDDPG achieves significantly improved robustness against both external force perturbations and model parameter variations.",
                 "category": [
                     {
-                        "@term": "q-bio.NC",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cond-mat.dis-nn",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cond-mat.stat-mech",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-11T17:55:45Z",
-                "arxiv:comment": "First draft, comments are welcome",
+                "published": "2026-03-12T16:15:06Z",
                 "arxiv:primary_category": {
-                    "@term": "q-bio.NC"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Nicolas B\u00e9reux"
+                        "name": "Taeho Lee"
                     },
                     {
-                        "name": "Giovanni Catania"
-                    },
-                    {
-                        "name": "Aur\u00e9lien Decelle"
-                    },
-                    {
-                        "name": "Francesca Mignacco"
-                    },
-                    {
-                        "name": "Alfonso de Jes\u00fas Navas G\u00f3mez"
-                    },
-                    {
-                        "name": "Beatriz Seoane"
+                        "name": "Donghwan Lee"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.11031v1",
-                "title": "Chasing RATs: Tracing Reading for and as Creative Activity",
-                "updated": "2026-03-11T17:54:26Z",
+                "id": "http://arxiv.org/abs/2603.12109v1",
+                "title": "On Information Self-Locking in Reinforcement Learning for Active Reasoning of LLM agents",
+                "updated": "2026-03-12T16:14:14Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.11031v1",
+                        "@href": "https://arxiv.org/abs/2603.12109v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.11031v1",
+                        "@href": "https://arxiv.org/pdf/2603.12109v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Creativity research has privileged making over the interpretive labor that precedes and shapes it. We introduce Reading Activity Traces (RATs), a proposal that treats reading -- broadly defined to include navigating, interpreting, and curating media across interconnected sources -- as creative activity both for future artifacts and as a form of creation in its own right. By tracing trajectories of traversal, association, and reflection as inspectable artifacts, RATs render visible the creative work that algorithmic feeds and AI summarization increasingly compress and automate away. We illustrate this through WikiRAT, a speculative instantiation on Wikipedia, and open new ground for reflective practice, reader modeling, collective sensemaking, and understanding what is lost when human interpretation is automated -- towards designing intelligent tools that preserve it.",
+                "summary": "Reinforcement learning (RL) with outcome-based rewards has achieved significant success in training large language model (LLM) agents for complex reasoning tasks. However, in active reasoning where agents need to strategically ask questions to acquire task-relevant information, we find that LLM agents trained with RL often suffer from information self-locking: the agent ceases to ask informative questions and struggles to internalize already-obtained information. To understand the phenomenon, we decompose active reasoning into two core capabilities: Action Selection (AS), which determines the observation stream through queries, and Belief Tracking (BT), which updates the agent's belief based on collected evidence. We show that deficient AS and BT capabilities will limit the information exploration during RL training. Furthermore, insufficient exploration in turn hinders the improvement of AS and BT, creating a feedback loop that locks the agent in a low-information regime. To resolve the issue, we propose a simple yet effective approach that reallocates the learning signal by injecting easy- to-obtain directional critiques to help the agent escape self-locking. Extensive experiments with 7 datasets show that our approach significantly mitigates the information self-locking, bringing up to 60% improvements.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-12T16:14:14Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Deyu Zou"
+                    },
+                    {
+                        "name": "Yongqiang Chen"
+                    },
+                    {
+                        "name": "Fan Feng"
+                    },
+                    {
+                        "name": "Mufei Li"
+                    },
+                    {
+                        "name": "Pan Li"
+                    },
+                    {
+                        "name": "Yu Gong"
+                    },
+                    {
+                        "name": "James Cheng"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12102v1",
+                "title": "Wasserstein Gradient Flows for Batch Bayesian Optimal Experimental Design",
+                "updated": "2026-03-12T16:08:18Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12102v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12102v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Bayesian optimal experimental design (BOED) provides a powerful, decision-theoretic framework for selecting experiments so as to maximise the expected utility of the data to be collected. In practice, however, its applicability can be limited by the difficulty of optimising the chosen utility. The expected information gain (EIG), for example, is often high-dimensional and strongly non-convex. This challenge is particularly acute in the batch setting, where multiple experiments are to be designed simultaneously. In this paper, we introduce a new approach to batch EIG-based BOED via a probabilistic lifting of the original optimisation problem to the space of probability measures. In particular, we propose to optimise an entropic regularisation of the expected utility over the space of design measures. Under mild conditions, we show that this objective admits a unique minimiser, which can be explicitly characterised in the form of a Gibbs distribution. The resulting design law can be used directly as a randomised batch-design policy, or as a computational relaxation from which a deterministic batch is extracted. To obtain scalable approximations when the batch size is large, we then consider two tractable restrictions of the full batch distribution: a mean-field family, and an i.i.d. product family. For the i.i.d. objective, and formally for its mean-field extension, we derive the corresponding Wasserstein gradient flow, characterise its long-time behaviour, and obtain particle-based algorithms via space-time discretisations. We also introduce doubly stochastic variants that combine interacting particle updates with Monte Carlo estimators of the EIG gradient. Finally, we illustrate the performance of the proposed methods in several numerical experiments, demonstrating their ability to explore multimodal optimisation landscapes and obtain high-utility batches in challenging examples.",
+                "category": [
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.CO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-12T16:08:18Z",
+                "arxiv:primary_category": {
+                    "@term": "stat.ML"
+                },
+                "author": {
+                    "name": "Louis Sharrock"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12099v1",
+                "title": "Towards Dynamic Model Identification and Gravity Compensation for the dVRK-Si Patient Side Manipulator",
+                "updated": "2026-03-12T16:06:16Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12099v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12099v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The da Vinci Research Kit (dVRK) is widely used for research in robot-assisted surgery, but most modeling and control methods target the first-generation dVRK Classic. The recently introduced dVRK-Si, built from da Vinci Si hardware, features a redesigned Patient Side Manipulator (PSM) with substantially larger gravity loading, which can degrade control if unmodeled. This paper presents the first complete kinematic and dynamic modeling framework for the dVRK-Si PSM. We derive a modified DH kinematic model that captures the closed-chain parallelogram mechanism, formulate dynamics via the Euler-Lagrange method, and express inverse dynamics in a linear-in-parameters regressor form. Dynamic parameters are identified from data collected on a periodic excitation trajectory optimized for numerical conditioning and estimated by convex optimization with physical feasibility constraints. Using the identified model, we implement real-time gravity compensation and computed-torque feedforward in the dVRK control stack. Experiments on a physical dVRK-Si show that the gravity compensation reduces steady-state joint errors by 68-84% and decreases end-effector tip drift during static holds from 4.2 mm to 0.7 mm. Computed-torque feedforward further improves transient and position tracking accuracy. For sinusoidal trajectory tracking, computed-torque feedforward reduces position errors by 35% versus gravity-only feedforward and by 40% versus PID-only. The proposed pipeline supports reliable control, high-fidelity simulation, and learning-based automation on the dVRK-Si.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-12T16:06:16Z",
+                "arxiv:comment": "Submitted to IEEE Transactions on Medical Robotics and Bionics (T-MRB), under review. Open-source GitHub Repo: https://github.com/jhu-dvrk/dvrk_psm_dynamics_identification",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Haoying Zhou"
+                    },
+                    {
+                        "name": "Hao Yang"
+                    },
+                    {
+                        "name": "Brendan Burkhart"
+                    },
+                    {
+                        "name": "Anton Deguet"
+                    },
+                    {
+                        "name": "Loris Fichera"
+                    },
+                    {
+                        "name": "Gregory S. Fischer"
+                    },
+                    {
+                        "name": "Jie Ying Wu"
+                    },
+                    {
+                        "name": "Peter Kazanzides"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12096v1",
+                "title": "A Robust and Efficient Multi-Agent Reinforcement Learning Framework for Traffic Signal Control",
+                "updated": "2026-03-12T16:02:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12096v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12096v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Reinforcement Learning (RL) in Traffic Signal Control (TSC) faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations. Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations. This paper proposes a robust Multi-Agent Reinforcement Learning (MARL) framework validated in the Vissim traffic simulator. The framework integrates three mechanisms: (1) Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios; (2) a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments; and (3) a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE). By leveraging centralized updates, this approach approximates the efficacy of global observations while maintaining scalable local communication. Experimental results demonstrate that our framework outperforms standard RL baselines, reducing average waiting time by over 10%. The proposed model exhibits superior generalization in unseen traffic scenarios and maintains high control stability, offering a practical solution for adaptive signal control.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-12T16:02:28Z",
+                "arxiv:comment": "12 pages, 4 tables, 8 figures. Under review in the 31st ITS World Congress 2026",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Sheng-You Huang"
+                    },
+                    {
+                        "name": "Hsiao-Chuan Chang"
+                    },
+                    {
+                        "name": "Yen-Chi Chen"
+                    },
+                    {
+                        "name": "Ting-Han Wei"
+                    },
+                    {
+                        "name": "I-Hau Yeh"
+                    },
+                    {
+                        "name": "Sheng-Yao Kuan"
+                    },
+                    {
+                        "name": "Chien-Yao Wang"
+                    },
+                    {
+                        "name": "Hsuan-Han Lee"
+                    },
+                    {
+                        "name": "I-Chen Wu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12094v1",
+                "title": "Human-Centred LLM Privacy Audits: Findings and Frictions",
+                "updated": "2026-03-12T16:01:01Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12094v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12094v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large language models (LLMs) learn statistical associations from massive training corpora and user interactions, and deployed systems can surface or infer information about individuals. Yet people lack practical ways to inspect what a model associates with their name. We report interim findings from an ongoing study and introduce LMP2, a browser-based self-audit tool. In two user studies ($N_{total}{=}458$), GPT-4o predicts 11 of 50 features for everyday people with $\\ge$60\\% accuracy, and participants report wanting control over LLM-generated associations despite not considering all outputs privacy violations. To validate our probing method, we evaluate eight LLMs on public figures and non-existent names, observing clear separation between stable name-conditioned associations and model defaults. Our findings also contribute to exposing a broader generative AI evaluation crisis: when outputs are probabilistic, context-dependent, and user-mediated through elicitation, what model--individual associations even include is under-specified and operationalisation relies on crafting probes and metrics that are hard to validate or compare. To move towards reliable, actionable human-centred LLM privacy audits, we identify nine frictions that emerged in our study and offer recommendations for future work and the design of human-centred LLM privacy audits.",
                 "category": [
                     {
                         "@term": "cs.HC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.IR",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.MM",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.SI",
+                        "@term": "cs.CY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-11T17:54:26Z",
+                "published": "2026-03-12T16:01:01Z",
                 "arxiv:primary_category": {
                     "@term": "cs.HC"
                 },
                 "author": [
                     {
-                        "name": "Sophia Liu"
+                        "name": "Dimitri Staufer"
                     },
                     {
-                        "name": "Shm Garanganao Almeda"
+                        "name": "Kirsten Morehouse"
+                    },
+                    {
+                        "name": "David Hartmann"
+                    },
+                    {
+                        "name": "Bettina Berendt"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.11024v1",
-                "title": "Does AI See like Art Historians? Interpreting How Vision Language Models Recognize Artistic Style",
-                "updated": "2026-03-11T17:49:45Z",
+                "id": "http://arxiv.org/abs/2603.12091v1",
+                "title": "Resource-Efficient Iterative LLM-Based NAS with Feedback Memory",
+                "updated": "2026-03-12T16:00:22Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.11024v1",
+                        "@href": "https://arxiv.org/abs/2603.12091v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.11024v1",
+                        "@href": "https://arxiv.org/pdf/2603.12091v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "VLMs have become increasingly proficient at a range of computer vision tasks, such as visual question answering and object detection. This includes increasingly strong capabilities in the domain of art, from analyzing artwork to generation of art. In an interdisciplinary collaboration between computer scientists and art historians, we characterize the mechanisms underlying VLMs' ability to predict artistic style and assess the extent to which they align with the criteria art historians use to reason about artistic style. We employ a latent-space decomposition approach to identify concepts that drive art style prediction and conduct quantitative evaluations, causal analysis and assessment by art historians. Our findings indicate that 73% of the extracted concepts are judged by art historians to exhibit a coherent and semantically meaningful visual feature and 90% of concepts used to predict style of a given artwork were judged relevant. In cases where an irrelevant concept was used to successfully predict style, art historians identified possible reasons for its success; for example, the model might \"understand\" a concept in more formal terms, such as dark/light contrasts.",
+                "summary": "Neural Architecture Search (NAS) automates network design, but conventional methods demand substantial computational resources. We propose a closed-loop pipeline leveraging large language models (LLMs) to iteratively generate, evaluate, and refine convolutional neural network architectures for image classification on a single consumer-grade GPU without LLM fine-tuning. Central to our approach is a historical feedback memory inspired by Markov chains: a sliding window of $K{=}5$ recent improvement attempts keeps context size constant while providing sufficient signal for iterative learning. Unlike prior LLM optimizers that discard failure trajectories, each history entry is a structured diagnostic triple -- recording the identified problem, suggested modification, and resulting outcome -- treating code execution failures as first-class learning signals. A dual-LLM specialization reduces per-call cognitive load: a Code Generator produces executable PyTorch architectures while a Prompt Improver handles diagnostic reasoning. Since both the LLM and architecture training share limited VRAM, the search implicitly favors compact, hardware-efficient models suited to edge deployment. We evaluate three frozen instruction-tuned LLMs (${\\leq}7$B parameters) across up to 2000 iterations in an unconstrained open code space, using one-epoch proxy accuracy on CIFAR-10, CIFAR-100, and ImageNette as a fast ranking signal. On CIFAR-10, DeepSeek-Coder-6.7B improves from 28.2% to 69.2%, Qwen2.5-7B from 50.0% to 71.5%, and GLM-5 from 43.2% to 62.0%. A full 2000-iteration search completes in ${\\approx}18$ GPU hours on a single RTX~4090, establishing a low-budget, reproducible, and hardware-aware paradigm for LLM-driven NAS without cloud infrastructure.",
                 "category": [
                     {
-                        "@term": "cs.CV",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -557,38 +524,19 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-11T17:49:45Z",
-                "arxiv:comment": "12 pages, 12 figures",
+                "published": "2026-03-12T16:00:22Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Marvin Limpijankit"
+                        "name": "Xiaojie Gu"
                     },
                     {
-                        "name": "Milad Alshomary"
+                        "name": "Dmitry Ignatov"
                     },
                     {
-                        "name": "Yassin Oulad Daoud"
-                    },
-                    {
-                        "name": "Amith Ananthram"
-                    },
-                    {
-                        "name": "Tim Trombley"
-                    },
-                    {
-                        "name": "Elias Stengel-Eskin"
-                    },
-                    {
-                        "name": "Mohit Bansal"
-                    },
-                    {
-                        "name": "Noam M. Elcott"
-                    },
-                    {
-                        "name": "Kathleen McKeown"
+                        "name": "Radu Timofte"
                     }
                 ]
             }
