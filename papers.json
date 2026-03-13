@@ -5,33 +5,383 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-13T01:27:34Z",
+        "updated": "2026-03-13T04:06:57Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "549449",
+        "opensearch:totalResults": "549492",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.12126v1",
-                "title": "Hoi3DGen: Generating High-Quality Human-Object-Interactions in 3D",
-                "updated": "2026-03-12T16:27:35Z",
+                "id": "http://arxiv.org/abs/2603.12266v1",
+                "title": "MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning",
+                "updated": "2026-03-12T17:59:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.12126v1",
+                        "@href": "https://arxiv.org/abs/2603.12266v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.12126v1",
+                        "@href": "https://arxiv.org/pdf/2603.12266v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming. Existing approaches often rely on score distillation from text-to-image models, but their results suffer from the Janus problem and do not follow text prompts faithfully due to the scarcity of high-quality interaction data. We introduce Hoi3DGen, a framework that generates high-quality textured meshes of human-object interaction that follow the input interaction descriptions precisely. We first curate realistic and high-quality interaction data leveraging multimodal large language models, and then create a full text-to-3D pipeline, which achieves orders-of-magnitude improvements in interaction fidelity. Our method surpasses baselines by 4-15x in text consistency and 3-7x in 3D model quality, exhibiting strong generalization to diverse categories and interaction types, while maintaining high-quality 3D generation.",
+                "summary": "Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., \"if a permission dialog appears and the color of the interface is green, click Allow\") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-12T17:59:56Z",
+                "arxiv:comment": "Project Page: https://accio-lab.github.io/MM-CondChain",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Haozhan Shen"
+                    },
+                    {
+                        "name": "Shilin Yan"
+                    },
+                    {
+                        "name": "Hongwei Xue"
+                    },
+                    {
+                        "name": "Shuaiqi Lu"
+                    },
+                    {
+                        "name": "Xiaojun Tang"
+                    },
+                    {
+                        "name": "Guannan Zhang"
+                    },
+                    {
+                        "name": "Tiancheng Zhao"
+                    },
+                    {
+                        "name": "Jianwei Yin"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12265v1",
+                "title": "OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams",
+                "updated": "2026-03-12T17:59:55Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12265v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12265v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-12T17:59:55Z",
+                "arxiv:comment": "Technical Report. Project Page: https://go2heart.github.io/omnistream/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yibin Yan"
+                    },
+                    {
+                        "name": "Jilan Xu"
+                    },
+                    {
+                        "name": "Shangzhe Di"
+                    },
+                    {
+                        "name": "Haoning Wu"
+                    },
+                    {
+                        "name": "Weidi Xie"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12263v1",
+                "title": "$\u03a8_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
+                "updated": "2026-03-12T17:59:51Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12263v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12263v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We introduce $\u03a8_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \\ours\\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acquire generalizable visual-action representations. Then, we post-train a flow-based action expert on high-quality humanoid robot data to learn precise robot joint control. Our research further identifies a critical yet often overlooked data recipe: in contrast to approaches that scale with noisy Internet clips or heterogeneous cross-embodiment robot datasets, we demonstrate that pre-training on high-quality egocentric human manipulation data followed by post-training on domain-specific real-world humanoid trajectories yields superior performance. Extensive real-world experiments demonstrate that \\ours\\ achieves the best performance using only about 800 hours of human video data and 30 hours of real-world robot data, outperforming baselines pre-trained on more than 10$\\times$ as much data by over 40\\% in overall success rate across multiple tasks. We will open-source the entire ecosystem to the community, including a data processing and training pipeline, a humanoid foundation model, and a real-time action inference engine.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-12T17:59:51Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Songlin Wei"
+                    },
+                    {
+                        "name": "Hongyi Jing"
+                    },
+                    {
+                        "name": "Boqian Li"
+                    },
+                    {
+                        "name": "Zhenyu Zhao"
+                    },
+                    {
+                        "name": "Jiageng Mao"
+                    },
+                    {
+                        "name": "Zhenhao Ni"
+                    },
+                    {
+                        "name": "Sicheng He"
+                    },
+                    {
+                        "name": "Jie Liu"
+                    },
+                    {
+                        "name": "Xiawei Liu"
+                    },
+                    {
+                        "name": "Kaidi Kang"
+                    },
+                    {
+                        "name": "Sheng Zang"
+                    },
+                    {
+                        "name": "Weiduo Yuan"
+                    },
+                    {
+                        "name": "Marco Pavone"
+                    },
+                    {
+                        "name": "Di Huang"
+                    },
+                    {
+                        "name": "Yue Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12261v1",
+                "title": "The Latent Color Subspace: Emergent Order in High-Dimensional Chaos",
+                "updated": "2026-03-12T17:59:48Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12261v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12261v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly control color, introducing a fully training-free method in FLUX based solely on closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-12T17:59:48Z",
+                "arxiv:comment": "Preprint",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Mateusz Pach"
+                    },
+                    {
+                        "name": "Jessica Bader"
+                    },
+                    {
+                        "name": "Quentin Bouniot"
+                    },
+                    {
+                        "name": "Serge Belongie"
+                    },
+                    {
+                        "name": "Zeynep Akata"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12260v1",
+                "title": "HumDex:Humanoid Dexterous Manipulation Made Easy",
+                "updated": "2026-03-12T17:59:39Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12260v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12260v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck.\n  Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU-based motion tracking to address the portability-precision trade-off, enabling accurate full-body tracking while remaining easy to deploy. For dexterous hand control, we further introduce a learning-based retargeting method that generates smooth and natural hand motions without manual parameter tuning. Beyond teleoperation, HumDex enables efficient collection of human motion data. Building on this capability, we propose a two-stage imitation learning framework that first pre-trains on diverse human motion data to learn generalizable priors, and then fine-tunes on robot data to bridge the embodiment gap for precise execution. We demonstrate that this approach significantly improves generalization to new configurations, objects, and backgrounds with minimal data acquisition costs. The entire system is fully reproducible and open-sourced at https://github.com/physical-superintelligence-lab/HumDex.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-12T17:59:39Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Liang Heng"
+                    },
+                    {
+                        "name": "Yihe Tang"
+                    },
+                    {
+                        "name": "Jiajun Xu"
+                    },
+                    {
+                        "name": "Henghui Bao"
+                    },
+                    {
+                        "name": "Di Huang"
+                    },
+                    {
+                        "name": "Yue Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12257v1",
+                "title": "DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning",
+                "updated": "2026-03-12T17:59:12Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12257v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12257v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject customization with omni-motion control via a progressive two-stage training paradigm. In the first stage, we integrate comprehensive control signals for joint training, encompassing subject appearances, global motion, local dynamics, and camera movements. To ensure robust and precise controllability, we introduce a condition-aware 3D rotary positional embedding to coordinate heterogeneous inputs and a hierarchical motion injection strategy to enhance global motion guidance. Furthermore, to resolve multi-subject ambiguity, we introduce group and role embeddings to explicitly anchor motion signals to specific identities, effectively disentangling complex scenes into independent controllable instances. In the second stage, to mitigate identity degradation, we design a latent identity reward feedback learning paradigm by training a latent identity reward model upon a pretrained video diffusion backbone. This provides motion-aware identity rewards in the latent space, prioritizing identity preservation aligned with human preferences. Supported by our curated large-scale dataset and the comprehensive DreamOmni Bench for multi-subject and omni-motion control evaluation, DreamVideo-Omni demonstrates superior performance in generating high-quality videos with precise controllability.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-12T17:59:12Z",
+                "arxiv:comment": "Project Page: https://dreamvideo-omni.github.io",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yujie Wei"
+                    },
+                    {
+                        "name": "Xinyu Liu"
+                    },
+                    {
+                        "name": "Shiwei Zhang"
+                    },
+                    {
+                        "name": "Hangjie Yuan"
+                    },
+                    {
+                        "name": "Jinbo Xing"
+                    },
+                    {
+                        "name": "Zhekai Chen"
+                    },
+                    {
+                        "name": "Xiang Wang"
+                    },
+                    {
+                        "name": "Haonan Qiu"
+                    },
+                    {
+                        "name": "Rui Zhao"
+                    },
+                    {
+                        "name": "Yutong Feng"
+                    },
+                    {
+                        "name": "Ruihang Chu"
+                    },
+                    {
+                        "name": "Yingya Zhang"
+                    },
+                    {
+                        "name": "Yike Guo"
+                    },
+                    {
+                        "name": "Xihui Liu"
+                    },
+                    {
+                        "name": "Hongming Shan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12255v1",
+                "title": "Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training",
+                "updated": "2026-03-12T17:58:58Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12255v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12255v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), which adapts a subset of parameters (fast weights) to capture and organize spatial evidence over long-horizon scene videos. Specifically, we design a hybrid architecture and adopt large-chunk updates parallel with sliding-window attention for efficient spatial video processing. To further promote spatial awareness, we introduce a spatial-predictive mechanism applied to TTT layers with 3D spatiotemporal convolution, which encourages the model to capture geometric correspondence and temporal continuity across frames. Beyond architecture design, we construct a dataset with dense 3D spatial descriptions, which guides the model to update its fast weights to memorize and organize global 3D spatial signals in a structured manner. Extensive experiments demonstrate that Spatial-TTT improves long-horizon spatial understanding and achieves state-of-the-art performance on video spatial benchmarks. Project page: https://liuff19.github.io/Spatial-TTT.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -42,501 +392,222 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-12T16:27:35Z",
+                "published": "2026-03-12T17:58:58Z",
+                "arxiv:comment": "Project Page: https://liuff19.github.io/Spatial-TTT",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Agniv Sharma"
+                        "name": "Fangfu Liu"
                     },
                     {
-                        "name": "Xianghui Xie"
+                        "name": "Diankun Wu"
                     },
                     {
-                        "name": "Tom Fischer"
+                        "name": "Jiawei Chi"
                     },
                     {
-                        "name": "Eddy Ilg"
+                        "name": "Yimo Cai"
                     },
                     {
-                        "name": "Gerard Pons-Moll"
+                        "name": "Yi-Hsin Hung"
+                    },
+                    {
+                        "name": "Xumin Yu"
+                    },
+                    {
+                        "name": "Hao Li"
+                    },
+                    {
+                        "name": "Han Hu"
+                    },
+                    {
+                        "name": "Yongming Rao"
+                    },
+                    {
+                        "name": "Yueqi Duan"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.12118v1",
-                "title": "Cornserve: A Distributed Serving System for Any-to-Any Multimodal Models",
-                "updated": "2026-03-12T16:20:35Z",
+                "id": "http://arxiv.org/abs/2603.12254v1",
+                "title": "Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing",
+                "updated": "2026-03-12T17:58:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.12118v1",
+                        "@href": "https://arxiv.org/abs/2603.12254v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.12118v1",
+                        "@href": "https://arxiv.org/pdf/2603.12254v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Any-to-Any models are an emerging class of multimodal models that accept combinations of multimodal data (e.g., text, image, video, audio) as input and generate them as output. Serving these models are challenging; different requests with different input and output modalities traverse different paths through the model computation graph, and each component of the model have different scaling characteristics.\n  We present Cornserve, a distributed serving system for generic Any-to-Any models. Cornserve provides a flexible task abstraction for expressing Any-to-Any model computation graphs, enabling component disaggregation and independent scaling. The distributed runtime dispatches compute to the data plane via an efficient record-and-replay execution model that keeps track of data dependencies, and forwards tensor data between components directly from the producer to the consumer. Built on Kubernetes with approximately 23K new lines of Python, Cornserve supports diverse Any-to-Any models and delivers up to 3.81$\\times$ higher throughput and 5.79$\\times$ lower tail latency. Cornserve is open-source, and the demo video is available on YouTube.",
-                "category": [
+                "summary": "Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-scale patches that can reconstruct the video within a user-specified error threshold, eliminating redundancy while preserving information. Empirically, AutoGaze reduces visual tokens by 4x-100x and accelerates ViTs and MLLMs by up to 19x, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks (e.g., 67.0% on VideoMME). Furthermore, we introduce HLVid: the first high-resolution, long-form video QA benchmark with 5-minute 4K-resolution videos, where an MLLM scaled with AutoGaze improves over the baseline by 10.1% and outperforms the previous best MLLM by 4.5%. Project page: https://autogaze.github.io/.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-12T17:58:52Z",
+                "arxiv:comment": "CVPR 2026. Project page: https://autogaze.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
                     {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Baifeng Shi"
                     },
                     {
-                        "@term": "cs.DC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Stephanie Fu"
+                    },
+                    {
+                        "name": "Long Lian"
+                    },
+                    {
+                        "name": "Hanrong Ye"
+                    },
+                    {
+                        "name": "David Eigen"
+                    },
+                    {
+                        "name": "Aaron Reite"
+                    },
+                    {
+                        "name": "Boyi Li"
+                    },
+                    {
+                        "name": "Jan Kautz"
+                    },
+                    {
+                        "name": "Song Han"
+                    },
+                    {
+                        "name": "David M. Chan"
+                    },
+                    {
+                        "name": "Pavlo Molchanov"
+                    },
+                    {
+                        "name": "Trevor Darrell"
+                    },
+                    {
+                        "name": "Hongxu Yin"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.12248v1",
+                "title": "Matching Features, Not Tokens: Energy-Based Fine-Tuning of Language Models",
+                "updated": "2026-03-12T17:57:50Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.12248v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.12248v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
                     }
                 ],
-                "published": "2026-03-12T16:20:35Z",
-                "arxiv:comment": "Open source https://github.com/cornserve-ai/cornserve / Demo video https://www.youtube.com/watch?v=nb8R-vztLRg",
+                "summary": "Cross-entropy (CE) training provides dense and scalable supervision for language models, but it optimizes next-token prediction under teacher forcing rather than sequence-level behavior under model rollouts. We introduce a feature-matching objective for language-model fine-tuning that targets sequence-level statistics of the completion distribution, providing dense semantic feedback without requiring a task-specific verifier or preference model. To optimize this objective efficiently, we propose energy-based fine-tuning (EBFT), which uses strided block-parallel sampling to generate multiple rollouts from nested prefixes concurrently, batches feature extraction over these rollouts, and uses the resulting embeddings to perform an on-policy policy-gradient update. We present a theoretical perspective connecting EBFT to KL-regularized feature-matching and energy-based modeling. Empirically, across Q&A coding, unstructured coding, and translation, EBFT matches RLVR and outperforms SFT on downstream accuracy while achieving a lower validation cross-entropy than both methods.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-12T17:57:50Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Jae-Won Chung"
+                        "name": "Samy Jelassi"
                     },
                     {
-                        "name": "Jeff J. Ma"
+                        "name": "Mujin Kwun"
                     },
                     {
-                        "name": "Jisang Ahn"
+                        "name": "Rosie Zhao"
                     },
                     {
-                        "name": "Yizhuo Liang"
+                        "name": "Yuanzhi Li"
                     },
                     {
-                        "name": "Akshay Jajoo"
+                        "name": "Nicolo Fusi"
                     },
                     {
-                        "name": "Myungjin Lee"
+                        "name": "Yilun Du"
                     },
                     {
-                        "name": "Mosharaf Chowdhury"
+                        "name": "Sham M. Kakade"
+                    },
+                    {
+                        "name": "Carles Domingo-Enrich"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.12117v1",
-                "title": "SommBench: Assessing Sommelier Expertise of Language Models",
-                "updated": "2026-03-12T16:19:04Z",
+                "id": "http://arxiv.org/abs/2603.12247v1",
+                "title": "Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation",
+                "updated": "2026-03-12T17:57:21Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.12117v1",
+                        "@href": "https://arxiv.org/abs/2603.12247v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.12117v1",
+                        "@href": "https://arxiv.org/pdf/2603.12247v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "With the rapid advances of large language models, it becomes increasingly important to systematically evaluate their multilingual and multicultural capabilities. Previous cultural evaluation benchmarks focus mainly on basic cultural knowledge that can be encoded in linguistic form. Here, we propose SommBench, a multilingual benchmark to assess sommelier expertise, a domain deeply grounded in the senses of smell and taste. While language models learn about sensory properties exclusively through textual descriptions, SommBench tests whether this textual grounding is sufficient to emulate expert-level sensory judgment. SommBench comprises three main tasks: Wine Theory Question Answering (WTQA), Wine Feature Completion (WFC), and Food-Wine Pairing (FWP). SommBench is available in multiple languages: English, Slovak, Swedish, Finnish, German, Danish, Italian, and Spanish. This helps separate a language model's wine expertise from its language skills. The benchmark datasets were developed in close collaboration with a professional sommelier and native speakers of the respective languages, resulting in 1,024 wine theory question-answering questions, 1,000 wine feature-completion examples, and 1,000 food-wine pairing examples. We provide results for the most popular language models, including closed-weights models such as Gemini 2.5, and open-weights models, such as GPT-OSS and Qwen 3. Our results show that the most capable models perform well on wine theory question answering (up to 97% correct with a closed-weights model), yet feature completion (peaking at 65%) and food-wine pairing show (MCC ranging between 0 and 0.39) turn out to be more challenging. These results position SommBench as an interesting and challenging benchmark for evaluating the sommelier expertise of language models. The benchmark is publicly available at https://github.com/sommify/sommbench.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-12T16:19:04Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "William Brach"
-                    },
-                    {
-                        "name": "Tomas Bedej"
-                    },
-                    {
-                        "name": "Jacob Nielsen"
-                    },
-                    {
-                        "name": "Jacob Pichna"
-                    },
-                    {
-                        "name": "Juraj Bedej"
-                    },
-                    {
-                        "name": "Eemeli Saarensilta"
-                    },
-                    {
-                        "name": "Julie Dupouy"
-                    },
-                    {
-                        "name": "Gianluca Barmina"
-                    },
-                    {
-                        "name": "Andrea Blasi N\u00fa\u00f1ez"
-                    },
-                    {
-                        "name": "Peter Schneider-Kamp"
-                    },
-                    {
-                        "name": "Kristian Ko\u0161\u0165\u00e1l"
-                    },
-                    {
-                        "name": "Michal Ries"
-                    },
-                    {
-                        "name": "Lukas Galke Poech"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12110v1",
-                "title": "Taming the Adversary: Stable Minimax Deep Deterministic Policy Gradient via Fractional Objectives",
-                "updated": "2026-03-12T16:15:06Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12110v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.12110v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning (RL) has achieved remarkable success in a wide range of control and decision-making tasks. However, RL agents often exhibit unstable or degraded performance when deployed in environments subject to unexpected external disturbances and model uncertainties. Consequently, ensuring reliable performance under such conditions remains a critical challenge. In this paper, we propose minimax deep deterministic policy gradient (MMDDPG), a framework for learning disturbance-resilient policies in continuous control tasks. The training process is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy. In this problem, the user learns a robust policy that minimizes the objective function, while the adversary generates disturbances that maximize it. To stabilize this interaction, we introduce a fractional objective that balances task performance and disturbance magnitude. This objective prevents excessively aggressive disturbances and promotes robust learning. Experimental evaluations in MuJoCo environments demonstrate that the proposed MMDDPG achieves significantly improved robustness against both external force perturbations and model parameter variations.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-12T16:15:06Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Taeho Lee"
-                    },
-                    {
-                        "name": "Donghwan Lee"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12109v1",
-                "title": "On Information Self-Locking in Reinforcement Learning for Active Reasoning of LLM agents",
-                "updated": "2026-03-12T16:14:14Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12109v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.12109v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning (RL) with outcome-based rewards has achieved significant success in training large language model (LLM) agents for complex reasoning tasks. However, in active reasoning where agents need to strategically ask questions to acquire task-relevant information, we find that LLM agents trained with RL often suffer from information self-locking: the agent ceases to ask informative questions and struggles to internalize already-obtained information. To understand the phenomenon, we decompose active reasoning into two core capabilities: Action Selection (AS), which determines the observation stream through queries, and Belief Tracking (BT), which updates the agent's belief based on collected evidence. We show that deficient AS and BT capabilities will limit the information exploration during RL training. Furthermore, insufficient exploration in turn hinders the improvement of AS and BT, creating a feedback loop that locks the agent in a low-information regime. To resolve the issue, we propose a simple yet effective approach that reallocates the learning signal by injecting easy- to-obtain directional critiques to help the agent escape self-locking. Extensive experiments with 7 datasets show that our approach significantly mitigates the information self-locking, bringing up to 60% improvements.",
+                "summary": "Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In this paper, we present FIRM (Faithful Image Reward Modeling), a comprehensive framework that develops robust reward models to provide accurate and reliable guidance for faithful image generation and editing. First, we design tailored data curation pipelines to construct high-quality scoring datasets. Specifically, we evaluate editing using both execution and consistency, while generation is primarily assessed via instruction following. Using these pipelines, we collect the FIRM-Edit-370K and FIRM-Gen-293K datasets, and train specialized reward models (FIRM-Edit-8B and FIRM-Gen-8B) that accurately reflect these criteria. Second, we introduce FIRM-Bench, a comprehensive benchmark specifically designed for editing and generation critics. Evaluations demonstrate that our models achieve superior alignment with human judgment compared to existing metrics. Furthermore, to seamlessly integrate these critics into the RL pipeline, we formulate a novel \"Base-and-Bonus\" reward strategy that balances competing objectives: Consistency-Modulated Execution (CME) for editing and Quality-Modulated Alignment (QMA) for generation. Empowered by this framework, our resulting models FIRM-Qwen-Edit and FIRM-SD3.5 achieve substantial performance breakthroughs. Comprehensive experiments demonstrate that FIRM mitigates hallucinations, establishing a new standard for fidelity and instruction adherence over existing general models. All of our datasets, models, and code have been publicly available at https://firm-reward.github.io.",
                 "category": {
-                    "@term": "cs.AI",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-12T16:14:14Z",
+                "published": "2026-03-12T17:57:21Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.AI"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Deyu Zou"
+                        "name": "Xiangyu Zhao"
                     },
                     {
-                        "name": "Yongqiang Chen"
+                        "name": "Peiyuan Zhang"
                     },
                     {
-                        "name": "Fan Feng"
+                        "name": "Junming Lin"
                     },
                     {
-                        "name": "Mufei Li"
+                        "name": "Tianhao Liang"
                     },
                     {
-                        "name": "Pan Li"
+                        "name": "Yuchen Duan"
                     },
                     {
-                        "name": "Yu Gong"
+                        "name": "Shengyuan Ding"
                     },
                     {
-                        "name": "James Cheng"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12102v1",
-                "title": "Wasserstein Gradient Flows for Batch Bayesian Optimal Experimental Design",
-                "updated": "2026-03-12T16:08:18Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12102v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Changyao Tian"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.12102v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Bayesian optimal experimental design (BOED) provides a powerful, decision-theoretic framework for selecting experiments so as to maximise the expected utility of the data to be collected. In practice, however, its applicability can be limited by the difficulty of optimising the chosen utility. The expected information gain (EIG), for example, is often high-dimensional and strongly non-convex. This challenge is particularly acute in the batch setting, where multiple experiments are to be designed simultaneously. In this paper, we introduce a new approach to batch EIG-based BOED via a probabilistic lifting of the original optimisation problem to the space of probability measures. In particular, we propose to optimise an entropic regularisation of the expected utility over the space of design measures. Under mild conditions, we show that this objective admits a unique minimiser, which can be explicitly characterised in the form of a Gibbs distribution. The resulting design law can be used directly as a randomised batch-design policy, or as a computational relaxation from which a deterministic batch is extracted. To obtain scalable approximations when the batch size is large, we then consider two tractable restrictions of the full batch distribution: a mean-field family, and an i.i.d. product family. For the i.i.d. objective, and formally for its mean-field extension, we derive the corresponding Wasserstein gradient flow, characterise its long-time behaviour, and obtain particle-based algorithms via space-time discretisations. We also introduce doubly stochastic variants that combine interacting particle updates with Monte Carlo estimators of the EIG gradient. Finally, we illustrate the performance of the proposed methods in several numerical experiments, demonstrating their ability to explore multimodal optimisation landscapes and obtain high-utility batches in challenging examples.",
-                "category": [
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Yuhang Zang"
                     },
                     {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Junchi Yan"
                     },
                     {
-                        "@term": "stat.CO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ME",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-12T16:08:18Z",
-                "arxiv:primary_category": {
-                    "@term": "stat.ML"
-                },
-                "author": {
-                    "name": "Louis Sharrock"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12099v1",
-                "title": "Towards Dynamic Model Identification and Gravity Compensation for the dVRK-Si Patient Side Manipulator",
-                "updated": "2026-03-12T16:06:16Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12099v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.12099v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The da Vinci Research Kit (dVRK) is widely used for research in robot-assisted surgery, but most modeling and control methods target the first-generation dVRK Classic. The recently introduced dVRK-Si, built from da Vinci Si hardware, features a redesigned Patient Side Manipulator (PSM) with substantially larger gravity loading, which can degrade control if unmodeled. This paper presents the first complete kinematic and dynamic modeling framework for the dVRK-Si PSM. We derive a modified DH kinematic model that captures the closed-chain parallelogram mechanism, formulate dynamics via the Euler-Lagrange method, and express inverse dynamics in a linear-in-parameters regressor form. Dynamic parameters are identified from data collected on a periodic excitation trajectory optimized for numerical conditioning and estimated by convex optimization with physical feasibility constraints. Using the identified model, we implement real-time gravity compensation and computed-torque feedforward in the dVRK control stack. Experiments on a physical dVRK-Si show that the gravity compensation reduces steady-state joint errors by 68-84% and decreases end-effector tip drift during static holds from 4.2 mm to 0.7 mm. Computed-torque feedforward further improves transient and position tracking accuracy. For sinusoidal trajectory tracking, computed-torque feedforward reduces position errors by 35% versus gravity-only feedforward and by 40% versus PID-only. The proposed pipeline supports reliable control, high-fidelity simulation, and learning-based automation on the dVRK-Si.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-12T16:06:16Z",
-                "arxiv:comment": "Submitted to IEEE Transactions on Medical Robotics and Bionics (T-MRB), under review. Open-source GitHub Repo: https://github.com/jhu-dvrk/dvrk_psm_dynamics_identification",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Haoying Zhou"
-                    },
-                    {
-                        "name": "Hao Yang"
-                    },
-                    {
-                        "name": "Brendan Burkhart"
-                    },
-                    {
-                        "name": "Anton Deguet"
-                    },
-                    {
-                        "name": "Loris Fichera"
-                    },
-                    {
-                        "name": "Gregory S. Fischer"
-                    },
-                    {
-                        "name": "Jie Ying Wu"
-                    },
-                    {
-                        "name": "Peter Kazanzides"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12096v1",
-                "title": "A Robust and Efficient Multi-Agent Reinforcement Learning Framework for Traffic Signal Control",
-                "updated": "2026-03-12T16:02:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12096v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.12096v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement Learning (RL) in Traffic Signal Control (TSC) faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations. Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations. This paper proposes a robust Multi-Agent Reinforcement Learning (MARL) framework validated in the Vissim traffic simulator. The framework integrates three mechanisms: (1) Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios; (2) a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments; and (3) a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE). By leveraging centralized updates, this approach approximates the efficacy of global observations while maintaining scalable local communication. Experimental results demonstrate that our framework outperforms standard RL baselines, reducing average waiting time by over 10%. The proposed model exhibits superior generalization in unseen traffic scenarios and maintains high control stability, offering a practical solution for adaptive signal control.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-12T16:02:28Z",
-                "arxiv:comment": "12 pages, 4 tables, 8 figures. Under review in the 31st ITS World Congress 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Sheng-You Huang"
-                    },
-                    {
-                        "name": "Hsiao-Chuan Chang"
-                    },
-                    {
-                        "name": "Yen-Chi Chen"
-                    },
-                    {
-                        "name": "Ting-Han Wei"
-                    },
-                    {
-                        "name": "I-Hau Yeh"
-                    },
-                    {
-                        "name": "Sheng-Yao Kuan"
-                    },
-                    {
-                        "name": "Chien-Yao Wang"
-                    },
-                    {
-                        "name": "Hsuan-Han Lee"
-                    },
-                    {
-                        "name": "I-Chen Wu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12094v1",
-                "title": "Human-Centred LLM Privacy Audits: Findings and Frictions",
-                "updated": "2026-03-12T16:01:01Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12094v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.12094v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large language models (LLMs) learn statistical associations from massive training corpora and user interactions, and deployed systems can surface or infer information about individuals. Yet people lack practical ways to inspect what a model associates with their name. We report interim findings from an ongoing study and introduce LMP2, a browser-based self-audit tool. In two user studies ($N_{total}{=}458$), GPT-4o predicts 11 of 50 features for everyday people with $\\ge$60\\% accuracy, and participants report wanting control over LLM-generated associations despite not considering all outputs privacy violations. To validate our probing method, we evaluate eight LLMs on public figures and non-existent names, observing clear separation between stable name-conditioned associations and model defaults. Our findings also contribute to exposing a broader generative AI evaluation crisis: when outputs are probabilistic, context-dependent, and user-mediated through elicitation, what model--individual associations even include is under-specified and operationalisation relies on crafting probes and metrics that are hard to validate or compare. To move towards reliable, actionable human-centred LLM privacy audits, we identify nine frictions that emerged in our study and offer recommendations for future work and the design of human-centred LLM privacy audits.",
-                "category": [
-                    {
-                        "@term": "cs.HC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-12T16:01:01Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.HC"
-                },
-                "author": [
-                    {
-                        "name": "Dimitri Staufer"
-                    },
-                    {
-                        "name": "Kirsten Morehouse"
-                    },
-                    {
-                        "name": "David Hartmann"
-                    },
-                    {
-                        "name": "Bettina Berendt"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12091v1",
-                "title": "Resource-Efficient Iterative LLM-Based NAS with Feedback Memory",
-                "updated": "2026-03-12T16:00:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12091v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.12091v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Neural Architecture Search (NAS) automates network design, but conventional methods demand substantial computational resources. We propose a closed-loop pipeline leveraging large language models (LLMs) to iteratively generate, evaluate, and refine convolutional neural network architectures for image classification on a single consumer-grade GPU without LLM fine-tuning. Central to our approach is a historical feedback memory inspired by Markov chains: a sliding window of $K{=}5$ recent improvement attempts keeps context size constant while providing sufficient signal for iterative learning. Unlike prior LLM optimizers that discard failure trajectories, each history entry is a structured diagnostic triple -- recording the identified problem, suggested modification, and resulting outcome -- treating code execution failures as first-class learning signals. A dual-LLM specialization reduces per-call cognitive load: a Code Generator produces executable PyTorch architectures while a Prompt Improver handles diagnostic reasoning. Since both the LLM and architecture training share limited VRAM, the search implicitly favors compact, hardware-efficient models suited to edge deployment. We evaluate three frozen instruction-tuned LLMs (${\\leq}7$B parameters) across up to 2000 iterations in an unconstrained open code space, using one-epoch proxy accuracy on CIFAR-10, CIFAR-100, and ImageNette as a fast ranking signal. On CIFAR-10, DeepSeek-Coder-6.7B improves from 28.2% to 69.2%, Qwen2.5-7B from 50.0% to 71.5%, and GLM-5 from 43.2% to 62.0%. A full 2000-iteration search completes in ${\\approx}18$ GPU hours on a single RTX~4090, establishing a low-budget, reproducible, and hardware-aware paradigm for LLM-driven NAS without cloud infrastructure.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-12T16:00:22Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Xiaojie Gu"
-                    },
-                    {
-                        "name": "Dmitry Ignatov"
-                    },
-                    {
-                        "name": "Radu Timofte"
+                        "name": "Xue Yang"
                     }
                 ]
             }
