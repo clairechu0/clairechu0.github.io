@@ -5,206 +5,343 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-15T23:23:17Z",
+        "updated": "2026-03-16T01:52:40Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "549492",
+        "opensearch:totalResults": "549813",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.12266v1",
-                "title": "MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning",
-                "updated": "2026-03-12T17:59:56Z",
+                "id": "http://arxiv.org/abs/2603.13156v1",
+                "title": "When Your Model Stops Working: Anytime-Valid Calibration Monitoring",
+                "updated": "2026-03-13T16:50:14Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.12266v1",
+                        "@href": "https://arxiv.org/abs/2603.13156v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.12266v1",
+                        "@href": "https://arxiv.org/pdf/2603.13156v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., \"if a permission dialog appears and the color of the interface is green, click Allow\") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.",
+                "summary": "Practitioners monitoring deployed probabilistic models face a fundamental trap: any fixed-sample test applied repeatedly over an unbounded stream will eventually raise a false alarm, even when the model remains perfectly stable. Existing methods typically lack formal error guarantees, conflate alarm time with changepoint location, and monitor indirect signals that do not fully characterize calibration. We present PITMonitor, an anytime-valid calibration-specific monitor that detects distributional shifts in probability integral transforms via a mixture e-process, providing Type I error control over an unbounded monitoring horizon as well as Bayesian changepoint estimation. On river's FriedmanDrift benchmark, PITMonitor achieves detection rates competitive with the strongest baselines across all three scenarios, although detection delay is substantially longer under local drift.",
+                "category": [
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-13T16:50:14Z",
+                "arxiv:primary_category": {
+                    "@term": "stat.ME"
+                },
+                "author": {
+                    "name": "Tristan Farran"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.13155v1",
+                "title": "Reinforcement Learning for Discounted and Ergodic Control of Diffusion Processes",
+                "updated": "2026-03-13T16:48:09Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.13155v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.13155v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This paper develops a quantized Q-learning algorithm for the optimal control of controlled diffusion processes on $\\mathbb{R}^d$ under both discounted and ergodic (average) cost criteria. We first establish near-optimality of finite-state MDP approximations to discrete-time discretizations of the diffusion, then introduce a quantized Q-learning scheme and prove its almost-sure convergence to near-optimal policies for the finite MDP. These policies, when interpolated to continuous time, are shown to be near-optimal for the original diffusion model under discounted costs and -- via a vanishing-discount argument -- also under ergodic costs for sufficiently small discount factors. The analysis applies under mild conditions (Lipschitz dynamics, non-degeneracy, bounded continuous costs, and Lyapunov stability for ergodic case) without requiring prior knowledge of the system dynamics or restrictions on control policies (beyond admissibility). Our results complement recent work on continuous-time reinforcement learning for diffusions by providing explicit near-optimality rates and extending rigorous guarantees both for discounted cost and ergodic cost criteria for diffusions with unbounded state space.",
+                "category": {
+                    "@term": "math.OC",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-13T16:48:09Z",
+                "arxiv:comment": "29 pages",
+                "arxiv:primary_category": {
+                    "@term": "math.OC"
+                },
+                "author": [
+                    {
+                        "name": "Erhan Bayraktar"
+                    },
+                    {
+                        "name": "Ali D. Kara"
+                    },
+                    {
+                        "name": "Somnath Pradhan"
+                    },
+                    {
+                        "name": "Serdar Yuksel"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.13126v1",
+                "title": "Developing the PsyCogMetrics AI Lab to Evaluate Large Language Models and Advance Cognitive Science -- A Three-Cycle Action Design Science Study",
+                "updated": "2026-03-13T16:17:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.13126v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.13126v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This study presents the development of the PsyCogMetrics AI Lab (psycogmetrics.ai), an integrated, cloud-based platform that operationalizes psychometric and cognitive-science methodologies for Large Language Model (LLM) evaluation. Framed as a three-cycle Action Design Science study, the Relevance Cycle identifies key limitations in current evaluation methods and unfulfilled stakeholder needs. The Rigor Cycle draws on kernel theories such as Popperian falsifiability, Classical Test Theory, and Cognitive Load Theory to derive deductive design objectives. The Design Cycle operationalizes these objectives through nested Build-Intervene-Evaluate loops. The study contributes a novel IT artifact, a validated design for LLM evaluation, benefiting research at the intersection of AI, psychology, cognitive science, and the social and behavioral sciences.",
+                "category": [
+                    {
+                        "@term": "q-bio.NC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-13T16:17:45Z",
+                "arxiv:comment": "10 pages. Prepared: April 2025; submitted: June 15, 2025; accepted: August 2025. In: Proceedings of the 59th Hawaii International Conference on System Sciences (HICSS 2026), January 2026",
+                "arxiv:primary_category": {
+                    "@term": "q-bio.NC"
+                },
+                "arxiv:journal_ref": "Proceedings of the 59th Hawaii International Conference on System Sciences (HICSS), January 2026, pp. 6952-6961",
+                "author": [
+                    {
+                        "name": "Zhiye Jin",
+                        "arxiv:affiliation": "Nancy"
+                    },
+                    {
+                        "name": "Yibai Li",
+                        "arxiv:affiliation": "Nancy"
+                    },
+                    {
+                        "name": "K. D. Joshi",
+                        "arxiv:affiliation": "Nancy"
+                    },
+                    {
+                        "name": "Xuefei",
+                        "arxiv:affiliation": "Nancy"
+                    },
+                    {
+                        "name": "Deng",
+                        "arxiv:affiliation": "Emily"
+                    },
+                    {
+                        "name": "Xiaobing",
+                        "arxiv:affiliation": "Emily"
+                    },
+                    {
+                        "name": "Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.13118v1",
+                "title": "NOIR: Neural Operator mapping for Implicit Representations",
+                "updated": "2026-03-13T16:13:05Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.13118v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.13118v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This paper presents NOIR, a framework that reframes core medical imaging tasks as operator learning between continuous function spaces, challenging the prevailing paradigm of discrete grid-based deep learning. Instead of operating on fixed pixel or voxel grids, NOIR embeds discrete medical signals into shared Implicit Neural Representations and learns a Neural Operator that maps between their latent modulations, enabling resolution-independent function-to-function transformations. We evaluate NOIR across multiple 2D and 3D downstream tasks, including segmentation, shape completion, image-to-image translation, and image synthesis, on several public datasets such as Shenzhen, OASIS-4, SkullBreak, fastMRI, as well as an in-house clinical dataset. It achieves competitive performance at native resolution while demonstrating strong robustness to unseen discretizations, and empirically satisfies key theoretical properties of neural operators. The project page is available here: https://github.com/Sidaty1/NOIR-io.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-12T17:59:56Z",
-                "arxiv:comment": "Project Page: https://accio-lab.github.io/MM-CondChain",
+                "published": "2026-03-13T16:13:05Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Haozhan Shen"
+                        "name": "Sidaty El Hadramy"
                     },
                     {
-                        "name": "Shilin Yan"
+                        "name": "Nazim Haouchine"
                     },
                     {
-                        "name": "Hongwei Xue"
+                        "name": "Michael Wehrli"
                     },
                     {
-                        "name": "Shuaiqi Lu"
-                    },
-                    {
-                        "name": "Xiaojun Tang"
-                    },
-                    {
-                        "name": "Guannan Zhang"
-                    },
-                    {
-                        "name": "Tiancheng Zhao"
-                    },
-                    {
-                        "name": "Jianwei Yin"
+                        "name": "Philippe C. Cattin"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.12265v1",
-                "title": "OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams",
-                "updated": "2026-03-12T17:59:55Z",
+                "id": "http://arxiv.org/abs/2603.13116v1",
+                "title": "Memory Printer: Exploring Everyday Reminiscing by Combining Slow Design with Generative AI-based Image Creation",
+                "updated": "2026-03-13T16:11:54Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.12265v1",
+                        "@href": "https://arxiv.org/abs/2603.13116v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.12265v1",
+                        "@href": "https://arxiv.org/pdf/2603.13116v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.",
+                "summary": "Generative Artificial Intelligence (GAI) offers new opportunities for reconstructing these unrecorded memory scenes, yet existing web-based tools undermine users' sense of agency through disengaging and unpredictable interactions. In this work, we advance three design arguments about how slow, tangible interaction can reshape human-AI relationships by making temporality, embodied agency, and generative processes experientially legible. We instantiate these arguments by presenting Memory Printer, a tangible design that combines silk-screen printing metaphors with text-to-image generation. The design features layered reconstruction that decomposes image generation into incremental steps, a physical wooden scraper enabling embodied control over image revelation, and built-in printing that produces tangible photos. We examine these arguments through a comparative study with 24 participants, exploring how participants engage with, interpret, and respond to this interaction stance. The study surfaces both opportunities -- such as vivid memory evocation, heightened sense of control, and creative exploration -- and critical tensions, including risks of false memory formation, algorithmic bias, and data privacy. Together, these findings articulate important boundaries for deploying generative AI in emotionally sensitive contexts.",
                 "category": {
-                    "@term": "cs.CV",
+                    "@term": "cs.HC",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-12T17:59:55Z",
-                "arxiv:comment": "Technical Report. Project Page: https://go2heart.github.io/omnistream/",
+                "published": "2026-03-13T16:11:54Z",
+                "arxiv:comment": "Accepted to CHI 2026",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.HC"
                 },
                 "author": [
                     {
-                        "name": "Yibin Yan"
+                        "name": "Zhou Fang"
                     },
                     {
-                        "name": "Jilan Xu"
-                    },
-                    {
-                        "name": "Shangzhe Di"
-                    },
-                    {
-                        "name": "Haoning Wu"
-                    },
-                    {
-                        "name": "Weidi Xie"
+                        "name": "Janet Yi-Ching Huang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.12263v1",
-                "title": "$\u03a8_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
-                "updated": "2026-03-12T17:59:51Z",
+                "id": "http://arxiv.org/abs/2603.13115v1",
+                "title": "ZO-SAM: Zero-Order Sharpness-Aware Minimization for Efficient Sparse Training",
+                "updated": "2026-03-13T16:11:41Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.12263v1",
+                        "@href": "https://arxiv.org/abs/2603.13115v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.12263v1",
+                        "@href": "https://arxiv.org/pdf/2603.13115v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We introduce $\u03a8_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \\ours\\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acquire generalizable visual-action representations. Then, we post-train a flow-based action expert on high-quality humanoid robot data to learn precise robot joint control. Our research further identifies a critical yet often overlooked data recipe: in contrast to approaches that scale with noisy Internet clips or heterogeneous cross-embodiment robot datasets, we demonstrate that pre-training on high-quality egocentric human manipulation data followed by post-training on domain-specific real-world humanoid trajectories yields superior performance. Extensive real-world experiments demonstrate that \\ours\\ achieves the best performance using only about 800 hours of human video data and 30 hours of real-world robot data, outperforming baselines pre-trained on more than 10$\\times$ as much data by over 40\\% in overall success rate across multiple tasks. We will open-source the entire ecosystem to the community, including a data processing and training pipeline, a humanoid foundation model, and a real-time action inference engine.",
+                "summary": "Deep learning models, despite their impressive achievements, suffer from high computational costs and memory requirements, limiting their usability in resource-constrained environments. Sparse neural networks significantly alleviate these constraints by dramatically reducing parameter count and computational overhead. However, existing sparse training methods often experience chaotic and noisy gradient signals, severely hindering convergence and generalization performance, particularly at high sparsity levels. To tackle this critical challenge, we propose Zero-Order Sharpness-Aware Minimization (ZO-SAM), a novel optimization framework that strategically integrates zero-order optimization within the SAM approach. Unlike traditional SAM, ZO-SAM requires only a single backpropagation step during perturbation, selectively utilizing zero-order gradient estimations. This innovative approach reduces the backpropagation computational cost by half compared to conventional SAM, significantly lowering gradient variance and effectively eliminating associated computational overhead. By harnessing SAM's capacity for identifying flat minima, ZO-SAM stabilizes the training process and accelerates convergence. These efficiency gains are particularly important in sparse training scenarios, where computational cost is the primary bottleneck that limits the practicality of SAM. Moreover, models trained with ZO-SAM exhibit improved robustness under distribution shift, further broadening its practicality in real-world deployments.",
                 "category": {
-                    "@term": "cs.RO",
+                    "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-12T17:59:51Z",
+                "published": "2026-03-13T16:11:41Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Songlin Wei"
+                        "name": "Jie Ji"
                     },
                     {
-                        "name": "Hongyi Jing"
+                        "name": "Gen Li"
                     },
                     {
-                        "name": "Boqian Li"
+                        "name": "Kaiyuan Deng"
                     },
                     {
-                        "name": "Zhenyu Zhao"
+                        "name": "Fatemeh Afghah"
                     },
                     {
-                        "name": "Jiageng Mao"
-                    },
-                    {
-                        "name": "Zhenhao Ni"
-                    },
-                    {
-                        "name": "Sicheng He"
-                    },
-                    {
-                        "name": "Jie Liu"
-                    },
-                    {
-                        "name": "Xiawei Liu"
-                    },
-                    {
-                        "name": "Kaidi Kang"
-                    },
-                    {
-                        "name": "Sheng Zang"
-                    },
-                    {
-                        "name": "Weiduo Yuan"
-                    },
-                    {
-                        "name": "Marco Pavone"
-                    },
-                    {
-                        "name": "Di Huang"
-                    },
-                    {
-                        "name": "Yue Wang"
+                        "name": "Xiaolong Ma"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.12261v1",
-                "title": "The Latent Color Subspace: Emergent Order in High-Dimensional Chaos",
-                "updated": "2026-03-12T17:59:48Z",
+                "id": "http://arxiv.org/abs/2603.13112v1",
+                "title": "AirGuard: UAV and Bird Recognition Scheme for Integrated Sensing and Communications System",
+                "updated": "2026-03-13T16:09:44Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.12261v1",
+                        "@href": "https://arxiv.org/abs/2603.13112v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.12261v1",
+                        "@href": "https://arxiv.org/pdf/2603.13112v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly control color, introducing a fully training-free method in FLUX based solely on closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.",
+                "summary": "In this paper, we propose an unmanned aerial vehicle (UAV) and bird recognition scheme with signal processing and deep learning for integrated sensing and communications (ISAC) system. We first provide the basic scene of low-altitude targets monitoring, and formulate the motion equations and echo signals for UAVs and birds. Next, we extract the centralized micro-Doppler (cmD) spectrum and the high resolution range profile (HRRP) of the low-altitude target from the echo signals. Then we design a dual feature fusion enabled low-altitude target recognition network with convolutional neural network (CNN), which employs both the images of cmD spectrum and HRRP as inputs to jointly distinguish between UAV and bird. Meanwhile, we generate 237600 cmD and HRRP image samples to train, validate, and evaluate the designed low-altitude target recognition network. The proposed scheme is termed as AirGuard, whose effectiveness has been demonstrated by simulation results.",
+                "category": {
+                    "@term": "eess.SP",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-13T16:09:44Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.SP"
+                },
+                "author": [
+                    {
+                        "name": "Hongliang Luo"
+                    },
+                    {
+                        "name": "Zhonghua Chu"
+                    },
+                    {
+                        "name": "Tengyu Zhang"
+                    },
+                    {
+                        "name": "Chuanbin Zhao"
+                    },
+                    {
+                        "name": "Bo Lin"
+                    },
+                    {
+                        "name": "Feifei Gao"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.13109v1",
+                "title": "BoSS: A Best-of-Strategies Selector as an Oracle for Deep Active Learning",
+                "updated": "2026-03-13T16:05:37Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.13109v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.13109v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Active learning (AL) aims to reduce annotation costs while maximizing model performance by iteratively selecting valuable instances. While foundation models have made it easier to identify these instances, existing selection strategies still lack robustness across different models, annotation budgets, and datasets. To highlight the potential weaknesses of existing AL strategies and provide a reference point for research, we explore oracle strategies, i.e., strategies that approximate the optimal selection by accessing ground-truth information unavailable in practical AL scenarios. Current oracle strategies, however, fail to scale effectively to large datasets and complex deep neural networks. To tackle these limitations, we introduce the Best-of-Strategy Selector (BoSS), a scalable oracle strategy designed for large-scale AL scenarios. BoSS constructs a set of candidate batches through an ensemble of selection strategies and then selects the batch yielding the highest performance gain. As an ensemble of selection strategies, BoSS can be easily extended with new state-of-the-art strategies as they emerge, ensuring it remains a reliable oracle strategy in the future. Our evaluation demonstrates that i) BoSS outperforms existing oracle strategies, ii) state-of-the-art AL strategies still fall noticeably short of oracle performance, especially in large-scale datasets with many classes, and iii) one possible solution to counteract the inconsistent performance of AL strategies might be to employ an ensemble-based approach for the selection.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -213,401 +350,125 @@
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-12T17:59:48Z",
-                "arxiv:comment": "Preprint",
+                "published": "2026-03-13T16:05:37Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Mateusz Pach"
+                        "name": "Denis Huseljic"
                     },
                     {
-                        "name": "Jessica Bader"
+                        "name": "Paul Hahn"
                     },
                     {
-                        "name": "Quentin Bouniot"
+                        "name": "Marek Herde"
                     },
                     {
-                        "name": "Serge Belongie"
+                        "name": "Christoph Sandrock"
                     },
                     {
-                        "name": "Zeynep Akata"
+                        "name": "Bernhard Sick"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.12260v1",
-                "title": "HumDex:Humanoid Dexterous Manipulation Made Easy",
-                "updated": "2026-03-12T17:59:39Z",
+                "id": "http://arxiv.org/abs/2603.13107v1",
+                "title": "The elusive cyclotron line in 4U 1901+03: hidden, yet present",
+                "updated": "2026-03-13T16:04:23Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.12260v1",
+                        "@href": "https://arxiv.org/abs/2603.13107v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.12260v1",
+                        "@href": "https://arxiv.org/pdf/2603.13107v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck.\n  Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU-based motion tracking to address the portability-precision trade-off, enabling accurate full-body tracking while remaining easy to deploy. For dexterous hand control, we further introduce a learning-based retargeting method that generates smooth and natural hand motions without manual parameter tuning. Beyond teleoperation, HumDex enables efficient collection of human motion data. Building on this capability, we propose a two-stage imitation learning framework that first pre-trains on diverse human motion data to learn generalizable priors, and then fine-tunes on robot data to bridge the embodiment gap for precise execution. We demonstrate that this approach significantly improves generalization to new configurations, objects, and backgrounds with minimal data acquisition costs. The entire system is fully reproducible and open-sourced at https://github.com/physical-superintelligence-lab/HumDex.",
+                "summary": "Context. Cyclotron resonant scattering features (CRSFs) in accreting X-ray pulsars are often difficult to detect, especially when shallow or variable. Recent studies have shown that combining spectral and timing analyses enhances their detectability. Aims. We investigated the evolution of energy-resolved pulse profiles of the X-ray pulsar 4U 1901+03 during its 2019 giant outburst, focusing on the 30-40 keV range where there have been disputed claims of a cyclotron line detection. Methods. We analysed four NuSTAR observations of 4U 1901+03 at different luminosities. We studied energy-resolved pulse profiles using harmonic decomposition, cross-correlation analysis, energy-phase maps, and pulsed-fraction spectra. We also used Bayesian spectral modelling to assess the presence and properties of a cyclotron line. Results. We detected significant spectral-timing variability in the 30-40 keV range, which becomes stronger at lower luminosities. We found a pronounced drop in the pulsed fraction near 35 keV only in the lowest accretion state and in the first harmonic of one intermediate-luminosity observation. Adopting a Bayesian informative approach, we find evidence for a cyclotron line in all examined energy spectra, with an average centroid energy of E_cyc approx 32 keV (varying by only 1.6%), and an anti-correlation between line depth and luminosity. Conclusions. We show that a combined spectral-timing approach is more sensitive than phase-averaged spectroscopy to shallow cyclotron features. The luminosity-dependent evolution of pulse profiles and cyclotron line depth point to a drastic change in the emission geometry and accretion flow structure.",
                 "category": {
-                    "@term": "cs.RO",
+                    "@term": "astro-ph.HE",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-12T17:59:39Z",
+                "published": "2026-03-13T16:04:23Z",
+                "arxiv:comment": "10 pages, 6 figures, 4 tables; accepted for publication in A&A",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "astro-ph.HE"
                 },
                 "author": [
                     {
-                        "name": "Liang Heng"
+                        "name": "Elena Ambrosi"
                     },
                     {
-                        "name": "Yihe Tang"
+                        "name": "Antonino D' A\u00ec"
                     },
                     {
-                        "name": "Jiajun Xu"
+                        "name": "Giancarlo Cusumano"
                     },
                     {
-                        "name": "Henghui Bao"
+                        "name": "Carlo Ferrigno"
                     },
                     {
-                        "name": "Di Huang"
+                        "name": "Ekaterina Sokolova-Lapa"
                     },
                     {
-                        "name": "Yue Wang"
+                        "name": "Dimitrios K. Maniadakis"
+                    },
+                    {
+                        "name": "Antonio Tutone"
+                    },
+                    {
+                        "name": "Georgios Vasilopulous"
+                    },
+                    {
+                        "name": "Peter Kretschmar"
+                    },
+                    {
+                        "name": "Christian Malacaria"
+                    },
+                    {
+                        "name": "Fabio Pintore"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.12257v1",
-                "title": "DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning",
-                "updated": "2026-03-12T17:59:12Z",
+                "id": "http://arxiv.org/abs/2603.13102v1",
+                "title": "BenDFM: A taxonomy and synthetic CAD dataset for manufacturability assessment in sheet metal bending",
+                "updated": "2026-03-13T15:57:44Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.12257v1",
+                        "@href": "https://arxiv.org/abs/2603.13102v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.12257v1",
+                        "@href": "https://arxiv.org/pdf/2603.13102v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject customization with omni-motion control via a progressive two-stage training paradigm. In the first stage, we integrate comprehensive control signals for joint training, encompassing subject appearances, global motion, local dynamics, and camera movements. To ensure robust and precise controllability, we introduce a condition-aware 3D rotary positional embedding to coordinate heterogeneous inputs and a hierarchical motion injection strategy to enhance global motion guidance. Furthermore, to resolve multi-subject ambiguity, we introduce group and role embeddings to explicitly anchor motion signals to specific identities, effectively disentangling complex scenes into independent controllable instances. In the second stage, to mitigate identity degradation, we design a latent identity reward feedback learning paradigm by training a latent identity reward model upon a pretrained video diffusion backbone. This provides motion-aware identity rewards in the latent space, prioritizing identity preservation aligned with human preferences. Supported by our curated large-scale dataset and the comprehensive DreamOmni Bench for multi-subject and omni-motion control evaluation, DreamVideo-Omni demonstrates superior performance in generating high-quality videos with precise controllability.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-12T17:59:12Z",
-                "arxiv:comment": "Project Page: https://dreamvideo-omni.github.io",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yujie Wei"
-                    },
-                    {
-                        "name": "Xinyu Liu"
-                    },
-                    {
-                        "name": "Shiwei Zhang"
-                    },
-                    {
-                        "name": "Hangjie Yuan"
-                    },
-                    {
-                        "name": "Jinbo Xing"
-                    },
-                    {
-                        "name": "Zhekai Chen"
-                    },
-                    {
-                        "name": "Xiang Wang"
-                    },
-                    {
-                        "name": "Haonan Qiu"
-                    },
-                    {
-                        "name": "Rui Zhao"
-                    },
-                    {
-                        "name": "Yutong Feng"
-                    },
-                    {
-                        "name": "Ruihang Chu"
-                    },
-                    {
-                        "name": "Yingya Zhang"
-                    },
-                    {
-                        "name": "Yike Guo"
-                    },
-                    {
-                        "name": "Xihui Liu"
-                    },
-                    {
-                        "name": "Hongming Shan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12255v1",
-                "title": "Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training",
-                "updated": "2026-03-12T17:58:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12255v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.12255v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), which adapts a subset of parameters (fast weights) to capture and organize spatial evidence over long-horizon scene videos. Specifically, we design a hybrid architecture and adopt large-chunk updates parallel with sliding-window attention for efficient spatial video processing. To further promote spatial awareness, we introduce a spatial-predictive mechanism applied to TTT layers with 3D spatiotemporal convolution, which encourages the model to capture geometric correspondence and temporal continuity across frames. Beyond architecture design, we construct a dataset with dense 3D spatial descriptions, which guides the model to update its fast weights to memorize and organize global 3D spatial signals in a structured manner. Extensive experiments demonstrate that Spatial-TTT improves long-horizon spatial understanding and achieves state-of-the-art performance on video spatial benchmarks. Project page: https://liuff19.github.io/Spatial-TTT.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-12T17:58:58Z",
-                "arxiv:comment": "Project Page: https://liuff19.github.io/Spatial-TTT",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Fangfu Liu"
-                    },
-                    {
-                        "name": "Diankun Wu"
-                    },
-                    {
-                        "name": "Jiawei Chi"
-                    },
-                    {
-                        "name": "Yimo Cai"
-                    },
-                    {
-                        "name": "Yi-Hsin Hung"
-                    },
-                    {
-                        "name": "Xumin Yu"
-                    },
-                    {
-                        "name": "Hao Li"
-                    },
-                    {
-                        "name": "Han Hu"
-                    },
-                    {
-                        "name": "Yongming Rao"
-                    },
-                    {
-                        "name": "Yueqi Duan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12254v1",
-                "title": "Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing",
-                "updated": "2026-03-12T17:58:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12254v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.12254v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-scale patches that can reconstruct the video within a user-specified error threshold, eliminating redundancy while preserving information. Empirically, AutoGaze reduces visual tokens by 4x-100x and accelerates ViTs and MLLMs by up to 19x, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks (e.g., 67.0% on VideoMME). Furthermore, we introduce HLVid: the first high-resolution, long-form video QA benchmark with 5-minute 4K-resolution videos, where an MLLM scaled with AutoGaze improves over the baseline by 10.1% and outperforms the previous best MLLM by 4.5%. Project page: https://autogaze.github.io/.",
+                "summary": "Predicting the manufacturability of CAD designs early, in terms of both feasibility and required effort, is a key goal of Design for Manufacturing (DFM). Despite advances in deep learning for CAD and its widespread use in manufacturing process selection, learning-based approaches for predicting manufacturability within a specific process remain limited. Two key challenges limit progress: inconsistency across prior work in how manufacturability is defined and consequently in the associated learning targets, and a scarcity of suitable datasets. Existing labels vary significantly: they may reflect intrinsic design constraints or depend on specific manufacturing capabilities (such as available tools), and they range from discrete feasibility checks to continuous complexity measures. Furthermore, industrial datasets typically contain only manufacturable parts, offering little signal for infeasible cases, while existing synthetic datasets focus on simple geometries and subtractive processes. To address these gaps, we propose a taxonomy of manufacturability metrics along the axes of configuration dependence and measurement type, allowing clearer scoping of generalizability and learning objectives. Next, we introduce BenDFM, the first synthetic dataset for manufacturability assessment in sheet metal bending. BenDFM contains 20,000 parts, both manufacturable and unmanufacturable, generated with process-aware bending simulations, providing both folded and unfolded geometries and multiple manufacturability labels across the taxonomy, enabling systematic study of previously unexplored learning-based DFM challenges. We benchmark two state-of-the-art 3D learning architectures on BenDFM, showing that graph-based representations that capture relationships between part surfaces achieve better accuracy, and that predicting metrics that depend on specific manufacturing setups remains more challenging.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-12T17:58:52Z",
-                "arxiv:comment": "CVPR 2026. Project page: https://autogaze.github.io/",
+                "published": "2026-03-13T15:57:44Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Baifeng Shi"
+                        "name": "Matteo Ballegeer"
                     },
                     {
-                        "name": "Stephanie Fu"
-                    },
-                    {
-                        "name": "Long Lian"
-                    },
-                    {
-                        "name": "Hanrong Ye"
-                    },
-                    {
-                        "name": "David Eigen"
-                    },
-                    {
-                        "name": "Aaron Reite"
-                    },
-                    {
-                        "name": "Boyi Li"
-                    },
-                    {
-                        "name": "Jan Kautz"
-                    },
-                    {
-                        "name": "Song Han"
-                    },
-                    {
-                        "name": "David M. Chan"
-                    },
-                    {
-                        "name": "Pavlo Molchanov"
-                    },
-                    {
-                        "name": "Trevor Darrell"
-                    },
-                    {
-                        "name": "Hongxu Yin"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12248v1",
-                "title": "Matching Features, Not Tokens: Energy-Based Fine-Tuning of Language Models",
-                "updated": "2026-03-12T17:57:50Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12248v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.12248v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Cross-entropy (CE) training provides dense and scalable supervision for language models, but it optimizes next-token prediction under teacher forcing rather than sequence-level behavior under model rollouts. We introduce a feature-matching objective for language-model fine-tuning that targets sequence-level statistics of the completion distribution, providing dense semantic feedback without requiring a task-specific verifier or preference model. To optimize this objective efficiently, we propose energy-based fine-tuning (EBFT), which uses strided block-parallel sampling to generate multiple rollouts from nested prefixes concurrently, batches feature extraction over these rollouts, and uses the resulting embeddings to perform an on-policy policy-gradient update. We present a theoretical perspective connecting EBFT to KL-regularized feature-matching and energy-based modeling. Empirically, across Q&A coding, unstructured coding, and translation, EBFT matches RLVR and outperforms SFT on downstream accuracy while achieving a lower validation cross-entropy than both methods.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-12T17:57:50Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Samy Jelassi"
-                    },
-                    {
-                        "name": "Mujin Kwun"
-                    },
-                    {
-                        "name": "Rosie Zhao"
-                    },
-                    {
-                        "name": "Yuanzhi Li"
-                    },
-                    {
-                        "name": "Nicolo Fusi"
-                    },
-                    {
-                        "name": "Yilun Du"
-                    },
-                    {
-                        "name": "Sham M. Kakade"
-                    },
-                    {
-                        "name": "Carles Domingo-Enrich"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.12247v1",
-                "title": "Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation",
-                "updated": "2026-03-12T17:57:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.12247v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.12247v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In this paper, we present FIRM (Faithful Image Reward Modeling), a comprehensive framework that develops robust reward models to provide accurate and reliable guidance for faithful image generation and editing. First, we design tailored data curation pipelines to construct high-quality scoring datasets. Specifically, we evaluate editing using both execution and consistency, while generation is primarily assessed via instruction following. Using these pipelines, we collect the FIRM-Edit-370K and FIRM-Gen-293K datasets, and train specialized reward models (FIRM-Edit-8B and FIRM-Gen-8B) that accurately reflect these criteria. Second, we introduce FIRM-Bench, a comprehensive benchmark specifically designed for editing and generation critics. Evaluations demonstrate that our models achieve superior alignment with human judgment compared to existing metrics. Furthermore, to seamlessly integrate these critics into the RL pipeline, we formulate a novel \"Base-and-Bonus\" reward strategy that balances competing objectives: Consistency-Modulated Execution (CME) for editing and Quality-Modulated Alignment (QMA) for generation. Empowered by this framework, our resulting models FIRM-Qwen-Edit and FIRM-SD3.5 achieve substantial performance breakthroughs. Comprehensive experiments demonstrate that FIRM mitigates hallucinations, establishing a new standard for fidelity and instruction adherence over existing general models. All of our datasets, models, and code have been publicly available at https://firm-reward.github.io.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-12T17:57:21Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Xiangyu Zhao"
-                    },
-                    {
-                        "name": "Peiyuan Zhang"
-                    },
-                    {
-                        "name": "Junming Lin"
-                    },
-                    {
-                        "name": "Tianhao Liang"
-                    },
-                    {
-                        "name": "Yuchen Duan"
-                    },
-                    {
-                        "name": "Shengyuan Ding"
-                    },
-                    {
-                        "name": "Changyao Tian"
-                    },
-                    {
-                        "name": "Yuhang Zang"
-                    },
-                    {
-                        "name": "Junchi Yan"
-                    },
-                    {
-                        "name": "Xue Yang"
+                        "name": "Dries F. Benoit"
                     }
                 ]
             }
