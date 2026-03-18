@@ -5,134 +5,355 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-17T23:26:49Z",
+        "updated": "2026-03-18T01:45:29Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "550793",
+        "opensearch:totalResults": "551081",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.15617v1",
-                "title": "HorizonMath: Measuring AI Progress Toward Mathematical Discovery with Automatic Verification",
-                "updated": "2026-03-16T17:59:53Z",
+                "id": "http://arxiv.org/abs/2603.16449v1",
+                "title": "Learning to Jointly Optimize Antenna Positioning and Beamforming for Movable Antenna-Aided Systems",
+                "updated": "2026-03-17T12:30:54Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.15617v1",
+                        "@href": "https://arxiv.org/abs/2603.16449v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.15617v1",
+                        "@href": "https://arxiv.org/pdf/2603.16449v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Can AI make progress on important, unsolved mathematical problems? Large language models are now capable of sophisticated mathematical and scientific reasoning, but whether they can perform novel research is still widely debated and underexplored. We introduce HorizonMath, a benchmark of over 100 predominantly unsolved problems spanning 8 domains in computational and applied mathematics, paired with an open-source evaluation framework for automated verification. Our benchmark targets a class of problems where discovery is hard, requiring meaningful mathematical insight, but verification is computationally efficient and simple. Because these solutions are unknown, HorizonMath is immune to data contamination, and most state-of-the-art models score near 0%. Existing research-level benchmarks instead rely on formal proof verification or manual review, both of which are expensive to scale. Using this platform, we find two problems for which GPT 5.4 Pro proposes solutions that improve on the best-known published results, representing potential novel contributions (pending expert review). We release HorizonMath as an open challenge and a growing community resource, where correct solutions to problems in the unsolved problem classes could constitute novel results in the mathematical literature.",
+                "summary": "The recently emerged movable antenna (MA) and fluid antenna technologies offer promising solutions to enhance the spatial degrees of freedom in wireless systems by dynamically adjusting the positions of transmit or receive antennas within given regions. In this paper, we aim to address the joint optimization problem of antenna positioning and beamforming in MA-aided multi-user downlink transmission systems. This problem involves mixed discrete antenna position and continuous beamforming weight variables, along with coupled distance constraints on antenna positions, which pose significant challenges for optimization algorithm design. To overcome these challenges, we propose an end-to-end deep learning framework, consisting of a positioning model that handles the discrete variables and the coupled constraints, and a beamforming model that handles the continuous variables. Simulation results demonstrate that the proposed framework achieves superior sum rate performance, yet with much reduced computation time compared to existing methods.",
+                "category": {
+                    "@term": "eess.SP",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-17T12:30:54Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.SP"
+                },
+                "author": [
+                    {
+                        "name": "Yikun Wang"
+                    },
+                    {
+                        "name": "Yang Li"
+                    },
+                    {
+                        "name": "Zeyi Ren"
+                    },
+                    {
+                        "name": "Jingreng Lei"
+                    },
+                    {
+                        "name": "Yik-Chung Wu"
+                    },
+                    {
+                        "name": "Rui Zhang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.16448v1",
+                "title": "TRUST-SQL: Tool-Integrated Multi-Turn Reinforcement Learning for Text-to-SQL over Unknown Schemas",
+                "updated": "2026-03-17T12:30:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.16448v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.16448v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Text-to-SQL parsing has achieved remarkable progress under the Full Schema Assumption. However, this premise fails in real-world enterprise environments where databases contain hundreds of tables with massive noisy metadata. Rather than injecting the full schema upfront, an agent must actively identify and verify only the relevant subset, giving rise to the Unknown Schema scenario we study in this work. To address this, we propose TRUST-SQL (Truthful Reasoning with Unknown Schema via Tools). We formulate the task as a Partially Observable Markov Decision Process where our autonomous agent employs a structured four-phase protocol to ground reasoning in verified metadata. Crucially, this protocol provides a structural boundary for our novel Dual-Track GRPO strategy. By applying token-level masked advantages, this strategy isolates exploration rewards from execution outcomes to resolve credit assignment, yielding a 9.9% relative improvement over standard GRPO. Extensive experiments across five benchmarks demonstrate that TRUST-SQL achieves an average absolute improvement of 30.6% and 16.6% for the 4B and 8B variants respectively over their base models. Remarkably, despite operating entirely without pre-loaded metadata, our framework consistently matches or surpasses strong baselines that rely on schema prefilling.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-17T12:30:42Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Ai Jian"
+                    },
+                    {
+                        "name": "Xiaoyun Zhang"
+                    },
+                    {
+                        "name": "Wanrou Du"
+                    },
+                    {
+                        "name": "Jingqing Ruan"
+                    },
+                    {
+                        "name": "Jiangbo Pei"
+                    },
+                    {
+                        "name": "Weipeng Zhang"
+                    },
+                    {
+                        "name": "Ke Zeng"
+                    },
+                    {
+                        "name": "Xunliang Cai"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.16445v1",
+                "title": "Visual Distraction Undermines Moral Reasoning in Vision-Language Models",
+                "updated": "2026-03-17T12:29:09Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.16445v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.16445v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Moral reasoning is fundamental to safe Artificial Intelligence (AI), yet ensuring its consistency across modalities becomes critical as AI systems evolve from text-based assistants to embodied agents. Current safety techniques demonstrate success in textual contexts, but concerns remain about generalization to visual inputs. Existing moral evaluation benchmarks rely on textonly formats and lack systematic control over variables that influence moral decision-making. Here we show that visual inputs fundamentally alter moral decision-making in state-of-the-art (SOTA) Vision-Language Models (VLMs), bypassing text-based safety mechanisms. We introduce Moral Dilemma Simulation (MDS), a multimodal benchmark grounded in Moral Foundation Theory (MFT) that enables mechanistic analysis through orthogonal manipulation of visual and contextual variables. The evaluation reveals that the vision modality activates intuition-like pathways that override the more deliberate and safer reasoning patterns observed in text-only contexts. These findings expose critical fragilities where language-tuned safety filters fail to constrain visual processing, demonstrating the urgent need for multimodal safety alignment.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-17T12:29:09Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Xinyi Yang"
+                    },
+                    {
+                        "name": "Chenheng Xu"
+                    },
+                    {
+                        "name": "Weijun Hong"
+                    },
+                    {
+                        "name": "Ce Mo"
+                    },
+                    {
+                        "name": "Qian Wang"
+                    },
+                    {
+                        "name": "Fang Fang"
+                    },
+                    {
+                        "name": "Yixin Zhu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.16442v1",
+                "title": "Uplink Networked Sensing via Multiuser Correlation Exploitation",
+                "updated": "2026-03-17T12:25:47Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.16442v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.16442v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In this correspondence, we investigate networked sensing in perceptive mobile networks under a bistatic multi-transmitter single-receiver uplink topology, where multiple user equipments (UEs) transmit signals over orthogonal frequency-division multiple access (OFDMA) resources and a single base station performs joint sensing. Uplink clock asynchronism introduces offsets that destroy inter-packet coherence and hinder high-resolution sensing, while multi-user observations exhibit exploitable cross-user correlation. We therefore formulate an asynchronous multi-user uplink OFDMA sensing model and exploit common delay-cluster sparsity across UEs. A line-of-sight (LoS)-referenced calibration first suppresses the offsets, after which a shared-private delay-domain sparse Bayesian learning (SBL) model is used for delay support recovery and user grouping. Doppler and angle of arrival are then estimated from temporal and spatial phase differences. Simulation results show that the proposed scheme outperforms per-user processing, particularly under limited subcarrier budgets and in low signal-to-noise ratio (SNR) regimes.",
+                "category": {
+                    "@term": "eess.SP",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-17T12:25:47Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.SP"
+                },
+                "author": [
+                    {
+                        "name": "Jingying Bao"
+                    },
+                    {
+                        "name": "J. Andrew Zhang"
+                    },
+                    {
+                        "name": "Kai Wu"
+                    },
+                    {
+                        "name": "Christos Masouros"
+                    },
+                    {
+                        "name": "Y. Jay Guo"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.16440v1",
+                "title": "Capability-Guided Compression: Toward Interpretability-Aware Budget Allocation for Large Language Models",
+                "updated": "2026-03-17T12:21:07Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.16440v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.16440v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large language model compression has made substantial progress through pruning, quantization, and low-rank decomposition, yet a fundamental limitation persists across all existing methods: compression budgets are allocated without any representation of what individual model components functionally encode. We term this the capability-blind compression problem and argue it is a root cause of two well-documented failures -- the insensitivity of perplexity-based evaluation to reasoning capability loss, and the abrupt phase transitions in model performance recently characterized by Ma et al. (2026). We propose Capability-Guided Compression (CGC), a framework that addresses this by using Sparse Autoencoder (SAE)-derived capability density maps to allocate differential compression budgets across transformer components. Capability density is a formally defined scalar measure combining the feature breadth, activation entropy, and cross-input consistency of a component's SAE feature activation distribution. We prove theoretically that components with higher capability density exhibit lower structural redundancy and reach their individual phase transition points at lower compression ratios, providing the first pre-compression mechanism for component-level phase transition prediction. Experiments on GPT-2 Medium confirm that capability density is statistically independent of Wanda importance scores (Spearman rho = -0.054, n = 384 heads), establishing it as a genuinely novel compression signal orthogonal to all existing importance metrics. We report a negative result on PPL-based compression comparison and provide a principled diagnosis identifying GPT-2 Medium as an insufficient test bed for the full CGC hypothesis. The theoretical framework, density formalism, and orthogonality finding constitute a foundation for capability-aware compression research.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-17T12:21:07Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Rishaank Gupta"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.16436v1",
+                "title": "DISCOVER: A Solver for Distributional Counterfactual Explanations",
+                "updated": "2026-03-17T12:18:27Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.16436v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.16436v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Counterfactual explanations (CE) explain model decisions by identifying input modifications that lead to different predictions. Most existing methods operate at the instance level. Distributional Counterfactual Explanations (DCE) extend this setting by optimizing an optimal transport objective that balances proximity to a factual input distribution and alignment to a target output distribution, with statistical certification via chance constrained bounds. However, DCE relies on gradient based optimization, while many real-world tabular pipelines are dominated by non-differentiable models. We propose DISCOVER, a model-agnostic solver for distributional counterfactual explanations. DISCOVER preserves the original DCE objective and certification while replacing gradient descent with a sparse propose-and-select search paradigm. It exploits a sample-wise decomposition of the transport objective to compute per-row impact scores and enforce a top-$k$ intervention budget, focusing edits on the most influential samples. To guide candidate generation without predictor gradients, DISCOVER introduces an OT-guided cone sampling primitive driven by input-side transport geometry. Experiments on multiple tabular datasets demonstrate strong joint alignment of input and output distributions, extending distributional counterfactual reasoning to modern black box learning pipelines. A code repository is available at https://github.com/understanding-ml/DCE.",
                 "category": {
                     "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-16T17:59:53Z",
+                "published": "2026-03-17T12:18:27Z",
+                "arxiv:comment": "20 pages, 8 figures, 4 tables",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Erik Y. Wang"
+                        "name": "Yikai Gu"
                     },
                     {
-                        "name": "Sumeet Motwani"
+                        "name": "Lele Cao"
                     },
                     {
-                        "name": "James V. Roggeveen"
+                        "name": "Bo Zhao"
                     },
                     {
-                        "name": "Eliot Hodges"
+                        "name": "Lei Lei"
                     },
                     {
-                        "name": "Dulhan Jayalath"
-                    },
-                    {
-                        "name": "Charles London"
-                    },
-                    {
-                        "name": "Kalyan Ramakrishnan"
-                    },
-                    {
-                        "name": "Flaviu Cipcigan"
-                    },
-                    {
-                        "name": "Philip Torr"
-                    },
-                    {
-                        "name": "Alessandro Abate"
+                        "name": "Lei You"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.15616v1",
-                "title": "GlyphPrinter: Region-Grouped Direct Preference Optimization for Glyph-Accurate Visual Text Rendering",
-                "updated": "2026-03-16T17:59:31Z",
+                "id": "http://arxiv.org/abs/2603.16432v1",
+                "title": "IRIS: A Real-World Benchmark for Inverse Recovery and Identification of Physical Dynamic Systems from Monocular Video",
+                "updated": "2026-03-17T12:10:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.15616v1",
+                        "@href": "https://arxiv.org/abs/2603.16432v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.15616v1",
+                        "@href": "https://arxiv.org/pdf/2603.16432v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Generating accurate glyphs for visual text rendering is essential yet challenging. Existing methods typically enhance text rendering by training on a large amount of high-quality scene text images, but the limited coverage of glyph variations and excessive stylization often compromise glyph accuracy, especially for complex or out-of-domain characters. Some methods leverage reinforcement learning to alleviate this issue, yet their reward models usually depend on text recognition systems that are insensitive to fine-grained glyph errors, so images with incorrect glyphs may still receive high rewards. Inspired by Direct Preference Optimization (DPO), we propose GlyphPrinter, a preference-based text rendering method that eliminates reliance on explicit reward models. However, the standard DPO objective only models overall preference between two samples, which is insufficient for visual text rendering where glyph errors typically occur in localized regions. To address this issue, we construct the GlyphCorrector dataset with region-level glyph preference annotations and propose Region-Grouped DPO (R-GDPO), a region-based objective that optimizes inter- and intra-sample preferences over annotated regions, substantially enhancing glyph accuracy. Furthermore, we introduce Regional Reward Guidance, an inference strategy that samples from an optimal distribution with controllable glyph accuracy. Extensive experiments demonstrate that the proposed GlyphPrinter outperforms existing methods in glyph accuracy while maintaining a favorable balance between stylization and precision.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-16T17:59:31Z",
-                "arxiv:comment": "CVPR 2026, Project Page: https://henghuiding.com/GlyphPrinter/",
+                "summary": "Unsupervised physical parameter estimation from video lacks a common benchmark: existing methods evaluate on non-overlapping synthetic data, the sole real-world dataset is restricted to single-body systems, and no established protocol addresses governing-equation identification. This work introduces IRIS, a high-fidelity benchmark comprising 220 real-world videos captured at 4K resolution and 60\\,fps, spanning both single- and multi-body dynamics with independently measured ground-truth parameters and uncertainty estimates. Each dynamical system is recorded under controlled laboratory conditions and paired with its governing equations, enabling principled evaluation. A standardized evaluation protocol is defined encompassing parameter accuracy, identifiability, extrapolation, robustness, and governing-equation selection. Multiple baselines are evaluated, including a multi-step physics loss formulation and four complementary equation-identification strategies (VLM temporal reasoning, describe-then-classify prompting, CNN-based classification, and path-based labelling), establishing reference performance across all IRIS scenarios and exposing systematic failure modes that motivate future research. The dataset, annotations, evaluation toolkit, and all baseline implementations are publicly released.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-17T12:10:56Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Xincheng Shuai"
+                        "name": "Rasul Khanbayov"
                     },
                     {
-                        "name": "Ziye Li"
+                        "name": "Mohamed Rayan Barhdadi"
                     },
                     {
-                        "name": "Henghui Ding"
+                        "name": "Erchin Serpedin"
                     },
                     {
-                        "name": "Dacheng Tao"
+                        "name": "Hasan Kurban"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.15615v1",
-                "title": "Mechanistic Origin of Moral Indifference in Language Models",
-                "updated": "2026-03-16T17:59:17Z",
+                "id": "http://arxiv.org/abs/2603.16430v1",
+                "title": "EngGPT2: Sovereign, Efficient and Open Intelligence",
+                "updated": "2026-03-17T12:08:35Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.15615v1",
+                        "@href": "https://arxiv.org/abs/2603.16430v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.15615v1",
+                        "@href": "https://arxiv.org/pdf/2603.16430v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Existing behavioral alignment techniques for Large Language Models (LLMs) often neglect the discrepancy between surface compliance and internal unaligned representations, leaving LLMs vulnerable to long-tail risks. More crucially, we posit that LLMs possess an inherent state of moral indifference due to compressing distinct moral concepts into uniform probability distributions. We verify and remedy this indifference in LLMs' latent representations, utilizing 251k moral vectors constructed upon Prototype Theory and the Social-Chemistry-101 dataset. Firstly, our analysis across 23 models reveals that current LLMs fail to represent the distinction between opposed moral categories and fine-grained typicality gradients within these categories; notably, neither model scaling, architecture, nor explicit alignment reshapes this indifference. We then employ Sparse Autoencoders on Qwen3-8B, isolate mono-semantic moral features, and targetedly reconstruct their topological relationships to align with ground-truth moral vectors. This representational alignment naturally improves moral reasoning and granularity, achieving a 75% pairwise win-rate on the independent adversarial Flames benchmark. Finally, we elaborate on the remedial nature of current intervention methods from an experientialist philosophy, arguing that endogenously aligned AI might require a transformation from post-hoc corrections to proactive cultivation.",
+                "summary": "EngGPT2-16B-A3B is the latest iteration of Engineering Group's Italian LLM and it's built to be a Sovereign, Efficient and Open model. EngGPT2 is trained on 2.5 trillion tokens - less than Qwen3's 36T or Llama3's 15T - and delivers performance on key benchmarks, including MMLU-Pro, GSM8K, IFEval and HumanEval, comparable to dense models in the 8B-16B range, while requiring one-fifth to half of the inference power, and between one-tenth to one-sixth of the training data and consequent needed training power. Designed as a trained-from-scratch Mixture-of-Experts (MoE) architecture, EngGPT2 features 16 billion parameters with 3 billion active per inference, with expert sizes positioned between those used in GPT-OSS and Qwen3. Approximately 25% of its training corpus consists of Italian-language data, to deliver strong capabilities for European and Italian NLP tasks among models of similar scale. This efficiency aims to position EngGPT2 as a key contributor to the growing portfolio of open-weight European models, combining performance and efficiency with full alignment to the EU AI Act. EngGPT2 is also a single model capable of multiple reasoning modes: non-reasoning, reasoning in Italian or English, and turbo-reasoning (a concise, bullet-point style reasoning available in both languages designed for real-time reasoning use cases). EngGPT2 aims to set a new standard for resource-conscious, high-performance LLMs tailored to European and Italian contexts.",
                 "category": [
                     {
                         "@term": "cs.CL",
@@ -143,400 +364,143 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-16T17:59:17Z",
-                "arxiv:comment": "24 pages, 11 figures, 5 tables",
+                "published": "2026-03-17T12:08:35Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Lingyu Li"
+                        "name": "G. Ciarfaglia"
                     },
                     {
-                        "name": "Yan Teng"
+                        "name": "A. Rosanova"
                     },
                     {
-                        "name": "Yingchun Wang"
+                        "name": "S. Cipolla"
+                    },
+                    {
+                        "name": "J. Bartoli"
+                    },
+                    {
+                        "name": "A. Di Domenico"
+                    },
+                    {
+                        "name": "C. Fioroni"
+                    },
+                    {
+                        "name": "A. Fontana"
+                    },
+                    {
+                        "name": "M. R. Scoleri"
+                    },
+                    {
+                        "name": "M. I. Mone"
+                    },
+                    {
+                        "name": "D. Franchi"
+                    },
+                    {
+                        "name": "M. C. Del Gaudio"
+                    },
+                    {
+                        "name": "F. Picariello"
+                    },
+                    {
+                        "name": "M. Gabusi"
+                    },
+                    {
+                        "name": "S. Bonura"
+                    },
+                    {
+                        "name": "V. Morreale"
+                    },
+                    {
+                        "name": "I. Bailo"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.15614v1",
-                "title": "Tri-Prompting: Video Diffusion with Unified Control over Scene, Subject, and Motion",
-                "updated": "2026-03-16T17:59:05Z",
+                "id": "http://arxiv.org/abs/2603.16427v1",
+                "title": "Cross-modal learning for plankton recognition",
+                "updated": "2026-03-17T12:04:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.15614v1",
+                        "@href": "https://arxiv.org/abs/2603.16427v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.15614v1",
+                        "@href": "https://arxiv.org/pdf/2603.16427v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent video diffusion models have made remarkable strides in visual quality, yet precise, fine-grained control remains a key bottleneck that limits practical customizability for content creation. For AI video creators, three forms of control are crucial: (i) scene composition, (ii) multi-view consistent subject customization, and (iii) camera-pose or object-motion adjustment. Existing methods typically handle these dimensions in isolation, with limited support for multi-view subject synthesis and identity preservation under arbitrary pose changes. This lack of a unified architecture makes it difficult to support versatile, jointly controllable video. We introduce Tri-Prompting, a unified framework and two-stage training paradigm that integrates scene composition, multi-view subject consistency, and motion control. Our approach leverages a dual-condition motion module driven by 3D tracking points for background scenes and downsampled RGB cues for foreground subjects. To ensure a balance between controllability and visual realism, we further propose an inference ControlNet scale schedule. Tri-Prompting supports novel workflows, including 3D-aware subject insertion into any scenes and manipulation of existing subjects in an image. Experimental results demonstrate that Tri-Prompting significantly outperforms specialized baselines such as Phantom and DaS in multi-view subject identity, 3D consistency, and motion accuracy.",
+                "summary": "This paper considers self-supervised cross-modal coordination as a strategy enabling utilization of multiple modalities and large volumes of unlabeled plankton data to build models for plankton recognition. Automated imaging instruments facilitate the continuous collection of plankton image data on a large scale. Current methods for automatic plankton image recognition rely primarily on supervised approaches, which require labeled training sets that are labor-intensive to collect. On the other hand, some modern plankton imaging instruments complement image information with optical measurement data, such as scatter and fluorescence profiles, which currently are not widely utilized in plankton recognition. In this work, we explore the possibility of using such measurement data to guide the learning process without requiring manual labeling. Inspired by the concepts behind Contrastive Language-Image Pre-training, we train encoders for both modalities using only binary supervisory information indicating whether a given image and profile originate from the same particle or from different particles. For plankton recognition, we employ a small labeled gallery of known plankton species combined with a $k$-NN classifier. This approach yields a recognition model that is inherently multimodal, i.e., capable of utilizing information extracted from both image and profile data. We demonstrate that the proposed method achieves high recognition accuracy while requiring only a minimal number of labeled images. Furthermore, we show that the approach outperforms an image-only self-supervised baseline. Code available at https://github.com/Jookare/cross-modal-plankton.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-16T17:59:05Z",
-                "arxiv:comment": "Project page: https://zhouzhenghong-gt.github.io/Tri-Prompting-Page/",
+                "published": "2026-03-17T12:04:52Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Zhenghong Zhou"
+                        "name": "Joona Kareinen"
                     },
                     {
-                        "name": "Xiaohang Zhan"
+                        "name": "Veikka Immonen"
                     },
                     {
-                        "name": "Zhiqin Chen"
+                        "name": "Tuomas Eerola"
                     },
                     {
-                        "name": "Soo Ye Kim"
+                        "name": "Lumi Haraguchi"
                     },
                     {
-                        "name": "Nanxuan Zhao"
+                        "name": "Lasse Lensu"
                     },
                     {
-                        "name": "Haitian Zheng"
+                        "name": "Kaisa Kraft"
                     },
                     {
-                        "name": "Qing Liu"
+                        "name": "Sanna Suikkanen"
                     },
                     {
-                        "name": "He Zhang"
-                    },
-                    {
-                        "name": "Zhe Lin"
-                    },
-                    {
-                        "name": "Yuqian Zhou"
-                    },
-                    {
-                        "name": "Jiebo Luo"
+                        "name": "Heikki K\u00e4lvi\u00e4inen"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.15612v1",
-                "title": "HSImul3R: Physics-in-the-Loop Reconstruction of Simulation-Ready Human-Scene Interactions",
-                "updated": "2026-03-16T17:58:33Z",
+                "id": "http://arxiv.org/abs/2603.16426v1",
+                "title": "3D Fourier-based Global Feature Extraction for Hyperspectral Image Classification",
+                "updated": "2026-03-17T12:02:28Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.15612v1",
+                        "@href": "https://arxiv.org/abs/2603.16426v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.15612v1",
+                        "@href": "https://arxiv.org/pdf/2603.16426v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present HSImul3R, a unified framework for simulation-ready 3D reconstruction of human-scene interactions (HSI) from casual captures, including sparse-view images and monocular videos. Existing methods suffer from a perception-simulation gap: visually plausible reconstructions often violate physical constraints, leading to instability in physics engines and failure in embodied AI applications. To bridge this gap, we introduce a physically-grounded bi-directional optimization pipeline that treats the physics simulator as an active supervisor to jointly refine human dynamics and scene geometry. In the forward direction, we employ Scene-targeted Reinforcement Learning to optimize human motion under dual supervision of motion fidelity and contact stability. In the reverse direction, we propose Direct Simulation Reward Optimization, which leverages simulation feedback on gravitational stability and interaction success to refine scene geometry. We further present HSIBench, a new benchmark with diverse objects and interaction scenarios. Extensive experiments demonstrate that HSImul3R produces the first stable, simulation-ready HSI reconstructions and can be directly deployed to real-world humanoid robots.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-16T17:58:33Z",
-                "arxiv:comment": "https://yukangcao.github.io/HSImul3R/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yukang Cao"
-                    },
-                    {
-                        "name": "Haozhe Xie"
-                    },
-                    {
-                        "name": "Fangzhou Hong"
-                    },
-                    {
-                        "name": "Long Zhuo"
-                    },
-                    {
-                        "name": "Zhaoxi Chen"
-                    },
-                    {
-                        "name": "Liang Pan"
-                    },
-                    {
-                        "name": "Ziwei Liu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.15611v1",
-                "title": "Code-A1: Adversarial Evolving of Code LLM and Test LLM via Reinforcement Learning",
-                "updated": "2026-03-16T17:58:13Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.15611v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.15611v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning for code generation relies on verifiable rewards from unit test pass rates. Yet high-quality test suites are scarce, existing datasets offer limited coverage, and static rewards fail to adapt as models improve. Recent self-play methods unify code and test generation in a single model, but face a inherent dilemma: white-box access leads to self-collusion where the model produces trivial tests for easy rewards, yet black-box restriction yields generic tests that miss implementation-specific bugs. We introduce Code-A1, an adversarial co-evolution framework that jointly optimizes a Code LLM and a Test LLM with opposing objectives. The Code LLM is rewarded for passing more tests, while the Test LLM is rewarded for exposing more defects. This architectural separation eliminates self-collusion risks and safely enables white-box test generation, where the Test LLM can inspect candidate code to craft targeted adversarial tests. We further introduce a Mistake Book mechanism for experience replay and a composite reward balancing test validity with adversarial difficulty. Experiments on Qwen2.5-Coder models demonstrate that Code-A1 achieves code generation performance matching or exceeding models trained on human-annotated tests, while significantly improving test generation capability.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-16T17:58:13Z",
-                "arxiv:comment": "Project Page: https://zju-real.github.io/Code-A1 Code: https://github.com/ZJU-REAL/Code-A1",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Aozhe Wang"
-                    },
-                    {
-                        "name": "Yuchen Yan"
-                    },
-                    {
-                        "name": "Nan Zhou"
-                    },
-                    {
-                        "name": "Zhengxi Lu"
-                    },
-                    {
-                        "name": "Weiming Lu"
-                    },
-                    {
-                        "name": "Jun Xiao"
-                    },
-                    {
-                        "name": "Yueting Zhuang"
-                    },
-                    {
-                        "name": "Yongliang Shen"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.15606v1",
-                "title": "Saddle Point Evasion via Curvature-Regularized Gradient Dynamics",
-                "updated": "2026-03-16T17:56:38Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.15606v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.15606v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Nonconvex optimization underlies many modern machine learning and control tasks, where saddle points pose the dominant obstacle to reliable convergence in high-dimensional settings. Escaping these saddle points deterministically and at a controllable rate remains an open challenge: gradient descent is blind to curvature, stochastic perturbation methods lack deterministic guarantees, and Newton-type approaches suffer from Hessian singularity. We present Curvature-Regularized Gradient Dynamics (CRGD), which augments the objective with a smooth penalty on the most negative Hessian eigenvalue, yielding an augmented cost that serves as an optimization Lyapunov function with user-selectable convergence rates to second-order stationary points. Numerical experiments on a nonconvex matrix factorization example confirm that CRGD escapes saddle points across all tested configurations, with escape time that decreases with the eigenvalue gap, in contrast to gradient descent, whose escape time grows inversely with the gap.",
-                "category": [
-                    {
-                        "@term": "math.OC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-16T17:56:38Z",
-                "arxiv:comment": "This work has been submitted to the IEEE for possible publication. 6 pages, 3 figures",
-                "arxiv:primary_category": {
-                    "@term": "math.OC"
-                },
-                "author": [
-                    {
-                        "name": "Liraz Mudrik"
-                    },
-                    {
-                        "name": "Isaac Kaminer"
-                    },
-                    {
-                        "name": "Sean Kragelund"
-                    },
-                    {
-                        "name": "Abram H. Clark"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.15603v1",
-                "title": "Fast SAM 3D Body: Accelerating SAM 3D Body for Real-Time Full-Body Human Mesh Recovery",
-                "updated": "2026-03-16T17:54:40Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.15603v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.15603v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "SAM 3D Body (3DB) achieves state-of-the-art accuracy in monocular 3D human mesh recovery, yet its inference latency of several seconds per image precludes real-time application. We present Fast SAM 3D Body, a training-free acceleration framework that reformulates the 3DB inference pathway to achieve interactive rates. By decoupling serial spatial dependencies and applying architecture-aware pruning, we enable parallelized multi-crop feature extraction and streamlined transformer decoding. Moreover, to extract the joint-level kinematics (SMPL) compatible with existing humanoid control and policy learning frameworks, we replace the iterative mesh fitting with a direct feedforward mapping, accelerating this specific conversion by over 10,000x. Overall, our framework delivers up to a 10.9x end-to-end speedup while maintaining on-par reconstruction fidelity, even surpassing 3DB on benchmarks such as LSPET. We demonstrate its utility by deploying Fast SAM 3D Body in a vision-only teleoperation system that-unlike methods reliant on wearable IMUs-enables real-time humanoid control and the direct collection of manipulation policies from a single RGB stream.",
+                "summary": "Hyperspectral image classification (HSIC) has been significantly advanced by deep learning methods that exploit rich spatial-spectral correlations. However, existing approaches still face fundamental limitations: transformer-based models suffer from poor scalability due to the quadratic complexity of self-attention, while recent Fourier transform-based methods typically rely on 2D spatial FFTs and largely ignore critical inter-band spectral dependencies inherent to hyperspectral data. To address these challenges, we propose Hybrid GFNet (HGFNet), a novel architecture that integrates localized 3D convolutional feature extraction with frequency-domain global filtering via GFNet-style blocks for efficient and robust spatial-spectral representation learning. HGFNet introduces three complementary frequency transforms tailored to hyperspectral imagery: Spectral Fourier Transform (a 1D FFT along the spectral axis), Spatial Fourier Transform (a 2D FFT over spatial dimensions), and Spatial-Spatial Fourier Transform (a 3D FFT jointly over spectral and spatial dimensions), enabling comprehensive and high-dimensional frequency modeling. The 3D convolutional layers capture fine-grained local spatial-spectral structures, while the Fourier-based global filtering modules efficiently model long-range dependencies and suppress noise. To further mitigate the severe class imbalance commonly observed in HSIC, HGFNet incorporates an Adaptive Focal Loss (AFL) that dynamically adjusts class-wise focusing and weighting, improving discrimination for underrepresented classes.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-16T17:54:40Z",
+                "published": "2026-03-17T12:02:28Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
-                "author": [
-                    {
-                        "name": "Timing Yang"
-                    },
-                    {
-                        "name": "Sicheng He"
-                    },
-                    {
-                        "name": "Hongyi Jing"
-                    },
-                    {
-                        "name": "Jiawei Yang"
-                    },
-                    {
-                        "name": "Zhijian Liu"
-                    },
-                    {
-                        "name": "Chuhang Zou"
-                    },
-                    {
-                        "name": "Yue Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.15600v1",
-                "title": "From Passive Observer to Active Critic: Reinforcement Learning Elicits Process Reasoning for Robotic Manipulation",
-                "updated": "2026-03-16T17:53:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.15600v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.15600v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Accurate process supervision remains a critical challenge for long-horizon robotic manipulation. A primary bottleneck is that current video MLLMs, trained primarily under a Supervised Fine-Tuning (SFT) paradigm, function as passive \"Observers\" that recognize ongoing events rather than evaluating the current state relative to the final task goal. In this paper, we introduce PRIMO R1 (Process Reasoning Induced Monitoring), a 7B framework that transforms video MLLMs into active \"Critics\". We leverage outcome-based Reinforcement Learning to incentivize explicit Chain-of-Thought generation for progress estimation. Furthermore, our architecture constructs a structured temporal input by explicitly anchoring the video sequence between initial and current state images. Supported by the proposed PRIMO Dataset and Benchmark, extensive experiments across diverse in-domain environments and out-of-domain real-world humanoid scenarios demonstrate that PRIMO R1 achieves state-of-the-art performance. Quantitatively, our 7B model achieves a 50% reduction in the mean absolute error of specialized reasoning baselines, demonstrating significant relative accuracy improvements over 72B-scale general MLLMs. Furthermore, PRIMO R1 exhibits strong zero-shot generalization on difficult failure detection tasks. We establish state-of-the-art performance on RoboFail benchmark with 67.0% accuracy, surpassing closed-source models like OpenAI o1 by 6.0%.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-16T17:53:28Z",
-                "arxiv:comment": "31 pages",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Yibin Liu"
-                    },
-                    {
-                        "name": "Yaxing Lyu"
-                    },
-                    {
-                        "name": "Daqi Gao"
-                    },
-                    {
-                        "name": "Zhixuan Liang"
-                    },
-                    {
-                        "name": "Weiliang Tang"
-                    },
-                    {
-                        "name": "Shilong Mu"
-                    },
-                    {
-                        "name": "Xiaokang Yang"
-                    },
-                    {
-                        "name": "Yao Mu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.15599v1",
-                "title": "SmartSearch: How Ranking Beats Structure for Conversational Memory Retrieval",
-                "updated": "2026-03-16T17:53:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.15599v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.15599v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent conversational memory systems invest heavily in LLM-based structuring at ingestion time and learned retrieval policies at query time. We show that neither is necessary. SmartSearch retrieves from raw, unstructured conversation history using a fully deterministic pipeline: NER-weighted substring matching for recall, rule-based entity discovery for multi-hop expansion, and a CrossEncoder+ColBERT rank fusion stage -- the only learned component -- running on CPU in ~650ms. Oracle analysis on two benchmarks identifies a compilation bottleneck: retrieval recall reaches 98.6%, but without intelligent ranking only 22.5% of gold evidence survives truncation to the token budget. With score-adaptive truncation and no per-dataset tuning, SmartSearch achieves 93.5% on LoCoMo and 88.4% on LongMemEval-S, exceeding all known memory systems under the same evaluation protocol on both benchmarks while using 8.5x fewer tokens than full-context baselines.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-16T17:53:21Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Jesper Derehag"
-                    },
-                    {
-                        "name": "Carlos Calva"
-                    },
-                    {
-                        "name": "Timmy Ghiurau"
-                    }
-                ]
+                "author": {
+                    "name": "Muhammad Ahmad"
+                }
             }
         ]
     }
