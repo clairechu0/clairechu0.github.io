@@ -5,81 +5,380 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-19T01:46:41Z",
+        "updated": "2026-03-19T04:17:43Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "551445",
+        "opensearch:totalResults": "551581",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.17527v1",
-                "title": "Mirror Descent on Riemannian Manifolds",
-                "updated": "2026-03-18T09:31:39Z",
+                "id": "http://arxiv.org/abs/2603.18004v1",
+                "title": "Unified Spatio-Temporal Token Scoring for Efficient Video VLMs",
+                "updated": "2026-03-18T17:59:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.17527v1",
+                        "@href": "https://arxiv.org/abs/2603.18004v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.17527v1",
+                        "@href": "https://arxiv.org/pdf/2603.18004v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Mirror Descent (MD) is a scalable first-order method widely used in large-scale optimization, with applications in image processing, policy optimization, and neural network training. This paper generalizes MD to optimization on Riemannian manifolds. In particular, we develop a Riemannian Mirror Descent (RMD) framework via reparameterization and further propose a stochastic variant of RMD. We also establish non-asymptotic convergence guarantees for both RMD and stochastic RMD. As an application to the Stiefel manifold, our RMD framework reduces to the Curvilinear Gradient Descent (CGD) method proposed in [26]. Moreover, when specializing the stochastic RMD framework to the Stiefel setting, we obtain a stochastic extension of CGD, which effectively addresses large-scale manifold optimization problems.",
+                "summary": "Token pruning is essential for enhancing the computational efficiency of vision-language models (VLMs), particularly for video-based tasks where temporal redundancy is prevalent. Prior approaches typically prune tokens either (1) within the vision transformer (ViT) exclusively for unimodal perception tasks such as action recognition and object segmentation, without adapting to downstream vision-language tasks; or (2) only within the LLM while leaving the ViT output intact, often requiring complex text-conditioned token selection mechanisms. In this paper, we introduce Spatio-Temporal Token Scoring (STTS), a simple and lightweight module that prunes vision tokens across both the ViT and the LLM without text conditioning or token merging, and is fully compatible with end-to-end training. By learning how to score temporally via an auxiliary loss and spatially via LLM downstream gradients, aided by our efficient packing algorithm, STTS prunes 50% of vision tokens throughout the entire architecture, resulting in a 62% improvement in efficiency during both training and inference with only a 0.7% drop in average performance across 13 short and long video QA tasks. Efficiency gains increase with more sampled frames per video. Applying test-time scaling for long-video QA further yields performance gains of 0.5-1% compared to the baseline. Overall, STTS represents a novel, simple yet effective technique for unified, architecture-wide vision token pruning.",
                 "category": [
                     {
-                        "@term": "stat.ML",
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.OC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-18T09:31:39Z",
+                "published": "2026-03-18T17:59:56Z",
                 "arxiv:primary_category": {
-                    "@term": "stat.ML"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Jiaxin Jiang"
+                        "name": "Jianrui Zhang"
                     },
                     {
-                        "name": "Lei Shi"
+                        "name": "Yue Yang"
                     },
                     {
-                        "name": "Jiyuan Tan"
+                        "name": "Rohun Tripathi"
+                    },
+                    {
+                        "name": "Winson Han"
+                    },
+                    {
+                        "name": "Ranjay Krishna"
+                    },
+                    {
+                        "name": "Christopher Clark"
+                    },
+                    {
+                        "name": "Yong Jae Lee"
+                    },
+                    {
+                        "name": "Sangho Lee"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.17523v1",
-                "title": "Translation Invariance of Neural Operators for the FitzHugh-Nagumo Model",
-                "updated": "2026-03-18T09:28:48Z",
+                "id": "http://arxiv.org/abs/2603.18001v1",
+                "title": "EchoGen: Cycle-Consistent Learning for Unified Layout-Image Generation and Understanding",
+                "updated": "2026-03-18T17:59:03Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.17523v1",
+                        "@href": "https://arxiv.org/abs/2603.18001v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.17523v1",
+                        "@href": "https://arxiv.org/pdf/2603.18001v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    },
+                    {
+                        "@rel": "related",
+                        "@href": "https://doi.org/10.1609/aaai.v40i16.38418",
+                        "@title": "doi"
+                    }
+                ],
+                "summary": "In this work, we present EchoGen, a unified framework for layout-to-image generation and image grounding, capable of generating images with accurate layouts and high fidelity to text descriptions (e.g., spatial relationships), while grounding the image robustly at the same time. We believe that image grounding possesses strong text and layout understanding abilities, which can compensate for the corresponding limitations in layout-to-image generation. At the same time, images generated from layouts exhibit high diversity in content, thereby enhancing the robustness of image grounding. Jointly training both tasks within a unified model can promote performance improvements for each. However, we identify that this joint training paradigm encounters several optimization challenges and results in restricted performance. To address these issues, we propose progressive training strategies. First, the Parallel Multi-Task Pre-training (PMTP) stage equips the model with basic abilities for both tasks, leveraging shared tokens to accelerate training. Next, the Dual Joint Optimization (DJO) stage exploits task duality to sequentially integrate the two tasks, enabling unified optimization. Finally, the Cycle RL stage eliminates reliance on visual supervision by using consistency constraints as rewards, significantly enhancing the model's unified capabilities via the GRPO strategy. Extensive experiments demonstrate state-of-the-art results on both layout-to-image generation and image grounding benchmarks, and reveal clear synergistic gains from optimizing the two tasks together.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-18T17:59:03Z",
+                "arxiv:comment": "9 pages, Accepted at the 40th AAAI Conference on Artificial Intelligence (AAAI 2026)",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "arxiv:journal_ref": "Proceedings of the AAAI Conference on Artificial Intelligence, 40(16), 2026",
+                "author": [
+                    {
+                        "name": "Kai Zou"
+                    },
+                    {
+                        "name": "Hongbo Liu"
+                    },
+                    {
+                        "name": "Dian Zheng"
+                    },
+                    {
+                        "name": "Jianxiong Gao"
+                    },
+                    {
+                        "name": "Zhiwei Zhao"
+                    },
+                    {
+                        "name": "Bin Liu"
+                    }
+                ],
+                "arxiv:doi": "10.1609/aaai.v40i16.38418"
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.17995v1",
+                "title": "LoST: Level of Semantics Tokenization for 3D Shapes",
+                "updated": "2026-03-18T17:56:06Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.17995v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.17995v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Neural Operators (NOs) are a powerful deep learning framework designed to learn the solution operator that arise from partial differential equations. This study investigates NOs ability to capture the stiff spatio-temporal dynamics of the FitzHugh-Nagumo model, which describes excitable cells. A key contribution of this work is evaluating the translation invariance using a novel training strategy. NOs are trained using an applied current with varying spatial locations and intensities at a fixed time, and the test set introduces a more challenging out-of-distribution scenario in which the applied current is translated in both time and space. This approach significantly reduces the computational cost of dataset generation. Moreover we benchmark seven NOs architectures: Convolutional Neural Operators (CNOs), Deep Operator Networks (DONs), DONs with CNN encoder (DONs-CNN), Proper Orthogonal Decomposition DONs (POD-DONs), Fourier Neural Operators (FNOs), Tucker Tensorized FNOs (TFNOs), Localized Neural Operators (LocalNOs). We evaluated these models based on training and test accuracy, efficiency, and inference speed. Our results reveal that CNOs performs well on translated test dynamics. However, they require higher training costs, though their performance on the training set is similar to that of the other considered architectures. In contrast, FNOs achieve the lowest training error, but have the highest inference time. Regarding the translated dynamics, FNOs and their variants provide less accurate predictions. Finally, DONs and their variants demonstrate high efficiency in both training and inference, however they do not generalize well to the test set. These findings highlight the current capabilities and limitations of NOs in capturing complex ionic model dynamics and provide a comprehensive benchmark including their application to scenarios involving translated dynamics.",
+                "summary": "Tokenization is a fundamental technique in the generative modeling of various modalities. In particular, it plays a critical role in autoregressive (AR) models, which have recently emerged as a compelling option for 3D generation. However, optimal tokenization of 3D shapes remains an open question. State-of-the-art (SOTA) methods primarily rely on geometric level-of-detail (LoD) hierarchies, originally designed for rendering and compression. These spatial hierarchies are often token-inefficient and lack semantic coherence for AR modeling. We propose Level-of-Semantics Tokenization (LoST), which orders tokens by semantic salience, such that early prefixes decode into complete, plausible shapes that possess principal semantics, while subsequent tokens refine instance-specific geometric and semantic details. To train LoST, we introduce Relational Inter-Distance Alignment (RIDA), a novel 3D semantic alignment loss that aligns the relational structure of the 3D shape latent space with that of the semantic DINO feature space. Experiments show that LoST achieves SOTA reconstruction, surpassing previous LoD-based 3D shape tokenizers by large margins on both geometric and semantic reconstruction metrics. Moreover, LoST achieves efficient, high-quality AR 3D generation and enables downstream tasks like semantic retrieval, while using only 0.1%-10% of the tokens needed by prior AR models.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.GR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-18T17:56:06Z",
+                "arxiv:comment": "CVPR 2026; Project website-- https://lost3d.github.io",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Niladri Shekhar Dutt"
+                    },
+                    {
+                        "name": "Zifan Shi"
+                    },
+                    {
+                        "name": "Paul Guerrero"
+                    },
+                    {
+                        "name": "Chun-Hao Paul Huang"
+                    },
+                    {
+                        "name": "Duygu Ceylan"
+                    },
+                    {
+                        "name": "Niloy J. Mitra"
+                    },
+                    {
+                        "name": "Xuelin Chen"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.17984v1",
+                "title": "On min-Storey estimators for multiple testing and conformal novelty detection",
+                "updated": "2026-03-18T17:46:33Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.17984v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.17984v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In a multiple testing task, finding an appropriate estimator of the proportion $\u03c0_0$ of non-signal in the data to boost power of false discovery rate (FDR) controlling procedures is a long-standing research theme, sometimes referred to as 'adaptive FDR control'. The interest in this theme has been reinforced in the recent years with conformal novelty detection, for which it turns out that similar tools can be used in combination with any 'blackbox' machine learning algorithm. Nevertheless, perhaps surprisingly, finding a solution for 'adaptive FDR control' that is optimal in a broad sense is still an open problem. This paper fills this gap by introducing new $\u03c0_0$-estimators, referred to as min-Storey (MS) and interval-min-Storey (IMS), which are built upon the so-called 'Storey estimator'. Plugging these estimators in the adaptive Benjamini-Hochberg (BH) procedure is shown to deliver FDR control both in the independent and conformal settings. In addition, these methods satisfy an optimal power property over any (regular) alternative distribution. The excellent behaviors of the new adaptive procedures are illustrated with numerical experiments both in the independent and conformal models for various distribution structures.",
+                "category": [
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-18T17:46:33Z",
+                "arxiv:comment": "52 pages, 9 figures, 2 tables",
+                "arxiv:primary_category": {
+                    "@term": "stat.ME"
+                },
+                "author": [
+                    {
+                        "name": "Gao Zijun"
+                    },
+                    {
+                        "name": "Roquain Etienne"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.17974v1",
+                "title": "Toward Scalable Automated Repository-Level Datasets for Software Vulnerability Detection",
+                "updated": "2026-03-18T17:38:35Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.17974v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.17974v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Software vulnerabilities continue to grow in volume and remain difficult to detect in practice. Although learning-based vulnerability detection has progressed, existing benchmarks are largely function-centric and fail to capture realistic, executable, interprocedural settings. Recent repo-level security benchmarks demonstrate the importance of realistic environments, but their manual curation limits scale. This doctoral research proposes an automated benchmark generator that injects realistic vulnerabilities into real-world repositories and synthesizes reproducible proof-of-vulnerability (PoV) exploits, enabling precisely labeled datasets for training and evaluating repo-level vulnerability detection agents. We further investigate an adversarial co-evolution loop between injection and detection agents to improve robustness under realistic constraints.",
+                "category": [
+                    {
+                        "@term": "cs.SE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-18T17:38:35Z",
+                "arxiv:comment": "Supervisor: Prof. Massih-Reza Amini",
+                "arxiv:primary_category": {
+                    "@term": "cs.SE"
+                },
+                "author": {
+                    "name": "Amine Lbath"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.17973v1",
+                "title": "TDAD: Test-Driven Agentic Development - Reducing Code Regressions in AI Coding Agents via Graph-Based Impact Analysis",
+                "updated": "2026-03-18T17:38:22Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.17973v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.17973v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "AI coding agents can resolve real-world software issues, yet they frequently introduce regressions, breaking tests that previously passed. Current benchmarks focus almost exclusively on resolution rate, leaving regression behavior under-studied. This paper presents TDAD (Test-Driven Agentic Development), an open-source tool and benchmark methodology that combines abstract-syntax-tree (AST) based code-test graph construction with weighted impact analysis to surface the tests most likely affected by a proposed change. Evaluated on SWE-bench Verified with two local models (Qwen3-Coder 30B on 100 instances and Qwen3.5-35B-A3B on 25 instances), TDAD's GraphRAG workflow reduced test-level regressions by 70% (6.08% to 1.82%) and improved resolution from 24% to 32% when deployed as an agent skill. A surprising finding is that TDD prompting alone increased regressions (9.94%), revealing that smaller models benefit more from contextual information (which tests to verify) than from procedural instructions (how to do TDD). An autonomous auto-improvement loop raised resolution from 12% to 60% on a 10-instance subset with 0% regression. These findings suggest that for AI agent tool design, surfacing contextual information outperforms prescribing procedural workflows. All code, data, and logs are publicly available at https://github.com/pepealonso95/TDAD.",
+                "category": [
+                    {
+                        "@term": "cs.SE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-18T17:38:22Z",
+                "arxiv:comment": "Toolpaper, 7 pages, 3 tables, 1 figure, 1 algorithm. Submitted to ACM AIWare 2026 (Data and Benchmark Track)",
+                "arxiv:primary_category": {
+                    "@term": "cs.SE"
+                },
+                "author": {
+                    "name": "Pepe Alonso"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.17971v1",
+                "title": "CaRBM: A Fixed-Depth Quantum Algorithm with Partial Correction for Thermal State Preparation",
+                "updated": "2026-03-18T17:38:05Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.17971v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.17971v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We introduce the CaRBM algorithm for fixed-depth thermal state preparation. Our algorithm is based on thermal state purification and uses the Restricted Boltzmann Machine (RBM) block-encoding scheme to implement the imaginary-time propagator $e^{-\u03b2H}$, which is implemented in the quantum circuit in a fixed-depth manner via Cartan decomposition. Our algorithm performs best at high temperatures, with the success probability of the block encoding decreasing as the temperature decreases. To increase the success probability, we have devised a correction scheme for the block-encoding that increases the temperature range our algorithm reliably probes. We demonstrate our algorithm by calculating the partition function zeros of the XXZ model and the phase diagram of the Gross-Neveu model, which is a model of strongly interacting relativistic fermions.",
+                "category": [
+                    {
+                        "@term": "quant-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cond-mat.stat-mech",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "hep-lat",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-18T17:38:05Z",
+                "arxiv:comment": "9+3 pages, 5 figures",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Omar Alsheikh"
+                    },
+                    {
+                        "name": "A. F. Kemper"
+                    },
+                    {
+                        "name": "Ermal Rrapaj"
+                    },
+                    {
+                        "name": "Goksu C. Toga"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.17970v1",
+                "title": "Beyond Muon: MUD (MomentUm Decorrelation) for Faster Transformer Training",
+                "updated": "2026-03-18T17:37:31Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.17970v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.17970v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Orthogonalized-momentum optimizers such as Muon improve transformer training by approximately whitening/orthogonalizing matrix-valued momentum updates via a short polar-decomposition iteration. However, polar-factor approximations typically require multiple large matrix multiplications, and the resulting overhead can be substantial and hardware-dependent. We introduce MUD (MomentUm Decorrelation), a complementary whitening approach that replaces Muon's polar update with a triangular (Cholesky-like) whitening surrogate inspired by classical Gram--Schmidt and Gauss-Seidel ideas. We show that row-orthonormal matrices are fixed points of the MUD map, relate the inner step to symmetric Gauss-Seidel preconditioning of the Gram matrix, and prove quadratic local convergence near the fixed point. In terms of time-to-perplexity, MUD yields consistent 10-50\\% wall-clock improvements over tuned AdamW and Muon in time-to-perplexity, typically converging slightly slower per step than Muon but with substantially lower optimizer overhead -- relative to Muon, MUD improves peak tokens/s by roughly $1.3-2.6\\times$ across most settings and up to nearly $3\\times$ on GPT-2 large on an A100. We also demonstrate training a ESM-2 150M protein language model, where MUD matches Muon-level validation perplexity in significantly less wall-clock time.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -88,376 +387,104 @@
                     {
                         "@term": "math.NA",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-18T09:28:48Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": {
-                    "name": "Luca Pellegrini"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.17522v1",
-                "title": "Detecting the Machine: A Comprehensive Benchmark of AI-Generated Text Detectors Across Architectures, Domains, and Adversarial Conditions",
-                "updated": "2026-03-18T09:27:27Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.17522v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.17522v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The rapid proliferation of large language models (LLMs) has created an urgent need for robust and generalizable detectors of machine-generated text. Existing benchmarks typically evaluate a single detector on a single dataset under ideal conditions, leaving open questions about cross-domain transfer, cross-LLM generalization, and adversarial robustness.\n  We present a comprehensive benchmark evaluating diverse detection approaches across two corpora: HC3 (23,363 human-ChatGPT pairs) and ELI5 (15,000 human-Mistral-7B pairs). Methods include classical classifiers, fine-tuned transformer encoders (BERT, RoBERTa, ELECTRA, DistilBERT, DeBERTa-v3), a CNN, an XGBoost stylometric model, perplexity-based detectors, and LLM-as-detector prompting.\n  Results show that transformer models achieve near-perfect in-distribution performance but degrade under domain shift. The XGBoost stylometric model matches performance while remaining interpretable. LLM-based detectors underperform and are affected by generator-detector identity bias. Perplexity-based methods exhibit polarity inversion, with modern LLM outputs showing lower perplexity than human text, but remain effective when corrected. No method generalizes robustly across domains and LLM sources.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
+                        "@term": "math.OC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-18T09:27:27Z",
-                "arxiv:comment": "~30 pages, 10+ figures. Code available at: https://github.com/MadsDoodle/Human-and-LLM-Generated-Text-Detectability-under-Adversarial-Humanization",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Madhav S. Baidya"
-                    },
-                    {
-                        "name": "S. S. Baidya"
-                    },
-                    {
-                        "name": "Chirag Chawla"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.17520v1",
-                "title": "PCA-Seg: Revisiting Cost Aggregation for Open-Vocabulary Semantic and Part Segmentation",
-                "updated": "2026-03-18T09:26:43Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.17520v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.17520v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent advances in vision-language models (VLMs) have garnered substantial attention in open-vocabulary semantic and part segmentation (OSPS). However, existing methods extract image-text alignment cues from cost volumes through a serial structure of spatial and class aggregations, leading to knowledge interference between class-level semantics and spatial context. Therefore, this paper proposes a simple yet effective parallel cost aggregation (PCA-Seg) paradigm to alleviate the above challenge, enabling the model to capture richer vision-language alignment information from cost volumes. Specifically, we design an expert-driven perceptual learning (EPL) module that efficiently integrates semantic and contextual streams. It incorporates a multi-expert parser to extract complementary features from multiple perspectives. In addition, a coefficient mapper is designed to adaptively learn pixel-specific weights for each feature, enabling the integration of complementary knowledge into a unified and robust feature embedding. Furthermore, we propose a feature orthogonalization decoupling (FOD) strategy to mitigate redundancy between the semantic and contextual streams, which allows the EPL module to learn diverse knowledge from orthogonalized features. Extensive experiments on eight benchmarks show that each parallel block in PCA-Seg adds merely 0.35M parameters while achieving state-of-the-art OSPS performance.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-18T09:26:43Z",
-                "arxiv:comment": "Accepted by CVPR2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Jianjian Yin"
-                    },
-                    {
-                        "name": "Tao Chen"
-                    },
-                    {
-                        "name": "Yi Chen"
-                    },
-                    {
-                        "name": "Gensheng Pei"
-                    },
-                    {
-                        "name": "Xiangbo Shu"
-                    },
-                    {
-                        "name": "Yazhou Yao"
-                    },
-                    {
-                        "name": "Fumin Shen"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.17513v1",
-                "title": "Proof-of-Authorship for Diffusion-based AI Generated Content",
-                "updated": "2026-03-18T09:21:47Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.17513v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.17513v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent advancements in AI-generated content (AIGC) have introduced new challenges in intellectual property protection and the authentication of generated objects. We focus on scenarios in which an author seeks to assert authorship of an object generated using latent diffusion models (LDMs), in the presence of adversaries who attempt to falsely claim authorship of objects they did not create. While proof-of-ownership has been studied in the context of multimedia content through techniques such as time-stamping and watermarking, these approaches face notable limitations. In contrast to traditional content creation sources (e.g., cameras), the LDM generation process offers greater control to the author. Specifically, the random seed used during generation can be deliberately chosen. By binding the seed to the author's identity using cryptographic pseudorandom functions, the author can assert to be the creator of the object. We refer to this stronger guarantee as proof-of-authorship, since only the creator of the object can legitimately claim the object. This contrasts with proof-of-ownership via time-stamping or watermarking, where any entity could potentially claim ownership of an object by being the first to timestamp or embed the watermark. We propose a proof-of-authorship framework involving a probabilistic adjudicator who quantifies the probability that a claim is false. Furthermore, unlike prior approaches, the proposed framework does not involve any secret. We explore various attack scenarios and analyze design choices using Stable Diffusion 2.1 (SD2.1) as representative case studies.",
-                "category": {
-                    "@term": "cs.CR",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-18T09:21:47Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CR"
-                },
-                "author": [
-                    {
-                        "name": "De Zhang Lee"
-                    },
-                    {
-                        "name": "Han Fang"
-                    },
-                    {
-                        "name": "Ee-Chien Chang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.17510v1",
-                "title": "Interpreting Context-Aware Human Preferences for Multi-Objective Robot Navigation",
-                "updated": "2026-03-18T09:14:05Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.17510v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.17510v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Robots operating in human-shared environments must not only achieve task-level navigation objectives such as safety and efficiency, but also adapt their behavior to human preferences. However, as human preferences are typically expressed in natural language and depend on environmental context, it is difficult to directly integrate them into low-level robot control policies. In this work, we present a pipeline that enables robots to understand and apply context-dependent navigation preferences by combining foundational models with a Multi-Objective Reinforcement Learning (MORL) navigation policy. Thus, our approach integrates high-level semantic reasoning with low-level motion control. A Vision-Language Model (VLM) extracts structured environmental context from onboard visual observations, while Large Language Models (LLM) convert natural language user feedback into interpretable, context-dependent behavioral rules stored in a persistent but updatable rule memory. A preference translation module then maps contextual information and stored rules into numerical preference vectors that parameterize a pretrained MORL policy for real-time navigation adaptation. We evaluate the proposed framework through quantitative component-level evaluations, a user study, and real-world robot deployments in various indoor environments. Our results demonstrate that the system reliably captures user intent, generates consistent preference vectors, and enables controllable behavior adaptation across diverse contexts. Overall, the proposed pipeline improves the adaptability, transparency, and usability of robots operating in shared human environments, while maintaining safe and responsive real-time control.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-18T09:14:05Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Tharun Sethuraman"
-                    },
-                    {
-                        "name": "Subham Agrawal"
-                    },
-                    {
-                        "name": "Nils Dengler"
-                    },
-                    {
-                        "name": "Jorge de Heuvel"
-                    },
-                    {
-                        "name": "Teena Hassan"
-                    },
-                    {
-                        "name": "Maren Bennewitz"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.17507v1",
-                "title": "QuantFL: Sustainable Federated Learning for Edge IoT via Pre-Trained Model Quantisation",
-                "updated": "2026-03-18T09:08:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.17507v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.17507v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Federated Learning (FL) enables privacy-preserving intelligence on Internet of Things (IoT) devices but incurs a significant carbon footprint due to the high energy cost of frequent uplink transmission. While pre-trained models are increasingly available on edge devices, their potential to reduce the energy overhead of fine-tuning remains underexplored. In this work, we propose QuantFL, a sustainable FL framework that leverages pre-trained initialisation to enable aggressive, computationally lightweight quantisation. We demonstrate that pre-training naturally concentrates update statistics, allowing us to use memory-efficient bucket quantisation without the energy-intensive overhead of complex error-feedback mechanisms. On MNIST and CIFAR-100, QuantFL reduces total communication by 40\\% ($\\simeq40\\%$ total-bit reduction with full-precision downlink; $\\geq80\\%$ on uplink or when downlink is quantised) while matching or exceeding uncompressed baselines under strict bandwidth budgets; BU attains 89.00\\% (MNIST) and 66.89\\% (CIFAR-100) test accuracy with orders of magnitude fewer bits. We also account for uplink and downlink costs and provide ablations on quantisation levels and initialisation. QuantFL delivers a practical, \"green\" recipe for scalable training on battery-constrained IoT networks.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-18T09:08:28Z",
+                "published": "2026-03-18T17:37:31Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Charuka Herath"
+                        "name": "Ben S. Southworth"
                     },
                     {
-                        "name": "Yogachandran Rahulamathavan"
-                    },
-                    {
-                        "name": "Varuna De Silva"
-                    },
-                    {
-                        "name": "Sangarapillai Lambotharan"
+                        "name": "Stephen Thomas"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.17504v1",
-                "title": "Inducing Epistemological Humility in Large Language Models: A Targeted SFT Approach to Reducing Hallucination",
-                "updated": "2026-03-18T09:07:39Z",
+                "id": "http://arxiv.org/abs/2603.17962v1",
+                "title": "ConGA: Guidelines for Contextual Gender Annotation. A Framework for Annotating Gender in Machine Translation",
+                "updated": "2026-03-18T17:31:47Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.17504v1",
+                        "@href": "https://arxiv.org/abs/2603.17962v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.17504v1",
+                        "@href": "https://arxiv.org/pdf/2603.17962v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large language models (LLMs) often hallucinate, producing fluent but false information, partly because supervised fine-tuning (SFT) implicitly rewards always responding. We introduce $\\textit{HypoTermInstruct}$, an SFT dataset (31,487 responses for 11,151 questions) designed to teach models epistemological humility-the ability to recognize the limits of their own knowledge and admit uncertainty. This is achieved through questions about non-existent \"hypothetical\" terms. We also release $\\textit{HypoTermQA-Enhanced}$, a benchmark for hallucination tendency strengthened through multiple validations. We conducted 800 controlled LoRA SFT runs across $\\textit{Llama3.1-8B}$ and $\\textit{Gemma3-4B}$ (base and instruct), testing 100 fine-tuning configurations with paired controls. Our results demonstrate that replacing generic instruction data with $\\textit{HypoTermInstruct}$ significantly improves the HypoTerm Score (median increases of 0.19% to 25.91%) and FactScore (+0.39% to +0.86%), while maintaining stable performance on MMLU (minimal decreases of 0.26% to 0.35%). Our work demonstrates that targeted, high-quality SFT data teaching meta-cognitive skills can effectively reduce hallucination without preference/RL pipelines, providing mechanistic insights and a practical path toward more reliable AI systems.",
+                "summary": "Handling gender across languages remains a persistent challenge for Machine Translation (MT) and Large Language Models (LLMs), especially when translating from gender-neutral languages into morphologically gendered ones, such as English to Italian. English largely omits grammatical gender, while Italian requires explicit agreement across multiple grammatical categories. This asymmetry often leads MT systems to default to masculine forms, reinforcing bias and reducing translation accuracy. To address this issue, we present the Contextual Gender Annotation (ConGA) framework, a linguistically grounded set of guidelines for word-level gender annotation. The scheme distinguishes between semantic gender in English through three tags, Masculine (M), Feminine (F), and Ambiguous (A), and grammatical gender realisation in Italian (Masculine (M), Feminine (F)), combined with entity-level identifiers for cross-sentence tracking. We apply ConGA to the gENder-IT dataset, creating a gold-standard resource for evaluating gender bias in translation. Our results reveal systematic masculine overuse and inconsistent feminine realisation, highlighting persistent limitations of current MT systems. By combining fine-grained linguistic annotation with quantitative evaluation, this work offers both a methodology and a benchmark for building more gender-aware and multilingual NLP systems.",
                 "category": {
                     "@term": "cs.CL",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-18T09:07:39Z",
+                "published": "2026-03-18T17:31:47Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Cem Uluoglakci"
+                        "name": "Argentina Anna Rescigno"
                     },
                     {
-                        "name": "Tugba Taskaya Temizel"
+                        "name": "Eva Vanmassenhove"
+                    },
+                    {
+                        "name": "Johanna Monti"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.17499v1",
-                "title": "A Tutorial on Learning-Based Radio Map Construction: Data, Paradigms, and Physics-Awarenes",
-                "updated": "2026-03-18T09:00:25Z",
+                "id": "http://arxiv.org/abs/2603.17952v1",
+                "title": "Gender Disambiguation in Machine Translation: Diagnostic Evaluation in Decoder-Only Architectures",
+                "updated": "2026-03-18T17:26:36Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.17499v1",
+                        "@href": "https://arxiv.org/abs/2603.17952v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.17499v1",
+                        "@href": "https://arxiv.org/pdf/2603.17952v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The integration of artificial intelligence into next-generation wireless networks necessitates the accurate construction of radio maps (RMs) as a foundational prerequisite for electromagnetic digital twins. A RM provides the digital representation of the wireless propagation environment, mapping complex geographical and topological boundary conditions to critical spatial-spectral metrics that range from received signal strength to full channel state information matrices. This tutorial presents a comprehensive survey of learning-based RM construction, systematically addressing three intertwined dimensions: data, paradigms, and physics-awareness. From the data perspective, we review physical measurement campaigns, ray tracing simulation engines, and publicly available benchmark datasets, identifying their respective strengths and fundamental limitations. From the paradigm perspective, we establish a core taxonomy that categorizes RM construction into source-aware forward prediction and source-agnostic inverse reconstruction, and examine five principal neural architecture families spanning convolutional neural networks, vision transformers, graph neural networks, generative adversarial networks, and diffusion models. We further survey optics-inspired methods adapted from neural radiance fields and 3D Gaussian splatting for continuous wireless radiation field modeling. From the physics-awareness perspective, we introduce a three-level integration framework encompassing data-level feature engineering, loss-level partial differential equation regularization, and architecture-level structural isomorphism. Open challenges including foundation model development, physical hallucination detection, and amortized inference for real-time deployment are discussed to outline future research directions.",
-                "category": [
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.SP",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-18T09:00:25Z",
+                "summary": "While Large Language Models achieve state-of-the-art results across a wide range of NLP tasks, they remain prone to systematic biases. Among these, gender bias is particularly salient in MT, due to systematic differences across languages in whether and how gender is marked. As a result, translation often requires disambiguating implicit source signals into explicit gender-marked forms. In this context, standard benchmarks may capture broad disparities but fail to reflect the full complexity of gender bias in modern MT. In this paper, we extend recent frameworks on bias evaluation by: (i) introducing a novel measure coined \"Prior Bias\", capturing a model's default gender assumptions, and (ii) applying the framework to decoder-only MT models. Our results show that, despite their scale and state-of-the-art status, decoder-only models do not generally outperform encoder-decoder architectures on gender-specific metrics; however, post-training (e.g., instruction tuning) not only improves contextual awareness but also reduces the masculine Prior Bias.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-18T17:26:36Z",
                 "arxiv:primary_category": {
-                    "@term": "eess.SY"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Xiucheng Wang"
+                        "name": "Chiara Manna"
                     },
                     {
-                        "name": "Yuhao Pan"
+                        "name": "Hosein Mohebbi"
                     },
                     {
-                        "name": "Nan Cheng"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.17497v1",
-                "title": "From Optimizable to Interactable: Mixed Digital Twin-Empowered Testing of Vehicle-Infrastructure Cooperation Systems",
-                "updated": "2026-03-18T08:58:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.17497v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Afra Alishahi"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.17497v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Sufficient testing under corner cases is critical for the long-term operation of vehicle-infrastructure cooperation systems (VICS). However, existing corner-case generation methods are primarily AI-driven, and VICS testing under corner cases is typically limited to simulation. In this paper, we introduce an L5 ''Interactable'' level to the VICS digital twin (VICS-DT) taxonomy, extending beyond the conventional L4 ''Optimizable'' level. We further propose an L5-level VICS testing framework, IMPACT (Interactive Mixed-digital-twin Paradigm for Advanced Cooperative vehicle-infrastructure Testing). By enabling direct human interactions with VICS entities, IMPACT incorporates highly uncertain and unpredictable human behaviors into the testing loop, naturally generating high-quality corner cases that complement AI-based methods. Furthermore, the mixedDT-enabled ''Physical-Virtual Action Interaction'' facilitates safe VICS testing under corner cases, incorporating real-world environments and entities rather than purely in simulation. Finally, we implement IMPACT on the I-VIT (Interactive Vehicle-Infrastructure Testbed), and experiments demonstrate its effectiveness. The experimental videos are available at our project website: https://dongjh20.github.io/IMPACT.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Fr\u00e9d\u00e9ric Blain"
                     },
                     {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-18T08:58:21Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Jianghong Dong"
-                    },
-                    {
-                        "name": "Chunying Yang"
-                    },
-                    {
-                        "name": "Mengchi Cai"
-                    },
-                    {
-                        "name": "Chaoyi Chen"
-                    },
-                    {
-                        "name": "Qing Xu"
-                    },
-                    {
-                        "name": "Jianqiang Wang"
-                    },
-                    {
-                        "name": "Keqiang Li"
+                        "name": "Eva Vanmassenhove"
                     }
                 ]
             }
