@@ -5,36 +5,423 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-20T01:28:45Z",
+        "updated": "2026-03-20T04:09:00Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "551892",
+        "opensearch:totalResults": "552007",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.18892v1",
-                "title": "MultihopSpatial: Multi-hop Compositional Spatial Reasoning Benchmark for Vision-Language Model",
-                "updated": "2026-03-19T13:33:26Z",
+                "id": "http://arxiv.org/abs/2603.19235v1",
+                "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
+                "updated": "2026-03-19T17:59:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.18892v1",
+                        "@href": "https://arxiv.org/abs/2603.19235v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.18892v1",
+                        "@href": "https://arxiv.org/pdf/2603.19235v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Spatial reasoning is foundational for Vision-Language Models (VLMs), particularly when deployed as Vision-Language-Action (VLA) agents in physical environments. However, existing benchmarks predominantly focus on elementary, single-hop relations, neglecting the multi-hop compositional reasoning and precise visual grounding essential for real-world scenarios. To address this, we introduce MultihopSpatial, offering three key contributions: (1) A comprehensive benchmark designed for multi-hop and compositional spatial reasoning, featuring 1- to 3-hop complex queries across diverse spatial perspectives. (2) Acc@50IoU, a complementary metric that simultaneously evaluates reasoning and visual grounding by requiring both answer selection and precise bounding box prediction - capabilities vital for robust VLA deployment. (3) MultihopSpatial-Train, a dedicated large-scale training corpus to foster spatial intelligence. Extensive evaluation of 37 state-of-the-art VLMs yields eight key insights, revealing that compositional spatial reasoning remains a formidable challenge. Finally, we demonstrate that reinforcement learning post-training on our corpus enhances both intrinsic VLM spatial reasoning and downstream embodied manipulation performance.",
+                "summary": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
                 "category": [
                     {
                         "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-19T17:59:58Z",
+                "arxiv:comment": "31 pages, 12 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Xianjin Wu"
+                    },
+                    {
+                        "name": "Dingkang Liang"
+                    },
+                    {
+                        "name": "Tianrui Feng"
+                    },
+                    {
+                        "name": "Kui Xia"
+                    },
+                    {
+                        "name": "Yumeng Zhang"
+                    },
+                    {
+                        "name": "Xiaofan Li"
+                    },
+                    {
+                        "name": "Xiao Tan"
+                    },
+                    {
+                        "name": "Xiang Bai"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.19234v1",
+                "title": "Matryoshka Gaussian Splatting",
+                "updated": "2026-03-19T17:59:56Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.19234v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.19234v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that enables continuous LoD for standard 3DGS pipelines without sacrificing full-capacity rendering quality. MGS learns a single ordered set of Gaussians such that rendering any prefix, the first k splats, produces a coherent reconstruction whose fidelity improves smoothly with increasing budget. Our key idea is stochastic budget training: each iteration samples a random splat budget and optimises both the corresponding prefix and the full set. This strategy requires only two forward passes and introduces no architectural modifications. Experiments across four benchmarks and six baselines show that MGS matches the full-capacity performance of its backbone while enabling a continuous speed-quality trade-off from a single model. Extensive ablations on ordering strategies, training objectives, and model capacity further validate the designs.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.GR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-19T17:59:56Z",
+                "arxiv:comment": "project page: https://zhilinguo.github.io/MGS",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zhilin Guo"
+                    },
+                    {
+                        "name": "Boqiao Zhang"
+                    },
+                    {
+                        "name": "Hakan Aktas"
+                    },
+                    {
+                        "name": "Kyle Fogarty"
+                    },
+                    {
+                        "name": "Jeffrey Hu"
+                    },
+                    {
+                        "name": "Nursena Koprucu Aslan"
+                    },
+                    {
+                        "name": "Wenzhao Li"
+                    },
+                    {
+                        "name": "Canberk Baykal"
+                    },
+                    {
+                        "name": "Albert Miao"
+                    },
+                    {
+                        "name": "Josef Bengtson"
+                    },
+                    {
+                        "name": "Chenliang Zhou"
+                    },
+                    {
+                        "name": "Weihao Xia"
+                    },
+                    {
+                        "name": "Cristina Nader Vasconcelos. Cengiz Oztireli"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.19232v1",
+                "title": "Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens",
+                "updated": "2026-03-19T17:59:55Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.19232v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.19232v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fundamental challenges. In this paper, we present Cubic Discrete Diffusion (CubiD), the first discrete generation model for high-dimensional representations. CubiD performs fine-grained masking throughout the high-dimensional discrete representation -- any dimension at any position can be masked and predicted from partial observations. This enables the model to learn rich correlations both within and across spatial positions, with the number of generation steps fixed at $T$ regardless of feature dimensionality, where $T \\ll hwd$. On ImageNet-256, CubiD achieves state-of-the-art discrete generation with strong scaling behavior from 900M to 3.7B parameters. Crucially, we validate that these discretized tokens preserve original representation capabilities, demonstrating that the same discrete tokens can effectively serve both understanding and generation tasks. We hope this work will inspire future research toward unified multimodal architectures. Code is available at: https://github.com/YuqingWang1029/CubiD.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-19T17:59:55Z",
+                "arxiv:comment": "Accepted by CVPR 2026 main track; Code: https://github.com/YuqingWang1029/CubiD",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yuqing Wang"
+                    },
+                    {
+                        "name": "Chuofan Ma"
+                    },
+                    {
+                        "name": "Zhijie Lin"
+                    },
+                    {
+                        "name": "Yao Teng"
+                    },
+                    {
+                        "name": "Lijun Yu"
+                    },
+                    {
+                        "name": "Shuai Wang"
+                    },
+                    {
+                        "name": "Jiaming Han"
+                    },
+                    {
+                        "name": "Jiashi Feng"
+                    },
+                    {
+                        "name": "Yi Jiang"
+                    },
+                    {
+                        "name": "Xihui Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.19229v1",
+                "title": "NavTrust: Benchmarking Trustworthiness for Embodied Navigation",
+                "updated": "2026-03-19T17:59:51Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.19229v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.19229v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "There are two major categories of embodied navigation: Vision-Language Navigation (VLN), where agents navigate by following natural language instructions; and Object-Goal Navigation (OGN), where agents navigate to a specified target object. However, existing work primarily evaluates model performance under nominal conditions, overlooking the potential corruptions that arise in real-world settings. To address this gap, we present NavTrust, a unified benchmark that systematically corrupts input modalities, including RGB, depth, and instructions, in realistic scenarios and evaluates their impact on navigation performance. To our best knowledge, NavTrust is the first benchmark that exposes embodied navigation agents to diverse RGB-Depth corruptions and instruction variations in a unified framework. Our extensive evaluation of seven state-of-the-art approaches reveals substantial performance degradation under realistic corruptions, which highlights critical robustness gaps and provides a roadmap toward more trustworthy embodied navigation systems. Furthermore, we systematically evaluate four distinct mitigation strategies to enhance robustness against RGB-Depth and instructions corruptions. Our base models include Uni-NaVid and ETPNav. We deployed them on a real mobile robot and observed improved robustness to corruptions. The project website is: https://navtrust.github.io.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-19T17:59:51Z",
+                "arxiv:comment": "Project Website: https://navtrust.github.io",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Huaide Jiang"
+                    },
+                    {
+                        "name": "Yash Chaudhary"
+                    },
+                    {
+                        "name": "Yuping Wang"
+                    },
+                    {
+                        "name": "Zehao Wang"
+                    },
+                    {
+                        "name": "Raghav Sharma"
+                    },
+                    {
+                        "name": "Manan Mehta"
+                    },
+                    {
+                        "name": "Yang Zhou"
+                    },
+                    {
+                        "name": "Lichao Sun"
+                    },
+                    {
+                        "name": "Zhiwen Fan"
+                    },
+                    {
+                        "name": "Zhengzhong Tu"
+                    },
+                    {
+                        "name": "Jiachen Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.19228v1",
+                "title": "SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing",
+                "updated": "2026-03-19T17:59:51Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.19228v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.19228v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editing into semantic anchoring and motion modeling. First, we introduce Semantic Anchoring, which establishes a reliable visual anchor by jointly predicting semantic tokens and video latents at sparse anchor frames, enabling purely instruction-aware structural planning. Second, Motion Alignment pre-trains the same backbone on motion-centric video restoration pretext tasks (cube inpainting, speed perturbation, and tube shuffle), enabling the model to internalize temporal dynamics directly from raw videos. SAMA is optimized with a two-stage pipeline: a factorized pre-training stage that learns inherent semantic-motion representations without paired video-instruction editing data, followed by supervised fine-tuning on paired editing data. Remarkably, the factorized pre-training alone already yields strong zero-shot video editing ability, validating the proposed factorization. SAMA achieves state-of-the-art performance among open-source models and is competitive with leading commercial systems (e.g., Kling-Omni). Code, models, and datasets will be released.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-19T17:59:51Z",
+                "arxiv:comment": "24 pages, 12 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Xinyao Zhang"
+                    },
+                    {
+                        "name": "Wenkai Dong"
+                    },
+                    {
+                        "name": "Yuxin Song"
+                    },
+                    {
+                        "name": "Bo Fang"
+                    },
+                    {
+                        "name": "Qi Zhang"
+                    },
+                    {
+                        "name": "Jing Wang"
+                    },
+                    {
+                        "name": "Fan Chen"
+                    },
+                    {
+                        "name": "Hui Zhang"
+                    },
+                    {
+                        "name": "Haocheng Feng"
+                    },
+                    {
+                        "name": "Yu Lu"
+                    },
+                    {
+                        "name": "Hang Zhou"
+                    },
+                    {
+                        "name": "Chun Yuan"
+                    },
+                    {
+                        "name": "Jingdong Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.19224v1",
+                "title": "EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing",
+                "updated": "2026-03-19T17:59:22Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.19224v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.19224v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across varied environments for training and evaluation. To address this, we introduce VOR (Video Object Removal), a large-scale dataset that provides diverse paired videos, each consisting of one video where the target object is present with its effects and a counterpart where the object and effects are absent, with corresponding object masks. VOR contains 60K high-quality video pairs from captured and synthetic sources, covers five effects types, and spans a wide range of object categories as well as complex, dynamic multi-object scenes. Building on VOR, we propose EffectErase, an effect-aware video object removal method that treats video object insertion as the inverse auxiliary task within a reciprocal learning scheme. The model includes task-aware region guidance that focuses learning on affected areas and enables flexible task switching. Then, an insertion-removal consistency objective that encourages complementary behaviors and shared localization of effect regions and structural cues. Trained on VOR, EffectErase achieves superior performance in extensive experiments, delivering high-quality video object effect erasing across diverse scenarios.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-19T17:59:22Z",
+                "arxiv:comment": "CVPR 2026, Project Page: https://henghuiding.com/EffectErase/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yang Fu"
+                    },
+                    {
+                        "name": "Yike Zheng"
+                    },
+                    {
+                        "name": "Ziyun Dai"
+                    },
+                    {
+                        "name": "Henghui Ding"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.19223v1",
+                "title": "F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World",
+                "updated": "2026-03-19T17:59:21Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.19223v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.19223v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present F2LLM-v2, a new family of general-purpose, multilingual embedding models in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of 60 million publicly available high-quality data samples, F2LLM-v2 supports more than 200 languages, with a particular emphasis on previously underserved mid- and low-resource languages. By integrating a two-stage LLM-based embedding training pipeline with matryoshka learning, model pruning, and knowledge distillation techniques, we present models that are far more efficient than previous LLM-based embedding models while retaining competitive performances. Extensive evaluations confirm that F2LLM-v2-14B ranks first on 11 MTEB benchmarks, while the smaller models in the family also set a new state of the art for resource-constrained applications. To facilitate open-source embedding model research, we release all models, data, code, and intermediate checkpoints.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -42,50 +429,46 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-19T13:33:26Z",
-                "arxiv:comment": "Project page: https://youngwanlee.github.io/multihopspatial",
+                "published": "2026-03-19T17:59:21Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Youngwan Lee"
+                        "name": "Ziyin Zhang"
                     },
                     {
-                        "name": "Soojin Jang"
+                        "name": "Zihan Liao"
                     },
                     {
-                        "name": "Yoorhim Cho"
+                        "name": "Hang Yu"
                     },
                     {
-                        "name": "Seunghwan Lee"
+                        "name": "Peng Di"
                     },
                     {
-                        "name": "Yong-Ju Lee"
-                    },
-                    {
-                        "name": "Sung Ju Hwang"
+                        "name": "Rui Wang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.18891v1",
-                "title": "PromptHub: Enhancing Multi-Prompt Visual In-Context Learning with Locality-Aware Fusion, Concentration and Alignment",
-                "updated": "2026-03-19T13:30:17Z",
+                "id": "http://arxiv.org/abs/2603.19222v1",
+                "title": "Spectrally-Guided Diffusion Noise Schedules",
+                "updated": "2026-03-19T17:59:12Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.18891v1",
+                        "@href": "https://arxiv.org/abs/2603.19222v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.18891v1",
+                        "@href": "https://arxiv.org/pdf/2603.19222v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Visual In-Context Learning (VICL) aims to complete vision tasks by imitating pixel demonstrations. Recent work pioneered prompt fusion that combines the advantages of various demonstrations, which shows a promising way to extend VICL. Unfortunately, the patch-wise fusion framework and model-agnostic supervision hinder the exploitation of informative cues, thereby limiting performance gains. To overcome this deficiency, we introduce PromptHub, a framework that holistically strengthens multi-prompting through locality-aware fusion, concentration and alignment. PromptHub exploits spatial priors to capture richer contextual information, employs complementary concentration, alignment, and prediction objectives to mutually guide training, and incorporates data augmentation to further reinforce supervision. Extensive experiments on three fundamental vision tasks demonstrate the superiority of PromptHub. Moreover, we validate its universality, transferability, and robustness across out-of-distribution settings, and various retrieval scenarios. This work establishes a reliable locality-aware paradigm for prompt fusion, moving beyond prior patch-wise approaches. Code is available at https://github.com/luotc-why/ICLR26-PromptHub.",
+                "summary": "Denoising diffusion models are widely used for high-quality image and video generation. Their performance depends on noise schedules, which define the distribution of noise levels applied during training and the sequence of noise levels traversed during sampling. Noise schedules are typically handcrafted and require manual tuning across different resolutions. In this work, we propose a principled way to design per-instance noise schedules for pixel diffusion, based on the image's spectral properties. By deriving theoretical bounds on the efficacy of minimum and maximum noise levels, we design ``tight'' noise schedules that eliminate redundant steps. During inference, we propose to conditionally sample such noise schedules. Experiments show that our noise schedules improve generative quality of single-stage pixel diffusion models, particularly in the low-step regime.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -96,204 +479,94 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-19T13:30:17Z",
-                "arxiv:comment": "Accepted to ICLR 2026. 17 pages, 11 figures, and 9 tables",
+                "published": "2026-03-19T17:59:12Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Tianci Luo"
+                        "name": "Carlos Esteves"
                     },
                     {
-                        "name": "Jinpeng Wang"
-                    },
-                    {
-                        "name": "Shiyu Qin"
-                    },
-                    {
-                        "name": "Niu Lian"
-                    },
-                    {
-                        "name": "Yan Feng"
-                    },
-                    {
-                        "name": "Bin Chen"
-                    },
-                    {
-                        "name": "Chun Yuan"
-                    },
-                    {
-                        "name": "Shu-Tao Xia"
+                        "name": "Ameesh Makadia"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.18888v1",
-                "title": "Authority-Level Priors: An Under-Specified Constraint in Hierarchical Predictive Processing",
-                "updated": "2026-03-19T13:27:47Z",
+                "id": "http://arxiv.org/abs/2603.19221v1",
+                "title": "Online Learning and Equilibrium Computation with Ranking Feedback",
+                "updated": "2026-03-19T17:59:07Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.18888v1",
+                        "@href": "https://arxiv.org/abs/2603.19221v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.18888v1",
+                        "@href": "https://arxiv.org/pdf/2603.19221v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Hierarchical predictive processing explains adaptive behaviour through precision-weighted inference. Explicit belief revision often fails to produce corresponding changes in stress reactivity or autonomic regulation. This asymmetry suggests the framework leaves under-specified a governance-level constraint concerning which identity-level hypotheses regulate autonomic and behavioural control under uncertainty. We introduce Authority-Level Priors (ALPs) as meta-structural constraints defining a regulatory-admissible subset (Hauth, a subset of H) of identity-level hypotheses. ALPs are not additional representational states nor hyperpriors over precision; they constrain which hypotheses are admissible for regulatory control. Precision determines influence conditional on admissibility; ALPs determine admissibility itself. This explains why explicit belief updating modifies representational beliefs while autonomic threat responses remain stable. A computational formalisation restricts policy optimisation to policies generated by authorised hypotheses, yielding testable predictions concerning stress-reactivity dynamics, recovery time constants, compensatory control engagement, and behavioural persistence. Neurobiologically, ALPs manifest through distributed prefrontal arbitration and control networks. The proposal is compatible with variational active inference and introduces no additional inferential operators, instead formalising a boundary condition required for determinate identity-regulation mapping. The model generates falsifiable predictions: governance shifts should produce measurable changes in stress-reactivity curves, recovery dynamics, compensatory cognitive effort, and behavioural change durability. ALPs are advanced as an architectural hypothesis to be evaluated through computational modelling and longitudinal stress-induction paradigms.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-19T13:27:47Z",
-                "arxiv:comment": "26 pages, 1 figure",
+                "summary": "Online learning in arbitrary, and possibly adversarial, environments has been extensively studied in sequential decision-making, and it is closely connected to equilibrium computation in game theory. Most existing online learning algorithms rely on \\emph{numeric} utility feedback from the environment, which may be unavailable in human-in-the-loop applications and/or may be restricted by privacy concerns. In this paper, we study an online learning model in which the learner only observes a \\emph{ranking} over a set of proposed actions at each timestep. We consider two ranking mechanisms: rankings induced by the \\emph{instantaneous} utility at the current timestep, and rankings induced by the \\emph{time-average} utility up to the current timestep, under both \\emph{full-information} and \\emph{bandit} feedback settings. Using the standard external-regret metric, we show that sublinear regret is impossible with instantaneous-utility ranking feedback in general. Moreover, when the ranking model is relatively deterministic, \\emph{i.e.}, under the Plackett-Luce model with a temperature that is sufficiently small, sublinear regret is also impossible with time-average utility ranking feedback. We then develop new algorithms that achieve sublinear regret under the additional assumption that the utility sequence has sublinear total variation. Notably, for full-information time-average utility ranking feedback, this additional assumption can be removed. As a consequence, when all players in a normal-form game follow our algorithms, repeated play yields an approximate coarse correlated equilibrium. We also demonstrate the effectiveness of our algorithms in an online large-language-model routing task.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.GT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-19T17:59:07Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
-                "author": {
-                    "name": "Marcela Palejova"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.18881v1",
-                "title": "Geography According to ChatGPT -- How Generative AI Represents and Reasons about Geography",
-                "updated": "2026-03-19T13:24:09Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.18881v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.18881v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Understanding how AI will represent and reason about geography should be a key concern for all of us, as the broader public increasingly interacts with spaces and places through these systems. Similarly, in line with the nature of foundation models, our own research often relies on pre-trained models. Hence, understanding what world AI systems construct is as important as evaluating their accuracy, including factual recall. To motivate the need for such studies, we provide three illustrative vignettes, i.e., exploratory probes, in the hope that they will spark lively discussions and follow-up work: (1) Do models form strong defaults, and how brittle are model outputs to minute syntactic variations? (2) Can distributional shifts resurface from the composition of individually benign tasks, e.g., when using AI systems to create personas? (3) Do we overlook deeper questions of understanding when solely focusing on the ability of systems to recall facts such as geographic principles?",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-19T13:24:09Z",
-                "arxiv:comment": "Accepted book chapter (introduction to valume)",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
                 "author": [
                     {
-                        "name": "Krzysztof Janowicz"
+                        "name": "Mingyang Liu"
                     },
                     {
-                        "name": "Gengchen Mai"
+                        "name": "Yongshan Chen"
                     },
                     {
-                        "name": "Rui Zhu"
+                        "name": "Zhiyuan Fan"
                     },
                     {
-                        "name": "Song Gao"
+                        "name": "Gabriele Farina"
                     },
                     {
-                        "name": "Zhangyu Wang"
+                        "name": "Asuman Ozdaglar"
                     },
                     {
-                        "name": "Yingjie Hu"
-                    },
-                    {
-                        "name": "Lauren Bennett"
+                        "name": "Kaiqing Zhang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.18876v1",
-                "title": "Bridging Crystal Structure and Material Properties via Bond-Centric Descriptors",
-                "updated": "2026-03-19T13:21:25Z",
+                "id": "http://arxiv.org/abs/2603.19220v1",
+                "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+                "updated": "2026-03-19T17:58:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.18876v1",
+                        "@href": "https://arxiv.org/abs/2603.19220v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.18876v1",
+                        "@href": "https://arxiv.org/pdf/2603.19220v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Although chemical bonding is the fundamental mechanistic bridge connecting atomic structure to macroscopic material properties, current data-driven materials science largely treats it as an implicit \"black box\". Existing machine learning (ML) models rely predominantly on geometric coordinates, forcing them to implicitly relearn complex quantum mechanics from scratch. This lack of intermediate physical features limits model interpretability and generalizability, particularly when training data is scarce. To solve this problem, we introduce MattKeyBond, a bond-centric materials database that explicitly maps the local electronic landscape and bonding interactions of materials. Building on this, we propose Bonding Attractivity (BA), a novel element-specific descriptor that quantifies the intrinsic capability of atoms to form covalent networks. By providing pre-calculated, energy-dimensional bonding descriptors, MattKeyBond transforms the implicit \"black box\" into physically interpretable features. This strategy relieves ML models from the burden of deducing physical laws from pure geometry, enabling accurate predictions even with limited data and seamlessly integrating electronic structure theory into modern AI workflows.",
-                "category": {
-                    "@term": "cond-mat.mtrl-sci",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-19T13:21:25Z",
-                "arxiv:comment": "17 pages, 10 figures",
-                "arxiv:primary_category": {
-                    "@term": "cond-mat.mtrl-sci"
-                },
-                "author": [
-                    {
-                        "name": "Jian-Feng Zhang"
-                    },
-                    {
-                        "name": "Ze-Feng Gao"
-                    },
-                    {
-                        "name": "Xiao-Qi Han"
-                    },
-                    {
-                        "name": "Bo Zhan"
-                    },
-                    {
-                        "name": "Dingshun Lv"
-                    },
-                    {
-                        "name": "Miao Gao"
-                    },
-                    {
-                        "name": "Kai Liu"
-                    },
-                    {
-                        "name": "Xinguo Ren"
-                    },
-                    {
-                        "name": "Zhong-Yi Lu"
-                    },
-                    {
-                        "name": "Tao Xiang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.18873v1",
-                "title": "Evaluating LLM-Generated Lessons from the Language Learning Students' Perspective: A Short Case Study on Duolingo",
-                "updated": "2026-03-19T13:17:50Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.18873v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.18873v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Popular language learning applications such as Duolingo use large language models (LLMs) to generate lessons for its users. Most lessons focus on general real-world scenarios such as greetings, ordering food, or asking directions, with limited support for profession-specific contexts. This gap can hinder learners from achieving professional-level fluency, which we define as the ability to communicate comfortably various work-related and domain-specific information in the target language. We surveyed five employees from a multinational company in the Philippines on their experiences with Duolingo. Results show that respondents encountered general scenarios more frequently than work-related ones, and that the former are relatable and effective in building foundational grammar, vocabulary, and cultural knowledge. The latter helps bridge the gap toward professional fluency as it contains domain-specific vocabulary. Each participant suggested lesson scenarios that diverge in contexts hen analyzed in aggregate. With this understanding, we propose that language learning applications should generate lessons that adapt to an individual's needs through personalized, domain specific lesson scenarios while maintaining foundational support through general, relatable lesson scenarios.",
+                "summary": "We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICPC World Finals, demonstrating remarkably high intelligence density with 20x fewer parameters. In contrast to Nemotron-Cascade 1, the key technical advancements are as follows. After SFT on a meticulously curated dataset, we substantially expand Cascade RL to cover a much broader spectrum of reasoning and agentic domains. Furthermore, we introduce multi-domain on-policy distillation from the strongest intermediate teacher models for each domain throughout the Cascade RL process, allowing us to efficiently recover benchmark regressions and sustain strong performance gains along the way. We release the collection of model checkpoint and training data.",
                 "category": [
                     {
                         "@term": "cs.CL",
@@ -304,221 +577,66 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.HC",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-19T13:17:50Z",
-                "arxiv:comment": "5 pages,3 figures,presented at the 3rd HEAL Workshop at CHI 2026",
+                "published": "2026-03-19T17:58:52Z",
+                "arxiv:comment": "We release the model and data at https://huggingface.co/collections/nvidia/nemotron-cascade-2",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Carlos Rafael Catalan"
+                        "name": "Zhuolin Yang"
                     },
                     {
-                        "name": "Patricia Nicole Monderin"
+                        "name": "Zihan Liu"
                     },
                     {
-                        "name": "Lheane Marie Dizon"
+                        "name": "Yang Chen"
                     },
                     {
-                        "name": "Gap Estrella"
+                        "name": "Wenliang Dai"
                     },
                     {
-                        "name": "Raymund John Sarmimento"
+                        "name": "Boxin Wang"
                     },
                     {
-                        "name": "Marie Antoinette Patalagsa"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.18872v1",
-                "title": "DriftGuard: Mitigating Asynchronous Data Drift in Federated Learning",
-                "updated": "2026-03-19T13:15:57Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.18872v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Sheng-Chieh Lin"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.18872v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In real-world Federated Learning (FL) deployments, data distributions on devices that participate in training evolve over time. This leads to asynchronous data drift, where different devices shift at different times and toward different distributions. Mitigating such drift is challenging: frequent retraining incurs high computational cost on resource-constrained devices, while infrequent retraining degrades performance on drifting devices. We propose DriftGuard, a federated continual learning framework that efficiently adapts to asynchronous data drift. DriftGuard adopts a Mixture-of-Experts (MoE) inspired architecture that separates shared parameters, which capture globally transferable knowledge, from local parameters that adapt to group-specific distributions. This design enables two complementary retraining strategies: (i) global retraining, which updates the shared parameters when system-wide drift is identified, and (ii) group retraining, which selectively updates local parameters for clusters of devices identified via MoE gating patterns, without sharing raw data. Experiments across multiple datasets and models show that DriftGuard matches or exceeds state-of-the-art accuracy while reducing total retraining cost by up to 83%. As a result, it achieves the highest accuracy per unit retraining cost, improving over the strongest baseline by up to 2.3x. DriftGuard is available for download from https://github.com/blessonvar/DriftGuard.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-19T13:15:57Z",
-                "arxiv:comment": "13 pages, 9 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Yizhou Han"
+                        "name": "Chankyu Lee"
                     },
                     {
-                        "name": "Di Wu"
+                        "name": "Yangyi Chen"
                     },
                     {
-                        "name": "Blesson Varghese"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.18871v1",
-                "title": "Bridging Network Fragmentation: A Semantic-Augmented DRL Framework for UAV-aided VANETs",
-                "updated": "2026-03-19T13:15:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.18871v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Dongfu Jiang"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.18871v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Vehicular Ad-hoc Networks (VANETs) are the digital cornerstone of autonomous driving, yet they suffer from severe network fragmentation in urban environments due to physical obstructions. Unmanned Aerial Vehicles (UAVs), with their high mobility, have emerged as a vital solution to bridge these connectivity gaps. However, traditional Deep Reinforcement Learning (DRL)-based UAV deployment strategies lack semantic understanding of road topology, often resulting in blind exploration and sample inefficiency. By contrast, Large Language Models (LLMs) possess powerful reasoning capabilities capable of identifying topological importance, though applying them to control tasks remains challenging. To address this, we propose the Semantic-Augmented DRL (SA-DRL) framework. Firstly, we propose a fragmentation quantification method based on Road Topology Graphs (RTG) and Dual Connected Graphs (DCG). Subsequently, we design a four-stage pipeline to transform a general-purpose LLM into a domain-specific topology expert. Finally, we propose the Semantic-Augmented PPO (SA-PPO) algorithm, which employs a Logit Fusion mechanism to inject the LLM's semantic reasoning directly into the policy as a prior, effectively guiding the agent toward critical intersections. Extensive high-fidelity simulations demonstrate that SA-PPO achieves state-of-the-art performance with remarkable efficiency, reaching baseline performance levels using only 26.6% of the training episodes. Ultimately, SA-PPO improves two key connectivity metrics by 13.2% and 23.5% over competing methods, while reducing energy consumption to just 28.2% of the baseline.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Jiafan He"
                     },
                     {
-                        "@term": "cs.NI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-19T13:15:52Z",
-                "arxiv:comment": "13 pages, 13 figures. Submitted to IEEE Transactions on Cognitive Communications and Networking",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Gaoxiang Cao"
+                        "name": "Renjie Pi"
                     },
                     {
-                        "name": "Wenke Yuan"
+                        "name": "Grace Lam"
                     },
                     {
-                        "name": "Huasen He"
+                        "name": "Nayeon Lee"
                     },
                     {
-                        "name": "Yunpeng Hou"
+                        "name": "Alexander Bukharin"
                     },
                     {
-                        "name": "Xiaofeng Jiang"
+                        "name": "Mohammad Shoeybi"
                     },
                     {
-                        "name": "Shuangwu Chen"
+                        "name": "Bryan Catanzaro"
                     },
                     {
-                        "name": "Jian Yang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.18868v1",
-                "title": "Through the Looking-Glass: AI-Mediated Video Communication Reduces Interpersonal Trust and Confidence in Judgments",
-                "updated": "2026-03-19T13:13:17Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.18868v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.18868v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "AI-based tools that mediate, enhance or generate parts of video communication may interfere with how people evaluate trustworthiness and credibility. In two preregistered online experiments (N = 2,000), we examined whether AI-mediated video retouching, background replacement and avatars affect interpersonal trust, people's ability to detect lies and confidence in their judgments. Participants watched short videos of speakers making truthful or deceptive statements across three conditions with varying levels of AI mediation. We observed that perceived trust and confidence in judgments declined in AI-mediated videos, particularly in settings in which some participants used avatars while others did not. However, participants' actual judgment accuracy remained unchanged, and they were no more inclined to suspect those using AI tools of lying. Our findings provide evidence against concerns that AI mediation undermines people's ability to distinguish truth from lies, and against cue-based accounts of lie detection more generally. They highlight the importance of trustworthy AI mediation tools in contexts where not only truth, but also trust and confidence matter.",
-                "category": [
-                    {
-                        "@term": "cs.HC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-19T13:13:17Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.HC"
-                },
-                "author": [
-                    {
-                        "name": "Nelson Navajas Fern\u00e1ndez"
-                    },
-                    {
-                        "name": "Jeffrey T. Hancock"
-                    },
-                    {
-                        "name": "Maurice Jakesch"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.18865v1",
-                "title": "RadioDiff-FS: Physics-Informed Manifold Alignment in Few-Shot Diffusion Models for High-Fidelity Radio Map Construction",
-                "updated": "2026-03-19T13:12:09Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.18865v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.18865v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Radio maps (RMs) provide spatially continuous propagation characterizations essential for 6G network planning, but high-fidelity RM construction remains challenging. Rigorous electromagnetic solvers incur prohibitive computational latency, while data-driven models demand massive labeled datasets and generalize poorly from simplified simulations to complex multipath environments. This paper proposes RadioDiff-FS, a few-shot diffusion framework that adapts a pre-trained main-path generator to multipath-rich target domains with only a small number of high-fidelity samples. The adaptation is grounded in a theoretical decomposition of the multipath RM into a dominant main-path component and a directionally sparse residual. This decomposition shows that the cross-domain shift corresponds to a bounded and geometrically structured feature translation rather than an arbitrary distribution change. A Direction-Consistency Loss (DCL) is then introduced to constrain diffusion score updates along physically plausible propagation directions, suppressing phase-inconsistent artifacts that arise in the low-data regime. Experiments show that RadioDiff-FS reduces NMSE by 59.5% on static RMs and by 74.0% on dynamic RMs relative to the vanilla diffusion baseline, achieving an SSIM of 0.9752 and a PSNR of 36.37 dB under severely limited supervision.",
-                "category": [
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-19T13:12:09Z",
-                "arxiv:primary_category": {
-                    "@term": "eess.SY"
-                },
-                "author": [
-                    {
-                        "name": "Xiucheng Wang"
-                    },
-                    {
-                        "name": "Zixuan Guo"
-                    },
-                    {
-                        "name": "Nan Cheng"
+                        "name": "Wei Ping"
                     }
                 ]
             }
