@@ -5,473 +5,36 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-22T23:21:27Z",
+        "updated": "2026-03-23T01:46:54Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "552007",
+        "opensearch:totalResults": "552293",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.19235v1",
-                "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
-                "updated": "2026-03-19T17:59:58Z",
+                "id": "http://arxiv.org/abs/2603.20048v1",
+                "title": "Structured Latent Dynamics in Wireless CSI via Homomorphic World Models",
+                "updated": "2026-03-20T15:32:47Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.19235v1",
+                        "@href": "https://arxiv.org/abs/2603.20048v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.19235v1",
+                        "@href": "https://arxiv.org/pdf/2603.20048v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
+                "summary": "We introduce a self-supervised framework for learning predictive and structured representations of wireless channels by modeling the temporal evolution of channel state information (CSI) in a compact latent space. Our method casts the problem as a world modeling task and leverages the Joint Embedding Predictive Architecture (JEPA) to learn action-conditioned latent dynamics from CSI trajectories. To promote geometric consistency and compositionality, we parameterize transitions using homomorphic updates derived from Lie algebra, yielding a structured latent space that reflects spatial layout and user motion. Evaluations on the DICHASUS dataset show that our approach outperforms strong baselines in preserving topology and forecasting future embeddings across unseen environments. The resulting latent space enables metrically faithful channel charts, offering a scalable foundation for downstream applications such as mobility-aware scheduling, localization, and wireless scene understanding.",
                 "category": [
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-19T17:59:58Z",
-                "arxiv:comment": "31 pages, 12 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Xianjin Wu"
-                    },
-                    {
-                        "name": "Dingkang Liang"
-                    },
-                    {
-                        "name": "Tianrui Feng"
-                    },
-                    {
-                        "name": "Kui Xia"
-                    },
-                    {
-                        "name": "Yumeng Zhang"
-                    },
-                    {
-                        "name": "Xiaofan Li"
-                    },
-                    {
-                        "name": "Xiao Tan"
-                    },
-                    {
-                        "name": "Xiang Bai"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.19234v1",
-                "title": "Matryoshka Gaussian Splatting",
-                "updated": "2026-03-19T17:59:56Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.19234v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.19234v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that enables continuous LoD for standard 3DGS pipelines without sacrificing full-capacity rendering quality. MGS learns a single ordered set of Gaussians such that rendering any prefix, the first k splats, produces a coherent reconstruction whose fidelity improves smoothly with increasing budget. Our key idea is stochastic budget training: each iteration samples a random splat budget and optimises both the corresponding prefix and the full set. This strategy requires only two forward passes and introduces no architectural modifications. Experiments across four benchmarks and six baselines show that MGS matches the full-capacity performance of its backbone while enabling a continuous speed-quality trade-off from a single model. Extensive ablations on ordering strategies, training objectives, and model capacity further validate the designs.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-19T17:59:56Z",
-                "arxiv:comment": "project page: https://zhilinguo.github.io/MGS",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Zhilin Guo"
-                    },
-                    {
-                        "name": "Boqiao Zhang"
-                    },
-                    {
-                        "name": "Hakan Aktas"
-                    },
-                    {
-                        "name": "Kyle Fogarty"
-                    },
-                    {
-                        "name": "Jeffrey Hu"
-                    },
-                    {
-                        "name": "Nursena Koprucu Aslan"
-                    },
-                    {
-                        "name": "Wenzhao Li"
-                    },
-                    {
-                        "name": "Canberk Baykal"
-                    },
-                    {
-                        "name": "Albert Miao"
-                    },
-                    {
-                        "name": "Josef Bengtson"
-                    },
-                    {
-                        "name": "Chenliang Zhou"
-                    },
-                    {
-                        "name": "Weihao Xia"
-                    },
-                    {
-                        "name": "Cristina Nader Vasconcelos. Cengiz Oztireli"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.19232v1",
-                "title": "Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens",
-                "updated": "2026-03-19T17:59:55Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.19232v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.19232v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fundamental challenges. In this paper, we present Cubic Discrete Diffusion (CubiD), the first discrete generation model for high-dimensional representations. CubiD performs fine-grained masking throughout the high-dimensional discrete representation -- any dimension at any position can be masked and predicted from partial observations. This enables the model to learn rich correlations both within and across spatial positions, with the number of generation steps fixed at $T$ regardless of feature dimensionality, where $T \\ll hwd$. On ImageNet-256, CubiD achieves state-of-the-art discrete generation with strong scaling behavior from 900M to 3.7B parameters. Crucially, we validate that these discretized tokens preserve original representation capabilities, demonstrating that the same discrete tokens can effectively serve both understanding and generation tasks. We hope this work will inspire future research toward unified multimodal architectures. Code is available at: https://github.com/YuqingWang1029/CubiD.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-19T17:59:55Z",
-                "arxiv:comment": "Accepted by CVPR 2026 main track; Code: https://github.com/YuqingWang1029/CubiD",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yuqing Wang"
-                    },
-                    {
-                        "name": "Chuofan Ma"
-                    },
-                    {
-                        "name": "Zhijie Lin"
-                    },
-                    {
-                        "name": "Yao Teng"
-                    },
-                    {
-                        "name": "Lijun Yu"
-                    },
-                    {
-                        "name": "Shuai Wang"
-                    },
-                    {
-                        "name": "Jiaming Han"
-                    },
-                    {
-                        "name": "Jiashi Feng"
-                    },
-                    {
-                        "name": "Yi Jiang"
-                    },
-                    {
-                        "name": "Xihui Liu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.19229v1",
-                "title": "NavTrust: Benchmarking Trustworthiness for Embodied Navigation",
-                "updated": "2026-03-19T17:59:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.19229v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.19229v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "There are two major categories of embodied navigation: Vision-Language Navigation (VLN), where agents navigate by following natural language instructions; and Object-Goal Navigation (OGN), where agents navigate to a specified target object. However, existing work primarily evaluates model performance under nominal conditions, overlooking the potential corruptions that arise in real-world settings. To address this gap, we present NavTrust, a unified benchmark that systematically corrupts input modalities, including RGB, depth, and instructions, in realistic scenarios and evaluates their impact on navigation performance. To our best knowledge, NavTrust is the first benchmark that exposes embodied navigation agents to diverse RGB-Depth corruptions and instruction variations in a unified framework. Our extensive evaluation of seven state-of-the-art approaches reveals substantial performance degradation under realistic corruptions, which highlights critical robustness gaps and provides a roadmap toward more trustworthy embodied navigation systems. Furthermore, we systematically evaluate four distinct mitigation strategies to enhance robustness against RGB-Depth and instructions corruptions. Our base models include Uni-NaVid and ETPNav. We deployed them on a real mobile robot and observed improved robustness to corruptions. The project website is: https://navtrust.github.io.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-19T17:59:51Z",
-                "arxiv:comment": "Project Website: https://navtrust.github.io",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Huaide Jiang"
-                    },
-                    {
-                        "name": "Yash Chaudhary"
-                    },
-                    {
-                        "name": "Yuping Wang"
-                    },
-                    {
-                        "name": "Zehao Wang"
-                    },
-                    {
-                        "name": "Raghav Sharma"
-                    },
-                    {
-                        "name": "Manan Mehta"
-                    },
-                    {
-                        "name": "Yang Zhou"
-                    },
-                    {
-                        "name": "Lichao Sun"
-                    },
-                    {
-                        "name": "Zhiwen Fan"
-                    },
-                    {
-                        "name": "Zhengzhong Tu"
-                    },
-                    {
-                        "name": "Jiachen Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.19228v1",
-                "title": "SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing",
-                "updated": "2026-03-19T17:59:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.19228v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.19228v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editing into semantic anchoring and motion modeling. First, we introduce Semantic Anchoring, which establishes a reliable visual anchor by jointly predicting semantic tokens and video latents at sparse anchor frames, enabling purely instruction-aware structural planning. Second, Motion Alignment pre-trains the same backbone on motion-centric video restoration pretext tasks (cube inpainting, speed perturbation, and tube shuffle), enabling the model to internalize temporal dynamics directly from raw videos. SAMA is optimized with a two-stage pipeline: a factorized pre-training stage that learns inherent semantic-motion representations without paired video-instruction editing data, followed by supervised fine-tuning on paired editing data. Remarkably, the factorized pre-training alone already yields strong zero-shot video editing ability, validating the proposed factorization. SAMA achieves state-of-the-art performance among open-source models and is competitive with leading commercial systems (e.g., Kling-Omni). Code, models, and datasets will be released.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-19T17:59:51Z",
-                "arxiv:comment": "24 pages, 12 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Xinyao Zhang"
-                    },
-                    {
-                        "name": "Wenkai Dong"
-                    },
-                    {
-                        "name": "Yuxin Song"
-                    },
-                    {
-                        "name": "Bo Fang"
-                    },
-                    {
-                        "name": "Qi Zhang"
-                    },
-                    {
-                        "name": "Jing Wang"
-                    },
-                    {
-                        "name": "Fan Chen"
-                    },
-                    {
-                        "name": "Hui Zhang"
-                    },
-                    {
-                        "name": "Haocheng Feng"
-                    },
-                    {
-                        "name": "Yu Lu"
-                    },
-                    {
-                        "name": "Hang Zhou"
-                    },
-                    {
-                        "name": "Chun Yuan"
-                    },
-                    {
-                        "name": "Jingdong Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.19224v1",
-                "title": "EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing",
-                "updated": "2026-03-19T17:59:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.19224v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.19224v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across varied environments for training and evaluation. To address this, we introduce VOR (Video Object Removal), a large-scale dataset that provides diverse paired videos, each consisting of one video where the target object is present with its effects and a counterpart where the object and effects are absent, with corresponding object masks. VOR contains 60K high-quality video pairs from captured and synthetic sources, covers five effects types, and spans a wide range of object categories as well as complex, dynamic multi-object scenes. Building on VOR, we propose EffectErase, an effect-aware video object removal method that treats video object insertion as the inverse auxiliary task within a reciprocal learning scheme. The model includes task-aware region guidance that focuses learning on affected areas and enables flexible task switching. Then, an insertion-removal consistency objective that encourages complementary behaviors and shared localization of effect regions and structural cues. Trained on VOR, EffectErase achieves superior performance in extensive experiments, delivering high-quality video object effect erasing across diverse scenarios.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-19T17:59:22Z",
-                "arxiv:comment": "CVPR 2026, Project Page: https://henghuiding.com/EffectErase/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yang Fu"
-                    },
-                    {
-                        "name": "Yike Zheng"
-                    },
-                    {
-                        "name": "Ziyun Dai"
-                    },
-                    {
-                        "name": "Henghui Ding"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.19223v1",
-                "title": "F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World",
-                "updated": "2026-03-19T17:59:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.19223v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.19223v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present F2LLM-v2, a new family of general-purpose, multilingual embedding models in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of 60 million publicly available high-quality data samples, F2LLM-v2 supports more than 200 languages, with a particular emphasis on previously underserved mid- and low-resource languages. By integrating a two-stage LLM-based embedding training pipeline with matryoshka learning, model pruning, and knowledge distillation techniques, we present models that are far more efficient than previous LLM-based embedding models while retaining competitive performances. Extensive evaluations confirm that F2LLM-v2-14B ranks first on 11 MTEB benchmarks, while the smaller models in the family also set a new state of the art for resource-constrained applications. To facilitate open-source embedding model research, we release all models, data, code, and intermediate checkpoints.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-19T17:59:21Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Ziyin Zhang"
-                    },
-                    {
-                        "name": "Zihan Liao"
-                    },
-                    {
-                        "name": "Hang Yu"
-                    },
-                    {
-                        "name": "Peng Di"
-                    },
-                    {
-                        "name": "Rui Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.19222v1",
-                "title": "Spectrally-Guided Diffusion Noise Schedules",
-                "updated": "2026-03-19T17:59:12Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.19222v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.19222v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Denoising diffusion models are widely used for high-quality image and video generation. Their performance depends on noise schedules, which define the distribution of noise levels applied during training and the sequence of noise levels traversed during sampling. Noise schedules are typically handcrafted and require manual tuning across different resolutions. In this work, we propose a principled way to design per-instance noise schedules for pixel diffusion, based on the image's spectral properties. By deriving theoretical bounds on the efficacy of minimum and maximum noise levels, we design ``tight'' noise schedules that eliminate redundant steps. During inference, we propose to conditionally sample such noise schedules. Experiments show that our noise schedules improve generative quality of single-stage pixel diffusion models, particularly in the low-step regime.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
+                        "@term": "eess.SP",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -479,101 +42,426 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-19T17:59:12Z",
+                "published": "2026-03-20T15:32:47Z",
+                "arxiv:comment": "ACCEPTED FOR PUBLICATION IN IEEE INTERNATIONAL CONFERENCE ON COMMUNICATIONS (ICC) 2026",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "eess.SP"
                 },
                 "author": [
                     {
-                        "name": "Carlos Esteves"
+                        "name": "Salmane Naoumi"
                     },
                     {
-                        "name": "Ameesh Makadia"
+                        "name": "Mehdi Bennis"
+                    },
+                    {
+                        "name": "Marwa Chafii"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.19221v1",
-                "title": "Online Learning and Equilibrium Computation with Ranking Feedback",
-                "updated": "2026-03-19T17:59:07Z",
+                "id": "http://arxiv.org/abs/2603.20046v1",
+                "title": "Experience is the Best Teacher: Motivating Effective Exploration in Reinforcement Learning for LLMs",
+                "updated": "2026-03-20T15:32:06Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.19221v1",
+                        "@href": "https://arxiv.org/abs/2603.20046v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.19221v1",
+                        "@href": "https://arxiv.org/pdf/2603.20046v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Online learning in arbitrary, and possibly adversarial, environments has been extensively studied in sequential decision-making, and it is closely connected to equilibrium computation in game theory. Most existing online learning algorithms rely on \\emph{numeric} utility feedback from the environment, which may be unavailable in human-in-the-loop applications and/or may be restricted by privacy concerns. In this paper, we study an online learning model in which the learner only observes a \\emph{ranking} over a set of proposed actions at each timestep. We consider two ranking mechanisms: rankings induced by the \\emph{instantaneous} utility at the current timestep, and rankings induced by the \\emph{time-average} utility up to the current timestep, under both \\emph{full-information} and \\emph{bandit} feedback settings. Using the standard external-regret metric, we show that sublinear regret is impossible with instantaneous-utility ranking feedback in general. Moreover, when the ranking model is relatively deterministic, \\emph{i.e.}, under the Plackett-Luce model with a temperature that is sufficiently small, sublinear regret is also impossible with time-average utility ranking feedback. We then develop new algorithms that achieve sublinear regret under the additional assumption that the utility sequence has sublinear total variation. Notably, for full-information time-average utility ranking feedback, this additional assumption can be removed. As a consequence, when all players in a normal-form game follow our algorithms, repeated play yields an approximate coarse correlated equilibrium. We also demonstrate the effectiveness of our algorithms in an online large-language-model routing task.",
+                "summary": "Reinforcement Learning (RL) with rubric-based rewards has recently shown remarkable progress in enhancing general reasoning capabilities of Large Language Models (LLMs), yet still suffers from ineffective exploration confined to curent policy distribution. In fact, RL optimization can be viewed as steering the policy toward an ideal distribution that maximizes the rewards, while effective exploration should align efforts with desired target. Leveraging this insight, we propose HeRL, a Hindsight experience guided Reinforcement Learning framework to bootstrap effective exploration by explicitly telling LLMs the desired behaviors specified in rewards. Concretely, HeRL treats failed trajectories along with their unmet rubrics as hindsight experience, which serves as in-context guidance for the policy to explore desired responses beyond its current distribution. Additionally, we introduce a bonus reward to incentivize responses with greater potential for improvement under such guidance. HeRL facilitates effective learning from desired high quality samples without repeated trial-and-error from scratch, yielding a more accurate estimation of the expected gradient theoretically. Extensive experiments across various benchmarks demonstrate that HeRL achieves superior performance gains over baselines, and can further benefit from experience guided self-improvement at test time. Our code is available at https://github.com/sikelifei/HeRL.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-20T15:32:06Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Wenjian Zhang"
+                    },
+                    {
+                        "name": "Kongcheng Zhang"
+                    },
+                    {
+                        "name": "Jiaxin Qi"
+                    },
+                    {
+                        "name": "Baisheng Lai"
+                    },
+                    {
+                        "name": "Jianqiang Huang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.20045v1",
+                "title": "Investigating a Policy-Based Formulation for Endoscopic Camera Pose Recovery",
+                "updated": "2026-03-20T15:30:59Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.20045v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.20045v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In endoscopic surgery, surgeons continuously locate the endoscopic view relative to the anatomy by interpreting the evolving visual appearance of the intraoperative scene in the context of their prior knowledge. Vision-based navigation systems seek to replicate this capability by recovering camera pose directly from endoscopic video, but most approaches do not embody the same principles of reasoning about new frames that makes surgeons successful. Instead, they remain grounded in feature matching and geometric optimization over keyframes, an approach that has been shown to degrade under the challenging conditions of endoscopic imaging like low texture and rapid illumination changes. Here, we pursue an alternative approach and investigate a policy-based formulation of endoscopic camera pose recovery that seeks to imitate experts in estimating trajectories conditioned on the previous camera state. Our approach directly predicts short-horizon relative motions without maintaining an explicit geometric representation at inference time. It thus addresses, by design, some of the notorious challenges of geometry-based approaches, such as brittle correspondence matching, instability in texture-sparse regions, and limited pose coverage due to reconstruction failure. We evaluate the proposed formulation on cadaveric sinus endoscopy. Under oracle state conditioning, we compare short-horizon motion prediction quality to geometric baselines achieving lowest mean translation error and competitive rotational accuracy. We analyze robustness by grouping prediction windows according to texture richness and illumination change indicating reduced sensitivity to low-texture conditions. These findings suggest that a learned motion policy offers a viable alternative formulation for endoscopic camera pose recovery.",
+                "category": [
+                    {
+                        "@term": "eess.IV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-20T15:30:59Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.IV"
+                },
+                "author": [
+                    {
+                        "name": "Jan Emily Mangulabnan"
+                    },
+                    {
+                        "name": "Akshat Chauhan"
+                    },
+                    {
+                        "name": "Laura Fleig"
+                    },
+                    {
+                        "name": "Lalithkumar Seenivasan"
+                    },
+                    {
+                        "name": "Roger D. Soberanis-Mukul"
+                    },
+                    {
+                        "name": "S. Swaroop Vedula"
+                    },
+                    {
+                        "name": "Russell H. Taylor"
+                    },
+                    {
+                        "name": "Masaru Ishii"
+                    },
+                    {
+                        "name": "Gregory D. Hager"
+                    },
+                    {
+                        "name": "Mathias Unberath"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.20038v1",
+                "title": "Search-Driven Clause Learning for Product-State Quantum $k$-SAT (PRODSAT-QSAT)",
+                "updated": "2026-03-20T15:22:27Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.20038v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.20038v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We study PRODSAT-QSAT($k$): given rank-one $k$-local projectors, determine whether a quantum $k$-SAT instance admits a satisfying product state. We present a CDCL-style refutation framework that searches a finite partition of each qubit's Bloch sphere while a sound theory solver checks region feasibility using a geometric overapproximation of the projection amplitudes for each constraint. When the theory solver proves that no state in a region can satisfy a constraint, it produces a sound conflict clause that blocks that region; accumulated blocking clauses can yield a global result of product-state unsatisfiability (UN-PRODSAT). We formalise the problem, prove the soundness of the clause-learning rule, and describe a practical algorithm and implementation.",
+                "category": [
+                    {
+                        "@term": "quant-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-20T15:22:27Z",
+                "arxiv:comment": "17 pages plus references, 3 figures, 2 tables,",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Samuel Gonz\u00e1lez-Castillo"
+                    },
+                    {
+                        "name": "Joon Hyung Lee"
+                    },
+                    {
+                        "name": "Alfons Laarman"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.20037v1",
+                "title": "Federated Hyperdimensional Computing for Resource-Constrained Industrial IoT",
+                "updated": "2026-03-20T15:22:12Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.20037v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.20037v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In the Industrial Internet of Things (IIoT) systems, edge devices often operate under strict constraints in memory, compute capability, and wireless bandwidth. These limitations challenge the deployment of advanced data analytics tasks, such as predictive and prescriptive maintenance. In this work, we explore hyperdimensional computing (HDC) as a lightweight learning paradigm for resource-constrained IIoT. Conventional centralized HDC leverages the properties of high-dimensional vector spaces to enable energy-efficient training and inference. We integrate this paradigm into a federated learning (FL) framework where devices exchange only prototype representations, which significantly reduces communication overhead. Our numerical results highlight the potential of federated HDC to support collaborative learning in IIoT with fast convergence speed and communication efficiency. These results indicate that HDC represents a lightweight and resilient framework for distributed intelligence in large-scale and resource-constrained IIoT environments.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.GT",
+                        "@term": "cs.NI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-19T17:59:07Z",
+                "published": "2026-03-20T15:22:12Z",
+                "arxiv:comment": "Submitted to the IEEE for possible publication",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Mingyang Liu"
+                        "name": "Nikita Zeulin"
                     },
                     {
-                        "name": "Yongshan Chen"
+                        "name": "Olga Galinina"
                     },
                     {
-                        "name": "Zhiyuan Fan"
+                        "name": "Nageen Himayat"
                     },
                     {
-                        "name": "Gabriele Farina"
-                    },
-                    {
-                        "name": "Asuman Ozdaglar"
-                    },
-                    {
-                        "name": "Kaiqing Zhang"
+                        "name": "Sergey Andreev"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.19220v1",
-                "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
-                "updated": "2026-03-19T17:58:52Z",
+                "id": "http://arxiv.org/abs/2603.20036v1",
+                "title": "Continual Learning as Shared-Manifold Continuation Under Compatible Shift",
+                "updated": "2026-03-20T15:21:19Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.19220v1",
+                        "@href": "https://arxiv.org/abs/2603.20036v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.19220v1",
+                        "@href": "https://arxiv.org/pdf/2603.20036v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICPC World Finals, demonstrating remarkably high intelligence density with 20x fewer parameters. In contrast to Nemotron-Cascade 1, the key technical advancements are as follows. After SFT on a meticulously curated dataset, we substantially expand Cascade RL to cover a much broader spectrum of reasoning and agentic domains. Furthermore, we introduce multi-domain on-policy distillation from the strongest intermediate teacher models for each domain throughout the Cascade RL process, allowing us to efficiently recover benchmark regressions and sustain strong performance gains along the way. We release the collection of model checkpoint and training data.",
+                "summary": "Continual learning methods usually preserve old behavior by regularizing parameters, matching old outputs, or replaying previous examples. These strategies can reduce forgetting, but they do not directly specify how the latent representation should evolve. We study a narrower geometric alternative for the regime where old and new data should remain on the same latent support: continual learning as continuation of a shared manifold. We instantiate this view within Support-Preserving Manifold Assimilation (SPMA) and evaluate a geometry-preserving variant, SPMA-OG, that combines sparse replay, output distillation, relational geometry preservation, local smoothing, and chart-assignment regularization on old anchors. On representative compatible-shift CIFAR10 and Tiny-ImageNet runs, SPMA-OG improves over sparse replay baselines in old-task retention and representation-preservation metrics while remaining competitive on new-task accuracy. On a controlled synthetic atlas-manifold benchmark, it achieves near-perfect anchor-geometry preservation while also improving new-task accuracy over replay. These results provide evidence that geometry-aware anchor regularization is a useful inductive bias when continual learning should preserve a shared latent support rather than create a new one.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-20T15:21:19Z",
+                "arxiv:comment": "11 pages, 4 figures, repo: https://github.com/kkryon/spma",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Henry J. Kobs"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.20033v1",
+                "title": "Retrieving the Red Edge on Earth-like Planets with Heterogeneous Clouds and Surfaces",
+                "updated": "2026-03-20T15:18:50Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.20033v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.20033v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The detection and characterization of potentially habitable exoplanets is one of the chief goals of astrophysics for the coming decades. Imaging in reflected light is well suited for characterizing Earth-like planets, as much can be learned about these planets in this wavelength range (i.e., ~0.3-2 \u03bcm). Several studies have been conducted to determine the abilities and limitations of reflectance spectroscopy, but most previous studies assumed a homogeneous atmospheric and surface composition. Here we investigate how heterogeneities in the atmosphere and surface of an Earth-like planet impact retrieval results. We extend the ExoReL retrieval framework to include a step function for retrieving wavelength varying surface albedo. We then use it to retrieve on visible-to-near-infrared spectra of realistic 3D Earth models with different surface features in view and varying cloud types/distributions synthesized with the Planetary Spectrum Generator. Including the ability to fit for wavelength dependent albedo mitigates degeneracies that arise when using 1D models to analyze 3D planets, and we recover an Earth-like planet in all cases. We detect surface albedo steps at ~0.7 and ~1.1 \u03bcm despite clouds, both when significant lands are in view and when the spectra are averaged to account for a longer integration time. Our findings support the application of the vegetation red edge as a biosignature in the context of the Habitable Worlds Observatory. This study highlights the importance of considering a range of-particularly wavelength-dependent-surface albedos when using reflectance spectroscopy to characterize Earth-like exoplanets.",
+                "category": {
+                    "@term": "astro-ph.EP",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-20T15:18:50Z",
+                "arxiv:comment": "19 pages, 12 figures, 2 tables, accepted for publication in ApJ",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.EP"
+                },
+                "author": [
+                    {
+                        "name": "Zachary Burr"
+                    },
+                    {
+                        "name": "Mario Damiano"
+                    },
+                    {
+                        "name": "Vincent Kofman"
+                    },
+                    {
+                        "name": "Renyu Hu"
+                    },
+                    {
+                        "name": "Geronimo L. Villanueva"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.20028v1",
+                "title": "Orchestrating Human-AI Software Delivery: A Retrospective Longitudinal Field Study of Three Software Modernization Programs",
+                "updated": "2026-03-20T15:14:36Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.20028v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.20028v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Evidence on AI in software engineering still leans heavily toward individual task completion, while evidence on team-level delivery remains scarce. We report a retrospective longitudinal field study of Chiron, an industrial platform that coordinates humans and AI agents across four delivery stages: analysis, planning, implementation, and validation. The study covers three real software modernization programs -- a COBOL banking migration (~30k LOC), a large accounting modernization (~400k LOC), and a .NET/Angular mortgage modernization (~30k LOC) -- observed across five delivery configurations: a traditional baseline and four successive platform versions (V1--V4). The benchmark separates observed outcomes (stage durations, task volumes, validation-stage issues, first-release coverage) from modeled outcomes (person-days and senior-equivalent effort under explicit staffing scenarios). Under baseline staffing assumptions, portfolio totals move from 36.0 to 9.3 summed project-weeks; modeled raw effort falls from 1080.0 to 232.5 person-days; modeled senior-equivalent effort falls from 1080.0 to 139.5 SEE-days; validation-stage issue load falls from 8.03 to 2.09 issues per 100 tasks; and first-release coverage rises from 77.0% to 90.5%. V3 and V4 add acceptance-criteria validation, repository-native review, and hybrid human-agent execution, simultaneously improving speed, coverage, and issue load. The evidence supports a central thesis: the largest gains appear when AI is embedded in an orchestrated workflow rather than deployed as an isolated coding assistant.",
                 "category": [
                     {
-                        "@term": "cs.CL",
+                        "@term": "cs.SE",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-20T15:14:36Z",
+                "arxiv:comment": "18 pages, 4 figures, 12 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.SE"
+                },
+                "author": [
+                    {
+                        "name": "Maximiliano Armesto"
+                    },
+                    {
+                        "name": "Christophe Kolb"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.20025v1",
+                "title": "Graph-Informed Adversarial Modeling: Infimal Subadditivity of Interpolative Divergences",
+                "updated": "2026-03-20T15:12:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.20025v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.20025v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We study adversarial learning when the target distribution factorizes according to a known Bayesian network. For interpolative divergences, including $(f,\u0393)$-divergences, we prove a new infimal subadditivity principle showing that, under suitable conditions, a global variational discrepancy is controlled by an average of family-level discrepancies aligned with the graph. In an additive regime, this surrogate is exact. This provides a variational justification for replacing a graph-agnostic GAN with a monolithic discriminator by a graph-informed GAN with localized family-level discriminators. The result does not require the optimizer itself to factorize according to the graph. We also obtain parallel results for integral probability metrics and proximal optimal transport divergences, identify natural discriminator classes for which the theory applies, and present experiments showing improved stability and structural recovery relative to graph-agnostic baselines.",
+                "category": [
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-20T15:12:42Z",
+                "arxiv:comment": "32 pages, 9 figures",
+                "arxiv:primary_category": {
+                    "@term": "stat.ML"
+                },
+                "author": [
+                    {
+                        "name": "Panagiota Birmpa",
+                        "arxiv:affiliation": [
+                            "Heriot--Watt University",
+                            "Maxwell Institute for Mathematical Sciences"
+                        ]
+                    },
+                    {
+                        "name": "Eric Joseph Hall",
+                        "arxiv:affiliation": [
+                            "Heriot--Watt University",
+                            "Maxwell Institute for Mathematical Sciences"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.20024v1",
+                "title": "Layered Quantum Architecture Search for 3D Point Cloud Classification",
+                "updated": "2026-03-20T15:10:15Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.20024v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.20024v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We introduce layered Quantum Architecture Search (layered-QAS), a strategy inspired by classical network morphism that designs Parametrised Quantum Circuit (PQC) architectures by progressively growing and adapting them. PQCs offer strong expressiveness with relatively few parameters, yet they lack standard architectural layers (e.g., convolution, attention) that encode inductive biases for a given learning task. To assess the effectiveness of our method, we focus on 3D point cloud classification as a challenging yet highly structured problem. Whereas prior work on this task has used PQCs only as feature extractors for classical classifiers, our approach uses the PQC as the main building block of the classification model. Simulations show that our layered-QAS mitigates barren plateau, outperforms quantum-adapted local and evolutionary QAS baselines, and achieves state-of-the-art results among PQC-based methods on the ModelNet dataset.",
+                "category": [
+                    {
+                        "@term": "quant-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -581,62 +469,23 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-19T17:58:52Z",
-                "arxiv:comment": "We release the model and data at https://huggingface.co/collections/nvidia/nemotron-cascade-2",
+                "published": "2026-03-20T15:10:15Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "quant-ph"
                 },
+                "arxiv:journal_ref": "International Conference on 3D Vision (3DV) 2026",
                 "author": [
                     {
-                        "name": "Zhuolin Yang"
+                        "name": "Natacha Kuete Meli"
                     },
                     {
-                        "name": "Zihan Liu"
+                        "name": "Jovita Lukasik"
                     },
                     {
-                        "name": "Yang Chen"
+                        "name": "Vladislav Golyanik"
                     },
                     {
-                        "name": "Wenliang Dai"
-                    },
-                    {
-                        "name": "Boxin Wang"
-                    },
-                    {
-                        "name": "Sheng-Chieh Lin"
-                    },
-                    {
-                        "name": "Chankyu Lee"
-                    },
-                    {
-                        "name": "Yangyi Chen"
-                    },
-                    {
-                        "name": "Dongfu Jiang"
-                    },
-                    {
-                        "name": "Jiafan He"
-                    },
-                    {
-                        "name": "Renjie Pi"
-                    },
-                    {
-                        "name": "Grace Lam"
-                    },
-                    {
-                        "name": "Nayeon Lee"
-                    },
-                    {
-                        "name": "Alexander Bukharin"
-                    },
-                    {
-                        "name": "Mohammad Shoeybi"
-                    },
-                    {
-                        "name": "Bryan Catanzaro"
-                    },
-                    {
-                        "name": "Wei Ping"
+                        "name": "Michael Moeller"
                     }
                 ]
             }
