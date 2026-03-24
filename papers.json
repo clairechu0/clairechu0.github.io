@@ -5,386 +5,36 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-24T01:27:14Z",
+        "updated": "2026-03-24T04:12:46Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "552670",
+        "opensearch:totalResults": "553034",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.21111v1",
-                "title": "Frequency Switching Mechanism for Parameter-E!cient Multi-Task Learning",
-                "updated": "2026-03-22T07:57:40Z",
+                "id": "http://arxiv.org/abs/2603.22286v1",
+                "title": "WorldCache: Content-Aware Caching for Accelerated Video World Models",
+                "updated": "2026-03-23T17:59:54Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.21111v1",
+                        "@href": "https://arxiv.org/abs/2603.22286v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.21111v1",
+                        "@href": "https://arxiv.org/pdf/2603.22286v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Multi-task learning (MTL) aims to enable a single model to solve multiple tasks efficiently; however, current parameter-efficient fine-tuning (PEFT) methods remain largely limited to single-task adaptation. We introduce \\textbf{Free Sinewich}, a parameter-efficient multi-task learning framework that enables near-zero-cost weight modulation via frequency switching (\\textbf{Free}). Specifically, a \\textbf{Sine-AWB (Sinewich)} layer combines low-rank factors and convolutional priors into a single kernel, which is then modulated elementwise by a sinusoidal transformation to produce task-specialized weights. A lightweight Clock Net is introduced to produce bounded frequencies that stabilize this modulation during training. Theoretically, sine modulation enhances the rank of low-rank adapters, while frequency separation decorrelates the weights of different tasks. On dense prediction benchmarks, Free Sinewich achieves state-of-the-art performance-efficiency trade-offs (e.g., up to +5.39\\% improvement over single-task fine-tuning with only 6.53M trainable parameters), offering a compact and scalable paradigm based on frequency-based parameter sharing. Project page: \\href{https://casperliuliuliu.github.io/projects/Free-Sinewich/}{https://casperliuliuliu.github.io/projects/Free-Sinewich}.",
+                "summary": "Diffusion Transformers (DiTs) power high-fidelity video world models but remain computationally expensive due to sequential denoising and costly spatio-temporal attention. Training-free feature caching accelerates inference by reusing intermediate activations across denoising steps; however, existing methods largely rely on a Zero-Order Hold assumption i.e., reusing cached features as static snapshots when global drift is small. This often leads to ghosting artifacts, blur, and motion inconsistencies in dynamic scenes. We propose \\textbf{WorldCache}, a Perception-Constrained Dynamical Caching framework that improves both when and how to reuse features. WorldCache introduces motion-adaptive thresholds, saliency-weighted drift estimation, optimal approximation via blending and warping, and phase-aware threshold scheduling across diffusion steps. Our cohesive approach enables adaptive, motion-consistent feature reuse without retraining. On Cosmos-Predict2.5-2B evaluated on PAI-Bench, WorldCache achieves \\textbf{2.3$\\times$} inference speedup while preserving \\textbf{99.4\\%} of baseline quality, substantially outperforming prior training-free caching approaches. Our code can be accessed on \\href{https://umair1221.github.io/World-Cache/}{World-Cache}.",
                 "category": [
                     {
                         "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-22T07:57:40Z",
-                "arxiv:comment": "Accepted to CVPR 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Shih-Wen Liu"
-                    },
-                    {
-                        "name": "Yen-Chang Chen"
-                    },
-                    {
-                        "name": "Wei-Ta Chu"
-                    },
-                    {
-                        "name": "Fu-En Yang"
-                    },
-                    {
-                        "name": "Yu-Chiang Frank Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.21108v1",
-                "title": "DMMRL: Disentangled Multi-Modal Representation Learning via Variational Autoencoders for Molecular Property Prediction",
-                "updated": "2026-03-22T07:53:08Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.21108v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.21108v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Molecular property prediction constitutes a cornerstone of drug discovery and materials science, necessitating models capable of disentangling complex structure-property relationships across diverse molecular modalities. Existing approaches frequently exhibit entangled representations--conflating structural, chemical, and functional factors--thereby limiting interpretability and transferability. Furthermore, conventional methods inadequately exploit complementary information from graphs, sequences, and geometries, often relying on naive concatenation that neglects inter-modal dependencies. In this work, we propose DMMRL, which employs variational autoencoders to disentangle molecular representations into shared (structure-relevant) and private (modality-specific) latent spaces, enhancing both interpretability and predictive performance. The proposed variational disentanglement mechanism effectively isolates the most informative features for property prediction, while orthogonality and alignment regularizations promote statistical independence and cross-modal consistency. Additionally, a gated attention fusion module adaptively integrates shared representations, capturing complex inter-modal relationships. Experimental validation across seven benchmark datasets demonstrates DMMRL's superior performance relative to state-of-the-art approaches. The code and data underlying this article are freely available at https://github.com/xulong0826/DMMRL.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-22T07:53:08Z",
-                "arxiv:comment": "9 pages, 1 figure",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Long Xu"
-                    },
-                    {
-                        "name": "Junping Guo"
-                    },
-                    {
-                        "name": "Jianbo Zhao"
-                    },
-                    {
-                        "name": "Jianbo Lu"
-                    },
-                    {
-                        "name": "Yuzhong Peng"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.21106v1",
-                "title": "Tracing Users' Privacy Concerns Across the Lifecycle of a Romantic AI Companion",
-                "updated": "2026-03-22T07:49:59Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.21106v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.21106v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Romantic AI chatbots have quickly attracted users, but their emotional use raises concerns about privacy and safety. As people turn to these systems for intimacy, comfort, and emotionally significant interaction, they often disclose highly sensitive information. Yet the privacy implications of such disclosure remain poorly understood in platforms shaped by persistence, intimacy, and opaque data practices. In this paper, we examine public Reddit discussions about privacy in romantic AI chatbot ecosystems through a lifecycle lens. Analyzing 2,909 posts from 79 subreddits collected over one year, we identify four recurring patterns: disproportionate entry requirements, intensified sensitivity in intimate use, interpretive uncertainty and perceived surveillance, and irreversibility, persistence, and user burden. We show that privacy in romantic AI is best understood as an evolving socio-technical governance problem spanning access, disclosure, interpretation, retention, and exit. These findings highlight the need for privacy and safety governance in romantic AI that is staged across the lifecycle of use, supports meaningful reversibility, and accounts for the emotional vulnerability of intimate human-AI interaction.",
-                "category": [
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.HC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-22T07:49:59Z",
-                "arxiv:comment": "15 pages, 1 figure, pending review",
-                "arxiv:primary_category": {
-                    "@term": "cs.CY"
-                },
-                "author": [
-                    {
-                        "name": "Kazi Ababil Azam"
-                    },
-                    {
-                        "name": "Imtiaz Karim"
-                    },
-                    {
-                        "name": "Dipto Das"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.21105v1",
-                "title": "ResPrune: Text-Conditioned Subspace Reconstruction for Visual Token Pruning in Large Vision-Language Models",
-                "updated": "2026-03-22T07:44:45Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.21105v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.21105v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large Vision-Language Models (LVLMs) rely on dense visual tokens to capture fine-grained visual information, but processing all these tokens incurs substantial computational and memory overhead during inference. To address this issue, we propose ResPrune, a training-free visual token pruning framework that enables efficient LVLM inference by selecting a compact yet informative subset of visual tokens. ResPrune formulates visual token pruning as a subspace reconstruction problem and employs a greedy subspace expansion strategy guided by residual energy, allowing it to preserve the geometric structure of the original visual token space. To further incorporate cross modal alignment, the selection process is conditioned on textual relevance, encouraging the retention of tokens that are both informative and instruction-relevant. The proposed method is lightweight and model-agnostic, and can be seamlessly integrated into existing LVLM pipelines without retraining or architectural modifications. Extensive experiments on multiple LVLM backbones, including LLaVA-1.5, LLaVA-NeXT, and Qwen2.5-VL, demonstrate that ResPrune consistently outperforms existing pruning approaches across a wide range of benchmarks, while achieving effective reductions in computation, memory consumption, and inference latency.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-22T07:44:45Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Xu Li"
-                    },
-                    {
-                        "name": "Yi Zheng"
-                    },
-                    {
-                        "name": "Yuxuan Liang"
-                    },
-                    {
-                        "name": "Zhe Liu"
-                    },
-                    {
-                        "name": "Xiaolei Chen"
-                    },
-                    {
-                        "name": "Haotian Chen"
-                    },
-                    {
-                        "name": "Rui Zhu"
-                    },
-                    {
-                        "name": "Xiangyang Xue"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.21102v1",
-                "title": "Evidential Quantum Vertical Federated Learning",
-                "updated": "2026-03-22T07:36:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.21102v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.21102v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Quantum federated learning (QFL) has recently emerged as a promising paradigm for privacy-preserving collaborative learning, yet most existing studies focus on horizontal federated learning and ignore the vertical federated learning (VFL), where parties hold complementary features of aligned samples. In this work, we propose Evidential Quantum Vertical Federated Learning (eviQVFL), a VFL-tailored QFL framework that employs a hybrid classical-quantum architecture for party-side feature processing, mapping local features into a quantum state. To preserve privacy and avoid information loss, party-side output states are directly transmitted to the server via quantum teleportation, and the server fuses the received quantum states with a non-parametric evidential fusion circuit grounded in evidence theory, followed by measurement-based inference. Extensive simulations on image classification and other real-world datasets demonstrate that eviQVFL consistently achieves higher classification accuracy than other classical and quantum baselines under comparable parameter budgets. Both empirical observations and theoretical analysis indicate that eviQVFL achieve less approximation error with limited quantum resources, while maintaining training stability and offering stronger feature privacy.",
-                "category": {
-                    "@term": "quant-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-22T07:36:21Z",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": [
-                    {
-                        "name": "Hao Luo"
-                    },
-                    {
-                        "name": "Zhiyuan Zhai"
-                    },
-                    {
-                        "name": "Qianli Zhou"
-                    },
-                    {
-                        "name": "Jun Qi"
-                    },
-                    {
-                        "name": "Yong Deng"
-                    },
-                    {
-                        "name": "Xin Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.21100v1",
-                "title": "Learning Progressive Adaptation for Multi-Modal Tracking",
-                "updated": "2026-03-22T07:25:54Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.21100v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.21100v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Due to the limited availability of paired multi-modal data, multi-modal trackers are typically built by adopting pre-trained RGB models with parameter-efficient fine-tuning modules. However, these fine-tuning methods overlook advanced adaptations for applying RGB pre-trained models and fail to modulate a single specific modality, cross-modal interactions, and the prediction head. To address the issues, we propose to perform Progressive Adaptation for Multi-Modal Tracking (PATrack). This innovative approach incorporates modality-dependent, modality-entangled, and task-level adapters, effectively bridging the gap in adapting RGB pre-trained networks to multi-modal data through a progressive strategy. Specifically, modality-specific information is enhanced through the modality-dependent adapter, decomposing the high- and low-frequency components, which ensures a more robust feature representation within each modality. The inter-modal interactions are introduced in the modality-entangled adapter, which implements a cross-attention operation guided by inter-modal shared information, ensuring the reliability of features conveyed between modalities. Additionally, recognising that the strong inductive bias of the prediction head does not adapt to the fused information, a task-level adapter specific to the prediction head is introduced. In summary, our design integrates intra-modal, inter-modal, and task-level adapters into a unified framework. Extensive experiments on RGB+Thermal, RGB+Depth, and RGB+Event tracking tasks demonstrate that our method shows impressive performance against state-of-the-art methods. Code is available at https://github.com/ouha1998/Learning-Progressive-Adaptation-for-Multi-Modal-Tracking.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-22T07:25:54Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "He Wang"
-                    },
-                    {
-                        "name": "Tianyang Xu"
-                    },
-                    {
-                        "name": "Zhangyong Tang"
-                    },
-                    {
-                        "name": "Xiao-Jun Wu"
-                    },
-                    {
-                        "name": "Josef Kittler"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.21097v1",
-                "title": "Learning to Optimize Joint Source and RIS-assisted Channel Encoding for Multi-User Semantic Communication Systems",
-                "updated": "2026-03-22T07:22:56Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.21097v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.21097v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In this paper, we explore a joint source and reconfigurable intelligent surface (RIS)-assisted channel encoding (JSRE) framework for multi-user semantic communications, where a deep neural network (DNN) extracts semantic features for all users and the RIS provides channel orthogonality, enabling a unified semantic encoding-decoding design. We aim to maximize the overall energy efficiency of semantic communications across all users by jointly optimizing the user scheduling, the RIS's phase shifts, and the semantic compression ratio. Although this joint optimization problem can be addressed using conventional deep reinforcement learning (DRL) methods, evaluating semantic similarity typically relies on extensive real environment interactions, which can incur heavy computational overhead during training. To address this challenge, we propose a truncated DRL (T-DRL) framework, where a DNN-based semantic similarity estimator is developed to rapidly estimate the similarity score. Moreover, the user scheduling strategy is tightly coupled with the semantic model configuration. To exploit this relationship, we further propose a semantic model caching mechanism that stores and reuses fine-tuned semantic models corresponding to different scheduling decisions. A Transformer-based actor network is employed within the DRL framework to dynamically generate action space conditioned on the current caching state. This avoids redundant retraining and further accelerates the convergence of the learning process. Numerical results demonstrate that the proposed JSRE framework significantly improves the system energy efficiency compared with the baseline methods. By training fewer semantic models, the proposed T-DRL framework significantly enhances the learning efficiency.",
-                "category": [
-                    {
-                        "@term": "cs.NI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-22T07:22:56Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.NI"
-                },
-                "author": [
-                    {
-                        "name": "Haidong Wang"
-                    },
-                    {
-                        "name": "Songhan Zhao"
-                    },
-                    {
-                        "name": "Bo Gu"
-                    },
-                    {
-                        "name": "Shimin Gong"
-                    },
-                    {
-                        "name": "Hongyang Du"
-                    },
-                    {
-                        "name": "Ping Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.21096v1",
-                "title": "Mixture of Chapters: Scaling Learnt Memory in Transformers",
-                "updated": "2026-03-22T07:16:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.21096v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.21096v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Transformers lack an explicit architectural mechanism for storing and organizing knowledge acquired during training. We introduce learnable sparse memory banks: a set of latent tokens, randomly initialized and trained end-to-end, that transformer layers query via cross-attention to retrieve stored knowledge. To scale memory capacity without prohibitive attention costs, we propose chapter-based routing inspired by Mixture-of-Experts architectures, partitioning the memory bank into chapters and training a router to select relevant subsets per input. This enables scaling to 262K memory tokens while maintaining tractable computation. We evaluate our approach against standard transformers (in iso-FLOP settings) on pre-training and instruction fine-tuning across relevant benchmarks. Our models surpass iso-FLOP baselines suggesting scope for a new axis of scaling, demonstrating that explicit associative memory provides complementary capacity to what is captured implicitly in model parameters. Additionally, we observe improved knowledge retention under continued training, with robustness to forgetting when transitioning between training phases (e.g., pretraining to instruction fine-tuning).",
-                "category": [
-                    {
-                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -394,49 +44,56 @@
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-22T07:16:58Z",
-                "arxiv:comment": "20 pages, 2 figures, 8 tables. Accepted at ICLR 2026 New Frontiers in Associative Memory Workshop. Code available at https://github.com/Tasmay-Tibrewal/Memory",
+                "published": "2026-03-23T17:59:54Z",
+                "arxiv:comment": "33 Pages",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Tasmay Pankaj Tibrewal"
+                        "name": "Umair Nawaz"
                     },
                     {
-                        "name": "Pritish Saha"
+                        "name": "Ahmed Heakl"
                     },
                     {
-                        "name": "Ankit Meda"
+                        "name": "Ufaq Khan"
                     },
                     {
-                        "name": "Kunal Singh"
+                        "name": "Abdelrahman Shaker"
                     },
                     {
-                        "name": "Pradeep Moturi"
+                        "name": "Salman Khan"
+                    },
+                    {
+                        "name": "Fahad Shahbaz Khan"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.21095v1",
-                "title": "Representation-Level Adversarial Regularization for Clinically Aligned Multitask Thyroid Ultrasound Assessment",
-                "updated": "2026-03-22T07:14:43Z",
+                "id": "http://arxiv.org/abs/2603.22283v1",
+                "title": "End-to-End Training for Unified Tokenization and Latent Denoising",
+                "updated": "2026-03-23T17:59:49Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.21095v1",
+                        "@href": "https://arxiv.org/abs/2603.22283v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.21095v1",
+                        "@href": "https://arxiv.org/pdf/2603.22283v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Thyroid ultrasound is the first-line exam for assessing thyroid nodules and determining whether biopsy is warranted. In routine reporting, radiologists produce two coupled outputs: a nodule contour for measurement and a TI-RADS risk category based on sonographic criteria. Yet both contouring style and risk grading vary across readers, creating inconsistent supervision that can degrade standard learning pipelines. In this paper, we address this workflow with a clinically guided multitask framework that jointly predicts the nodule mask and TI-RADS category within a single model. To ground risk prediction in clinically meaningful evidence, we guide the classification embedding using a compact TI-RADS aligned radiomics target during training, while preserving complementary deep features for discriminative performance. However, under annotator variability, naive multitask optimization often fails not because the tasks are unrelated, but because their gradients compete within the shared representation. To make this competition explicit and controllable, we introduce RLAR, a representation-level adversarial gradient regularizer. Rather than performing parameter-level gradient surgery, RLAR uses each task's normalized adversarial direction in latent space as a geometric probe of task sensitivity and penalizes excessive angular alignment between task-specific adversarial directions. On a public TI-RADS dataset, our clinically guided multitask model with RLAR consistently improves risk stratification while maintaining segmentation quality compared to single-task training and conventional multitask baselines. Code and pretrained models will be released.",
+                "summary": "Latent diffusion models (LDMs) enable high-fidelity synthesis by operating in learned latent spaces. However, training state-of-the-art LDMs requires complex staging: a tokenizer must be trained first, before the diffusion model can be trained in the frozen latent space. We propose UNITE - an autoencoder architecture for unified tokenization and latent diffusion. UNITE consists of a Generative Encoder that serves as both image tokenizer and latent generator via weight sharing. Our key insight is that tokenization and generation can be viewed as the same latent inference problem under different conditioning regimes: tokenization infers latents from fully observed images, whereas generation infers them from noise together with text or class conditioning. Motivated by this, we introduce a single-stage training procedure that jointly optimizes both tasks via two forward passes through the same Generative Encoder. The shared parameters enable gradients to jointly shape the latent space, encouraging a \"common latent language\". Across image and molecule modalities, UNITE achieves near state of the art performance without adversarial losses or pretrained encoders (e.g., DINO), reaching FID 2.12 and 1.73 for Base and Large models on ImageNet 256 x 256. We further analyze the Generative Encoder through the lenses of representation alignment and compression. These results show that single stage joint training of tokenization & generation from scratch is feasible.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -445,62 +102,435 @@
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.GR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-22T07:14:43Z",
+                "published": "2026-03-23T17:59:49Z",
+                "arxiv:comment": "First two authors contributed equally. Project: https://xingjianbai.com/unite-tokenization-generation/ Code: https://github.com/ShivamDuggal4/UNITE-tokenization-generation",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Dina Salama"
+                        "name": "Shivam Duggal"
                     },
                     {
-                        "name": "Mohamed Mahmoud"
+                        "name": "Xingjian Bai"
                     },
                     {
-                        "name": "Nourhan Bayasi"
+                        "name": "Zongze Wu"
                     },
                     {
-                        "name": "David Liu"
+                        "name": "Richard Zhang"
                     },
                     {
-                        "name": "Ilker Hacihaliloglu"
+                        "name": "Eli Shechtman"
+                    },
+                    {
+                        "name": "Antonio Torralba"
+                    },
+                    {
+                        "name": "Phillip Isola"
+                    },
+                    {
+                        "name": "William T. Freeman"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.21094v1",
-                "title": "Evaluating Reasoning-Based Scaffolds for Human-AI Co-Annotation: The ReasonAlign Annotation Protocol",
-                "updated": "2026-03-22T07:14:27Z",
+                "id": "http://arxiv.org/abs/2603.22281v1",
+                "title": "ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning Model",
+                "updated": "2026-03-23T17:59:42Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.21094v1",
+                        "@href": "https://arxiv.org/abs/2603.22281v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.21094v1",
+                        "@href": "https://arxiv.org/pdf/2603.22281v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Human annotation is central to NLP evaluation, yet subjective tasks often exhibit substantial variability across annotators. While large language models (LLMs) can provide structured reasoning to support annotation, their influence on human annotation behavior remains unclear.\n  We introduce ReasonAlign, a reasoning-based annotation scaffold that exposes LLM-generated explanations while withholding predicted labels. We frame this as a controlled study of how reasoning affects human annotation behavior, rather than a full evaluation of annotation accuracy. Using a two-pass protocol inspired by Delphi-style revision, annotators first label instances independently and then revise their decisions after viewing model-generated reasoning.\n  We evaluate the approach on sentiment classification and opinion detection tasks, analyzing changes in inter-annotator agreement and revision behavior. To quantify these effects, we introduce the Annotator Effort Proxy (AEP), a metric capturing the proportion of labels revised after exposure to reasoning. Our results show that exposure to reasoning is associated with increased agreement alongside minimal revision, suggesting that reasoning primarily helps resolve ambiguous cases without inducing widespread changes.\n  These findings provide insight into how reasoning explanations shape annotation consistency and highlight reasoning-based scaffolds as a practical mechanism for supporting human-AI annotation workflows.",
+                "summary": "Recent progress in latent world models (e.g., V-JEPA2) has shown promising capability in forecasting future world states from video observations. Nevertheless, dense prediction from a short observation window limits temporal context and can bias predictors toward local, low-level extrapolation, making it difficult to capture long-horizon semantics and reducing downstream utility. Vision--language models (VLMs), in contrast, provide strong semantic grounding and general knowledge by reasoning over uniformly sampled frames, but they are not ideal as standalone dense predictors due to compute-driven sparse sampling, a language-output bottleneck that compresses fine-grained interaction states into text-oriented representations, and a data-regime mismatch when adapting to small action-conditioned datasets. We propose a VLM-guided JEPA-style latent world modeling framework that combines dense-frame dynamics modeling with long-horizon semantic guidance via a dual-temporal pathway: a dense JEPA branch for fine-grained motion and interaction cues, and a uniformly sampled VLM \\emph{thinker} branch with a larger temporal stride for knowledge-rich guidance. To transfer the VLM's progressive reasoning signals effectively, we introduce a hierarchical pyramid representation extraction module that aggregates multi-layer VLM representations into guidance features compatible with latent prediction. Experiments on hand-manipulation trajectory prediction show that our method outperforms both a strong VLM-only baseline and a JEPA-predictor baseline, and yields more robust long-horizon rollout behavior.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-23T17:59:42Z",
+                "arxiv:comment": "10 pages, 5 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Haichao Zhang"
+                    },
+                    {
+                        "name": "Yijiang Li"
+                    },
+                    {
+                        "name": "Shwai He"
+                    },
+                    {
+                        "name": "Tushar Nagarajan"
+                    },
+                    {
+                        "name": "Mingfei Chen"
+                    },
+                    {
+                        "name": "Jianglin Lu"
+                    },
+                    {
+                        "name": "Ang Li"
+                    },
+                    {
+                        "name": "Yun Fu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.22278v1",
+                "title": "The Dual Mechanisms of Spatial Reasoning in Vision-Language Models",
+                "updated": "2026-03-23T17:58:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.22278v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.22278v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Many multimodal tasks, such as image captioning and visual question answering, require vision-language models (VLMs) to associate objects with their properties and spatial relations. Yet it remains unclear where and how such associations are computed within VLMs. In this work, we show that VLMs rely on two concurrent mechanisms to represent such associations. In the language model backbone, intermediate layers represent content-independent spatial relations on top of visual tokens corresponding to objects. However, this mechanism plays only a secondary role in shaping model predictions. Instead, the dominant source of spatial information originates in the vision encoder, whose representations encode the layout of objects and are directly exploited by the language model backbone. Notably, this spatial signal is distributed globally across visual tokens, extending beyond object regions into surrounding background areas. We show that enhancing these vision-derived spatial representations globally across all image tokens improves spatial reasoning performance on naturalistic images. Together, our results clarify how spatial association is computed within VLMs and highlight the central role of vision encoders in enabling spatial reasoning.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-23T17:58:02Z",
+                "arxiv:comment": "26 pages, 35 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Kelly Cui"
+                    },
+                    {
+                        "name": "Nikhil Prakash"
+                    },
+                    {
+                        "name": "Ayush Raina"
+                    },
+                    {
+                        "name": "David Bau"
+                    },
+                    {
+                        "name": "Antonio Torralba"
+                    },
+                    {
+                        "name": "Tamar Rott Shaham"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.22276v1",
+                "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels",
+                "updated": "2026-03-23T17:57:24Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.22276v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.22276v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Weight-Decomposed Low-Rank Adaptation (DoRA) extends LoRA by decoupling weight magnitude from direction, but its forward pass requires the row-wise norm of W + sBA, a computation that every major framework we surveyed implements by materializing the dense [d_out, d_in] product BA. At d_in = 8192 and rank r = 384, a single module's norm requires about 512 MB of transient working memory in bf16, making high-rank DoRA costly and often infeasible on common single-GPU setups once hundreds of adapted modules and checkpointing are involved.\n  We present two systems contributions. A factored norm decomposes the squared norm into base, cross, and Gram terms computable through O(d_out r + r^2) intermediates, eliminating the dense product. Fused Triton kernels collapse the four-kernel DoRA composition into a single pass, reducing memory traffic by about 4x and using a numerically stable form that avoids catastrophic cancellation in the near-unity rescaling regime where magnitude scales concentrate in practice.\n  Across six 8-32B vision-language models (VLMs) on three NVIDIA GPUs (RTX 6000 PRO, H200, B200) at r = 384 in bf16, the fused implementation is 1.5-2.0x faster than Hugging Face PEFT's DoRA implementation for inference and 1.5-1.9x faster for gradient computation (optimizer step excluded), with up to 7 GB lower peak VRAM. Microbenchmarks on six GPUs spanning four architecture generations (L40S, A100, RTX 6000 PRO, H200, B200, B300) confirm 1.5-2.7x compose-kernel speedup. Final-logit cosine similarity exceeds 0.9999 across all model/GPU pairs, and multi-seed training curves match within 7.1 x 10^-4 mean per-step loss delta over 2000 steps.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-23T17:57:24Z",
+                "arxiv:comment": "30 pages, 15 figures, 15 tables, including appendices. Code and data at https://github.com/sockeye44/dorafactors",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Alexandra Zelenin"
+                    },
+                    {
+                        "name": "Alexandra Zhuravlyova"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.22273v1",
+                "title": "Decoupling Exploration and Policy Optimization: Uncertainty Guided Tree Search for Hard Exploration",
+                "updated": "2026-03-23T17:56:52Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.22273v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.22273v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The process of discovery requires active exploration -- the act of collecting new and informative data. However, efficient autonomous exploration remains a major unsolved problem. The dominant paradigm addresses this challenge by using Reinforcement Learning (RL) to train agents with intrinsic motivation, maximizing a composite objective of extrinsic and intrinsic rewards. We suggest that this approach incurs unnecessary overhead: while policy optimization is necessary for precise task execution, employing such machinery solely to expand state coverage may be inefficient. In this paper, we propose a new paradigm that explicitly separates exploration from exploitation and bypasses RL during the exploration phase. Our method uses a tree-search strategy inspired by the Go-With-The-Winner algorithm, paired with a measure of epistemic uncertainty to systematically drive exploration. By removing the overhead of policy optimization, our approach explores an order of magnitude more efficiently than standard intrinsic motivation baselines on hard Atari benchmarks. Further, we demonstrate that the discovered trajectories can be distilled into deployable policies using existing supervised backward learning algorithms, achieving state-of-the-art scores by a wide margin on Montezuma's Revenge, Pitfall!, and Venture without relying on domain-specific knowledge. Finally, we demonstrate the generality of our framework in high-dimensional continuous action spaces by solving the MuJoCo Adroit dexterous manipulation and AntMaze tasks in a sparse-reward setting, directly from image observations and without expert demonstrations or offline datasets. To the best of our knowledge, this has not been achieved before.",
                 "category": {
-                    "@term": "cs.CL",
+                    "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-22T07:14:27Z",
+                "published": "2026-03-23T17:56:52Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Zakaria Mhammedi"
+                    },
+                    {
+                        "name": "James Cohan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.22270v1",
+                "title": "GenOpticalFlow: A Generative Approach to Unsupervised Optical Flow Learning",
+                "updated": "2026-03-23T17:55:52Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.22270v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.22270v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Optical flow estimation is a fundamental problem in computer vision, yet the reliance on expensive ground-truth annotations limits the scalability of supervised approaches. Although unsupervised and semi-supervised methods alleviate this issue, they often suffer from unreliable supervision signals based on brightness constancy and smoothness assumptions, leading to inaccurate motion estimation in complex real-world scenarios. To overcome these limitations, we introduce \\textbf{\\modelname}, a novel framework that synthesizes large-scale, perfectly aligned frame--flow data pairs for supervised optical flow training without human annotations. Specifically, our method leverages a pre-trained depth estimation network to generate pseudo optical flows, which serve as conditioning inputs for a next-frame generation model trained to produce high-fidelity, pixel-aligned subsequent frames. This process enables the creation of abundant, high-quality synthetic data with precise motion correspondence. Furthermore, we propose an \\textit{inconsistent pixel filtering} strategy that identifies and removes unreliable pixels in generated frames, effectively enhancing fine-tuning performance on real-world datasets. Extensive experiments on KITTI2012, KITTI2015, and Sintel demonstrate that \\textbf{\\modelname} achieves competitive or superior results compared to existing unsupervised and semi-supervised approaches, highlighting its potential as a scalable and annotation-free solution for optical flow learning. We will release our code upon acceptance.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-23T17:55:52Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yixuan Luo"
+                    },
+                    {
+                        "name": "Feng Qiao"
+                    },
+                    {
+                        "name": "Zhexiao Xiong"
+                    },
+                    {
+                        "name": "Yanjing Li"
+                    },
+                    {
+                        "name": "Nathan Jacobs"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.22268v1",
+                "title": "An Accurate Tensorial Model for Prediction of Full Zeolite NMR Spectra",
+                "updated": "2026-03-23T17:53:58Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.22268v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.22268v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Solid state nuclear magnetic resonance (ss-NMR) is one of the most sensitive and popular techniques for structure elucidation in geometrically complex crystalline materials, such as zeolites. Synergistic support from computational modelling is vital to interpret experimental spectra, and relate ss-NMR to atomistic models. Nevertheless, computational predictions are hindered by the high expense of calculating magnetic shielding (MS) and electric field gradient (EFG) tensors from first principles. In this work, we leverage a novel tensorial machine learning approach to train a general model for predicting complete NMR tensors. We demonstrate the utility of the approach for a diverse dataset of zeolitic materials and NMR-active nuclei ($^{27}$Al, $^{29}$Si, $^{17}$O, $^{23}$Na and $^{1}$H), predicting all NMR observables to a high degree of precision. These observables are then translated into predictions of the full $^{27}$Al and $^{29}$Si ss-nMR spectra for the exemplary zeolite RTH. Thus, this work opens a pathway to accurate, high-throughput NMR simulation for large-scale and realistic models of chemically complex zeolites.",
+                "category": {
+                    "@term": "physics.chem-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-23T17:53:58Z",
+                "arxiv:primary_category": {
+                    "@term": "physics.chem-ph"
+                },
+                "author": [
+                    {
+                        "name": "Carlos Bornes"
+                    },
+                    {
+                        "name": "Chiheb Ben Mahmoud"
+                    },
+                    {
+                        "name": "Volker L. Deringer"
+                    },
+                    {
+                        "name": "Christopher J. Heard"
+                    },
+                    {
+                        "name": "Luk\u00e1\u0161 Grajciar"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.22267v1",
+                "title": "TiCo: Time-Controllable Training for Spoken Dialogue Models",
+                "updated": "2026-03-23T17:51:40Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.22267v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.22267v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We propose TiCo, a simple post-training method for enabling spoken dialogue models (SDMs) to follow time-constrained instructions and generate responses with controllable duration. This capability is valuable for real-world spoken language systems such as voice assistants and interactive agents, where controlling response duration can improve interaction quality. However, despite their strong ability to generate natural spoken responses, existing models lack time awareness and struggle to follow duration-related instructions (e.g., \"Please generate a response lasting about 15 seconds\"). Through an empirical evaluation of both open-source and commercial SDMs, we show that they frequently fail to satisfy such time-control requirements. TiCo addresses this limitation by enabling models to estimate elapsed speaking time during generation through Spoken Time Markers (STM) (e.g., <10.6 seconds>). These markers help the model maintain awareness of time and adjust the remaining content to meet the target duration. TiCo is simple and efficient: it requires only a small amount of data and no additional question-answer pairs, relying instead on self-generation and reinforcement learning. Experimental results show that TiCo significantly improves adherence to duration constraints while preserving response quality.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.AS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-23T17:51:40Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Smitha Muthya Sudheendra"
+                        "name": "Kai-Wei Chang"
                     },
                     {
-                        "name": "Jaideep Srivastava"
+                        "name": "Wei-Chih Chen"
+                    },
+                    {
+                        "name": "En-Pei Hu"
+                    },
+                    {
+                        "name": "Hung-yi Lee"
+                    },
+                    {
+                        "name": "James Glass"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.22263v1",
+                "title": "DexDrummer: In-Hand, Contact-Rich, and Long-Horizon Dexterous Robot Drumming",
+                "updated": "2026-03-23T17:49:06Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.22263v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.22263v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Performing in-hand, contact-rich, and long-horizon dexterous manipulation remains an unsolved challenge in robotics. Prior hand dexterity works have considered each of these three challenges in isolation, yet do not combine these skills into a single, complex task. To further test the capabilities of dexterity, we propose drumming as a testbed for dexterous manipulation. Drumming naturally integrates all three challenges: it involves in-hand control for stabilizing and adjusting the drumstick with the fingers, contact-rich interaction through repeated striking of the drum surface, and long-horizon coordination when switching between drums and sustaining rhythmic play. We present DexDrummer, a hierarchical object-centric bimanual drumming policy trained in simulation with sim-to-real transfer. The framework reduces the exploration difficulty of pure reinforcement learning by combining trajectory planning with residual RL corrections for fast transitions between drums. A dexterous manipulation policy handles contact-rich dynamics, guided by rewards that explicitly model both finger-stick and stick-drum interactions. In simulation, we show our policy can play two styles of music: multi-drum, bimanual songs and challenging, technical exercises that require increased dexterity. Across simulated bimanual tasks, our dexterous, reactive policy outperforms a fixed grasp policy by 1.87x across easy songs and 1.22x across hard songs F1 scores. In real-world tasks, we show song performance across a multi-drum setup. DexDrummer is able to play our training song and its extended version with an F1 score of 1.0.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-23T17:49:06Z",
+                "arxiv:comment": "Website: https://dexdrummer.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Hung-Chieh Fang"
+                    },
+                    {
+                        "name": "Amber Xie"
+                    },
+                    {
+                        "name": "Jennifer Grannen"
+                    },
+                    {
+                        "name": "Kenneth Llontop"
+                    },
+                    {
+                        "name": "Dorsa Sadigh"
                     }
                 ]
             }
