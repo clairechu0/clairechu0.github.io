@@ -5,40 +5,148 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-26T23:26:18Z",
+        "updated": "2026-03-27T01:51:10Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "553830",
+        "opensearch:totalResults": "554140",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.24594v1",
-                "title": "Polynomial Speedup in Diffusion Models with the Multilevel Euler-Maruyama Method",
-                "updated": "2026-03-25T17:59:45Z",
+                "id": "http://arxiv.org/abs/2603.25517v1",
+                "title": "NERO-Net: A Neuroevolutionary Approach for the Design of Adversarially Robust CNNs",
+                "updated": "2026-03-26T14:51:30Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.24594v1",
+                        "@href": "https://arxiv.org/abs/2603.25517v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.24594v1",
+                        "@href": "https://arxiv.org/pdf/2603.25517v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We introduce the Multilevel Euler-Maruyama (ML-EM) method compute solutions of SDEs and ODEs using a range of approximators $f^1,\\dots,f^k$ to the drift $f$ with increasing accuracy and computational cost, only requiring a few evaluations of the most accurate $f^k$ and many evaluations of the less costly $f^1,\\dots,f^{k-1}$. If the drift lies in the so-called Harder than Monte Carlo (HTMC) regime, i.e. it requires $\u03b5^{-\u03b3}$ compute to be $\u03b5$-approximated for some $\u03b3>2$, then ML-EM $\u03b5$-approximates the solution of the SDE with $\u03b5^{-\u03b3}$ compute, improving over the traditional EM rate of $\u03b5^{-\u03b3-1}$. In other terms it allows us to solve the SDE at the same cost as a single evaluation of the drift. In the context of diffusion models, the different levels $f^{1},\\dots,f^{k}$ are obtained by training UNets of increasing sizes, and ML-EM allows us to perform sampling with the equivalent of a single evaluation of the largest UNet. Our numerical experiments confirm our theory: we obtain up to fourfold speedups for image generation on the CelebA dataset downscaled to 64x64, where we measure a $\u03b3\\approx2.5$. Given that this is a polynomial speedup, we expect even stronger speedups in practical applications which involve orders of magnitude larger networks.",
+                "summary": "Neuroevolution automates the complex task of neural network design but often ignores the inherent adversarial fragility of evolved models which is a barrier to adoption in safety-critical scenarios. While robust training methods have received significant attention, the design of architectures exhibiting intrinsic robustness remains largely unexplored. In this paper, we propose NERO-Net, a neuroevolutionary approach to design convolutional neural networks better equipped to resist adversarial attacks. Our search strategy isolates architectural influence on robustness by avoiding adversarial training during the evolutionary loop. As such, our fitness function promotes candidates that, even trained with standard (non-robust) methods, achieve high post-attack accuracy without sacrificing the accuracy on clean samples. We assess NERO-Net on CIFAR-10 with a specific focus on $L_\\infty$-robustness. In particular, the fittest individual emerged from evolutionary search with 33% accuracy against FGSM, used as an efficient estimator for robustness during the search phase, while maintaining 87% clean accuracy. Further standard training of this individual boosted these metrics to 47% adversarial and 93% clean accuracy, suggesting inherent architectural robustness. Adversarial training brings the overall accuracy of the model up to 40% against AutoAttack.",
                 "category": [
+                    {
+                        "@term": "cs.NE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-26T14:51:30Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.NE"
+                },
+                "author": [
+                    {
+                        "name": "In\u00eas Valentim"
+                    },
+                    {
+                        "name": "Nuno Antunes"
+                    },
+                    {
+                        "name": "Nuno Louren\u00e7o"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.25510v1",
+                "title": "Challenges in Hyperspectral Imaging for Autonomous Driving: The HSI-Drive Case",
+                "updated": "2026-03-26T14:45:57Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.25510v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.25510v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The use of hyperspectral imaging (HSI) in autonomous driving (AD), while promising, faces many challenges related to the specifics and requirements of this application domain. On the one hand, non-controlled and variable lighting conditions, the wide depth-of-field ranges, and dynamic scenes with fast-moving objects. On the other hand, the requirements for real-time operation and the limited computational resources of embedded platforms. The combination of these factors determines both the criteria for selecting appropriate HSI technologies and the development of custom vision algorithms that leverage the spectral and spatial information obtained from the sensors. In this article, we analyse several techniques explored in the research of HSI-based vision systems with application to AD, using as an example results obtained from experiments using data from the most recent version of the HSI-Drive dataset.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "math.NA",
+                        "@term": "eess.IV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-26T14:45:57Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Koldo Basterretxea"
+                    },
+                    {
+                        "name": "Jon Guti\u00e9rrez-Zaballa"
+                    },
+                    {
+                        "name": "Javier Echanobe"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.25509v1",
+                "title": "Conformal Prediction for Nonparametric Instrumental Regression",
+                "updated": "2026-03-26T14:45:30Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.25509v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.25509v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We propose a method for constructing distribution-free prediction intervals in nonparametric instrumental variable regression (NPIV), with finite-sample coverage guarantees. Building on the conditional guarantee framework in conformal inference, we reformulate conditional coverage as marginal coverage over a class of IV shifts $\\mathcal{F}$. Our method can be combined with any NPIV estimator, including sieve 2SLS and other machine-learning-based NPIV methods such as neural networks minimax approaches. Our theoretical analysis establishes distribution-free, finite-sample coverage over a practitioner-chosen class of IV shifts.",
+                "category": [
+                    {
+                        "@term": "econ.EM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.AP",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ME",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -46,276 +154,35 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-25T17:59:45Z",
+                "published": "2026-03-26T14:45:30Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "econ.EM"
                 },
                 "author": {
-                    "name": "Arthur Jacot"
+                    "name": "Masahiro Kato"
                 }
             },
             {
-                "id": "http://arxiv.org/abs/2603.24591v1",
-                "title": "Vibe Coding XR: Accelerating AI + XR Prototyping with XR Blocks and Gemini",
-                "updated": "2026-03-25T17:58:56Z",
+                "id": "http://arxiv.org/abs/2603.25507v1",
+                "title": "Lightweight GenAI for Network Traffic Synthesis: Fidelity, Augmentation, and Classification",
+                "updated": "2026-03-26T14:45:04Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.24591v1",
+                        "@href": "https://arxiv.org/abs/2603.25507v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.24591v1",
+                        "@href": "https://arxiv.org/pdf/2603.25507v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "While large language models have accelerated software development through \"vibe coding\", prototyping intelligent Extended Reality (XR) experiences remains inaccessible due to the friction of complex game engines and low-level sensor integration. To bridge this gap, we contribute XR Blocks, an open-source, modular WebXR framework that abstracts spatial computing complexities into high-level, human-centered primitives. Building upon this foundation, we present Vibe Coding XR, an end-to-end rapid prototyping workflow that leverages LLMs to translate natural language intent directly into functional XR software. Using a web-based interface, creators can transform high-level prompts (e.g., \"create a dandelion that reacts to hand\") into interactive WebXR applications in under a minute. We provide a preliminary technical evaluation on a pilot dataset (VCXR60) alongside diverse application scenarios highlighting mixed-reality realism, multi-modal interaction, and generative AI integrations. By democratizing spatial software creation, this work empowers practitioners to bypass low-level hurdles and rapidly move from \"idea to reality.\" Code and live demos are available at https://xrblocks.github.io/gem and https://github.com/google/xrblocks.",
-                "category": {
-                    "@term": "cs.HC",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-25T17:58:56Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.HC"
-                },
-                "author": [
-                    {
-                        "name": "Ruofei Du"
-                    },
-                    {
-                        "name": "Benjamin Hersh"
-                    },
-                    {
-                        "name": "David Li"
-                    },
-                    {
-                        "name": "Nels Numan"
-                    },
-                    {
-                        "name": "Xun Qian"
-                    },
-                    {
-                        "name": "Yanhe Chen"
-                    },
-                    {
-                        "name": "Zhongyi Zhou"
-                    },
-                    {
-                        "name": "Xingyue Chen"
-                    },
-                    {
-                        "name": "Jiahao Ren"
-                    },
-                    {
-                        "name": "Robert Timothy Bettridge"
-                    },
-                    {
-                        "name": "Steve Toh"
-                    },
-                    {
-                        "name": "David Kim"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.24589v1",
-                "title": "YingMusic-Singer: Controllable Singing Voice Synthesis with Flexible Lyric Manipulation and Annotation-free Melody Guidance",
-                "updated": "2026-03-25T17:58:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.24589v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.24589v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Regenerating singing voices with altered lyrics while preserving melody consistency remains challenging, as existing methods either offer limited controllability or require laborious manual alignment. We propose YingMusic-Singer, a fully diffusion-based model enabling melody-controllable singing voice synthesis with flexible lyric manipulation. The model takes three inputs: an optional timbre reference, a melody-providing singing clip, and modified lyrics, without manual alignment. Trained with curriculum learning and Group Relative Policy Optimization, YingMusic-Singer achieves stronger melody preservation and lyric adherence than Vevo2, the most comparable baseline supporting melody control without manual alignment. We also introduce LyricEditBench, the first benchmark for melody-preserving lyric modification evaluation. The code, weights, benchmark, and demos are publicly available at https://github.com/ASLP-lab/YingMusic-Singer.",
+                "summary": "Accurate Network Traffic Classification (NTC) is increasingly constrained by limited labeled data and strict privacy requirements. While Network Traffic Generation (NTG) provides an effective means to mitigate data scarcity, conventional generative methods struggle to model the complex temporal dynamics of modern traffic or/and often incur significant computational cost. In this article, we address the NTG task using lightweight Generative Artificial Intelligence (GenAI) architectures, including transformer-based, state-space, and diffusion models designed for practical deployment. We conduct a systematic evaluation along four axes: (i) (synthetic) traffic fidelity, (ii) synthetic-only training, (iii) data augmentation under low-data regimes, and (iv) computational efficiency. Experiments on two heterogeneous datasets show that lightweight GenAI models preserve both static and temporal traffic characteristics, with transformer and state-space models closely matching real distributions across a complete set of fidelity metrics. Classifiers trained solely on synthetic traffic achieve up to 87% F1-score on real data. In low-data settings, GenAI-driven augmentation improves NTC performance by up to +40%, substantially reducing the gap with full-data training. Overall, transformer-based models provide the best trade-off between fidelity and efficiency, enabling high-quality, privacy-aware traffic synthesis with modest computational overhead.",
                 "category": [
                     {
-                        "@term": "eess.AS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SD",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-25T17:58:11Z",
-                "arxiv:primary_category": {
-                    "@term": "eess.AS"
-                },
-                "author": [
-                    {
-                        "name": "Chunbo Hao"
-                    },
-                    {
-                        "name": "Junjie Zheng"
-                    },
-                    {
-                        "name": "Guobin Ma"
-                    },
-                    {
-                        "name": "Yuepeng Jiang"
-                    },
-                    {
-                        "name": "Huakang Chen"
-                    },
-                    {
-                        "name": "Wenjie Tian"
-                    },
-                    {
-                        "name": "Gongyu Chen"
-                    },
-                    {
-                        "name": "Zihao Chen"
-                    },
-                    {
-                        "name": "Lei Xie"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.24587v1",
-                "title": "DreamerAD: Efficient Reinforcement Learning via Latent World Model for Autonomous Driving",
-                "updated": "2026-03-25T17:57:09Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.24587v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.24587v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We introduce DreamerAD, the first latent world model framework that enables efficient reinforcement learning for autonomous driving by compressing diffusion sampling from 100 steps to 1 - achieving 80x speedup while maintaining visual interpretability. Training RL policies on real-world driving data incurs prohibitive costs and safety risks. While existing pixel-level diffusion world models enable safe imagination-based training, they suffer from multi-step diffusion inference latency (2s/frame) that prevents high-frequency RL interaction. Our approach leverages denoised latent features from video generation models through three key mechanisms: (1) shortcut forcing that reduces sampling complexity via recursive multi-resolution step compression, (2) an autoregressive dense reward model operating directly on latent representations for fine-grained credit assignment, and (3) Gaussian vocabulary sampling for GRPO that constrains exploration to physically plausible trajectories. DreamerAD achieves 87.7 EPDMS on NavSim v2, establishing state-of-the-art performance and demonstrating that latent-space RL is effective for autonomous driving.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-25T17:57:09Z",
-                "arxiv:comment": "first version",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Pengxuan Yang"
-                    },
-                    {
-                        "name": "Yupeng Zheng"
-                    },
-                    {
-                        "name": "Deheng Qian"
-                    },
-                    {
-                        "name": "Zebin Xing"
-                    },
-                    {
-                        "name": "Qichao Zhang"
-                    },
-                    {
-                        "name": "Linbo Wang"
-                    },
-                    {
-                        "name": "Yichen Zhang"
-                    },
-                    {
-                        "name": "Shaoyu Guo"
-                    },
-                    {
-                        "name": "Zhongpu Xia"
-                    },
-                    {
-                        "name": "Qiang Chen"
-                    },
-                    {
-                        "name": "Junyu Han"
-                    },
-                    {
-                        "name": "Lingyun Xu"
-                    },
-                    {
-                        "name": "Yifeng Pan"
-                    },
-                    {
-                        "name": "Dongbin Zhao"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.24582v1",
-                "title": "The Stochastic Gap: A Markovian Framework for Pre-Deployment Reliability and Oversight-Cost Auditing in Agentic Artificial Intelligence",
-                "updated": "2026-03-25T17:56:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.24582v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.24582v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Agentic artificial intelligence (AI) in organizations is a sequential decision problem constrained by reliability and oversight cost. When deterministic workflows are replaced by stochastic policies over actions and tool calls, the key question is not whether a next step appears plausible, but whether the resulting trajectory remains statistically supported, locally unambiguous, and economically governable. We develop a measure-theoretic Markov framework for this setting. The core quantities are state blind-spot mass B_n(tau), state-action blind mass B^SA_{pi,n}(tau), an entropy-based human-in-the-loop escalation gate, and an expected oversight-cost identity over the workflow visitation measure.\n  We instantiate the framework on the Business Process Intelligence Challenge 2019 purchase-to-pay log (251,734 cases, 1,595,923 events, 42 distinct workflow actions) and construct a log-driven simulated agent from a chronological 80/20 split of the same process. The main empirical finding is that a large workflow can appear well supported at the state level while retaining substantial blind mass over next-step decisions: refining the operational state to include case context, economic magnitude, and actor class expands the state space from 42 to 668 and raises state-action blind mass from 0.0165 at tau=50 to 0.1253 at tau=1000. On the held-out split, m(s) = max_a pi-hat(a|s) tracks realized autonomous step accuracy within 3.4 percentage points on average.\n  The same quantities that delimit statistically credible autonomy also determine expected oversight burden. The framework is demonstrated on a large-scale enterprise procurement workflow and is designed for direct application to engineering processes for which operational event logs are available.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-25T17:56:11Z",
-                "arxiv:comment": "22 pages, 5 figures, submitted to Engineering Applications of Artificial Intelligence",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Biplab Pal"
-                    },
-                    {
-                        "name": "Santanu Bhattacharya"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.24580v1",
-                "title": "Retrieval Improvements Do Not Guarantee Better Answers: A Study of RAG for AI Policy QA",
-                "updated": "2026-03-25T17:54:39Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.24580v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.24580v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Retrieval-augmented generation (RAG) systems are increasingly used to analyze complex policy documents, but achieving sufficient reliability for expert usage remains challenging in domains characterized by dense legal language and evolving, overlapping regulatory frameworks. We study the application of RAG to AI governance and policy analysis using the AI Governance and Regulatory Archive (AGORA) corpus, a curated collection of 947 AI policy documents. Our system combines a ColBERT-based retriever fine-tuned with contrastive learning and a generator aligned to human preferences using Direct Preference Optimization (DPO). We construct synthetic queries and collect pairwise preferences to adapt the system to the policy domain. Through experiments evaluating retrieval quality, answer relevance, and faithfulness, we find that domain-specific fine-tuning improves retrieval metrics but does not consistently improve end-to-end question answering performance. In some cases, stronger retrieval counterintuitively leads to more confident hallucinations when relevant documents are absent from the corpus. These results highlight a key concern for those building policy-focused RAG systems: improvements to individual components do not necessarily translate to more reliable answers. Our findings provide practical insights for designing grounded question-answering systems over dynamic regulatory corpora.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
+                        "@term": "cs.NI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -323,243 +190,325 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CY",
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-26T14:45:04Z",
+                "arxiv:comment": "7 pages, 3 figures, 3 tables, 4 research questions, preprint submitted to IEEE Communications Magazine",
+                "arxiv:primary_category": {
+                    "@term": "cs.NI"
+                },
+                "author": [
+                    {
+                        "name": "Giampaolo Bovenzi"
+                    },
+                    {
+                        "name": "Domenico Ciuonzo"
+                    },
+                    {
+                        "name": "Jonatan Krolikowski"
+                    },
+                    {
+                        "name": "Antonio Montieri"
+                    },
+                    {
+                        "name": "Alfredo Nascita"
+                    },
+                    {
+                        "name": "Antonio Pescap\u00e8"
+                    },
+                    {
+                        "name": "Dario Rossi"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.25501v1",
+                "title": "An Experimental Comparison of the Most Popular Approaches to Fake News Detection",
+                "updated": "2026-03-26T14:39:35Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.25501v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.25501v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    },
+                    {
+                        "@rel": "related",
+                        "@href": "https://doi.org/10.1016/j.ins.2026.123407",
+                        "@title": "doi"
+                    }
+                ],
+                "summary": "In recent years, fake news detection has received increasing attention in public debate and scientific research. Despite advances in detection techniques, the production and spread of false information have become more sophisticated, driven by Large Language Models (LLMs) and the amplification power of social media. We present a critical assessment of 12 representative fake news detection approaches, spanning traditional machine learning, deep learning, transformers, and specialized cross-domain architectures. We evaluate these methods on 10 publicly available datasets differing in genre, source, topic, and labeling rationale. We address text-only English fake news detection as a binary classification task by harmonizing labels into \"Real\" and \"Fake\" to ensure a consistent evaluation protocol. We acknowledge that label semantics vary across datasets and that harmonization inevitably removes such semantic nuances. Each dataset is treated as a distinct domain. We conduct in-domain, multi-domain and cross-domain experiments to simulate real-world scenarios involving domain shift and out-of-distribution data. Fine-tuned models perform well in-domain but struggle to generalize. Cross-domain architectures can reduce this gap but are data-hungry, while LLMs offer a promising alternative through zero- and few-shot learning. Given inherent dataset confounds and possible pre-training exposure, results should be interpreted as robustness evaluations within this English, text-only protocol.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-26T14:39:35Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "arxiv:journal_ref": "Dell'Oglio, P., Bondielli, A., Marcelloni, F., and Passaro, L. C. (2026). An experimental comparison of the most popular approaches to fake news detection. Information Sciences, Article 123407",
+                "author": [
+                    {
+                        "name": "Pietro Dell'Oglio"
+                    },
+                    {
+                        "name": "Alessandro Bondielli"
+                    },
+                    {
+                        "name": "Francesco Marcelloni"
+                    },
+                    {
+                        "name": "Lucia C. Passaro"
+                    }
+                ],
+                "arxiv:doi": "10.1016/j.ins.2026.123407"
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.25500v1",
+                "title": "Unveiling the Resilience of LLM-Enhanced Search Engines against Black-Hat SEO Manipulation",
+                "updated": "2026-03-26T14:38:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.25500v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.25500v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The emergence of Large Language Model-enhanced Search Engines (LLMSEs) has revolutionized information retrieval by integrating web-scale search capabilities with AI-powered summarization. While these systems demonstrate improved efficiency over traditional search engines, their security implications against well-established black-hat Search Engine Optimization (SEO) attacks remain unexplored.\n  In this paper, we present the first systematic study of SEO attacks targeting LLMSEs. Specifically, we examine ten representative LLMSE products (e.g., ChatGPT, Gemini) and construct SEO-Bench, a benchmark comprising 1,000 real-world black-hat SEO websites, to evaluate both open- and closed-source LLMSEs. Our measurements show that LLMSEs mitigate over 99.78% of traditional SEO attacks, with the phase of retrieval serving as the primary filter, intercepting the vast majority of malicious queries. We further propose and evaluate seven LLMSEO attack strategies, demonstrating that off-the-shelf LLMSEs are vulnerable to LLMSEO attacks, i.e., rewritten-query stuffing and segmented texts double the manipulation rate compared to the baseline. This work offers the first in-depth security analysis of the LLMSE ecosystem, providing practical insights for building more resilient AI-driven search systems. We have responsibly reported the identified issues to major vendors.",
+                "category": [
+                    {
+                        "@term": "cs.CR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.IR",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-26T14:38:26Z",
+                "arxiv:comment": "Accepted at The ACM Web Conference 2026 (WWW 2026)",
+                "arxiv:primary_category": {
+                    "@term": "cs.CR"
+                },
+                "author": [
+                    {
+                        "name": "Pei Chen"
+                    },
+                    {
+                        "name": "Geng Hong"
+                    },
+                    {
+                        "name": "Xinyi Wu"
+                    },
+                    {
+                        "name": "Mengying Wu"
+                    },
+                    {
+                        "name": "Zixuan Zhu"
+                    },
+                    {
+                        "name": "Mingxuan Liu"
+                    },
+                    {
+                        "name": "Baojun Liu"
+                    },
+                    {
+                        "name": "Mi Zhang"
+                    },
+                    {
+                        "name": "Min Yang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.25499v1",
+                "title": "Knowledge-Guided Failure Prediction: Detecting When Object Detectors Miss Safety-Critical Objects",
+                "updated": "2026-03-26T14:38:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.25499v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.25499v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Object detectors deployed in safety-critical environments can fail silently, e.g. missing pedestrians, workers, or other safety-critical objects without emitting any warning. Traditional Out Of Distribution (OOD) detection methods focus on identifying unfamiliar inputs, but do not directly predict functional failures of the detector itself. We introduce Knowledge Guided Failure Prediction (KGFP), a representation-based monitoring framework that treats missed safety-critical detections as anomalies to be detected at runtime. KGFP measures semantic misalignment between internal object detector features and visual foundation model embeddings using a dual-encoder architecture with an angular distance metric. A key property is that when either the detector is operating outside its competence or the visual foundation model itself encounters novel inputs, the two embeddings diverge, producing a high-angle signal that reliably flags unsafe images. We compare our novel KGFS method to baseline OOD detection methods. On COCO person detection, applying KGFP as a selective-prediction gate raises person recall among accepted images from 64.3% to 84.5% at 5% False Positive Rate (FPR), and maintains strong performance across six COCO-O visual domains, outperforming OOD baselines by large margins. Our code, models, and features are published at https://gitlab.cc-asp.fraunhofer.de/iosb_public/KGFP.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-25T17:54:39Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Saahil Mathur"
-                    },
-                    {
-                        "name": "Ryan David Rittner"
-                    },
-                    {
-                        "name": "Vedant Ajit Thakur"
-                    },
-                    {
-                        "name": "Daniel Stuart Schiff"
-                    },
-                    {
-                        "name": "Tunazzina Islam"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.24579v1",
-                "title": "MARCH: Multi-Agent Reinforced Self-Check for LLM Hallucination",
-                "updated": "2026-03-25T17:54:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.24579v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.24579v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Hallucination remains a critical bottleneck for large language models (LLMs), undermining their reliability in real-world applications, especially in Retrieval-Augmented Generation (RAG) systems. While existing hallucination detection methods employ LLM-as-a-judge to verify LLM outputs against retrieved evidence, they suffer from inherent confirmation bias, where the verifier inadvertently reproduces the errors of the original generation. To address this, we introduce Multi-Agent Reinforced Self-Check for Hallucination (MARCH), a framework that enforces rigorous factual alignment by leveraging deliberate information asymmetry. MARCH orchestrates a collaborative pipeline of three specialized agents: a Solver, a Proposer, and a Checker. The Solver generates an initial RAG response, which the Proposer decomposes into claim-level verifiable atomic propositions. Crucially, the Checker validates these propositions against retrieved evidence in isolation, deprived of the Solver's original output. This well-crafted information asymmetry scheme breaks the cycle of self-confirmation bias. By training this pipeline with multi-agent reinforcement learning (MARL), we enable the agents to co-evolve and optimize factual adherence. Extensive experiments across hallucination benchmarks demonstrate that MARCH substantially reduces hallucination rates. Notably, an 8B-parameter LLM equipped with MARCH achieves performance competitive with powerful closed-source models. MARCH paves a scalable path for factual self-improvement of LLMs through co-evolution. The code is at https://github.com/Qwen-Applications/MARCH.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-25T17:54:10Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Zhuo Li"
-                    },
-                    {
-                        "name": "Yupeng Zhang"
-                    },
-                    {
-                        "name": "Pengyu Cheng"
-                    },
-                    {
-                        "name": "Jiajun Song"
-                    },
-                    {
-                        "name": "Mengyu Zhou"
-                    },
-                    {
-                        "name": "Hao Li"
-                    },
-                    {
-                        "name": "Shujie Hu"
-                    },
-                    {
-                        "name": "Yu Qin"
-                    },
-                    {
-                        "name": "Erchao Zhao"
-                    },
-                    {
-                        "name": "Xiaoxi Jiang"
-                    },
-                    {
-                        "name": "Guanjun Jiang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.24577v1",
-                "title": "EndoVGGT: GNN-Enhanced Depth Estimation for Surgical 3D Reconstruction",
-                "updated": "2026-03-25T17:53:34Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.24577v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.24577v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Accurate 3D reconstruction of deformable soft tissues is essential for surgical robotic perception. However, low-texture surfaces, specular highlights, and instrument occlusions often fragment geometric continuity, posing a challenge for existing fixed-topology approaches. To address this, we propose EndoVGGT, a geometry-centric framework equipped with a Deformation-aware Graph Attention (DeGAT) module. Rather than using static spatial neighborhoods, DeGAT dynamically constructs feature-space semantic graphs to capture long-range correlations among coherent tissue regions. This enables robust propagation of structural cues across occlusions, enforcing global consistency and improving non-rigid deformation recovery. Extensive experiments on SCARED show that our method significantly improves fidelity, increasing PSNR by 24.6% and SSIM by 9.1% over prior state-of-the-art. Crucially, EndoVGGT exhibits strong zero-shot cross-dataset generalization to the unseen SCARED and EndoNeRF domains, confirming that DeGAT learns domain-agnostic geometric priors. These results highlight the efficacy of dynamic feature-space modeling for consistent surgical 3D reconstruction.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-25T17:53:34Z",
+                "published": "2026-03-26T14:38:20Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Falong Fan"
+                        "name": "Jakob Paul Zimmermann"
                     },
                     {
-                        "name": "Yi Xie"
+                        "name": "Gerrit Holzbach"
                     },
                     {
-                        "name": "Arnis Lektauers"
-                    },
-                    {
-                        "name": "Bo Liu"
-                    },
-                    {
-                        "name": "Jerzy Rozenblit"
+                        "name": "David Lerch"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.24575v1",
-                "title": "VFIG: Vectorizing Complex Figures in SVG with Vision-Language Models",
-                "updated": "2026-03-25T17:52:23Z",
+                "id": "http://arxiv.org/abs/2603.25498v1",
+                "title": "EcoThink: A Green Adaptive Inference Framework for Sustainable and Accessible Agents",
+                "updated": "2026-03-26T14:37:46Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.24575v1",
+                        "@href": "https://arxiv.org/abs/2603.25498v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.24575v1",
+                        "@href": "https://arxiv.org/pdf/2603.25498v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Scalable Vector Graphics (SVG) are an essential format for technical illustration and digital design, offering precise resolution independence and flexible semantic editability. In practice, however, original vector source files are frequently lost or inaccessible, leaving only \"flat\" rasterized versions (e.g., PNG or JPEG) that are difficult to modify or scale. Manually reconstructing these figures is a prohibitively labor-intensive process, requiring specialized expertise to recover the original geometric intent. To bridge this gap, we propose VFIG, a family of Vision-Language Models trained for complex and high-fidelity figure-to-SVG conversion. While this task is inherently data-driven, existing datasets are typically small-scale and lack the complexity of professional diagrams. We address this by introducing VFIG-DATA, a large-scale dataset of 66K high-quality figure-SVG pairs, curated from a diverse mix of real-world paper figures and procedurally generated diagrams. Recognizing that SVGs are composed of recurring primitives and hierarchical local structures, we introduce a coarse-to-fine training curriculum that begins with supervised fine-tuning (SFT) to learn atomic primitives and transitions to reinforcement learning (RL) refinement to optimize global diagram fidelity, layout consistency, and topological edge cases. Finally, we introduce VFIG-BENCH, a comprehensive evaluation suite with novel metrics designed to measure the structural integrity of complex figures. VFIG achieves state-of-the-art performance among open-source models and performs on par with GPT-5.2, achieving a VLM-Judge score of 0.829 on VFIG-BENCH.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-25T17:52:23Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Qijia He"
-                    },
-                    {
-                        "name": "Xunmei Liu"
-                    },
-                    {
-                        "name": "Hammaad Memon"
-                    },
-                    {
-                        "name": "Ziang Li"
-                    },
-                    {
-                        "name": "Zixian Ma"
-                    },
-                    {
-                        "name": "Jaemin Cho"
-                    },
-                    {
-                        "name": "Jason Ren"
-                    },
-                    {
-                        "name": "Daniel S Weld"
-                    },
-                    {
-                        "name": "Ranjay Krishna"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.24572v1",
-                "title": "Completeness of Unbounded Best-First Minimax and Descent Minimax",
-                "updated": "2026-03-25T17:50:31Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.24572v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.24572v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In this article, we focus on search algorithms for two-player perfect information games, whose objective is to determine the best possible strategy, and ideally a winning strategy.\n  Unfortunately, some search algorithms for games in the literature are not able to always determine a winning strategy, even with an infinite search time. This is the case, for example, of the following algorithms: Unbounded Best-First Minimax and Descent Minimax, which are core algorithms in state-of-the-art knowledge-free reinforcement learning.\n  They were then improved with the so-called completion technique. However, whether this technique sufficiently improves these algorithms to allow them to always determine a winning strategy remained an open question until now.\n  To answer this question, we generalize the two algorithms (their versions using the completion technique), and we show that any algorithm of this class of algorithms computes the best strategy.\n  Finally, we experimentally show that the completion technique improves winning performance.",
+                "summary": "As the Web transitions from static retrieval to generative interaction, the escalating environmental footprint of Large Language Models (LLMs) presents a critical sustainability challenge. Current paradigms indiscriminately apply computation-intensive strategies like Chain-of-Thought (CoT) to billions of daily queries, causing LLM overthinking, a redundancy that amplifies carbon emissions and operational barriers. This inefficiency directly undermines UN Sustainable Development Goals 13 (Climate Action) and 10 (Reduced Inequalities) by hindering equitable AI access in resource-constrained regions. To address this, we introduce EcoThink, an energy-aware adaptive inference framework designed to reconcile high-performance AI intelligence with environmental responsibility. EcoThink employs a lightweight, distillation-based router to dynamically assess query complexity, skipping unnecessary reasoning for factoid retrieval while reserving deep computation for complex logic. Extensive evaluations across 9 diverse benchmarks demonstrate that EcoThink reduces inference energy by 40.4% on average (up to 81.9% for web knowledge retrieval) without statistically significant performance loss. By mitigating algorithmic waste, EcoThink offers a scalable path toward a sustainable, inclusive, and energy-efficient generative AI Agent.",
                 "category": {
                     "@term": "cs.AI",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-25T17:50:31Z",
+                "published": "2026-03-26T14:37:46Z",
+                "arxiv:comment": "Accepted by WWW 2026",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
-                "author": {
-                    "name": "Quentin Cohen-Solal"
-                }
+                "author": [
+                    {
+                        "name": "Linxiao Li"
+                    },
+                    {
+                        "name": "Zhixiang Lu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.25495v1",
+                "title": "Interpretable PM2.5 Forecasting for Urban Air Quality: A Comparative Study of Operational Time-Series Models",
+                "updated": "2026-03-26T14:35:43Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.25495v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.25495v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Accurate short-term air-quality forecasting is essential for public health protection and urban management, yet many recent forecasting frameworks rely on complex, data-intensive, and computationally demanding models. This study investigates whether lightweight and interpretable forecasting approaches can provide competitive performance for hourly PM2.5 prediction in Beijing, China. Using multi-year pollutant and meteorological time-series data, we developed a leakage-aware forecasting workflow that combined chronological data partitioning, preprocessing, feature selection, and exogenous-driver modeling under the Perfect Prognosis setting. Three forecasting families were evaluated: SARIMAX, Facebook Prophet, and NeuralProphet. To assess practical deployment behavior, the models were tested under two adaptive regimes: weekly walk-forward refitting and frozen forecasting with online residual correction. Results showed clear differences in both predictive accuracy and computational efficiency. Under walk-forward refitting, Facebook Prophet achieved the strongest completed performance, with an MAE of $37.61$ and an RMSE of $50.10$, while also requiring substantially less execution time than NeuralProphet. In the frozen-model regime, online residual correction improved Facebook Prophet and SARIMAX, with corrected SARIMAX yielding the lowest overall error (MAE $32.50$; RMSE $46.85$). NeuralProphet remained less accurate and less stable across both regimes, and residual correction did not improve its forecasts. Notably, corrected Facebook Prophet reached nearly the same error as its walk-forward counterpart while reducing runtime from $15$ min $21.91$ sec to $46.60$ sec. These findings show that lightweight additive forecasting strategies can remain highly competitive for urban air-quality prediction, offering a practical balance between accuracy, interpretability, ...",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-26T14:35:43Z",
+                "arxiv:comment": "Submitted to PLOS ONE",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Moazzam Umer Gondal"
+                    },
+                    {
+                        "name": "Hamad ul Qudous"
+                    },
+                    {
+                        "name": "Asma Ahmad Farhan"
+                    },
+                    {
+                        "name": "Sultan Alamri"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.25489v1",
+                "title": "Translation Asymmetry in LLMs as a Data Augmentation Factor: A Case Study for 6 Romansh Language Varieties",
+                "updated": "2026-03-26T14:27:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.25489v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.25489v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent strategies for low-resource machine translation rely on LLMs to generate synthetic data from higher-resource languages. We find that this method fails for Romansh, because LLMs tend to confuse its 6 distinct language varieties. Our experiments show that instead, the direction of data augmentation should be aligned with the resource gradient between source and target language. This approach surpasses Gemini 3 Pro in the lowest-resource variety of Romansh by 23 BLEU. A human evaluation confirms that our experiments yield the first model that generates fluent translations in the individual Romansh varieties.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-26T14:27:45Z",
+                "arxiv:comment": "Preprint",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Jannis Vamvas"
+                    },
+                    {
+                        "name": "Ignacio P\u00e9rez Prat"
+                    },
+                    {
+                        "name": "Angela Heldstab"
+                    },
+                    {
+                        "name": "Dominic P. Fischer"
+                    },
+                    {
+                        "name": "Sina Ahmadi"
+                    },
+                    {
+                        "name": "Rico Sennrich"
+                    }
+                ]
             }
         ]
     }
