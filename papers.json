@@ -5,439 +5,280 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-03-29T04:34:19Z",
+        "updated": "2026-03-30T10:11:23Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "554196",
+        "opensearch:totalResults": "554487",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2603.25741v1",
-                "title": "Vega: Learning to Drive with Natural Language Instructions",
-                "updated": "2026-03-26T17:59:56Z",
+                "id": "http://arxiv.org/abs/2603.26666v1",
+                "title": "VLA-OPD: Bridging Offline SFT and Online RL for Vision-Language-Action Models via On-Policy Distillation",
+                "updated": "2026-03-27T17:59:33Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.25741v1",
+                        "@href": "https://arxiv.org/abs/2603.26666v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.25741v1",
+                        "@href": "https://arxiv.org/pdf/2603.26666v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Vision-language-action models have reshaped autonomous driving to incorporate languages into the decision-making process. However, most existing pipelines only utilize the language modality for scene descriptions or reasoning and lack the flexibility to follow diverse user instructions for personalized driving. To address this, we first construct a large-scale driving dataset (InstructScene) containing around 100,000 scenes annotated with diverse driving instructions with the corresponding trajectories. We then propose a unified Vision-Language-World-Action model, Vega, for instruction-based generation and planning. We employ the autoregressive paradigm to process visual inputs (vision) and language instructions (language) and the diffusion paradigm to generate future predictions (world modeling) and trajectories (action). We perform joint attention to enable interactions between the modalities and use individual projection layers for different modalities for more capabilities. Extensive experiments demonstrate that our method not only achieves superior planning performance but also exhibits strong instruction-following abilities, paving the way for more intelligent and personalized driving systems.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-26T17:59:56Z",
-                "arxiv:comment": "Code is available at https://github.com/zuosc19/Vega",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Sicheng Zuo"
-                    },
-                    {
-                        "name": "Yuxuan Li"
-                    },
-                    {
-                        "name": "Wenzhao Zheng"
-                    },
-                    {
-                        "name": "Zheng Zhu"
-                    },
-                    {
-                        "name": "Jie Zhou"
-                    },
-                    {
-                        "name": "Jiwen Lu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.25740v1",
-                "title": "Drive My Way: Preference Alignment of Vision-Language-Action Model for Personalized Driving",
-                "updated": "2026-03-26T17:59:54Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.25740v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.25740v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Human driving behavior is inherently personal, which is shaped by long-term habits and influenced by short-term intentions. Individuals differ in how they accelerate, brake, merge, yield, and overtake across diverse situations. However, existing end-to-end autonomous driving systems either optimize for generic objectives or rely on fixed driving modes, lacking the ability to adapt to individual preferences or interpret natural language intent. To address this gap, we propose Drive My Way (DMW), a personalized Vision-Language-Action (VLA) driving framework that aligns with users' long-term driving habits and adapts to real-time user instructions. DMW learns a user embedding from our personalized driving dataset collected across multiple real drivers and conditions the policy on this embedding during planning, while natural language instructions provide additional short-term guidance. Closed-loop evaluation on the Bench2Drive benchmark demonstrates that DMW improves style instruction adaptation, and user studies show that its generated behaviors are recognizable as each driver's own style, highlighting personalization as a key capability for human-centered autonomous driving. Our data and code are available at https://dmw-cvpr.github.io/.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-26T17:59:54Z",
-                "arxiv:comment": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026); Project website: https://dmw-cvpr.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Zehao Wang"
-                    },
-                    {
-                        "name": "Huaide Jiang"
-                    },
-                    {
-                        "name": "Shuaiwu Dong"
-                    },
-                    {
-                        "name": "Yuping Wang"
-                    },
-                    {
-                        "name": "Hang Qiu"
-                    },
-                    {
-                        "name": "Jiachen Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.25738v1",
-                "title": "PSDesigner: Automated Graphic Design with a Human-Like Creative Workflow",
-                "updated": "2026-03-26T17:59:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.25738v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.25738v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Graphic design is a creative and innovative process that plays a crucial role in applications such as e-commerce and advertising. However, developing an automated design system that can faithfully translate user intentions into editable design files remains an open challenge. Although recent studies have leveraged powerful text-to-image models and MLLMs to assist graphic design, they typically simplify professional workflows, resulting in limited flexibility and intuitiveness. To address these limitations, we propose PSDesigner, an automated graphic design system that emulates the creative workflow of human designers. Building upon multiple specialized components, PSDesigner collects theme-related assets based on user instructions, and autonomously infers and executes tool calls to manipulate design files, such as integrating new assets or refining inferior elements. To endow the system with strong tool-use capabilities, we construct a design dataset, CreativePSD, which contains a large amount of high-quality PSD design files annotated with operation traces across a wide range of design scenarios and artistic styles, enabling models to learn expert design procedures. Extensive experiments demonstrate that PSDesigner outperforms existing methods across diverse graphic design tasks, empowering non-specialists to conveniently create production-quality designs.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-26T17:59:51Z",
-                "arxiv:comment": "CVPR 2026, Project Page: https://henghuiding.com/PSDesigner/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Xincheng Shuai"
-                    },
-                    {
-                        "name": "Song Tang"
-                    },
-                    {
-                        "name": "Yutong Huang"
-                    },
-                    {
-                        "name": "Henghui Ding"
-                    },
-                    {
-                        "name": "Dacheng Tao"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.25736v1",
-                "title": "How good was my shot? Quantifying Player Skill Level in Table Tennis",
-                "updated": "2026-03-26T17:59:49Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.25736v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.25736v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Gauging an individual's skill level is crucial, as it inherently shapes their behavior. Quantifying skill, however, is challenging because it is latent to the observed actions. To explore skill understanding in human behavior, we focus on dyadic sports -- specifically table tennis -- where skill manifests not just in complex movements, but in the subtle nuances of execution conditioned on game context. Our key idea is to learn a generative model of each player's tactical racket strokes and jointly embed them in a common latent space that encodes individual characteristics, including those pertaining to skill levels. By training these player models on a large-scale dataset of 3D-reconstructed professional matches and conditioning them on comprehensive game context -- including player positioning and opponent behaviors -- the models capture individual tactical identities within their latent space. We probe this learned player space and find that it reflects distinct play styles and attributes that collectively represent skill. By training a simple relative ranking network on these embeddings, we demonstrate that both relative and absolute skill predictions can be achieved. These results demonstrate that the learned player space effectively quantifies skill levels, providing a foundation for automated skill assessment in complex, interactive behaviors.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-26T17:59:49Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Akihiro Kubota"
-                    },
-                    {
-                        "name": "Tomoya Hasegawa"
-                    },
-                    {
-                        "name": "Ryo Kawahara"
-                    },
-                    {
-                        "name": "Ko Nishino"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.25733v1",
-                "title": "SlotVTG: Object-Centric Adapter for Generalizable Video Temporal Grounding",
-                "updated": "2026-03-26T17:59:31Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.25733v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.25733v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Multimodal Large Language Models (MLLMs) have shown strong performance on Video Temporal Grounding (VTG). However, their coarse recognition capabilities are insufficient for fine-grained temporal understanding, making task-specific fine-tuning indispensable. This fine-tuning causes models to memorize dataset-specific shortcuts rather than faithfully grounding in the actual visual content, leading to poor Out-of-Domain (OOD) generalization. Object-centric learning offers a promising remedy by decomposing scenes into entity-level representations, but existing approaches require re-running the entire multi-stage training pipeline from scratch. We propose SlotVTG, a framework that steers MLLMs toward object-centric, input-grounded visual reasoning at minimal cost. SlotVTG introduces a lightweight slot adapter that decomposes visual tokens into abstract slots via slot attention and reconstructs the original sequence, where objectness priors from a self-supervised vision model encourage semantically coherent slot formation. Cross-domain evaluation on standard VTG benchmarks demonstrates that our approach significantly improves OOD robustness while maintaining competitive In-Domain (ID) performance with minimal overhead.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-26T17:59:31Z",
-                "arxiv:comment": "Accepted to GRAIL-V workshop at CVPR 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Jiwook Han"
-                    },
-                    {
-                        "name": "Geo Ahn"
-                    },
-                    {
-                        "name": "Youngrae Kim"
-                    },
-                    {
-                        "name": "Jinwoo Choi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.25728v1",
-                "title": "PixelSmile: Toward Fine-Grained Facial Expression Editing",
-                "updated": "2026-03-26T17:59:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.25728v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.25728v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Fine-grained facial expression editing has long been limited by intrinsic semantic overlap. To address this, we construct the Flex Facial Expression (FFE) dataset with continuous affective annotations and establish FFE-Bench to evaluate structural confusion, editing accuracy, linear controllability, and the trade-off between expression editing and identity preservation. We propose PixelSmile, a diffusion framework that disentangles expression semantics via fully symmetric joint training. PixelSmile combines intensity supervision with contrastive learning to produce stronger and more distinguishable expressions, achieving precise and stable linear expression control through textual latent interpolation. Extensive experiments demonstrate that PixelSmile achieves superior disentanglement and robust identity preservation, confirming its effectiveness for continuous, controllable, and fine-grained expression editing, while naturally supporting smooth expression blending.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-03-26T17:59:04Z",
-                "arxiv:comment": "21 Pages; Project Page: https://ammmob.github.io/PixelSmile/ Code: https://github.com/Ammmob/PixelSmile",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Jiabin Hua"
-                    },
-                    {
-                        "name": "Hengyuan Xu"
-                    },
-                    {
-                        "name": "Aojie Li"
-                    },
-                    {
-                        "name": "Wei Cheng"
-                    },
-                    {
-                        "name": "Gang Yu"
-                    },
-                    {
-                        "name": "Xingjun Ma"
-                    },
-                    {
-                        "name": "Yu-Gang Jiang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.25726v1",
-                "title": "AnyHand: A Large-Scale Synthetic Dataset for RGB(-D) Hand Pose Estimation",
-                "updated": "2026-03-26T17:58:54Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.25726v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.25726v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present AnyHand, a large-scale synthetic dataset designed to advance the state of the art in 3D hand pose estimation from both RGB-only and RGB-D inputs. While recent works with foundation approaches have shown that an increase in the quantity and diversity of training data can markedly improve performance and robustness in hand pose estimation, existing real-world-collected datasets on this task are limited in coverage, and prior synthetic datasets rarely provide occlusions, arm details, and aligned depth together at scale. To address this bottleneck, our AnyHand contains 2.5M single-hand and 4.1M hand-object interaction RGB-D images, with rich geometric annotations. In the RGB-only setting, we show that extending the original training sets of existing baselines with AnyHand yields significant gains on multiple benchmarks (FreiHAND and HO-3D), even when keeping the architecture and training scheme fixed. More impressively, the model trained with AnyHand shows stronger generalization to the out-of-domain HO-Cap dataset, without any fine-tuning. We also contribute a lightweight depth fusion module that can be easily integrated into existing RGB-based models. Trained with AnyHand, the resulting RGB-D model achieves superior performance on the HO-3D benchmark, showing the benefits of depth integration and the effectiveness of our synthetic data.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-03-26T17:58:54Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Chen Si"
-                    },
-                    {
-                        "name": "Yulin Liu"
-                    },
-                    {
-                        "name": "Bo Ai"
-                    },
-                    {
-                        "name": "Jianwen Xie"
-                    },
-                    {
-                        "name": "Rolandos Alexandros Potamias"
-                    },
-                    {
-                        "name": "Chuanxia Zheng"
-                    },
-                    {
-                        "name": "Hao Su"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2603.25725v1",
-                "title": "SoftMimicGen: A Data Generation System for Scalable Robot Learning in Deformable Object Manipulation",
-                "updated": "2026-03-26T17:58:40Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2603.25725v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2603.25725v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large-scale robot datasets have facilitated the learning of a wide range of robot manipulation skills, but these datasets remain difficult to collect and scale further, owing to the intractable amount of human time, effort, and cost required. Simulation and synthetic data generation have proven to be an effective alternative to fuel this need for data, especially with the advent of recent work showing that such synthetic datasets can dramatically reduce real-world data requirements and facilitate generalization to novel scenarios unseen in real-world demonstrations. However, this paradigm has been limited to rigid-body tasks, which are easy to simulate. Deformable object manipulation encompasses a large portion of real-world manipulation and remains a crucial gap to address towards increasing adoption of the synthetic simulation data paradigm. In this paper, we introduce SoftMimicGen, an automated data generation pipeline for deformable object manipulation tasks. We introduce a suite of high-fidelity simulation environments that encompasses a wide range of deformable objects (stuffed animal, rope, tissue, towel) and manipulation behaviors (high-precision threading, dynamic whipping, folding, pick-and-place), across four robot embodiments: a single-arm manipulator, bimanual arms, a humanoid, and a surgical robot. We apply SoftMimicGen to generate datasets across the task suite, train high-performing policies from the data, and systematically analyze the data generation system. Project website: \\href{https://softmimicgen.github.io}{softmimicgen.github.io}.",
+                "summary": "Although pre-trained Vision-Language-Action (VLA) models exhibit impressive generalization in robotic manipulation, post-training remains crucial to ensure reliable performance during deployment. However, standard offline Supervised Fine-Tuning (SFT) suffers from distribution shifts and catastrophic forgetting of pre-trained capabilities, while online Reinforcement Learning (RL) struggles with sparse rewards and poor sample efficiency. In this paper, we propose On-Policy VLA Distillation (VLA-OPD), a framework bridging the efficiency of SFT with the robustness of RL. Instead of relying on sparse environmental rewards, VLA-OPD leverages an expert teacher to provide dense, token-level supervision on the student's self-generated trajectories. This enables active error correction on policy-induced states while preserving pre-trained general capabilities through gentle alignment. Crucially, we formulate VLA-OPD via a Reverse-KL objective. Unlike standard Forward-KL that induces mode-covering entropy explosion, or Hard-CE that causes premature entropy collapse, our bounded mode-seeking objective ensures stable policy learning by filtering out the teacher's epistemic uncertainty while maintaining action diversity. Experiments on LIBERO and RoboTwin2.0 benchmarks demonstrate that VLA-OPD significantly improves sample efficiency over RL and robustness over SFT, while effectively mitigating catastrophic forgetting during post-training.",
                 "category": {
                     "@term": "cs.RO",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-03-26T17:58:40Z",
+                "published": "2026-03-27T17:59:33Z",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Masoud Moghani"
+                        "name": "Zhide Zhong"
                     },
                     {
-                        "name": "Mahdi Azizian"
+                        "name": "Haodong Yan"
                     },
                     {
-                        "name": "Animesh Garg"
+                        "name": "Junfeng Li"
                     },
                     {
-                        "name": "Yuke Zhu"
+                        "name": "Junjie He"
                     },
                     {
-                        "name": "Sean Huver"
+                        "name": "Tianran Zhang"
                     },
                     {
-                        "name": "Ajay Mandlekar"
+                        "name": "Haoang Li"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.25722v1",
-                "title": "No Hard Negatives Required: Concept Centric Learning Leads to Compositionality without Degrading Zero-shot Capabilities of Contrastive Models",
-                "updated": "2026-03-26T17:58:04Z",
+                "id": "http://arxiv.org/abs/2603.26664v1",
+                "title": "Learning to Commit: Generating Organic Pull Requests via Online Repository Memory",
+                "updated": "2026-03-27T17:58:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.25722v1",
+                        "@href": "https://arxiv.org/abs/2603.26664v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.25722v1",
+                        "@href": "https://arxiv.org/pdf/2603.26664v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Contrastive vision-language (V&L) models remain a popular choice for various applications. However, several limitations have emerged, most notably the limited ability of V&L models to learn compositional representations. Prior methods often addressed this limitation by generating custom training data to obtain hard negative samples. Hard negatives have been shown to improve performance on compositionality tasks, but are often specific to a single benchmark, do not generalize, and can cause substantial degradation of basic V&L capabilities such as zero-shot or retrieval performance, rendering them impractical. In this work we follow a different approach. We identify two root causes that limit compositionality performance of V&Ls: 1) Long training captions do not require a compositional representation; and 2) The final global pooling in the text and image encoders lead to a complete loss of the necessary information to learn binding in the first place. As a remedy, we propose two simple solutions: 1) We obtain short concept centric caption parts using standard NLP software and align those with the image; and 2) We introduce a parameter-free cross-modal attention-pooling to obtain concept centric visual embeddings from the image encoder. With these two changes and simple auxiliary contrastive losses, we obtain SOTA performance on standard compositionality benchmarks, while maintaining or improving strong zero-shot and retrieval capabilities. This is achieved without increasing inference cost. We release the code for this work at https://github.com/SamsungLabs/concept_centric_clip.",
+                "summary": "Large language model (LLM)-based coding agents achieve impressive results on controlled benchmarks yet routinely produce pull requests that real maintainers reject. The root cause is not functional incorrectness but a lack of organicity: generated code ignores project-specific conventions, duplicates functionality already provided by internal APIs, and violates implicit architectural constraints accumulated over years of development. Simply exposing an agent to the latest repository snapshot is not enough: the snapshot reveals the final state of the codebase, but not the repository-specific change patterns by which that state was reached. We introduce Learning to Commit, a framework that closes this gap through Online Repository Memory. Given a repository with a strict chronological split, the agent performs supervised contrastive reflection on earlier commits: it blindly attempts to resolve each historical issue, compares its prediction against the oracle diff, and distils the gap into a continuously growing set of skills-reusable patterns capturing coding style, internal API usage, and architectural invariants. When a new PR description arrives, the agent conditions its generation on these accumulated skills, producing changes grounded in the project's own evolution rather than generic pretraining priors. Evaluation is conducted on genuinely future, merged pull requests that could not have been seen during the skill-building phase, and spans multiple dimensions including functional correctness, code-style consistency, internal API reuse rate, and modified-region plausibility. Experiments on an expert-maintained repository with rich commit history show that Online Repository Memory effectively improves organicity scores on held-out future tasks.",
+                "category": [
+                    {
+                        "@term": "cs.SE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-27T17:58:56Z",
+                "arxiv:comment": "Preprint. Work in progress",
+                "arxiv:primary_category": {
+                    "@term": "cs.SE"
+                },
+                "author": [
+                    {
+                        "name": "Mo Li"
+                    },
+                    {
+                        "name": "L. H. Xu"
+                    },
+                    {
+                        "name": "Qitai Tan"
+                    },
+                    {
+                        "name": "Ting Cao"
+                    },
+                    {
+                        "name": "Yunxin Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.26663v1",
+                "title": "Weight Tying Biases Token Embeddings Towards the Output Space",
+                "updated": "2026-03-27T17:58:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.26663v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.26663v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Weight tying, i.e. sharing parameters between input and output embedding matrices, is common practice in language model design, yet its impact on the learned embedding space remains poorly understood. In this paper, we show that tied embedding matrices align more closely with output (unembedding) matrices than with input embeddings of comparable untied models, indicating that the shared matrix is shaped primarily for output prediction rather than input representation. This unembedding bias arises because output gradients dominate early in training. Using tuned lens analysis, we show this negatively affects early-layer computations, which contribute less effectively to the residual stream. Scaling input gradients during training reduces this bias, providing causal evidence for the role of gradient imbalance. This is mechanistic evidence that weight tying optimizes the embedding matrix for output prediction, compromising its role in input representation. These results help explain why weight tying can harm performance at scale and have implications for training smaller LLMs, where the embedding matrix contributes substantially to total parameter count.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-27T17:58:42Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Antonio Lopardo"
+                    },
+                    {
+                        "name": "Avyukth Harish"
+                    },
+                    {
+                        "name": "Catherine Arnett"
+                    },
+                    {
+                        "name": "Akshat Gupta"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.26660v1",
+                "title": "Ruka-v2: Tendon Driven Open-Source Dexterous Hand with Wrist and Abduction for Robot Learning",
+                "updated": "2026-03-27T17:58:03Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.26660v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.26660v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Lack of accessible and dexterous robot hardware has been a significant bottleneck to achieving human-level dexterity in robots. Last year, we released Ruka, a fully open-sourced, tendon-driven humanoid hand with 11 degrees of freedom - 2 per finger and 3 at the thumb - buildable for under $1,300. It was one of the first fully open-sourced humanoid hands, and introduced a novel data-driven approach to finger control that captures tendon dynamics within the control system. Despite these contributions, Ruka lacked two degrees of freedom essential for closely imitating human behavior: wrist mobility and finger adduction/abduction. In this paper, we introduce Ruka-v2: a fully open-sourced, tendon-driven humanoid hand featuring a decoupled 2-DOF parallel wrist and abduction/adduction at the fingers. The parallel wrist adds smooth, independent flexion/extension and radial/ulnar deviation, enabling manipulation in confined environments such as cabinets. Abduction enables motions such as grasping thin objects, in-hand rotation, and calligraphy. We present the design of Ruka-v2 and evaluate it against Ruka through user studies on teleoperated tasks, finding a 51.3% reduction in completion time and a 21.2% increase in success rate. We further demonstrate its full range of applications for robot learning: bimanual and single-arm teleoperation across 13 dexterous tasks, and autonomous policy learning on 3 tasks. All 3D print files, assembly instructions, controller software, and videos are available at https://ruka-hand-v2.github.io/ .",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-27T17:58:03Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Xinqi",
+                        "arxiv:affiliation": "Lucas"
+                    },
+                    {
+                        "name": "Liu"
+                    },
+                    {
+                        "name": "Ruoxi Hu"
+                    },
+                    {
+                        "name": "Alejandro Ojeda Olarte"
+                    },
+                    {
+                        "name": "Zhuoran Chen"
+                    },
+                    {
+                        "name": "Kenny Ma"
+                    },
+                    {
+                        "name": "Charles Cheng Ji"
+                    },
+                    {
+                        "name": "Lerrel Pinto"
+                    },
+                    {
+                        "name": "Raunaq Bhirangi"
+                    },
+                    {
+                        "name": "Irmak Guzey"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.26659v1",
+                "title": "Partial Motion Imitation for Learning Cart Pushing with Legged Manipulators",
+                "updated": "2026-03-27T17:56:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.26659v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.26659v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Loco-manipulation is a key capability for legged robots to perform practical mobile manipulation tasks, such as transporting and pushing objects, in real-world environments. However, learning robust loco-manipulation skills remains challenging due to the difficulty of maintaining stable locomotion while simultaneously performing precise manipulation behaviors. This work proposes a partial imitation learning approach that transfers the locomotion style learned from a locomotion task to cart loco-manipulation. A robust locomotion policy is first trained with extensive domain and terrain randomization, and a loco-manipulation policy is then learned by imitating only lower-body motions using a partial adversarial motion prior. We conduct experiments demonstrating that the learned policy successfully pushes a cart along diverse trajectories in IsaacLab and transfers effectively to MuJoCo. We also compare our method to several baselines and show that the proposed approach achieves more stable and accurate loco-manipulation behaviors.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-03-27T17:56:42Z",
+                "arxiv:comment": "8 pages, 5 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Mili Das"
+                    },
+                    {
+                        "name": "Morgan Byrd"
+                    },
+                    {
+                        "name": "Donghoon Baek"
+                    },
+                    {
+                        "name": "Sehoon Ha"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.26657v1",
+                "title": "Tunable Soft Equivariance with Guarantees",
+                "updated": "2026-03-27T17:56:25Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.26657v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.26657v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Equivariance is a fundamental property in computer vision models, yet strict equivariance is rarely satisfied in real-world data, which can limit a model's performance. Controlling the degree of equivariance is therefore desirable. We propose a general framework for constructing soft equivariant models by projecting the model weights into a designed subspace. The method applies to any pre-trained architecture and provides theoretical bounds on the induced equivariance error. Empirically, we demonstrate the effectiveness of our method on multiple pre-trained backbones, including ViT and ResNet, across image classification, semantic segmentation, and human-trajectory prediction tasks. Notably, our approach improves the performance while simultaneously reducing equivariance error on the competitive ImageNet benchmark.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -448,70 +289,258 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-26T17:58:04Z",
-                "arxiv:comment": "Accepted at CVPR 2026",
+                "published": "2026-03-27T17:56:25Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Hai X. Pham"
+                        "name": "Md Ashiqur Rahman"
                     },
                     {
-                        "name": "David T. Hoffmann"
+                        "name": "Lim Jun Hao"
                     },
                     {
-                        "name": "Ricardo Guerrero"
+                        "name": "Jeremiah Jiang"
                     },
                     {
-                        "name": "Brais Martinez"
+                        "name": "Teck-Yian Lim"
+                    },
+                    {
+                        "name": "Raymond A. Yeh"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2603.25720v1",
-                "title": "R-C2: Cycle-Consistent Reinforcement Learning Improves Multimodal Reasoning",
-                "updated": "2026-03-26T17:58:04Z",
+                "id": "http://arxiv.org/abs/2603.26653v1",
+                "title": "PerceptionComp: A Video Benchmark for Complex Perception-Centric Reasoning",
+                "updated": "2026-03-27T17:54:36Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2603.25720v1",
+                        "@href": "https://arxiv.org/abs/2603.26653v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2603.25720v1",
+                        "@href": "https://arxiv.org/pdf/2603.26653v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Robust perception and reasoning require consistency across sensory modalities. Yet current multimodal models often violate this principle, yielding contradictory predictions for visual and textual representations of the same concept. Rather than masking these failures with standard voting mechanisms, which can amplify systematic biases, we show that cross-modal inconsistency provides a rich and natural signal for learning. We introduce RC2, a reinforcement learning framework that resolves internal conflicts by enforcing cross-modal cycle consistency. By requiring a model to perform backward inference, switch modalities, and reliably reconstruct the answer through forward inference, we obtain a dense, label-free reward. This cyclic constraint encourages the model to align its internal representations autonomously. Optimizing for this structure mitigates modality-specific errors and improves reasoning accuracy by up to 7.6 points. Our results suggest that advanced reasoning emerges not only from scaling data, but also from enforcing a structurally consistent understanding of the world.",
+                "summary": "We introduce PerceptionComp, a manually annotated benchmark for complex, long-horizon, perception-centric video reasoning. PerceptionComp is designed so that no single moment is sufficient: answering each question requires multiple temporally separated pieces of visual evidence and compositional constraints under conjunctive and sequential logic, spanning perceptual subtasks such as objects, attributes, relations, locations, actions, and events, and requiring skills including semantic recognition, visual correspondence, temporal reasoning, and spatial reasoning. The benchmark contains 1,114 highly complex questions on 279 videos from diverse domains including city walk tours, indoor villa tours, video games, and extreme outdoor sports, with 100% manual annotation. Human studies show that PerceptionComp requires substantial test-time thinking and repeated perception steps: participants take much longer than on prior benchmarks, and accuracy drops to near chance (18.97%) when rewatching is disallowed. State-of-the-art MLLMs also perform substantially worse on PerceptionComp than on existing benchmarks: the best model in our evaluation, Gemini-3-Flash, reaches only 45.96% accuracy in the five-choice setting, while open-source models remain below 40%. These results suggest that perception-centric long-horizon video reasoning remains a major bottleneck, and we hope PerceptionComp will help drive progress in perceptual reasoning.",
                 "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CV",
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-03-26T17:58:04Z",
+                "published": "2026-03-27T17:54:36Z",
+                "arxiv:comment": "Project Page: https://perceptioncomp.github.io",
                 "arxiv:primary_category": {
-                    "@term": "cs.AI"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Zirui Zhang"
+                        "name": "Shaoxuan Li"
                     },
                     {
-                        "name": "Haoyu Dong"
+                        "name": "Zhixuan Zhao"
                     },
                     {
-                        "name": "Kexin Pei"
+                        "name": "Hanze Deng"
                     },
                     {
-                        "name": "Chengzhi Mao"
+                        "name": "Zirun Ma"
+                    },
+                    {
+                        "name": "Shulin Tian"
+                    },
+                    {
+                        "name": "Zuyan Liu"
+                    },
+                    {
+                        "name": "Yushi Hu"
+                    },
+                    {
+                        "name": "Haoning Wu"
+                    },
+                    {
+                        "name": "Yuhao Dong"
+                    },
+                    {
+                        "name": "Benlin Liu"
+                    },
+                    {
+                        "name": "Ziwei Liu"
+                    },
+                    {
+                        "name": "Ranjay Krishna"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.26647v1",
+                "title": "An LP-based Sampling Policy for Multi-Armed Bandits with Side-Observations and Stochastic Availability",
+                "updated": "2026-03-27T17:50:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.26647v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.26647v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We study the stochastic multi-armed bandit (MAB) problem where an underlying network structure enables side-observations across related actions. We use a bipartite graph to link actions to a set of unknowns, such that selecting an action reveals observations for all the unknowns it is connected to. While previous works rely on the assumption that all actions are permanently accessible, we investigate the more practical setting of stochastic availability, where the set of feasible actions (the \"activation set\") varies dynamically in each round. This framework models real-world systems with both structural dependencies and volatility, such as social networks where users provide side-information about their peers' preferences, yet are not always online to be queried. To address this challenge, we propose UCB-LP-A, a novel policy that leverages a Linear Programming (LP) approach to optimize exploration-exploitation trade-offs under stochastic availability. Unlike standard network bandit algorithms that assume constant access, UCB-LP-A computes an optimal sampling distribution over the realizable activation sets, ensuring that the necessary observations are gathered using only the currently active arms. We derive a theoretical upper bound on the regret of our policy, characterizing the impact of both the network structure and the activation probabilities. Finally, we demonstrate through numerical simulations that UCB-LP-A significantly outperforms existing heuristics that ignore either the side-information or the availability constraints.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-27T17:50:42Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Ashutosh Soni"
+                    },
+                    {
+                        "name": "Peizhong Ju"
+                    },
+                    {
+                        "name": "Atilla Eryilmaz"
+                    },
+                    {
+                        "name": "Ness B. Shroff"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.26644v1",
+                "title": "Automatic Laplace Collapsed Sampling: Scalable Marginalisation of Latent Parameters via Automatic Differentiation",
+                "updated": "2026-03-27T17:47:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.26644v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.26644v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present Automatic Laplace Collapsed Sampling (ALCS), a general framework for marginalising latent parameters in Bayesian models using automatic differentiation, which we combine with nested sampling to explore the hyperparameter space in a robust and efficient manner. At each nested sampling likelihood evaluation, ALCS collapses the high-dimensional latent variables $z$ to a scalar contribution via maximum a posteriori (MAP) optimisation and a Laplace approximation, both computed using autodiff. This reduces the effective dimension from $d_\u03b8+ d_z$ to just $d_\u03b8$, making Bayesian evidence computation tractable for high-dimensional settings without hand-derived gradients or Hessians, and with minimal model-specific engineering. The MAP optimisation and Hessian evaluation are parallelised across live points on GPU-hardware, making the method practical at scale. We also show that automatic differentiation enables local approximations beyond Laplace to parametric families such as the Student-$t$, which improves evidence estimates for heavy-tailed latents. We validate ALCS on a suite of benchmarks spanning hierarchical, time-series, and discrete-likelihood models and establish where the Gaussian approximation holds. This enables a post-hoc ESS diagnostic that localises failures across hyperparameter space without expensive joint sampling.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.IM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-27T17:47:45Z",
+                "arxiv:comment": "28 Pages, 7 Figures. Comments welcome",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Toby Lovick"
+                    },
+                    {
+                        "name": "David Yallup"
+                    },
+                    {
+                        "name": "Will Handley"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2603.26638v1",
+                "title": "Drive-Through 3D Vehicle Exterior Reconstruction via Dynamic-Scene SfM and Distortion-Aware Gaussian Splatting",
+                "updated": "2026-03-27T17:42:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2603.26638v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2603.26638v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "High-fidelity 3D reconstruction of vehicle exteriors improves buyer confidence in online automotive marketplaces, but generating these models in cluttered dealership drive-throughs presents severe technical challenges. Unlike static-scene photogrammetry, this setting features a dynamic vehicle moving against heavily cluttered, static backgrounds. This problem is further compounded by wide-angle lens distortion, specular automotive paint, and non-rigid wheel rotations that violate classical epipolar constraints. We propose an end-to-end pipeline utilizing a two-pillar camera rig. First, we resolve dynamic-scene ambiguities by coupling SAM 3 for instance segmentation with motion-gating to cleanly isolate the moving vehicle, explicitly masking out non-rigid wheels to enforce strict epipolar geometry. Second, we extract robust correspondences directly on raw, distorted 4K imagery using the RoMa v2 learned matcher guided by semantic confidence masks. Third, these matches are integrated into a rig-aware SfM optimization that utilizes CAD-derived relative pose priors to eliminate scale drift. Finally, we use a distortion-aware 3D Gaussian Splatting framework (3DGUT) coupled with a stochastic Markov Chain Monte Carlo (MCMC) densification strategy to render reflective surfaces. Evaluations on 25 real-world vehicles across 10 dealerships demonstrate that our full pipeline achieves a PSNR of 28.66 dB, an SSIM of 0.89, and an LPIPS of 0.21 on held-out views, representing a 3.85 dB improvement over standard 3D-GS, delivering inspection-grade interactive 3D models without controlled studio infrastructure.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-03-27T17:42:42Z",
+                "arxiv:comment": "8 pages, 7 figures, Submitted to IEEE IROS 2026 (under review)",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Nitin Kulkarni"
+                    },
+                    {
+                        "name": "Akhil Devarashetti"
+                    },
+                    {
+                        "name": "Charlie Cluss"
+                    },
+                    {
+                        "name": "Livio Forte"
+                    },
+                    {
+                        "name": "Philip Schneider"
+                    },
+                    {
+                        "name": "Chunming Qiao"
+                    },
+                    {
+                        "name": "Alina Vereshchaka"
                     }
                 ]
             }
