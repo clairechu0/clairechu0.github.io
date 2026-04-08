@@ -5,406 +5,389 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-08T01:53:28Z",
+        "updated": "2026-04-08T04:32:55Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "557639",
+        "opensearch:totalResults": "557714",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.05923v1",
-                "title": "The UNDO Flip-Flop: A Controlled Probe for Reversible Semantic State Management in State Space Model",
-                "updated": "2026-04-07T14:23:40Z",
+                "id": "http://arxiv.org/abs/2604.06169v1",
+                "title": "In-Place Test-Time Training",
+                "updated": "2026-04-07T17:59:44Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.05923v1",
+                        "@href": "https://arxiv.org/abs/2604.06169v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.05923v1",
+                        "@href": "https://arxiv.org/pdf/2604.06169v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "State space models (SSMs) have been shown to possess the theoretical capacity to model both star-free sequential tasks and bounded hierarchical structures Sarrof et al. (2024). However, formal expressivity results do not guarantee that gradient-based optimisation will reliably discover the corresponding solutions. Existing benchmarks probe either monotonic state tracking, as in the standard Flip-Flop task, or structural nesting, as in the Dyck languages, but neither isolates reversible semantic state retrieval. We introduce the UNDO Flip-Flop task to fill this gap. By extending the standard Flip-Flop with an UNDO, the task requires a model to maintain an implicit bounded stack and recover historical states under non-monotonic update sequences. We evaluate one-layer and two-layer Mamba-2 under this framework. Both variants fail to acquire the provably expressible stack-based rollback mechanism, converging instead on a local toggle heuristic that inverts the current state rather than retrieving stored history. Under an adversarial retraction pressure test held within the training length distribution, the two-layer model collapses to 41.10% accuracy, which is below random chance. The results confirm systematic rather than incidental failure. Causal ablation shows that the bottleneck lies in retrieval, not storage. These results draw a clear line between what an architecture can in principle represent and what gradient descent reliably learns, a distinction that theoretical expressivity analyses alone cannot capture.",
+                "summary": "The static ``train then deploy\" paradigm fundamentally limits Large Language Models (LLMs) from dynamically adapting their weights in response to continuous streams of new information inherent in real-world tasks. Test-Time Training (TTT) offers a compelling alternative by updating a subset of model parameters (fast weights) at inference time, yet its potential in the current LLM ecosystem is hindered by critical barriers including architectural incompatibility, computational inefficiency and misaligned fast weight objectives for language modeling. In this work, we introduce In-Place Test-Time Training (In-Place TTT), a framework that seamlessly endows LLMs with Test-Time Training ability. In-Place TTT treats the final projection matrix of the ubiquitous MLP blocks as its adaptable fast weights, enabling a ``drop-in\" enhancement for LLMs without costly retraining from scratch. Furthermore, we replace TTT's generic reconstruction objective with a tailored, theoretically-grounded objective explicitly aligned with the Next-Token-Prediction task governing autoregressive language modeling. This principled objective, combined with an efficient chunk-wise update mechanism, results in a highly scalable algorithm compatible with context parallelism. Extensive experiments validate our framework's effectiveness: as an in-place enhancement, it enables a 4B-parameter model to achieve superior performance on tasks with contexts up to 128k, and when pretrained from scratch, it consistently outperforms competitive TTT-related approaches. Ablation study results further provide deeper insights on our design choices. Collectively, our results establish In-Place TTT as a promising step towards a paradigm of continual learning in LLMs.",
                 "category": [
                     {
                         "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-07T14:23:40Z",
+                "published": "2026-04-07T17:59:44Z",
+                "arxiv:comment": "ICLR 2026 Oral Presentation; Code is released at https://github.com/ByteDance-Seed/In-Place-TTT",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Guhao Feng"
+                    },
+                    {
+                        "name": "Shengjie Luo"
+                    },
+                    {
+                        "name": "Kai Hua"
+                    },
+                    {
+                        "name": "Ge Zhang"
+                    },
+                    {
+                        "name": "Di He"
+                    },
+                    {
+                        "name": "Wenhao Huang"
+                    },
+                    {
+                        "name": "Tianle Cai"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.06168v1",
+                "title": "Action Images: End-to-End Policy Learning via Multiview Video Generation",
+                "updated": "2026-04-07T17:59:30Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.06168v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.06168v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "World action models (WAMs) have emerged as a promising direction for robot policy learning, as they can leverage powerful video backbones to model the future states. However, existing approaches often rely on separate action modules, or use action representations that are not pixel-grounded, making it difficult to fully exploit the pretrained knowledge of video models and limiting transfer across viewpoints and environments. In this work, we present Action Images, a unified world action model that formulates policy learning as multiview video generation. Instead of encoding control as low-dimensional tokens, we translate 7-DoF robot actions into interpretable action images: multi-view action videos that are grounded in 2D pixels and explicitly track robot-arm motion. This pixel-grounded action representation allows the video backbone itself to act as a zero-shot policy, without a separate policy head or action module. Beyond control, the same unified model supports video-action joint generation, action-conditioned video generation, and action labeling under a shared representation. On RLBench and real-world evaluations, our model achieves the strongest zero-shot success rates and improves video-action joint generation quality over prior video-space world models, suggesting that interpretable action images are a promising route to policy learning.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-07T17:59:30Z",
+                "arxiv:comment": "Project Page: https://actionimages.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Haoyu Zhen"
+                    },
+                    {
+                        "name": "Zixian Gao"
+                    },
+                    {
+                        "name": "Qiao Sun"
+                    },
+                    {
+                        "name": "Yilin Zhao"
+                    },
+                    {
+                        "name": "Yuncong Yang"
+                    },
+                    {
+                        "name": "Yilun Du"
+                    },
+                    {
+                        "name": "Tsun-Hsuan Wang"
+                    },
+                    {
+                        "name": "Yi-Ling Qiao"
+                    },
+                    {
+                        "name": "Chuang Gan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.06167v1",
+                "title": "Topological Characterization of Churn Flow and Unsupervised Correction to the Wu Flow-Regime Map in Small-Diameter Vertical Pipes",
+                "updated": "2026-04-07T17:59:15Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.06167v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.06167v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Churn flow-the chaotic, oscillatory regime in vertical two-phase flow-has lacked a quantitative mathematical definition for over $40$ years. We introduce the first topology-based characterization using Euler Characteristic Surfaces (ECS). We formulate unsupervised regime discovery as Multiple Kernel Learning (MKL), blending two complementary ECS-derived kernels-temporal alignment ($L^1$ distance on the $\u03c7(s,t)$ surface) and amplitude statistics (scale-wise mean, standard deviation, max, min)-with gas velocity. Applied to $37$ unlabeled air-water trials from Montana Tech, the self-calibrating framework learns weights $\u03b2_{ECS}=0.14$, $\u03b2_{amp}=0.50$, $\u03b2_{ugs}=0.36$, placing $64\\%$ of total weight on topology-derived features ($\u03b2_{ECS} + \u03b2_{amp}$). The ECS-inferred slug/churn transition lies $+3.81$ m/s above Wu et al.'s (2017) prediction in $2$-in. tubing, quantifying reports that existing models under-predict slug persistence in small-diameter pipes where interfacial tension and wall-to-wall interactions dominate flow. Cross-facility validation on $947$ Texas A&M University images confirms $1.9\\times$ higher topological complexity in churn vs. slug ($p < 10^{-5}$). Applied to $45$ TAMU pseudo-trials, the same unsupervised framework achieves $95.6\\%$ $4$-class accuracy and $100\\%$ churn recall-without any labeled training data-matching or exceeding supervised baselines that require thousands of annotated examples. This work provides the first mathematical definition of churn flow and demonstrates that unsupervised topological descriptors can challenge and correct widely adopted mechanistic models.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.AT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-07T17:59:15Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Brady Koenig"
+                    },
+                    {
+                        "name": "Sushovan Majhi"
+                    },
+                    {
+                        "name": "Atish Mitra"
+                    },
+                    {
+                        "name": "Abigail Stein"
+                    },
+                    {
+                        "name": "Burt Todd"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.06165v1",
+                "title": "HaloProbe: Bayesian Detection and Mitigation of Object Hallucinations in Vision-Language Models",
+                "updated": "2026-04-07T17:58:04Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.06165v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.06165v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large vision-language models can produce object hallucinations in image descriptions, highlighting the need for effective detection and mitigation strategies. Prior work commonly relies on the model's attention weights on visual tokens as a detection signal. We reveal that coarse-grained attention-based analysis is unreliable due to hidden confounders, specifically token position and object repetition in a description. This leads to Simpson's paradox: the attention trends reverse or disappear when statistics are aggregated. Based on this observation, we introduce HaloProbe, a Bayesian framework that factorizes external description statistics and internal decoding signals to estimate token-level hallucination probabilities. HaloProbe uses balanced training to isolate internal evidence and combines it with learned prior over external features to recover the true posterior. While intervention-based mitigation methods often degrade utility or fluency by modifying models' internals, we use HaloProbe as an external scoring signal for non-invasive mitigation. Our experiments show that HaloProbe-guided decoding reduces hallucinations more effectively than state-of-the-art intervention-based methods while preserving utility.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-07T17:58:04Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Reihaneh Zohrabi"
+                    },
+                    {
+                        "name": "Hosein Hasani"
+                    },
+                    {
+                        "name": "Akshita Gupta"
+                    },
+                    {
+                        "name": "Mahdieh Soleymani Baghshah"
+                    },
+                    {
+                        "name": "Anna Rohrbach"
+                    },
+                    {
+                        "name": "Marcus Rohrbach"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.06163v1",
+                "title": "Data, Not Model: Explaining Bias toward LLM Texts in Neural Retrievers",
+                "updated": "2026-04-07T17:57:07Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.06163v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.06163v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent studies show that neural retrievers often display source bias, favoring passages generated by LLMs over human-written ones, even when both are semantically similar. This bias has been considered an inherent flaw of retrievers, raising concerns about the fairness and reliability of modern information access systems. Our work challenges this view by showing that source bias stems from supervision in retrieval datasets rather than the models themselves. We found that non-semantic differences, like fluency and term specificity, exist between positive and negative documents, mirroring differences between LLM and human texts. In the embedding space, the bias direction from negatives to positives aligns with the direction from human-written to LLM-generated texts. We theoretically show that retrievers inevitably absorb the artifact imbalances in the training data during contrastive learning, which leads to their preferences over LLM texts. To mitigate the effect, we propose two approaches: 1) reducing artifact differences in training data and 2) adjusting LLM text vectors by removing their projection on the bias vector. Both methods substantially reduce source bias. We hope our study alleviates some concerns regarding LLM-generated texts in information access systems.",
+                "category": {
+                    "@term": "cs.IR",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-07T17:57:07Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.IR"
+                },
+                "author": [
+                    {
+                        "name": "Wei Huang"
+                    },
+                    {
+                        "name": "Keping Bi"
+                    },
+                    {
+                        "name": "Yinqiong Cai"
+                    },
+                    {
+                        "name": "Wei Chen"
+                    },
+                    {
+                        "name": "Jiafeng Guo"
+                    },
+                    {
+                        "name": "Xueqi Cheng"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.06160v1",
+                "title": "The Character Error Vector: Decomposable errors for page-level OCR evaluation",
+                "updated": "2026-04-07T17:56:06Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.06160v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.06160v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The Character Error Rate (CER) is a key metric for evaluating the quality of Optical Character Recognition (OCR). However, this metric assumes that text has been perfectly parsed, which is often not the case. Under page-parsing errors, CER becomes undefined, limiting its use as a metric and making evaluating page-level OCR challenging, particularly when using data that do not share a labelling schema. We introduce the Character Error Vector (CEV), a bag-of-characters evaluator for OCR. The CEV can be decomposed into parsing and OCR, and interaction error components. This decomposability allows practitioners to focus on the part of the Document Understanding pipeline that will have the greatest impact on overall text extraction quality. The CEV can be implemented using a variety of methods, of which we demonstrate SpACER (Spatially Aware Character Error Rate) and a Character distribution method using the Jensen-Shannon Distance. We validate the CEV's performance against other metrics: first, the relationship with CER; then, parse quality; and finally, as a direct measure of page-level OCR quality. The validation process shows that the CEV is a valuable bridge between parsing metrics and local metrics like CER. We analyse a dataset of archival newspapers made of degraded images with complex layouts and find that state-of-the-art end-to-end models are outperformed by more traditional pipeline approaches. Whilst the CEV requires character-level positioning for optimal triage, thresholding on easily available values can predict the main error source with an F1 of 0.91. We provide the CEV as part of a Python library to support Document understanding research.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-07T17:56:06Z",
+                "arxiv:comment": "6643 words, 5 figures, 15 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Jonathan Bourne"
+                    },
+                    {
+                        "name": "Mwiza Simbeye"
+                    },
+                    {
+                        "name": "Joseph Nockels"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.06159v1",
+                "title": "Target Policy Optimization",
+                "updated": "2026-04-07T17:55:59Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.06159v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.06159v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In RL, given a prompt, we sample a group of completions from a model and score them. Two questions follow: which completions should gain probability mass, and how should the parameters move to realize that change? Standard policy-gradient methods answer both at once, so the update can overshoot or undershoot depending on the learning rate, clipping, and other optimizer choices. We introduce \\emph{Target Policy Optimization} (TPO), which separates the two questions. Given scored completions, TPO constructs a target distribution $q_i \\propto p_i^{\\,\\mathrm{old}} \\exp(u_i)$ and fits the policy to it by cross-entropy. The loss gradient on sampled-completion logits is $p^\u03b8- q$, which vanishes once the policy matches the target. On tabular bandits, transformer sequence tasks, and billion-parameter LLM RLVR, TPO matches PG, PPO, GRPO, and DG on easy tasks and substantially outperforms them under sparse reward. Code is available at https://github.com/JeanKaddour/tpo.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-07T17:55:59Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": {
-                    "name": "Hongxu Zhou"
+                    "name": "Jean Kaddour"
                 }
             },
             {
-                "id": "http://arxiv.org/abs/2604.05920v1",
-                "title": "Reference Energies for Non-Relativistic Core Ionization Potentials",
-                "updated": "2026-04-07T14:21:29Z",
+                "id": "http://arxiv.org/abs/2604.06156v1",
+                "title": "MMEmb-R1: Reasoning-Enhanced Multimodal Embedding with Pair-Aware Selection and Adaptive Control",
+                "updated": "2026-04-07T17:55:17Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.05920v1",
+                        "@href": "https://arxiv.org/abs/2604.06156v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.05920v1",
+                        "@href": "https://arxiv.org/pdf/2604.06156v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Deep-lying core electrons carry highly localized, site-specific information that forms the basis of X-ray photoelectron spectroscopy. Accurately predicting their associated core ionization potentials (IPs) is a demanding theoretical task, requiring a balanced treatment of strong orbital relaxation, electron correlation, and relativistic effects. Over the years, a variety of approaches have been developed, ranging from state-specific wave function methods to linear-response formalisms and Green's function techniques. However, their assessment has often relied on comparisons with experiment, where multiple sources of error (basis set incompleteness, relativistic corrections, and vibrational effects) are entangled, making it difficult to isolate the performance of correlation treatments. In the present work, we establish a consistent, theory-based benchmark for core IPs by computing 84 non-relativistic values (73 second-row and 11 third-row IPs) at the full configuration interaction level within the core-valence separation approximation, using large correlation-consistent basis sets augmented with tight-core and diffuse functions (aug-cc-pCVXZ). These results define theoretical best estimates within a fixed finite basis set, providing a chemically accurate reference for method development and validation. Importantly, our dataset allows for systematic, theory-versus-theory comparisons that disentangle correlation and relaxation effects from other physical contributions. On this basis, we assess the performance of widely used approximate methods, including equation-of-motion coupled-cluster approaches up to the inclusion of quadruple excitations, the one-shot $G_0W_0$ scheme, as well as state-specific methods.",
+                "summary": "MLLMs have been successfully applied to multimodal embedding tasks, yet their generative reasoning capabilities remain underutilized. Directly incorporating chain-of-thought reasoning into embedding learning introduces two fundamental challenges. First, structural misalignment between instance-level reasoning and pairwise contrastive supervision may lead to shortcut behavior, where the model merely learns the superficial format of reasoning. Second, reasoning is not universally beneficial for embedding tasks. Enforcing reasoning for all inputs may introduce unnecessary computation and latency, and can even obscure salient semantic signals for simple cases. To address these issues, we propose MMEmb-R1, an adaptive reasoning-based multimodal embedding framework. We formulate reasoning as a latent variable and introduce pair-aware reasoning selection that employs counterfactual intervention to identify reasoning paths beneficial for query-target alignment. Furthermore, we adopt reinforcement learning to selectively invoke reasoning only when necessary. Experiments on the MMEB-V2 benchmark demonstrate that our model achieves a score of 71.2 with only 4B parameters, establishing a new state-of-the-art while significantly reducing reasoning overhead and inference latency.",
                 "category": [
                     {
-                        "@term": "physics.chem-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cond-mat.mtrl-sci",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "nucl-th",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-07T14:21:29Z",
-                "arxiv:comment": "13 pages, 3 figure (Supporting Information available)",
-                "arxiv:primary_category": {
-                    "@term": "physics.chem-ph"
-                },
-                "author": [
-                    {
-                        "name": "Antoine Marie"
-                    },
-                    {
-                        "name": "Loris Burth"
-                    },
-                    {
-                        "name": "Pierre-Fran\u00e7ois Loos"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.05917v1",
-                "title": "An 18 - 25 GHz spectroscopic survey of southern hemisphere dense cores",
-                "updated": "2026-04-07T14:17:35Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.05917v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.05917v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We extended the radio K-band spectroscopic survey for organics in southern hemisphere dense cores by observing seven sources using NASA's Deep Space Network 70-m antenna in Canberra, Australia, over the frequency range of 18 to 25 GHz. Molecular column densities of NH$_3$, $c$-C$_3$H$_2$, HC$_3$N, HC$_5$N, CCS, C$_3$S, and $c$-C$_3$HD were derived for each source assuming LTE. The resulting column density ratios were compared with predictions of a state-of-the art astrochemical model to constrain the C/O ratio and chemical age of each source. Most cores have similar C/O ratios of $0.5 - 0.7$, much different from the best studied TMC-1 dense core characterized by a high C/O ratio of $\\sim 1.4$. The chemical ages of the cores are also similar and fall between 0.6 and 5~Myr. The less dense cores tend to have the oldest chemical ages, as might be expected given that chemical timescales scale with density. Our results showcase the synergistic approach of combining radio observations using the DSS-43 antenna with state-of-the-art astrochemical models to study the chemical composition of southern hemisphere dense cores, enabling constraints on their C/O ratios and chemical ages, which remain largely unexplored.",
-                "category": {
-                    "@term": "astro-ph.GA",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-07T14:17:35Z",
-                "arxiv:comment": "Accepted for publication in Astronomy & Astrophysics",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.GA"
-                },
-                "author": [
-                    {
-                        "name": "Dariusz C. Lis"
-                    },
-                    {
-                        "name": "Karen Willacy"
-                    },
-                    {
-                        "name": "Liton Majumdar"
-                    },
-                    {
-                        "name": "Jorge L. Pineda"
-                    },
-                    {
-                        "name": "Susanna Widicus Weaver"
-                    },
-                    {
-                        "name": "Shinji Horiuchi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.05914v1",
-                "title": "Machine-State Embeddings as an Operational Coordinate System for Accelerator Operation",
-                "updated": "2026-04-07T14:16:17Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.05914v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.05914v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We demonstrate that graph neural network (GNN) embeddings of injector configurations provide a practical operational coordinate system for the Continuous Electron Beam Accelerator Facility (CEBAF) injector at Jefferson Lab. Using 137,389 snapshots spanning January 2022 through March 2023, we show that injector operation occupies a small number of persistent, well-separated neighborhoods in a 16-dimensional learned state space rather than a featureless continuum. Density-based clustering identifies ten recurring operating regimes with strong operational run alignment, and regime persistence statistics confirm that these regimes are stable over timescales of hours to weeks. Large relocations between neighborhoods are rare and episodic; 99.6% of one-hour operating windows fall within an empirically derived jitter baseline. Geometric outlier screening narrows a year-long dataset to a small set of intervals warranting operational review, and nearest-neighbor retrieval enables case-based reasoning over the historical archive. A controlled beam study validates that deliberate injector reconfiguration traces coherent, interpretable trajectories in embedding space. Together these capabilities demonstrate that machine-state embeddings support holistic operational monitoring in ways that single-channel inspection cannot.",
-                "category": {
-                    "@term": "physics.acc-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-07T14:16:17Z",
-                "arxiv:comment": "18 pages, 12 figures, 7 tables",
-                "arxiv:primary_category": {
-                    "@term": "physics.acc-ph"
-                },
-                "author": [
-                    {
-                        "name": "Chris Tennant"
-                    },
-                    {
-                        "name": "Jundong Li"
-                    },
-                    {
-                        "name": "Song Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.05912v1",
-                "title": "FrontierFinance: A Long-Horizon Computer-Use Benchmark of Real-World Financial Tasks",
-                "updated": "2026-04-07T14:15:45Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.05912v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.05912v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "As concerns surrounding AI-driven labor displacement intensify in knowledge-intensive sectors, existing benchmarks fail to measure performance on tasks that define practical professional expertise. Finance, in particular, has been identified as a domain with high AI exposure risk, yet lacks robust benchmarks to track real-world developments. This gap is compounded by the absence of clear accountability mechanisms in current Large Language Model (LLM) deployments. To address this, we introduce FrontierFinance, a long-horizon benchmark of 25 complex financial modeling tasks across five core finance models, requiring an average of over 18 hours of skilled human labor per task to complete. Developed with financial professionals, the benchmark reflects industry-standard financial modeling workflows and is paired with detailed rubrics for structured evaluation. We engage human experts to define the tasks, create rubrics, grade LLMs, and perform the tasks themselves as human baselines. We demonstrate that our human experts both receive higher scores on average, and are more likely to provide client-ready outputs than current state-of-the-art systems.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-07T14:15:45Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Michael Krumdick"
-                    },
-                    {
-                        "name": "Varshini Reddy"
-                    },
-                    {
-                        "name": "Shivani Chaudhary"
-                    },
-                    {
-                        "name": "William Day"
-                    },
-                    {
-                        "name": "Maarij Ahmed"
-                    },
-                    {
-                        "name": "Hayan Haqqi"
-                    },
-                    {
-                        "name": "Muhammad Ahsen Fahim"
-                    },
-                    {
-                        "name": "Hanzallah Amjad"
-                    },
-                    {
-                        "name": "Ahmad Orakzai"
-                    },
-                    {
-                        "name": "Aqsa Gul"
-                    },
-                    {
-                        "name": "Chris Tanner"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.05904v1",
-                "title": "Transfer Learning for Neural Parameter Estimation applied to Building RC Models",
-                "updated": "2026-04-07T14:07:13Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.05904v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.05904v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Parameter estimation for dynamical systems remains challenging due to non-convexity and sensitivity to initial parameter guesses. Recent deep learning approaches enable accurate and fast parameter estimation but do not exploit transferable knowledge across systems. To address this, we introduce a transfer-learning-based neural parameter estimation framework based on a pretraining-fine-tuning paradigm. This approach improves accuracy and eliminates the need for an initial parameter guess. We apply this framework to building RC thermal models, evaluating it against a Genetic Algorithm and a from-scratch neural baseline across eight simulated buildings, one real-world building, two RC model configurations, and four training data lengths. Results demonstrate an 18.6-24.0% performance improvement with only 12 days of training data and up to 49.4% with 72 days. Beyond buildings, the proposed method represents a new paradigm for parameter estimation in dynamical systems.",
-                "category": [
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-07T14:07:13Z",
-                "arxiv:comment": "This work has been submitted to the IEEE for possible publication",
-                "arxiv:primary_category": {
-                    "@term": "eess.SY"
-                },
-                "author": [
-                    {
-                        "name": "Fabian Raisch"
-                    },
-                    {
-                        "name": "Timo Germann"
-                    },
-                    {
-                        "name": "J. Nathan Kutz"
-                    },
-                    {
-                        "name": "Christoph Goebel"
-                    },
-                    {
-                        "name": "Benjamin Tischler"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.05890v1",
-                "title": "A Tensor-Train Framework for Bayesian Inference in High-Dimensional Systems: Applications to MIMO Detection and Channel Decoding",
-                "updated": "2026-04-07T13:53:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.05890v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.05890v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Bayesian inference in high-dimensional discrete-input additive noise models is a fundamental challenge in communication systems, as the support of the required joint a posteriori probability (APP) mass function grows exponentially with the number of unknown variables. In this work, we propose a tensor-train (TT) framework for tractable, near-optimal Bayesian inference in discrete-input additive noise models. The central insight is that the joint log-APP mass function admits an exact low-rank representation in the TT format, enabling compact storage and efficient computations. To recover symbol-wise APP marginals, we develop a practical inference procedure that approximates the exponential of the log-posterior using a TT-cross algorithm initialized with a truncated Taylor-series. To demonstrate the generality of the approach, we derive explicit low-rank TT constructions for two canonical communication problems: the linear observation model under additive white Gaussian noise (AWGN), applied to multiple-input multiple-output (MIMO) detection, and soft-decision decoding of binary linear block error correcting codes over the binary-input AWGN channel. Numerical results show near-optimal error-rate performance across a wide range of signal-to-noise ratios while requiring only modest TT ranks. These results highlight the potential of tensor-network methods for efficient Bayesian inference in communication systems.",
-                "category": [
-                    {
-                        "@term": "cs.IT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-07T13:53:21Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.IT"
-                },
-                "author": [
-                    {
-                        "name": "Luca Schmid"
-                    },
-                    {
-                        "name": "Dominik Sulz"
-                    },
-                    {
-                        "name": "Shrinivas Chimmalgi"
-                    },
-                    {
-                        "name": "Laurent Schmalen"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.05873v1",
-                "title": "Learning Shared Sentiment Prototypes for Adaptive Multimodal Sentiment Analysis",
-                "updated": "2026-04-07T13:31:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.05873v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.05873v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Multimodal sentiment analysis (MSA) aims to predict human sentiment from textual, acoustic, and visual information in videos. Recent studies improve multimodal fusion by modeling modality interaction and assigning different modality weights. However, they usually compress diverse sentiment cues into a single compact representation before sentiment reasoning. This early aggregation makes it difficult to preserve the internal structure of sentiment evidence, where different cues may complement, conflict with, or differ in reliability from each other. In addition, modality importance is often determined only once during fusion, so later reasoning cannot further adjust modality contributions. To address these issues, we propose PRISM, a framework that unifies structured affective extraction and adaptive modality evaluation. PRISM organizes multimodal evidence in a shared prototype space, which supports structured cross-modal comparison and adaptive fusion. It further applies dynamic modality reweighting during reasoning, allowing modality contributions to be continuously refined as semantic interactions become deeper. Experiments on three benchmark datasets show that PRISM outperforms representative baselines.",
-                "category": {
-                    "@term": "cs.MM",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-07T13:31:52Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.MM"
-                },
-                "author": [
-                    {
-                        "name": "Chen Su"
-                    },
-                    {
-                        "name": "Yuanhe Tian"
-                    },
-                    {
-                        "name": "Yan Song"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.05872v1",
-                "title": "Swiss-Bench 003: Evaluating LLM Reliability and Adversarial Security for Swiss Regulatory Contexts",
-                "updated": "2026-04-07T13:29:34Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.05872v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.05872v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The deployment of large language models (LLMs) in Swiss financial and regulatory contexts demands empirical evidence of both production reliability and adversarial security, dimensions not jointly operationalized in existing Swiss-focused evaluation frameworks. This paper introduces Swiss-Bench 003 (SBP-003), extending the HAAS (Helvetic AI Assessment Score) from six to eight dimensions by adding D7 (Self-Graded Reliability Proxy) and D8 (Adversarial Security). I evaluate ten frontier models across 808 Swiss-specific items in four languages (German, French, Italian, English), comprising seven Swiss-adapted benchmarks (Swiss TruthfulQA, Swiss IFEval, Swiss SimpleQA, Swiss NIAH, Swiss PII-Scope, System Prompt Leakage, and Swiss German Comprehension) targeting FINMA Guidance 08/2024, the revised Federal Act on Data Protection (nDSG), and OWASP Top 10 for LLMs. Self-graded D7 scores (73-94%) exceed externally judged D8 security scores (20-61%) by a wide margin, though these dimensions use non-comparable scoring regimes. System prompt leakage resistance ranges from 24.8% to 88.2%, while PII extraction defense remains weak (14-42%) across all models. Qwen 3.5 Plus achieves the highest self-graded D7 score (94.4%), while GPT-oss 120B achieves the highest D8 score (60.7%) despite being the lowest-cost model evaluated. All evaluations are zero-shot under provider default settings; D7 is self-graded and does not constitute independently validated accuracy. I provide conceptual mapping tables relating benchmark dimensions to FINMA model validation requirements, nDSG data protection obligations, and OWASP LLM risk categories.",
-                "category": [
-                    {
-                        "@term": "cs.CR",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -416,62 +399,136 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-07T13:29:34Z",
-                "arxiv:comment": "23 pages, 5 figures, 8 tables",
+                "published": "2026-04-07T17:55:17Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CR"
+                    "@term": "cs.CV"
                 },
-                "author": {
-                    "name": "Fatih Uenal"
-                }
+                "author": [
+                    {
+                        "name": "Yuchi Wang"
+                    },
+                    {
+                        "name": "Haiyang Yu"
+                    },
+                    {
+                        "name": "Weikang Bian"
+                    },
+                    {
+                        "name": "Jiefeng Long"
+                    },
+                    {
+                        "name": "Xiao Liang"
+                    },
+                    {
+                        "name": "Chao Feng"
+                    },
+                    {
+                        "name": "Hongsheng Li"
+                    }
+                ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.05863v1",
-                "title": "LoRM: Learning the Language of Rotating Machinery for Self-Supervised Condition Monitoring",
-                "updated": "2026-04-07T13:25:20Z",
+                "id": "http://arxiv.org/abs/2604.06155v1",
+                "title": "Toward Consistent World Models with Multi-Token Prediction and Latent Semantic Enhancement",
+                "updated": "2026-04-07T17:54:22Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.05863v1",
+                        "@href": "https://arxiv.org/abs/2604.06155v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.05863v1",
+                        "@href": "https://arxiv.org/pdf/2604.06155v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present LoRM (Language of Rotating Machinery), a self-supervised framework for multi-modal rotating-machinery signal understanding and real-time condition monitoring. LoRM is built on the idea that rotating-machinery signals can be viewed as a machine language: local signals can be tokenised into discrete symbolic units, and their future evolution can be predicted from observed multi-sensor context. Unlike conventional signal-processing methods that rely on hand-crafted transforms and features, LoRM reformulates multi-modal sensor data as a token-based sequence-prediction problem. For each data window, the observed context segment is retained in continuous form, while the future target segment of each sensing channel is quantised into a discrete token. Then, efficient knowledge transfer is achieved by partially fine-tuning a general-purpose pre-trained language model on industrial signals, avoiding the need to train a large model from scratch. Finally, condition monitoring is performed by tracking token-prediction errors as a health indicator, where increasing errors indicate degradation. In-situ tool condition monitoring (TCM) experiments demonstrate stable real-time tracking and strong cross-tool generalisation, showing that LoRM provides a practical bridge between language modelling and industrial signal analysis. The source code is publicly available at https://github.com/Q159753258/LormPHM.",
+                "summary": "Whether Large Language Models (LLMs) develop coherent internal world models remains a core debate. While conventional Next-Token Prediction (NTP) focuses on one-step-ahead supervision, Multi-Token Prediction (MTP) has shown promise in learning more structured representations. In this work, we provide a theoretical perspective analyzing the gradient inductive bias of MTP, supported by empirical evidence, showing that MTP promotes the convergence toward internal belief states by inducing representational contractivity via gradient coupling. However, we reveal that standard MTP often suffers from structural hallucinations, where discrete token supervision encourages illegal shortcuts in latent space that violate environmental constraints. To address this, we propose a novel method Latent Semantic Enhancement MTP (LSE-MTP), which anchors predictions to ground-truth hidden state trajectories. Experiments on synthetic graphs and real-world Manhattan Taxi Ride show that LSE-MTP effectively bridges the gap between discrete tokens and continuous state representations, enhancing representation alignment, reducing structural hallucinations, and improving robustness to perturbations.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-07T17:54:22Z",
+                "arxiv:comment": "ACL 2026 Main Conference",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Qimin Zhong"
+                    },
+                    {
+                        "name": "Hao Liao"
+                    },
+                    {
+                        "name": "Haiming Qin"
+                    },
+                    {
+                        "name": "Mingyang Zhou"
+                    },
+                    {
+                        "name": "Rui Mao"
+                    },
+                    {
+                        "name": "Wei Chen"
+                    },
+                    {
+                        "name": "Naipeng Chao"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.06154v1",
+                "title": "Exclusive Unlearning",
+                "updated": "2026-04-07T17:54:11Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.06154v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.06154v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "When introducing Large Language Models (LLMs) into industrial applications, such as healthcare and education, the risk of generating harmful content becomes a significant challenge. While existing machine unlearning methods can erase specific harmful knowledge and expressions, diverse harmful content makes comprehensive removal difficult. In this study, instead of individually listing targets for forgetting, we propose Exclusive Unlearning (EU), which aims for broad harm removal by extensively forgetting everything except for the knowledge and expressions we wish to retain. We demonstrate that through Exclusive Unlearning, it is possible to obtain a model that ensures safety against a wide range of inputs, including jailbreaks, while maintaining the ability to respond to diverse instructions related to specific domains such as medicine and mathematics.",
                 "category": {
                     "@term": "cs.CL",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-07T13:25:20Z",
+                "published": "2026-04-07T17:54:11Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Xiao Qin"
+                        "name": "Mutsumi Sasaki"
                     },
                     {
-                        "name": "Xingyi Song"
+                        "name": "Kouta Nakayama"
                     },
                     {
-                        "name": "Tong Liu"
+                        "name": "Yusuke Miyao"
                     },
                     {
-                        "name": "Hatim Laalej"
+                        "name": "Yohei Oseki"
                     },
                     {
-                        "name": "Zepeng Liu"
-                    },
-                    {
-                        "name": "Yunpeng Zhu"
-                    },
-                    {
-                        "name": "Ligang He"
+                        "name": "Masaru Isonuma"
                     }
                 ]
             }
