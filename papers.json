@@ -5,182 +5,321 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-07T22:32:45Z",
+        "updated": "2026-04-08T01:53:28Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "557306",
+        "opensearch:totalResults": "557639",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.04930v1",
-                "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
-                "updated": "2026-04-06T17:59:45Z",
+                "id": "http://arxiv.org/abs/2604.05923v1",
+                "title": "The UNDO Flip-Flop: A Controlled Probe for Reversible Semantic State Management in State Space Model",
+                "updated": "2026-04-07T14:23:40Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.04930v1",
+                        "@href": "https://arxiv.org/abs/2604.05923v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.04930v1",
+                        "@href": "https://arxiv.org/pdf/2604.05923v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large reasoning models rely on long chain-of-thought generation to solve complex problems, but extended reasoning often incurs substantial computational cost and can even degrade performance due to overthinking. A key challenge is determining when the model should stop reasoning and produce the final answer. In this work, we study the confidence of intermediate answers during reasoning and observe two characteristic behaviors: correct reasoning trajectories often reach high-confidence answers early, while incorrect rollouts tend to produce long, unproductive reasoning traces and exhibit less reliable confidence dynamics. Motivated by these observations, we propose CoDE-Stop (Confidence Dynamics Early Stop), an early stopping method that leverages the dynamics of intermediate answer confidence to decide when to terminate reasoning, requiring no additional training and easily integrating into existing models. We evaluate CoDE-Stop on diverse reasoning and science benchmarks across multiple models. Compared to prior early stopping methods, it achieves a more favorable accuracy-compute tradeoff and reduces total token usage by 25-50% compared to standard full-length reasoning. In addition, we provide analyses of confidence dynamics during reasoning, offering insights into how confidence changes in both correct and incorrect trajectories.",
+                "summary": "State space models (SSMs) have been shown to possess the theoretical capacity to model both star-free sequential tasks and bounded hierarchical structures Sarrof et al. (2024). However, formal expressivity results do not guarantee that gradient-based optimisation will reliably discover the corresponding solutions. Existing benchmarks probe either monotonic state tracking, as in the standard Flip-Flop task, or structural nesting, as in the Dyck languages, but neither isolates reversible semantic state retrieval. We introduce the UNDO Flip-Flop task to fill this gap. By extending the standard Flip-Flop with an UNDO, the task requires a model to maintain an implicit bounded stack and recover historical states under non-monotonic update sequences. We evaluate one-layer and two-layer Mamba-2 under this framework. Both variants fail to acquire the provably expressible stack-based rollback mechanism, converging instead on a local toggle heuristic that inverts the current state rather than retrieving stored history. Under an adversarial retraction pressure test held within the training length distribution, the two-layer model collapses to 41.10% accuracy, which is below random chance. The results confirm systematic rather than incidental failure. Causal ablation shows that the bottleneck lies in retrieval, not storage. These results draw a clear line between what an architecture can in principle represent and what gradient descent reliably learns, a distinction that theoretical expressivity analyses alone cannot capture.",
                 "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-06T17:59:45Z",
+                "published": "2026-04-07T14:23:40Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Hongxu Zhou"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.05920v1",
+                "title": "Reference Energies for Non-Relativistic Core Ionization Potentials",
+                "updated": "2026-04-07T14:21:29Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.05920v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.05920v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Deep-lying core electrons carry highly localized, site-specific information that forms the basis of X-ray photoelectron spectroscopy. Accurately predicting their associated core ionization potentials (IPs) is a demanding theoretical task, requiring a balanced treatment of strong orbital relaxation, electron correlation, and relativistic effects. Over the years, a variety of approaches have been developed, ranging from state-specific wave function methods to linear-response formalisms and Green's function techniques. However, their assessment has often relied on comparisons with experiment, where multiple sources of error (basis set incompleteness, relativistic corrections, and vibrational effects) are entangled, making it difficult to isolate the performance of correlation treatments. In the present work, we establish a consistent, theory-based benchmark for core IPs by computing 84 non-relativistic values (73 second-row and 11 third-row IPs) at the full configuration interaction level within the core-valence separation approximation, using large correlation-consistent basis sets augmented with tight-core and diffuse functions (aug-cc-pCVXZ). These results define theoretical best estimates within a fixed finite basis set, providing a chemically accurate reference for method development and validation. Importantly, our dataset allows for systematic, theory-versus-theory comparisons that disentangle correlation and relaxation effects from other physical contributions. On this basis, we assess the performance of widely used approximate methods, including equation-of-motion coupled-cluster approaches up to the inclusion of quadruple excitations, the one-shot $G_0W_0$ scheme, as well as state-specific methods.",
+                "category": [
+                    {
+                        "@term": "physics.chem-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cond-mat.mtrl-sci",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "nucl-th",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-07T14:21:29Z",
+                "arxiv:comment": "13 pages, 3 figure (Supporting Information available)",
+                "arxiv:primary_category": {
+                    "@term": "physics.chem-ph"
+                },
+                "author": [
+                    {
+                        "name": "Antoine Marie"
+                    },
+                    {
+                        "name": "Loris Burth"
+                    },
+                    {
+                        "name": "Pierre-Fran\u00e7ois Loos"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.05917v1",
+                "title": "An 18 - 25 GHz spectroscopic survey of southern hemisphere dense cores",
+                "updated": "2026-04-07T14:17:35Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.05917v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.05917v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We extended the radio K-band spectroscopic survey for organics in southern hemisphere dense cores by observing seven sources using NASA's Deep Space Network 70-m antenna in Canberra, Australia, over the frequency range of 18 to 25 GHz. Molecular column densities of NH$_3$, $c$-C$_3$H$_2$, HC$_3$N, HC$_5$N, CCS, C$_3$S, and $c$-C$_3$HD were derived for each source assuming LTE. The resulting column density ratios were compared with predictions of a state-of-the art astrochemical model to constrain the C/O ratio and chemical age of each source. Most cores have similar C/O ratios of $0.5 - 0.7$, much different from the best studied TMC-1 dense core characterized by a high C/O ratio of $\\sim 1.4$. The chemical ages of the cores are also similar and fall between 0.6 and 5~Myr. The less dense cores tend to have the oldest chemical ages, as might be expected given that chemical timescales scale with density. Our results showcase the synergistic approach of combining radio observations using the DSS-43 antenna with state-of-the-art astrochemical models to study the chemical composition of southern hemisphere dense cores, enabling constraints on their C/O ratios and chemical ages, which remain largely unexplored.",
+                "category": {
+                    "@term": "astro-ph.GA",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-07T14:17:35Z",
+                "arxiv:comment": "Accepted for publication in Astronomy & Astrophysics",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.GA"
+                },
+                "author": [
+                    {
+                        "name": "Dariusz C. Lis"
+                    },
+                    {
+                        "name": "Karen Willacy"
+                    },
+                    {
+                        "name": "Liton Majumdar"
+                    },
+                    {
+                        "name": "Jorge L. Pineda"
+                    },
+                    {
+                        "name": "Susanna Widicus Weaver"
+                    },
+                    {
+                        "name": "Shinji Horiuchi"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.05914v1",
+                "title": "Machine-State Embeddings as an Operational Coordinate System for Accelerator Operation",
+                "updated": "2026-04-07T14:16:17Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.05914v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.05914v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We demonstrate that graph neural network (GNN) embeddings of injector configurations provide a practical operational coordinate system for the Continuous Electron Beam Accelerator Facility (CEBAF) injector at Jefferson Lab. Using 137,389 snapshots spanning January 2022 through March 2023, we show that injector operation occupies a small number of persistent, well-separated neighborhoods in a 16-dimensional learned state space rather than a featureless continuum. Density-based clustering identifies ten recurring operating regimes with strong operational run alignment, and regime persistence statistics confirm that these regimes are stable over timescales of hours to weeks. Large relocations between neighborhoods are rare and episodic; 99.6% of one-hour operating windows fall within an empirically derived jitter baseline. Geometric outlier screening narrows a year-long dataset to a small set of intervals warranting operational review, and nearest-neighbor retrieval enables case-based reasoning over the historical archive. A controlled beam study validates that deliberate injector reconfiguration traces coherent, interpretable trajectories in embedding space. Together these capabilities demonstrate that machine-state embeddings support holistic operational monitoring in ways that single-channel inspection cannot.",
+                "category": {
+                    "@term": "physics.acc-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-07T14:16:17Z",
+                "arxiv:comment": "18 pages, 12 figures, 7 tables",
+                "arxiv:primary_category": {
+                    "@term": "physics.acc-ph"
+                },
+                "author": [
+                    {
+                        "name": "Chris Tennant"
+                    },
+                    {
+                        "name": "Jundong Li"
+                    },
+                    {
+                        "name": "Song Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.05912v1",
+                "title": "FrontierFinance: A Long-Horizon Computer-Use Benchmark of Real-World Financial Tasks",
+                "updated": "2026-04-07T14:15:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.05912v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.05912v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "As concerns surrounding AI-driven labor displacement intensify in knowledge-intensive sectors, existing benchmarks fail to measure performance on tasks that define practical professional expertise. Finance, in particular, has been identified as a domain with high AI exposure risk, yet lacks robust benchmarks to track real-world developments. This gap is compounded by the absence of clear accountability mechanisms in current Large Language Model (LLM) deployments. To address this, we introduce FrontierFinance, a long-horizon benchmark of 25 complex financial modeling tasks across five core finance models, requiring an average of over 18 hours of skilled human labor per task to complete. Developed with financial professionals, the benchmark reflects industry-standard financial modeling workflows and is paired with detailed rubrics for structured evaluation. We engage human experts to define the tasks, create rubrics, grade LLMs, and perform the tasks themselves as human baselines. We demonstrate that our human experts both receive higher scores on average, and are more likely to provide client-ready outputs than current state-of-the-art systems.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-07T14:15:45Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Parsa Hosseini"
+                        "name": "Michael Krumdick"
                     },
                     {
-                        "name": "Sumit Nawathe"
+                        "name": "Varshini Reddy"
                     },
                     {
-                        "name": "Mahdi Salmani"
+                        "name": "Shivani Chaudhary"
                     },
                     {
-                        "name": "Meisam Razaviyayn"
+                        "name": "William Day"
                     },
                     {
-                        "name": "Soheil Feizi"
+                        "name": "Maarij Ahmed"
+                    },
+                    {
+                        "name": "Hayan Haqqi"
+                    },
+                    {
+                        "name": "Muhammad Ahsen Fahim"
+                    },
+                    {
+                        "name": "Hanzallah Amjad"
+                    },
+                    {
+                        "name": "Ahmad Orakzai"
+                    },
+                    {
+                        "name": "Aqsa Gul"
+                    },
+                    {
+                        "name": "Chris Tanner"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.04924v1",
-                "title": "Your Pre-trained Diffusion Model Secretly Knows Restoration",
-                "updated": "2026-04-06T17:59:04Z",
+                "id": "http://arxiv.org/abs/2604.05904v1",
+                "title": "Transfer Learning for Neural Parameter Estimation applied to Building RC Models",
+                "updated": "2026-04-07T14:07:13Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.04924v1",
+                        "@href": "https://arxiv.org/abs/2604.05904v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.04924v1",
+                        "@href": "https://arxiv.org/pdf/2604.05904v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Pre-trained diffusion models have enabled significant advancements in All-in-One Restoration (AiOR), offering improved perceptual quality and generalization. However, diffusion-based restoration methods primarily rely on fine-tuning or Control-Net style modules to leverage the pre-trained diffusion model's priors for AiOR. In this work, we show that these pre-trained diffusion models inherently possess restoration behavior, which can be unlocked by directly learning prompt embeddings at the output of the text encoder. Interestingly, this behavior is largely inaccessible through text prompts and text-token embedding optimization. Furthermore, we observe that naive prompt learning is unstable because the forward noising process using degraded images is misaligned with the reverse sampling trajectory. To resolve this, we train prompts within a diffusion bridge formulation that aligns training and inference dynamics, enforcing a coherent denoising path from noisy degraded states to clean images. Building on these insights, we introduce our lightweight learned prompts on the pre-trained WAN video model and FLUX image models, converting them into high-performing restoration models. Extensive experiments demonstrate that our approach achieves competitive performance and generalization across diverse degradations, while avoiding fine-tuning and restoration-specific control modules.",
+                "summary": "Parameter estimation for dynamical systems remains challenging due to non-convexity and sensitivity to initial parameter guesses. Recent deep learning approaches enable accurate and fast parameter estimation but do not exploit transferable knowledge across systems. To address this, we introduce a transfer-learning-based neural parameter estimation framework based on a pretraining-fine-tuning paradigm. This approach improves accuracy and eliminates the need for an initial parameter guess. We apply this framework to building RC thermal models, evaluating it against a Genetic Algorithm and a from-scratch neural baseline across eight simulated buildings, one real-world building, two RC model configurations, and four training data lengths. Results demonstrate an 18.6-24.0% performance improvement with only 12 days of training data and up to 49.4% with 72 days. Beyond buildings, the proposed method represents a new paradigm for parameter estimation in dynamical systems.",
                 "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-06T17:59:04Z",
-                "arxiv:comment": "Project page: https://sudraj2002.github.io/yptpage/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Sudarshan Rajagopalan"
-                    },
-                    {
-                        "name": "Vishal M. Patel"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.04923v1",
-                "title": "Stratifying Reinforcement Learning with Signal Temporal Logic",
-                "updated": "2026-04-06T17:58:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.04923v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.04923v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In this paper, we develop a stratification-based semantics for Signal Temporal Logic (STL) in which each atomic predicate is interpreted as a membership test in a stratified space. This perspective reveals a novel correspondence principle between stratification theory and STL, showing that most STL formulas can be viewed as inducing a stratification of space-time. The significance of this interpretation is twofold. First, it offers a fresh theoretical framework for analyzing the structure of the embedding space generated by deep reinforcement learning (DRL) and relates it to the geometry of the ambient decision space. Second, it provides a principled framework that both enables the reuse of existing high-dimensional analysis tools and motivates the creation of novel computational techniques. To ground the theory, we (1) illustrate the role of stratification theory in Minigrid games and (2) apply numerical techniques to the latent embeddings of a DRL agent playing such a game where the robustness of STL formulas is used as the reward. In the process, we propose computationally efficient signatures that, based on preliminary evidence, appear promising for uncovering the stratification structure of such embedding spaces.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "eess.SY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "math.AT",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-06T17:58:58Z",
-                "arxiv:comment": "8 pages, 13 figures",
+                "published": "2026-04-07T14:07:13Z",
+                "arxiv:comment": "This work has been submitted to the IEEE for possible publication",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "eess.SY"
                 },
                 "author": [
                     {
-                        "name": "Justin Curry"
+                        "name": "Fabian Raisch"
                     },
                     {
-                        "name": "Alberto Speranzon"
+                        "name": "Timo Germann"
+                    },
+                    {
+                        "name": "J. Nathan Kutz"
+                    },
+                    {
+                        "name": "Christoph Goebel"
+                    },
+                    {
+                        "name": "Benjamin Tischler"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.04920v1",
-                "title": "PINNs in PDE Constrained Optimal Control Problems: Direct vs Indirect Methods",
-                "updated": "2026-04-06T17:57:53Z",
+                "id": "http://arxiv.org/abs/2604.05890v1",
+                "title": "A Tensor-Train Framework for Bayesian Inference in High-Dimensional Systems: Applications to MIMO Detection and Channel Decoding",
+                "updated": "2026-04-07T13:53:21Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.04920v1",
+                        "@href": "https://arxiv.org/abs/2604.05890v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.04920v1",
+                        "@href": "https://arxiv.org/pdf/2604.05890v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We study physics-informed neural networks (PINNs) as numerical tools for the optimal control of semilinear partial differential equations. We first recall the classical direct and indirect viewpoints for optimal control of PDEs, and then present two PINN formulations: a direct formulation based on minimizing the objective under the state constraint, and an indirect formulation based on the first-order optimality system. For a class of semilinear parabolic equations, we derive the state equation, the adjoint equation, and the stationarity condition in a form consistent with continuous-time Pontryagin-type optimality conditions. We then specialize the framework to an Allen-Cahn control problem and compare three numerical approaches: (i) a discretize-then-optimize adjoint method, (ii) a direct PINN, and (iii) an indirect PINN. Numerical results show that the PINN parameterization has an implicit regularizing effect, in the sense that it tends to produce smoother control profiles. They also indicate that the indirect PINN more faithfully preserves the PDE contraint and optimality structure and yields a more accurate neural approximation than the direct PINN.",
+                "summary": "Bayesian inference in high-dimensional discrete-input additive noise models is a fundamental challenge in communication systems, as the support of the required joint a posteriori probability (APP) mass function grows exponentially with the number of unknown variables. In this work, we propose a tensor-train (TT) framework for tractable, near-optimal Bayesian inference in discrete-input additive noise models. The central insight is that the joint log-APP mass function admits an exact low-rank representation in the TT format, enabling compact storage and efficient computations. To recover symbol-wise APP marginals, we develop a practical inference procedure that approximates the exponential of the log-posterior using a TT-cross algorithm initialized with a truncated Taylor-series. To demonstrate the generality of the approach, we derive explicit low-rank TT constructions for two canonical communication problems: the linear observation model under additive white Gaussian noise (AWGN), applied to multiple-input multiple-output (MIMO) detection, and soft-decision decoding of binary linear block error correcting codes over the binary-input AWGN channel. Numerical results show near-optimal error-rate performance across a wide range of signal-to-noise ratios while requiring only modest TT ranks. These results highlight the potential of tensor-network methods for efficient Bayesian inference in communication systems.",
                 "category": [
                     {
-                        "@term": "math.OC",
+                        "@term": "cs.IT",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -188,50 +327,84 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-06T17:57:53Z",
-                "arxiv:comment": "8 pages, 3 figures",
+                "published": "2026-04-07T13:53:21Z",
                 "arxiv:primary_category": {
-                    "@term": "math.OC"
+                    "@term": "cs.IT"
                 },
                 "author": [
                     {
-                        "name": "Zhen Zhang"
+                        "name": "Luca Schmid"
                     },
                     {
-                        "name": "Shanqing Liu"
+                        "name": "Dominik Sulz"
                     },
                     {
-                        "name": "Alessandro Alla"
+                        "name": "Shrinivas Chimmalgi"
                     },
                     {
-                        "name": "Jerome Darbon"
-                    },
-                    {
-                        "name": "George Em Karniadakis"
+                        "name": "Laurent Schmalen"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.04917v1",
-                "title": "Vero: An Open RL Recipe for General Visual Reasoning",
-                "updated": "2026-04-06T17:56:25Z",
+                "id": "http://arxiv.org/abs/2604.05873v1",
+                "title": "Learning Shared Sentiment Prototypes for Adaptive Multimodal Sentiment Analysis",
+                "updated": "2026-04-07T13:31:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.04917v1",
+                        "@href": "https://arxiv.org/abs/2604.05873v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.04917v1",
+                        "@href": "https://arxiv.org/pdf/2604.05873v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "What does it take to build a visual reasoner that works across charts, science, spatial understanding, and open-ended tasks? The strongest vision-language models (VLMs) show such broad visual reasoning is within reach, but the recipe behind them remains unclear, locked behind proprietary reinforcement learning (RL) pipelines with non-public data. We introduce Vero, a family of fully open VLMs that matches or exceeds existing open-weight models across diverse visual reasoning tasks. We scale RL data and rewards across six broad task categories, constructing Vero-600K, a 600K-sample dataset from 59 datasets, and designing task-routed rewards that handle heterogeneous answer formats. Vero achieves state-of-the-art performance, improving over four base models by 3.7-5.5 points on average across VeroEval, our suite of 30 challenging benchmarks. Starting from Qwen3-VL-8B-Instruct, Vero outperforms Qwen3-VL-8B-Thinking on 23 of 30 benchmarks without additional proprietary thinking data. When trained from the same base model, Vero-600K exceeds existing RL datasets across task categories. Systematic ablations reveal that different task categories elicit qualitatively distinct reasoning patterns that transfer poorly in isolation, suggesting that broad data coverage is the primary driver of strong RL scaling. All data, code, and models are released.",
+                "summary": "Multimodal sentiment analysis (MSA) aims to predict human sentiment from textual, acoustic, and visual information in videos. Recent studies improve multimodal fusion by modeling modality interaction and assigning different modality weights. However, they usually compress diverse sentiment cues into a single compact representation before sentiment reasoning. This early aggregation makes it difficult to preserve the internal structure of sentiment evidence, where different cues may complement, conflict with, or differ in reliability from each other. In addition, modality importance is often determined only once during fusion, so later reasoning cannot further adjust modality contributions. To address these issues, we propose PRISM, a framework that unifies structured affective extraction and adaptive modality evaluation. PRISM organizes multimodal evidence in a shared prototype space, which supports structured cross-modal comparison and adaptive fusion. It further applies dynamic modality reweighting during reasoning, allowing modality contributions to be continuously refined as semantic interactions become deeper. Experiments on three benchmark datasets show that PRISM outperforms representative baselines.",
+                "category": {
+                    "@term": "cs.MM",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-07T13:31:52Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.MM"
+                },
+                "author": [
+                    {
+                        "name": "Chen Su"
+                    },
+                    {
+                        "name": "Yuanhe Tian"
+                    },
+                    {
+                        "name": "Yan Song"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.05872v1",
+                "title": "Swiss-Bench 003: Evaluating LLM Reliability and Adversarial Security for Swiss Regulatory Contexts",
+                "updated": "2026-04-07T13:29:34Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.05872v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.05872v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The deployment of large language models (LLMs) in Swiss financial and regulatory contexts demands empirical evidence of both production reliability and adversarial security, dimensions not jointly operationalized in existing Swiss-focused evaluation frameworks. This paper introduces Swiss-Bench 003 (SBP-003), extending the HAAS (Helvetic AI Assessment Score) from six to eight dimensions by adding D7 (Self-Graded Reliability Proxy) and D8 (Adversarial Security). I evaluate ten frontier models across 808 Swiss-specific items in four languages (German, French, Italian, English), comprising seven Swiss-adapted benchmarks (Swiss TruthfulQA, Swiss IFEval, Swiss SimpleQA, Swiss NIAH, Swiss PII-Scope, System Prompt Leakage, and Swiss German Comprehension) targeting FINMA Guidance 08/2024, the revised Federal Act on Data Protection (nDSG), and OWASP Top 10 for LLMs. Self-graded D7 scores (73-94%) exceed externally judged D8 security scores (20-61%) by a wide margin, though these dimensions use non-comparable scoring regimes. System prompt leakage resistance ranges from 24.8% to 88.2%, while PII extraction defense remains weak (14-42%) across all models. Qwen 3.5 Plus achieves the highest self-graded D7 score (94.4%), while GPT-oss 120B achieves the highest D8 score (60.7%) despite being the lowest-cost model evaluated. All evaluations are zero-shot under provider default settings; D7 is self-graded and does not constitute independently validated accuracy. I provide conceptual mapping tables relating benchmark dimensions to FINMA model validation requirements, nDSG data protection obligations, and OWASP LLM risk categories.",
                 "category": [
                     {
-                        "@term": "cs.CV",
+                        "@term": "cs.CR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -243,282 +416,62 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-06T17:56:25Z",
-                "arxiv:comment": "Project page: https://vero-reasoning.github.io/",
+                "published": "2026-04-07T13:29:34Z",
+                "arxiv:comment": "23 pages, 5 figures, 8 tables",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.CR"
                 },
-                "author": [
-                    {
-                        "name": "Gabriel Sarch"
-                    },
-                    {
-                        "name": "Linrong Cai"
-                    },
-                    {
-                        "name": "Qunzhong Wang"
-                    },
-                    {
-                        "name": "Haoyang Wu"
-                    },
-                    {
-                        "name": "Danqi Chen"
-                    },
-                    {
-                        "name": "Zhuang Liu"
-                    }
-                ]
+                "author": {
+                    "name": "Fatih Uenal"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2604.04916v1",
-                "title": "Empowering Power Outage Prediction with Spatially Aware Hybrid Graph Neural Networks and Contrastive Learning",
-                "updated": "2026-04-06T17:56:03Z",
+                "id": "http://arxiv.org/abs/2604.05863v1",
+                "title": "LoRM: Learning the Language of Rotating Machinery for Self-Supervised Condition Monitoring",
+                "updated": "2026-04-07T13:25:20Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.04916v1",
+                        "@href": "https://arxiv.org/abs/2604.05863v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.04916v1",
+                        "@href": "https://arxiv.org/pdf/2604.05863v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Extreme weather events, such as severe storms, hurricanes, snowstorms, and ice storms, which are exacerbated by climate change, frequently cause widespread power outages. These outages halt industrial operations, impact communities, damage critical infrastructure, profoundly disrupt economies, and have far-reaching effects across various sectors. To mitigate these effects, the University of Connecticut and Eversource Energy Center have developed an outage prediction modeling (OPM) system to provide pre-emptive forecasts for electric distribution networks before such weather events occur. However, existing predictive models in the system do not incorporate the spatial effect of extreme weather events. To this end, we develop Spatially Aware Hybrid Graph Neural Networks (SA-HGNN) with contrastive learning to enhance the OPM predictions for extreme weather-induced power outages. Specifically, we first encode spatial relationships of both static features (e.g., land cover, infrastructure) and event-specific dynamic features (e.g., wind speed, precipitation) via Spatially Aware Hybrid Graph Neural Networks (SA-HGNN). Next, we leverage contrastive learning to handle the imbalance problem associated with different types of extreme weather events and generate location-specific embeddings by minimizing intra-event distances between similar locations while maximizing inter-event distances across all locations. Thorough empirical studies in four utility service territories, i.e., Connecticut, Western Massachusetts, Eastern Massachusetts, and New Hampshire, demonstrate that SA-HGNN can achieve state-of-the-art performance for power outage prediction.",
+                "summary": "We present LoRM (Language of Rotating Machinery), a self-supervised framework for multi-modal rotating-machinery signal understanding and real-time condition monitoring. LoRM is built on the idea that rotating-machinery signals can be viewed as a machine language: local signals can be tokenised into discrete symbolic units, and their future evolution can be predicted from observed multi-sensor context. Unlike conventional signal-processing methods that rely on hand-crafted transforms and features, LoRM reformulates multi-modal sensor data as a token-based sequence-prediction problem. For each data window, the observed context segment is retained in continuous form, while the future target segment of each sensing channel is quantised into a discrete token. Then, efficient knowledge transfer is achieved by partially fine-tuning a general-purpose pre-trained language model on industrial signals, avoiding the need to train a large model from scratch. Finally, condition monitoring is performed by tracking token-prediction errors as a health indicator, where increasing errors indicate degradation. In-situ tool condition monitoring (TCM) experiments demonstrate stable real-time tracking and strong cross-tool generalisation, showing that LoRM provides a practical bridge between language modelling and industrial signal analysis. The source code is publicly available at https://github.com/Q159753258/LormPHM.",
                 "category": {
-                    "@term": "cs.LG",
+                    "@term": "cs.CL",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-06T17:56:03Z",
+                "published": "2026-04-07T13:25:20Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Xuyang Shen"
+                        "name": "Xiao Qin"
                     },
                     {
-                        "name": "Zijie Pan"
+                        "name": "Xingyi Song"
                     },
                     {
-                        "name": "Diego Cerrai"
+                        "name": "Tong Liu"
                     },
                     {
-                        "name": "Xinxuan Zhang"
+                        "name": "Hatim Laalej"
                     },
                     {
-                        "name": "Christopher Colorio"
+                        "name": "Zepeng Liu"
                     },
                     {
-                        "name": "Emmanouil N. Anagnostou"
+                        "name": "Yunpeng Zhu"
                     },
                     {
-                        "name": "Dongjin Song"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.04914v1",
-                "title": "Analyzing Symbolic Properties for DRL Agents in Systems and Networking",
-                "updated": "2026-04-06T17:55:15Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.04914v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.04914v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Deep reinforcement learning (DRL) has shown remarkable performance on complex control problems in systems and networking, including adaptive video streaming, wireless resource management, and congestion control. For safe deployment, however, it is critical to reason about how agents behave across the range of system states they encounter in practice. Existing verification-based methods in this domain primarily focus on point properties, defined around fixed input states, which offer limited coverage and require substantial manual effort to identify relevant input-output pairs for analysis. In this paper, we study symbolic properties, that specify expected behavior over ranges of input states, for DRL agents in systems and networking. We present a generic formulation for symbolic properties, with monotonicity and robustness as concrete examples, and show how they can be analyzed using existing DNN verification engines. Our approach encodes symbolic properties as comparisons between related executions of the same policy and decomposes them into practically tractable sub-properties. These techniques serve as practical enablers for applying existing verification tools to symbolic analysis. Using our framework, diffRL, we conduct an extensive empirical study across three DRL-based control systems, adaptive video streaming, wireless resource management, and congestion control. Through these case studies, we analyze symbolic properties over broad input ranges, examine how property satisfaction evolves during training, study the impact of model size on verifiability, and compare multiple verification backends. Our results show that symbolic properties provide substantially broader coverage than point properties and can uncover non-obvious, operationally meaningful counterexamples, while also revealing practical solver trade-offs and limitations.",
-                "category": [
-                    {
-                        "@term": "cs.NI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-06T17:55:15Z",
-                "arxiv:comment": "Accepted in ACM SIGMETRICS'26",
-                "arxiv:primary_category": {
-                    "@term": "cs.NI"
-                },
-                "author": [
-                    {
-                        "name": "Mohammad Zangooei"
-                    },
-                    {
-                        "name": "Jannis Weil"
-                    },
-                    {
-                        "name": "Amr Rizk"
-                    },
-                    {
-                        "name": "Mina Tahmasbi Arashloo"
-                    },
-                    {
-                        "name": "Raouf Boutaba"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.04908v1",
-                "title": "HI-MoE: Hierarchical Instance-Conditioned Mixture-of-Experts for Object Detection",
-                "updated": "2026-04-06T17:52:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.04908v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.04908v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Mixture-of-Experts (MoE) architectures enable conditional computation by activating only a subset of model parameters for each input. Although sparse routing has been highly effective in language models and has also shown promise in vision, most vision MoE methods operate at the image or patch level. This granularity is poorly aligned with object detection, where the fundamental unit of reasoning is an object query corresponding to a candidate instance. We propose Hierarchical Instance-Conditioned Mixture-of-Experts (HI-MoE), a DETR-style detection architecture that performs routing in two stages: a lightweight scene router first selects a scene-consistent expert subset, and an instance router then assigns each object query to a small number of experts within that subset. This design aims to preserve sparse computation while better matching the heterogeneous, instance-centric structure of detection. In the current draft, experiments are concentrated on COCO with preliminary specialization analysis on LVIS. Under these settings, HI-MoE improves over a dense DINO baseline and over simpler token-level or instance-only routing variants, with especially strong gains on small objects. We also provide an initial visualization of expert specialization patterns. We present the method, ablations, and current limitations in a form intended to support further experimental validation.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-06T17:52:58Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Vadim Vashkelis"
-                    },
-                    {
-                        "name": "Natalia Trukhina"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.04906v1",
-                "title": "How AI Aggregation Affects Knowledge",
-                "updated": "2026-04-06T17:51:34Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.04906v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.04906v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Artificial intelligence (AI) changes social learning when aggregated outputs become training data for future predictions. To study this, we extend the DeGroot model by introducing an AI aggregator that trains on population beliefs and feeds synthesized signals back to agents. We define the learning gap as the deviation of long-run beliefs from the efficient benchmark, allowing us to capture how AI aggregation affects learning. Our main result identifies a threshold in the speed of updating: when the aggregator updates too quickly, there is no positive-measure set of training weights that robustly improves learning across a broad class of environments, whereas such weights exist when updating is sufficiently slow. We then compare global and local architectures. Local aggregators trained on proximate or topic-specific data robustly improve learning in all environments. Consequently, replacing specialized local aggregators with a single global aggregator worsens learning in at least one dimension of the state.",
-                "category": [
-                    {
-                        "@term": "econ.TH",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-06T17:51:34Z",
-                "arxiv:comment": "45 pages",
-                "arxiv:primary_category": {
-                    "@term": "econ.TH"
-                },
-                "author": [
-                    {
-                        "name": "Daron Acemoglu"
-                    },
-                    {
-                        "name": "Tianyi Lin"
-                    },
-                    {
-                        "name": "Asuman Ozdaglar"
-                    },
-                    {
-                        "name": "James Siderius"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.04905v1",
-                "title": "ClickAIXR: On-Device Multimodal Vision-Language Interaction with Real-World Objects in Extended Reality",
-                "updated": "2026-04-06T17:50:47Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.04905v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.04905v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present ClickAIXR, a novel on-device framework for multimodal vision-language interaction with objects in extended reality (XR). Unlike prior systems that rely on cloud-based AI (e.g., ChatGPT) or gaze-based selection (e.g., GazePointAR), ClickAIXR integrates an on-device vision-language model (VLM) with a controller-based object selection paradigm, enabling users to precisely click on real-world objects in XR. Once selected, the object image is processed locally by the VLM to answer natural language questions through both text and speech. This object-centered interaction reduces ambiguity inherent in gaze- or voice-only interfaces and improves transparency by performing all inference on-device, addressing concerns around privacy and latency. We implemented ClickAIXR in the Magic Leap SDK (C API) with ONNX-based local VLM inference. We conducted a user study comparing ClickAIXR with Gemini 2.5 Flash and ChatGPT 5, evaluating usability, trust, and user satisfaction. Results show that latency is moderate and user experience is acceptable. Our findings demonstrate the potential of click-based object selection combined with on-device AI to advance trustworthy, privacy-preserving XR interactions. The source code and supplementary materials are available at: nanovis.org/ClickAIXR.html",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.HC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-06T17:50:47Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Dawar Khan"
-                    },
-                    {
-                        "name": "Alexandre Kouyoumdjian"
-                    },
-                    {
-                        "name": "Xinyu Liu"
-                    },
-                    {
-                        "name": "Omar Mena"
-                    },
-                    {
-                        "name": "Dominik Engel"
-                    },
-                    {
-                        "name": "Ivan Viola"
+                        "name": "Ligang He"
                     }
                 ]
             }
