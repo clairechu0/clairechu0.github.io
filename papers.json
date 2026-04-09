@@ -5,532 +5,479 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-08T22:33:09Z",
+        "updated": "2026-04-09T01:45:30Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "557715",
+        "opensearch:totalResults": "558119",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.06169v1",
-                "title": "In-Place Test-Time Training",
-                "updated": "2026-04-07T17:59:44Z",
+                "id": "http://arxiv.org/abs/2604.07258v1",
+                "title": "A comparative analysis of machine learning models in SHAP analysis",
+                "updated": "2026-04-08T16:22:28Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.06169v1",
+                        "@href": "https://arxiv.org/abs/2604.07258v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.06169v1",
+                        "@href": "https://arxiv.org/pdf/2604.07258v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The static ``train then deploy\" paradigm fundamentally limits Large Language Models (LLMs) from dynamically adapting their weights in response to continuous streams of new information inherent in real-world tasks. Test-Time Training (TTT) offers a compelling alternative by updating a subset of model parameters (fast weights) at inference time, yet its potential in the current LLM ecosystem is hindered by critical barriers including architectural incompatibility, computational inefficiency and misaligned fast weight objectives for language modeling. In this work, we introduce In-Place Test-Time Training (In-Place TTT), a framework that seamlessly endows LLMs with Test-Time Training ability. In-Place TTT treats the final projection matrix of the ubiquitous MLP blocks as its adaptable fast weights, enabling a ``drop-in\" enhancement for LLMs without costly retraining from scratch. Furthermore, we replace TTT's generic reconstruction objective with a tailored, theoretically-grounded objective explicitly aligned with the Next-Token-Prediction task governing autoregressive language modeling. This principled objective, combined with an efficient chunk-wise update mechanism, results in a highly scalable algorithm compatible with context parallelism. Extensive experiments validate our framework's effectiveness: as an in-place enhancement, it enables a 4B-parameter model to achieve superior performance on tasks with contexts up to 128k, and when pretrained from scratch, it consistently outperforms competitive TTT-related approaches. Ablation study results further provide deeper insights on our design choices. Collectively, our results establish In-Place TTT as a promising step towards a paradigm of continual learning in LLMs.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-07T17:59:44Z",
-                "arxiv:comment": "ICLR 2026 Oral Presentation; Code is released at https://github.com/ByteDance-Seed/In-Place-TTT",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Guhao Feng"
-                    },
-                    {
-                        "name": "Shengjie Luo"
-                    },
-                    {
-                        "name": "Kai Hua"
-                    },
-                    {
-                        "name": "Ge Zhang"
-                    },
-                    {
-                        "name": "Di He"
-                    },
-                    {
-                        "name": "Wenhao Huang"
-                    },
-                    {
-                        "name": "Tianle Cai"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.06168v1",
-                "title": "Action Images: End-to-End Policy Learning via Multiview Video Generation",
-                "updated": "2026-04-07T17:59:30Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.06168v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.06168v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "World action models (WAMs) have emerged as a promising direction for robot policy learning, as they can leverage powerful video backbones to model the future states. However, existing approaches often rely on separate action modules, or use action representations that are not pixel-grounded, making it difficult to fully exploit the pretrained knowledge of video models and limiting transfer across viewpoints and environments. In this work, we present Action Images, a unified world action model that formulates policy learning as multiview video generation. Instead of encoding control as low-dimensional tokens, we translate 7-DoF robot actions into interpretable action images: multi-view action videos that are grounded in 2D pixels and explicitly track robot-arm motion. This pixel-grounded action representation allows the video backbone itself to act as a zero-shot policy, without a separate policy head or action module. Beyond control, the same unified model supports video-action joint generation, action-conditioned video generation, and action labeling under a shared representation. On RLBench and real-world evaluations, our model achieves the strongest zero-shot success rates and improves video-action joint generation quality over prior video-space world models, suggesting that interpretable action images are a promising route to policy learning.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-07T17:59:30Z",
-                "arxiv:comment": "Project Page: https://actionimages.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Haoyu Zhen"
-                    },
-                    {
-                        "name": "Zixian Gao"
-                    },
-                    {
-                        "name": "Qiao Sun"
-                    },
-                    {
-                        "name": "Yilin Zhao"
-                    },
-                    {
-                        "name": "Yuncong Yang"
-                    },
-                    {
-                        "name": "Yilun Du"
-                    },
-                    {
-                        "name": "Tsun-Hsuan Wang"
-                    },
-                    {
-                        "name": "Yi-Ling Qiao"
-                    },
-                    {
-                        "name": "Chuang Gan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.06167v1",
-                "title": "Topological Characterization of Churn Flow and Unsupervised Correction to the Wu Flow-Regime Map in Small-Diameter Vertical Pipes",
-                "updated": "2026-04-07T17:59:15Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.06167v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.06167v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Churn flow-the chaotic, oscillatory regime in vertical two-phase flow-has lacked a quantitative mathematical definition for over $40$ years. We introduce the first topology-based characterization using Euler Characteristic Surfaces (ECS). We formulate unsupervised regime discovery as Multiple Kernel Learning (MKL), blending two complementary ECS-derived kernels-temporal alignment ($L^1$ distance on the $\u03c7(s,t)$ surface) and amplitude statistics (scale-wise mean, standard deviation, max, min)-with gas velocity. Applied to $37$ unlabeled air-water trials from Montana Tech, the self-calibrating framework learns weights $\u03b2_{ECS}=0.14$, $\u03b2_{amp}=0.50$, $\u03b2_{ugs}=0.36$, placing $64\\%$ of total weight on topology-derived features ($\u03b2_{ECS} + \u03b2_{amp}$). The ECS-inferred slug/churn transition lies $+3.81$ m/s above Wu et al.'s (2017) prediction in $2$-in. tubing, quantifying reports that existing models under-predict slug persistence in small-diameter pipes where interfacial tension and wall-to-wall interactions dominate flow. Cross-facility validation on $947$ Texas A&M University images confirms $1.9\\times$ higher topological complexity in churn vs. slug ($p < 10^{-5}$). Applied to $45$ TAMU pseudo-trials, the same unsupervised framework achieves $95.6\\%$ $4$-class accuracy and $100\\%$ churn recall-without any labeled training data-matching or exceeding supervised baselines that require thousands of annotated examples. This work provides the first mathematical definition of churn flow and demonstrates that unsupervised topological descriptors can challenge and correct widely adopted mechanistic models.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.AT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-07T17:59:15Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Brady Koenig"
-                    },
-                    {
-                        "name": "Sushovan Majhi"
-                    },
-                    {
-                        "name": "Atish Mitra"
-                    },
-                    {
-                        "name": "Abigail Stein"
-                    },
-                    {
-                        "name": "Burt Todd"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.06165v1",
-                "title": "HaloProbe: Bayesian Detection and Mitigation of Object Hallucinations in Vision-Language Models",
-                "updated": "2026-04-07T17:58:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.06165v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.06165v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large vision-language models can produce object hallucinations in image descriptions, highlighting the need for effective detection and mitigation strategies. Prior work commonly relies on the model's attention weights on visual tokens as a detection signal. We reveal that coarse-grained attention-based analysis is unreliable due to hidden confounders, specifically token position and object repetition in a description. This leads to Simpson's paradox: the attention trends reverse or disappear when statistics are aggregated. Based on this observation, we introduce HaloProbe, a Bayesian framework that factorizes external description statistics and internal decoding signals to estimate token-level hallucination probabilities. HaloProbe uses balanced training to isolate internal evidence and combines it with learned prior over external features to recover the true posterior. While intervention-based mitigation methods often degrade utility or fluency by modifying models' internals, we use HaloProbe as an external scoring signal for non-invasive mitigation. Our experiments show that HaloProbe-guided decoding reduces hallucinations more effectively than state-of-the-art intervention-based methods while preserving utility.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-07T17:58:04Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Reihaneh Zohrabi"
-                    },
-                    {
-                        "name": "Hosein Hasani"
-                    },
-                    {
-                        "name": "Akshita Gupta"
-                    },
-                    {
-                        "name": "Mahdieh Soleymani Baghshah"
-                    },
-                    {
-                        "name": "Anna Rohrbach"
-                    },
-                    {
-                        "name": "Marcus Rohrbach"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.06163v1",
-                "title": "Data, Not Model: Explaining Bias toward LLM Texts in Neural Retrievers",
-                "updated": "2026-04-07T17:57:07Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.06163v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.06163v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent studies show that neural retrievers often display source bias, favoring passages generated by LLMs over human-written ones, even when both are semantically similar. This bias has been considered an inherent flaw of retrievers, raising concerns about the fairness and reliability of modern information access systems. Our work challenges this view by showing that source bias stems from supervision in retrieval datasets rather than the models themselves. We found that non-semantic differences, like fluency and term specificity, exist between positive and negative documents, mirroring differences between LLM and human texts. In the embedding space, the bias direction from negatives to positives aligns with the direction from human-written to LLM-generated texts. We theoretically show that retrievers inevitably absorb the artifact imbalances in the training data during contrastive learning, which leads to their preferences over LLM texts. To mitigate the effect, we propose two approaches: 1) reducing artifact differences in training data and 2) adjusting LLM text vectors by removing their projection on the bias vector. Both methods substantially reduce source bias. We hope our study alleviates some concerns regarding LLM-generated texts in information access systems.",
-                "category": {
-                    "@term": "cs.IR",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-07T17:57:07Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.IR"
-                },
-                "author": [
-                    {
-                        "name": "Wei Huang"
-                    },
-                    {
-                        "name": "Keping Bi"
-                    },
-                    {
-                        "name": "Yinqiong Cai"
-                    },
-                    {
-                        "name": "Wei Chen"
-                    },
-                    {
-                        "name": "Jiafeng Guo"
-                    },
-                    {
-                        "name": "Xueqi Cheng"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.06160v1",
-                "title": "The Character Error Vector: Decomposable errors for page-level OCR evaluation",
-                "updated": "2026-04-07T17:56:06Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.06160v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.06160v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The Character Error Rate (CER) is a key metric for evaluating the quality of Optical Character Recognition (OCR). However, this metric assumes that text has been perfectly parsed, which is often not the case. Under page-parsing errors, CER becomes undefined, limiting its use as a metric and making evaluating page-level OCR challenging, particularly when using data that do not share a labelling schema. We introduce the Character Error Vector (CEV), a bag-of-characters evaluator for OCR. The CEV can be decomposed into parsing and OCR, and interaction error components. This decomposability allows practitioners to focus on the part of the Document Understanding pipeline that will have the greatest impact on overall text extraction quality. The CEV can be implemented using a variety of methods, of which we demonstrate SpACER (Spatially Aware Character Error Rate) and a Character distribution method using the Jensen-Shannon Distance. We validate the CEV's performance against other metrics: first, the relationship with CER; then, parse quality; and finally, as a direct measure of page-level OCR quality. The validation process shows that the CEV is a valuable bridge between parsing metrics and local metrics like CER. We analyse a dataset of archival newspapers made of degraded images with complex layouts and find that state-of-the-art end-to-end models are outperformed by more traditional pipeline approaches. Whilst the CEV requires character-level positioning for optimal triage, thresholding on easily available values can predict the main error source with an F1 of 0.91. We provide the CEV as part of a Python library to support Document understanding research.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-07T17:56:06Z",
-                "arxiv:comment": "6643 words, 5 figures, 15 tables",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Jonathan Bourne"
-                    },
-                    {
-                        "name": "Mwiza Simbeye"
-                    },
-                    {
-                        "name": "Joseph Nockels"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.06159v1",
-                "title": "Target Policy Optimization",
-                "updated": "2026-04-07T17:55:59Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.06159v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.06159v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In RL, given a prompt, we sample a group of completions from a model and score them. Two questions follow: which completions should gain probability mass, and how should the parameters move to realize that change? Standard policy-gradient methods answer both at once, so the update can overshoot or undershoot depending on the learning rate, clipping, and other optimizer choices. We introduce \\emph{Target Policy Optimization} (TPO), which separates the two questions. Given scored completions, TPO constructs a target distribution $q_i \\propto p_i^{\\,\\mathrm{old}} \\exp(u_i)$ and fits the policy to it by cross-entropy. The loss gradient on sampled-completion logits is $p^\u03b8- q$, which vanishes once the policy matches the target. On tabular bandits, transformer sequence tasks, and billion-parameter LLM RLVR, TPO matches PG, PPO, GRPO, and DG on easy tasks and substantially outperforms them under sparse reward. Code is available at https://github.com/JeanKaddour/tpo.",
+                "summary": "In this growing age of data and technology, large black-box models are becoming the norm due to their ability to handle vast amounts of data and learn incredibly complex data patterns. The deficiency of these methods, however, is their inability to explain the prediction process, making them untrustworthy and their use precarious in high-stakes situations. SHapley Additive exPlanations (SHAP) analysis is an explainable AI method growing in popularity for its ability to explain model predictions in terms of the original features. For each sample and feature in the data set, an associated SHAP value quantifies the contribution of that feature to the prediction of that sample. Analysis of these SHAP values provides valuable insight into the model's decision-making process, which can be leveraged to create data-driven solutions. The interpretation of these SHAP values, however, is model-dependent, so there does not exist a universal analysis procedure. To aid in these efforts, we present a detailed investigation of SHAP analysis across various machine learning models and data sets. In uncovering the details and nuance behind SHAP analysis, we hope to empower analysts in this less-explored territory. We also present a novel generalization of the waterfall plot to the multi-classification problem.",
                 "category": {
                     "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-07T17:55:59Z",
+                "published": "2026-04-08T16:22:28Z",
+                "arxiv:comment": "17 pages, 16 figures, 4 tables",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
-                "author": {
-                    "name": "Jean Kaddour"
-                }
+                "author": [
+                    {
+                        "name": "Justin Lin"
+                    },
+                    {
+                        "name": "Julia Fukuyama"
+                    }
+                ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.06156v1",
-                "title": "MMEmb-R1: Reasoning-Enhanced Multimodal Embedding with Pair-Aware Selection and Adaptive Control",
-                "updated": "2026-04-07T17:55:17Z",
+                "id": "http://arxiv.org/abs/2604.07254v1",
+                "title": "Non-identifiability of Explanations from Model Behavior in Deep Networks of Image Authenticity Judgments",
+                "updated": "2026-04-08T16:15:08Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.06156v1",
+                        "@href": "https://arxiv.org/abs/2604.07254v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.06156v1",
+                        "@href": "https://arxiv.org/pdf/2604.07254v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "MLLMs have been successfully applied to multimodal embedding tasks, yet their generative reasoning capabilities remain underutilized. Directly incorporating chain-of-thought reasoning into embedding learning introduces two fundamental challenges. First, structural misalignment between instance-level reasoning and pairwise contrastive supervision may lead to shortcut behavior, where the model merely learns the superficial format of reasoning. Second, reasoning is not universally beneficial for embedding tasks. Enforcing reasoning for all inputs may introduce unnecessary computation and latency, and can even obscure salient semantic signals for simple cases. To address these issues, we propose MMEmb-R1, an adaptive reasoning-based multimodal embedding framework. We formulate reasoning as a latent variable and introduce pair-aware reasoning selection that employs counterfactual intervention to identify reasoning paths beneficial for query-target alignment. Furthermore, we adopt reinforcement learning to selectively invoke reasoning only when necessary. Experiments on the MMEB-V2 benchmark demonstrate that our model achieves a score of 71.2 with only 4B parameters, establishing a new state-of-the-art while significantly reducing reasoning overhead and inference latency.",
+                "summary": "Deep neural networks can predict human judgments, but this does not imply that they rely on human-like information or reveal the cues underlying those judgments. Prior work has addressed this issue using attribution heatmaps, but their explanatory value in itself depends on robustness. Here we tested the robustness of such explanations by evaluating whether models that predict human authenticity ratings also produce consistent explanations within and across architectures. We fit lightweight regression heads to multiple frozen pretrained vision models and generated attribution maps using Grad-CAM, LIME, and multiscale pixel masking. Several architectures predicted ratings well, reaching about 80% of the noise ceiling. VGG models achieved this by tracking image quality rather than authenticity-specific variance, limiting the relevance of their attributions. Among the remaining models, attribution maps were generally stable across random seeds within an architecture, especially for EfficientNetB3 and Barlow Twins, and consistency was higher for images judged as more authentic. Crucially, agreement in attribution across architectures was weak even when predictive performance was similar. To address this, we combined models in ensembles, which improved prediction of human authenticity judgments and enabled image-level attribution via pixel masking. We conclude that while deep networks can predict human authenticity judgments well, they do not produce identifiable explanations for those judgments. More broadly, our findings suggest that post hoc explanations from successful models of behavior should be treated as weak evidence for cognitive mechanism.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-07T17:55:17Z",
+                "published": "2026-04-08T16:15:08Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Yuchi Wang"
+                        "name": "Icaro Re Depaolini"
                     },
                     {
-                        "name": "Haiyang Yu"
-                    },
-                    {
-                        "name": "Weikang Bian"
-                    },
-                    {
-                        "name": "Jiefeng Long"
-                    },
-                    {
-                        "name": "Xiao Liang"
-                    },
-                    {
-                        "name": "Chao Feng"
-                    },
-                    {
-                        "name": "Hongsheng Li"
+                        "name": "Uri Hasson"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.06155v1",
-                "title": "Toward Consistent World Models with Multi-Token Prediction and Latent Semantic Enhancement",
-                "updated": "2026-04-07T17:54:22Z",
+                "id": "http://arxiv.org/abs/2604.07253v1",
+                "title": "Designing Safe and Accountable GenAI as a Learning Companion with Women Banned from Formal Education",
+                "updated": "2026-04-08T16:14:26Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.06155v1",
+                        "@href": "https://arxiv.org/abs/2604.07253v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.06155v1",
+                        "@href": "https://arxiv.org/pdf/2604.07253v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    },
+                    {
+                        "@rel": "related",
+                        "@href": "https://doi.org/10.1145/3805689.3806466.",
+                        "@title": "doi"
+                    }
+                ],
+                "summary": "In gender-restrictive and surveilled contexts, where access to formal education may be restricted for women, pursuing education involves safety and privacy risks. When women are excluded from schools and universities, they often turn to online self-learning and generative AI (GenAI) to pursue their educational and career aspirations. However, we know little about what safe and accountable GenAI support is required in the context of surveillance, household responsibilities, and the absence of learning communities. We present a remote participatory design study with 20 women in Afghanistan, informed by a recruitment survey (n = 140), examining how participants envision GenAI for learning and employability. Participants describe using GenAI less as an information source and more as an always-available peer, mentor, and source of career guidance that helps compensate for the absence of learning communities. At the same time, they emphasize that this companionship is constrained by privacy and surveillance risks, contextually unrealistic and culturally unsafe support, and direct-answer interactions that can undermine learning by creating an illusion of progress. Beyond eliciting requirements, envisioning the future with GenAI through participatory design was positively associated with significant increases in participants' aspirations (p=.01), perceived agency (p=.01), and perceived avenues (p=.03). These outcomes show that accountable and safe GenAI is not only about harm reduction but can also actively enable women to imagine and pursue viable learning and employment futures. Building on this, we translate participants' proposals into accountability-focused design directions that center on safety-first interaction and user control, context-grounded support under constrained resources, and offer pedagogically aligned assistance that supports genuine learning rather than quick answers.",
+                "category": [
+                    {
+                        "@term": "cs.CY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-08T16:14:26Z",
+                "arxiv:comment": "This work has been accepted at ACM Conference on Fairness, Accountability, and Transparency 2026 as a full paper. Please cite the peer-reviewed version",
+                "arxiv:primary_category": {
+                    "@term": "cs.CY"
+                },
+                "author": [
+                    {
+                        "name": "Hamayoon Behmanush"
+                    },
+                    {
+                        "name": "Freshta Akhtari"
+                    },
+                    {
+                        "name": "Ingmar Weber"
+                    },
+                    {
+                        "name": "Vikram Kamath Cannanure"
+                    }
+                ],
+                "arxiv:doi": "10.1145/3805689.3806466."
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07250v1",
+                "title": "Geo-EVS: Geometry-Conditioned Extrapolative View Synthesis for Autonomous Driving",
+                "updated": "2026-04-08T16:13:10Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07250v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07250v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Whether Large Language Models (LLMs) develop coherent internal world models remains a core debate. While conventional Next-Token Prediction (NTP) focuses on one-step-ahead supervision, Multi-Token Prediction (MTP) has shown promise in learning more structured representations. In this work, we provide a theoretical perspective analyzing the gradient inductive bias of MTP, supported by empirical evidence, showing that MTP promotes the convergence toward internal belief states by inducing representational contractivity via gradient coupling. However, we reveal that standard MTP often suffers from structural hallucinations, where discrete token supervision encourages illegal shortcuts in latent space that violate environmental constraints. To address this, we propose a novel method Latent Semantic Enhancement MTP (LSE-MTP), which anchors predictions to ground-truth hidden state trajectories. Experiments on synthetic graphs and real-world Manhattan Taxi Ride show that LSE-MTP effectively bridges the gap between discrete tokens and continuous state representations, enhancing representation alignment, reducing structural hallucinations, and improving robustness to perturbations.",
+                "summary": "Extrapolative novel view synthesis can reduce camera-rig dependency in autonomous driving by generating standardized virtual views from heterogeneous sensors. Existing methods degrade outside recorded trajectories because extrapolated poses provide weak geometric support and no dense target-view supervision. The key is to explicitly expose the model to out-of-trajectory condition defects during training. We propose Geo-EVS, a geometry-conditioned framework under sparse supervision. Geo-EVS has two components. Geometry-Aware Reprojection (GAR) uses fine-tuned VGGT to reconstruct colored point clouds and reproject them to observed and virtual target poses, producing geometric condition maps. This design unifies the reprojection path between training and inference. Artifact-Guided Latent Diffusion (AGLD) injects reprojection-derived artifact masks during training so the model learns to recover structure under missing support. For evaluation, we use a LiDAR-Projected Sparse-Reference (LPSR) protocol when dense extrapolated-view ground truth is unavailable. On Waymo, Geo-EVS improves sparse-view synthesis quality and geometric accuracy, especially in high-angle and low-coverage settings. It also improves downstream 3D detection.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-08T16:13:10Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yatong Lan"
+                    },
+                    {
+                        "name": "Rongkui Tang"
+                    },
+                    {
+                        "name": "Lei He"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07248v1",
+                "title": "TurPy: a physics-based and differentiable optical turbulence simulator for algorithmic development and system optimization",
+                "updated": "2026-04-08T16:12:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07248v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07248v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Developing optical systems for free-space applications requires simulation tools that accurately capture turbulence-induced wavefront distortions and support gradient-based optimization. Here we introduce TurPy, a GPU-accelerated, fully differentiable wave optics turbulence simulator to bridge high fidelity simulation with end-to-end optical system design. TurPy incorporates subharmonic phase screen generation, autoregressive temporal evolution, and an automated screen placement routine balancing Fourier aliasing constraints and weak-turbulence approximations into a unified, user-ready framework. Because TurPy's phase screen generation is parameterized through a media-specific power spectral density, the framework extends to atmospheric, oceanic, and biological propagation environments with minimal modification. We validate TurPy against established atmospheric turbulence theory by matching 2nd order Gaussian beam broadening and 4th order plane wave scintillation to closed-form models with 98% accuracy across weak to strong turbulence regimes, requiring only the medium's refractive index structure constant and power spectral density as inputs. To demonstrate TurPy as a gradient-based training platform, we optimize a dual-domain diffractive deep neural network (D2NN) in a two-mask dual-domain architecture to recover a Gaussian beam from a weakly turbulent path and achieving over 20x reduction in scintillation relative to an uncompensated receiver in simulation. TurPy is released as an open-source package to support synthetic data generation, turbulence-informed algorithm development, and the end-to-end design of optical platforms operating in turbulent environments.",
+                "category": [
+                    {
+                        "@term": "physics.optics",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-08T16:12:02Z",
+                "arxiv:comment": "19 pages, 7 figures, 1 table. Presented at 2026 SPIE DS Synthetic Data for Artificial Intelligence and Machine Learning: Tools, Techniques, and Applications IV",
+                "arxiv:primary_category": {
+                    "@term": "physics.optics"
+                },
+                "author": [
+                    {
+                        "name": "Joseph L. Greene"
+                    },
+                    {
+                        "name": "Alfred Moore"
+                    },
+                    {
+                        "name": "Iris Ochoa"
+                    },
+                    {
+                        "name": "Emily Kwan"
+                    },
+                    {
+                        "name": "Patrick Marano"
+                    },
+                    {
+                        "name": "Christopher R. Valenta"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07242v1",
+                "title": "Weaves, Wires, and Morphisms: Formalizing and Implementing the Algebra of Deep Learning",
+                "updated": "2026-04-08T16:07:15Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07242v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07242v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Despite deep learning models running well-defined mathematical functions, we lack a formal mathematical framework for describing model architectures. Ad-hoc notation, diagrams, and pseudocode poorly handle nonlinear broadcasting and the relationship between individual components and composed models. This paper introduces a categorical framework for deep learning models that formalizes broadcasting through the novel axis-stride and array-broadcasted categories. This allows the mathematical function underlying architectures to be precisely expressed and manipulated in a compositional manner. These mathematical definitions are translated into human manageable diagrams and machine manageable data structures. We provide a mirrored implementation in Python (pyncd) and TypeScript (tsncd) to show the universal aspect of our framework, along with features including algebraic construction, graph conversion, PyTorch compilation and diagram rendering. This lays the foundation for a systematic, formal approach to deep learning model design and analysis.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
+                        "@term": "math.CT",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-07T17:54:22Z",
-                "arxiv:comment": "ACL 2026 Main Conference",
+                "published": "2026-04-08T16:07:15Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Qimin Zhong"
+                        "name": "Vincent Abbott"
                     },
                     {
-                        "name": "Hao Liao"
-                    },
-                    {
-                        "name": "Haiming Qin"
-                    },
-                    {
-                        "name": "Mingyang Zhou"
-                    },
-                    {
-                        "name": "Rui Mao"
-                    },
-                    {
-                        "name": "Wei Chen"
-                    },
-                    {
-                        "name": "Naipeng Chao"
+                        "name": "Gioele Zardini"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.06154v1",
-                "title": "Exclusive Unlearning",
-                "updated": "2026-04-07T17:54:11Z",
+                "id": "http://arxiv.org/abs/2604.07240v1",
+                "title": "$k$-server-bench: Automating Potential Discovery for the $k$-Server Conjecture",
+                "updated": "2026-04-08T16:06:43Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.06154v1",
+                        "@href": "https://arxiv.org/abs/2604.07240v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.06154v1",
+                        "@href": "https://arxiv.org/pdf/2604.07240v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "When introducing Large Language Models (LLMs) into industrial applications, such as healthcare and education, the risk of generating harmful content becomes a significant challenge. While existing machine unlearning methods can erase specific harmful knowledge and expressions, diverse harmful content makes comprehensive removal difficult. In this study, instead of individually listing targets for forgetting, we propose Exclusive Unlearning (EU), which aims for broad harm removal by extensively forgetting everything except for the knowledge and expressions we wish to retain. We demonstrate that through Exclusive Unlearning, it is possible to obtain a model that ensures safety against a wide range of inputs, including jailbreaks, while maintaining the ability to respond to diverse instructions related to specific domains such as medicine and mathematics.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
+                "summary": "We introduce a code-based challenge for automated, open-ended mathematical discovery based on the $k$-server conjecture, a central open problem in competitive analysis. The task is to discover a potential function satisfying a large graph-structured system of simple linear inequalities. The resulting evaluation procedure is sound but incomplete: any violated inequality definitively refutes a candidate, whereas satisfying all inequalities does not by itself constitute a proof of the corresponding conjecture's special case. Nevertheless, a candidate that passes all constraints would be strong evidence toward a valid proof and, to the best of our knowledge, no currently known potential achieves this under our formulation in the open $k=4$ circle case. As such, a successful candidate would already be an interesting contribution to the $k$-server conjecture, and could become a substantial theoretical result when paired with a full proof.\n  Experiments on the resolved $k=3$ regime show that current agentic methods can solve nontrivial instances, and in the open $k=4$ regime they reduce the number of violations relative to existing potentials without fully resolving the task. Taken together, these results suggest that the task is challenging but plausibly within reach of current methods.\n  Beyond its relevance to the $k$-server community, where the developed tooling enables researchers to test new hypotheses and potentially improve on the current record, the task also serves as a useful \\emph{benchmark} for developing code-based discovery agents. In particular, our $k=3$ results show that it mitigates important limitations of existing open-ended code-based benchmarks, including early saturation and the weak separation between naive random baselines and more sophisticated methods.",
+                "category": [
+                    {
+                        "@term": "cs.MS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-08T16:06:43Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.MS"
                 },
-                "published": "2026-04-07T17:54:11Z",
+                "author": [
+                    {
+                        "name": "Kirill Brilliantov"
+                    },
+                    {
+                        "name": "Etienne Bamas"
+                    },
+                    {
+                        "name": "Emmanuel Abb\u00e9"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07239v1",
+                "title": "Efficient Learned Data Compression via Dual-Stream Feature Decoupling",
+                "updated": "2026-04-08T16:05:24Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07239v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07239v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "While Learned Data Compression (LDC) has achieved superior compression ratios, balancing precise probability modeling with system efficiency remains challenging. Crucially, uniform single-stream architectures struggle to simultaneously capture micro-syntactic and macro-semantic features, necessitating deep serial stacking that exacerbates latency. Compounding this, heterogeneous systems are constrained by device speed mismatches, where throughput is capped by Amdahl's Law due to serial processing. To this end, we propose a Dual-Stream Multi-Scale Decoupler that disentangles local and global contexts to replace deep serial processing with shallow parallel streams, and incorporate a Hierarchical Gated Refiner for adaptive feature refinement and precise probability modeling. Furthermore, we design a Concurrent Stream-Parallel Pipeline, which overcomes systemic bottlenecks to achieve full-pipeline parallelism. Extensive experiments demonstrate that our method achieves state-of-the-art performance in both compression ratio and throughput, while maintaining the lowest latency and memory usage. The code is available at https://github.com/huidong-ma/FADE.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-08T16:05:24Z",
+                "arxiv:comment": "Accepted to ACL 2026",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Mutsumi Sasaki"
+                        "name": "Huidong Ma"
                     },
                     {
-                        "name": "Kouta Nakayama"
+                        "name": "Xinyan Shi"
                     },
                     {
-                        "name": "Yusuke Miyao"
+                        "name": "Hui Sun"
                     },
                     {
-                        "name": "Yohei Oseki"
+                        "name": "Xiaofei Yue"
                     },
                     {
-                        "name": "Masaru Isonuma"
+                        "name": "Xiaoguang Liu"
+                    },
+                    {
+                        "name": "Gang Wang"
+                    },
+                    {
+                        "name": "Wentong Cai"
                     }
                 ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07238v1",
+                "title": "On the Price of Privacy for Language Identification and Generation",
+                "updated": "2026-04-08T16:04:16Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07238v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07238v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "As large language models (LLMs) are increasingly trained on sensitive user data, understanding the fundamental cost of privacy in language learning becomes essential. We initiate the study of differentially private (DP) language identification and generation in the agnostic statistical setting, establishing algorithms and matching lower bounds that precisely quantify the cost of privacy. For both tasks, approximate $(\\varepsilon, \u03b4)$-DP with constant $\\varepsilon > 0$ recovers the non-private error rates: $\\exp(-r(n))$ for identification (for any $r(n) = o(n)$) and $\\exp(-\u03a9(n))$ for generation. Under pure $\\varepsilon$-DP, the exponents degrade by a multiplicative factor of $\\min\\{1, \\varepsilon\\}$, which we show is tight up to constants. Notably, for generation under pure DP with mild assumptions, the upper bound $\\exp(-\\min\\{1,\\varepsilon\\} \\cdot \u03a9(n))$ matches the lower bound up to some constants, establishing an optimal rate. Our results show that the cost of privacy in language learning is surprisingly mild: absent entirely under approximate DP, and exactly a $\\min\\{1,\\varepsilon\\}$ factor in the exponent under pure DP.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.DS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-08T16:04:16Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Xiaoyu Li"
+                    },
+                    {
+                        "name": "Andi Han"
+                    },
+                    {
+                        "name": "Jiaojiao Jiang"
+                    },
+                    {
+                        "name": "Junbin Gao"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07233v1",
+                "title": "How Does Machine Learning Manage Complexity?",
+                "updated": "2026-04-08T15:57:24Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07233v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07233v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We provide a computational complexity lens to understand the power of machine learning models, particularly their ability to model complex systems.\n  Machine learning models are often trained on data drawn from sampleable or more complex distributions, a far wider range of distributions than just computable ones. By focusing on computable distributions, machine learning models can better manage complexity via probability. We abstract away from specific learning mechanisms, modeling machine learning as producing P/poly-computable distributions with polynomially-bounded max-entropy.\n  We illustrate how learning computable distributions models complexity by showing that if a machine learning model produces a distribution $\u03bc$ that minimizes error against the distribution generated by a cryptographic pseudorandom generator, then $\u03bc$ must be close to uniform.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-08T15:57:24Z",
+                "arxiv:comment": "16 pages, no figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Lance Fortnow"
+                }
             }
         ]
     }
