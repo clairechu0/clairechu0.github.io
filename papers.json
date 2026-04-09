@@ -5,72 +5,40 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-09T01:45:30Z",
+        "updated": "2026-04-09T04:29:04Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "558119",
+        "opensearch:totalResults": "558149",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.07258v1",
-                "title": "A comparative analysis of machine learning models in SHAP analysis",
-                "updated": "2026-04-08T16:22:28Z",
+                "id": "http://arxiv.org/abs/2604.07350v1",
+                "title": "Fast Spatial Memory with Elastic Test-Time Training",
+                "updated": "2026-04-08T17:59:48Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.07258v1",
+                        "@href": "https://arxiv.org/abs/2604.07350v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.07258v1",
+                        "@href": "https://arxiv.org/pdf/2604.07350v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "In this growing age of data and technology, large black-box models are becoming the norm due to their ability to handle vast amounts of data and learn incredibly complex data patterns. The deficiency of these methods, however, is their inability to explain the prediction process, making them untrustworthy and their use precarious in high-stakes situations. SHapley Additive exPlanations (SHAP) analysis is an explainable AI method growing in popularity for its ability to explain model predictions in terms of the original features. For each sample and feature in the data set, an associated SHAP value quantifies the contribution of that feature to the prediction of that sample. Analysis of these SHAP values provides valuable insight into the model's decision-making process, which can be leveraged to create data-driven solutions. The interpretation of these SHAP values, however, is model-dependent, so there does not exist a universal analysis procedure. To aid in these efforts, we present a detailed investigation of SHAP analysis across various machine learning models and data sets. In uncovering the details and nuance behind SHAP analysis, we hope to empower analysts in this less-explored territory. We also present a novel generalization of the waterfall plot to the multi-classification problem.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-08T16:22:28Z",
-                "arxiv:comment": "17 pages, 16 figures, 4 tables",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Justin Lin"
-                    },
-                    {
-                        "name": "Julia Fukuyama"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07254v1",
-                "title": "Non-identifiability of Explanations from Model Behavior in Deep Networks of Image Authenticity Judgments",
-                "updated": "2026-04-08T16:15:08Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07254v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07254v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Deep neural networks can predict human judgments, but this does not imply that they rely on human-like information or reveal the cues underlying those judgments. Prior work has addressed this issue using attribution heatmaps, but their explanatory value in itself depends on robustness. Here we tested the robustness of such explanations by evaluating whether models that predict human authenticity ratings also produce consistent explanations within and across architectures. We fit lightweight regression heads to multiple frozen pretrained vision models and generated attribution maps using Grad-CAM, LIME, and multiscale pixel masking. Several architectures predicted ratings well, reaching about 80% of the noise ceiling. VGG models achieved this by tracking image quality rather than authenticity-specific variance, limiting the relevance of their attributions. Among the remaining models, attribution maps were generally stable across random seeds within an architecture, especially for EfficientNetB3 and Barlow Twins, and consistency was higher for images judged as more authentic. Crucially, agreement in attribution across architectures was weak even when predictive performance was similar. To address this, we combined models in ensembles, which improved prediction of human authenticity judgments and enabled image-level attribution via pixel masking. We conclude that while deep networks can predict human authenticity judgments well, they do not produce identifiable explanations for those judgments. More broadly, our findings suggest that post hoc explanations from successful models of behavior should be treated as weak evidence for cognitive mechanism.",
+                "summary": "Large Chunk Test-Time Training (LaCT) has shown strong performance on long-context 3D reconstruction, but its fully plastic inference-time updates remain vulnerable to catastrophic forgetting and overfitting. As a result, LaCT is typically instantiated with a single large chunk spanning the full input sequence, falling short of the broader goal of handling arbitrarily long sequences in a single pass. We propose Elastic Test-Time Training inspired by elastic weight consolidation, that stabilizes LaCT fast-weight updates with a Fisher-weighted elastic prior around a maintained anchor state. The anchor evolves as an exponential moving average of past fast weights to balance stability and plasticity. Based on this updated architecture, we introduce Fast Spatial Memory (FSM), an efficient and scalable model for 4D reconstruction that learns spatiotemporal representations from long observation sequences and renders novel view-time combinations. We pre-trained FSM on large-scale curated 3D/4D data to capture the dynamics and semantics of complex spatial environments. Extensive experiments show that FSM supports fast adaptation over long sequences and delivers high-quality 3D/4D reconstruction with smaller chunks and mitigating the camera-interpolation shortcut. Overall, we hope to advance LaCT beyond the bounded single-chunk setting toward robust multi-chunk adaptation, a necessary step for generalization to genuinely longer sequences, while substantially alleviating the activation-memory bottleneck.",
                 "category": [
                     {
                         "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.GR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -78,227 +46,53 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-08T16:15:08Z",
+                "published": "2026-04-08T17:59:48Z",
+                "arxiv:comment": "Project Page: https://fast-spatial-memory.github.io/",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Icaro Re Depaolini"
+                        "name": "Ziqiao Ma"
                     },
                     {
-                        "name": "Uri Hasson"
+                        "name": "Xueyang Yu"
+                    },
+                    {
+                        "name": "Haoyu Zhen"
+                    },
+                    {
+                        "name": "Yuncong Yang"
+                    },
+                    {
+                        "name": "Joyce Chai"
+                    },
+                    {
+                        "name": "Chuang Gan"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.07253v1",
-                "title": "Designing Safe and Accountable GenAI as a Learning Companion with Women Banned from Formal Education",
-                "updated": "2026-04-08T16:14:26Z",
+                "id": "http://arxiv.org/abs/2604.07348v1",
+                "title": "MoRight: Motion Control Done Right",
+                "updated": "2026-04-08T17:59:22Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.07253v1",
+                        "@href": "https://arxiv.org/abs/2604.07348v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.07253v1",
+                        "@href": "https://arxiv.org/pdf/2604.07348v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
-                    },
-                    {
-                        "@rel": "related",
-                        "@href": "https://doi.org/10.1145/3805689.3806466.",
-                        "@title": "doi"
                     }
                 ],
-                "summary": "In gender-restrictive and surveilled contexts, where access to formal education may be restricted for women, pursuing education involves safety and privacy risks. When women are excluded from schools and universities, they often turn to online self-learning and generative AI (GenAI) to pursue their educational and career aspirations. However, we know little about what safe and accountable GenAI support is required in the context of surveillance, household responsibilities, and the absence of learning communities. We present a remote participatory design study with 20 women in Afghanistan, informed by a recruitment survey (n = 140), examining how participants envision GenAI for learning and employability. Participants describe using GenAI less as an information source and more as an always-available peer, mentor, and source of career guidance that helps compensate for the absence of learning communities. At the same time, they emphasize that this companionship is constrained by privacy and surveillance risks, contextually unrealistic and culturally unsafe support, and direct-answer interactions that can undermine learning by creating an illusion of progress. Beyond eliciting requirements, envisioning the future with GenAI through participatory design was positively associated with significant increases in participants' aspirations (p=.01), perceived agency (p=.01), and perceived avenues (p=.03). These outcomes show that accountable and safe GenAI is not only about harm reduction but can also actively enable women to imagine and pursue viable learning and employment futures. Building on this, we translate participants' proposals into accountability-focused design directions that center on safety-first interaction and user control, context-grounded support under constrained resources, and offer pedagogically aligned assistance that supports genuine learning rather than quick answers.",
+                "summary": "Generating motion-controlled videos--where user-specified actions drive physically plausible scene dynamics under freely chosen viewpoints--demands two capabilities: (1) disentangled motion control, allowing users to separately control the object motion and adjust camera viewpoint; and (2) motion causality, ensuring that user-driven actions trigger coherent reactions from other objects rather than merely displacing pixels. Existing methods fall short on both fronts: they entangle camera and object motion into a single tracking signal and treat motion as kinematic displacement without modeling causal relationships between object motion. We introduce MoRight, a unified framework that addresses both limitations through disentangled motion modeling. Object motion is specified in a canonical static-view and transferred to an arbitrary target camera viewpoint via temporal cross-view attention, enabling disentangled camera and object control. We further decompose motion into active (user-driven) and passive (consequence) components, training the model to learn motion causality from data. At inference, users can either supply active motion and MoRight predicts consequences (forward reasoning), or specify desired passive outcomes and MoRight recovers plausible driving actions (inverse reasoning), all while freely adjusting the camera viewpoint. Experiments on three benchmarks demonstrate state-of-the-art performance in generation quality, motion controllability, and interaction awareness.",
                 "category": [
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-08T16:14:26Z",
-                "arxiv:comment": "This work has been accepted at ACM Conference on Fairness, Accountability, and Transparency 2026 as a full paper. Please cite the peer-reviewed version",
-                "arxiv:primary_category": {
-                    "@term": "cs.CY"
-                },
-                "author": [
-                    {
-                        "name": "Hamayoon Behmanush"
-                    },
-                    {
-                        "name": "Freshta Akhtari"
-                    },
-                    {
-                        "name": "Ingmar Weber"
-                    },
-                    {
-                        "name": "Vikram Kamath Cannanure"
-                    }
-                ],
-                "arxiv:doi": "10.1145/3805689.3806466."
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07250v1",
-                "title": "Geo-EVS: Geometry-Conditioned Extrapolative View Synthesis for Autonomous Driving",
-                "updated": "2026-04-08T16:13:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07250v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07250v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Extrapolative novel view synthesis can reduce camera-rig dependency in autonomous driving by generating standardized virtual views from heterogeneous sensors. Existing methods degrade outside recorded trajectories because extrapolated poses provide weak geometric support and no dense target-view supervision. The key is to explicitly expose the model to out-of-trajectory condition defects during training. We propose Geo-EVS, a geometry-conditioned framework under sparse supervision. Geo-EVS has two components. Geometry-Aware Reprojection (GAR) uses fine-tuned VGGT to reconstruct colored point clouds and reproject them to observed and virtual target poses, producing geometric condition maps. This design unifies the reprojection path between training and inference. Artifact-Guided Latent Diffusion (AGLD) injects reprojection-derived artifact masks during training so the model learns to recover structure under missing support. For evaluation, we use a LiDAR-Projected Sparse-Reference (LPSR) protocol when dense extrapolated-view ground truth is unavailable. On Waymo, Geo-EVS improves sparse-view synthesis quality and geometric accuracy, especially in high-angle and low-coverage settings. It also improves downstream 3D detection.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-08T16:13:10Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yatong Lan"
-                    },
-                    {
-                        "name": "Rongkui Tang"
-                    },
-                    {
-                        "name": "Lei He"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07248v1",
-                "title": "TurPy: a physics-based and differentiable optical turbulence simulator for algorithmic development and system optimization",
-                "updated": "2026-04-08T16:12:02Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07248v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07248v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Developing optical systems for free-space applications requires simulation tools that accurately capture turbulence-induced wavefront distortions and support gradient-based optimization. Here we introduce TurPy, a GPU-accelerated, fully differentiable wave optics turbulence simulator to bridge high fidelity simulation with end-to-end optical system design. TurPy incorporates subharmonic phase screen generation, autoregressive temporal evolution, and an automated screen placement routine balancing Fourier aliasing constraints and weak-turbulence approximations into a unified, user-ready framework. Because TurPy's phase screen generation is parameterized through a media-specific power spectral density, the framework extends to atmospheric, oceanic, and biological propagation environments with minimal modification. We validate TurPy against established atmospheric turbulence theory by matching 2nd order Gaussian beam broadening and 4th order plane wave scintillation to closed-form models with 98% accuracy across weak to strong turbulence regimes, requiring only the medium's refractive index structure constant and power spectral density as inputs. To demonstrate TurPy as a gradient-based training platform, we optimize a dual-domain diffractive deep neural network (D2NN) in a two-mask dual-domain architecture to recover a Gaussian beam from a weakly turbulent path and achieving over 20x reduction in scintillation relative to an uncompensated receiver in simulation. TurPy is released as an open-source package to support synthetic data generation, turbulence-informed algorithm development, and the end-to-end design of optical platforms operating in turbulent environments.",
-                "category": [
-                    {
-                        "@term": "physics.optics",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-08T16:12:02Z",
-                "arxiv:comment": "19 pages, 7 figures, 1 table. Presented at 2026 SPIE DS Synthetic Data for Artificial Intelligence and Machine Learning: Tools, Techniques, and Applications IV",
-                "arxiv:primary_category": {
-                    "@term": "physics.optics"
-                },
-                "author": [
-                    {
-                        "name": "Joseph L. Greene"
-                    },
-                    {
-                        "name": "Alfred Moore"
-                    },
-                    {
-                        "name": "Iris Ochoa"
-                    },
-                    {
-                        "name": "Emily Kwan"
-                    },
-                    {
-                        "name": "Patrick Marano"
-                    },
-                    {
-                        "name": "Christopher R. Valenta"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07242v1",
-                "title": "Weaves, Wires, and Morphisms: Formalizing and Implementing the Algebra of Deep Learning",
-                "updated": "2026-04-08T16:07:15Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07242v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07242v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Despite deep learning models running well-defined mathematical functions, we lack a formal mathematical framework for describing model architectures. Ad-hoc notation, diagrams, and pseudocode poorly handle nonlinear broadcasting and the relationship between individual components and composed models. This paper introduces a categorical framework for deep learning models that formalizes broadcasting through the novel axis-stride and array-broadcasted categories. This allows the mathematical function underlying architectures to be precisely expressed and manipulated in a compositional manner. These mathematical definitions are translated into human manageable diagrams and machine manageable data structures. We provide a mirrored implementation in Python (pyncd) and TypeScript (tsncd) to show the universal aspect of our framework, along with features including algebraic construction, graph conversion, PyTorch compilation and diagram rendering. This lays the foundation for a systematic, formal approach to deep learning model design and analysis.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.CT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-08T16:07:15Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Vincent Abbott"
-                    },
-                    {
-                        "name": "Gioele Zardini"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07240v1",
-                "title": "$k$-server-bench: Automating Potential Discovery for the $k$-Server Conjecture",
-                "updated": "2026-04-08T16:06:43Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07240v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07240v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We introduce a code-based challenge for automated, open-ended mathematical discovery based on the $k$-server conjecture, a central open problem in competitive analysis. The task is to discover a potential function satisfying a large graph-structured system of simple linear inequalities. The resulting evaluation procedure is sound but incomplete: any violated inequality definitively refutes a candidate, whereas satisfying all inequalities does not by itself constitute a proof of the corresponding conjecture's special case. Nevertheless, a candidate that passes all constraints would be strong evidence toward a valid proof and, to the best of our knowledge, no currently known potential achieves this under our formulation in the open $k=4$ circle case. As such, a successful candidate would already be an interesting contribution to the $k$-server conjecture, and could become a substantial theoretical result when paired with a full proof.\n  Experiments on the resolved $k=3$ regime show that current agentic methods can solve nontrivial instances, and in the open $k=4$ regime they reduce the number of violations relative to existing potentials without fully resolving the task. Taken together, these results suggest that the task is challenging but plausibly within reach of current methods.\n  Beyond its relevance to the $k$-server community, where the developed tooling enables researchers to test new hypotheses and potentially improve on the current record, the task also serves as a useful \\emph{benchmark} for developing code-based discovery agents. In particular, our $k=3$ results show that it mitigates important limitations of existing open-ended code-based benchmarks, including early saturation and the weak separation between naive random baselines and more sophisticated methods.",
-                "category": [
-                    {
-                        "@term": "cs.MS",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -306,177 +100,488 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
+                        "@term": "cs.GR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
                         "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-08T16:06:43Z",
+                "published": "2026-04-08T17:59:22Z",
+                "arxiv:comment": "Project Page: https://research.nvidia.com/labs/sil/projects/moright",
                 "arxiv:primary_category": {
-                    "@term": "cs.MS"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Kirill Brilliantov"
+                        "name": "Shaowei Liu"
                     },
                     {
-                        "name": "Etienne Bamas"
+                        "name": "Xuanchi Ren"
                     },
                     {
-                        "name": "Emmanuel Abb\u00e9"
+                        "name": "Tianchang Shen"
+                    },
+                    {
+                        "name": "Huan Ling"
+                    },
+                    {
+                        "name": "Saurabh Gupta"
+                    },
+                    {
+                        "name": "Shenlong Wang"
+                    },
+                    {
+                        "name": "Sanja Fidler"
+                    },
+                    {
+                        "name": "Jun Gao"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.07239v1",
-                "title": "Efficient Learned Data Compression via Dual-Stream Feature Decoupling",
-                "updated": "2026-04-08T16:05:24Z",
+                "id": "http://arxiv.org/abs/2604.07345v1",
+                "title": "Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning",
+                "updated": "2026-04-08T17:56:41Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.07239v1",
+                        "@href": "https://arxiv.org/abs/2604.07345v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.07239v1",
+                        "@href": "https://arxiv.org/pdf/2604.07345v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "While Learned Data Compression (LDC) has achieved superior compression ratios, balancing precise probability modeling with system efficiency remains challenging. Crucially, uniform single-stream architectures struggle to simultaneously capture micro-syntactic and macro-semantic features, necessitating deep serial stacking that exacerbates latency. Compounding this, heterogeneous systems are constrained by device speed mismatches, where throughput is capped by Amdahl's Law due to serial processing. To this end, we propose a Dual-Stream Multi-Scale Decoupler that disentangles local and global contexts to replace deep serial processing with shallow parallel streams, and incorporate a Hierarchical Gated Refiner for adaptive feature refinement and precise probability modeling. Furthermore, we design a Concurrent Stream-Parallel Pipeline, which overcomes systemic bottlenecks to achieve full-pipeline parallelism. Extensive experiments demonstrate that our method achieves state-of-the-art performance in both compression ratio and throughput, while maintaining the lowest latency and memory usage. The code is available at https://github.com/huidong-ma/FADE.",
+                "summary": "The rapid growth of generative artificial intelligence (AI) has introduced unprecedented computational demands, driving significant increases in the energy footprint of data centers. However, existing power consumption data is largely proprietary and reported at varying resolutions, creating challenges for estimating whole-facility energy use and planning infrastructure. In this work, we present a methodology that bridges this gap by linking high-resolution workload power measurements to whole-facility energy demand. Using NLR's high-performance computing data center equipped with NVIDIA H100 GPUs, we measure power consumption of AI workloads at 0.1-second resolution for AI training, fine-tuning and inference jobs. Workloads are characterized using MLCommons benchmarks for model training and fine-tuning, and vLLM benchmarks for inference, enabling reproducible and standardized workload profiling. The dataset of power consumption profiles is made publicly available. These power profiles are then scaled to the whole-facility-level using a bottom-up, event-driven, data center energy model. The resulting whole-facility energy profiles capture realistic temporal fluctuations driven by AI workloads and user-behavior, and can be used to inform infrastructure planning for grid connection, on-site energy generation, and distributed microgrids.",
+                "category": [
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.DC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-08T17:56:41Z",
+                "arxiv:comment": "The data associated with this publication can be found at http://doi.org/10.7799/3025227",
+                "arxiv:primary_category": {
+                    "@term": "eess.SY"
+                },
+                "author": [
+                    {
+                        "name": "Roberto Vercellino",
+                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                    },
+                    {
+                        "name": "Jared Willard",
+                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                    },
+                    {
+                        "name": "Gustavo Campos",
+                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                    },
+                    {
+                        "name": "Weslley da Silva Pereira",
+                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                    },
+                    {
+                        "name": "Olivia Hull",
+                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                    },
+                    {
+                        "name": "Matthew Selensky",
+                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                    },
+                    {
+                        "name": "Juliane Mueller",
+                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07344v1",
+                "title": "NIRVANA: A Comprehensive Dataset for Reproducing How Students Use Generative AI for Essay Writing",
+                "updated": "2026-04-08T17:56:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07344v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07344v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "With the rapid adoption of AI writing assistants in education, educators and researchers need empirical evidence to understand the impact on student writing and inform effective pedagogical design. Despite widespread use, we lack systematic understanding of how students engage with these tools during authentic writing tasks: when they seek assistance, what they ask, and how they incorporate AI-generated content into their essays. This gap limits evidence-based policy development and rigorous evaluation of generative AI's learning effects. To address this gap, we introduce NIRVANA, a dataset capturing how university students use generative AI while writing an analytical essay. The dataset includes 77 students who completed an essay task with access to ChatGPT, recording keystroke-level writing behavior, full ChatGPT conversation histories, and all text copied from ChatGPT, enabling a complete reconstruction of the writing process and revealing how AI assistance shapes student work. Our analysis identifies key behavioral patterns, including variation in ChatGPT query frequency and its relationship to essay characteristics such as length and readability. We identify four writing profiles based on students' contribution and revision patterns: Lead Authors, Collaborators, Drafters, and Vibe Writers. To support deeper investigation, we developed a replay interface that reconstructs the writing process; qualitative analysis of sampled replays demonstrates how this tool enables systematic examination of student-AI interactions.",
+                "category": {
+                    "@term": "cs.HC",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-08T17:56:20Z",
+                "arxiv:comment": "15 pages, 10 figures, 1 table, Submitted to Learning @ Scale 2026",
+                "arxiv:primary_category": {
+                    "@term": "cs.HC"
+                },
+                "author": [
+                    {
+                        "name": "Andrew Jelson"
+                    },
+                    {
+                        "name": "Daniel Manesh"
+                    },
+                    {
+                        "name": "Sangwook Lee"
+                    },
+                    {
+                        "name": "Alice Jang"
+                    },
+                    {
+                        "name": "Daniel Dunlap"
+                    },
+                    {
+                        "name": "Tamara Maddox"
+                    },
+                    {
+                        "name": "Young-Ho Kim"
+                    },
+                    {
+                        "name": "Sang Won Lee"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07343v1",
+                "title": "Personalized RewardBench: Evaluating Reward Models with Human Aligned Personalization",
+                "updated": "2026-04-08T17:55:00Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07343v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07343v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Pluralistic alignment has emerged as a critical frontier in the development of Large Language Models (LLMs), with reward models (RMs) serving as a central mechanism for capturing diverse human values. While benchmarks for general response quality are prevalent, evaluating how well reward models account for individual user preferences remains an open challenge. To bridge this gap, we introduce Personalized RewardBench, a novel benchmark designed to rigorously assess reward models' capacity to model personalized preferences. We construct chosen and rejected response pairs based on strict adherence to (or violation of) user-specific rubrics, ensuring that preference distinctions are uniquely tailored to the individual. In particular, human evaluations confirm that the primary discriminative factor between pairs is strictly personal preference, with both responses maintaining high general quality (e.g., correctness, relevance and helpfulness). Extensive testing reveals that existing state-of-the-art reward models struggle significantly with personalization, peaking at an accuracy of just 75.94%. Crucially, because an effective reward model benchmark should predict a reward model's performance on downstream tasks, we conduct experiments demonstrating that our benchmark exhibits a significantly higher correlation with downstream performance in both Best-of-N (BoN) sampling and Proximal Policy Optimization (PPO) compared to existing baselines. These findings establish Personalized RewardBench as a robust and accurate proxy for evaluating reward models' performance in downstream applications.",
                 "category": [
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.IT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-08T16:05:24Z",
-                "arxiv:comment": "Accepted to ACL 2026",
+                "published": "2026-04-08T17:55:00Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Huidong Ma"
+                        "name": "Qiyao Ma"
                     },
                     {
-                        "name": "Xinyan Shi"
+                        "name": "Dechen Gao"
                     },
                     {
-                        "name": "Hui Sun"
+                        "name": "Rui Cai"
                     },
                     {
-                        "name": "Xiaofei Yue"
+                        "name": "Boqi Zhao"
                     },
                     {
-                        "name": "Xiaoguang Liu"
+                        "name": "Hanchu Zhou"
                     },
                     {
-                        "name": "Gang Wang"
+                        "name": "Junshan Zhang"
                     },
                     {
-                        "name": "Wentong Cai"
+                        "name": "Zhe Zhao"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.07238v1",
-                "title": "On the Price of Privacy for Language Identification and Generation",
-                "updated": "2026-04-08T16:04:16Z",
+                "id": "http://arxiv.org/abs/2604.07340v1",
+                "title": "TC-AE: Unlocking Token Capacity for Deep Compression Autoencoders",
+                "updated": "2026-04-08T17:53:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.07238v1",
+                        "@href": "https://arxiv.org/abs/2604.07340v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.07238v1",
+                        "@href": "https://arxiv.org/pdf/2604.07340v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "As large language models (LLMs) are increasingly trained on sensitive user data, understanding the fundamental cost of privacy in language learning becomes essential. We initiate the study of differentially private (DP) language identification and generation in the agnostic statistical setting, establishing algorithms and matching lower bounds that precisely quantify the cost of privacy. For both tasks, approximate $(\\varepsilon, \u03b4)$-DP with constant $\\varepsilon > 0$ recovers the non-private error rates: $\\exp(-r(n))$ for identification (for any $r(n) = o(n)$) and $\\exp(-\u03a9(n))$ for generation. Under pure $\\varepsilon$-DP, the exponents degrade by a multiplicative factor of $\\min\\{1, \\varepsilon\\}$, which we show is tight up to constants. Notably, for generation under pure DP with mild assumptions, the upper bound $\\exp(-\\min\\{1,\\varepsilon\\} \\cdot \u03a9(n))$ matches the lower bound up to some constants, establishing an optimal rate. Our results show that the cost of privacy in language learning is surprisingly mild: absent entirely under approximate DP, and exactly a $\\min\\{1,\\varepsilon\\}$ factor in the exponent under pure DP.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-08T16:04:16Z",
+                "summary": "We propose TC-AE, a ViT-based architecture for deep compression autoencoders. Existing methods commonly increase the channel number of latent representations to maintain reconstruction quality under high compression ratios. However, this strategy often leads to latent representation collapse, which degrades generative performance. Instead of relying on increasingly complex architectures or multi-stage training schemes, TC-AE addresses this challenge from the perspective of the token space, the key bridge between pixels and image latents, through two complementary innovations: Firstly, we study token number scaling by adjusting the patch size in ViT under a fixed latent budget, and identify aggressive token-to-latent compression as the key factor that limits effective scaling. To address this issue, we decompose token-to-latent compression into two stages, reducing structural information loss and enabling effective token number scaling for generation. Secondly, to further mitigate latent representation collapse, we enhance the semantic structure of image tokens via joint self-supervised training, leading to more generative-friendly latents. With these designs, TC-AE achieves substantially improved reconstruction and generative performance under deep compression. We hope our research will advance ViT-based tokenizer for visual generation.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-08T17:53:52Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Xiaoyu Li"
+                        "name": "Teng Li"
                     },
                     {
-                        "name": "Andi Han"
+                        "name": "Ziyuan Huang"
                     },
                     {
-                        "name": "Jiaojiao Jiang"
+                        "name": "Cong Chen"
                     },
                     {
-                        "name": "Junbin Gao"
+                        "name": "Yangfu Li"
+                    },
+                    {
+                        "name": "Yuanhuiyi Lyu"
+                    },
+                    {
+                        "name": "Dandan Zheng"
+                    },
+                    {
+                        "name": "Chunhua Shen"
+                    },
+                    {
+                        "name": "Jun Zhang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.07233v1",
-                "title": "How Does Machine Learning Manage Complexity?",
-                "updated": "2026-04-08T15:57:24Z",
+                "id": "http://arxiv.org/abs/2604.07335v1",
+                "title": "TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks",
+                "updated": "2026-04-08T17:49:35Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.07233v1",
+                        "@href": "https://arxiv.org/abs/2604.07335v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.07233v1",
+                        "@href": "https://arxiv.org/pdf/2604.07335v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We provide a computational complexity lens to understand the power of machine learning models, particularly their ability to model complex systems.\n  Machine learning models are often trained on data drawn from sampleable or more complex distributions, a far wider range of distributions than just computable ones. By focusing on computable distributions, machine learning models can better manage complexity via probability. We abstract away from specific learning mechanisms, modeling machine learning as producing P/poly-computable distributions with polynomially-bounded max-entropy.\n  We illustrate how learning computable distributions models complexity by showing that if a machine learning model produces a distribution $\u03bc$ that minimizes error against the distribution generated by a cryptographic pseudorandom generator, then $\u03bc$ must be close to uniform.",
+                "summary": "Handheld paradigms offer an efficient and intuitive way for collecting large-scale demonstration of robot manipulation. However, achieving contact-rich bimanual manipulation through these methods remains a pivotal challenge, which is substantially hindered by hardware adaptability and data efficacy. Prior hardware designs remain gripper-specific and often face a trade-off between tracking precision and portability. Furthermore, the lack of online feasibility checking during demonstration leads to poor replayability. More importantly, existing handheld setups struggle to collect interactive recovery data during robot execution, lacking the authentic tactile information necessary for robust policy refinement. To bridge these gaps, we present TAMEn, a tactile-aware manipulation engine for closed-loop data collection in contact-rich tasks. Our system features a cross-morphology wearable interface that enables rapid adaptation across heterogeneous grippers. To balance data quality and environmental diversity, we implement a dual-modal acquisition pipeline: a precision mode leveraging motion capture for high-fidelity demonstrations, and a portable mode utilizing VR-based tracking for in-the-wild acquisition and tactile-visualized recovery teleoperation. Building on this hardware, we unify large-scale tactile pretraining, task-specific bimanual demonstrations, and human-in-the-loop recovery data into a pyramid-structured data regime, enabling closed-loop policy refinement. Experiments show that our feasibility-aware pipeline significantly improves demonstration replayability, and that the proposed visuo-tactile learning framework increases task success rates from 34% to 75% across diverse bimanual manipulation tasks. We further open-source the hardware and dataset to facilitate reproducibility and support research in visuo-tactile manipulation.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-08T17:49:35Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Longyan Wu"
+                    },
+                    {
+                        "name": "Jieji Ren"
+                    },
+                    {
+                        "name": "Chenghang Jiang"
+                    },
+                    {
+                        "name": "Junxi Zhou"
+                    },
+                    {
+                        "name": "Shijia Peng"
+                    },
+                    {
+                        "name": "Ran Huang"
+                    },
+                    {
+                        "name": "Guoying Gu"
+                    },
+                    {
+                        "name": "Li Chen"
+                    },
+                    {
+                        "name": "Hongyang Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07331v1",
+                "title": "RoSHI: A Versatile Robot-oriented Suit for Human Data In-the-Wild",
+                "updated": "2026-04-08T17:48:46Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07331v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07331v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Scaling up robot learning will likely require human data containing rich and long-horizon interactions in the wild. Existing approaches for collecting such data trade off portability, robustness to occlusion, and global consistency. We introduce RoSHI, a hybrid wearable that fuses low-cost sparse IMUs with the Project Aria glasses to estimate the full 3D pose and body shape of the wearer in a metric global coordinate frame from egocentric perception. This system is motivated by the complementarity of the two sensors: IMUs provide robustness to occlusions and high-speed motions, while egocentric SLAM anchors long-horizon motion and stabilizes upper body pose. We collect a dataset of agile activities to evaluate RoSHI. On this dataset, we generally outperform other egocentric baselines and perform comparably to a state-of-the-art exocentric baseline (SAM3D). Finally, we demonstrate that the motion data recorded from our system are suitable for real-world humanoid policy learning. For videos, data and more, visit the project webpage: https://roshi-mocap.github.io/",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CC",
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-08T15:57:24Z",
-                "arxiv:comment": "16 pages, no figures",
+                "published": "2026-04-08T17:48:46Z",
+                "arxiv:comment": "8 pages, 4 figures. *Equal contribution by first three authors. Project webpage: https://roshi-mocap.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Wenjing Margaret Mao"
+                    },
+                    {
+                        "name": "Jefferson Ng"
+                    },
+                    {
+                        "name": "Luyang Hu"
+                    },
+                    {
+                        "name": "Daniel Gehrig"
+                    },
+                    {
+                        "name": "Antonio Loquercio"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07329v1",
+                "title": "Distilling Photon-Counting CT into Routine Chest CT through Clinically Validated Degradation Modeling",
+                "updated": "2026-04-08T17:47:35Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07329v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07329v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Photon-counting CT (PCCT) provides superior image quality with higher spatial resolution and lower noise compared to conventional energy-integrating CT (EICT), but its limited clinical availability restricts large-scale research and clinical deployment. To bridge this gap, we propose SUMI, a simulated degradation-to-enhancement method that learns to reverse realistic acquisition artifacts in low-quality EICT by leveraging high-quality PCCT as reference. Our central insight is to explicitly model realistic acquisition degradations, transforming PCCT into clinically plausible lower-quality counterparts and learning to invert this process. The simulated degradations were validated for clinical realism by board-certified radiologists, enabling faithful supervision without requiring paired acquisitions at scale. As outcomes of this technical contribution, we: (1) train a latent diffusion model on 1,046 PCCTs, using an autoencoder first pre-trained on both these PCCTs and 405,379 EICTs from 145 hospitals to extract general CT latent features that we release for reuse in other generative medical imaging tasks; (2) construct a large-scale dataset of over 17,316 publicly available EICTs enhanced to PCCT-like quality, with radiologist-validated voxel-wise annotations of airway trees, arteries, veins, lungs, and lobes; and (3) demonstrate substantial improvements: across external data, SUMI outperforms state-of-the-art image translation methods by 15% in SSIM and 20% in PSNR, improves radiologist-rated clinical utility in reader studies, and enhances downstream top-ranking lesion detection performance, increasing sensitivity by up to 15% and F1 score by up to 10%. Our results suggest that emerging imaging advances can be systematically distilled into routine EICT using limited high-quality scans as reference.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-08T17:47:35Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Junqi Liu"
+                    },
+                    {
+                        "name": "Xinze Zhou"
+                    },
+                    {
+                        "name": "Wenxuan Li"
+                    },
+                    {
+                        "name": "Scott Ye"
+                    },
+                    {
+                        "name": "Arkadiusz Sitek"
+                    },
+                    {
+                        "name": "Xiaofeng Yang"
+                    },
+                    {
+                        "name": "Yucheng Tang"
+                    },
+                    {
+                        "name": "Daguang Xu"
+                    },
+                    {
+                        "name": "Kai Ding"
+                    },
+                    {
+                        "name": "Kang Wang"
+                    },
+                    {
+                        "name": "Yang Yang"
+                    },
+                    {
+                        "name": "Alan L. Yuille"
+                    },
+                    {
+                        "name": "Zongwei Zhou"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.07328v1",
+                "title": "How to sketch a learning algorithm",
+                "updated": "2026-04-08T17:46:06Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.07328v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.07328v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "How does the choice of training data influence an AI model? This question is of central importance to interpretability, privacy, and basic science. At its core is the data deletion problem: after a reasonable amount of precomputation, quickly predict how the model would behave in a given situation if a given subset of training data had been excluded from the learning algorithm.\n  We present a data deletion scheme capable of predicting model outputs with vanishing error $\\varepsilon$ in the deep learning setting. Our precomputation and prediction algorithms are only $\\mathrm{poly}(1/\\varepsilon)$ factors slower than regular training and inference, respectively. The storage requirements are those of $\\mathrm{poly}(1/\\varepsilon)$ models.\n  Our proof is based on an assumption that we call \"stability.\" In contrast to the assumptions made by prior work, stability appears to be fully compatible with learning powerful AI models. In support of this, we show that stability is satisfied in a minimal set of experiments with microgpt. Our code is available at https://github.com/SamSpo1/microgpt-sketch.\n  At a technical level, our work is based on a new method for locally sketching an arithmetic circuit by computing higher-order derivatives in random complex directions. Forward-mode automatic differentiation allows cheap computation of these derivatives.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-08T17:46:06Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": {
-                    "name": "Lance Fortnow"
+                    "name": "Sam Gunn"
                 }
             }
         ]
