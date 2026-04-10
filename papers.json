@@ -5,91 +5,33 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-09T23:33:16Z",
+        "updated": "2026-04-10T01:57:32Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "558149",
+        "opensearch:totalResults": "558514",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.07350v1",
-                "title": "Fast Spatial Memory with Elastic Test-Time Training",
-                "updated": "2026-04-08T17:59:48Z",
+                "id": "http://arxiv.org/abs/2604.08333v1",
+                "title": "Lost in the Hype: Revealing and Dissecting the Performance Degradation of Medical Multimodal Large Language Models in Image Classification",
+                "updated": "2026-04-09T15:07:26Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.07350v1",
+                        "@href": "https://arxiv.org/abs/2604.08333v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.07350v1",
+                        "@href": "https://arxiv.org/pdf/2604.08333v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large Chunk Test-Time Training (LaCT) has shown strong performance on long-context 3D reconstruction, but its fully plastic inference-time updates remain vulnerable to catastrophic forgetting and overfitting. As a result, LaCT is typically instantiated with a single large chunk spanning the full input sequence, falling short of the broader goal of handling arbitrarily long sequences in a single pass. We propose Elastic Test-Time Training inspired by elastic weight consolidation, that stabilizes LaCT fast-weight updates with a Fisher-weighted elastic prior around a maintained anchor state. The anchor evolves as an exponential moving average of past fast weights to balance stability and plasticity. Based on this updated architecture, we introduce Fast Spatial Memory (FSM), an efficient and scalable model for 4D reconstruction that learns spatiotemporal representations from long observation sequences and renders novel view-time combinations. We pre-trained FSM on large-scale curated 3D/4D data to capture the dynamics and semantics of complex spatial environments. Extensive experiments show that FSM supports fast adaptation over long sequences and delivers high-quality 3D/4D reconstruction with smaller chunks and mitigating the camera-interpolation shortcut. Overall, we hope to advance LaCT beyond the bounded single-chunk setting toward robust multi-chunk adaptation, a necessary step for generalization to genuinely longer sequences, while substantially alleviating the activation-memory bottleneck.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-08T17:59:48Z",
-                "arxiv:comment": "Project Page: https://fast-spatial-memory.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Ziqiao Ma"
-                    },
-                    {
-                        "name": "Xueyang Yu"
-                    },
-                    {
-                        "name": "Haoyu Zhen"
-                    },
-                    {
-                        "name": "Yuncong Yang"
-                    },
-                    {
-                        "name": "Joyce Chai"
-                    },
-                    {
-                        "name": "Chuang Gan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07348v1",
-                "title": "MoRight: Motion Control Done Right",
-                "updated": "2026-04-08T17:59:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07348v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07348v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Generating motion-controlled videos--where user-specified actions drive physically plausible scene dynamics under freely chosen viewpoints--demands two capabilities: (1) disentangled motion control, allowing users to separately control the object motion and adjust camera viewpoint; and (2) motion causality, ensuring that user-driven actions trigger coherent reactions from other objects rather than merely displacing pixels. Existing methods fall short on both fronts: they entangle camera and object motion into a single tracking signal and treat motion as kinematic displacement without modeling causal relationships between object motion. We introduce MoRight, a unified framework that addresses both limitations through disentangled motion modeling. Object motion is specified in a canonical static-view and transferred to an arbitrary target camera viewpoint via temporal cross-view attention, enabling disentangled camera and object control. We further decompose motion into active (user-driven) and passive (consequence) components, training the model to learn motion causality from data. At inference, users can either supply active motion and MoRight predicts consequences (forward reasoning), or specify desired passive outcomes and MoRight recovers plausible driving actions (inverse reasoning), all while freely adjusting the camera viewpoint. Experiments on three benchmarks demonstrate state-of-the-art performance in generation quality, motion controllability, and interaction awareness.",
+                "summary": "The rise of multimodal large language models (MLLMs) has sparked an unprecedented wave of applications in the field of medical imaging analysis. However, as one of the earliest and most fundamental tasks integrated into this paradigm, medical image classification reveals a sobering reality: state-of-the-art medical MLLMs consistently underperform compared to traditional deep learning models, despite their overwhelming advantages in pre-training data and model parameters. This paradox prompts a critical rethinking: where exactly does the performance degradation originate? In this paper, we conduct extensive experiments on 14 open-source medical MLLMs across three representative image classification datasets. Moving beyond superficial performance benchmarking, we employ feature probing to track the information flow of visual features module-by-module and layer-by-layer throughout the entire MLLM pipeline, enabling explicit visualization of where and how classification signals are distorted, diluted, or overridden. As the first attempt to dissect classification performance degradation in medical MLLMs, our findings reveal four failure modes: 1) quality limitation in visual representation, 2) fidelity loss in connector projection, 3) comprehension deficit in LLM reasoning, and 4) misalignment of semantic mapping. Meanwhile, we introduce quantitative scores that characterize the healthiness of feature evolution, enabling principled comparisons across diverse MLLMs and datasets. Furthermore, we provide insightful discussions centered on the critical barriers that prevent current medical MLLMs from fulfilling their promised clinical potential. We hope that our work provokes rethinking within the community-highlighting that the road from high expectations to clinically deployable MLLMs remains long and winding.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -100,358 +42,402 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
                         "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-08T17:59:22Z",
-                "arxiv:comment": "Project Page: https://research.nvidia.com/labs/sil/projects/moright",
+                "published": "2026-04-09T15:07:26Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Shaowei Liu"
+                        "name": "Xun Zhu"
                     },
                     {
-                        "name": "Xuanchi Ren"
+                        "name": "Fanbin Mo"
                     },
                     {
-                        "name": "Tianchang Shen"
+                        "name": "Xi Chen"
                     },
                     {
-                        "name": "Huan Ling"
+                        "name": "Kaili Zheng"
                     },
                     {
-                        "name": "Saurabh Gupta"
+                        "name": "Shaoshuai Yang"
                     },
                     {
-                        "name": "Shenlong Wang"
+                        "name": "Yiming Shi"
                     },
                     {
-                        "name": "Sanja Fidler"
+                        "name": "Jian Gao"
                     },
                     {
-                        "name": "Jun Gao"
+                        "name": "Miao Li"
+                    },
+                    {
+                        "name": "Ji Wu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.07345v1",
-                "title": "Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning",
-                "updated": "2026-04-08T17:56:41Z",
+                "id": "http://arxiv.org/abs/2604.08329v1",
+                "title": "DiV-INR: Extreme Low-Bitrate Diffusion Video Compression with INR Conditioning",
+                "updated": "2026-04-09T15:01:50Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.07345v1",
+                        "@href": "https://arxiv.org/abs/2604.08329v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.07345v1",
+                        "@href": "https://arxiv.org/pdf/2604.08329v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The rapid growth of generative artificial intelligence (AI) has introduced unprecedented computational demands, driving significant increases in the energy footprint of data centers. However, existing power consumption data is largely proprietary and reported at varying resolutions, creating challenges for estimating whole-facility energy use and planning infrastructure. In this work, we present a methodology that bridges this gap by linking high-resolution workload power measurements to whole-facility energy demand. Using NLR's high-performance computing data center equipped with NVIDIA H100 GPUs, we measure power consumption of AI workloads at 0.1-second resolution for AI training, fine-tuning and inference jobs. Workloads are characterized using MLCommons benchmarks for model training and fine-tuning, and vLLM benchmarks for inference, enabling reproducible and standardized workload profiling. The dataset of power consumption profiles is made publicly available. These power profiles are then scaled to the whole-facility-level using a bottom-up, event-driven, data center energy model. The resulting whole-facility energy profiles capture realistic temporal fluctuations driven by AI workloads and user-behavior, and can be used to inform infrastructure planning for grid connection, on-site energy generation, and distributed microgrids.",
+                "summary": "We present a perceptually-driven video compression framework integrating implicit neural representations (INRs) and pre-trained video diffusion models to address the extremely low bitrate regime (<0.05 bpp). Our approach exploits the complementary strengths of INRs, which provide a compact video representation, and diffusion models, which offer rich generative priors learned from large-scale datasets. The INR-based conditioning replaces traditional intra-coded keyframes with bit-efficient neural representations trained to estimate latent features and guide the diffusion process. Our joint optimization of INR weights and parameter-efficient adapters for diffusion models allows the model to learn reliable conditioning signals while encoding video-specific information with minimal parameter overhead. Our experiments on UVG, MCL-JCV, and JVET Class-B benchmarks demonstrate substantial improvements in perceptual metrics (LPIPS, DISTS, and FID) at extremely low bitrates, including improvements on BD-LPIPS up to 0.214 and BD-FID up to 91.14 relative to HEVC, while also outperforming VVC and previous strong state-of-the-art neural and INR-only video codecs. Moreover, our analysis shows that INR-conditioned diffusion-based video compression first composes the scene layout and object identities before refining textural accuracy, exposing the semantic-to-visual hierarchy that enables perceptually faithful compression at extremely low bitrates.",
                 "category": [
                     {
-                        "@term": "eess.SY",
+                        "@term": "eess.IV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.DC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
+                        "@term": "cs.MM",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-08T17:56:41Z",
-                "arxiv:comment": "The data associated with this publication can be found at http://doi.org/10.7799/3025227",
+                "published": "2026-04-09T15:01:50Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.IV"
+                },
+                "author": [
+                    {
+                        "name": "Eren \u00c7etin"
+                    },
+                    {
+                        "name": "Lucas Relic"
+                    },
+                    {
+                        "name": "Yuanyi Xue"
+                    },
+                    {
+                        "name": "Markus Gross"
+                    },
+                    {
+                        "name": "Christopher Schroers"
+                    },
+                    {
+                        "name": "Roberto Azevedo"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.08326v1",
+                "title": "ProMedical: Hierarchical Fine-Grained Criteria Modeling for Medical LLM Alignment via Explicit Injection",
+                "updated": "2026-04-09T14:57:33Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.08326v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.08326v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Aligning Large Language Models (LLMs) with high-stakes medical standards remains a significant challenge, primarily due to the dissonance between coarse-grained preference signals and the complex, multi-dimensional nature of clinical protocols. To bridge this gap, we introduce ProMedical, a unified alignment framework grounded in fine-grained clinical criteria. We first construct ProMedical-Preference-50k, a dataset generated via a human-in-the-loop pipeline that augments medical instructions with rigorous, physician-derived rubrics. Leveraging this corpus, we propose the Explicit Criteria Injection paradigm to train a multi-dimensional reward model. Unlike traditional scalar reward models, our approach explicitly disentangles safety constraints from general proficiency, enabling precise guidance during reinforcement learning. To rigorously validate this framework, we establish ProMedical-Bench, a held-out evaluation suite anchored by double-blind expert adjudication. Empirical evaluations demonstrate that optimizing the Qwen3-8B base model via ProMedical-RM-guided GRPO yields substantial gains, improving overall accuracy by 22.3% and safety compliance by 21.7%, effectively rivaling proprietary frontier models. Furthermore, the aligned policy generalizes robustly to external benchmarks, demonstrating performance comparable to state-of-the-art models on UltraMedical. We publicly release our datasets, reward models, and benchmarks to facilitate reproducible research in safety-aware medical alignment.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-09T14:57:33Z",
+                "arxiv:comment": "ACL 2026",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "He Geng"
+                    },
+                    {
+                        "name": "Yangmin Huang"
+                    },
+                    {
+                        "name": "Lixian Lai"
+                    },
+                    {
+                        "name": "Qianyun Du"
+                    },
+                    {
+                        "name": "Hui Chu"
+                    },
+                    {
+                        "name": "Zhiyang He"
+                    },
+                    {
+                        "name": "Jiaxue Hu"
+                    },
+                    {
+                        "name": "Xiaodong Tao"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.08325v1",
+                "title": "Kirkwood-Dirac distributions in classical optics",
+                "updated": "2026-04-09T14:56:51Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.08325v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.08325v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We develop a comprehensive analysis of the Kirkwood-Dirac distributions in classical optics, revealing their deep connection with optical coherence as fundamental concept in optics. From their very definition, the Kirkwood-Dirac distributions emerge as generalized mutual coherence functions involving two different bases instead of just one. This perspective provides a unified interpretation of the so-called anomalous values, that are complex and negative values, as direct manifestations of coherence. We show that this interpretation consistently applies across all field variables considered in this work, including polarization, interference and wave propagation. Furthermore, we propose diverse methods of experimental determination of these distributions based on interference, in full agreement with their coherence-based interpretation.",
+                "category": [
+                    {
+                        "@term": "quant-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "physics.optics",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-09T14:56:51Z",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Alfredo Luis"
+                    },
+                    {
+                        "name": "Lorena Ballesteros Ferraz"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.08324v1",
+                "title": "Multi-Modal Learning meets Genetic Programming: Analyzing Alignment in Latent Space Optimization",
+                "updated": "2026-04-09T14:55:36Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.08324v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.08324v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Symbolic regression (SR) aims to discover mathematical expressions from data, a task traditionally tackled using Genetic Programming (GP) through combinatorial search over symbolic structures. Latent Space Optimization (LSO) methods use neural encoders to map symbolic expressions into continuous spaces, transforming the combinatorial search into continuous optimization. SNIP (Meidani et al., 2024), a contrastive pre-training model inspired by CLIP, advances LSO by introducing a multi-modal approach: aligning symbolic and numeric encoders in a shared latent space to learn the phenotype-genotype mapping, enabling optimization in the numeric space to implicitly guide symbolic search. However, this relies on fine-grained cross-modal alignment, whereas literature on similar models like CLIP reveals that such an alignment is typically coarse-grained. In this paper, we investigate whether SNIP delivers on its promise of effective bi-modal optimization for SR. Our experiments show that: (1) cross-modal alignment does not improve during optimization, even as fitness increases, and (2) the alignment learned by SNIP is too coarse to efficiently conduct principled search in the symbolic space. These findings reveal that while multi-modal LSO holds significant potential for SR, effective alignment-guided optimization remains unrealized in practice, highlighting fine-grained alignment as a critical direction for future work.",
+                "category": [
+                    {
+                        "@term": "cs.NE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-09T14:55:36Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.NE"
+                },
+                "author": [
+                    {
+                        "name": "Benjamin L\u00e9ger"
+                    },
+                    {
+                        "name": "Kazem Meidani"
+                    },
+                    {
+                        "name": "Christian Gagn\u00e9"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.08322v1",
+                "title": "Fundus-R1: Training a Fundus-Reading MLLM with Knowledge-Aware Reasoning on Public Data",
+                "updated": "2026-04-09T14:55:22Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.08322v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.08322v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Fundus imaging such as CFP, OCT and UWF is crucial for the early detection of retinal anomalies and diseases. Fundus image understanding, due to its knowledge-intensive nature, poses a challenging vision-language task. An emerging approach to addressing the task is to post-train a generic multimodal large language model (MLLM), either by supervised finetuning (SFT) or by reinforcement learning with verifiable rewards (RLVR), on a considerable amount of in-house samples paired with high-quality clinical reports. However, these valuable samples are not publicly accessible, which not only hinders reproducibility but also practically limits research to few players. To overcome the barrier, we make a novel attempt to train a reasoning-enhanced fundus-reading MLLM, which we term Fundus-R1, using exclusively public datasets, wherein over 94\\% of the data are annotated with only image-level labels. Our technical contributions are two-fold. First, we propose a RAG-based method for composing image-specific, knowledge-aware reasoning traces. Such auto-generated traces link visual findings identified by a generic MLLM to the image labels in terms of ophthalmic knowledge. Second, we enhance RLVR with a process reward that encourages self-consistency of the generated reasoning trace in each rollout. Extensive experiments on three fundus-reading benchmarks, i.e., FunBench, Omni-Fundus and GMAI-Fundus, show that Fundus-R1 clearly outperforms multiple baselines, including its generic counterpart (Qwen2.5-VL) and a stronger edition post-trained without using the generated traces. This work paves the way for training powerful fundus-reading MLLMs with publicly available data.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-09T14:55:22Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yuchuan Deng"
+                    },
+                    {
+                        "name": "Qijie Wei"
+                    },
+                    {
+                        "name": "Kaiheng Qian"
+                    },
+                    {
+                        "name": "Jiazhen Liu"
+                    },
+                    {
+                        "name": "Zijie Xin"
+                    },
+                    {
+                        "name": "Bangxiang Lan"
+                    },
+                    {
+                        "name": "Jingyu Liu"
+                    },
+                    {
+                        "name": "Jianfeng Dong"
+                    },
+                    {
+                        "name": "Xirong Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.08318v1",
+                "title": "A Model Context Protocol Server for Quantum Execution in Hybrid Quantum-HPC Environments",
+                "updated": "2026-04-09T14:50:56Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.08318v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.08318v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The integration of large language models (LLMs) into scientific research is accelerating the realization of autonomous ``AI Scientists.'' While recent advancements have empowered AI to formulate hypotheses and design experiments, a critical gap remains in the execution of these tasks, particularly in the domain of quantum computing (QC). Executing quantum algorithms requires not only generating code but also managing complex computational resources such as QPUs and high-performance computing (HPC) clusters. In this paper, we propose an AI-driven framework specifically designed to bridge this execution gap through the implementation of a Model Context Protocol (MCP) server. Our system enables an LLM agent to process natural language prompts submitted as part of a job, autonomously executing quantum computing workflows by invoking our tools via the MCP. We demonstrate the framework's capability by performing essential quantum algorithmic primitives, including sampling and computation of expectation values. Key technical contributions include the development of an MCP server for quantum execution, a pipeline for interpreting OpenQASM code, an automated workflow with CUDA-Q for the ABCI-Q hybrid platform, and an asynchronous execution pipeline for remote quantum hardware using the Quantinuum emulator via CUDA-Q. This work validates that AI agents can effectively abstract the complexities of hardware interaction through an MCP-based architecture, thereby facilitating the automation of practical quantum research.",
+                "category": {
+                    "@term": "quant-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-09T14:50:56Z",
+                "arxiv:comment": "Accepted to QC4C3 workshop at QCNC 2026",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Masaki Shiraishi"
+                    },
+                    {
+                        "name": "Ikko Hamamura"
+                    },
+                    {
+                        "name": "Tatsuya Ishigaki"
+                    },
+                    {
+                        "name": "Tadashi Kadowaki"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.08309v1",
+                "title": "Bayesian Inference for Estimating Generation Costs in Electricity Markets",
+                "updated": "2026-04-09T14:42:59Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.08309v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.08309v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Estimating generation costs from observed electricity market data is essential for market simulation, strategic bidding, and system planning. To that end, we model the relationship between generation costs and production schedules with a latent variable model. Estimating generation costs from observed schedules is then formulated as Bayesian inference. A prior distribution encodes an initial belief on parameters, and the inference consists of updating the belief with the posterior distribution given observations. We use balanced neural posterior estimation (BNPE) to learn this posterior. Validation on the IEEE RTS-96 test system shows that marginal costs are recovered with narrow credible intervals, while start-up costs remain largely unidentifiable from schedules alone. The method is benchmarked against an inverse-optimization algorithm that exhibits larger parameter errors without uncertainty quantification.",
+                "category": {
+                    "@term": "eess.SY",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-09T14:42:59Z",
                 "arxiv:primary_category": {
                     "@term": "eess.SY"
                 },
                 "author": [
                     {
-                        "name": "Roberto Vercellino",
-                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                        "name": "Matthias Pirlet"
                     },
                     {
-                        "name": "Jared Willard",
-                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                        "name": "Adrien Bolland"
                     },
                     {
-                        "name": "Gustavo Campos",
-                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                        "name": "Alexandre Huynen"
                     },
                     {
-                        "name": "Weslley da Silva Pereira",
-                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                        "name": "Quentin Louveaux"
                     },
                     {
-                        "name": "Olivia Hull",
-                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                        "name": "Gilles Louppe"
                     },
                     {
-                        "name": "Matthew Selensky",
-                        "arxiv:affiliation": "National Laboratory of the Rockies"
-                    },
-                    {
-                        "name": "Juliane Mueller",
-                        "arxiv:affiliation": "National Laboratory of the Rockies"
+                        "name": "Damien Ernst"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.07344v1",
-                "title": "NIRVANA: A Comprehensive Dataset for Reproducing How Students Use Generative AI for Essay Writing",
-                "updated": "2026-04-08T17:56:20Z",
+                "id": "http://arxiv.org/abs/2604.08305v1",
+                "title": "HistDiT: A Structure-Aware Latent Conditional Diffusion Model for High-Fidelity Virtual Staining in Histopathology",
+                "updated": "2026-04-09T14:39:37Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.07344v1",
+                        "@href": "https://arxiv.org/abs/2604.08305v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.07344v1",
+                        "@href": "https://arxiv.org/pdf/2604.08305v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "With the rapid adoption of AI writing assistants in education, educators and researchers need empirical evidence to understand the impact on student writing and inform effective pedagogical design. Despite widespread use, we lack systematic understanding of how students engage with these tools during authentic writing tasks: when they seek assistance, what they ask, and how they incorporate AI-generated content into their essays. This gap limits evidence-based policy development and rigorous evaluation of generative AI's learning effects. To address this gap, we introduce NIRVANA, a dataset capturing how university students use generative AI while writing an analytical essay. The dataset includes 77 students who completed an essay task with access to ChatGPT, recording keystroke-level writing behavior, full ChatGPT conversation histories, and all text copied from ChatGPT, enabling a complete reconstruction of the writing process and revealing how AI assistance shapes student work. Our analysis identifies key behavioral patterns, including variation in ChatGPT query frequency and its relationship to essay characteristics such as length and readability. We identify four writing profiles based on students' contribution and revision patterns: Lead Authors, Collaborators, Drafters, and Vibe Writers. To support deeper investigation, we developed a replay interface that reconstructs the writing process; qualitative analysis of sampled replays demonstrates how this tool enables systematic examination of student-AI interactions.",
-                "category": {
-                    "@term": "cs.HC",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-08T17:56:20Z",
-                "arxiv:comment": "15 pages, 10 figures, 1 table, Submitted to Learning @ Scale 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.HC"
-                },
-                "author": [
-                    {
-                        "name": "Andrew Jelson"
-                    },
-                    {
-                        "name": "Daniel Manesh"
-                    },
-                    {
-                        "name": "Sangwook Lee"
-                    },
-                    {
-                        "name": "Alice Jang"
-                    },
-                    {
-                        "name": "Daniel Dunlap"
-                    },
-                    {
-                        "name": "Tamara Maddox"
-                    },
-                    {
-                        "name": "Young-Ho Kim"
-                    },
-                    {
-                        "name": "Sang Won Lee"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07343v1",
-                "title": "Personalized RewardBench: Evaluating Reward Models with Human Aligned Personalization",
-                "updated": "2026-04-08T17:55:00Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07343v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07343v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Pluralistic alignment has emerged as a critical frontier in the development of Large Language Models (LLMs), with reward models (RMs) serving as a central mechanism for capturing diverse human values. While benchmarks for general response quality are prevalent, evaluating how well reward models account for individual user preferences remains an open challenge. To bridge this gap, we introduce Personalized RewardBench, a novel benchmark designed to rigorously assess reward models' capacity to model personalized preferences. We construct chosen and rejected response pairs based on strict adherence to (or violation of) user-specific rubrics, ensuring that preference distinctions are uniquely tailored to the individual. In particular, human evaluations confirm that the primary discriminative factor between pairs is strictly personal preference, with both responses maintaining high general quality (e.g., correctness, relevance and helpfulness). Extensive testing reveals that existing state-of-the-art reward models struggle significantly with personalization, peaking at an accuracy of just 75.94%. Crucially, because an effective reward model benchmark should predict a reward model's performance on downstream tasks, we conduct experiments demonstrating that our benchmark exhibits a significantly higher correlation with downstream performance in both Best-of-N (BoN) sampling and Proximal Policy Optimization (PPO) compared to existing baselines. These findings establish Personalized RewardBench as a robust and accurate proxy for evaluating reward models' performance in downstream applications.",
+                "summary": "Immunohistochemistry (IHC) is essential for assessing specific immune biomarkers like Human Epidermal growth-factor Receptor 2 (HER2) in breast cancer. However, the traditional protocols of obtaining IHC stains are resource-intensive, time-consuming, and prone to structural damages. Virtual staining has emerged as a scalable alternative, but it faces significant challenges in preserving fine-grained cellular structures while accurately translating biochemical expressions. Current state-of-the-art methods still rely on Generative Adversarial Networks (GANs) or standard convolutional U-Net diffusion models that often struggle with \"structure and staining trade-offs\". The generated samples are either structurally relevant but blurry, or texturally realistic but have artifacts that compromise their diagnostic use. In this paper, we introduce HistDiT, a novel latent conditional Diffusion Transformer (DiT) architecture that establishes a new benchmark for visual fidelity in virtual histological staining. The novelty introduced in this work is, a) the Dual-Stream Conditioning strategy that explicitly maintains a balance between spatial constraints via VAE-encoded latents and semantic phenotype guidance via UNI embeddings; b) the multi-objective loss function that contributes to sharper images with clear morphological structure; and c) the use of the Structural Correlation Metric (SCM) to focus on the core morphological structure for precise assessment of sample quality. Consequently, our model outperforms existing baselines, as demonstrated through rigorous quantitative and qualitative evaluations.",
                 "category": [
                     {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-08T17:55:00Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Qiyao Ma"
-                    },
-                    {
-                        "name": "Dechen Gao"
-                    },
-                    {
-                        "name": "Rui Cai"
-                    },
-                    {
-                        "name": "Boqi Zhao"
-                    },
-                    {
-                        "name": "Hanchu Zhou"
-                    },
-                    {
-                        "name": "Junshan Zhang"
-                    },
-                    {
-                        "name": "Zhe Zhao"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07340v1",
-                "title": "TC-AE: Unlocking Token Capacity for Deep Compression Autoencoders",
-                "updated": "2026-04-08T17:53:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07340v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07340v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We propose TC-AE, a ViT-based architecture for deep compression autoencoders. Existing methods commonly increase the channel number of latent representations to maintain reconstruction quality under high compression ratios. However, this strategy often leads to latent representation collapse, which degrades generative performance. Instead of relying on increasingly complex architectures or multi-stage training schemes, TC-AE addresses this challenge from the perspective of the token space, the key bridge between pixels and image latents, through two complementary innovations: Firstly, we study token number scaling by adjusting the patch size in ViT under a fixed latent budget, and identify aggressive token-to-latent compression as the key factor that limits effective scaling. To address this issue, we decompose token-to-latent compression into two stages, reducing structural information loss and enabling effective token number scaling for generation. Secondly, to further mitigate latent representation collapse, we enhance the semantic structure of image tokens via joint self-supervised training, leading to more generative-friendly latents. With these designs, TC-AE achieves substantially improved reconstruction and generative performance under deep compression. We hope our research will advance ViT-based tokenizer for visual generation.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-08T17:53:52Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Teng Li"
-                    },
-                    {
-                        "name": "Ziyuan Huang"
-                    },
-                    {
-                        "name": "Cong Chen"
-                    },
-                    {
-                        "name": "Yangfu Li"
-                    },
-                    {
-                        "name": "Yuanhuiyi Lyu"
-                    },
-                    {
-                        "name": "Dandan Zheng"
-                    },
-                    {
-                        "name": "Chunhua Shen"
-                    },
-                    {
-                        "name": "Jun Zhang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07335v1",
-                "title": "TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks",
-                "updated": "2026-04-08T17:49:35Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07335v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07335v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Handheld paradigms offer an efficient and intuitive way for collecting large-scale demonstration of robot manipulation. However, achieving contact-rich bimanual manipulation through these methods remains a pivotal challenge, which is substantially hindered by hardware adaptability and data efficacy. Prior hardware designs remain gripper-specific and often face a trade-off between tracking precision and portability. Furthermore, the lack of online feasibility checking during demonstration leads to poor replayability. More importantly, existing handheld setups struggle to collect interactive recovery data during robot execution, lacking the authentic tactile information necessary for robust policy refinement. To bridge these gaps, we present TAMEn, a tactile-aware manipulation engine for closed-loop data collection in contact-rich tasks. Our system features a cross-morphology wearable interface that enables rapid adaptation across heterogeneous grippers. To balance data quality and environmental diversity, we implement a dual-modal acquisition pipeline: a precision mode leveraging motion capture for high-fidelity demonstrations, and a portable mode utilizing VR-based tracking for in-the-wild acquisition and tactile-visualized recovery teleoperation. Building on this hardware, we unify large-scale tactile pretraining, task-specific bimanual demonstrations, and human-in-the-loop recovery data into a pyramid-structured data regime, enabling closed-loop policy refinement. Experiments show that our feasibility-aware pipeline significantly improves demonstration replayability, and that the proposed visuo-tactile learning framework increases task success rates from 34% to 75% across diverse bimanual manipulation tasks. We further open-source the hardware and dataset to facilitate reproducibility and support research in visuo-tactile manipulation.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-08T17:49:35Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Longyan Wu"
-                    },
-                    {
-                        "name": "Jieji Ren"
-                    },
-                    {
-                        "name": "Chenghang Jiang"
-                    },
-                    {
-                        "name": "Junxi Zhou"
-                    },
-                    {
-                        "name": "Shijia Peng"
-                    },
-                    {
-                        "name": "Ran Huang"
-                    },
-                    {
-                        "name": "Guoying Gu"
-                    },
-                    {
-                        "name": "Li Chen"
-                    },
-                    {
-                        "name": "Hongyang Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07331v1",
-                "title": "RoSHI: A Versatile Robot-oriented Suit for Human Data In-the-Wild",
-                "updated": "2026-04-08T17:48:46Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07331v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07331v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Scaling up robot learning will likely require human data containing rich and long-horizon interactions in the wild. Existing approaches for collecting such data trade off portability, robustness to occlusion, and global consistency. We introduce RoSHI, a hybrid wearable that fuses low-cost sparse IMUs with the Project Aria glasses to estimate the full 3D pose and body shape of the wearer in a metric global coordinate frame from egocentric perception. This system is motivated by the complementarity of the two sensors: IMUs provide robustness to occlusions and high-speed motions, while egocentric SLAM anchors long-horizon motion and stabilizes upper body pose. We collect a dataset of agile activities to evaluate RoSHI. On this dataset, we generally outperform other egocentric baselines and perform comparably to a state-of-the-art exocentric baseline (SAM3D). Finally, we demonstrate that the motion data recorded from our system are suitable for real-world humanoid policy learning. For videos, data and more, visit the project webpage: https://roshi-mocap.github.io/",
-                "category": [
-                    {
-                        "@term": "cs.RO",
+                        "@term": "eess.IV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -461,128 +447,102 @@
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.ET",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "q-bio.QM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-08T17:48:46Z",
-                "arxiv:comment": "8 pages, 4 figures. *Equal contribution by first three authors. Project webpage: https://roshi-mocap.github.io/",
+                "published": "2026-04-09T14:39:37Z",
+                "arxiv:comment": "Accepted to ICPR 2026",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "eess.IV"
                 },
                 "author": [
                     {
-                        "name": "Wenjing Margaret Mao"
+                        "name": "Aasim Bin Saleem"
                     },
                     {
-                        "name": "Jefferson Ng"
+                        "name": "Amr Ahmed"
                     },
                     {
-                        "name": "Luyang Hu"
+                        "name": "Ardhendu Behera"
                     },
                     {
-                        "name": "Daniel Gehrig"
+                        "name": "Hafeezullah Amin"
                     },
                     {
-                        "name": "Antonio Loquercio"
+                        "name": "Iman Yi Liao"
+                    },
+                    {
+                        "name": "Mahmoud Khattab"
+                    },
+                    {
+                        "name": "Pan Jia Wern"
+                    },
+                    {
+                        "name": "Haslina Makmur"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.07329v1",
-                "title": "Distilling Photon-Counting CT into Routine Chest CT through Clinically Validated Degradation Modeling",
-                "updated": "2026-04-08T17:47:35Z",
+                "id": "http://arxiv.org/abs/2604.08302v1",
+                "title": "DMax: Aggressive Parallel Decoding for dLLMs",
+                "updated": "2026-04-09T14:35:42Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.07329v1",
+                        "@href": "https://arxiv.org/abs/2604.08302v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.07329v1",
+                        "@href": "https://arxiv.org/pdf/2604.08302v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Photon-counting CT (PCCT) provides superior image quality with higher spatial resolution and lower noise compared to conventional energy-integrating CT (EICT), but its limited clinical availability restricts large-scale research and clinical deployment. To bridge this gap, we propose SUMI, a simulated degradation-to-enhancement method that learns to reverse realistic acquisition artifacts in low-quality EICT by leveraging high-quality PCCT as reference. Our central insight is to explicitly model realistic acquisition degradations, transforming PCCT into clinically plausible lower-quality counterparts and learning to invert this process. The simulated degradations were validated for clinical realism by board-certified radiologists, enabling faithful supervision without requiring paired acquisitions at scale. As outcomes of this technical contribution, we: (1) train a latent diffusion model on 1,046 PCCTs, using an autoencoder first pre-trained on both these PCCTs and 405,379 EICTs from 145 hospitals to extract general CT latent features that we release for reuse in other generative medical imaging tasks; (2) construct a large-scale dataset of over 17,316 publicly available EICTs enhanced to PCCT-like quality, with radiologist-validated voxel-wise annotations of airway trees, arteries, veins, lungs, and lobes; and (3) demonstrate substantial improvements: across external data, SUMI outperforms state-of-the-art image translation methods by 15% in SSIM and 20% in PSNR, improves radiologist-rated clinical utility in reader studies, and enhances downstream top-ranking lesion detection performance, increasing sensitivity by up to 15% and F1 score by up to 10%. Our results suggest that emerging imaging advances can be systematically distilled into routine EICT using limited high-quality scans as reference.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-08T17:47:35Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
+                "summary": "We present DMax, a new paradigm for efficient diffusion language models (dLLMs). It mitigates error accumulation in parallel decoding, enabling aggressive decoding parallelism while preserving generation quality. Unlike conventional masked dLLMs that decode through a binary mask-to-token transition, DMax reformulates decoding as a progressive self-refinement from mask embeddings to token embeddings. At the core of our approach is On-Policy Uniform Training, a novel training strategy that efficiently unifies masked and uniform dLLMs, equipping the model to recover clean tokens from both masked inputs and its own erroneous predictions. Building on this foundation, we further propose Soft Parallel Decoding. We represent each intermediate decoding state as an interpolation between the predicted token embedding and the mask embedding, enabling iterative self-revising in embedding space. Extensive experiments across a variety of benchmarks demonstrate the effectiveness of DMax. Compared with the original LLaDA-2.0-mini, our method improves TPF on GSM8K from 2.04 to 5.47 while preserving accuracy. On MBPP, it increases TPF from 2.71 to 5.86 while maintaining comparable performance. On two H200 GPUs, our model achieves an average of 1,338 TPS at batch size 1. Code is available at: https://github.com/czg1225/DMax",
+                "category": [
                     {
-                        "name": "Junqi Liu"
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Xinze Zhou"
-                    },
-                    {
-                        "name": "Wenxuan Li"
-                    },
-                    {
-                        "name": "Scott Ye"
-                    },
-                    {
-                        "name": "Arkadiusz Sitek"
-                    },
-                    {
-                        "name": "Xiaofeng Yang"
-                    },
-                    {
-                        "name": "Yucheng Tang"
-                    },
-                    {
-                        "name": "Daguang Xu"
-                    },
-                    {
-                        "name": "Kai Ding"
-                    },
-                    {
-                        "name": "Kang Wang"
-                    },
-                    {
-                        "name": "Yang Yang"
-                    },
-                    {
-                        "name": "Alan L. Yuille"
-                    },
-                    {
-                        "name": "Zongwei Zhou"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.07328v1",
-                "title": "How to sketch a learning algorithm",
-                "updated": "2026-04-08T17:46:06Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.07328v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.07328v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "summary": "How does the choice of training data influence an AI model? This question is of central importance to interpretability, privacy, and basic science. At its core is the data deletion problem: after a reasonable amount of precomputation, quickly predict how the model would behave in a given situation if a given subset of training data had been excluded from the learning algorithm.\n  We present a data deletion scheme capable of predicting model outputs with vanishing error $\\varepsilon$ in the deep learning setting. Our precomputation and prediction algorithms are only $\\mathrm{poly}(1/\\varepsilon)$ factors slower than regular training and inference, respectively. The storage requirements are those of $\\mathrm{poly}(1/\\varepsilon)$ models.\n  Our proof is based on an assumption that we call \"stability.\" In contrast to the assumptions made by prior work, stability appears to be fully compatible with learning powerful AI models. In support of this, we show that stability is satisfied in a minimal set of experiments with microgpt. Our code is available at https://github.com/SamSpo1/microgpt-sketch.\n  At a technical level, our work is based on a new method for locally sketching an arithmetic circuit by computing higher-order derivatives in random complex directions. Forward-mode automatic differentiation allows cheap computation of these derivatives.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-08T17:46:06Z",
+                "published": "2026-04-09T14:35:42Z",
+                "arxiv:comment": "Working in progress. Code is available at: https://github.com/czg1225/DMax",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
-                "author": {
-                    "name": "Sam Gunn"
-                }
+                "author": [
+                    {
+                        "name": "Zigeng Chen"
+                    },
+                    {
+                        "name": "Gongfan Fang"
+                    },
+                    {
+                        "name": "Xinyin Ma"
+                    },
+                    {
+                        "name": "Ruonan Yu"
+                    },
+                    {
+                        "name": "Xinchao Wang"
+                    }
+                ]
             }
         ]
     }
