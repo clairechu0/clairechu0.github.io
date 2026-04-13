@@ -5,156 +5,36 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-12T23:28:36Z",
+        "updated": "2026-04-13T05:35:20Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "558589",
+        "opensearch:totalResults": "558956",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.08547v1",
-                "title": "GaussiAnimate: Reconstruct and Rig Animatable Categories with Level of Dynamics",
-                "updated": "2026-04-09T17:59:59Z",
+                "id": "http://arxiv.org/abs/2604.09544v1",
+                "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
+                "updated": "2026-04-10T17:58:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.08547v1",
+                        "@href": "https://arxiv.org/abs/2604.09544v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.08547v1",
+                        "@href": "https://arxiv.org/pdf/2604.09544v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Free-form bones, that conform closely to the surface, can effectively capture non-rigid deformations, but lack a kinematic structure necessary for intuitive control. Thus, we propose a Scaffold-Skin Rigging System, termed \"Skelebones\", with three key steps: (1) Bones: compress temporally-consistent deformable Gaussians into free-form bones, approximating non-rigid surface deformations; (2) Skeleton: extract a Mean Curvature Skeleton from canonical Gaussians and refine it temporally, ensuring a category-agnostic, motion-adaptive, and topology-correct kinematic structure; (3) Binding: bind the skeleton and bones via non-parametric partwise motion matching (PartMM), synthesizing novel bone motions by matching, retrieving, and blending existing ones. Collectively, these three steps enable us to compress the Level of Dynamics of 4D shapes into compact skelebones that are both controllable and expressive. We validate our approach on both synthetic and real-world datasets, achieving significant improvements in reanimation performance across unseen poses-with 17.3% PSNR gains over Linear Blend Skinning (LBS) and 21.7% over Bag-of-Bones (BoB)-while maintaining excellent reconstruction fidelity, particularly for characters exhibiting complex non-rigid surface dynamics. Our Partwise Motion Matching algorithm demonstrates strong generalization to both Gaussian and mesh representations, especially under low-data regime (~1000 frames), achieving 48.4% RMSE improvement over robust LBS and outperforming GRU- and MLP-based learning methods by >20%. Code will be made publicly available for research purposes at cookmaker.cn/gaussianimate.",
+                "summary": "Large language models (LLMs) undergo alignment training to avoid harmful behaviors, yet the resulting safeguards remain brittle: jailbreaks routinely bypass them, and fine-tuning on narrow domains can induce ``emergent misalignment'' that generalizes broadly. Whether this brittleness reflects a fundamental lack of coherent internal organization for harmfulness remains unclear. Here we use targeted weight pruning as a causal intervention to probe the internal organization of harmfulness in LLMs. We find that harmful content generation depends on a compact set of weights that are general across harm types and distinct from benign capabilities. Aligned models exhibit a greater compression of harm generation weights than unaligned counterparts, indicating that alignment reshapes harmful representations internally--despite the brittleness of safety guardrails at the surface level. This compression explains emergent misalignment: if weights of harmful capabilities are compressed, fine-tuning that engages these weights in one domain can trigger broad misalignment. Consistent with this, pruning harm generation weights in a narrow domain substantially reduces emergent misalignment. Notably, LLMs harmful generation capability is dissociated from how they recognize and explain such content. Together, these results reveal a coherent internal structure for harmfulness in LLMs that may serve as a foundation for more principled approaches to safety.",
                 "category": [
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-09T17:59:59Z",
-                "arxiv:comment": "Page: https://cookmaker.cn/gaussianimate",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Jiaxin Wang"
-                    },
-                    {
-                        "name": "Dongxin Lyu"
-                    },
-                    {
-                        "name": "Zeyu Cai"
-                    },
-                    {
-                        "name": "Zhiyang Dou"
-                    },
-                    {
-                        "name": "Cheng Lin"
-                    },
-                    {
-                        "name": "Anpei Chen"
-                    },
-                    {
-                        "name": "Yuliang Xiu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.08545v1",
-                "title": "Act Wisely: Cultivating Meta-Cognitive Tool Use in Agentic Multimodal Models",
-                "updated": "2026-04-09T17:59:57Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.08545v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.08545v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The advent of agentic multimodal models has empowered systems to actively interact with external environments. However, current agents suffer from a profound meta-cognitive deficit: they struggle to arbitrate between leveraging internal knowledge and querying external utilities. Consequently, they frequently fall prey to blind tool invocation, resorting to reflexive tool execution even when queries are resolvable from the raw visual context. This pathological behavior precipitates severe latency bottlenecks and injects extraneous noise that derails sound reasoning. Existing reinforcement learning protocols attempt to mitigate this via a scalarized reward that penalizes tool usage. Yet, this coupled formulation creates an irreconcilable optimization dilemma: an aggressive penalty suppresses essential tool use, whereas a mild penalty is entirely subsumed by the variance of the accuracy reward during advantage normalization, rendering it impotent against tool overuse. To transcend this bottleneck, we propose HDPO, a framework that reframes tool efficiency from a competing scalar objective to a strictly conditional one. By eschewing reward scalarization, HDPO maintains two orthogonal optimization channels: an accuracy channel that maximizes task correctness, and an efficiency channel that enforces execution economy exclusively within accurate trajectories via conditional advantage estimation. This decoupled architecture naturally induces a cognitive curriculum-compelling the agent to first master task resolution before refining its self-reliance. Extensive evaluations demonstrate that our resulting model, Metis, reduces tool invocations by orders of magnitude while simultaneously elevating reasoning accuracy.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-09T17:59:57Z",
-                "arxiv:comment": "Project Page: https://Accio-Lab.github.io/Metis",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Shilin Yan"
-                    },
-                    {
-                        "name": "Jintao Tong"
-                    },
-                    {
-                        "name": "Hongwei Xue"
-                    },
-                    {
-                        "name": "Xiaojun Tang"
-                    },
-                    {
-                        "name": "Yangyang Wang"
-                    },
-                    {
-                        "name": "Kunyu Shi"
-                    },
-                    {
-                        "name": "Guannan Zhang"
-                    },
-                    {
-                        "name": "Ruixuan Li"
-                    },
-                    {
-                        "name": "Yixiong Zou"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.08544v1",
-                "title": "SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds",
-                "updated": "2026-04-09T17:59:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.08544v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.08544v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Robotic manipulation with deformable objects represents a data-intensive regime in embodied learning, where shape, contact, and topology co-evolve in ways that far exceed the variability of rigids. Although simulation promises relief from the cost of real-world data acquisition, prevailing sim-to-real pipelines remain rooted in rigid-body abstractions, producing mismatched geometry, fragile soft dynamics, and motion primitives poorly suited for cloth interaction. We posit that simulation fails not for being synthetic, but for being ungrounded. To address this, we introduce SIM1, a physics-aligned real-to-sim-to-real data engine that grounds simulation in the physical world. Given limited demonstrations, the system digitizes scenes into metric-consistent twins, calibrates deformable dynamics through elastic modeling, and expands behaviors via diffusion-based trajectory generation with quality filtering. This pipeline transforms sparse observations into scaled synthetic supervision with near-demonstration fidelity. Experiments show that policies trained on purely synthetic data achieve parity with real-data baselines at a 1:15 equivalence ratio, while delivering 90% zero-shot success and 50% generalization gains in real-world deployment. These results validate physics-aligned simulation as scalable supervision for deformable manipulation and a practical pathway for data-efficient policy learning.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -162,126 +42,266 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CV",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-09T17:59:52Z",
-                "arxiv:comment": "Website: https://internrobotics.github.io/sim1.github.io/",
+                "published": "2026-04-10T17:58:31Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Yunsong Zhou"
+                        "name": "Hadas Orgad"
                     },
                     {
-                        "name": "Hangxu Liu"
+                        "name": "Boyi Wei"
                     },
                     {
-                        "name": "Xuekun Jiang"
+                        "name": "Kaden Zheng"
                     },
                     {
-                        "name": "Xing Shen"
+                        "name": "Martin Wattenberg"
                     },
                     {
-                        "name": "Yuanzhen Zhou"
+                        "name": "Peter Henderson"
                     },
                     {
-                        "name": "Hui Wang"
+                        "name": "Seraphina Goldfarb-Tarrant"
                     },
                     {
-                        "name": "Baole Fang"
-                    },
-                    {
-                        "name": "Yang Tian"
-                    },
-                    {
-                        "name": "Mulin Yu"
-                    },
-                    {
-                        "name": "Qiaojun Yu"
-                    },
-                    {
-                        "name": "Li Ma"
-                    },
-                    {
-                        "name": "Hengjie Li"
-                    },
-                    {
-                        "name": "Hanqing Wang"
-                    },
-                    {
-                        "name": "Jia Zeng"
-                    },
-                    {
-                        "name": "Jiangmiao Pang"
+                        "name": "Yonatan Belinkov"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.08543v1",
-                "title": "E-3DPSM: A State Machine for Event-Based Egocentric 3D Human Pose Estimation",
-                "updated": "2026-04-09T17:59:52Z",
+                "id": "http://arxiv.org/abs/2604.09543v1",
+                "title": "ANTIC: Adaptive Neural Temporal In-situ Compressor",
+                "updated": "2026-04-10T17:58:16Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.08543v1",
+                        "@href": "https://arxiv.org/abs/2604.09543v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.08543v1",
+                        "@href": "https://arxiv.org/pdf/2604.09543v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Event cameras offer multiple advantages in monocular egocentric 3D human pose estimation from head-mounted devices, such as millisecond temporal resolution, high dynamic range, and negligible motion blur. Existing methods effectively leverage these properties, but suffer from low 3D estimation accuracy, insufficient in many applications (e.g., immersive VR/AR). This is due to the design not being fully tailored towards event streams (e.g., their asynchronous and continuous nature), leading to high sensitivity to self-occlusions and temporal jitter in the estimates. This paper rethinks the setting and introduces E-3DPSM, an event-driven continuous pose state machine for event-based egocentric 3D human pose estimation. E-3DPSM aligns continuous human motion with fine-grained event dynamics; it evolves latent states and predicts continuous changes in 3D joint positions associated with observed events, which are fused with direct 3D human pose predictions, leading to stable and drift-free final 3D pose reconstructions. E-3DPSM runs in real-time at 80 Hz on a single workstation and sets a new state of the art in experiments on two benchmarks, improving accuracy by up to 19% (MPJPE) and temporal stability by up to 2.7x. See our project page for the source code and trained models.",
+                "summary": "The persistent storage requirements for high-resolution, spatiotemporally evolving fields governed by large-scale and high-dimensional partial differential equations (PDEs) have reached the petabyte-to-exabyte scale. Transient simulations modeling Navier-Stokes equations, magnetohydrodynamics, plasma physics, or binary black hole mergers generate data volumes that are prohibitive for modern high-performance computing (HPC) infrastructures. To address this bottleneck, we introduce ANTIC (Adaptive Neural Temporal in situ Compressor), an end-to-end in situ compression pipeline. ANTIC consists of an adaptive temporal selector tailored to high-dimensional physics that identifies and filters informative snapshots at simulation time, combined with a spatial neural compression module based on continual fine-tuning that learns residual updates between adjacent snapshots using neural fields. By operating in a single streaming pass, ANTIC enables a combined compression of temporal and spatial components and effectively alleviates the need for explicit on-disk storage of entire time-evolved trajectories. Experimental results demonstrate how storage reductions of several orders of magnitude relate to physics accuracy.",
                 "category": {
-                    "@term": "cs.CV",
+                    "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-09T17:59:52Z",
-                "arxiv:comment": "20 pages; 14 figures and 14 tables; CVPR 2026; project page: https://4dqv.mpi-inf.mpg.de/E-3DPSM/",
+                "published": "2026-04-10T17:58:16Z",
+                "arxiv:comment": "31 pages, 19 figures, 9 Tables",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Mayur Deshmukh"
+                        "name": "Sandeep S. Cranganore"
                     },
                     {
-                        "name": "Hiroyasu Akada"
+                        "name": "Andrei Bodnar"
                     },
                     {
-                        "name": "Helge Rhodin"
+                        "name": "Gianluca Galleti"
                     },
                     {
-                        "name": "Christian Theobalt"
+                        "name": "Fabian Paischer"
                     },
                     {
-                        "name": "Vladislav Golyanik"
+                        "name": "Johannes Brandstetter"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.08539v1",
-                "title": "OpenVLThinkerV2: A Generalist Multimodal Reasoning Model for Multi-domain Visual Tasks",
-                "updated": "2026-04-09T17:59:39Z",
+                "id": "http://arxiv.org/abs/2604.09538v1",
+                "title": "Explicit Block Encoding of Difference-of-Gaussian Operators on a Periodic Grid",
+                "updated": "2026-04-10T17:55:51Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.08539v1",
+                        "@href": "https://arxiv.org/abs/2604.09538v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.08539v1",
+                        "@href": "https://arxiv.org/pdf/2604.09538v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Group Relative Policy Optimization (GRPO) has emerged as the de facto Reinforcement Learning (RL) objective driving recent advancements in Multimodal Large Language Models. However, extending this success to open-source multimodal generalist models remains heavily constrained by two primary challenges: the extreme variance in reward topologies across diverse visual tasks, and the inherent difficulty of balancing fine-grained perception with multi-step reasoning capabilities. To address these issues, we introduce Gaussian GRPO (G$^2$RPO), a novel RL training objective that replaces standard linear scaling with non-linear distributional matching. By mathematically forcing the advantage distribution of any given task to strictly converge to a standard normal distribution, $\\mathcal{N}(0,1)$, G$^2$RPO theoretically ensures inter-task gradient equity, mitigates vulnerabilities to heavy-tail outliers, and offers symmetric update for positive and negative rewards. Leveraging the enhanced training stability provided by G$^2$RPO, we introduce two task-level shaping mechanisms to seamlessly balance perception and reasoning. First, response length shaping dynamically elicits extended reasoning chains for complex queries while enforce direct outputs to bolster visual grounding. Second, entropy shaping tightly bounds the model's exploration zone, effectively preventing both entropy collapse and entropy explosion. Integrating these methodologies, we present OpenVLThinkerV2, a highly robust, general-purpose multimodal model. Extensive evaluations across 18 diverse benchmarks demonstrate its superior performance over strong open-source and leading proprietary frontier models.",
+                "summary": "The Difference-of-Gaussian (DoG) is a widely used operator across applications, including image processing (feature and edge detection), quantum machine learning, and finite-difference methods (approximations of the Laplacian-of-Gaussian). In this paper, we construct an explicit quantum block encoding of the DoG operator on a periodic grid, exploiting its natural probabilistic structure. The central observation is that the DoG admits a natural decomposition to two normalized Gaussian distributions, each preparable by explicit and efficient circuits, with the negation encoded using a single Pauli-$Z$ gate on a branch-indicator qubit. This enables the operator's block encoding to be directly mapped to the Linear Combination of Unitaries framework without requiring signed amplitude loading, quantum random-access memory, or any other black-box oracles. The proposed method achieves a constant subnormalization factor $\u03bb= 2$ independent of the grid size $N$, the spatial dimension $D$, and the stencil width. Additionally, we show that the DoG operator is diagonalized by the discrete Fourier basis, which allows us to derive an exact closed-form expression for the block-encoding success probability in terms of the input signal's power spectrum, weighted by the operator's transfer function. Finally, we prove that the expression reduces to $O(h^4)$ scaling with respect to grid spacing $h$ as the periodic grid becomes finer. This implementation provides an explicit construction method for a tunable, wide-stencil bandpass filter whose frequency response is controlled by two Gaussian scale parameters.",
+                "category": {
+                    "@term": "quant-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-10T17:55:51Z",
+                "arxiv:comment": "9 pages, 4 figures",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Jishnu Mahmud"
+                    },
+                    {
+                        "name": "John Winship"
+                    },
+                    {
+                        "name": "Tom Lash"
+                    },
+                    {
+                        "name": "James Ostrowski"
+                    },
+                    {
+                        "name": "Rebekah Herrman"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.09537v1",
+                "title": "Case-Grounded Evidence Verification: A Framework for Constructing Evidence-Sensitive Supervision",
+                "updated": "2026-04-10T17:55:38Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.09537v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.09537v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Evidence-grounded reasoning requires more than attaching retrieved text to a prediction: a model should make decisions that depend on whether the provided evidence supports the target claim. In practice, this often fails because supervision is weak, evidence is only loosely tied to the claim, and evaluation does not test evidence dependence directly. We introduce case-grounded evidence verification, a general framework in which a model receives a local case context, external evidence, and a structured claim, and must decide whether the evidence supports the claim for that case. Our key contribution is a supervision construction procedure that generates explicit support examples together with semantically controlled non-support examples, including counterfactual wrong-state and topic-related negatives, without manual evidence annotation. We instantiate the framework in radiology and train a standard verifier on the resulting support task. The learned verifier substantially outperforms both case-only and evidence-only baselines, remains strong under correct evidence, and collapses when evidence is removed or swapped, indicating genuine evidence dependence. This behavior transfers across unseen evidence articles and an external case distribution, though performance degrades under evidence-source shift and remains sensitive to backbone choice. Overall, the results suggest that a major bottleneck in evidence grounding is not only model capacity, but the lack of supervision that encodes the causal role of evidence.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-10T17:55:38Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Soroosh Tayebi Arasteh"
+                    },
+                    {
+                        "name": "Mehdi Joodaki"
+                    },
+                    {
+                        "name": "Mahshad Lotfinia"
+                    },
+                    {
+                        "name": "Sven Nebelung"
+                    },
+                    {
+                        "name": "Daniel Truhn"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.09532v1",
+                "title": "Seeing is Believing: Robust Vision-Guided Cross-Modal Prompt Learning under Label Noise",
+                "updated": "2026-04-10T17:48:56Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.09532v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.09532v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Prompt learning is a parameter-efficient approach for vision-language models, yet its robustness under label noise is less investigated. Visual content contains richer and more reliable semantic information, which remains more robust under label noise. However, the prompt itself is highly susceptible to label noise. Motivated by this intuition, we propose VisPrompt, a lightweight and robust vision-guided prompt learning framework for noisy-label settings. Specifically, we exploit a cross-modal attention mechanism to reversely inject visual semantics into prompt representations. This enables the prompt tokens to selectively aggregate visual information relevant to the current sample, thereby improving robustness by anchoring prompt learning to stable instance-level visual evidence and reducing the influence of noisy supervision. To address the instability caused by using the same way of injecting visual information for all samples, despite differences in the quality of their visual cues, we further introduce a lightweight conditional modulation mechanism to adaptively control the strength of visual information injection, which strikes a more robust balance between text-side semantic priors and image-side instance evidence. The proposed framework effectively suppresses the noise-induced disturbances, reduce instability in prompt updates, and alleviate memorization of mislabeled samples. VisPrompt significantly improves robustness while keeping the pretrained VLM backbone frozen and introducing only a small amount of additional trainable parameters. Extensive experiments under synthetic and real-world label noise demonstrate that VisPrompt generally outperforms existing baselines on seven benchmark datasets and achieves stronger robustness. Our code is publicly available at https://github.com/gezbww/Vis_Prompt.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-10T17:48:56Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zibin Geng"
+                    },
+                    {
+                        "name": "Xuefeng Jiang"
+                    },
+                    {
+                        "name": "Jia Li"
+                    },
+                    {
+                        "name": "Zheng Li"
+                    },
+                    {
+                        "name": "Tian Wen"
+                    },
+                    {
+                        "name": "Lvhua Wu"
+                    },
+                    {
+                        "name": "Sheng Sun"
+                    },
+                    {
+                        "name": "Yuwei Wang"
+                    },
+                    {
+                        "name": "Min Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.09529v1",
+                "title": "VL-Calibration: Decoupled Confidence Calibration for Large Vision-Language Models Reasoning",
+                "updated": "2026-04-10T17:47:19Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.09529v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.09529v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large Vision Language Models (LVLMs) achieve strong multimodal reasoning but frequently exhibit hallucinations and incorrect responses with high certainty, which hinders their usage in high-stakes domains. Existing verbalized confidence calibration methods, largely developed for text-only LLMs, typically optimize a single holistic confidence score using binary answer-level correctness. This design is mismatched to LVLMs: an incorrect prediction may arise from perceptual failures or from reasoning errors given correct perception, and a single confidence conflates these sources while visual uncertainty is often dominated by language priors. To address these issues, we propose VL-Calibration, a reinforcement learning framework that explicitly decouples confidence into visual and reasoning confidence. To supervise visual confidence without ground-truth perception labels, we introduce an intrinsic visual certainty estimation that combines (i) visual grounding measured by KL-divergence under image perturbations and (ii) internal certainty measured by token entropy. We further propose token-level advantage reweighting to focus optimization on tokens based on visual certainty, suppressing ungrounded hallucinations while preserving valid perception. Experiments on thirteen benchmarks show that VL-Calibration effectively improves calibration while boosting visual reasoning accuracy, and it generalizes to out-of-distribution benchmarks across model scales and architectures.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -296,304 +316,194 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-09T17:59:39Z",
-                "arxiv:comment": "code at: https://github.com/uclanlp/openvlthinker",
+                "published": "2026-04-10T17:47:19Z",
+                "arxiv:comment": "24 pages, ACL 2026 Main. Repository: https://github.com/Mr-Loevan/VL-Calibration",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Wenbo Hu"
+                        "name": "Wenyi Xiao"
                     },
                     {
-                        "name": "Xin Chen"
+                        "name": "Xinchi Xu"
                     },
                     {
-                        "name": "Yan Gao-Tian"
-                    },
-                    {
-                        "name": "Yihe Deng"
-                    },
-                    {
-                        "name": "Nanyun Peng"
-                    },
-                    {
-                        "name": "Kai-Wei Chang"
+                        "name": "Leilei Gan"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.08538v1",
-                "title": "ParseBench: A Document Parsing Benchmark for AI Agents",
-                "updated": "2026-04-09T17:59:36Z",
+                "id": "http://arxiv.org/abs/2604.09528v1",
+                "title": "Machine Learning Phase Field Reconstruction in a Bose-Einstein Condensate",
+                "updated": "2026-04-10T17:47:11Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.08538v1",
+                        "@href": "https://arxiv.org/abs/2604.09528v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.08538v1",
+                        "@href": "https://arxiv.org/pdf/2604.09528v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "AI agents are changing the requirements for document parsing. What matters is \\emph{semantic correctness}: parsed output must preserve the structure and meaning needed for autonomous decisions, including correct table structure, precise chart data, semantically meaningful formatting, and visual grounding. Existing benchmarks do not fully capture this setting for enterprise automation, relying on narrow document distributions and text-similarity metrics that miss agent-critical failures. We introduce \\textbf{ParseBench}, a benchmark of ${\\sim}2{,}000$ human-verified pages from enterprise documents spanning insurance, finance, and government, organized around five capability dimensions: tables, charts, content faithfulness, semantic formatting, and visual grounding. Across 14 methods spanning vision-language models, specialized document parsers, and LlamaParse, the benchmark reveals a fragmented capability landscape: no method is consistently strong across all five dimensions. LlamaParse Agentic achieves the highest overall score at \\agenticoverall\\%, and the benchmark highlights the remaining capability gaps across current systems. Dataset and evaluation code are available on \\href{https://huggingface.co/datasets/llamaindex/ParseBench}{HuggingFace} and \\href{https://github.com/run-llama/ParseBench}{GitHub}.",
+                "summary": "A basic challenge in experimental physics is the extraction of information related to variables that are not directly measured. The challenge is particularly severe in quantum systems where one may be interested in correlations of operators that are not diagonal in the measurement basis. In this paper we take a step towards addressing this issue in the context of Boson superfluids, where standard in-situ imaging yields only the spatially resolved density, leaving the phase field - crucial for identifying topological defects such as vortices and confirming superfluidity - indirectly encoded. Previous work has shown that the location of vortices in the phase field may be detected, but has not solved the problems of fully reconstructing the phase or identifying the charge (vortex vs. antivortex). This paper shows that a combination of a deep machine learning (ML) model and classical computer vision post-processing steps can address this gap. We use realistic snapshots of the thermal state of a two-dimensional BEC in a harmonic trap using synthetic data obtained from projected Gross-Pitaevskii equation simulations to train a U-Net-based architecture to infer the absolute values of the phase field gradients from an observed density field, and then employ a separate ML model to locate the positions of the vortex cores and a post-processing graphical analysis to determine with high accuracy the phase field, including the quantized charge of each vortex.",
                 "category": {
-                    "@term": "cs.CV",
+                    "@term": "cond-mat.quant-gas",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-09T17:59:36Z",
+                "published": "2026-04-10T17:47:11Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cond-mat.quant-gas"
                 },
                 "author": [
                     {
-                        "name": "Boyang Zhang"
+                        "name": "Jackson Lee"
                     },
                     {
-                        "name": "Sebasti\u00e1n G. Acosta"
-                    },
-                    {
-                        "name": "Preston Carlson"
-                    },
-                    {
-                        "name": "Sacha Bron"
-                    },
-                    {
-                        "name": "Pierre-Lo\u00efc Doulcet"
-                    },
-                    {
-                        "name": "Simon Suo"
+                        "name": "Andrew J Millis"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.08537v1",
-                "title": "Meta-learning In-Context Enables Training-Free Cross Subject Brain Decoding",
-                "updated": "2026-04-09T17:59:32Z",
+                "id": "http://arxiv.org/abs/2604.09527v1",
+                "title": "Envisioning the Future, One Step at a Time",
+                "updated": "2026-04-10T17:46:05Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.08537v1",
+                        "@href": "https://arxiv.org/abs/2604.09527v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.08537v1",
+                        "@href": "https://arxiv.org/pdf/2604.09527v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Visual decoding from brain signals is a key challenge at the intersection of computer vision and neuroscience, requiring methods that bridge neural representations and computational models of vision. A field-wide goal is to achieve generalizable, cross-subject models. A major obstacle towards this goal is the substantial variability in neural representations across individuals, which has so far required training bespoke models or fine-tuning separately for each subject. To address this challenge, we introduce a meta-optimized approach for semantic visual decoding from fMRI that generalizes to novel subjects without any fine-tuning. By simply conditioning on a small set of image-brain activation examples from the new individual, our model rapidly infers their unique neural encoding patterns to facilitate robust and efficient visual decoding. Our approach is explicitly optimized for in-context learning of the new subject's encoding model and performs decoding by hierarchical inference, inverting the encoder. First, for multiple brain regions, we estimate the per-voxel visual response encoder parameters by constructing a context over multiple stimuli and responses. Second, we construct a context consisting of encoder parameters and response values over multiple voxels to perform aggregated functional inversion. We demonstrate strong cross-subject and cross-scanner generalization across diverse visual backbones without retraining or fine-tuning. Moreover, our approach requires neither anatomical alignment nor stimulus overlap. This work is a critical step towards a generalizable foundation model for non-invasive brain decoding.",
+                "summary": "Accurately anticipating how complex, diverse scenes will evolve requires models that represent uncertainty, simulate along extended interaction chains, and efficiently explore many plausible futures. Yet most existing approaches rely on dense video or latent-space prediction, expending substantial capacity on dense appearance rather than on the underlying sparse trajectories of points in the scene. This makes large-scale exploration of future hypotheses costly and limits performance when long-horizon, multi-modal motion is essential. We address this by formulating the prediction of open-set future scene dynamics as step-wise inference over sparse point trajectories. Our autoregressive diffusion model advances these trajectories through short, locally predictable transitions, explicitly modeling the growth of uncertainty over time. This dynamics-centric representation enables fast rollout of thousands of diverse futures from a single image, optionally guided by initial constraints on motion, while maintaining physical plausibility and long-range coherence. We further introduce OWM, a benchmark for open-set motion prediction based on diverse in-the-wild videos, to evaluate accuracy and variability of predicted trajectory distributions under real-world uncertainty. Our method matches or surpasses dense simulators in predictive accuracy while achieving orders-of-magnitude higher sampling speed, making open-set future prediction both scalable and practical. Project page: http://compvis.github.io/myriad.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-10T17:46:05Z",
+                "arxiv:comment": "CVPR 2026. For code and models, see http://compvis.github.io/myriad",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Stefan Andreas Baumann"
+                    },
+                    {
+                        "name": "Jannik Wiese"
+                    },
+                    {
+                        "name": "Tommaso Martorella"
+                    },
+                    {
+                        "name": "Mahdi M. Kalayeh"
+                    },
+                    {
+                        "name": "Bj\u00f6rn Ommer"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.09523v1",
+                "title": "Event-Driven Temporal Graph Networks for Asynchronous Multi-Agent Cyber Defense in NetForge_RL",
+                "updated": "2026-04-10T17:44:29Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.09523v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.09523v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The transition of Multi-Agent Reinforcement Learning (MARL) policies from simulated cyber wargames to operational Security Operations Centers (SOCs) is fundamentally bottlenecked by the Sim2Real gap. Legacy simulators abstract away network protocol physics, rely on synchronous ticks, and provide clean state vectors rather than authentic, noisy telemetry. To resolve these limitations, we introduce NetForge_RL: a high-fidelity cyber operations simulator that reformulates network defense as an asynchronous, continuous-time Partially Observable Semi-Markov Decision Process (POSMDP). NetForge enforces Zero-Trust Network Access (ZTNA) constraints and requires defenders to process NLP-encoded SIEM telemetry. Crucially, NetForge bridges the Sim2Real gap natively via a dual-mode engine, allowing high-throughput MARL training in a mock hypervisor and zero-shot evaluation against live exploits in a Docker hypervisor. To navigate this continuous-time POSMDP, we propose Continuous-Time Graph MARL (CT-GMARL), utilizing fixed-step Neural Ordinary Differential Equations (ODEs) to process irregularly sampled alerts. We evaluate our framework against discrete baselines (R-MAPPO, QMIX). Empirical results demonstrate that CT-GMARL achieves a converged median Blue reward of 57,135 - a 2.0x improvement over R-MAPPO and 2.1x over QMIX. Critically, CT-GMARL restores 12x more compromised services than the strongest baseline by avoiding the \"scorched earth\" failure mode of trivially minimizing risk by destroying network utility. On zero-shot transfer to the live Docker environment, CT-GMARL policies achieve a median reward of 98,026, validating the Sim2Real bridge.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "q-bio.NC",
+                        "@term": "cs.MA",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-09T17:59:32Z",
-                "arxiv:comment": "Accepted to CVPR 2026, website: https://github.com/ezacngm/brainCodec",
+                "published": "2026-04-10T17:44:29Z",
+                "arxiv:comment": "26 pages, 14 figures, 5 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Igor Jankowski"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.09519v1",
+                "title": "Toward World Models for Epidemiology",
+                "updated": "2026-04-10T17:39:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.09519v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.09519v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "World models have emerged as a unifying paradigm for learning latent dynamics, simulating counterfactual futures, and supporting planning under uncertainty. In this paper, we argue that computational epidemiology is a natural and underdeveloped setting for world models. This is because epidemic decision-making requires reasoning about latent disease burden, imperfect and policy-dependent surveillance signals, and intervention effects are mediated by adaptive human behavior. We introduce a conceptual framework for epidemiological world models, formulating epidemics as controlled, partially observed dynamical systems in which (i) the true epidemic state is latent, (ii) observations are noisy and endogenous to policy, and (iii) interventions act as sequential actions whose effects propagate through behavioral and social feedback. We present three case studies that illustrate why explicit world modeling is necessary for policy-relevant reasoning: strategic misreporting in behavioral surveillance, systematic delays in time-lagged signals such as hospitalizations and deaths, and counterfactual intervention analysis where identical histories diverge under alternative action sequences.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-10T17:39:20Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Mu Nan"
+                        "name": "Zeeshan Memon"
                     },
                     {
-                        "name": "Muquan Yu"
+                        "name": "Yiqi Su"
                     },
                     {
-                        "name": "Weijian Mai"
+                        "name": "Christo Kurisummoottil Thomas"
                     },
                     {
-                        "name": "Jacob S. Prince"
+                        "name": "Walid Saad"
                     },
                     {
-                        "name": "Hossein Adeli"
+                        "name": "Liang Zhao"
                     },
                     {
-                        "name": "Rui Zhang"
-                    },
-                    {
-                        "name": "Jiahang Cao"
-                    },
-                    {
-                        "name": "Benjamin Becker"
-                    },
-                    {
-                        "name": "John A. Pyles"
-                    },
-                    {
-                        "name": "Margaret M. Henderson"
-                    },
-                    {
-                        "name": "Chunfeng Song"
-                    },
-                    {
-                        "name": "Nikolaus Kriegeskorte"
-                    },
-                    {
-                        "name": "Michael J. Tarr"
-                    },
-                    {
-                        "name": "Xiaoqing Hu"
-                    },
-                    {
-                        "name": "Andrew F. Luo"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.08535v1",
-                "title": "Fail2Drive: Benchmarking Closed-Loop Driving Generalization",
-                "updated": "2026-04-09T17:59:18Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.08535v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.08535v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Generalization under distribution shift remains a central bottleneck for closed-loop autonomous driving. Although simulators like CARLA enable safe and scalable testing, existing benchmarks rarely measure true generalization: they typically reuse training scenarios at test time. Success can therefore reflect memorization rather than robust driving behavior. We introduce Fail2Drive, the first paired-route benchmark for closed-loop generalization in CARLA, with 200 routes and 17 new scenario classes spanning appearance, layout, behavioral, and robustness shifts. Each shifted route is matched with an in-distribution counterpart, isolating the effect of the shift and turning qualitative failures into quantitative diagnostics. Evaluating multiple state-of-the-art models reveals consistent degradation, with an average success-rate drop of 22.8\\%. Our analysis uncovers unexpected failure modes, such as ignoring objects clearly visible in the LiDAR and failing to learn the fundamental concepts of free and occupied space. To accelerate follow-up work, Fail2Drive includes an open-source toolbox for creating new scenarios and validating solvability via a privileged expert policy. Together, these components establish a reproducible foundation for benchmarking and improving closed-loop driving generalization. We open-source all code, data, and tools at https://github.com/autonomousvision/fail2drive .",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-09T17:59:18Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Simon Gerstenecker"
-                    },
-                    {
-                        "name": "Andreas Geiger"
-                    },
-                    {
-                        "name": "Katrin Renz"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.08534v1",
-                "title": "ActiveGlasses: Learning Manipulation with Active Vision from Ego-centric Human Demonstration",
-                "updated": "2026-04-09T17:59:08Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.08534v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.08534v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large-scale real-world robot data collection is a prerequisite for bringing robots into everyday deployment. However, existing pipelines often rely on specialized handheld devices to bridge the embodiment gap, which not only increases operator burden and limits scalability, but also makes it difficult to capture the naturally coordinated perception-manipulation behaviors of human daily interaction. This challenge calls for a more natural system that can faithfully capture human manipulation and perception behaviors while enabling zero-shot transfer to robotic platforms. We introduce ActiveGlasses, a system for learning robot manipulation from ego-centric human demonstrations with active vision. A stereo camera mounted on smart glasses serves as the sole perception device for both data collection and policy inference: the operator wears it during bare-hand demonstrations, and the same camera is mounted on a 6-DoF perception arm during deployment to reproduce human active vision. To enable zero-transfer, we extract object trajectories from demonstrations and use an object-centric point-cloud policy to jointly predict manipulation and head movement. Across several challenging tasks involving occlusion and precise interaction, ActiveGlasses achieves zero-shot transfer with active vision, consistently outperforms strong baselines under the same hardware setup, and generalizes across two robot platforms.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-09T17:59:08Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Yanwen Zou"
-                    },
-                    {
-                        "name": "Chenyang Shi"
-                    },
-                    {
-                        "name": "Wenye Yu"
-                    },
-                    {
-                        "name": "Han Xue"
-                    },
-                    {
-                        "name": "Jun Lv"
-                    },
-                    {
-                        "name": "Ye Pan"
-                    },
-                    {
-                        "name": "Chuan Wen"
-                    },
-                    {
-                        "name": "Cewu Lu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.08532v1",
-                "title": "Self-Improving 4D Perception via Self-Distillation",
-                "updated": "2026-04-09T17:59:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.08532v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.08532v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large-scale multi-view reconstruction models have made remarkable progress, but most existing approaches still rely on fully supervised training with ground-truth 3D/4D annotations. Such annotations are expensive and particularly scarce for dynamic scenes, limiting scalability. We propose SelfEvo, a self-improving framework that continually improves pretrained multi-view reconstruction models using unlabeled videos. SelfEvo introduces a self-distillation scheme using spatiotemporal context asymmetry, enabling self-improvement for learning-based 4D perception without external annotations. We systematically study design choices that make self-improvement effective, including loss signals, forms of asymmetry, and other training strategies. Across eight benchmarks spanning diverse datasets and domains, SelfEvo consistently improves pretrained baselines and generalizes across base models (e.g. VGGT and $\u03c0^3$), with significant gains on dynamic scenes. Overall, SelfEvo achieves up to 36.5% relative improvement in video depth estimation and 20.1% in camera estimation, without using any labeled data. Project Page: https://self-evo.github.io/.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-09T17:59:04Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Nan Huang"
-                    },
-                    {
-                        "name": "Pengcheng Yu"
-                    },
-                    {
-                        "name": "Weijia Zeng"
-                    },
-                    {
-                        "name": "James M. Rehg"
-                    },
-                    {
-                        "name": "Angjoo Kanazawa"
-                    },
-                    {
-                        "name": "Haiwen Feng"
-                    },
-                    {
-                        "name": "Qianqian Wang"
+                        "name": "Naren Ramakrishnan"
                     }
                 ]
             }
