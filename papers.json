@@ -5,228 +5,139 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-17T02:00:05Z",
+        "updated": "2026-04-17T04:53:48Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "560898",
+        "opensearch:totalResults": "560935",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.15174v1",
-                "title": "MambaSL: Exploring Single-Layer Mamba for Time Series Classification",
-                "updated": "2026-04-16T15:51:16Z",
+                "id": "http://arxiv.org/abs/2604.15312v1",
+                "title": "Bidirectional Cross-Modal Prompting for Event-Frame Asymmetric Stereo",
+                "updated": "2026-04-16T17:59:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.15174v1",
+                        "@href": "https://arxiv.org/abs/2604.15312v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.15174v1",
+                        "@href": "https://arxiv.org/pdf/2604.15312v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Despite recent advances in state space models (SSMs) such as Mamba across various sequence domains, research on their standalone capacity for time series classification (TSC) has remained limited. We propose MambaSL, a framework that minimally redesigns the selective SSM and projection layers of a single-layer Mamba, guided by four TSC-specific hypotheses. To address benchmarking limitations -- restricted configurations, partial University of East Anglia (UEA) dataset coverage, and insufficiently reproducible setups -- we re-evaluate 20 strong baselines across all 30 UEA datasets under a unified protocol. As a result, MambaSL achieves state-of-the-art performance with statistically significant average improvements, while ensuring reproducibility via public checkpoints for all evaluated models. Together with visualizations, these results demonstrate the potential of Mamba-based architectures as a TSC backbone.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-16T15:51:16Z",
-                "arxiv:comment": "accepted at ICLR 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Yoo-Min Jung"
-                    },
-                    {
-                        "name": "Leekyung Kim"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.15173v1",
-                "title": "Boundary-Centric Active Learning for Temporal Action Segmentation",
-                "updated": "2026-04-16T15:50:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.15173v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.15173v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Temporal action segmentation (TAS) demands dense temporal supervision, yet most of the annotation cost in untrimmed videos is spent identifying and refining action transitions, where segmentation errors concentrate and small temporal shifts disproportionately degrade segmental metrics. We introduce B-ACT, a clip-budgeted active learning framework that explicitly allocates supervision to these high-leverage boundary regions. B-ACT operates in a hierarchical two-stage loop: (i) it ranks and queries unlabeled videos using predictive uncertainty, and (ii) within each selected video, it detects candidate transitions from the current model predictions and selects the top-$K$ boundaries via a novel boundary score that fuses neighborhood uncertainty, class ambiguity, and temporal predictive dynamics. Importantly, our annotation protocol requests labels for only the boundary frames while still training on boundary-centered clips to exploit temporal context through the model's receptive field. Extensive experiments on GTEA, 50Salads, and Breakfast demonstrate that boundary-centric supervision delivers strong label efficiency and consistently surpasses representative TAS active learning baselines and prior state of the art under sparse budgets, with the largest gains on datasets where boundary placement dominates edit and overlap-based F1 scores.",
+                "summary": "Conventional frame-based cameras capture rich contextual information but suffer from limited temporal resolution and motion blur in dynamic scenes. Event cameras offer an alternative visual representation with higher dynamic range free from such limitations. The complementary characteristics of the two modalities make event-frame asymmetric stereo promising for reliable 3D perception under fast motion and challenging illumination. However, the modality gap often leads to marginalization of domain-specific cues essential for cross-modal stereo matching. In this paper, we introduce Bi-CMPStereo, a novel bidirectional cross-modal prompting framework that fully exploits semantic and structural features from both domains for robust matching. Our approach learns finely aligned stereo representations within a target canonical space and integrates complementary representations by projecting each modality into both event and frame domains. Extensive experiments demonstrate that our approach significantly outperforms state-of-the-art methods in accuracy and generalization.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-16T15:50:21Z",
+                "published": "2026-04-16T17:59:58Z",
+                "arxiv:comment": "CVPR 2026. Code URL: https://github.com/xnh97/Bi-CMPStereo",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Halil Ismail Helvaci"
+                        "name": "Ninghui Xu"
                     },
                     {
-                        "name": "Sen-ching Samson Cheung"
+                        "name": "Fabio Tosi"
+                    },
+                    {
+                        "name": "Lihui Wang"
+                    },
+                    {
+                        "name": "Jiawei Han"
+                    },
+                    {
+                        "name": "Luca Bartolomei"
+                    },
+                    {
+                        "name": "Zhiting Yao"
+                    },
+                    {
+                        "name": "Matteo Poggi"
+                    },
+                    {
+                        "name": "Stefano Mattoccia"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.15171v1",
-                "title": "An Analysis of Regularization and Fokker-Planck Residuals in Diffusion Models for Image Generation",
-                "updated": "2026-04-16T15:48:40Z",
+                "id": "http://arxiv.org/abs/2604.15308v1",
+                "title": "RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework",
+                "updated": "2026-04-16T17:59:44Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.15171v1",
+                        "@href": "https://arxiv.org/abs/2604.15308v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.15171v1",
+                        "@href": "https://arxiv.org/pdf/2604.15308v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent work has shown that diffusion models trained with the denoising score matching (DSM) objective often violate the Fokker--Planck (FP) equation that governs the evolution of the true data density. Directly penalizing these deviations in the objective function reduces their magnitude but introduces a significant computational overhead. It is also observed that enforcing strict adherence to the FP equation does not necessarily lead to improvements in the quality of the generated samples, as often the best results are obtained with weaker FP regularization. In this paper, we investigate whether simpler penalty terms can provide similar benefits. We empirically analyze several lightweight regularizers, study their effect on FP residuals and generation quality, and show that the benefits of FP regularization are available at substantially lower computational cost. Our code is available at https://github.com/OnnoNiemann/fp_diffusion_analysis.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-16T15:48:40Z",
-                "arxiv:comment": "Accepted at IJCNN 2026 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works",
+                "summary": "High-level autonomous driving requires motion planners capable of modeling multimodal future uncertainties while remaining robust in closed-loop interactions. Although diffusion-based planners are effective at modeling complex trajectory distributions, they often suffer from stochastic instabilities and the lack of corrective negative feedback when trained purely with imitation learning. To address these issues, we propose RAD-2, a unified generator-discriminator framework for closed-loop planning. Specifically, a diffusion-based generator is used to produce diverse trajectory candidates, while an RL-optimized discriminator reranks these candidates according to their long-term driving quality. This decoupled design avoids directly applying sparse scalar rewards to the full high-dimensional trajectory space, thereby improving optimization stability. To further enhance reinforcement learning, we introduce Temporally Consistent Group Relative Policy Optimization, which exploits temporal coherence to alleviate the credit assignment problem. In addition, we propose On-policy Generator Optimization, which converts closed-loop feedback into structured longitudinal optimization signals and progressively shifts the generator toward high-reward trajectory manifolds. To support efficient large-scale training, we introduce BEV-Warp, a high-throughput simulation environment that performs closed-loop evaluation directly in Bird's-Eye View feature space via spatial warping. RAD-2 reduces the collision rate by 56% compared with strong diffusion-based planners. Real-world deployment further demonstrates improved perceived safety and driving smoothness in complex urban traffic.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-16T17:59:44Z",
+                "arxiv:comment": "Project page: https://hgao-cv.github.io/RAD-2",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Onno Niemann"
+                        "name": "Hao Gao"
                     },
                     {
-                        "name": "Gonzalo Mart\u00ednez Mu\u00f1oz"
+                        "name": "Shaoyu Chen"
                     },
                     {
-                        "name": "Alberto Su\u00e1rez Gonzalez"
+                        "name": "Yifan Zhu"
+                    },
+                    {
+                        "name": "Yuehao Song"
+                    },
+                    {
+                        "name": "Wenyu Liu"
+                    },
+                    {
+                        "name": "Qian Zhang"
+                    },
+                    {
+                        "name": "Xinggang Wang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.15169v1",
-                "title": "Assessing the Potential of Masked Autoencoder Foundation Models in Predicting Downhole Metrics from Surface Drilling Data",
-                "updated": "2026-04-16T15:47:16Z",
+                "id": "http://arxiv.org/abs/2604.15306v1",
+                "title": "Generalization in LLM Problem Solving: The Case of the Shortest Path",
+                "updated": "2026-04-16T17:59:43Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.15169v1",
+                        "@href": "https://arxiv.org/abs/2604.15306v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.15169v1",
+                        "@href": "https://arxiv.org/pdf/2604.15306v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Oil and gas drilling operations generate extensive time-series data from surface sensors, yet accurate real-time prediction of critical downhole metrics remains challenging due to the scarcity of labelled downhole measurements. This systematic mapping study reviews thirteen papers published between 2015 and 2025 to assess the potential of Masked Autoencoder Foundation Models (MAEFMs) for predicting downhole metrics from surface drilling data. The review identifies eight commonly collected surface metrics and seven target downhole metrics. Current approaches predominantly employ neural network architectures such as artificial neural networks (ANNs) and long short-term memory (LSTM) networks, yet no studies have explored MAEFMs despite their demonstrated effectiveness in time-series modeling. MAEFMs offer distinct advantages through self-supervised pre-training on abundant unlabeled data, enabling multi-task prediction and improved generalization across wells. This research establishes that MAEFMs represent a technically feasible but unexplored opportunity for drilling analytics, recommending future empirical validation of their performance against existing models and exploration of their broader applicability in oil and gas operations.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-16T15:47:16Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Aleksander Berezowski"
-                    },
-                    {
-                        "name": "Hassan Hassanzadeh"
-                    },
-                    {
-                        "name": "Gouri Ginde"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.15167v1",
-                "title": "When Flat Minima Fail: Characterizing INT4 Quantization Collapse After FP32 Convergence",
-                "updated": "2026-04-16T15:46:36Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.15167v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.15167v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Post-training quantization (PTQ) assumes that a well-converged model is a quantization-ready model. We show this assumption fails in a structured, measurable, and previously uncharacterized way. Using a calibration-free per-group INT4 probe applied to all 154 publicly available Pythia-160m training checkpoints, we identify a three-phase divergence structure: a rapid-learning phase where both FP32 perplexity and quantization robustness improve together, a meta-stable plateau lasting roughly 70,000 steps where FP32 perplexity stagnates but INT4 gap remains bounded, and an explosive divergence phase where the INT4 gap compounds from 11% to 517% while FP32 perplexity barely moves. Critically, this divergence begins not when the learning rate starts decaying, but precisely when FP32 perplexity converges a finer-grained onset predictor that implies post-convergence weight updates, rather than decay magnitude alone, are the proximate cause. We further show that INT8 quantization is entirely immune throughout all three phases, constraining the mechanism to the coarseness of the 16-level INT4 grid specifically, and rule out weight outlier accumulation as the mechanism via direct kurtosis measurement. Finally, we conduct a controlled fork experiment from the pre-divergence checkpoint comparing three learning rate schedules (cosine continuation, SGDR warm restarts, and our proposed Oscillatory Lock-In) across nine independent runs. SGDR uniformly accelerates divergence (0/9 pairwise wins against cosine), while OLI's settled cool phases reduce the INT4 gap by 2.2 percentage points on average (t = -5.46, p < 0.0001), demonstrating that schedule amplitude calibration, not oscillation alone, determines whether perturbation helps or hurts. Our code, probe implementation, and all 154-checkpoint audit results are released publicly.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-16T15:46:36Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": {
-                    "name": "Marcus Armstrong"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.15166v1",
-                "title": "Class Unlearning via Depth-Aware Removal of Forget-Specific Directions",
-                "updated": "2026-04-16T15:46:02Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.15166v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.15166v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Machine unlearning aims to remove targeted knowledge from a trained model without the cost of retraining from scratch. In class unlearning, however, reducing accuracy on forget classes does not necessarily imply true forgetting: forgotten information can remain encoded in internal representations, and apparent forgetting may arise from classifier-head suppression rather than representational removal. We show that existing class-unlearning methods often exhibit weak or negative selectivity, preserve forget-class structure in deep representations, or rely heavily on final-layer bias shifts. We then introduce DAMP (Depth-Aware Modulation by Projection), a one-shot, closed-form weight-surgery method that removes forget-specific directions from a pretrained network without gradient-based optimization. At each stage, DAMP computes class prototypes in the input space of the next learnable operator, extracts forget directions as residuals relative to retain-class prototypes, and applies a projection-based update to reduce downstream sensitivity to those directions. To preserve utility, DAMP uses a parameter-free depth-aware scaling rule derived from probe separability, applying smaller edits in early layers and larger edits in deeper layers. The method naturally extends to multi-class forgetting through low-rank subspace removal. Across MNIST, CIFAR-10, CIFAR-100, and Tiny ImageNet, and across convolutional and transformer architectures, DAMP more closely resembles the retraining gold standard than some of the prior methods, improving selective forgetting while better preserving retain-class performance and reducing residual forget-class structure in deep layers.",
+                "summary": "Whether language models can systematically generalize remains actively debated. Yet empirical performance is jointly shaped by multiple factors such as training data, training paradigms, and inference-time strategies, making failures difficult to interpret. We introduce a controlled synthetic environment based on shortest-path planning, a canonical composable sequential optimization problem. The setup enables clean separation of these factors and supports two orthogonal axes of generalization: spatial transfer to unseen maps and length scaling to longer-horizon problems. We find that models exhibit strong spatial transfer but consistently fail under length scaling due to recursive instability. We further analyze how distinct stages of the learning pipeline influence systematic problem-solving: for example, data coverage sets capability limits; reinforcement learning improves training stability but does not expand those limits; and inference-time scaling enhances performance but cannot rescue length-scaling failures.",
                 "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
@@ -236,183 +147,43 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-16T15:46:02Z",
-                "arxiv:comment": "Accepted to the CVPR 2026 Workshop on Machine Unlearning for Vision (MUV)",
+                "published": "2026-04-16T17:59:43Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Arman Hatami"
+                        "name": "Yao Tong"
                     },
                     {
-                        "name": "Romina Aalishah"
+                        "name": "Jiayuan Ye"
                     },
                     {
-                        "name": "Ilya E. Monosov"
+                        "name": "Anastasia Borovykh"
+                    },
+                    {
+                        "name": "Reza Shokri"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.15165v1",
-                "title": "Fabricator or dynamic translator?",
-                "updated": "2026-04-16T15:45:25Z",
+                "id": "http://arxiv.org/abs/2604.15302v1",
+                "title": "Diagnosing LLM Judge Reliability: Conformal Prediction Sets and Transitivity Violations",
+                "updated": "2026-04-16T17:58:21Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.15165v1",
+                        "@href": "https://arxiv.org/abs/2604.15302v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.15165v1",
+                        "@href": "https://arxiv.org/pdf/2604.15302v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "LLMs are proving to be adept at machine translation although due to their generative nature they may at times overgenerate in various ways. These overgenerations are different from the neurobabble seen in NMT and range from LLM self-explanations, to risky confabulations, to appropriate explanations, where the LLM is able to act as a human translator would, enabling greater comprehension for the target audience. Detecting and determining the exact nature of the overgenerations is a challenging task. We detail different strategies we have explored for our work in a commercial setting, and present our results.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-16T15:45:25Z",
-                "arxiv:comment": "Published here: https://chomps2025.github.io/accepted_papers.html",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Lisa Vasileva"
-                    },
-                    {
-                        "name": "Karin Sim"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.15161v1",
-                "title": "A Robust Optimization Approach for Scheduling with Uncertain Start-Time Dependent Costs",
-                "updated": "2026-04-16T15:39:49Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.15161v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.15161v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In this work, we study a single-machine scheduling problem that aims at minimizing the total cost of a schedule subject to start-time dependent costs. This framework naturally captures scenarios where costs fluctuate throughout the day, such as time-varying energy or labor prices. To model more realistic scenarios, we assume that these costs lie within a budgeted uncertainty set and propose a two-stage robust optimization approach. In a first stage, the order in which activities should be executed is decided. After a cost scenario has been revealed, the starting times for each activity are established, subject to the ordering from the first stage. We demonstrate that the proposed problem is NP-hard and not approximable, implying the complexity of its robust counterpart. Furthermore, we show that already evaluating a first-stage solution is NP-hard when the uncertainty set is discrete. We develop models and solution methods for both continuous and discrete budgeted uncertainty. In computational experiments, we compare these approaches and demonstrate the advantages of including uncertainty beforehand.",
-                "category": {
-                    "@term": "math.OC",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-16T15:39:49Z",
-                "arxiv:primary_category": {
-                    "@term": "math.OC"
-                },
-                "author": [
-                    {
-                        "name": "Sof\u00eda Rodr\u00edguez-Ballesteros"
-                    },
-                    {
-                        "name": "Javier Alcaraz"
-                    },
-                    {
-                        "name": "Laura Anton-Sanchez"
-                    },
-                    {
-                        "name": "Marc Goerigk"
-                    },
-                    {
-                        "name": "Dorothee Henke"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.15149v1",
-                "title": "LLMs Gaming Verifiers: RLVR can Lead to Reward Hacking",
-                "updated": "2026-04-16T15:30:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.15149v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.15149v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "As reinforcement Learning with Verifiable Rewards (RLVR) has become the dominant paradigm for scaling reasoning capabilities in LLMs, a new failure mode emerges: LLMs gaming verifiers. We study this phenomenon on inductive reasoning tasks, where models must induce and output logical rules. We find that RLVR-trained models systematically abandon rule induction. Instead of learning generalizable patterns (e.g., ``trains carrying red cars go east''), they enumerate instance-level labels, producing outputs that pass verifiers without capturing the relational patterns required by the task. We show that this behavior is not a failure of understanding but a form of reward hacking: imperfect verifiers that check only extensional correctness admit false positives. To detect such shortcuts, we introduce Isomorphic Perturbation Testing (IPT), which evaluates a single model output under both extensional and isomorphic verification, where the latter enforces invariance under logically isomorphic tasks. While genuine rule induction remains invariant, shortcut strategies fail. We find that shortcut behavior is specific to RLVR-trained reasoning models (e.g., GPT-5, Olmo3) and absent in non-RLVR models (e.g., GPT-4o, GPT-4.5, Ministral). Moreover, shortcut prevalence increases with task complexity and inference-time compute. In controlled training experiments, extensional verification directly induces shortcut strategies, while isomorphic verification eliminates them. These results show that RLVR can incentivize reward hacking not only through overt manipulation but also by exploiting what the verifier fails to enforce.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-16T15:30:10Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Lukas Helff"
-                    },
-                    {
-                        "name": "Quentin Delfosse"
-                    },
-                    {
-                        "name": "David Steinmann"
-                    },
-                    {
-                        "name": "Ruben H\u00e4rle"
-                    },
-                    {
-                        "name": "Hikaru Shindo"
-                    },
-                    {
-                        "name": "Patrick Schramowski"
-                    },
-                    {
-                        "name": "Wolfgang Stammer"
-                    },
-                    {
-                        "name": "Kristian Kersting"
-                    },
-                    {
-                        "name": "Felix Friedrich"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.15148v1",
-                "title": "IG-Search: Step-Level Information Gain Rewards for Search-Augmented Reasoning",
-                "updated": "2026-04-16T15:22:47Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.15148v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.15148v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning has emerged as an effective paradigm for training large language models to perform search-augmented reasoning. However, existing approaches rely on trajectory-level rewards that cannot distinguish precise search queries from vague or redundant ones within a rollout group, and collapse to a near-zero gradient signal whenever every sampled trajectory fails. In this paper, we propose IG-Search, a reinforcement learning framework that introduces a step-level reward based on Information Gain (IG). For each search step, IG measures how much the retrieved documents improve the model's confidence in the gold answer relative to a counterfactual baseline of random documents, thereby reflecting the effectiveness of the underlying search query. This signal is fed back to the corresponding search-query tokens via per-token advantage modulation in GRPO, enabling fine-grained, step-level credit assignment within a rollout. Unlike prior step-level methods that require either externally annotated intermediate supervision or shared environment states across trajectories, IG-Search derives its signals from the policy's own generation probabilities, requiring no intermediate annotations beyond standard question-answer pairs. Experiments on seven single-hop and multi-hop QA benchmarks demonstrate that IG-Search achieves an average EM of 0.430 with Qwen2.5-3B, outperforming the strongest trajectory-level baseline (MR-Search) by 1.6 points and the step-level method GiGPO by 0.9 points on average across benchmarks, with particularly pronounced gains on multi-hop reasoning tasks. Despite introducing a dense step-level signal, IG-Search adds only ~6.4% to per-step training wall-clock time over the trajectory-level baseline and leaves inference latency unchanged, while still providing a meaningful gradient signal even when every sampled trajectory answers incorrectly.",
+                "summary": "LLM-as-judge frameworks are increasingly used for automatic NLG evaluation, yet their per-instance reliability remains poorly understood. We present a two-pronged diagnostic toolkit applied to SummEval: $\\textbf{(1)}$ a transitivity analysis that reveals widespread per-input inconsistency masked by low aggregate violation rates ($\\bar\u03c1 = 0.8$-$4.1\\%$), with $33$-$67\\%$ of documents exhibiting at least one directed 3-cycle; and $\\textbf{(2)}$ split conformal prediction sets over 1-5 Likert scores providing theoretically-guaranteed $\\geq(1{-}\u03b1)$ coverage, with set width serving as a per-instance reliability indicator ($r_s = {+}0.576$, $N{=}1{,}918$, $p < 10^{-100}$, pooled across all judges). Critically, prediction set width shows consistent cross-judge agreement ($\\bar{r} = 0.32$-$0.38$), demonstrating it captures document-level difficulty rather than judge-specific noise. Across four judges and four criteria, both diagnostics converge: criterion matters more than judge, with relevance judged most reliably (avg. set size $\\approx 3.0$) and coherence moderately so (avg. set size $\\approx 3.9$), while fluency and consistency remain unreliable (avg. set size $\\approx 4.9$). We release all code, prompts, and cached results.",
                 "category": [
                     {
                         "@term": "cs.AI",
@@ -423,41 +194,320 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.IR",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-16T15:22:47Z",
+                "published": "2026-04-16T17:58:21Z",
+                "arxiv:comment": "Under Review",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Zihan Liang"
+                        "name": "Manan Gupta"
                     },
                     {
-                        "name": "Yufei Ma"
+                        "name": "Dhruv Kumar"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.15297v1",
+                "title": "Benchmarking Optimizers for MLPs in Tabular Deep Learning",
+                "updated": "2026-04-16T17:57:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.15297v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Ben Chen"
+                        "@href": "https://arxiv.org/pdf/2604.15297v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "MLP is a heavily used backbone in modern deep learning (DL) architectures for supervised learning on tabular data, and AdamW is the go-to optimizer used to train tabular DL models. Unlike architecture design, however, the choice of optimizer for tabular DL has not been examined systematically, despite new optimizers showing promise in other domains. To fill this gap, we benchmark \\Noptimizers optimizers on \\Ndatasets tabular datasets for training MLP-based models in the standard supervised learning setting under a shared experiment protocol. Our main finding is that the Muon optimizer consistently outperforms AdamW, and thus should be considered a strong and practical choice for practitioners and researchers, if the associated training efficiency overhead is affordable. Additionally, we find exponential moving average of model weights to be a simple yet effective technique that improves AdamW on vanilla MLPs, though its effect is less consistent across model variants.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-16T17:57:02Z",
+                "arxiv:comment": "Code: https://github.com/yandex-research/tabular-dl-optimizers",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Yury Gorishniy"
                     },
                     {
-                        "name": "Zhipeng Qian"
+                        "name": "Ivan Rubachev"
                     },
                     {
-                        "name": "Huangyu Dai"
+                        "name": "Dmitrii Feoktistov"
                     },
                     {
-                        "name": "Lingtao Mao"
+                        "name": "Artem Babenko"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.15291v1",
+                "title": "AD4AD: Benchmarking Visual Anomaly Detection Models for Safer Autonomous Driving",
+                "updated": "2026-04-16T17:54:53Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.15291v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Xuxin Zhang"
+                        "@href": "https://arxiv.org/pdf/2604.15291v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The reliability of a machine vision system for autonomous driving depends heavily on its training data distribution. When a vehicle encounters significantly different conditions, such as atypical obstacles, its perceptual capabilities can degrade substantially. Unlike many domains where errors carry limited consequences, failures in autonomous driving translate directly into physical risk for passengers, pedestrians, and other road users. To address this challenge, we explore Visual Anomaly Detection (VAD) as a solution. VAD enables the identification of anomalous objects not present during training, allowing the system to alert the driver when an unfamiliar situation is detected. Crucially, VAD models produce pixel-level anomaly maps that can guide driver attention to specific regions of concern without requiring any prior assumptions about the nature or form of the hazard. We benchmark eight state-of-the-art VAD methods on AnoVox, the largest synthetic dataset for anomaly detection in autonomous driving. In particular, we evaluate performance across four backbone architectures spanning from large networks to lightweight ones such as MobileNet and DeiT-Tiny. Our results demonstrate that VAD transfers effectively to road scenes. Notably, Tiny-Dinomaly achieves the best accuracy-efficiency trade-off for edge deployment, matching full-scale localization performance at a fraction of the memory cost. This study represents a concrete step toward safer, more responsible deployment of autonomous vehicles, ultimately improving protection for passengers, pedestrians, and all road users.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Chenyi Lei"
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-16T17:54:53Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Fabrizio Genilotti"
                     },
                     {
-                        "name": "Wenwu Ou"
+                        "name": "Arianna Stropeni"
+                    },
+                    {
+                        "name": "Gionata Grotto"
+                    },
+                    {
+                        "name": "Francesco Borsatti"
+                    },
+                    {
+                        "name": "Manuel Barusco"
+                    },
+                    {
+                        "name": "Davide Dalle Pezze"
+                    },
+                    {
+                        "name": "Gian Antonio Susto"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.15289v1",
+                "title": "Abstract Sim2Real through Approximate Information States",
+                "updated": "2026-04-16T17:53:16Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.15289v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.15289v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In recent years, reinforcement learning (RL) has shown remarkable success in robotics when a fast and accurate simulator is available for a given task. When using RL and simulation, more simulator realism is generally beneficial but becomes harder to obtain as robots are deployed in increasingly complex and widescale domains. In such settings, simulators will likely fail to model all relevant details of a given target task and this observation motivates the study of sim2real with simulators that leave out key task details. In this paper, we formalize and study the abstract sim2real problem: given an abstract simulator that models a target task at a coarse level of abstraction, how can we train a policy with RL in the abstract simulator and successfully transfer it to the real-world? Our first contribution is to formalize this problem using the language of state abstraction from the RL literature. This framing shows that an abstract simulator can be grounded to match the target task if the grounded abstract dynamics take the history of states into account. Based on the formalism, we then introduce a method that uses real-world task data to correct the dynamics of the abstract simulator. We then show that this method enables successful policy transfer both in sim2sim and sim2real evaluation.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-16T17:53:16Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Yunfu Deng"
+                    },
+                    {
+                        "name": "Yuhao Li"
+                    },
+                    {
+                        "name": "Josiah P. Hanna"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.15285v1",
+                "title": "Structural interpretability in SVMs with truncated orthogonal polynomial kernels",
+                "updated": "2026-04-16T17:52:08Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.15285v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.15285v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We study post-training interpretability for Support Vector Machines (SVMs) built from truncated orthogonal polynomial kernels. Since the associated reproducing kernel Hilbert space is finite-dimensional and admits an explicit tensor-product orthonormal basis, the fitted decision function can be expanded exactly in intrinsic RKHS coordinates. This leads to Orthogonal Representation Contribution Analysis (ORCA), a diagnostic framework based on normalized Orthogonal Kernel Contribution (OKC) indices. These indices quantify how the squared RKHS norm of the classifier is distributed across interaction orders, total polynomial degrees, marginal coordinate effects, and pairwise contributions. The methodology is fully post-training and requires neither surrogate models nor retraining. We illustrate its diagnostic value on a synthetic double-spiral problem and on a real five-dimensional echocardiogram dataset. The results show that the proposed indices reveal structural aspects of model complexity that are not captured by predictive accuracy alone.",
+                "category": [
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-16T17:52:08Z",
+                "arxiv:primary_category": {
+                    "@term": "stat.ML"
+                },
+                "author": [
+                    {
+                        "name": "V\u00edctor Soto-Larrosa"
+                    },
+                    {
+                        "name": "Nuria Torrado"
+                    },
+                    {
+                        "name": "Edmundo J. Huertas"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.15284v1",
+                "title": "GlobalSplat: Efficient Feed-Forward 3D Gaussian Splatting via Global Scene Tokens",
+                "updated": "2026-04-16T17:52:06Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.15284v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.15284v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The efficient spatial allocation of primitives serves as the foundation of 3D Gaussian Splatting, as it directly dictates the synergy between representation compactness, reconstruction speed, and rendering fidelity. Previous solutions, whether based on iterative optimization or feed-forward inference, suffer from significant trade-offs between these goals, mainly due to the reliance on local, heuristic-driven allocation strategies that lack global scene awareness. Specifically, current feed-forward methods are largely pixel-aligned or voxel-aligned. By unprojecting pixels into dense, view-aligned primitives, they bake redundancy into the 3D asset. As more input views are added, the representation size increases and global consistency becomes fragile. To this end, we introduce GlobalSplat, a framework built on the principle of align first, decode later. Our approach learns a compact, global, latent scene representation that encodes multi-view input and resolves cross-view correspondences before decoding any explicit 3D geometry. Crucially, this formulation enables compact, globally consistent reconstructions without relying on pretrained pixel-prediction backbones or reusing latent features from dense baselines. Utilizing a coarse-to-fine training curriculum that gradually increases decoded capacity, GlobalSplat natively prevents representation bloat. On RealEstate10K and ACID, our model achieves competitive novel-view synthesis performance while utilizing as few as 16K Gaussians, significantly less than required by dense pipelines, obtaining a light 4MB footprint. Further, GlobalSplat enables significantly faster inference than the baselines, operating under 78 milliseconds in a single forward pass. Project page is available at https://r-itk.github.io/globalsplat/",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-16T17:52:06Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Roni Itkin"
+                    },
+                    {
+                        "name": "Noam Issachar"
+                    },
+                    {
+                        "name": "Yehonatan Keypur"
+                    },
+                    {
+                        "name": "Yehonatan Keypur"
+                    },
+                    {
+                        "name": "Anpei Chen"
+                    },
+                    {
+                        "name": "Sagie Benaim"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.15281v1",
+                "title": "R3D: Revisiting 3D Policy Learning",
+                "updated": "2026-04-16T17:50:37Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.15281v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.15281v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "3D policy learning promises superior generalization and cross-embodiment transfer, but progress has been hindered by training instabilities and severe overfitting, precluding the adoption of powerful 3D perception models. In this work, we systematically diagnose these failures, identifying the omission of 3D data augmentation and the adverse effects of Batch Normalization as primary causes. We propose a new architecture coupling a scalable transformer-based 3D encoder with a diffusion decoder, engineered specifically for stability at scale and designed to leverage large-scale pre-training. Our approach significantly outperforms state-of-the-art 3D baselines on challenging manipulation benchmarks, establishing a new and robust foundation for scalable 3D imitation learning. Project Page: https://r3d-policy.github.io/",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-16T17:50:37Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zhengdong Hong"
+                    },
+                    {
+                        "name": "Shenrui Wu"
+                    },
+                    {
+                        "name": "Haozhe Cui"
+                    },
+                    {
+                        "name": "Boyi Zhao"
+                    },
+                    {
+                        "name": "Ran Ji"
+                    },
+                    {
+                        "name": "Yiyang He"
+                    },
+                    {
+                        "name": "Hangxing Zhang"
+                    },
+                    {
+                        "name": "Zundong Ke"
+                    },
+                    {
+                        "name": "Jun Wang"
+                    },
+                    {
+                        "name": "Guofeng Zhang"
+                    },
+                    {
+                        "name": "Jiayuan Gu"
                     }
                 ]
             }
