@@ -5,33 +5,177 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-22T01:59:09Z",
+        "updated": "2026-04-22T04:49:29Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "562455",
+        "opensearch:totalResults": "562537",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.19485v1",
-                "title": "EVPO: Explained Variance Policy Optimization for Adaptive Critic Utilization in LLM Post-Training",
-                "updated": "2026-04-21T14:07:39Z",
+                "id": "http://arxiv.org/abs/2604.19748v1",
+                "title": "Tstars-Tryon 1.0: Robust and Realistic Virtual Try-On for Diverse Fashion Items",
+                "updated": "2026-04-21T17:59:49Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.19485v1",
+                        "@href": "https://arxiv.org/abs/2604.19748v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.19485v1",
+                        "@href": "https://arxiv.org/pdf/2604.19748v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Reinforcement learning (RL) for LLM post-training faces a fundamental design choice: whether to use a learned critic as a baseline for policy optimization. Classical theory favors critic-based methods such as PPO for variance reduction, yet critic-free alternatives like GRPO have gained widespread adoption due to their simplicity and competitive performance. We show that in sparse-reward settings, a learned critic can inject estimation noise that exceeds the state signal it captures, increasing rather than reducing advantage variance. By casting baseline selection as a Kalman filtering problem, we unify PPO and GRPO as two extremes of the Kalman gain and prove that explained variance (EV), computable from a single training batch, identifies the exact boundary: positive EV indicates the critic reduces variance, while zero or negative EV signals that it inflates variance. Building on this insight, we propose Explained Variance Policy Optimization (EVPO), which monitors batch-level EV at each training step and adaptively switches between critic-based and batch-mean advantage estimation, provably achieving no greater variance than the better of the two at every step. Across four tasks spanning classical control, agentic interaction, and mathematical reasoning, EVPO consistently outperforms both PPO and GRPO regardless of which fixed baseline is stronger on a given task. Further analysis confirms that the adaptive gating tracks critic maturation over training and that the theoretically derived zero threshold is empirically optimal.",
+                "summary": "Recent advances in image generation and editing have opened new opportunities for virtual try-on. However, existing methods still struggle to meet complex real-world demands. We present Tstars-Tryon 1.0, a commercial-scale virtual try-on system that is robust, realistic, versatile, and highly efficient. First, our system maintains a high success rate across challenging cases like extreme poses, severe illumination variations, motion blur, and other in-the-wild conditions. Second, it delivers highly photorealistic results with fine-grained details, faithfully preserving garment texture, material properties, and structural characteristics, while largely avoiding common AI-generated artifacts. Third, beyond apparel try-on, our model supports flexible multi-image composition (up to 6 reference images) across 8 fashion categories, with coordinated control over person identity and background. Fourth, to overcome the latency bottlenecks of commercial deployment, our system is heavily optimized for inference speed, delivering near real-time generation for a seamless user experience. These capabilities are enabled by an integrated system design spanning end-to-end model architecture, a scalable data engine, robust infrastructure, and a multi-stage training paradigm. Extensive evaluation and large-scale product deployment demonstrate that Tstars-Tryon1.0 achieves leading overall performance. To support future research, we also release a comprehensive benchmark. The model has been deployed at an industrial scale on the Taobao App, serving millions of users with tens of millions of requests.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-21T17:59:49Z",
+                "arxiv:comment": "24 pages, model evaluation report",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Mengting Chen"
+                    },
+                    {
+                        "name": "Zhengrui Chen"
+                    },
+                    {
+                        "name": "Yongchao Du"
+                    },
+                    {
+                        "name": "Zuan Gao"
+                    },
+                    {
+                        "name": "Taihang Hu"
+                    },
+                    {
+                        "name": "Jinsong Lan"
+                    },
+                    {
+                        "name": "Chao Lin"
+                    },
+                    {
+                        "name": "Yefeng Shen"
+                    },
+                    {
+                        "name": "Xingjian Wang"
+                    },
+                    {
+                        "name": "Zhao Wang"
+                    },
+                    {
+                        "name": "Zhengtao Wu"
+                    },
+                    {
+                        "name": "Xiaoli Xu"
+                    },
+                    {
+                        "name": "Zhengze Xu"
+                    },
+                    {
+                        "name": "Hao Yan"
+                    },
+                    {
+                        "name": "Mingzhou Zhang"
+                    },
+                    {
+                        "name": "Jun Zheng"
+                    },
+                    {
+                        "name": "Qinye Zhou"
+                    },
+                    {
+                        "name": "Xiaoyong Zhu"
+                    },
+                    {
+                        "name": "Bo Zheng"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.19741v1",
+                "title": "CityRAG: Stepping Into a City via Spatially-Grounded Video Generation",
+                "updated": "2026-04-21T17:59:03Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.19741v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.19741v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We address the problem of generating a 3D-consistent, navigable environment that is spatially grounded: a simulation of a real location. Existing video generative models can produce a plausible sequence that is consistent with a text (T2V) or image (I2V) prompt. However, the capability to reconstruct the real world under arbitrary weather conditions and dynamic object configurations is essential for downstream applications including autonomous driving and robotics simulation. To this end, we present CityRAG, a video generative model that leverages large corpora of geo-registered data as context to ground generation to the physical scene, while maintaining learned priors for complex motion and appearance changes. CityRAG relies on temporally unaligned training data, which teaches the model to semantically disentangle the underlying scene from its transient attributes. Our experiments demonstrate that CityRAG can generate coherent minutes-long, physically grounded video sequences, maintain weather and lighting conditions over thousands of frames, achieve loop closure, and navigate complex trajectories to reconstruct real-world geography.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-21T17:59:03Z",
+                "arxiv:comment": "Project page: cityrag.github.io",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Gene Chou"
+                    },
+                    {
+                        "name": "Charles Herrmann"
+                    },
+                    {
+                        "name": "Kyle Genova"
+                    },
+                    {
+                        "name": "Boyang Deng"
+                    },
+                    {
+                        "name": "Songyou Peng"
+                    },
+                    {
+                        "name": "Bharath Hariharan"
+                    },
+                    {
+                        "name": "Jason Y. Zhang"
+                    },
+                    {
+                        "name": "Noah Snavely"
+                    },
+                    {
+                        "name": "Philipp Henzler"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.19740v1",
+                "title": "Generalization at the Edge of Stability",
+                "updated": "2026-04-21T17:59:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.19740v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.19740v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Training modern neural networks often relies on large learning rates, operating at the edge of stability, where the optimization dynamics exhibit oscillatory and chaotic behavior. Empirically, this regime often yields improved generalization performance, yet the underlying mechanism remains poorly understood. In this work, we represent stochastic optimizers as random dynamical systems, which often converge to a fractal attractor set (rather than a point) with a smaller intrinsic dimension. Building on this connection and inspired by Lyapunov dimension theory, we introduce a novel notion of dimension, coined the `sharpness dimension', and prove a generalization bound based on this dimension. Our results show that generalization in the chaotic regime depends on the complete Hessian spectrum and the structure of its partial determinants, highlighting a complexity that cannot be captured by the trace or spectral norm considered in prior work. Experiments across various MLPs and transformers validate our theory while also providing new insights into the recently observed phenomenon of grokking.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -42,411 +186,191 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CL",
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-21T14:07:39Z",
+                "published": "2026-04-21T17:59:02Z",
+                "arxiv:comment": "Project page: https://circle-group.github.io/research/GATES",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Chengjun Pan"
+                        "name": "Mario Tuci"
                     },
                     {
-                        "name": "Shichun Liu"
+                        "name": "Caner Korkmaz"
                     },
                     {
-                        "name": "Jiahang Lin"
+                        "name": "Umut \u015eim\u015fekli"
                     },
                     {
-                        "name": "Dingwei Zhu"
-                    },
-                    {
-                        "name": "Jiazheng Zhang"
-                    },
-                    {
-                        "name": "Shihan Dou"
-                    },
-                    {
-                        "name": "Songyang Gao"
-                    },
-                    {
-                        "name": "Zhenhua Han"
-                    },
-                    {
-                        "name": "Binghai Wang"
-                    },
-                    {
-                        "name": "Rui Zheng"
-                    },
-                    {
-                        "name": "Xuanjing Huang"
-                    },
-                    {
-                        "name": "Tao Gui"
-                    },
-                    {
-                        "name": "Yansong Feng"
+                        "name": "Tolga Birdal"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.19481v1",
-                "title": "Fault-Tolerant Quantum Computing with Trapped Ions: The Walking Cat Architecture",
-                "updated": "2026-04-21T14:02:12Z",
+                "id": "http://arxiv.org/abs/2604.19738v1",
+                "title": "Phase Transitions in the Fluctuations of Functionals of Random Neural Networks",
+                "updated": "2026-04-21T17:58:39Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.19481v1",
+                        "@href": "https://arxiv.org/abs/2604.19738v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.19481v1",
+                        "@href": "https://arxiv.org/pdf/2604.19738v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We propose a fault-tolerant quantum computer architecture for trapped-ion devices, which we call the walking cat architecture. Our blueprint includes a compiler, a detailed description of all the quantum error-correction protocols, a micro-architecture, a sufficiently fast decoder, and thorough simulations. The backbone of the architecture is a cat factory, producing cat states distributed throughout the machine, which are consumed to perform logical operations. The walking cat architecture is based entirely on a modern quantum error-correction approach called low-density parity-check (LDPC) codes.\n  We identify promising instances of the walking cat architecture, such as (1) a simple architecture based on a single LDPC code, (2) a fast architecture based on fast logical gates relying on a [[70, 6, 9]] code, equipped with Clifford-frame tracking for any 6-qubit Clifford gate, and (3) a dense architecture based on a [[102, 22, 9]]] code encoding 22 logical qubits per memory block. Our dense architecture provides a design with 110 logical qubits executing about one million T gates per day using only 2,514 physical qubits. We estimate that the quantum Hamiltonian simulation of a Heisenberg model on 100 sites can be executed within one month with 10,000 physical qubits, including all shots required to achieve chemical accuracy, suggesting that such a device could enter the regime of classically intractable physics simulations.\n  Our design relies on hardware components that have been experimentally demonstrated on small devices. We emphasize simplicity over hypothetical performance to facilitate the practical realization of this machine. Based on this approach, we believe that a fault-tolerant quantum computer with hundreds of logical qubits capable of running millions of logical gates can be built in the near term, providing a platform to explore a broad range of applications.",
+                "summary": "We establish central and non-central limit theorems for sequences of functionals of the Gaussian output of an infinitely-wide random neural network on the d-dimensional sphere . We show that the asymptotic behaviour of these functionals as the depth of the network increases depends crucially on the fixed points of the covariance function, resulting in three distinct limiting regimes: convergence to the same functional of a limiting Gaussian field, convergence to a Gaussian distribution, convergence to a distribution in the Qth Wiener chaos. Our proofs exploit tools that are now classical (Hermite expansions, Diagram Formula, Stein-Malliavin techniques), but also ideas which have never been used in similar contexts: in particular, the asymptotic behaviour is determined by the fixed-point structure of the iterative operator associated with the covariance, whose nature and stability governs the different limiting regimes.",
                 "category": [
                     {
-                        "@term": "quant-ph",
+                        "@term": "math.PR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.ET",
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-21T14:02:12Z",
-                "arxiv:comment": "110 pages",
+                "published": "2026-04-21T17:58:39Z",
                 "arxiv:primary_category": {
-                    "@term": "quant-ph"
+                    "@term": "math.PR"
                 },
                 "author": [
                     {
-                        "name": "Felix Tripier"
+                        "name": "Simmaco Di Lillo"
                     },
                     {
-                        "name": "Woo Chang Chung"
+                        "name": "Leonardo Maini"
                     },
                     {
-                        "name": "Jacob Young"
-                    },
-                    {
-                        "name": "Safwan Alam"
-                    },
-                    {
-                        "name": "Bryce Bjork"
-                    },
-                    {
-                        "name": "Aharon Brodutch"
-                    },
-                    {
-                        "name": "Finn Lasse Buessen"
-                    },
-                    {
-                        "name": "Nolan J. Coble"
-                    },
-                    {
-                        "name": "Thomas Dellaert"
-                    },
-                    {
-                        "name": "Dmitri Maslov"
-                    },
-                    {
-                        "name": "Martin Roetteler"
-                    },
-                    {
-                        "name": "Edwin Tham"
-                    },
-                    {
-                        "name": "Mark Webster"
-                    },
-                    {
-                        "name": "Min Ye"
-                    },
-                    {
-                        "name": "John Gamble"
-                    },
-                    {
-                        "name": "Andrii Maksymov"
-                    },
-                    {
-                        "name": "J. P. Marceaux"
-                    },
-                    {
-                        "name": "Nicolas Delfosse"
+                        "name": "Domenico Marinucci"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.19480v1",
-                "title": "Deep sprite-based image models: An analysis",
-                "updated": "2026-04-21T14:02:08Z",
+                "id": "http://arxiv.org/abs/2604.19737v1",
+                "title": "Safe Continual Reinforcement Learning in Non-stationary Environments",
+                "updated": "2026-04-21T17:58:32Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.19480v1",
+                        "@href": "https://arxiv.org/abs/2604.19737v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.19480v1",
+                        "@href": "https://arxiv.org/pdf/2604.19737v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "While foundation models drive steady progress in image segmentation and diffusion algorithms compose always more realistic images, the seemingly simple problem of identifying recurrent patterns in a collection of images remains very much open. In this paper, we focus on sprite-based image decomposition models, which have shown some promise for clustering and image decomposition and are appealing because of their high interpretability. These models come in different flavors, need to be tailored to specific datasets, and struggle to scale to images with many objects. We dive into the details of their design, identify their core components, and perform an extensive analysis on clustering benchmarks. We leverage this analysis to propose a deep sprite-based image decomposition method that performs on par with state-of-the-art unsupervised class-aware image segmentation methods on the standard CLEVR benchmark, scales linearly with the number of objects, identifies explicitly object categories, and fully models images in an easily interpretable way.",
+                "summary": "Reinforcement learning (RL) offers a compelling data-driven paradigm for synthesizing controllers for complex systems when accurate physical models are unavailable; however, most existing control-oriented RL methods assume stationarity and, therefore, struggle in real-world non-stationary deployments where system dynamics and operating conditions can change unexpectedly. Moreover, RL controllers acting in physical environments must satisfy safety constraints throughout their learning and execution phases, rendering transient violations during adaptation unacceptable. Although continual RL and safe RL have each addressed non-stationarity and safety, respectively, their intersection remains comparatively unexplored, motivating the study of safe continual RL algorithms that can adapt over the system's lifetime while preserving safety. In this work, we systematically investigate safe continual reinforcement learning by introducing three benchmark environments that capture safety-critical continual adaptation and by evaluating representative approaches from safe RL, continual RL, and their combinations. Our empirical results reveal a fundamental tension between maintaining safety constraints and preventing catastrophic forgetting under non-stationary dynamics, with existing methods generally failing to achieve both objectives simultaneously. To address this shortcoming, we examine regularization-based strategies that partially mitigate this trade-off and characterize their benefits and limitations. Finally, we outline key open challenges and research directions toward developing safe, resilient learning-based controllers capable of sustained autonomous operation in changing environments.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-21T17:58:32Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Austin Coursey"
+                    },
+                    {
+                        "name": "Abel Diaz-Gonzalez"
+                    },
+                    {
+                        "name": "Marcos Quinones-Grueiro"
+                    },
+                    {
+                        "name": "Gautam Biswas"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.19736v1",
+                "title": "Generative Drifting for Conditional Medical Image Generation",
+                "updated": "2026-04-21T17:58:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.19736v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.19736v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Conditional medical image generation plays an important role in many clinically relevant imaging tasks. However, existing methods still face a fundamental challenge in balancing inference efficiency, patient-specific fidelity, and distribution-level plausibility, particularly in high-dimensional 3D medical imaging. In this work, we propose GDM, a generative drifting framework that reformulates deterministic medical image prediction as a multi-objective learning problem to jointly promote distribution-level plausibility and patient-specific fidelity while retaining one-step inference. GDM extends drifting to 3D medical imaging through an attractive-repulsive drift that minimizes the discrepancy between the generator pushforward and the target distribution. To enable stable drifting-based learning in 3D volumetric data, GDM constructs a multi-level feature bank from a medical foundation encoder to support reliable affinity estimation and drifting field computation across complementary global, local, and spatial representations. In addition, a gradient coordination strategy in the shared output space improves optimization balance under competing distribution-level and fidelity-oriented objectives. We evaluate the proposed framework on two representative tasks, MRI-to-CT synthesis and sparse-view CT reconstruction. Experimental results show that GDM consistently outperforms a wide range of baselines, including GAN-based, flow-matching-based, and SDE-based generative models, as well as supervised regression methods, while improving the balance among anatomical fidelity, quantitative reliability, perceptual realism, and inference efficiency. These findings suggest that GDM provides a practical and effective framework for conditional 3D medical image generation.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-21T14:02:08Z",
+                "published": "2026-04-21T17:58:26Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Zeynep Sonat Baltac\u0131"
+                        "name": "Zirong Li"
                     },
                     {
-                        "name": "Romain Loiseau"
+                        "name": "Siyuan Mei"
                     },
                     {
-                        "name": "Mathieu Aubry"
+                        "name": "Weiwen Wu"
+                    },
+                    {
+                        "name": "Andreas Maier"
+                    },
+                    {
+                        "name": "Lina G\u00f6lz"
+                    },
+                    {
+                        "name": "Yan Xia"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.19477v1",
-                "title": "Deep Supervised Contrastive Learning of Pitch Contours for Robust Pitch Accent Classification in Seoul Korean",
-                "updated": "2026-04-21T13:59:37Z",
+                "id": "http://arxiv.org/abs/2604.19734v1",
+                "title": "UniT: Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling",
+                "updated": "2026-04-21T17:57:27Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.19477v1",
+                        "@href": "https://arxiv.org/abs/2604.19734v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.19477v1",
+                        "@href": "https://arxiv.org/pdf/2604.19734v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The intonational structure of Seoul Korean has been defined with discrete tonal categories within the Autosegmental-Metrical model of intonational phonology. However, it is challenging to map continuous $F_0$ contours to these invariant categories due to variable $F_0$ realizations in real-world speech. Our paper proposes Dual-Glob, a deep supervised contrastive learning framework to robustly classify fine-grained pitch accent patterns in Seoul Korean. Unlike conventional local predictive models, our approach captures holistic $F_0$ contour shapes by enforcing structural consistency between clean and augmented views in a shared latent space. To this aim, we introduce the first large-scale benchmark dataset, consisting of manually annotated 10,093 Accentual Phrases in Seoul Korean. Experimental results show that our Dual-Glob significantly outperforms strong baseline models with state-of-the-art accuracy (77.75%) and F1-score (51.54%). Therefore, our work supports AM-based intonational phonology using data-driven methodology, showing that deep contrastive learning effectively captures holistic structural features of continuous $F_0$ contours.",
+                "summary": "Scaling humanoid foundation models is bottlenecked by the scarcity of robotic data. While massive egocentric human data offers a scalable alternative, bridging the cross-embodiment chasm remains a fundamental challenge due to kinematic mismatches. We introduce UniT (Unified Latent Action Tokenizer via Visual Anchoring), a framework that establishes a unified physical language for human-to-humanoid transfer. Grounded in the philosophy that heterogeneous kinematics share universal visual consequences, UniT employs a tri-branch cross-reconstruction mechanism: actions predict vision to anchor kinematics to physical outcomes, while vision reconstructs actions to filter out irrelevant visual confounders. Concurrently, a fusion branch synergies these purified modalities into a shared discrete latent space of embodiment-agnostic physical intents. We validate UniT across two paradigms: 1) Policy Learning (VLA-UniT): By predicting these unified tokens, it effectively leverages diverse human data to achieve state-of-the-art data efficiency and robust out-of-distribution (OOD) generalization on both humanoid simulation benchmark and real-world deployments, notably demonstrating zero-shot task transfer. 2) World Modeling (WM-UniT): By aligning cross-embodiment dynamics via unified tokens as conditions, it realizes direct human-to-humanoid action transfer. This alignment ensures that human data seamlessly translates into enhanced action controllability for humanoid video generation. Ultimately, by inducing a highly aligned cross-embodiment representation (empirically verified by t-SNE visualizations revealing the convergence of human and humanoid features into a shared manifold), UniT offers a scalable path to distill vast human knowledge into general-purpose humanoid capabilities.",
                 "category": [
                     {
-                        "@term": "cs.SD",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-21T13:59:37Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.SD"
-                },
-                "author": [
-                    {
-                        "name": "Hyunjung Joo"
-                    },
-                    {
-                        "name": "GyeongTaek Lee"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.19474v1",
-                "title": "Harmonizing MR Images Across 100+ Scanners: Multi-site Validation with Traveling Subjects and Real-world Protocols",
-                "updated": "2026-04-21T13:57:15Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.19474v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.19474v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reliable harmonization of heterogeneous magnetic resonance~(MR) image datasets, especially those acquired in pragmatic clinical trials, is critical to advance multi-center neuroimaging studies and translational machine learning in healthcare. We present an enhanced and rigorously validated version of the HACA3 harmonization algorithm, which we refer to as HACA3$^+$, incorporating key methodological enhancements: (1)~an improved artifact encoder to better isolate and mitigate image artifacts, (2)~background and foreground-sensitive attention mechanisms to increase harmonization specificity, and (3)~extensive training using data spanning 100+ scanners from 64 independent sites, providing a broader diversity of scanners than other harmonization methods. Our study focuses on four commonly acquired MR image contrasts (T1-weighted, T2-weighted, proton density, \\& fluid-attenuated inversion recovery), reflecting realistic clinical protocols. We perform inter-site harmonization experiments using traveling subjects to assess the generalization and robustness of the harmonization model. We compare the results of the publicly available version of HACA3 and our implementation, HACA3$^+$. Downstream relevance is further established through whole brain segmentation and image imputation. Finally, we justify each enhancement through an ablation experiment. Pre-trained weights and code for HACA3$^+$ are made publicly available at https://github.com/shays15/haca3-plus.",
-                "category": {
-                    "@term": "eess.IV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-21T13:57:15Z",
-                "arxiv:comment": "MIDL Validation Track 2026",
-                "arxiv:primary_category": {
-                    "@term": "eess.IV"
-                },
-                "author": [
-                    {
-                        "name": "Savannah P. Hays"
-                    },
-                    {
-                        "name": "Lianrui Zuo"
-                    },
-                    {
-                        "name": "Muhammad Faizyab Ali Chaudhary"
-                    },
-                    {
-                        "name": "Kathleen M. Bartz"
-                    },
-                    {
-                        "name": "Samuel W. Remedios"
-                    },
-                    {
-                        "name": "Jinwei Zhang"
-                    },
-                    {
-                        "name": "Jiachen Zhuo"
-                    },
-                    {
-                        "name": "Murat Bilgel"
-                    },
-                    {
-                        "name": "Shiv Saidha"
-                    },
-                    {
-                        "name": "Ellen M. Mowry"
-                    },
-                    {
-                        "name": "Scott D. Newsome"
-                    },
-                    {
-                        "name": "Jerry L. Prince"
-                    },
-                    {
-                        "name": "Blake E. Dewey"
-                    },
-                    {
-                        "name": "Aaron Carass"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.19471v1",
-                "title": "API Security Based on Automatic OpenAPI Mapping",
-                "updated": "2026-04-21T13:52:39Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.19471v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.19471v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "This paper presents Map Reduce Graph (MRG), a novel unsupervised method for modeling and securing HTTP REST APIs. MRG learns API structure from real-world traffic without prior knowledge or labels, automatically generating OpenAPI-compliant documentation by reconstructing routes, methods, and parameter formats. MRG enables real-time updates, explainable visualization, and anomaly detection, helping identify undocumented or evolving behaviors. It detects malformed requests, structural deviations, and injection attacks using graph-based validation and a deep autoencoder for payload analysis. Compared to state-of-the-art methods like HRAL and FT-ANN, MRG achieves up to 11.4% higher recall, over 20 times faster inference, and perfect precision (100%) on multiple API-layer attacks. Designed for dynamic microservice environments, MRG operates in three phases - training, updating, and detection - and integrates smoothly with observability and security tools. This work contributes a fully automated, efficient pipeline for real-time API visibility, schema inference, and anomaly detection without manual tuning or labeled data.",
-                "category": {
-                    "@term": "cs.CR",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-21T13:52:39Z",
-                "arxiv:comment": "none",
-                "arxiv:primary_category": {
-                    "@term": "cs.CR"
-                },
-                "author": [
-                    {
-                        "name": "Yarin Levi"
-                    },
-                    {
-                        "name": "Ran Dubin"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.19468v1",
-                "title": "Fairness Audits of Institutional Risk Models in Deployed ML Pipelines",
-                "updated": "2026-04-21T13:50:43Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.19468v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.19468v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Fairness audits of institutional risk models are critical for understanding how deployed machine learning pipelines allocate resources. Drawing on multi-year collaboration with Centennial College, where our prior ethnographic work introduced the ASP-HEI Cycle, we present a replica-based audit of a deployed Early Warning System (EWS), replicating its model using institutional training data and design specifications. We evaluate disparities by gender, age, and residency status across the full pipeline (training data, model predictions, and post-processing) using standard fairness metrics. Our audit reveals systematic misallocation: younger, male, and international students are disproportionately flagged for support, even when many ultimately succeed, while older and female students with comparable dropout risk are under-identified. Post-processing amplifies these disparities by collapsing heterogeneous probabilities into percentile-based risk tiers. This work provides a replicable methodology for auditing institutional ML systems and shows how disparities emerge and compound across stages, highlighting the importance of evaluating construct validity alongside statistical fairness. It contributes one empirical thread to a broader program investigating algorithms, student data, and power in higher education.",
-                "category": [
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.HC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-21T13:50:43Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CY"
-                },
-                "author": [
-                    {
-                        "name": "Kelly McConvey"
-                    },
-                    {
-                        "name": "Dipto Das"
-                    },
-                    {
-                        "name": "Maya Ghai"
-                    },
-                    {
-                        "name": "Angelina Zhai"
-                    },
-                    {
-                        "name": "Rosa Lee"
-                    },
-                    {
-                        "name": "Shion Guha"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.19464v1",
-                "title": "LePREC: Reasoning as Classification over Structured Factors for Assessing Relevance of Legal Issues",
-                "updated": "2026-04-21T13:42:24Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.19464v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.19464v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "More than half of the global population struggles to meet their civil justice needs due to limited legal resources. While Large Language Models (LLMs) have demonstrated impressive reasoning capabilities, significant challenges remain even at the foundational step of legal issue identification. To investigate LLMs' capabilities in this task, we constructed a dataset from 769 real-world Malaysian Contract Act court cases, using GPT-4o to extract facts and generate candidate legal issues, annotated by senior legal experts, which reveals a critical limitation: while LLMs generate diverse issue candidates, their precision remains inadequate (GPT-4o achieves only 62%). To address this gap, we propose LePREC (Legal Professional-inspired Reasoning Elicitation and Classification), a neuro-symbolic framework combining neural generation with structured statistical reasoning. LePREC consists of: (1) a neuro component leverages LLMs to transform legal descriptions into question-answer pairs representing diverse analytical factors, and (2) a symbolic component applies sparse linear models over these discrete features, learning explicit algebraic weights that identify the most informative reasoning factors. Unlike end-to-end neural approaches, LePREC achieves interpretability through transparent feature weighting while maintaining data efficiency through correlation-based statistical classification. Experiments show a 30-40% improvement over advanced LLM baselines, including GPT-4o and Claude, confirming that correlation-based factor-issue analysis offers a more data-efficient solution for relevance decisions.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -454,106 +378,196 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-21T13:42:24Z",
-                "arxiv:comment": "Accepted by ACL 2026 Main Conference",
+                "published": "2026-04-21T17:57:27Z",
+                "arxiv:comment": "Project page: https://xpeng-robotics.github.io/unit/",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Fanyu Wang"
+                        "name": "Boyu Chen"
                     },
                     {
-                        "name": "Xiaoxi Kang"
+                        "name": "Yi Chen"
                     },
                     {
-                        "name": "Paul Burgess"
+                        "name": "Lu Qiu"
                     },
                     {
-                        "name": "Aashish Srivastava"
+                        "name": "Jerry Bai"
                     },
                     {
-                        "name": "Chetan Arora"
+                        "name": "Yuying Ge"
                     },
                     {
-                        "name": "Adnan Trakic"
-                    },
-                    {
-                        "name": "Lay-Ki Soon"
-                    },
-                    {
-                        "name": "Md Khalid Hossain"
-                    },
-                    {
-                        "name": "Lizhen Qu"
+                        "name": "Yixiao Ge"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.19461v1",
-                "title": "Involuntary In-Context Learning: Exploiting Few-Shot Pattern Completion to Bypass Safety Alignment in GPT-5.4",
-                "updated": "2026-04-21T13:38:26Z",
+                "id": "http://arxiv.org/abs/2604.19730v1",
+                "title": "FASTER: Value-Guided Sampling for Fast RL",
+                "updated": "2026-04-21T17:52:17Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.19461v1",
+                        "@href": "https://arxiv.org/abs/2604.19730v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.19461v1",
+                        "@href": "https://arxiv.org/pdf/2604.19730v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Safety alignment in large language models relies on behavioral training that can be overridden when sufficiently strong in-context patterns compete with learned refusal behaviors. We introduce Involuntary In-Context Learning (IICL), an attack class that uses abstract operator framing with few-shot examples to force pattern completion that overrides safety training. Through 3479 probes across 10 OpenAI models, we identify the attack's effective components through a seven-experiment ablation study. Key findings: (1)~semantic operator naming achieves 100\\,\\% bypass rate (50/50, $p < 0.001$); (2)~the attack requires abstract framing, since identical examples in direct question-and-answer format yield 0\\,\\%; (3)~example ordering matters strongly (interleaved: 76\\,\\%, harmful-first: 6\\,\\%); (4)~temperature has no meaningful effect (46--56\\,\\% across 0.0--1.0). On the HarmBench benchmark, IICL achieves 24.0\\,\\% bypass $[18.6\\%, 30.4\\%]$ against GPT-5.4 with detailed 619-word responses, compared to 0.0\\,\\% for direct queries.",
-                "category": {
-                    "@term": "cs.CR",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-21T13:38:26Z",
+                "summary": "Some of the most performant reinforcement learning algorithms today can be prohibitively expensive as they use test-time scaling methods such as sampling multiple action candidates and selecting the best one. In this work, we propose FASTER, a method for getting the benefits of sampling-based test-time scaling of diffusion-based policies without the computational cost by tracing the performance gain of action samples back to earlier in the denoising process. Our key insight is that we can model the denoising of multiple action candidates and selecting the best one as a Markov Decision Process (MDP) where the goal is to progressively filter action candidates before denoising is complete. With this MDP, we can learn a policy and value function in the denoising space that predicts the downstream value of action candidates in the denoising process and filters them while maximizing returns. The result is a method that is lightweight and can be plugged into existing generative RL algorithms. Across challenging long-horizon manipulation tasks in online and batch-online RL, FASTER consistently improves the underlying policies and achieves the best overall performance among the compared methods. Applied to a pretrained VLA, FASTER achieves the same performance while substantially reducing training and inference compute requirements. Code is available at https://github.com/alexanderswerdlow/faster .",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-21T17:52:17Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CR"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Alex Polyakov"
+                        "name": "Perry Dong"
                     },
                     {
-                        "name": "Daniel Kuznetsov"
+                        "name": "Alexander Swerdlow"
+                    },
+                    {
+                        "name": "Dorsa Sadigh"
+                    },
+                    {
+                        "name": "Chelsea Finn"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.19457v1",
-                "title": "Four-Axis Decision Alignment for Long-Horizon Enterprise AI Agents",
-                "updated": "2026-04-21T13:37:19Z",
+                "id": "http://arxiv.org/abs/2604.19729v1",
+                "title": "FB-NLL: A Feature-Based Approach to Tackle Noisy Labels in Personalized Federated Learning",
+                "updated": "2026-04-21T17:51:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.19457v1",
+                        "@href": "https://arxiv.org/abs/2604.19729v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.19457v1",
+                        "@href": "https://arxiv.org/pdf/2604.19729v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Long-horizon enterprise agents make high-stakes decisions (loan underwriting, claims adjudication, clinical review, prior authorization) under lossy memory, multi-step reasoning, and binding regulatory constraints. Current evaluation reports a single task-success scalar that conflates distinct failure modes and hides whether an agent is aligned with the standards its deployment environment requires. We propose that long-horizon decision behavior decomposes into four orthogonal alignment axes, each independently measurable and failable: factual precision (FRP), reasoning coherence (RCS), compliance reconstruction (CRR), and calibrated abstention (CAR). CRR is a novel regulatory-grounded axis; CAR is a measurement axis separating coverage from accuracy. We exercise the decomposition on a controlled benchmark (LongHorizon-Bench) covering loan qualification and insurance claims adjudication with deterministic ground-truth construction. Running six memory architectures, we find structure aggregate accuracy cannot see: retrieval collapses on factual precision; schema-anchored architectures pay a scaffolding tax; plain summarization under a fact-preservation prompt is a strong baseline on FRP, RCS, EDA, and CRR; and all six architectures commit on every case, exposing a decisional-alignment axis the field has not targeted. The decomposition also surfaced a pre-registered prediction of our own, that summarization would fail factual recall, which the data reversed at large magnitude, an axis-level reversal aggregate accuracy would have hidden. Institutional alignment (regulatory reconstruction) and decisional alignment (calibrated abstention) are under-represented in the alignment literature and become load-bearing once decisions leave the laboratory. The framework transfers to any regulated decisioning domain via two steps: build a fact schema, and calibrate the CRR auditor prompt.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-21T13:37:19Z",
-                "arxiv:comment": "21 pages, 5 figures, 8 tables. PDFLaTeX. Code and artifacts: https://github.com/vasundras/decision-alignment-long-horizon-agents",
+                "summary": "Personalized Federated Learning (PFL) aims to learn multiple task-specific models rather than a single global model across heterogeneous data distributions. Existing PFL approaches typically rely on iterative optimization-such as model update trajectories-to cluster users that need to accomplish the same tasks together. However, these learning-dynamics-based methods are inherently vulnerable to low-quality data and noisy labels, as corrupted updates distort clustering decisions and degrade personalization performance. To tackle this, we propose FB-NLL, a feature-centric framework that decouples user clustering from iterative training dynamics. By exploiting the intrinsic heterogeneity of local feature spaces, FB-NLL characterizes each user through the spectral structure of the covariances of their feature representations and leverages subspace similarity to identify task-consistent user groupings. This geometry-aware clustering is label-agnostic and is performed in a one-shot manner prior to training, significantly reducing communication overhead and computational costs compared to iterative baselines.\n  Complementing this, we introduce a feature-consistency-based detection and correction strategy to address noisy labels within clusters. By leveraging directional alignment in the learned feature space and assigning labels based on class-specific feature subspaces, our method mitigates corrupted supervision without requiring estimation of stochastic noise transition matrices. In addition, FB-NLL is model-independent and integrates seamlessly with existing noise-robust training techniques. Extensive experiments across diverse datasets and noise regimes demonstrate that our framework consistently outperforms state-of-the-art baselines in terms of average accuracy and performance stability.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SP",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-21T17:51:58Z",
+                "arxiv:comment": "Submitted for journal publication",
                 "arxiv:primary_category": {
-                    "@term": "cs.AI"
+                    "@term": "cs.LG"
                 },
-                "author": {
-                    "name": "Vasundra Srininvasan"
-                }
+                "author": [
+                    {
+                        "name": "Abdulmoneam Ali"
+                    },
+                    {
+                        "name": "Ahmed Arafa"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.19728v1",
+                "title": "VLA Foundry: A Unified Framework for Training Vision-Language-Action Models",
+                "updated": "2026-04-21T17:51:51Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.19728v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.19728v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present VLA Foundry, an open-source framework that unifies LLM, VLM, and VLA training in a single codebase. Most open-source VLA efforts specialize on the action training stage, often stitching together incompatible pretraining pipelines. VLA Foundry instead provides a shared training stack with end-to-end control, from language pretraining to action-expert fine-tuning. VLA Foundry supports both from-scratch training and pretrained backbones from Hugging Face. To demonstrate the utility of our framework, we train and release two types of models: the first trained fully from scratch through our LLM-->VLM-->VLA pipeline and the second built on the pretrained Qwen3-VL backbone. We evaluate closed-loop policy performance of both models on LBM Eval, an open-data, open-source simulator. We also contribute usability improvements to the simulator and the STEP analysis tools for easier public use. In the nominal evaluation setting, our fully-open from-scratch model is on par with our prior closed-source work and substituting in the Qwen3-VL backbone leads to a strong multi-task table top manipulation policy outperforming our baseline by a wide margin. The VLA Foundry codebase is available at https://github.com/TRI-ML/vla_foundry and all multi-task model weights are released on https://huggingface.co/collections/TRI-ML/vla-foundry. Additional qualitative videos are available on the project website https://tri-ml.github.io/vla_foundry.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.SE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-21T17:51:51Z",
+                "arxiv:comment": "32 pages, 16 figures, technical report",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Jean Mercat"
+                    },
+                    {
+                        "name": "Sedrick Keh"
+                    },
+                    {
+                        "name": "Kushal Arora"
+                    },
+                    {
+                        "name": "Isabella Huang"
+                    },
+                    {
+                        "name": "Paarth Shah"
+                    },
+                    {
+                        "name": "Haruki Nishimura"
+                    },
+                    {
+                        "name": "Shun Iwase"
+                    },
+                    {
+                        "name": "Katherine Liu"
+                    }
+                ]
             }
         ]
     }
