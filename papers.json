@@ -5,102 +5,33 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-21T23:30:22Z",
+        "updated": "2026-04-22T01:59:09Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "562155",
+        "opensearch:totalResults": "562455",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.18584v1",
-                "title": "MathNet: a Global Multimodal Benchmark for Mathematical Reasoning and Retrieval",
-                "updated": "2026-04-20T17:59:49Z",
+                "id": "http://arxiv.org/abs/2604.19485v1",
+                "title": "EVPO: Explained Variance Policy Optimization for Adaptive Critic Utilization in LLM Post-Training",
+                "updated": "2026-04-21T14:07:39Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.18584v1",
+                        "@href": "https://arxiv.org/abs/2604.19485v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.18584v1",
+                        "@href": "https://arxiv.org/pdf/2604.19485v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Mathematical problem solving remains a challenging test of reasoning for large language and multimodal models, yet existing benchmarks are limited in size, language coverage, and task diversity. We introduce MathNet, a high-quality, large-scale, multimodal, and multilingual dataset of Olympiad-level math problems together with a benchmark for evaluating mathematical reasoning in generative models and mathematical retrieval in embedding-based systems. MathNet spans 47 countries, 17 languages, and two decades of competitions, comprising 30,676 expert-authored problems with solutions across diverse domains. In addition to the core dataset, we construct a retrieval benchmark consisting of mathematically equivalent and structurally similar problem pairs curated by human experts.\n  MathNet supports three tasks: (i) Problem Solving, (ii) Math-Aware Retrieval, and (iii) Retrieval-Augmented Problem Solving. Experimental results show that even state-of-the-art reasoning models (78.4% for Gemini-3.1-Pro and 69.3% for GPT-5) remain challenged, while embedding models struggle to retrieve equivalent problems. We further show that retrieval-augmented generation performance is highly sensitive to retrieval quality; for example, DeepSeek-V3.2-Speciale achieves gains of up to 12%, obtaining the highest scores on the benchmark. MathNet provides the largest high-quality Olympiad dataset together with the first benchmark for evaluating mathematical problem retrieval, and we publicly release both the dataset and benchmark at https://mathnet.mit.edu.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-20T17:59:49Z",
-                "arxiv:comment": "ICLR 2026; Website: http://mathnet.mit.edu",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "arxiv:journal_ref": "Proceedings of the International Conference on Learning Representations (ICLR), 2026",
-                "author": [
-                    {
-                        "name": "Shaden Alshammari"
-                    },
-                    {
-                        "name": "Kevin Wen"
-                    },
-                    {
-                        "name": "Abrar Zainal"
-                    },
-                    {
-                        "name": "Mark Hamilton"
-                    },
-                    {
-                        "name": "Navid Safaei"
-                    },
-                    {
-                        "name": "Sultan Albarakati"
-                    },
-                    {
-                        "name": "William T. Freeman"
-                    },
-                    {
-                        "name": "Antonio Torralba"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.18580v1",
-                "title": "Sessa: Selective State Space Attention",
-                "updated": "2026-04-20T17:59:08Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.18580v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.18580v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Modern sequence models are dominated by Transformers, where self-attention mixes information from the visible context in an input-dependent way. However, when retrieval is not sharp and attention remains diffuse over an effective support $S_{\\mathrm{eff}}(t)$, the influence of any individual token is diluted, typically scaling as $O(1/S_{\\mathrm{eff}}(t))$ and reaching $O(1/\\ell)$ for old tokens in full-prefix settings. Structured state-space models process sequences recurrently through an explicit feedback path; selective variants such as Mamba make this feedback input-dependent, yet when freeze time cannot be sustained over long intervals, their long-range sensitivity decays exponentially with lag. Existing architectures therefore either retrieve from the past in a single read or propagate information through a single feedback chain. We introduce Sessa, a decoder that places attention inside a feedback path, enabling recurrent many-path aggregation within a layer. Under stated assumptions, Sessa admits regimes with a power-law memory tail in lag $\\ell$ of order $O(\\ell^{-\u03b2})$ for $0<\u03b2<1$, which is asymptotically slower than $1/\\ell$; moreover, this rate is tight in an explicit diffuse uniform-routing setting where the influence is $\u0398(\\ell^{-\u03b2})$. Under the same conditions, only Sessa among the compared model classes realizes flexible selective retrieval, including non-decaying profiles. Empirically, under matched architectures and training budgets, Sessa achieves the strongest performance on our long-context benchmarks while remaining competitive with Transformer and Mamba style baselines on short-context language modeling.",
+                "summary": "Reinforcement learning (RL) for LLM post-training faces a fundamental design choice: whether to use a learned critic as a baseline for policy optimization. Classical theory favors critic-based methods such as PPO for variance reduction, yet critic-free alternatives like GRPO have gained widespread adoption due to their simplicity and competitive performance. We show that in sparse-reward settings, a learned critic can inject estimation noise that exceeds the state signal it captures, increasing rather than reducing advantage variance. By casting baseline selection as a Kalman filtering problem, we unify PPO and GRPO as two extremes of the Kalman gain and prove that explained variance (EV), computable from a single training batch, identifies the exact boundary: positive EV indicates the critic reduces variance, while zero or negative EV signals that it inflates variance. Building on this insight, we propose Explained Variance Policy Optimization (EVPO), which monitors batch-level EV at each training step and adaptively switches between critic-based and batch-mean advantage estimation, provably achieving no greater variance than the better of the two at every step. Across four tasks spanning classical control, agentic interaction, and mathematical reasoning, EVPO consistently outperforms both PPO and GRPO regardless of which fixed baseline is stronger on a given task. Further analysis confirms that the adaptive gating tracks critic maturation over training and that the theoretically derived zero threshold is empirically optimal.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -115,330 +46,201 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-20T17:59:08Z",
-                "arxiv:comment": "Code available at: https://github.com/LibratioAI/sessa",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": {
-                    "name": "Liubomyr Horbatko"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.18579v1",
-                "title": "The T16 Planet Hunt: 10,000 New Planet Candidates from TESS Cycle 1 and the Confirmation of a Hot Jupiter Around TIC 183374187",
-                "updated": "2026-04-20T17:59:06Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.18579v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.18579v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    },
-                    {
-                        "@rel": "related",
-                        "@href": "https://doi.org/10.3847/1538-4365/ae5b6c",
-                        "@title": "doi"
-                    }
-                ],
-                "summary": "The T16 project has produced a uniformly detrended and systematics-corrected set of 83,717,159 TESS Cycle 1 full-frame image light curves for stars observed by TESS in its primary mission down to T=16 mag, enabling sensitive transit searches beyond the official TESS pipelines. While most existing TESS planet searches focus on relatively bright targets, planet occurrence rates suggest that a substantial number of planets should exist around fainter stars. We therefore use the T16 light curves to conduct a semi-automated search for transiting exoplanets across the full Cycle 1 FFI sample, resulting in 11,554 planet candidates orbiting stars down to 16th magnitude in the TESS band with orbital periods between 0.5 and 27 days. Of these, 10,091 are new planet candidates, and 411 are single-transit events, for which we do not attempt to determine orbital parameters. The remaining 1,052 candidates are previously known TESS candidates. We validate our pipeline through Magellan/PFS radial-velocity follow-up measurements on one of our candidate hosts, TIC 183374187, a metal poor thick-disk star, confirming the signal as newly identified hot Jupiter. This detection demonstrates our pipeline's ability to identify real, previously undiscovered, transiting planets. Overall, this work shows that large-scale, machine learning-assisted transit searches of TESS full-frame images can significantly expand the census of transiting planet candidates, particularly around faint stars, providing a rich target set for future validation and follow-up efforts. Our findings more than double the number of known TESS exoplanet candidates.",
-                "category": {
-                    "@term": "astro-ph.EP",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-20T17:59:06Z",
-                "arxiv:comment": "28 pages, 12 figures, 7 tables, accepted for publication in ApJS",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.EP"
-                },
-                "author": [
-                    {
-                        "name": "Joshua T. Roth"
-                    },
-                    {
-                        "name": "Joel D. Hartman"
-                    },
-                    {
-                        "name": "G\u00e1sp\u00e1r \u00c1. Bakos"
-                    },
-                    {
-                        "name": "Samuel W. Yee"
-                    },
-                    {
-                        "name": "Luke G. Bouma"
-                    },
-                    {
-                        "name": "Jhon Yana Galarza"
-                    },
-                    {
-                        "name": "Johanna K. Teske"
-                    },
-                    {
-                        "name": "R. P. Butler"
-                    },
-                    {
-                        "name": "Jeffrey D. Crane"
-                    },
-                    {
-                        "name": "Steve Shectman"
-                    },
-                    {
-                        "name": "David Osip"
-                    },
-                    {
-                        "name": "Shreyas Vissapragada"
-                    },
-                    {
-                        "name": "Yuri Beletsky"
-                    },
-                    {
-                        "name": "Shubham Kanodia"
-                    },
-                    {
-                        "name": "Yadira Gaibor"
-                    }
-                ],
-                "arxiv:doi": "10.3847/1538-4365/ae5b6c"
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.18578v1",
-                "title": "Bounded Ratio Reinforcement Learning",
-                "updated": "2026-04-20T17:59:01Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.18578v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.18578v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Proximal Policy Optimization (PPO) has become the predominant algorithm for on-policy reinforcement learning due to its scalability and empirical robustness across domains. However, there is a significant disconnect between the underlying foundations of trust region methods and the heuristic clipped objective used in PPO. In this paper, we bridge this gap by introducing the Bounded Ratio Reinforcement Learning (BRRL) framework. We formulate a novel regularized and constrained policy optimization problem and derive its analytical optimal solution. We prove that this solution ensures monotonic performance improvement. To handle parameterized policy classes, we develop a policy optimization algorithm called Bounded Policy Optimization (BPO) that minimizes an advantage-weighted divergence between the policy and the analytic optimal solution from BRRL. We further establish a lower bound on the expected performance of the resulting policy in terms of the BPO loss function. Notably, our framework also provides a new theoretical lens to interpret the success of the PPO loss, and connects trust region policy optimization and the Cross-Entropy Method (CEM). We additionally extend BPO to Group-relative BPO (GBPO) for LLM fine-tuning. Empirical evaluations of BPO across MuJoCo, Atari, and complex IsaacLab environments (e.g., Humanoid locomotion), and of GBPO for LLM fine-tuning tasks, demonstrate that BPO and GBPO generally match or outperform PPO and GRPO in stability and final performance.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-20T17:59:01Z",
-                "arxiv:comment": "23 pages, 9 figures",
+                "published": "2026-04-21T14:07:39Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Yunke Ao"
+                        "name": "Chengjun Pan"
                     },
                     {
-                        "name": "Le Chen"
+                        "name": "Shichun Liu"
                     },
                     {
-                        "name": "Bruce D. Lee"
+                        "name": "Jiahang Lin"
                     },
                     {
-                        "name": "Assefa S. Wahd"
+                        "name": "Dingwei Zhu"
                     },
                     {
-                        "name": "Aline Czarnobai"
+                        "name": "Jiazheng Zhang"
                     },
                     {
-                        "name": "Philipp F\u00fcrnstahl"
+                        "name": "Shihan Dou"
                     },
                     {
-                        "name": "Bernhard Sch\u00f6lkopf"
+                        "name": "Songyang Gao"
                     },
                     {
-                        "name": "Andreas Krause"
+                        "name": "Zhenhua Han"
+                    },
+                    {
+                        "name": "Binghai Wang"
+                    },
+                    {
+                        "name": "Rui Zheng"
+                    },
+                    {
+                        "name": "Xuanjing Huang"
+                    },
+                    {
+                        "name": "Tao Gui"
+                    },
+                    {
+                        "name": "Yansong Feng"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.18574v1",
-                "title": "When Can LLMs Learn to Reason with Weak Supervision?",
-                "updated": "2026-04-20T17:57:49Z",
+                "id": "http://arxiv.org/abs/2604.19481v1",
+                "title": "Fault-Tolerant Quantum Computing with Trapped Ions: The Walking Cat Architecture",
+                "updated": "2026-04-21T14:02:12Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.18574v1",
+                        "@href": "https://arxiv.org/abs/2604.19481v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.18574v1",
+                        "@href": "https://arxiv.org/pdf/2604.19481v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large language models have achieved significant reasoning improvements through reinforcement learning with verifiable rewards (RLVR). Yet as model capabilities grow, constructing high-quality reward signals becomes increasingly difficult, making it essential to understand when RLVR can succeed under weaker forms of supervision. We conduct a systematic empirical study across diverse model families and reasoning domains under three weak supervision settings: scarce data, noisy rewards, and self-supervised proxy rewards. We find that generalization is governed by training reward saturation dynamics: models that generalize exhibit a prolonged pre-saturation phase during which training reward and downstream performance climb together, while models that saturate rapidly memorize rather than learn. We identify reasoning faithfulness, defined as the extent to which intermediate steps logically support the final answer, as the pre-RL property that predicts which regime a model falls into, while output diversity alone is uninformative. Motivated by these findings, we disentangle the contributions of continual pre-training and supervised fine-tuning, finding that SFT on explicit reasoning traces is necessary for generalization under weak supervision, while continual pre-training on domain data amplifies the effect. Applied together to Llama3.2-3B-Base, these interventions enable generalization across all three settings where the base model previously failed.",
+                "summary": "We propose a fault-tolerant quantum computer architecture for trapped-ion devices, which we call the walking cat architecture. Our blueprint includes a compiler, a detailed description of all the quantum error-correction protocols, a micro-architecture, a sufficiently fast decoder, and thorough simulations. The backbone of the architecture is a cat factory, producing cat states distributed throughout the machine, which are consumed to perform logical operations. The walking cat architecture is based entirely on a modern quantum error-correction approach called low-density parity-check (LDPC) codes.\n  We identify promising instances of the walking cat architecture, such as (1) a simple architecture based on a single LDPC code, (2) a fast architecture based on fast logical gates relying on a [[70, 6, 9]] code, equipped with Clifford-frame tracking for any 6-qubit Clifford gate, and (3) a dense architecture based on a [[102, 22, 9]]] code encoding 22 logical qubits per memory block. Our dense architecture provides a design with 110 logical qubits executing about one million T gates per day using only 2,514 physical qubits. We estimate that the quantum Hamiltonian simulation of a Heisenberg model on 100 sites can be executed within one month with 10,000 physical qubits, including all shots required to achieve chemical accuracy, suggesting that such a device could enter the regime of classically intractable physics simulations.\n  Our design relies on hardware components that have been experimentally demonstrated on small devices. We emphasize simplicity over hypothetical performance to facilitate the practical realization of this machine. Based on this approach, we believe that a fault-tolerant quantum computer with hundreds of logical qubits capable of running millions of logical gates can be built in the near term, providing a platform to explore a broad range of applications.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "quant-ph",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.ET",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-20T17:57:49Z",
+                "published": "2026-04-21T14:02:12Z",
+                "arxiv:comment": "110 pages",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "quant-ph"
                 },
                 "author": [
                     {
-                        "name": "Salman Rahman"
+                        "name": "Felix Tripier"
                     },
                     {
-                        "name": "Jingyan Shen"
+                        "name": "Woo Chang Chung"
                     },
                     {
-                        "name": "Anna Mordvina"
+                        "name": "Jacob Young"
                     },
                     {
-                        "name": "Hamid Palangi"
+                        "name": "Safwan Alam"
                     },
                     {
-                        "name": "Saadia Gabriel"
+                        "name": "Bryce Bjork"
                     },
                     {
-                        "name": "Pavel Izmailov"
+                        "name": "Aharon Brodutch"
+                    },
+                    {
+                        "name": "Finn Lasse Buessen"
+                    },
+                    {
+                        "name": "Nolan J. Coble"
+                    },
+                    {
+                        "name": "Thomas Dellaert"
+                    },
+                    {
+                        "name": "Dmitri Maslov"
+                    },
+                    {
+                        "name": "Martin Roetteler"
+                    },
+                    {
+                        "name": "Edwin Tham"
+                    },
+                    {
+                        "name": "Mark Webster"
+                    },
+                    {
+                        "name": "Min Ye"
+                    },
+                    {
+                        "name": "John Gamble"
+                    },
+                    {
+                        "name": "Andrii Maksymov"
+                    },
+                    {
+                        "name": "J. P. Marceaux"
+                    },
+                    {
+                        "name": "Nicolas Delfosse"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.18573v1",
-                "title": "T-REN: Learning Text-Aligned Region Tokens Improves Dense Vision-Language Alignment and Scalability",
-                "updated": "2026-04-20T17:57:02Z",
+                "id": "http://arxiv.org/abs/2604.19480v1",
+                "title": "Deep sprite-based image models: An analysis",
+                "updated": "2026-04-21T14:02:08Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.18573v1",
+                        "@href": "https://arxiv.org/abs/2604.19480v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.18573v1",
+                        "@href": "https://arxiv.org/pdf/2604.19480v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Despite recent progress, vision-language encoders struggle with two core limitations: (1) weak alignment between language and dense vision features, which hurts tasks like open-vocabulary semantic segmentation; and (2) high token counts for fine-grained visual representations, which limits scalability to long videos. This work addresses both limitations. We propose T-REN (Text-aligned Region Encoder Network), an efficient encoder that maps visual data to a compact set of text-aligned region-level representations (or region tokens). T-REN achieves this through a lightweight network added on top of a frozen vision backbone, trained to pool patch-level representations within each semantic region into region tokens and align them with region-level text annotations. With only 3.7% additional parameters compared to the vision-language backbone, this design yields substantially stronger dense cross-modal understanding while reducing the token count by orders of magnitude. Specifically, T-REN delivers +5.9 mIoU on ADE20K open-vocabulary segmentation, +18.4% recall on COCO object-level text-image retrieval, +15.6% recall on Ego4D video object localization, and +17.6% mIoU on VSPW video scene parsing, all while reducing token counts by more than 24x for images and 187x for videos compared to the patch-based vision-language backbone. The code and model are available at https://github.com/savya08/T-REN.",
+                "summary": "While foundation models drive steady progress in image segmentation and diffusion algorithms compose always more realistic images, the seemingly simple problem of identifying recurrent patterns in a collection of images remains very much open. In this paper, we focus on sprite-based image decomposition models, which have shown some promise for clustering and image decomposition and are appealing because of their high interpretability. These models come in different flavors, need to be tailored to specific datasets, and struggle to scale to images with many objects. We dive into the details of their design, identify their core components, and perform an extensive analysis on clustering benchmarks. We leverage this analysis to propose a deep sprite-based image decomposition method that performs on par with state-of-the-art unsupervised class-aware image segmentation methods on the standard CLEVR benchmark, scales linearly with the number of objects, identifies explicitly object categories, and fully models images in an easily interpretable way.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-20T17:57:02Z",
+                "published": "2026-04-21T14:02:08Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Savya Khosla"
+                        "name": "Zeynep Sonat Baltac\u0131"
                     },
                     {
-                        "name": "Sethuraman T"
+                        "name": "Romain Loiseau"
                     },
                     {
-                        "name": "Aryan Chadha"
-                    },
-                    {
-                        "name": "Alex Schwing"
-                    },
-                    {
-                        "name": "Derek Hoiem"
+                        "name": "Mathieu Aubry"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.18572v1",
-                "title": "Back into Plato's Cave: Examining Cross-modal Representational Convergence at Scale",
-                "updated": "2026-04-20T17:56:02Z",
+                "id": "http://arxiv.org/abs/2604.19477v1",
+                "title": "Deep Supervised Contrastive Learning of Pitch Contours for Robust Pitch Accent Classification in Seoul Korean",
+                "updated": "2026-04-21T13:59:37Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.18572v1",
+                        "@href": "https://arxiv.org/abs/2604.19477v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.18572v1",
+                        "@href": "https://arxiv.org/pdf/2604.19477v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The Platonic Representation Hypothesis suggests that neural networks trained on different modalities (e.g., text and images) align and eventually converge toward the same representation of reality. If true, this has significant implications for whether modality choice matters at all. We show that the experimental evidence for this hypothesis is fragile and depends critically on the evaluation regime. Alignment is measured using mutual nearest neighbors on small datasets ($\\approx$1K samples) and degrades substantially as the dataset is scaled to millions of samples. The alignment that remains between model representations reflects coarse semantic overlap rather than consistent fine-grained structure. Moreover, the evaluations in Huh et al. are done in a one-to-one image-caption setting, a constraint that breaks down in realistic many-to-many settings and further reduces alignment. We also find that the reported trend of stronger language models increasingly aligning with vision does not appear to hold for newer models. Overall, our findings suggest that the current evidence for cross-modal representational convergence is considerably weaker than subsequent works have taken it to be. Models trained on different modalities may learn equally rich representations of the world, just not the same one.",
+                "summary": "The intonational structure of Seoul Korean has been defined with discrete tonal categories within the Autosegmental-Metrical model of intonational phonology. However, it is challenging to map continuous $F_0$ contours to these invariant categories due to variable $F_0$ realizations in real-world speech. Our paper proposes Dual-Glob, a deep supervised contrastive learning framework to robustly classify fine-grained pitch accent patterns in Seoul Korean. Unlike conventional local predictive models, our approach captures holistic $F_0$ contour shapes by enforcing structural consistency between clean and augmented views in a shared latent space. To this aim, we introduce the first large-scale benchmark dataset, consisting of manually annotated 10,093 Accentual Phrases in Seoul Korean. Experimental results show that our Dual-Glob significantly outperforms strong baseline models with state-of-the-art accuracy (77.75%) and F1-score (51.54%). Therefore, our work supports AM-based intonational phonology using data-driven methodology, showing that deep contrastive learning effectively captures holistic structural features of continuous $F_0$ contours.",
                 "category": [
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-20T17:56:02Z",
-                "arxiv:comment": "Project page: http://akoepke.github.io/cave_umwelten/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "A. Sophia Koepke"
-                    },
-                    {
-                        "name": "Daniil Zverev"
-                    },
-                    {
-                        "name": "Shiry Ginosar"
-                    },
-                    {
-                        "name": "Alexei A. Efros"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.18570v1",
-                "title": "A multimodal and temporal foundation model for virtual patient representations at healthcare system scale",
-                "updated": "2026-04-20T17:55:47Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.18570v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.18570v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Modern medicine generates vast multimodal data across siloed systems, yet no existing model integrates the full breadth and temporal depth of the clinical record into a unified patient representation. We introduce Apollo, a multimodal temporal foundation model trained and evaluated on over three decades of longitudinal hospital records from a major US hospital system, composed of 25 billion records from 7.2 million patients, representing 28 distinct medical modalities and 12 major medical specialties. Apollo learns a unified representation space integrating over 100 thousand unique medical events in our clinical vocabulary as well as images and clinical text. This \"atlas of medical concepts\" forms a computational substrate for modeling entire patient care journeys comprised of sequences of structured and unstructured events, which are compressed by Apollo into virtual patient representations. To assess the potential of these whole-patient representations, we created 322 prognosis and retrieval tasks from a held-out test set of 1.4 million patients. We demonstrate the generalized clinical forecasting potential of Apollo embeddings, including predicting new disease onset risk up to five years in advance (95 tasks), disease progression (78 tasks), treatment response (59 tasks), risk of treatment-related adverse events (17 tasks), and hospital operations endpoints (12 tasks). Using feature attribution techniques, we show that model predictions align with clinically-interpretable multimodal biomarkers. We evaluate semantic similarity search on 61 retrieval tasks, and moreover demonstrate the potential of Apollo as a multimodal medical search engine using text and image queries. Together, these modeling capabilities establish the foundation for computable medicine, where the full context of patient care becomes accessible to computational reasoning.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
+                        "@term": "cs.SD",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -446,109 +248,148 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-20T17:55:47Z",
+                "published": "2026-04-21T13:59:37Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.SD"
                 },
                 "author": [
                     {
-                        "name": "Andrew Zhang"
+                        "name": "Hyunjung Joo"
                     },
                     {
-                        "name": "Tong Ding"
-                    },
-                    {
-                        "name": "Sophia J. Wagner"
-                    },
-                    {
-                        "name": "Caiwei Tian"
-                    },
-                    {
-                        "name": "Ming Y. Lu"
-                    },
-                    {
-                        "name": "Rowland Pettit"
-                    },
-                    {
-                        "name": "Joshua E. Lewis"
-                    },
-                    {
-                        "name": "Alexandre Misrahi"
-                    },
-                    {
-                        "name": "Dandan Mo"
-                    },
-                    {
-                        "name": "Long Phi Le"
-                    },
-                    {
-                        "name": "Faisal Mahmood"
+                        "name": "GyeongTaek Lee"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.18569v1",
-                "title": "Revisiting Active Sequential Prediction-Powered Mean Estimation",
-                "updated": "2026-04-20T17:55:17Z",
+                "id": "http://arxiv.org/abs/2604.19474v1",
+                "title": "Harmonizing MR Images Across 100+ Scanners: Multi-site Validation with Traveling Subjects and Real-world Protocols",
+                "updated": "2026-04-21T13:57:15Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.18569v1",
+                        "@href": "https://arxiv.org/abs/2604.19474v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.18569v1",
+                        "@href": "https://arxiv.org/pdf/2604.19474v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "In this work, we revisit the problem of active sequential prediction-powered mean estimation, where at each round one must decide the query probability of the ground-truth label upon observing the covariates of a sample. Furthermore, if the label is not queried, the prediction from a machine learning model is used instead. Prior work proposed an elegant scheme that determines the query probability by combining an uncertainty-based suggestion with a constant probability that encodes a soft constraint on the query probability. We explored different values of the mixing parameter and observed an intriguing empirical pattern: the smallest confidence width tends to occur when the weight on the constant probability is close to one, thereby reducing the influence of the uncertainty-based component. Motivated by this observation, we develop a non-asymptotic analysis of the estimator and establish a data-dependent bound on its confidence interval. Our analysis further suggests that when a no-regret learning approach is used to determine the query probability and control this bound, the query probability converges to the constraint of the max value of the query probability when it is chosen obliviously to the current covariates. We also conduct simulations that corroborate these theoretical findings.",
-                "category": [
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-20T17:55:17Z",
-                "arxiv:comment": "Published as a conference paper at ICLR 2026",
+                "summary": "Reliable harmonization of heterogeneous magnetic resonance~(MR) image datasets, especially those acquired in pragmatic clinical trials, is critical to advance multi-center neuroimaging studies and translational machine learning in healthcare. We present an enhanced and rigorously validated version of the HACA3 harmonization algorithm, which we refer to as HACA3$^+$, incorporating key methodological enhancements: (1)~an improved artifact encoder to better isolate and mitigate image artifacts, (2)~background and foreground-sensitive attention mechanisms to increase harmonization specificity, and (3)~extensive training using data spanning 100+ scanners from 64 independent sites, providing a broader diversity of scanners than other harmonization methods. Our study focuses on four commonly acquired MR image contrasts (T1-weighted, T2-weighted, proton density, \\& fluid-attenuated inversion recovery), reflecting realistic clinical protocols. We perform inter-site harmonization experiments using traveling subjects to assess the generalization and robustness of the harmonization model. We compare the results of the publicly available version of HACA3 and our implementation, HACA3$^+$. Downstream relevance is further established through whole brain segmentation and image imputation. Finally, we justify each enhancement through an ablation experiment. Pre-trained weights and code for HACA3$^+$ are made publicly available at https://github.com/shays15/haca3-plus.",
+                "category": {
+                    "@term": "eess.IV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-21T13:57:15Z",
+                "arxiv:comment": "MIDL Validation Track 2026",
                 "arxiv:primary_category": {
-                    "@term": "stat.ML"
+                    "@term": "eess.IV"
                 },
                 "author": [
                     {
-                        "name": "Maria-Eleni Sfyraki"
+                        "name": "Savannah P. Hays"
                     },
                     {
-                        "name": "Jun-Kun Wang"
+                        "name": "Lianrui Zuo"
+                    },
+                    {
+                        "name": "Muhammad Faizyab Ali Chaudhary"
+                    },
+                    {
+                        "name": "Kathleen M. Bartz"
+                    },
+                    {
+                        "name": "Samuel W. Remedios"
+                    },
+                    {
+                        "name": "Jinwei Zhang"
+                    },
+                    {
+                        "name": "Jiachen Zhuo"
+                    },
+                    {
+                        "name": "Murat Bilgel"
+                    },
+                    {
+                        "name": "Shiv Saidha"
+                    },
+                    {
+                        "name": "Ellen M. Mowry"
+                    },
+                    {
+                        "name": "Scott D. Newsome"
+                    },
+                    {
+                        "name": "Jerry L. Prince"
+                    },
+                    {
+                        "name": "Blake E. Dewey"
+                    },
+                    {
+                        "name": "Aaron Carass"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.18567v1",
-                "title": "Latent Phase-Shift Rollback: Inference-Time Error Correction via Residual Stream Monitoring and KV-Cache Steering",
-                "updated": "2026-04-20T17:53:33Z",
+                "id": "http://arxiv.org/abs/2604.19471v1",
+                "title": "API Security Based on Automatic OpenAPI Mapping",
+                "updated": "2026-04-21T13:52:39Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.18567v1",
+                        "@href": "https://arxiv.org/abs/2604.19471v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.18567v1",
+                        "@href": "https://arxiv.org/pdf/2604.19471v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large language models frequently commit unrecoverable reasoning errors mid-generation: once a wrong step is taken, subsequent tokens compound the mistake rather than correct it. We introduce $\\textbf{Latent Phase-Shift Rollback}$ (LPSR): at each generation step, we monitor the residual stream at a critical layer lcrit, detect abrupt directional reversals (phase shifts) via a cosine-similarity $+$ entropy dual gate, and respond by rolling back the KV-cache and injecting a pre-computed steering vector. No fine-tuning, gradient computation, or additional forward passes are required. LPSR achieves $\\mathbf{44.0\\%}$ on MATH-500 with an 8B model versus $28.8\\%$ for standard AR ($+15.2$ pp; McNemar $\u03c7^2 = 66.96$, $p < 10^{-15}$). Critically, prompted self-correction, the most natural inference-time baseline, scores only $19.8\\%$, below standard AR; LPSR exceeds it by $+24.2$ pp ($\u03c7^2 = 89.4$, $p \\approx 0$). LPSR also outperforms Best-of-16 ($+7.8$ pp) at $5.4\\times$ lower token cost, and surpasses a standard 70B model ($35.2\\%$) with $8.75\\times$ fewer parameters at ${\\sim}3\\times$ the token budget. A 32-layer sweep reveals a novel \\textbf{detection-correction dissociation}: error-detection AUC peaks at layer~14 ($0.718$) but task accuracy peaks at layer~16 ($44.0\\%$ vs.\\ $29.2\\%$), demonstrating that optimal monitoring depth differs for detection and correction.",
+                "summary": "This paper presents Map Reduce Graph (MRG), a novel unsupervised method for modeling and securing HTTP REST APIs. MRG learns API structure from real-world traffic without prior knowledge or labels, automatically generating OpenAPI-compliant documentation by reconstructing routes, methods, and parameter formats. MRG enables real-time updates, explainable visualization, and anomaly detection, helping identify undocumented or evolving behaviors. It detects malformed requests, structural deviations, and injection attacks using graph-based validation and a deep autoencoder for payload analysis. Compared to state-of-the-art methods like HRAL and FT-ANN, MRG achieves up to 11.4% higher recall, over 20 times faster inference, and perfect precision (100%) on multiple API-layer attacks. Designed for dynamic microservice environments, MRG operates in three phases - training, updating, and detection - and integrates smoothly with observability and security tools. This work contributes a fully automated, efficient pipeline for real-time API visibility, schema inference, and anomaly detection without manual tuning or labeled data.",
+                "category": {
+                    "@term": "cs.CR",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-21T13:52:39Z",
+                "arxiv:comment": "none",
+                "arxiv:primary_category": {
+                    "@term": "cs.CR"
+                },
+                "author": [
+                    {
+                        "name": "Yarin Levi"
+                    },
+                    {
+                        "name": "Ran Dubin"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.19468v1",
+                "title": "Fairness Audits of Institutional Risk Models in Deployed ML Pipelines",
+                "updated": "2026-04-21T13:50:43Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.19468v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.19468v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Fairness audits of institutional risk models are critical for understanding how deployed machine learning pipelines allocate resources. Drawing on multi-year collaboration with Centennial College, where our prior ethnographic work introduced the ASP-HEI Cycle, we present a replica-based audit of a deployed Early Warning System (EWS), replicating its model using institutional training data and design specifications. We evaluate disparities by gender, age, and residency status across the full pipeline (training data, model predictions, and post-processing) using standard fairness metrics. Our audit reveals systematic misallocation: younger, male, and international students are disproportionately flagged for support, even when many ultimately succeed, while older and female students with comparable dropout risk are under-identified. Post-processing amplifies these disparities by collapsing heterogeneous probabilities into percentile-based risk tiers. This work provides a replicable methodology for auditing institutional ML systems and shows how disparities emerge and compound across stages, highlighting the importance of evaluating construct validity alongside statistical fairness. It contributes one empirical thread to a broader program investigating algorithms, student data, and power in higher education.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.CY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -556,23 +397,163 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CL",
+                        "@term": "cs.HC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-20T17:53:33Z",
-                "arxiv:comment": "Under Review",
+                "published": "2026-04-21T13:50:43Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.CY"
                 },
                 "author": [
                     {
-                        "name": "Manan Gupta"
+                        "name": "Kelly McConvey"
                     },
                     {
-                        "name": "Dhruv Kumar"
+                        "name": "Dipto Das"
+                    },
+                    {
+                        "name": "Maya Ghai"
+                    },
+                    {
+                        "name": "Angelina Zhai"
+                    },
+                    {
+                        "name": "Rosa Lee"
+                    },
+                    {
+                        "name": "Shion Guha"
                     }
                 ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.19464v1",
+                "title": "LePREC: Reasoning as Classification over Structured Factors for Assessing Relevance of Legal Issues",
+                "updated": "2026-04-21T13:42:24Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.19464v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.19464v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "More than half of the global population struggles to meet their civil justice needs due to limited legal resources. While Large Language Models (LLMs) have demonstrated impressive reasoning capabilities, significant challenges remain even at the foundational step of legal issue identification. To investigate LLMs' capabilities in this task, we constructed a dataset from 769 real-world Malaysian Contract Act court cases, using GPT-4o to extract facts and generate candidate legal issues, annotated by senior legal experts, which reveals a critical limitation: while LLMs generate diverse issue candidates, their precision remains inadequate (GPT-4o achieves only 62%). To address this gap, we propose LePREC (Legal Professional-inspired Reasoning Elicitation and Classification), a neuro-symbolic framework combining neural generation with structured statistical reasoning. LePREC consists of: (1) a neuro component leverages LLMs to transform legal descriptions into question-answer pairs representing diverse analytical factors, and (2) a symbolic component applies sparse linear models over these discrete features, learning explicit algebraic weights that identify the most informative reasoning factors. Unlike end-to-end neural approaches, LePREC achieves interpretability through transparent feature weighting while maintaining data efficiency through correlation-based statistical classification. Experiments show a 30-40% improvement over advanced LLM baselines, including GPT-4o and Claude, confirming that correlation-based factor-issue analysis offers a more data-efficient solution for relevance decisions.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-21T13:42:24Z",
+                "arxiv:comment": "Accepted by ACL 2026 Main Conference",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Fanyu Wang"
+                    },
+                    {
+                        "name": "Xiaoxi Kang"
+                    },
+                    {
+                        "name": "Paul Burgess"
+                    },
+                    {
+                        "name": "Aashish Srivastava"
+                    },
+                    {
+                        "name": "Chetan Arora"
+                    },
+                    {
+                        "name": "Adnan Trakic"
+                    },
+                    {
+                        "name": "Lay-Ki Soon"
+                    },
+                    {
+                        "name": "Md Khalid Hossain"
+                    },
+                    {
+                        "name": "Lizhen Qu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.19461v1",
+                "title": "Involuntary In-Context Learning: Exploiting Few-Shot Pattern Completion to Bypass Safety Alignment in GPT-5.4",
+                "updated": "2026-04-21T13:38:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.19461v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.19461v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Safety alignment in large language models relies on behavioral training that can be overridden when sufficiently strong in-context patterns compete with learned refusal behaviors. We introduce Involuntary In-Context Learning (IICL), an attack class that uses abstract operator framing with few-shot examples to force pattern completion that overrides safety training. Through 3479 probes across 10 OpenAI models, we identify the attack's effective components through a seven-experiment ablation study. Key findings: (1)~semantic operator naming achieves 100\\,\\% bypass rate (50/50, $p < 0.001$); (2)~the attack requires abstract framing, since identical examples in direct question-and-answer format yield 0\\,\\%; (3)~example ordering matters strongly (interleaved: 76\\,\\%, harmful-first: 6\\,\\%); (4)~temperature has no meaningful effect (46--56\\,\\% across 0.0--1.0). On the HarmBench benchmark, IICL achieves 24.0\\,\\% bypass $[18.6\\%, 30.4\\%]$ against GPT-5.4 with detailed 619-word responses, compared to 0.0\\,\\% for direct queries.",
+                "category": {
+                    "@term": "cs.CR",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-21T13:38:26Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CR"
+                },
+                "author": [
+                    {
+                        "name": "Alex Polyakov"
+                    },
+                    {
+                        "name": "Daniel Kuznetsov"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.19457v1",
+                "title": "Four-Axis Decision Alignment for Long-Horizon Enterprise AI Agents",
+                "updated": "2026-04-21T13:37:19Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.19457v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.19457v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Long-horizon enterprise agents make high-stakes decisions (loan underwriting, claims adjudication, clinical review, prior authorization) under lossy memory, multi-step reasoning, and binding regulatory constraints. Current evaluation reports a single task-success scalar that conflates distinct failure modes and hides whether an agent is aligned with the standards its deployment environment requires. We propose that long-horizon decision behavior decomposes into four orthogonal alignment axes, each independently measurable and failable: factual precision (FRP), reasoning coherence (RCS), compliance reconstruction (CRR), and calibrated abstention (CAR). CRR is a novel regulatory-grounded axis; CAR is a measurement axis separating coverage from accuracy. We exercise the decomposition on a controlled benchmark (LongHorizon-Bench) covering loan qualification and insurance claims adjudication with deterministic ground-truth construction. Running six memory architectures, we find structure aggregate accuracy cannot see: retrieval collapses on factual precision; schema-anchored architectures pay a scaffolding tax; plain summarization under a fact-preservation prompt is a strong baseline on FRP, RCS, EDA, and CRR; and all six architectures commit on every case, exposing a decisional-alignment axis the field has not targeted. The decomposition also surfaced a pre-registered prediction of our own, that summarization would fail factual recall, which the data reversed at large magnitude, an axis-level reversal aggregate accuracy would have hidden. Institutional alignment (regulatory reconstruction) and decisional alignment (calibrated abstention) are under-represented in the alignment literature and become load-bearing once decisions leave the laboratory. The framework transfers to any regulated decisioning domain via two steps: build a fact schema, and calibrate the CRR auditor prompt.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-21T13:37:19Z",
+                "arxiv:comment": "21 pages, 5 figures, 8 tables. PDFLaTeX. Code and artifacts: https://github.com/vasundras/decision-alignment-long-horizon-agents",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": {
+                    "name": "Vasundra Srininvasan"
+                }
             }
         ]
     }
