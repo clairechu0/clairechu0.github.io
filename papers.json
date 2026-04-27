@@ -5,232 +5,122 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-26T23:33:37Z",
+        "updated": "2026-04-27T02:09:21Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "563235",
+        "opensearch:totalResults": "563502",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.21931v1",
-                "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
-                "updated": "2026-04-23T17:59:57Z",
+                "id": "http://arxiv.org/abs/2604.22753v1",
+                "title": "Spend Less, Fit Better: Budget-Efficient Scaling Law Fitting via Active Experiment Selection",
+                "updated": "2026-04-24T17:59:42Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.21931v1",
+                        "@href": "https://arxiv.org/abs/2604.22753v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.21931v1",
+                        "@href": "https://arxiv.org/pdf/2604.22753v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-23T17:59:57Z",
-                "arxiv:comment": "Project page: https://seeing-fast-and-slow.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yen-Siang Wu"
-                    },
-                    {
-                        "name": "Rundong Luo"
-                    },
-                    {
-                        "name": "Jingsen Zhu"
-                    },
-                    {
-                        "name": "Tao Tu"
-                    },
-                    {
-                        "name": "Ali Farhadi"
-                    },
-                    {
-                        "name": "Matthew Wallingford"
-                    },
-                    {
-                        "name": "Yu-Chiang Frank Wang"
-                    },
-                    {
-                        "name": "Steve Marschner"
-                    },
-                    {
-                        "name": "Wei-Chiu Ma"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.21930v1",
-                "title": "Temporal Taskification in Streaming Continual Learning: A Source of Evaluation Instability",
-                "updated": "2026-04-23T17:59:54Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.21930v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.21930v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Streaming Continual Learning (CL) typically converts a continuous stream into a sequence of discrete tasks through temporal partitioning. We argue that this temporal taskification step is not a neutral preprocessing choice, but a structural component of evaluation: different valid splits of the same stream can induce different CL regimes and therefore different benchmark conclusions. To study this effect, we introduce a taskification-level framework based on plasticity and stability profiles, a profile distance between taskifications, and Boundary-Profile Sensitivity (BPS), which diagnoses how strongly small boundary perturbations alter the induced regime before any CL model is trained. We evaluate continual finetuning, Experience Replay, Elastic Weight Consolidation, and Learning without Forgetting on network traffic forecasting with CESNET-Timeseries24, keeping the stream, model, and training budget fixed while varying only the temporal taskification. Across 9-, 30-, and 44-day splits, we observe substantial changes in forecasting error, forgetting, and backward transfer, showing that taskification alone can materially affect CL evaluation. We further find that shorter taskifications induce noisier distribution-level patterns, larger structural distances, and higher BPS, indicating greater sensitivity to boundary perturbations. These results show that benchmark conclusions in streaming CL depend not only on the learner and the data stream, but also on how that stream is taskified, motivating temporal taskification as a first-class evaluation variable.",
+                "summary": "Scaling laws are used to plan multi-million-dollar training runs, but fitting those laws can itself cost millions. In modern large-scale workflows, assembling a sufficiently informative set of pilot experiments is already a major budget-allocation problem rather than a routine preprocessing step. We formulate scaling-law fitting as budget-aware sequential experimental design: given a finite pool of runnable experiments with heterogeneous costs, choose which runs to execute so as to maximize extrapolation accuracy in a high-cost target region. We then propose an uncertainty-aware method for sequentially allocating experimental budget toward the runs most useful for target-region extrapolation. Across a diverse benchmark of scaling-law tasks, our method consistently outperforms classical design-based baselines, and often approaches the performance of fitting on the full experimental set while using only about 10% of the total training budget. Our code is available at https://github.com/PlanarG/active-sl.",
                 "category": {
                     "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-23T17:59:54Z",
-                "arxiv:comment": "12 pages, 2 figures",
+                "published": "2026-04-24T17:59:42Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Nicolae Filat"
+                        "name": "Sijie Li"
                     },
                     {
-                        "name": "Ahmed Hussain"
+                        "name": "Shanda Li"
                     },
                     {
-                        "name": "Konstantinos Kalogiannis"
+                        "name": "Haowei Lin"
                     },
                     {
-                        "name": "Elena Burceanu"
+                        "name": "Weiwei Sun"
+                    },
+                    {
+                        "name": "Ameet Talwalkar"
+                    },
+                    {
+                        "name": "Yiming Yang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.21927v1",
-                "title": "Fine-Tuning Regimes Define Distinct Continual Learning Problems",
-                "updated": "2026-04-23T17:59:34Z",
+                "id": "http://arxiv.org/abs/2604.22752v1",
+                "title": "From Physics to Statistics: A Simple Route to Exponential Families via Maximum Entropy",
+                "updated": "2026-04-24T17:57:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.21927v1",
+                        "@href": "https://arxiv.org/abs/2604.22752v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.21927v1",
+                        "@href": "https://arxiv.org/pdf/2604.22752v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Continual learning (CL) studies how models acquire tasks sequentially while retaining previously learned knowledge. Despite substantial progress in benchmarking CL methods, comparative evaluations typically keep the fine-tuning regime fixed. In this paper, we argue that the fine-tuning regime, defined by the trainable parameter subspace, is itself a key evaluation variable. We formalize adaptation regimes as projected optimization over fixed trainable subspaces, showing that changing the trainable depth alters the effective update signal through which both current task fitting and knowledge preservation operate. This analysis motivates the hypothesis that method comparisons need not be invariant across regimes. We test this hypothesis in task incremental CL, five trainable depth regimes, and four standard methods: online EWC, LwF, SI, and GEM. Across five benchmark datasets, namely MNIST, Fashion MNIST, KMNIST, QMNIST, and CIFAR-100, and across 11 task orders per dataset, we find that the relative ranking of methods is not consistently preserved across regimes. We further show that deeper adaptation regimes are associated with larger update magnitudes, higher forgetting, and a stronger relationship between the two. These results show that comparative conclusions in CL can depend strongly on the chosen fine-tuning regime, motivating regime-aware evaluation protocols that treat trainable depth as an explicit experimental factor.",
+                "summary": "Exponential families form the backbone of modern statistics and machine learning, but textbooks seldom derive them from first principles in an accessible way. Although minimal sufficiency and the principle of maximum entropy, originating in physics, provide core motivation, they are often presented as technical and requiring advanced prerequisites.\n  Here, a short, self-contained derivation of exponential families based on maximum entropy is presented that is straightforward to carry out, requires only a modest background in information entropy, and avoids technicalities like constrained optimisation. Two propositions are demonstrated in this fashion: i) exponential families with a general base maximise information entropy with respect to that base subject to fixed expectations of canonical statistics, and ii) exponential families with a uniform base maximise standard information entropy under the same constraints.\n  Maximum entropy therefore provides a principled foundation for exponential families with minimal prerequisites, highlighting the value of teaching entropy in statistics courses.",
                 "category": {
-                    "@term": "cs.LG",
+                    "@term": "stat.ME",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-23T17:59:34Z",
-                "arxiv:comment": "14 pages, 3 figures",
+                "published": "2026-04-24T17:57:31Z",
+                "arxiv:comment": "17 pages, 2 tables",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "stat.ME"
                 },
-                "author": [
-                    {
-                        "name": "Paul-Tiberiu Iordache"
-                    },
-                    {
-                        "name": "Elena Burceanu"
-                    }
-                ]
+                "author": {
+                    "name": "Korbinian Strimmer"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2604.21923v1",
-                "title": "The Sample Complexity of Multicalibration",
-                "updated": "2026-04-23T17:59:01Z",
+                "id": "http://arxiv.org/abs/2604.22750v1",
+                "title": "How Do AI Agents Spend Your Money? Analyzing and Predicting Token Consumption in Agentic Coding Tasks",
+                "updated": "2026-04-24T17:54:47Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.21923v1",
+                        "@href": "https://arxiv.org/abs/2604.22750v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.21923v1",
+                        "@href": "https://arxiv.org/pdf/2604.22750v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We study the minimax sample complexity of multicalibration in the batch setting. A learner observes $n$ i.i.d. samples from an unknown distribution and must output a (possibly randomized) predictor whose population multicalibration error, measured by Expected Calibration Error (ECE), is at most $\\varepsilon$ with respect to a given family of groups. For every fixed $\u03ba> 0$, in the regime $|G|\\le \\varepsilon^{-\u03ba}$, we prove that $\\widetilde\u0398(\\varepsilon^{-3})$ samples are necessary and sufficient, up to polylogarithmic factors. The lower bound holds even for randomized predictors, and the upper bound is realized by a randomized predictor obtained via an online-to-batch reduction. This separates the sample complexity of multicalibration from that of marginal calibration, which scales as $\\widetilde\u0398(\\varepsilon^{-2})$, and shows that mean-ECE multicalibration is as difficult in the batch setting as it is in the online setting, in contrast to marginal calibration which is strictly more difficult in the online setting. In contrast we observe that for $\u03ba= 0$, the sample complexity of multicalibration remains $\\widetilde\u0398(\\varepsilon^{-2})$ exhibiting a sharp threshold phenomenon.\n  More generally, we establish matching upper and lower bounds, up to polylogarithmic factors, for a weighted $L_p$ multicalibration metric for all $1 \\le p \\le 2$, with optimal exponent $3/p$. We also extend the lower-bound template to a regular class of elicitable properties, and combine it with the online upper bounds of Hu et al. (2025) to obtain matching bounds for calibrating properties including expectiles and bounded-density quantiles.",
+                "summary": "The wide adoption of AI agents in complex human workflows is driving rapid growth in LLM token consumption. When agents are deployed on tasks that require a significant amount of tokens, three questions naturally arise: (1) Where do AI agents spend the tokens? (2) Which models are more token-efficient? and (3) Can agents predict their token usage before task execution? In this paper, we present the first systematic study of token consumption patterns in agentic coding tasks. We analyze trajectories from eight frontier LLMs on SWE-bench Verified and evaluate models' ability to predict their own token costs before task execution. We find that: (1) agentic tasks are uniquely expensive, consuming 1000x more tokens than code reasoning and code chat, with input tokens rather than output tokens driving the overall cost; (2) token usage is highly variable and inherently stochastic: runs on the same task can differ by up to 30x in total tokens, and higher token usage does not translate into higher accuracy; instead, accuracy often peaks at intermediate cost and saturates at higher costs; (3) models vary substantially in token efficiency: on the same tasks, Kimi-K2 and Claude-Sonnet-4.5, on average, consume over 1.5 million more tokens than GPT-5; (4) task difficulty rated by human experts only weakly aligns with actual token costs, revealing a fundamental gap between human-perceived complexity and the computational effort agents actually expend; and (5) frontier models fail to accurately predict their own token usage (with weak-to-moderate correlations, up to 0.39) and systematically underestimate real token costs. Our study offers new insights into the economics of AI agents and can inspire future research in this direction.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "math.ST",
+                        "@term": "cs.CY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-23T17:59:01Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Natalie Collina"
-                    },
-                    {
-                        "name": "Jiuyao Lu"
-                    },
-                    {
-                        "name": "Georgy Noarov"
-                    },
-                    {
-                        "name": "Aaron Roth"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.21917v1",
-                "title": "CrossCommitVuln-Bench: A Dataset of Multi-Commit Python Vulnerabilities Invisible to Per-Commit Static Analysis",
-                "updated": "2026-04-23T17:57:50Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.21917v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.21917v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present CrossCommitVuln-Bench, a curated benchmark of 15 real-world Python vulnerabilities (CVEs) in which the exploitable condition was introduced across multiple commits - each individually benign to per-commit static analysis - but collectively critical. We manually annotate each CVE with its contributing commit chain, a structured rationale for why each commit evades per-commit analysis, and baseline evaluations using Semgrep and Bandit in both per-commit and cumulative scanning modes. Our central finding: the per-commit detection rate (CCDR) is 13% across all 15 vulnerabilities - 87% of chains are invisible to per-commit SAST. Critically, both per-commit detections are qualitatively poor: one occurs on commits framed as security fixes (where developers suppress the alert), and the other detects only the minor hardcoded-key component while completely missing the primary vulnerability (200+ unprotected API endpoints). Even in cumulative mode (full codebase present), the detection rate is only 27%, confirming that snapshot-based SAST tools often miss vulnerabilities whose introduction spans multiple commits. The dataset, annotation schema, evaluation scripts, and reproducible baselines are released under open-source licenses to support research on cross-commit vulnerability detection.",
-                "category": [
-                    {
-                        "@term": "cs.CR",
+                        "@term": "cs.HC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -238,266 +128,459 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-23T17:57:50Z",
-                "arxiv:comment": "Accepted at AIware 2026 (3rd ACM International Conference on AI-Powered Software, Montreal, July 6-7, 2026). 4 pages",
+                "published": "2026-04-24T17:54:47Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CR"
-                },
-                "author": {
-                    "name": "Arunabh Majumdar"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.21914v1",
-                "title": "VistaBot: View-Robust Robot Manipulation via Spatiotemporal-Aware View Synthesis",
-                "updated": "2026-04-23T17:57:13Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.21914v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.21914v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recently, end-to-end robotic manipulation models have gained significant attention for their generalizability and scalability. However, they often suffer from limited robustness to camera viewpoint changes when training with a fixed camera. In this paper, we propose VistaBot, a novel framework that integrates feed-forward geometric models with video diffusion models to achieve view-robust closed-loop manipulation without requiring camera calibration at test time. Our approach consists of three key components: 4D geometry estimation, view synthesis latent extraction, and latent action learning. VistaBot is integrated into both action-chunking (ACT) and diffusion-based ($\u03c0_0$) policies and evaluated across simulation and real-world tasks. We further introduce the View Generalization Score (VGS) as a new metric for comprehensive evaluation of cross-view generalization. Results show that VistaBot improves VGS by 2.79$\\times$ and 2.63$\\times$ over ACT and $\u03c0_0$, respectively, while also achieving high-quality novel view synthesis. Our contributions include a geometry-aware synthesis model, a latent action planner, a new benchmark metric, and extensive validation across diverse environments. The code and models will be made publicly available.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-23T17:57:13Z",
-                "arxiv:comment": "This paper has been accepted to ICRA 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Songen Gu"
+                        "name": "Longju Bai"
                     },
                     {
-                        "name": "Yuhang Zheng"
+                        "name": "Zhemin Huang"
                     },
                     {
-                        "name": "Weize Li"
+                        "name": "Xingyao Wang"
                     },
                     {
-                        "name": "Yupeng Zheng"
+                        "name": "Jiao Sun"
                     },
                     {
-                        "name": "Yating Feng"
+                        "name": "Rada Mihalcea"
                     },
                     {
-                        "name": "Xiang Li"
+                        "name": "Erik Brynjolfsson"
                     },
                     {
-                        "name": "Yilun Chen"
+                        "name": "Alex Pentland"
                     },
                     {
-                        "name": "Pengfei Li"
-                    },
-                    {
-                        "name": "Wenchao Ding"
+                        "name": "Jiaxin Pei"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.21911v1",
-                "title": "When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs",
-                "updated": "2026-04-23T17:54:36Z",
+                "id": "http://arxiv.org/abs/2604.22748v1",
+                "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
+                "updated": "2026-04-24T17:48:47Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.21911v1",
+                        "@href": "https://arxiv.org/abs/2604.22748v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.21911v1",
+                        "@href": "https://arxiv.org/pdf/2604.22748v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Despite impressive progress in capabilities of large vision-language models (LVLMs), these systems remain vulnerable to hallucinations, i.e., outputs that are not grounded in the visual input. Prior work has attributed hallucinations in LVLMs to factors such as limitations of the vision backbone or the dominance of the language component, yet the relative importance of these factors remains unclear. To resolve this ambiguity, We propose HalluScope, a benchmark to better understand the extent to which different factors induce hallucinations. Our analysis indicates that hallucinations largely stem from excessive reliance on textual priors and background knowledge, especially information introduced through textual instructions. To mitigate hallucinations induced by textual instruction priors, we propose HalluVL-DPO, a framework for fine-tuning off-the-shelf LVLMs towards more visually grounded responses. HalluVL-DPO leverages preference optimization using a curated training dataset that we construct, guiding the model to prefer grounded responses over hallucinated ones. We demonstrate that our optimized model effectively mitigates the targeted hallucination failure mode, while preserving or improving performance on other hallucination benchmarks and visual capability evaluations. To support reproducibility and further research, we will publicly release our evaluation benchmark, preference training dataset, and code at https://pegah-kh.github.io/projects/prompts-override-vision/ .",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-23T17:54:36Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Pegah Khayatan"
-                    },
-                    {
-                        "name": "Jayneel Parekh"
-                    },
-                    {
-                        "name": "Arnaud Dapogny"
-                    },
-                    {
-                        "name": "Mustafa Shukor"
-                    },
-                    {
-                        "name": "Alasdair Newson"
-                    },
-                    {
-                        "name": "Matthieu Cord"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.21910v1",
-                "title": "From Research Question to Scientific Workflow: Leveraging Agentic AI for Science Automation",
-                "updated": "2026-04-23T17:52:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.21910v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.21910v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Scientific workflow systems automate execution -- scheduling, fault tolerance, resource management -- but not the semantic translation that precedes it. Scientists still manually convert research questions into workflow specifications, a task requiring both domain knowledge and infrastructure expertise. We propose an agentic architecture that closes this gap through three layers: an LLM interprets natural language into structured intents (semantic layer); validated generators produce reproducible workflow DAGs (deterministic layer); and domain experts author ``Skills'': markdown documents encoding vocabulary mappings, parameter constraints, and optimization strategies (knowledge layer). This decomposition confines LLM non-determinism to intent extraction: identical intents always yield identical workflows. We implement and evaluate the architecture on the 1000 Genomes population genetics workflow and Hyperflow WMS running on Kubernetes. In an ablation study on 150 queries, Skills raise full-match intent accuracy from 44% to 83%; skill-driven deferred workflow generation reduces data transfer by 92\\%; and the end-to-end pipeline completes queries on Kubernetes with LLM overhead below 15 seconds and cost under $0.001 per query.",
+                "summary": "As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, coordinate with others, or design experiments require predictive environment models, yet the term world model carries different meanings across research communities. We introduce a \"levels x laws\" taxonomy organized along two axes. The first defines three capability levels: L1 Predictor, which learns one-step local transition operators; L2 Simulator, which composes them into multi-step, action-conditioned rollouts that respect domain laws; and L3 Evolver, which autonomously revises its own model when predictions fail against new evidence. The second identifies four governing-law regimes: physical, digital, social, and scientific. These regimes determine what constraints a world model must satisfy and where it is most likely to fail. Using this framework, we synthesize over 400 works and summarize more than 100 representative systems spanning model-based reinforcement learning, video generation, web and GUI agents, multi-agent social simulation, and AI-driven scientific discovery. We analyze methods, failure modes, and evaluation practices across level-regime pairs, propose decision-centric evaluation principles and a minimal reproducible evaluation package, and outline architectural guidance, open problems, and governance challenges. The resulting roadmap connects previously isolated communities and charts a path from passive next-step prediction toward world models that can simulate, and ultimately reshape, the environments in which agents operate.",
                 "category": {
                     "@term": "cs.AI",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-23T17:52:52Z",
+                "published": "2026-04-24T17:48:47Z",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Bartosz Balis"
+                        "name": "Meng Chu"
                     },
                     {
-                        "name": "Michal Orzechowski"
+                        "name": "Xuan Billy Zhang"
                     },
                     {
-                        "name": "Piotr Kica"
+                        "name": "Kevin Qinghong Lin"
                     },
                     {
-                        "name": "Michal Dygas"
+                        "name": "Lingdong Kong"
                     },
                     {
-                        "name": "Michal Kuszewski"
+                        "name": "Jize Zhang"
+                    },
+                    {
+                        "name": "Teng Tu"
+                    },
+                    {
+                        "name": "Weijian Ma"
+                    },
+                    {
+                        "name": "Ziqi Huang"
+                    },
+                    {
+                        "name": "Senqiao Yang"
+                    },
+                    {
+                        "name": "Wei Huang"
+                    },
+                    {
+                        "name": "Yeying Jin"
+                    },
+                    {
+                        "name": "Zhefan Rao"
+                    },
+                    {
+                        "name": "Jinhui Ye"
+                    },
+                    {
+                        "name": "Xinyu Lin"
+                    },
+                    {
+                        "name": "Xichen Zhang"
+                    },
+                    {
+                        "name": "Qisheng Hu"
+                    },
+                    {
+                        "name": "Shuai Yang"
+                    },
+                    {
+                        "name": "Leyang Shen"
+                    },
+                    {
+                        "name": "Wei Chow"
+                    },
+                    {
+                        "name": "Yifei Dong"
+                    },
+                    {
+                        "name": "Fengyi Wu"
+                    },
+                    {
+                        "name": "Quanyu Long"
+                    },
+                    {
+                        "name": "Bin Xia"
+                    },
+                    {
+                        "name": "Shaozuo Yu"
+                    },
+                    {
+                        "name": "Mingkang Zhu"
+                    },
+                    {
+                        "name": "Wenhu Zhang"
+                    },
+                    {
+                        "name": "Jiehui Huang"
+                    },
+                    {
+                        "name": "Haokun Gui"
+                    },
+                    {
+                        "name": "Haoxuan Che"
+                    },
+                    {
+                        "name": "Long Chen"
+                    },
+                    {
+                        "name": "Qifeng Chen"
+                    },
+                    {
+                        "name": "Wenxuan Zhang"
+                    },
+                    {
+                        "name": "Wenya Wang"
+                    },
+                    {
+                        "name": "Xiaojuan Qi"
+                    },
+                    {
+                        "name": "Yang Deng"
+                    },
+                    {
+                        "name": "Yanwei Li"
+                    },
+                    {
+                        "name": "Mike Zheng Shou"
+                    },
+                    {
+                        "name": "Zhi-Qi Cheng"
+                    },
+                    {
+                        "name": "See-Kiong Ng"
+                    },
+                    {
+                        "name": "Ziwei Liu"
+                    },
+                    {
+                        "name": "Philip Torr"
+                    },
+                    {
+                        "name": "Jiaya Jia"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.21909v1",
-                "title": "Directional Confusions Reveal Divergent Inductive Biases Through Rate-Distortion Geometry in Human and Machine Vision",
-                "updated": "2026-04-23T17:52:16Z",
+                "id": "http://arxiv.org/abs/2604.22747v1",
+                "title": "Code for All: Educational Applications of the \"Vibe Coding\" Hackathon in Programming Education across All Skill Levels",
+                "updated": "2026-04-24T17:48:40Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.21909v1",
+                        "@href": "https://arxiv.org/abs/2604.22747v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.21909v1",
+                        "@href": "https://arxiv.org/pdf/2604.22747v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Humans and modern vision models can reach similar classification accuracy while making systematically different kinds of mistakes - differing not in how often they err, but in who gets mistaken for whom, and in which direction. We show that these directional confusions reveal distinct inductive biases that are invisible to accuracy alone. Using matched human and deep vision model responses on a natural-image categorization task under 12 perturbation types, we quantify asymmetry in confusion matrices and link it to generalization geometry through a Rate-Distortion (RD) framework, summarized by three geometric signatures (slope (beta), curvature (kappa)) and efficiency (AUC). We find that humans exhibit broad but weak asymmetries, whereas deep vision models show sparser, stronger directional collapses. Robustness training reduces global asymmetry but fails to recover the human-like breadth-strength profile of graded similarity. Mechanistic simulations further show that different asymmetry organizations shift the RD frontier in opposite directions, even when matched for performance. Together, these results position directional confusions and RD geometry as compact, interpretable signatures of inductive bias under distribution shift.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "q-bio.NC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-23T17:52:16Z",
+                "summary": "The emergence of large language models has enabled vibe coding, a natural language approach to programming in which users describe intent and AI generates or revises code, potentially broadening access to programming while preserving meaningful learning outcomes. We investigate its educational value through a month-long online hackathon that welcomed participants from multiple countries, ranging from complete beginners to experienced developers. The hackathon offered three tracks with increasing technical demands. Spark emphasized basic frontend functionality and dynamic features such as buttons, forms, and API calls. Build required backend or database integration. Launch targeted production ready web applications, including deployment. Participants were required to develop projects using only LLM generated code without manual edits and submitted complete chat histories, source code, demo videos, and functionality reports. We assessed educational effectiveness with a mixed methods design that combined standardized project evaluations across functionality, user interface and user experience design, impact, prompt quality, and code readability, along with post-hackathon surveys of perceived learning outcomes and thematic analysis of open-ended feedback. Our findings describe how participants with different backgrounds engage with vibe coding as task complexity increases, how the no manual editing constraint shapes prompting and debugging practices, and what these patterns imply for integrating AI assisted development into programming education and competitive learning environments.",
+                "category": {
+                    "@term": "cs.SE",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-24T17:48:40Z",
+                "arxiv:comment": "15 pages, 14 figures",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.SE"
                 },
                 "author": [
                     {
-                        "name": "Leyla Roksan Caglar"
+                        "name": "Ashley J. Chen",
+                        "arxiv:affiliation": "New York University Shanghai"
                     },
                     {
-                        "name": "Pedro A. M. Mediano"
+                        "name": "Yijia Cao",
+                        "arxiv:affiliation": "New York University Shanghai"
                     },
                     {
-                        "name": "Baihan Lin"
+                        "name": "Minghao Shao",
+                        "arxiv:affiliation": [
+                            "New York University Tandon School of Engineering",
+                            "New York University Abu Dhabi"
+                        ]
+                    },
+                    {
+                        "name": "Ramesh Karri",
+                        "arxiv:affiliation": "New York University Tandon School of Engineering"
+                    },
+                    {
+                        "name": "Muhammad Shafique",
+                        "arxiv:affiliation": "New York University Abu Dhabi"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.21905v1",
-                "title": "Low-Rank Adaptation Redux for Large Models",
-                "updated": "2026-04-23T17:50:23Z",
+                "id": "http://arxiv.org/abs/2604.22746v1",
+                "title": "Relaxation-Informed Training of Neural Network Surrogate Models",
+                "updated": "2026-04-24T17:46:55Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.21905v1",
+                        "@href": "https://arxiv.org/abs/2604.22746v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.21905v1",
+                        "@href": "https://arxiv.org/pdf/2604.22746v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Low-rank adaptation (LoRA) has emerged as the de facto standard for parameter-efficient fine-tuning (PEFT) of foundation models, enabling the adaptation of billion-parameter networks with minimal computational and memory overhead. Despite its empirical success and rapid proliferation of variants, it remains elusive which architectural choices, optimization techniques, and deployment constraints should guide practical method selection. This overview revisits LoRA through the lens of signal processing (SP), bridging modern adapter designs with classical low-rank modeling tools and inverse problems, as well as highlighting how SP principles can inform principled advances of fine-tuning approaches. Rather than providing a comprehensive enumeration and empirical comparisons of LoRA variants, emphasis is placed on the technical mechanisms underpinning these approaches to justify their effectiveness. These advances are categorized into three complementary axes: architectural design, efficient optimization, and pertinent applications. The first axis builds on singular value decomposition (SVD)-based factorization, rank-augmentation constructions, and cross-layer tensorization, while the second axis deals with initialization, alternating solvers, gauge-invariant optimization, and parameterization-aware methods. Beyond fine-tuning, emerging applications of LoRA are accounted across the entire lifecycle of large models, ranging from pre- and post-training to serving/deployment. Finally, open research directions are outlined at the confluence of SP and deep learning to catalyze a bidirectional frontier: classical SP tools provide a principled vocabulary for designing principled PEFT methods, while the unique challenges facing modern deep learning, especially the overwhelming scale and prohibitive overhead, also offer new research lines benefiting the SP community in return.",
+                "summary": "ReLU neural networks trained as surrogate models can be embedded exactly in mixed-integer linear programs (MILPs), enabling global optimization over the learned function. The tractability of the resulting MILP depends on structural properties of the network, i.e., the number of binary variables in associated formulations and the tightness of the continuous LP relaxation. These properties are determined during training, yet standard training objectives (prediction loss with classical weight regularization) offer no mechanism to directly control them. This work studies training regularizers that directly target downstream MILP tractability. Specifically, we propose simple bound-based regularizers that penalize the big-M constants of MILP formulations and/or the number of unstable neurons. Moreover, we introduce an LP relaxation gap regularizer that explicitly penalizes the per-sample gap of the continuous relaxation at training points. We derive its associated gradient and provide an implementation from LP dual variables without custom automatic differentiation tools. We show that combining the above regularizers can approximate the full total derivative of the LP gap with respect to the network parameters, capturing both direct and indirect sensitivities. Experiments on non-convex benchmark functions and a two-stage stochastic programming problem with quantile neural network surrogates demonstrate that the proposed regularizers can reduce MILP solve times by up to four orders of magnitude relative to an unregularized baseline, while maintaining competitive surrogate model accuracy.",
+                "category": [
+                    {
+                        "@term": "math.OC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-24T17:46:55Z",
+                "arxiv:comment": "35 pages, 5 figures",
+                "arxiv:primary_category": {
+                    "@term": "math.OC"
+                },
+                "author": {
+                    "name": "Calvin Tsay"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.22741v1",
+                "title": "Describing the swdatatoolkit: A Space Weather Data Analysis Library",
+                "updated": "2026-04-24T17:39:11Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.22741v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.22741v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "swdatatoolkit is a Python-based scientific software library designed to support the acquisition, preprocessing, and analysis of solar and space weather data. The toolkit consolidates functionality across multiple domains, including data downloading from established heliophysics sources, image preprocessing, edge detection, image texture quantification, magnetic field analysis, and the derivation of higher-level parameters commonly used in solar physics research. Its modular structure reflects the heterogeneous nature of space weather data and enables reproducible, extensible workflows for both exploratory analysis and machine-learning-driven studies. This paper presents an overview of the library's available capabilities, its scientific motivations, and its role in the broader space weather research ecosystem.",
+                "category": [
+                    {
+                        "@term": "astro-ph.IM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.SR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-24T17:39:11Z",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.IM"
+                },
+                "author": [
+                    {
+                        "name": "Dustin Kempton"
+                    },
+                    {
+                        "name": "Griffin Goodwin"
+                    },
+                    {
+                        "name": "Tarun Kumar Reddy Thippareddy"
+                    },
+                    {
+                        "name": "Reet Gupta"
+                    },
+                    {
+                        "name": "Viacheslav Sadykov"
+                    },
+                    {
+                        "name": "Rafal Angryk"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.22730v1",
+                "title": "Neural Recovery of Historical Lexical Structure in Bantu Languages from Modern Data",
+                "updated": "2026-04-24T17:27:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.22730v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.22730v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We investigate whether neural models trained exclusively on modern morphological data can recover cross-lingual lexical structure consistent with historical reconstruction. Using BantuMorph v7, a transformer over Bantu morphological paradigms, we analyze 14 Eastern and Southern Bantu languages, extract encoder embeddings for their noun and verb lemmas, and identify 728 noun and 1,525 verb cognate candidates shared across 5+ languages. Evaluating these candidates against established historical resources-the Bantu Lexical Reconstructions database (BLR3; 4,786 reconstructed Proto-Bantu forms) and the ASJP basic vocabulary-we confirm 10 of the top 11 noun candidates (90.9%) align with previously reconstructed Proto-Bantu forms, including *-ntU 'person' (8 languages), *gombe 'cow' (9 languages), and *mUn (9 languages). Extending to verbs, 12 verb cognates align with reconstructed Proto-Bantu roots, including *-bon- 'see' and *-jIm- 'stand', each attested across wide geographic ranges. Cross-model validation using an independent translation model (NLLB-600M) confirms these patterns: both models recover cognate clusters and phylogenetic groupings consistent with established Guthrie-zone classifications (p < 0.01). Cross-lingual noun class analysis reveals that all 13 productive classes maintain >0.83 cosine similarity across languages (within-class > between-class, p < 10^-9). Our dataset is restricted to Eastern and Southern Bantu, so we interpret these results as recovering shared Bantu lexical structure consistent with Proto-Bantu rather than definitively distinguishing Proto-Bantu retentions from later regional innovations.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "eess.SP",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-23T17:50:23Z",
+                "published": "2026-04-24T17:27:26Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Bingcong Li"
+                        "name": "Hillary Mutisya"
                     },
                     {
-                        "name": "Yilang Zhang"
+                        "name": "John Mugane"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.22728v1",
+                "title": "Revisiting confinement scalings and fusion performance with a perspective optimized for extrapolation",
+                "updated": "2026-04-24T17:26:25Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.22728v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Georgios B. Giannakis"
+                        "@href": "https://arxiv.org/pdf/2604.22728v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent advances in high-temperature-superconductor technology have made substantially higher toroidal magnetic fields technologically accessible, reopening the design space for compact, high-field tokamak reactors. Because reactor performance projections remain anchored to empirical confinement scalings, the recent update to the ITPA global H-mode confinement database raises an important question: what does the present experimental record and its uncertainty imply for the path to reactor-grade fusion performance? In this work, we revisit confinement extrapolation from an explicitly extrapolation-oriented perspective and, to complement its implications in terms of a direct reactor performance measure, present a cross-machine empirical scaling for fusion power. We systematically search for a minimally complex confinement scaling that optimizes the tradeoff between variance capture and extrapolative robustness. We find that low-order models centered near $N=3$ to $N=4$ optimize this tradeoff, with plasma current, machine size, heating power, and elongation emerging as the dominant engineering levers, together with an empirically inferred confinement penalty associated with metallic walls. Recast in reactor-performance terms, the results indicate that both the fusion triple product and fusion power are governed primarily by plasma current: the triple product scales approximately as $I_p^2$, and the empirical fusion power scaling exhibits a similarly near-quadratic dependence over a survey of the highest performing discharges across several machines. Projecting to reactors, these results suggest that high-field devices with metal walls may require higher plasma current than standard IPB98$(y,2)$-based expectations imply, and that gigawatt-class tokamak performance likely demands operation at $I_p \\gtrsim 20\\mathrm{MA}$.",
+                "category": {
+                    "@term": "physics.plasm-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-24T17:26:25Z",
+                "arxiv:primary_category": {
+                    "@term": "physics.plasm-ph"
+                },
+                "author": [
+                    {
+                        "name": "Jalal Butt"
+                    },
+                    {
+                        "name": "Geert Verdoolaege"
+                    },
+                    {
+                        "name": "Ghent University"
+                    },
+                    {
+                        "name": "Stanley M. Kaye"
+                    },
+                    {
+                        "name": "Egemen Kolemen"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.22724v1",
+                "title": "GCImOpt: Learning efficient goal-conditioned policies by imitating optimal trajectories",
+                "updated": "2026-04-24T17:23:34Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.22724v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.22724v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Imitation learning is a well-established approach for machine-learning-based control. However, its applicability depends on having access to demonstrations, which are often expensive to collect and/or suboptimal for solving the task. In this work, we present GCImOpt, an approach to learn efficient goal-conditioned policies by training on datasets generated by trajectory optimization. Our approach for dataset generation is computationally efficient, can generate thousands of optimal trajectories in minutes on a laptop computer, and produces high-quality demonstrations. Further, by means of a data augmentation scheme that treats intermediate states as goals, we are able to increase the training dataset size by an order of magnitude. Using our generated datasets, we train goal-conditioned neural network policies that can control the system towards arbitrary goals. To demonstrate the generality of our approach, we generate datasets and then train policies for various control tasks, namely cart-pole stabilization, planar and three-dimensional quadcopter stabilization, and point reaching using a 6-DoF robot arm. We show that our trained policies can achieve high success rates and near-optimal control profiles, all while being small (less than 80,000 neural network parameters) and fast enough (up to more than 6,000 times faster than a trajectory optimization solver) that they could be deployed onboard resource-constrained controllers. We provide videos, code, datasets and pre-trained policies under a free software license; see our project website https://jongoiko.github.io/gcimopt/.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-24T17:23:34Z",
+                "arxiv:comment": "Accepted for publication at the 8th Annual Conference on Learning for Dynamics and Control (L4DC 2026). 16 pages (including appendix), 1 figure. For project website, see https://jongoiko.github.io/gcimopt/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Jon Goikoetxea"
+                    },
+                    {
+                        "name": "Jes\u00fas F. Palaci\u00e1n"
                     }
                 ]
             }
