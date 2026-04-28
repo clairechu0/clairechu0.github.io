@@ -5,479 +5,487 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-27T23:46:02Z",
+        "updated": "2026-04-28T02:24:58Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "563502",
+        "opensearch:totalResults": "564171",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.22753v1",
-                "title": "Spend Less, Fit Better: Budget-Efficient Scaling Law Fitting via Active Experiment Selection",
-                "updated": "2026-04-24T17:59:42Z",
+                "id": "http://arxiv.org/abs/2604.24658v1",
+                "title": "The Last Human-Written Paper: Agent-Native Research Artifacts",
+                "updated": "2026-04-27T16:23:09Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.22753v1",
+                        "@href": "https://arxiv.org/abs/2604.24658v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.22753v1",
+                        "@href": "https://arxiv.org/pdf/2604.24658v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Scaling laws are used to plan multi-million-dollar training runs, but fitting those laws can itself cost millions. In modern large-scale workflows, assembling a sufficiently informative set of pilot experiments is already a major budget-allocation problem rather than a routine preprocessing step. We formulate scaling-law fitting as budget-aware sequential experimental design: given a finite pool of runnable experiments with heterogeneous costs, choose which runs to execute so as to maximize extrapolation accuracy in a high-cost target region. We then propose an uncertainty-aware method for sequentially allocating experimental budget toward the runs most useful for target-region extrapolation. Across a diverse benchmark of scaling-law tasks, our method consistently outperforms classical design-based baselines, and often approaches the performance of fitting on the full experimental set while using only about 10% of the total training budget. Our code is available at https://github.com/PlanarG/active-sl.",
+                "summary": "Scientific publication compresses a branching, iterative research process into a linear narrative, discarding the majority of what was discovered along the way. This compilation imposes two structural costs: a Storytelling Tax, where failed experiments, rejected hypotheses, and the branching exploration process are discarded to fit a linear narrative; and an Engineering Tax, where the gap between reviewer-sufficient prose and agent-sufficient specification leaves critical implementation details unwritten. Tolerable for human readers, these costs become critical when AI agents must understand, reproduce, and extend published work. We introduce the Agent-Native Research Artifact (Ara), a protocol that replaces the narrative paper with a machine-executable research package structured around four layers: scientific logic, executable code with full specifications, an exploration graph that preserves the failures compilation discards, and evidence grounding every claim in raw outputs. Three mechanisms support the ecosystem: a Live Research Manager that captures decisions and dead ends during ordinary development; an Ara Compiler that translates legacy PDFs and repos into Aras; and an Ara-native review system that automates objective checks so human reviewers can focus on significance, novelty, and taste. On PaperBench and RE-Bench, Ara raises question-answering accuracy from 72.4% to 93.7% and reproduction success from 57.4% to 64.4%. On RE-Bench's five open-ended extension tasks, preserved failure traces in Ara accelerate progress, but can also constrain a capable agent from stepping outside the prior-run box depending on the agent's capabilities.",
                 "category": {
                     "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-04-24T17:59:42Z",
+                "published": "2026-04-27T16:23:09Z",
+                "arxiv:comment": "45 pages, 15 figures, 14 tables",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Sijie Li"
+                        "name": "Jiachen Liu"
                     },
                     {
-                        "name": "Shanda Li"
+                        "name": "Jiaxin Pei"
                     },
                     {
-                        "name": "Haowei Lin"
+                        "name": "Jintao Huang"
                     },
                     {
-                        "name": "Weiwei Sun"
+                        "name": "Chenglei Si"
                     },
                     {
-                        "name": "Ameet Talwalkar"
+                        "name": "Ao Qu"
                     },
                     {
-                        "name": "Yiming Yang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.22752v1",
-                "title": "From Physics to Statistics: A Simple Route to Exponential Families via Maximum Entropy",
-                "updated": "2026-04-24T17:57:31Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.22752v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Xiangru Tang"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.22752v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Exponential families form the backbone of modern statistics and machine learning, but textbooks seldom derive them from first principles in an accessible way. Although minimal sufficiency and the principle of maximum entropy, originating in physics, provide core motivation, they are often presented as technical and requiring advanced prerequisites.\n  Here, a short, self-contained derivation of exponential families based on maximum entropy is presented that is straightforward to carry out, requires only a modest background in information entropy, and avoids technicalities like constrained optimisation. Two propositions are demonstrated in this fashion: i) exponential families with a general base maximise information entropy with respect to that base subject to fixed expectations of canonical statistics, and ii) exponential families with a uniform base maximise standard information entropy under the same constraints.\n  Maximum entropy therefore provides a principled foundation for exponential families with minimal prerequisites, highlighting the value of teaching entropy in statistics courses.",
-                "category": {
-                    "@term": "stat.ME",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-24T17:57:31Z",
-                "arxiv:comment": "17 pages, 2 tables",
-                "arxiv:primary_category": {
-                    "@term": "stat.ME"
-                },
-                "author": {
-                    "name": "Korbinian Strimmer"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.22750v1",
-                "title": "How Do AI Agents Spend Your Money? Analyzing and Predicting Token Consumption in Agentic Coding Tasks",
-                "updated": "2026-04-24T17:54:47Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.22750v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Runyu Lu"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.22750v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The wide adoption of AI agents in complex human workflows is driving rapid growth in LLM token consumption. When agents are deployed on tasks that require a significant amount of tokens, three questions naturally arise: (1) Where do AI agents spend the tokens? (2) Which models are more token-efficient? and (3) Can agents predict their token usage before task execution? In this paper, we present the first systematic study of token consumption patterns in agentic coding tasks. We analyze trajectories from eight frontier LLMs on SWE-bench Verified and evaluate models' ability to predict their own token costs before task execution. We find that: (1) agentic tasks are uniquely expensive, consuming 1000x more tokens than code reasoning and code chat, with input tokens rather than output tokens driving the overall cost; (2) token usage is highly variable and inherently stochastic: runs on the same task can differ by up to 30x in total tokens, and higher token usage does not translate into higher accuracy; instead, accuracy often peaks at intermediate cost and saturates at higher costs; (3) models vary substantially in token efficiency: on the same tasks, Kimi-K2 and Claude-Sonnet-4.5, on average, consume over 1.5 million more tokens than GPT-5; (4) task difficulty rated by human experts only weakly aligns with actual token costs, revealing a fundamental gap between human-perceived complexity and the computational effort agents actually expend; and (5) frontier models fail to accurately predict their own token usage (with weak-to-moderate correlations, up to 0.39) and systematically underestimate real token costs. Our study offers new insights into the economics of AI agents and can inspire future research in this direction.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Lichang Chen"
                     },
                     {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Xiaoyan Bai"
                     },
                     {
-                        "@term": "cs.HC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Haizhong Zheng"
                     },
                     {
-                        "@term": "cs.SE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-24T17:54:47Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Longju Bai"
+                        "name": "Carl Chen"
                     },
                     {
-                        "name": "Zhemin Huang"
+                        "name": "Zhiyang Chen"
                     },
                     {
-                        "name": "Xingyao Wang"
+                        "name": "Haojie Ye"
                     },
                     {
-                        "name": "Jiao Sun"
+                        "name": "Yujuan Fu"
                     },
                     {
-                        "name": "Rada Mihalcea"
+                        "name": "Zexue He"
                     },
                     {
-                        "name": "Erik Brynjolfsson"
+                        "name": "Zijian Jin"
+                    },
+                    {
+                        "name": "Zhenyu Zhang"
+                    },
+                    {
+                        "name": "Shangquan Sun"
+                    },
+                    {
+                        "name": "Maestro Harmon"
+                    },
+                    {
+                        "name": "John Dianzhuo Wang"
+                    },
+                    {
+                        "name": "Jianqiao Zeng"
+                    },
+                    {
+                        "name": "Jiachen Sun"
+                    },
+                    {
+                        "name": "Mingyuan Wu"
+                    },
+                    {
+                        "name": "Baoyu Zhou"
+                    },
+                    {
+                        "name": "Yuchen You"
+                    },
+                    {
+                        "name": "Shijian Lu"
+                    },
+                    {
+                        "name": "Yiming Qiu"
+                    },
+                    {
+                        "name": "Fan Lai"
+                    },
+                    {
+                        "name": "Yuan Yuan"
+                    },
+                    {
+                        "name": "Yao Li"
+                    },
+                    {
+                        "name": "Junyuan Hong"
+                    },
+                    {
+                        "name": "Ruihao Zhu"
+                    },
+                    {
+                        "name": "Beidi Chen"
                     },
                     {
                         "name": "Alex Pentland"
                     },
                     {
-                        "name": "Jiaxin Pei"
+                        "name": "Ang Chen"
+                    },
+                    {
+                        "name": "Mosharaf Chowdhury"
+                    },
+                    {
+                        "name": "Zechen Zhang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.22748v1",
-                "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
-                "updated": "2026-04-24T17:48:47Z",
+                "id": "http://arxiv.org/abs/2604.24657v1",
+                "title": "AgentWard: A Lifecycle Security Architecture for Autonomous AI Agents",
+                "updated": "2026-04-27T16:22:27Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.22748v1",
+                        "@href": "https://arxiv.org/abs/2604.24657v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.22748v1",
+                        "@href": "https://arxiv.org/pdf/2604.24657v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, coordinate with others, or design experiments require predictive environment models, yet the term world model carries different meanings across research communities. We introduce a \"levels x laws\" taxonomy organized along two axes. The first defines three capability levels: L1 Predictor, which learns one-step local transition operators; L2 Simulator, which composes them into multi-step, action-conditioned rollouts that respect domain laws; and L3 Evolver, which autonomously revises its own model when predictions fail against new evidence. The second identifies four governing-law regimes: physical, digital, social, and scientific. These regimes determine what constraints a world model must satisfy and where it is most likely to fail. Using this framework, we synthesize over 400 works and summarize more than 100 representative systems spanning model-based reinforcement learning, video generation, web and GUI agents, multi-agent social simulation, and AI-driven scientific discovery. We analyze methods, failure modes, and evaluation practices across level-regime pairs, propose decision-centric evaluation principles and a minimal reproducible evaluation package, and outline architectural guidance, open problems, and governance challenges. The resulting roadmap connects previously isolated communities and charts a path from passive next-step prediction toward world models that can simulate, and ultimately reshape, the environments in which agents operate.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-24T17:48:47Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Meng Chu"
-                    },
-                    {
-                        "name": "Xuan Billy Zhang"
-                    },
-                    {
-                        "name": "Kevin Qinghong Lin"
-                    },
-                    {
-                        "name": "Lingdong Kong"
-                    },
-                    {
-                        "name": "Jize Zhang"
-                    },
-                    {
-                        "name": "Teng Tu"
-                    },
-                    {
-                        "name": "Weijian Ma"
-                    },
-                    {
-                        "name": "Ziqi Huang"
-                    },
-                    {
-                        "name": "Senqiao Yang"
-                    },
-                    {
-                        "name": "Wei Huang"
-                    },
-                    {
-                        "name": "Yeying Jin"
-                    },
-                    {
-                        "name": "Zhefan Rao"
-                    },
-                    {
-                        "name": "Jinhui Ye"
-                    },
-                    {
-                        "name": "Xinyu Lin"
-                    },
-                    {
-                        "name": "Xichen Zhang"
-                    },
-                    {
-                        "name": "Qisheng Hu"
-                    },
-                    {
-                        "name": "Shuai Yang"
-                    },
-                    {
-                        "name": "Leyang Shen"
-                    },
-                    {
-                        "name": "Wei Chow"
-                    },
-                    {
-                        "name": "Yifei Dong"
-                    },
-                    {
-                        "name": "Fengyi Wu"
-                    },
-                    {
-                        "name": "Quanyu Long"
-                    },
-                    {
-                        "name": "Bin Xia"
-                    },
-                    {
-                        "name": "Shaozuo Yu"
-                    },
-                    {
-                        "name": "Mingkang Zhu"
-                    },
-                    {
-                        "name": "Wenhu Zhang"
-                    },
-                    {
-                        "name": "Jiehui Huang"
-                    },
-                    {
-                        "name": "Haokun Gui"
-                    },
-                    {
-                        "name": "Haoxuan Che"
-                    },
-                    {
-                        "name": "Long Chen"
-                    },
-                    {
-                        "name": "Qifeng Chen"
-                    },
-                    {
-                        "name": "Wenxuan Zhang"
-                    },
-                    {
-                        "name": "Wenya Wang"
-                    },
-                    {
-                        "name": "Xiaojuan Qi"
-                    },
-                    {
-                        "name": "Yang Deng"
-                    },
-                    {
-                        "name": "Yanwei Li"
-                    },
-                    {
-                        "name": "Mike Zheng Shou"
-                    },
-                    {
-                        "name": "Zhi-Qi Cheng"
-                    },
-                    {
-                        "name": "See-Kiong Ng"
-                    },
-                    {
-                        "name": "Ziwei Liu"
-                    },
-                    {
-                        "name": "Philip Torr"
-                    },
-                    {
-                        "name": "Jiaya Jia"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.22747v1",
-                "title": "Code for All: Educational Applications of the \"Vibe Coding\" Hackathon in Programming Education across All Skill Levels",
-                "updated": "2026-04-24T17:48:40Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.22747v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.22747v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The emergence of large language models has enabled vibe coding, a natural language approach to programming in which users describe intent and AI generates or revises code, potentially broadening access to programming while preserving meaningful learning outcomes. We investigate its educational value through a month-long online hackathon that welcomed participants from multiple countries, ranging from complete beginners to experienced developers. The hackathon offered three tracks with increasing technical demands. Spark emphasized basic frontend functionality and dynamic features such as buttons, forms, and API calls. Build required backend or database integration. Launch targeted production ready web applications, including deployment. Participants were required to develop projects using only LLM generated code without manual edits and submitted complete chat histories, source code, demo videos, and functionality reports. We assessed educational effectiveness with a mixed methods design that combined standardized project evaluations across functionality, user interface and user experience design, impact, prompt quality, and code readability, along with post-hackathon surveys of perceived learning outcomes and thematic analysis of open-ended feedback. Our findings describe how participants with different backgrounds engage with vibe coding as task complexity increases, how the no manual editing constraint shapes prompting and debugging practices, and what these patterns imply for integrating AI assisted development into programming education and competitive learning environments.",
-                "category": {
-                    "@term": "cs.SE",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-24T17:48:40Z",
-                "arxiv:comment": "15 pages, 14 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.SE"
-                },
-                "author": [
-                    {
-                        "name": "Ashley J. Chen",
-                        "arxiv:affiliation": "New York University Shanghai"
-                    },
-                    {
-                        "name": "Yijia Cao",
-                        "arxiv:affiliation": "New York University Shanghai"
-                    },
-                    {
-                        "name": "Minghao Shao",
-                        "arxiv:affiliation": [
-                            "New York University Tandon School of Engineering",
-                            "New York University Abu Dhabi"
-                        ]
-                    },
-                    {
-                        "name": "Ramesh Karri",
-                        "arxiv:affiliation": "New York University Tandon School of Engineering"
-                    },
-                    {
-                        "name": "Muhammad Shafique",
-                        "arxiv:affiliation": "New York University Abu Dhabi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.22746v1",
-                "title": "Relaxation-Informed Training of Neural Network Surrogate Models",
-                "updated": "2026-04-24T17:46:55Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.22746v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.22746v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "ReLU neural networks trained as surrogate models can be embedded exactly in mixed-integer linear programs (MILPs), enabling global optimization over the learned function. The tractability of the resulting MILP depends on structural properties of the network, i.e., the number of binary variables in associated formulations and the tightness of the continuous LP relaxation. These properties are determined during training, yet standard training objectives (prediction loss with classical weight regularization) offer no mechanism to directly control them. This work studies training regularizers that directly target downstream MILP tractability. Specifically, we propose simple bound-based regularizers that penalize the big-M constants of MILP formulations and/or the number of unstable neurons. Moreover, we introduce an LP relaxation gap regularizer that explicitly penalizes the per-sample gap of the continuous relaxation at training points. We derive its associated gradient and provide an implementation from LP dual variables without custom automatic differentiation tools. We show that combining the above regularizers can approximate the full total derivative of the LP gap with respect to the network parameters, capturing both direct and indirect sensitivities. Experiments on non-convex benchmark functions and a two-stage stochastic programming problem with quantile neural network surrogates demonstrate that the proposed regularizers can reduce MILP solve times by up to four orders of magnitude relative to an unregularized baseline, while maintaining competitive surrogate model accuracy.",
+                "summary": "Autonomous AI agents extend large language models into full runtime systems that load skills, ingest external content, maintain memory, plan multi-step actions, and invoke privileged tools. In such systems, security failures rarely remain confined to a single interface; instead, they can propagate across initialization, input processing, memory, decision-making, and execution, often becoming apparent only when harmful effects materialize in the environment. This paper presents AgentWard, a lifecycle-oriented, defense-in-depth architecture that systematically organizes protection across these five stages. AgentWard integrates stage-specific, heterogeneous controls with cross-layer coordination, enabling threats to be intercepted along their propagation paths while safeguarding critical assets. We detail the design rationale and architecture of five coordinated protection layers, and implement a plugin-native prototype on OpenClaw to demonstrate practical feasibility. This perspective provides a concrete blueprint for structuring runtime security controls, managing trust propagation, and enforcing execution containment in autonomous AI agents. Our code is available at https://github.com/FIND-Lab/AgentWard .",
                 "category": [
                     {
-                        "@term": "math.OC",
+                        "@term": "cs.CR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-27T16:22:27Z",
+                "arxiv:comment": "7 pages, 1 figure;",
+                "arxiv:primary_category": {
+                    "@term": "cs.CR"
+                },
+                "author": [
+                    {
+                        "name": "Yixiang Zhang"
+                    },
+                    {
+                        "name": "Xinhao Deng"
+                    },
+                    {
+                        "name": "Jiaqing Wu"
+                    },
+                    {
+                        "name": "Yue Xiao"
+                    },
+                    {
+                        "name": "Ke Xu"
+                    },
+                    {
+                        "name": "Qi Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.24654v1",
+                "title": "\\texttt{SWIM}: Stochastic Warm Inflation Module to generate and analyse Warm Inflationary power spectrum",
+                "updated": "2026-04-27T16:21:46Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.24654v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.24654v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Numerical analysis to determine the form of the scalar power spectrum in Warm Inflationary paradigm is inevitable. One further needs numerical techniques to analyse any Warm Inflation model with the current observational data through the MCMC codes that are available publicly, like COSMOMC or Cobaya. We present \\texttt{SWIM} (Stochastic Warm Inflation Module) written in C++ and Python, that not only helps generate the Warm Inflationary scalar power spectrum, either semi-analytically or fully numerically, but also is integrated with Cobaya enabling the user to constrain the model parameters with current CMB data and thus to put any Warm Inflation model to test. \\texttt{SWIM} numerically solves the standard stochastic perturbation equations of Warm Inflation without any approximations, uses machine learning techniques to speed up the MCMC analysis while analysing the fully numerical power spectrum that significantly reduces the computational cost, and is able to accommodate any Warm Inflation model with any form of inflationary potential and dissipative coefficient for numerical analysis. We show that \\texttt{SWIM}, in most of the cases, outperforms other numerical codes on Warm Inflation that are designed to yield only the semi-analytical power spectrum as far as the runtimes are concerned. We further point out that there can be situations where the semi-analytical way of determining the scalar power spectrum in Warm Inflation can fall short, and one needs the full numerical power spectrum for parameter estimation given the observational data. In such cases, \\texttt{SWIM} is the only code available so far that is designed to perform the task. Hence, \\texttt{SWIM} offers a complete numerical platform for thorough analysis of Warm Inflation models against the current cosmological data. \\texttt{SWIM} has been made publicly available at https://github.com/umg-kmr/SWIM.",
+                "category": [
+                    {
+                        "@term": "astro-ph.CO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "gr-qc",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "hep-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "hep-th",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-27T16:21:46Z",
+                "arxiv:comment": "34 pages, 8 figures, 4 tables, prepared for submission to JCAP",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.CO"
+                },
+                "author": [
+                    {
+                        "name": "Umang Kumar"
+                    },
+                    {
+                        "name": "Suratna Das"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.24645v1",
+                "title": "K-MetBench: A Multi-Dimensional Benchmark for Fine-Grained Evaluation of Expert Reasoning, Locality, and Multimodality in Meteorology",
+                "updated": "2026-04-27T16:13:14Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.24645v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.24645v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The development of practical (multimodal) large language model assistants for Korean weather forecasters is hindered by the absence of a multidimensional, expert-level evaluation framework grounded in authoritative sources. To address this, we introduce K-MetBench, a diagnostic benchmark grounded in national qualification exams. It exposes critical gaps across four dimensions: expert visual reasoning of charts, logical validity via expert-verified rationales, Korean-specific geo-cultural comprehension, and fine-grained domain analysis. Our evaluation of 55 models reveals a profound modality gap in interpreting specialized diagrams and a reasoning gap where models hallucinate logic despite correct predictions. Crucially, Korean models outperform significantly larger global models in local contexts, demonstrating that parameter scaling alone cannot resolve cultural dependencies. K-MetBench serves as a roadmap for developing reliable, culturally aware expert AI agents. The dataset is available at https://huggingface.co/datasets/soyeonbot/K-MetBench .",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-27T16:13:14Z",
+                "arxiv:comment": "39 pages, 32 figures, 14 tables, including appendices. Accepted to Findings of the Association for Computational Linguistics (ACL 2026)",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Soyeon Kim"
+                    },
+                    {
+                        "name": "Cheongwoong Kang"
+                    },
+                    {
+                        "name": "Myeongjin Lee"
+                    },
+                    {
+                        "name": "Eun-Chul Chang"
+                    },
+                    {
+                        "name": "Jaedeok Lee"
+                    },
+                    {
+                        "name": "Jaesik Choi"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.24642v1",
+                "title": "Probing CLIP's Comprehension of 360-Degree Textual and Visual Semantics",
+                "updated": "2026-04-27T16:10:00Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.24642v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.24642v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The dream of instantly creating rich 360-degree panoramic worlds from text is rapidly becoming a reality, yet a crucial gap exists in our ability to reliably evaluate their semantic alignment. Contrastive Language-Image Pre-training (CLIP) models, standard AI evaluators, predominantly trained on perspective image-text pairs, face an open question regarding their understanding of the unique characteristics of 360-degree panoramic image-text pairs. This paper addresses this gap by first introducing two concepts: \\emph{360-degree textual semantics}, semantic information conveyed by explicit format identifiers, and \\emph{360-degree visual semantics}, invariant semantics under horizontal circular shifts. To probe CLIP's comprehension of these semantics, we then propose novel evaluation methodologies using keyword manipulation and horizontal circular shifts of varying magnitudes. Rigorous statistical analyses across popular CLIP configurations reveal that: (1) CLIP models effectively leverage explicit textual identifiers, demonstrating an understanding of 360-degree textual semantics; and (2) CLIP models fail to robustly preserve semantic alignment under horizontal circular shifts, indicating limited comprehension of 360-degree visual semantics. To address this limitation, we propose a LoRA-based fine-tuning framework that explicitly instills invariance to circular shifts. Our fine-tuned models exhibit improved comprehension of 360-degree visual semantics, though with a slight degradation in original semantic evaluation performance, highlighting a fundamental trade-off in adapting CLIP to 360-degree panoramic images. Code is available at https://github.com/littlewhitesea/360Semantics.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-27T16:10:00Z",
+                "arxiv:comment": "Project Page: https://littlewhitesea.github.io/360Semantics.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Hai Wang"
+                    },
+                    {
+                        "name": "Xiaochen Yang"
+                    },
+                    {
+                        "name": "Mingzhi Dong"
+                    },
+                    {
+                        "name": "Jing-Hao Xue"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.24640v1",
+                "title": "DiffQEC: A versatile diffusion model for quantum error correction",
+                "updated": "2026-04-27T16:08:38Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.24640v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.24640v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Quantum computers could solve problems beyond the reach of classical devices, but this potential depends on quantum error correction (QEC) to protect fragile quantum states from noise. A central challenge in QEC is decoding: inferring likely physical errors from syndrome patterns generated by repeated stabilizer measurements. Existing decoders, including graph-based and neural approaches, typically return a single correction hypothesis and therefore discard the richer posterior structure of the error distribution conditioned on the observed syndrome. Here we recast QEC decoding as posterior inference using discrete denoising diffusion, exploiting the analogy between stochastic error accumulation and the forward diffusion process. We introduce DiffQEC, a generative decoder that combines a syndrome processor for multi-round spatial-temporal syndrome histories with syndrome feature modulation to condition denoising on the observed syndrome throughout inference. On experimental data from Google's superconducting quantum processor, DiffQEC reduces logical error rates by up to 10.2% relative to minimum-weight perfect matching and by about 5% relative to tensor-network decoding. These improvements persist for larger code distances up to 17 under depolarizing noise and for logical circuits of increasing depth. Beyond accuracy, the learned posterior provides confidence estimates for post-selection and reveals physically meaningful error structure, establishing posterior generative decoding as a practical framework for QEC.",
+                "category": {
+                    "@term": "quant-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-27T16:08:38Z",
+                "arxiv:comment": "15 pages, 4 figures",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Tianyi Xu"
+                    },
+                    {
+                        "name": "Qinglong Liu"
+                    },
+                    {
+                        "name": "Maolin Wang"
+                    },
+                    {
+                        "name": "Fei Zhang"
+                    },
+                    {
+                        "name": "Zhe Zhao"
+                    },
+                    {
+                        "name": "Yang Wang"
+                    },
+                    {
+                        "name": "Ye Wei"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.24637v1",
+                "title": "Cortex-Inspired Continual Learning: Unsupervised Instantiation and Recovery of Functional Task Networks",
+                "updated": "2026-04-27T16:06:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.24637v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.24637v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Block-sequential continual learning demands that a single model both protect prior solutions from catastrophic forgetting and efficiently infer at inference time which prior solution matches the current input without task labels. We present Functional Task Networks (FTN), a parameter-isolation method inspired by structural and dynamical motifs found in the mammalian neocortex. Similar to mixture-of-experts, this method uses a high dimensional, self-organizing binary mask over a large population of small but deep networks, inspired by dendritic models of pyramidal neurons. The mask is produced by a three-stage procedure: (1) gradient descent on a continuous mask identifies task-relevant neurons, (2) a smoothing kernel biases the result toward spatial contiguity, (3) and k-winner-take-all binarizes the resulting group at a fixed capacity budget. Like mixture-of-experts, each neuron is an independent deep network, so disjoint masks give exactly disjoint gradient updates, providing structural guarantees against catastrophic forgetting. This three-stage procedure recovers the sub-network of a previously-trained task in a single gradient step, providing unsupervised task segmentation at inference time. We test it on three continual-learning benchmarks: (1) a synthetic multi-task classification/regression generator, (2) MNIST with shuffled class labels (pure concept shift), and (3) Permuted MNIST (domain shift). On all three, FTN with fine grained smoothing (FTN-Slow) results in nearly zero forgetting. FTN with a large kernel and only 2 iterations of smoothing (FTN-Fast) trades off some retention for increased speed. We show that the spatial organization mechanism reduces the effective mask search from the combinatorial top-k subset problem in O(C(H,K)) to the complexity of a near-linear scan in O(H) over compact cortical neighborhoods, which is parallelized by the gradient-based update.",
+                "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-24T17:46:55Z",
-                "arxiv:comment": "35 pages, 5 figures",
-                "arxiv:primary_category": {
-                    "@term": "math.OC"
-                },
-                "author": {
-                    "name": "Calvin Tsay"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.22741v1",
-                "title": "Describing the swdatatoolkit: A Space Weather Data Analysis Library",
-                "updated": "2026-04-24T17:39:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.22741v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.22741v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "swdatatoolkit is a Python-based scientific software library designed to support the acquisition, preprocessing, and analysis of solar and space weather data. The toolkit consolidates functionality across multiple domains, including data downloading from established heliophysics sources, image preprocessing, edge detection, image texture quantification, magnetic field analysis, and the derivation of higher-level parameters commonly used in solar physics research. Its modular structure reflects the heterogeneous nature of space weather data and enables reproducible, extensible workflows for both exploratory analysis and machine-learning-driven studies. This paper presents an overview of the library's available capabilities, its scientific motivations, and its role in the broader space weather research ecosystem.",
-                "category": [
-                    {
-                        "@term": "astro-ph.IM",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "astro-ph.SR",
+                        "@term": "q-bio.NC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-24T17:39:11Z",
+                "published": "2026-04-27T16:06:28Z",
+                "arxiv:comment": "16 pages, 15 figures",
                 "arxiv:primary_category": {
-                    "@term": "astro-ph.IM"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Dustin Kempton"
+                        "name": "Kevin McKee"
                     },
                     {
-                        "name": "Griffin Goodwin"
+                        "name": "Thomas Hazy"
                     },
                     {
-                        "name": "Tarun Kumar Reddy Thippareddy"
+                        "name": "Yicong Zheng"
                     },
                     {
-                        "name": "Reet Gupta"
+                        "name": "Zacharie Bugaud"
                     },
                     {
-                        "name": "Viacheslav Sadykov"
-                    },
-                    {
-                        "name": "Rafal Angryk"
+                        "name": "Thomas Miconi"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.22730v1",
-                "title": "Neural Recovery of Historical Lexical Structure in Bantu Languages from Modern Data",
-                "updated": "2026-04-24T17:27:26Z",
+                "id": "http://arxiv.org/abs/2604.24636v1",
+                "title": "Less Is More: Engineering Challenges of On-Device Small Language Model Integration in a Mobile Application",
+                "updated": "2026-04-27T16:05:39Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.22730v1",
+                        "@href": "https://arxiv.org/abs/2604.24636v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.22730v1",
+                        "@href": "https://arxiv.org/pdf/2604.24636v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We investigate whether neural models trained exclusively on modern morphological data can recover cross-lingual lexical structure consistent with historical reconstruction. Using BantuMorph v7, a transformer over Bantu morphological paradigms, we analyze 14 Eastern and Southern Bantu languages, extract encoder embeddings for their noun and verb lemmas, and identify 728 noun and 1,525 verb cognate candidates shared across 5+ languages. Evaluating these candidates against established historical resources-the Bantu Lexical Reconstructions database (BLR3; 4,786 reconstructed Proto-Bantu forms) and the ASJP basic vocabulary-we confirm 10 of the top 11 noun candidates (90.9%) align with previously reconstructed Proto-Bantu forms, including *-ntU 'person' (8 languages), *gombe 'cow' (9 languages), and *mUn (9 languages). Extending to verbs, 12 verb cognates align with reconstructed Proto-Bantu roots, including *-bon- 'see' and *-jIm- 'stand', each attested across wide geographic ranges. Cross-model validation using an independent translation model (NLLB-600M) confirms these patterns: both models recover cognate clusters and phylogenetic groupings consistent with established Guthrie-zone classifications (p < 0.01). Cross-lingual noun class analysis reveals that all 13 productive classes maintain >0.83 cosine similarity across languages (within-class > between-class, p < 10^-9). Our dataset is restricted to Eastern and Southern Bantu, so we interpret these results as recovering shared Bantu lexical structure consistent with Proto-Bantu rather than definitively distinguishing Proto-Bantu retentions from later regional innovations.",
+                "summary": "On-device Small Language Models (SLMs) promise fully offline, private AI experiences for mobile users (no cloud dependency, no data leaving the device). But is this promise achievable in practice? This paper presents a longitudinal practitioner case study documenting the engineering challenges of integrating SLMs (Gemma 4 E2B, 2.6B parameters; Qwen3 0.6B, 600M parameters) into Palabrita, a production Android word-guessing game. Over a 5-day development sprint comprising 204 commits (~90 directly AI-related), the system underwent a radical transformation: from an ambitious design where the LLM generated complete structured puzzles (word, category, difficulty, and five hints as JSON) to a pragmatic architecture where curated word lists provide the words and the LLM generates only three short hints, with a deterministic fallback if it fails. We identify five categories of failures specific to on-device SLM integration: output format violations, constraint violations, context quality degradation, latency incompatibility, and model selection instability. For each failure category, we document the observed symptoms, root causes, and the prompt engineering and architectural strategies that effectively mitigated them, including multi-layer defensive parsing, contextual retry with failure feedback, session rotation, progressive prompt hardening, and systematic responsibility reduction. Our findings demonstrate that on-device SLMs are viable for production mobile applications, but only when the developer accepts a fundamental constraint: the most reliable on-device LLM feature is one where the LLM does the least. We distill our experience into eight actionable design heuristics for practitioners integrating SLMs into mobile apps.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.SE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -485,99 +493,157 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-24T17:27:26Z",
+                "published": "2026-04-27T16:05:39Z",
+                "arxiv:comment": "28 pages, 8 tables, 17 references",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.SE"
                 },
-                "author": [
-                    {
-                        "name": "Hillary Mutisya"
-                    },
-                    {
-                        "name": "John Mugane"
-                    }
-                ]
+                "author": {
+                    "name": "William Oliveira"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2604.22728v1",
-                "title": "Revisiting confinement scalings and fusion performance with a perspective optimized for extrapolation",
-                "updated": "2026-04-24T17:26:25Z",
+                "id": "http://arxiv.org/abs/2604.24634v1",
+                "title": "Computational Design and Experimental Validation of Photoactive PARP1 Inhibitors",
+                "updated": "2026-04-27T16:03:45Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.22728v1",
+                        "@href": "https://arxiv.org/abs/2604.24634v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.22728v1",
+                        "@href": "https://arxiv.org/pdf/2604.24634v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent advances in high-temperature-superconductor technology have made substantially higher toroidal magnetic fields technologically accessible, reopening the design space for compact, high-field tokamak reactors. Because reactor performance projections remain anchored to empirical confinement scalings, the recent update to the ITPA global H-mode confinement database raises an important question: what does the present experimental record and its uncertainty imply for the path to reactor-grade fusion performance? In this work, we revisit confinement extrapolation from an explicitly extrapolation-oriented perspective and, to complement its implications in terms of a direct reactor performance measure, present a cross-machine empirical scaling for fusion power. We systematically search for a minimally complex confinement scaling that optimizes the tradeoff between variance capture and extrapolative robustness. We find that low-order models centered near $N=3$ to $N=4$ optimize this tradeoff, with plasma current, machine size, heating power, and elongation emerging as the dominant engineering levers, together with an empirically inferred confinement penalty associated with metallic walls. Recast in reactor-performance terms, the results indicate that both the fusion triple product and fusion power are governed primarily by plasma current: the triple product scales approximately as $I_p^2$, and the empirical fusion power scaling exhibits a similarly near-quadratic dependence over a survey of the highest performing discharges across several machines. Projecting to reactors, these results suggest that high-field devices with metal walls may require higher plasma current than standard IPB98$(y,2)$-based expectations imply, and that gigawatt-class tokamak performance likely demands operation at $I_p \\gtrsim 20\\mathrm{MA}$.",
-                "category": {
-                    "@term": "physics.plasm-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-24T17:26:25Z",
-                "arxiv:primary_category": {
-                    "@term": "physics.plasm-ph"
-                },
-                "author": [
-                    {
-                        "name": "Jalal Butt"
-                    },
-                    {
-                        "name": "Geert Verdoolaege"
-                    },
-                    {
-                        "name": "Stanley M. Kaye"
-                    },
-                    {
-                        "name": "Egemen Kolemen"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.22724v1",
-                "title": "GCImOpt: Learning efficient goal-conditioned policies by imitating optimal trajectories",
-                "updated": "2026-04-24T17:23:34Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.22724v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.22724v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Imitation learning is a well-established approach for machine-learning-based control. However, its applicability depends on having access to demonstrations, which are often expensive to collect and/or suboptimal for solving the task. In this work, we present GCImOpt, an approach to learn efficient goal-conditioned policies by training on datasets generated by trajectory optimization. Our approach for dataset generation is computationally efficient, can generate thousands of optimal trajectories in minutes on a laptop computer, and produces high-quality demonstrations. Further, by means of a data augmentation scheme that treats intermediate states as goals, we are able to increase the training dataset size by an order of magnitude. Using our generated datasets, we train goal-conditioned neural network policies that can control the system towards arbitrary goals. To demonstrate the generality of our approach, we generate datasets and then train policies for various control tasks, namely cart-pole stabilization, planar and three-dimensional quadcopter stabilization, and point reaching using a 6-DoF robot arm. We show that our trained policies can achieve high success rates and near-optimal control profiles, all while being small (less than 80,000 neural network parameters) and fast enough (up to more than 6,000 times faster than a trajectory optimization solver) that they could be deployed onboard resource-constrained controllers. We provide videos, code, datasets and pre-trained policies under a free software license; see our project website https://jongoiko.github.io/gcimopt/.",
+                "summary": "Light-activated drugs are a promising way to treat localized diseases for which existing treatments have severe side effects. However, their development is complicated by the set of photophysical and biological properties that must be simultaneously optimized. Here we used computational techniques to find a set of promising candidates for the photoactive inhibition of the poly(ADP-ribose) polymerase 1 (PARP1) cancer target. Using our recently developed methods based on atomistic simulation and machine learning (ML), we screened a set of 5 million hypothetical photoactive ligands. Our workflow used protein-ligand docking to identify candidates with differential PARP1 binding under light and dark conditions; ML force fields and quantum chemistry calculations to predict p$K_\\mathrm{a}$, absorption spectra, and thermal half-lives; graph-based surrogate models to screen additional compounds; excited-state nonadiabatic dynamics with ML force fields to estimate quantum yields; and free energy perturbation (FEP) to refine binding predictions. From these predictions, we prioritized a small set of synthetically feasible candidates expected to have red-shifted absorption spectra, thermal half-lives on the order of seconds to minutes, and isomer-dependent PARP1 binding under visible-light control. We synthesized 10 candidates and experimentally characterized their photobehavior and PARP1 inhibition constants. Among the validated compounds, \\textbf{1} showed a 15-fold increase in inhibition of PARP1 upon green-light irradiation at 519 nm (208.8 $\\pm$ 28.3 $\u03bc$M vs 14.4 $\\pm$ 1.9 $\u03bc$M). These results validate the computation-guided screening strategy for identifying red-shifted PARP1 photoinhibitors, while also underscoring current limitations such as rapid thermal relaxation in aqueous media.",
                 "category": [
                     {
-                        "@term": "cs.RO",
+                        "@term": "physics.chem-ph",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "eess.SY",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-24T17:23:34Z",
-                "arxiv:comment": "Accepted for publication at the 8th Annual Conference on Learning for Dynamics and Control (L4DC 2026). 16 pages (including appendix), 1 figure. For project website, see https://jongoiko.github.io/gcimopt/",
+                "published": "2026-04-27T16:03:45Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "physics.chem-ph"
                 },
                 "author": [
                     {
-                        "name": "Jon Goikoetxea"
+                        "name": "Simon Axelrod"
                     },
                     {
-                        "name": "Jes\u00fas F. Palaci\u00e1n"
+                        "name": "Miroslav Ka\u0161par"
+                    },
+                    {
+                        "name": "Krist\u00fdna Jel\u00ednkov\u00e1"
+                    },
+                    {
+                        "name": "Mark\u00e9ta \u0160m\u00eddkov\u00e1"
+                    },
+                    {
+                        "name": "Erika Bart\u016f\u0148kov\u00e1"
+                    },
+                    {
+                        "name": "Sille \u0160t\u011bp\u00e1nov\u00e1"
+                    },
+                    {
+                        "name": "Eugene Shakhnovich"
+                    },
+                    {
+                        "name": "V\u00e1clav Ka\u0161i\u010dka"
+                    },
+                    {
+                        "name": "Martin Dra\u010d\u00ednsk\u00fd"
+                    },
+                    {
+                        "name": "Zlatko Janeba"
+                    },
+                    {
+                        "name": "Rafael G\u00f3mez-Bombarelli"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.24625v1",
+                "title": "Meta-CoT: Enhancing Granularity and Generalization in Image Editing",
+                "updated": "2026-04-27T15:52:48Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.24625v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.24625v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Unified multi-modal understanding/generative models have shown improved image editing performance by incorporating fine-grained understanding into their Chain-of-Thought (CoT) process. However, a critical question remains underexplored: what forms of CoT and training strategy can jointly enhance both the understanding granularity and generalization? To address this, we propose Meta-CoT, a paradigm that performs a two-level decomposition of any single-image editing operation with two key properties: (1) Decomposability. We observe that any editing intention can be represented as a triplet - (task, target, required understanding ability). Inspired by this, Meta-CoT decomposes both the editing task and the target, generating task-specific CoT and traversing editing operations on all targets. This decomposition enhances the model's understanding granularity of editing operations and guides it to learn each element of the triplet during training, substantially improving the editing capability. (2) Generalizability. In the second decomposition level, we further break down editing tasks into five fundamental meta-tasks. We find that training on these five meta-tasks, together with the other two elements of the triplet, is sufficient to achieve strong generalization across diverse, unseen editing tasks. To further align the model's editing behavior with its CoT reasoning, we introduce the CoT-Editing Consistency Reward, which encourages more accurate and effective utilization of CoT information during editing. Experiments demonstrate that our method achieves an overall 15.8% improvement across 21 editing tasks, and generalizes effectively to unseen editing tasks when trained on only a small set of meta-tasks. Our code, benchmark, and model are released at https://shiyi-zh0408.github.io/projectpages/Meta-CoT/",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.MM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-27T15:52:48Z",
+                "arxiv:comment": "Accepted by CVPR2026, Project Page: https://shiyi-zh0408.github.io/projectpages/Meta-CoT/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Shiyi Zhang"
+                    },
+                    {
+                        "name": "Yiji Cheng"
+                    },
+                    {
+                        "name": "Tiankai Hang"
+                    },
+                    {
+                        "name": "Zijin Yin"
+                    },
+                    {
+                        "name": "Runze He"
+                    },
+                    {
+                        "name": "Yu Xu"
+                    },
+                    {
+                        "name": "Wenxun Dai"
+                    },
+                    {
+                        "name": "Yunlong Lin"
+                    },
+                    {
+                        "name": "Chunyu Wang"
+                    },
+                    {
+                        "name": "Qinglin Lu"
+                    },
+                    {
+                        "name": "Yansong Tang"
                     }
                 ]
             }
