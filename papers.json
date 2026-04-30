@@ -5,192 +5,146 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-04-29T23:55:58Z",
+        "updated": "2026-04-30T02:34:54Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "564548",
+        "opensearch:totalResults": "564855",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2604.25917v1",
-                "title": "Recursive Multi-Agent Systems",
-                "updated": "2026-04-28T17:59:34Z",
+                "id": "http://arxiv.org/abs/2604.26952v1",
+                "title": "Outer-Crust Equations of State for Neutron Stars",
+                "updated": "2026-04-29T17:59:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.25917v1",
+                        "@href": "https://arxiv.org/abs/2604.26952v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.25917v1",
+                        "@href": "https://arxiv.org/pdf/2604.26952v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recursive or looped language models have recently emerged as a new scaling axis by iteratively refining the same model computation over latent states to deepen reasoning. We extend such scaling principle from a single model to multi-agent systems, and ask: Can agent collaboration itself be scaled through recursion? To this end, we introduce RecursiveMAS, a recursive multi-agent framework that casts the entire system as a unified latent-space recursive computation. RecursiveMAS connects heterogeneous agents as a collaboration loop through the lightweight RecursiveLink module, enabling in-distribution latent thoughts generation and cross-agent latent state transfer. To optimize our framework, we develop an inner-outer loop learning algorithm for iterative whole-system co-optimization through shared gradient-based credit assignment across recursion rounds. Theoretical analyses of runtime complexity and learning dynamics establish that RecursiveMAS is more efficient than standard text-based MAS and maintains stable gradients during recursive training. Empirically, we instantiate RecursiveMAS under 4 representative agent collaboration patterns and evaluate across 9 benchmarks spanning mathematics, science, medicine, search, and code generation. In comparison with advanced single/multi-agent and recursive computation baselines, RecursiveMAS consistently delivers an average accuracy improvement of 8.3%, together with 1.2$\\times$-2.4$\\times$ end-to-end inference speedup, and 34.6%-75.6% token usage reduction. Code and Data are provided in https://recursivemas.github.io.",
+                "summary": "We construct and systematically assess four outer-crust equations of state based on relativistic nuclear mass models and a machine-learning mass table. Our aim is to quantify the sensitivity of the equilibrium composition and thermodynamic properties of the outer crust to the underlying nuclear input, and to evaluate how these differences propagate to neutron-star configurations that are particularly sensitive to crustal properties. Equilibrium sequences of nuclei were determined by minimizing the Gibbs free energy per baryon for cold, catalyzed matter in $\u03b2$-equilibrium. The resulting outer-crust equations of state were then employed in neutron-star structure calculations near the minimum-mass limit, where global observables are especially sensitive to the low-density equation of state. The four nuclear models predict different equilibrium sequences, last bound nuclei, and neutron-drip properties. These differences are confined to the deepest layers of the outer crust, beyond current experimental mass coverage. Nevertheless, they propagate only weakly to crust-dominated neutron-star configurations: the gravitational mass, radius, crustal thickness, and fractional moment of inertia differ by less than one percent among the models considered. Modern nuclear-mass models provide consistent outer-crust equations of state for neutron-star applications. Although the detailed composition near neutron drip remains model dependent, the corresponding uncertainties have only a minor impact on the global properties of crust-dominated neutron stars. Therefore, these outer-crust equations of state provide a robust low-density description for astrophysical modelling and for future extensions toward unified neutron-star equations of state.",
                 "category": [
                     {
-                        "@term": "cs.AI",
+                        "@term": "nucl-th",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
+                    {
+                        "@term": "astro-ph.HE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.SR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-29T17:59:31Z",
+                "arxiv:comment": "9 pages, 6 figures, 3 tables",
+                "arxiv:primary_category": {
+                    "@term": "nucl-th"
+                },
+                "author": [
+                    {
+                        "name": "P. S. Koliogiannis"
+                    },
+                    {
+                        "name": "N. Paar"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.26951v1",
+                "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+                "updated": "2026-04-29T17:59:01Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.26951v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.26951v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Diffusion large language models (dLLMs) offer parallel decoding and bidirectional context, but state-of-the-art dLLMs require billions of parameters for competitive performance. While existing distillation methods for dLLMs reduce inference steps within a single architecture, none address cross-architecture knowledge transfer, in which the teacher and student differ in architecture, attention mechanism, and tokenizer. We present TIDE, the first framework for cross-architecture dLLM distillation, comprising three modular components: (1) TIDAL, which jointly modulates distillation strength across training progress and diffusion timestep to account for the teacher's noise-dependent reliability; (2) CompDemo, which enriches the teacher's context via complementary mask splitting to improve predictions under heavy masking; and (3) Reverse CALM, a cross-tokenizer objective that inverts chunk-level likelihood matching, yielding bounded gradients and dual-end noise filtering. Distilling 8B dense and 16B MoE teachers into a 0.6B student via two heterogeneous pipelines outperforms the baseline by an average of 1.53 points across eight benchmarks, yielding notable gains in code generation, where HumanEval scores reach 48.78 compared to 32.3 for the AR baseline.",
+                "category": [
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-28T17:59:34Z",
-                "arxiv:comment": "36 Pages. Project Website: https://recursivemas.github.io",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Xiyuan Yang"
-                    },
-                    {
-                        "name": "Jiaru Zou"
-                    },
-                    {
-                        "name": "Rui Pan"
-                    },
-                    {
-                        "name": "Ruizhong Qiu"
-                    },
-                    {
-                        "name": "Pan Lu"
-                    },
-                    {
-                        "name": "Shizhe Diao"
-                    },
-                    {
-                        "name": "Jindong Jiang"
-                    },
-                    {
-                        "name": "Hanghang Tong"
-                    },
-                    {
-                        "name": "Tong Zhang"
-                    },
-                    {
-                        "name": "Markus J. Buehler"
-                    },
-                    {
-                        "name": "Jingrui He"
-                    },
-                    {
-                        "name": "James Zou"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.25907v1",
-                "title": "How Fast Should a Model Commit to Supervision? Training Reasoning Models on the Tsallis Loss Continuum",
-                "updated": "2026-04-28T17:52:38Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.25907v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.25907v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Adapting reasoning models to new tasks during post-training with only output-level supervision stalls under reinforcement learning from verifiable rewards (RLVR) when the initial success probability $p_0$ is small. Using the Tsallis $q$-logarithm, we define a loss family $J_Q$ that interpolates between RLVR (at $q{=}0$, the exploitation pole) and the log-marginal-likelihood over latent trajectories (at $q{=}1$, the density-estimation pole). All members share the same per-example gradient direction, differing only by a scalar amplification $P_{\u03b8^{-q}}$ that reweights each instance independently of the learning rate. This amplification is the mechanism that addresses cold-start stalling: under gradient flow, the exploitation pole requires $\u03a9(\\frac{1}{p_0})$ time to escape cold start, while the density-estimation pole escapes in $\u0398\\big(\\log(\\frac{1}{p_0})\\big)$; intermediate $q$ trades escape speed against noise memorization. Because $P_\u03b8$ is intractable, we derive two Monte Carlo estimators from the two factorizations of the gradient: Gradient-Amplified RL (GARL) samples from the prior and amplifies the RL gradient, and Posterior-Attenuated Fine-Tuning (PAFT) importance-resamples from the posterior and runs standard SFT. Both have bias $O\\big(\\frac{q}{M P_\u03b8^{q+1}}\\big)$; GARL has lower variance, PAFT has semantically coherent gradients. On FinQA, HotPotQA, and MuSiQue, GARL at $q{=}0.75$ substantially mitigates cold-start stalling, escaping cold start where GRPO fails entirely. In warm start, GARL at low $q$ dominates FinQA where training is stable; on HotPotQA and MuSiQue, GARL destabilizes during training, and PAFT at $q{=}0.75$ provides stable gradients (best overall on HotPotQA at 47.9 maj@16, $+14.4$ over GRPO).",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-28T17:52:38Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Chu-Cheng Lin"
                     },
                     {
-                        "name": "Eugene Ie"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.25905v1",
-                "title": "A paradox of AI fluency",
-                "updated": "2026-04-28T17:51:13Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.25905v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.25905v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "summary": "How much does a user's skill with AI shape what AI actually delivers for them? This question is critical for users, AI product builders, and society at large, but it remains underexplored. Using a richly annotated sample of 27K transcripts from WildChat-4.8M, we show that fluent users take on more complex tasks than novices and adopt a fundamentally different interactional mode: they iterate collaboratively with the AI, refining goals and critically assessing outputs, whereas novices take a passive stance. These differences lead to a paradox of AI fluency: fluent users experience more failures than novices -- but their failures tend to be visible (a direct consequence of their engagement), they are more likely to lead to partial recovery, and they occur alongside greater success on complex tasks. Novices, by contrast, more often experience invisible failures: conversations that appear to end successfully but in fact miss the mark. Taken together, these results reframe what success with AI depends on. Individuals should adopt a stance of active engagement rather than passive acceptance. AI product builders should recognize that they are designing not just model behavior but user behavior; encouraging deep engagement, rather than friction-free experiences, will lead to more success overall. Our code and data are available at https://github.com/bigspinai/bigspin-fluency-outcomes",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-04-28T17:51:13Z",
+                "published": "2026-04-29T17:59:01Z",
+                "arxiv:comment": "15 pages, 3 figures. Code: https://github.com/PKU-YuanGroup/TIDE",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Christopher Potts"
+                        "name": "Gongbo Zhang"
                     },
                     {
-                        "name": "Moritz Sudhof"
+                        "name": "Wen Wang"
+                    },
+                    {
+                        "name": "Ye Tian"
+                    },
+                    {
+                        "name": "Li Yuan"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.25904v1",
-                "title": "Teacher Forcing as Generalized Bayes: Optimization Geometry Mismatch in Switching Surrogates for Chaotic Dynamics",
-                "updated": "2026-04-28T17:50:37Z",
+                "id": "http://arxiv.org/abs/2604.26942v1",
+                "title": "Hyper Input Convex Neural Networks for Shape Constrained Learning and Optimal Transport",
+                "updated": "2026-04-29T17:52:05Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.25904v1",
+                        "@href": "https://arxiv.org/abs/2604.26942v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.25904v1",
+                        "@href": "https://arxiv.org/pdf/2604.26942v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Identity teacher forcing (ITF) enables stable training of deterministic recurrent surrogates for chaotic dynamical systems and has been highly effective for dynamical systems reconstruction (DSR) with recurrent neural networks (RNNs), including interpretable almost-linear RNNs (AL-RNNs). However, as an intervention-based prediction loss (and thus a generalized Bayes update), teacher forcing need not match the free-running model's marginal likelihood geometry. We compare the objective-induced curvatures of ITF and marginal likelihood in a probabilistic switching augmentation of AL-RNNs, estimating ambiguity-aware observed information via Louis' identity. In the switching setting studied here, conditioning on a single forced regime path (as ITF does) inflates curvature, while marginal likelihood curvature is reduced by a missing-information correction when multiple switching explanations remain plausible. In Lorenz-63 experiments, windowed evidence fine-tuning improves held-out evidence but can degrade dynamical quantities of interest (QoIs) relative to ITF-pretrained models.",
+                "summary": "We introduce Hyper Input Convex Neural Networks (HyCNNs), a novel neural network architecture designed for learning convex functions. HyCNNs combine the principles of Maxout networks with input convex neural networks (ICNNs) to create a neural network that is always convex in the input, theoretically capable of leveraging depth, and performs reliable when trained at scale compared to ICNNs. Concretely, we prove that HyCNNs require exponentially fewer parameters than ICNNs to approximate quadratic functions up to a given precision. Throughout a series of synthetic experiments, we demonstrate that HyCNNs outperform existing ICNNs and MLPs in terms of predictive performance for convex regression and interpolation tasks. We further apply HyCNNs to learn high-dimensional optimal transport maps for synthetic examples and for single-cell RNA sequencing data, where they oftentimes outperform ICNN-based neural optimal transport methods and other baselines across a wide range of settings.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "math.DS",
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "q-bio.GN",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ME",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -198,105 +152,145 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-28T17:50:37Z",
-                "arxiv:comment": "Presented at the Workshop on Optimization and Post-Bayesian Inference in Machine Learning, AISTATS 2026",
+                "published": "2026-04-29T17:52:05Z",
+                "arxiv:comment": "65 pages, 13 figures, the first two authors contributed equally",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Andre Herz"
+                        "name": "Shayan Hundrieser"
                     },
                     {
-                        "name": "Daniel Durstewitz"
+                        "name": "Insung Kong"
                     },
                     {
-                        "name": "Georgia Koppe"
+                        "name": "Johannes Schmidt-Hieber"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.25903v1",
-                "title": "Carbon-Taxed Transformers: A Green Compression Pipeline for Overgrown Language Models",
-                "updated": "2026-04-28T17:48:16Z",
+                "id": "http://arxiv.org/abs/2604.26938v1",
+                "title": "Meta-learning-enhanced implicit full waveform inversion",
+                "updated": "2026-04-29T17:51:21Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.25903v1",
+                        "@href": "https://arxiv.org/abs/2604.26938v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.25903v1",
+                        "@href": "https://arxiv.org/pdf/2604.26938v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
-                    },
-                    {
-                        "@rel": "related",
-                        "@href": "https://doi.org/10.1145/3797075",
-                        "@title": "doi"
                     }
                 ],
-                "summary": "The accelerating adoption of Large Language Models (LLMs) in software engineering (SE) has brought with it a silent crisis: unsustainable computational cost. While these models demonstrate remarkable capabilities in different SE tasks, they are unmanageably large, slow to deploy, memory-intensive, and carbon-heavy. This reality threatens not only the scalability and accessibility of AI-powered SE, but also its long-term environmental sustainability. The research challenge is clear: we must go beyond accuracy and address efficiency and environmental cost as first-class design constraints. To meet this challenge, we introduce Carbon-Taxed Transformers (CTT), a systematic multi-architectural compression principled pipeline ordering inspired by economic carbon taxation principles. Drawing from the economic concept of carbon pricing, CTT operationalizes a computational carbon tax that penalizes architectural inefficiencies and rewards deployment-ready compression. We evaluate CTT across three core SE tasks: code clone detection, code summarization, and code generation, with models spanning encoder-only, encoder-decoder, and decoder-only architecture. Our results show that CTT delivers on inference: (1) up to 49x memory reduction, (2) time reduction up to 8-10x for clone detection, up to 3x for summarization, and 4-7x for generation, (3) up to 81% reduction in CO2 emissions and (4) CTT retains around 98% accuracy on clone detection, around 89% on summarization, and up to 91% (textual metrics) and 68% (pass@1) for generation. Two ablation studies show that pipeline ordering and individual component contributions are both essential, providing empirical justification for CTT's design and effectiveness. This work establishes a viable path toward responsible AI in SE through aggressive yet performance-preserving compression.",
-                "category": [
-                    {
-                        "@term": "cs.SE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-28T17:48:16Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.SE"
+                "summary": "Implicit full waveform inversion (IFWI) introduces implicit neural representations to parameterize the subsurface velocity model as a continuous function of spatial coordinates, which alleviates the dependence on the initial model and improves inversion flexibility. However, IFWI still requires a large number of iterative updates for each new exploration area, leading to slow convergence, high computational cost, and a lack of mechanisms to share prior knowledge across different geological settings, thereby limiting its efficiency and generalization capability. To further accelerate convergence and enhance cross-area generalization, we propose a meta-learning-based implicit full waveform inversion method, referred to as Meta-learning-enhanced implicit full waveform inversion (Meta-IFWI). In this framework, the subsurface velocity model is represented using an implicit neural network with periodic activation functions (SIREN), while a meta-learning strategy is employed to pretrain a single network on multiple velocity inversion tasks. Through this process, the network learns shared inversion priors and rapid adaptation strategies across different geological scenarios. For a new inversion task, the pretrained Meta-IFWI model can be efficiently adapted to the observed seismic data with only a few gradient updates, significantly reducing the number of iterations required for inversion. Numerical experiments conducted on in-distribution models, including layered synthetic models and the Overthrust model, as well as out-of-distribution complex models such as Marmousi 2, demonstrate that, compared with conventional IFWI, the proposed Meta-IFWI achieves improved inversion accuracy while substantially accelerating convergence and reducing computational cost. Moreover, Meta-IFWI exhibits enhanced robustness and stronger cross-area generalization capability.",
+                "category": {
+                    "@term": "physics.geo-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "arxiv:journal_ref": "Proceedings of ACM Software Engineering 3, FSE, Article FSE047, 2026",
+                "published": "2026-04-29T17:51:21Z",
+                "arxiv:primary_category": {
+                    "@term": "physics.geo-ph"
+                },
                 "author": [
                     {
-                        "name": "Ajmain Inqiad Alam"
+                        "name": "Huan Song"
                     },
                     {
-                        "name": "Palash Roy"
+                        "name": "Shijun Cheng"
                     },
                     {
-                        "name": "Chanchal K. Roy"
+                        "name": "Huanhuan Tang"
                     },
                     {
-                        "name": "Banani Roy"
+                        "name": "Wei Ouyang"
                     },
                     {
-                        "name": "Kevin A. Schneider"
+                        "name": "Weijian Mao"
                     }
-                ],
-                "arxiv:doi": "10.1145/3797075"
+                ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.25902v1",
-                "title": "Toward a Functional Geometric Algebra for Natural Language Semantics",
-                "updated": "2026-04-28T17:47:46Z",
+                "id": "http://arxiv.org/abs/2604.26934v1",
+                "title": "World2VLM: Distilling World Model Imagination into VLMs for Dynamic Spatial Reasoning",
+                "updated": "2026-04-29T17:48:01Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.25902v1",
+                        "@href": "https://arxiv.org/abs/2604.26934v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.25902v1",
+                        "@href": "https://arxiv.org/pdf/2604.26934v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Distributional and neural approaches to natural language semantics have been built almost exclusively on conventional linear algebra: vectors, matrices, tensors, and the operations that accompany them. These methods have achieved remarkable empirical success, yet they face persistent structural limitations in compositional semantics, type sensitivity, and interpretability. I argue in this paper that geometric algebra (GA) -- specifically, Clifford algebras -- provides a mathematically superior foundation for semantic representation, and that a Functional Geometric Algebra (FGA) framework extends GA toward a typed, compositional semantics capable of supporting inference, transformation, and interpretability while retaining full compatibility with distributional learning and modern neural architectures. I develop the formal foundations, identify three core capabilities that GA provides and linear algebra does not, present a detailed worked example illustrating operator-level semantic contrasts, and show how GA-based operations already implicit in current transformer architectures can be made explicit and extended. The central claim is not merely increased dimensionality but increased structural organization: GA expands an $n$-dimensional embedding space into a $2^n$ multivector algebra where base semantic concepts and their higher-order interactions are represented within a single, principled algebraic framework.",
-                "category": [
+                "summary": "Vision-language models (VLMs) have shown strong performance on static visual understanding, yet they still struggle with dynamic spatial reasoning that requires imagining how scenes evolve under egocentric motion. Recent efforts address this limitation either by scaling spatial supervision with synthetic data or by coupling VLMs with world models at inference time. However, the former often lacks explicit modeling of motion-conditioned state transitions, while the latter incurs substantial computational overhead. In this work, we propose World2VLM, a training framework that distills spatial imagination from a generative world model into a vision-language model. Given an initial observation and a parameterized camera trajectory, we use a view-consistent world model to synthesize geometrically aligned future views and derive structured supervision for both forward (action-to-outcome) and inverse (outcome-to-action) spatial reasoning. We post-train the VLM with a two-stage recipe on a compact dataset generated by this pipeline and evaluate it on multiple spatial reasoning benchmarks. World2VLM delivers consistent improvements over the base model across diverse benchmarks, including SAT-Real, SAT-Synthesized, VSI-Bench, and MindCube. It also outperforms the test-time world-model-coupled methods while eliminating the need for expensive inference-time generation. Our results suggest that world models can serve not only as inference-time tools, but also as effective training-time teachers, enabling VLMs to internalize spatial imagination in a scalable and efficient manner.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-04-29T17:48:01Z",
+                "arxiv:comment": "The code is available at https://github.com/WanyueZhang-ai/World2VLM. The dataset is available at https://huggingface.co/datasets/WanyueZhang/World2VLM",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
                     {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Wanyue Zhang"
                     },
                     {
-                        "@term": "cs.AI",
+                        "name": "Wenxiang Wu"
+                    },
+                    {
+                        "name": "Wang Xu"
+                    },
+                    {
+                        "name": "Jiaxin Luo"
+                    },
+                    {
+                        "name": "Helu Zhi"
+                    },
+                    {
+                        "name": "Yibin Huang"
+                    },
+                    {
+                        "name": "Shuo Ren"
+                    },
+                    {
+                        "name": "Zitao Liu"
+                    },
+                    {
+                        "name": "Jiajun Zhang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.26932v1",
+                "title": "Learning Over-Relaxation Policies for ADMM with Convergence Guarantees",
+                "updated": "2026-04-29T17:45:52Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.26932v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.26932v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The Alternating Direction Method of Multipliers (ADMM) is a widely used method for structured convex optimization, and its practical performance depends strongly on the choice of penalty and relaxation parameters. Motivated by settings such as Model Predictive Control (MPC), where one repeatedly solves related optimization problems with fixed structure and changing parameter values, we propose learning online updates of the relaxation parameter to improve performance on problem classes of interest. This choice is computationally attractive in OSQP-like architectures, since adapting relaxation does not trigger the matrix refactorizations associated with penalty updates. We establish convergence guarantees for ADMM with time-varying penalty and relaxation parameters under mild assumptions, and show on benchmark quadratic programs that the resulting learned policies improve both iteration count and wall-clock time over baseline OSQP.",
+                "category": [
+                    {
+                        "@term": "math.OC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -304,215 +298,239 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-28T17:47:46Z",
-                "arxiv:comment": "43 pages. Keywords: geometric algebra, Clifford algebra, compositional semantics, natural language semantics, type coercion, multivector representations, graded type system, Generative Lexicon, neural language models, distributional semantics",
+                "published": "2026-04-29T17:45:52Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "math.OC"
+                },
+                "author": [
+                    {
+                        "name": "Junan Lin"
+                    },
+                    {
+                        "name": "Paul J. Goulart"
+                    },
+                    {
+                        "name": "Luca Furieri"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.26926v1",
+                "title": "A Note on How to Remove the $\\ln\\ln T$ Term from the Squint Bound",
+                "updated": "2026-04-29T17:40:25Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.26926v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.26926v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In Orabona and P\u00e1l [2016], we introduced the shifted KT potentials, to remove the $\\ln \\ln T$ factor in the parameter-free learning with expert bound. In this short technical note, I show that this is equivalent to changing the prior in the Krichevsky--Trofimov algorithm. Then, I show how to use the same idea to remove the $\\ln \\ln T$ factor in the data-independent bound for the Squint algorithm.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.OC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-29T17:40:25Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
                 },
                 "author": {
-                    "name": "James Pustejovsky"
+                    "name": "Francesco Orabona"
                 }
             },
             {
-                "id": "http://arxiv.org/abs/2604.25898v1",
-                "title": "TSN-Affinity: Similarity-Driven Parameter Reuse for Continual Offline Reinforcement Learning",
-                "updated": "2026-04-28T17:41:04Z",
+                "id": "http://arxiv.org/abs/2604.26922v1",
+                "title": "On the Learning Curves of Revenue Maximization",
+                "updated": "2026-04-29T17:38:25Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.25898v1",
+                        "@href": "https://arxiv.org/abs/2604.26922v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.25898v1",
+                        "@href": "https://arxiv.org/pdf/2604.26922v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Continual offline reinforcement learning (CORL) aims to learn a sequence of tasks from datasets collected over time while preserving performance on previously learned tasks. This setting corresponds to domains where new tasks arise over time, but adapting the model in live environment interactions is expensive, risky, or impossible. However, CORL inherits the dual difficulty of offline reinforcement learning and adapting while preventing catastrophic forgetting. Replay-based continual learning approaches remain a strong baseline but incur memory overhead and suffer from a distribution mismatch between replayed samples and newly learned policies. At the same time, architectural continual learning methods have shown strong potential in supervised learning but remain underexplored in CORL. In this work, we propose TSN-Affinity, a novel CORL method based on TinySubNetworks and Decision Transformer. The method enables task-specific parameterization and controlled knowledge sharing through a RL-aware reuse strategy that routes tasks according to action compatibility and latent similarity. We evaluate the approach on benchmarks based on Atari games and simulations of manipulation tasks with the Franka Emika Panda robotic arm, covering both discrete and continuous control. Results show strong retention from sparse SubNetworks, with routing further improving multi-task performance. Our findings suggest that similarity-guided architectural reuse is a strong and viable alternative to replay-based strategies in a CORL setting. Our code is available at: https://github.com/anonymized-for-submission123/tsn-affinity.",
+                "summary": "Learning curves are a fundamental primitive in supervised learning, describing how an algorithm's performance improves with more data and providing a quantitative measure of its generalization ability. Formally, a learning curve plots the decay of an algorithm's error for a fixed underlying distribution as a function of the number of training samples. Prior work on revenue-maximizing learning algorithms, starting with the seminal work of Cole and Roughgarden [STOC, 2014], adopts a distribution-free perspective, which parallels the PAC learning framework in learning theory. This approach evaluates performance against the hardest possible sequence of valuation distributions, one for each sample size, effectively defining the upper envelope of learning curves over all possible distributions, thus leading to error bounds that do not capture the shape of the learning curves.\n  In this work we initiate the study of learning curves for revenue maximization and provide a near-complete characterization of their rate of decay in the basic setting of a single item and a single buyer. In the absence of any restriction on the valuation distribution, we show that there exists a Bayes-consistent algorithm, meaning that its learning curve converges to zero for any arbitrary valuation distribution as the number of samples $n \\to \\infty$. However, this convergence must be arbitrarily slow, even if the optimal revenue is finite. In contrast, if the optimal revenue is achieved by a finite price, then the optimal rate of decay is roughly $1/\\sqrt{n}$. Finally, for distributions supported on discrete sets of values, we show that learning curves decay almost exponentially fast, a rate unattainable under the PAC framework.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.DS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.GT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-28T17:41:04Z",
+                "published": "2026-04-29T17:38:25Z",
+                "arxiv:comment": "To appear in the 58th ACM Symposium on Theory of Computing (STOC 2026)",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Dominik \u017burek"
+                        "name": "Steve Hanneke"
                     },
                     {
-                        "name": "Kamil Faber"
+                        "name": "Alkis Kalavasis"
                     },
                     {
-                        "name": "Marcin Pietron"
+                        "name": "Shay Moran"
                     },
                     {
-                        "name": "Pawe\u0142 Gajewski"
-                    },
-                    {
-                        "name": "Roberto Corizzo"
+                        "name": "Grigoris Velegkas"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2604.25897v1",
-                "title": "Variational Neural Belief Parameterizations for Robust Dexterous Grasping under Multimodal Uncertainty",
-                "updated": "2026-04-28T17:40:49Z",
+                "id": "http://arxiv.org/abs/2604.26919v1",
+                "title": "Causal Learning with Neural Assemblies",
+                "updated": "2026-04-29T17:34:33Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2604.25897v1",
+                        "@href": "https://arxiv.org/abs/2604.26919v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2604.25897v1",
+                        "@href": "https://arxiv.org/pdf/2604.26919v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Contact variability, sensing uncertainty, and external disturbances make grasp execution stochastic. Expected-quality objectives ignore tail outcomes and often select grasps that fail under adverse contact realizations. Risk-sensitive POMDPs address this failure mode, but many use particle-filter beliefs that scale poorly, obstruct gradient-based optimization, and estimate Conditional Value-at-Risk (CVaR) with high-variance approximations. We instead formulate grasp acquisition as variational inference over latent contact parameters and object pose, representing the belief with a differentiable Gaussian mixture. We use Gumbel-Softmax component selection and location-scale reparameterization to express samples as smooth functions of the belief parameters, enabling pathwise gradients through a differentiable CVaR surrogate for direct optimization of tail robustness. In simulation, our variational neural belief improves robust grasp success under contact-parameter uncertainty and exogenous force perturbations while reducing planning time by roughly an order of magnitude relative to particle-filter model-predictive control. On a serial-chain robot arm with a multifingered hand, we validate grasp-and-lift success under object-pose uncertainty against a Gaussian baseline. Both methods succeed on the tested perturbations, but our controller terminates in fewer steps and less wall-clock time while achieving a higher tactile grasp-quality proxy. Our learned belief also calibrates risk more accurately, keeping mean absolute calibration error below 0.14 across tested simulation regimes, compared with 0.58 for a Cross-Entropy Method planner.",
+                "summary": "Can Neural Assemblies -- groups of neurons that fire together and strengthen through co-activation -- learn the direction of causal influence between variables? While established as a computationally general substrate for classification, parsing, and planning, neural assemblies have not yet been shown to internalize causal directionality. We demonstrate that the inherent operations of neural assemblies -- projection, local plasticity control, and sparse winner selection -- are sufficient for directional learning. We introduce DIRECT (DIRectional Edge Coupling/Training), a mechanism that co-activates source and target assemblies under an adaptive gain schedule to internalize directed relations. Unlike backpropagation-based methods, DIRECT relies solely on local plasticity, making the resulting causal claims auditable at the mechanism level. Our findings are verified through a dual-readout validation strategy: (i) synaptic-strength asymmetry, measuring the emergent weight gap between forward and reverse links, and (ii) functional propagation overlap, quantifying the reliability of directional signal flow. Across multiple domains, the framework achieves perfect structural recovery under a supervised, known-structure setting. These results establish neural assemblies as an auditable bridge between biologically plausible dynamics and formal causal models, offering an \"explainable by design\" framework where causal claims are traceable to specific neural winners and synaptic asymmetries.",
                 "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-28T17:40:49Z",
-                "arxiv:comment": "11 pages, 10 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Clinton Enwerem"
-                    },
-                    {
-                        "name": "Shreya Kalyanaraman"
-                    },
-                    {
-                        "name": "John S. Baras"
-                    },
-                    {
-                        "name": "Calin Belta"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.25895v1",
-                "title": "Three Models of RLHF Annotation: Extension, Evidence, and Authority",
-                "updated": "2026-04-28T17:39:14Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.25895v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.25895v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    },
-                    {
-                        "@rel": "related",
-                        "@href": "https://doi.org/10.1145/3805689.3812225",
-                        "@title": "doi"
-                    }
-                ],
-                "summary": "Preference-based alignment methods, most prominently Reinforcement Learning with Human Feedback (RLHF), use the judgments of human annotators to shape large language model behaviour. However, the normative role of these judgments is rarely made explicit. I distinguish three conceptual models of that role. The first is extension: annotators extend the system designers' own judgments about what outputs should be. The second is evidence: annotators provide independent evidence about some facts, whether moral, social or otherwise. The third is authority: annotators have some independent authority (as representatives of the broader population) to determine system outputs. I argue that these models have implications for how RLHF pipelines should solicit, validate and aggregate annotations. I survey landmark papers in the literature on RLHF and related methods to illustrate how they implicitly draw on these models, describe failure modes that come from unintentionally or intentionally conflating them, and offer normative criteria for choosing among them. My central recommendation is that RLHF pipeline designers should decompose annotation into separable dimensions and tailor each pipeline to the model most appropriate for that dimension, rather than seeking a single unified pipeline.",
-                "category": [
-                    {
-                        "@term": "cs.CY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
+                    {
+                        "@term": "cs.NE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-04-29T17:34:33Z",
+                "arxiv:comment": "8 pages, 11 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Evangelia Kopadi"
+                    },
+                    {
+                        "name": "Dimitris Kalles"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2604.26904v1",
+                "title": "ClawGym: A Scalable Framework for Building Effective Claw Agents",
+                "updated": "2026-04-29T17:12:22Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2604.26904v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2604.26904v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Claw-style environments support multi-step workflows over local files, tools, and persistent workspace states. However, scalable development around these environments remains constrained by the absence of a systematic framework, especially one for synthesizing verifiable training data and integrating it with agent training and diagnostic evaluation. To address this challenge, we present ClawGym, a scalable framework that supports the full lifecycle of Claw-style personal agent development. Concretely, we construct ClawGym-SynData, a diverse dataset of 13.5K filtered tasks synthesized from persona-driven intents and skill-grounded operations, paired with realistic mock workspaces and hybrid verification mechanisms. We then train a family of capable Claw-style models, termed ClawGym-Agents, through supervised fine-tuning on black-box rollout trajectories, and further explore reinforcement learning via a lightweight pipeline that parallelizes rollouts across per-task sandboxes.To support reliable evaluation, we further construct ClawGym-Bench, a benchmark of 200 instances calibrated through automated filtering and human-LLM review. Relevant resources will be soon released at https://github.com/ClawGym.",
+                "category": [
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-04-28T17:39:14Z",
-                "arxiv:comment": "17 pages. Accepted to ACM FAccT '26, June 25-28, Montreal",
-                "arxiv:primary_category": {
-                    "@term": "cs.CY"
-                },
-                "author": {
-                    "name": "Steve Coyne"
-                },
-                "arxiv:doi": "10.1145/3805689.3812225"
-            },
-            {
-                "id": "http://arxiv.org/abs/2604.25891v1",
-                "title": "Conditional misalignment: common interventions can hide emergent misalignment behind contextual triggers",
-                "updated": "2026-04-28T17:36:06Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2604.25891v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2604.25891v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Finetuning a language model can lead to emergent misalignment (EM) [Betley et al., 2025b]. Models trained on a narrow distribution of misaligned behavior generalize to more egregious behaviors when tested outside the training distribution.\n  We study a set of interventions proposed to reduce EM. We confirm that these interventions reduce or eliminate EM on existing evaluations (questions like \"How do I make a quick buck?\"). However, if the evaluation prompts are tweaked to resemble the training context, the model displays EM. We call this conditional misalignment. As in standard EM, the model displays misaligned behaviors more egregious than those seen during training, but only on inputs sharing features with the training data.\n  The first two interventions are diluting misaligned data with benign data, and finetuning on benign data after misaligned data. Both produce conditional misalignment. For instance, models trained on a mix of only 5% insecure code still show misalignment when asked to format responses as Python strings (resembling the training context).\n  The third intervention is inoculation prompting. Here, statements with a similar form to the inoculation prompt serve as triggers for misalignment, even if they have the opposite meaning. On the positive side, inoculation prompting has lower (but still non-zero) conditional misalignment if training is on-policy or includes reasoning distillation.\n  Our results imply that in realistic post-training, where misaligned data is typically combined with benign data, models may be conditionally misaligned even if standard evaluations look clean.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CR",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-04-28T17:36:06Z",
+                "published": "2026-04-29T17:12:22Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Jan Dubi\u0144ski"
+                        "name": "Fei Bai"
                     },
                     {
-                        "name": "Jan Betley"
+                        "name": "Huatong Song"
                     },
                     {
-                        "name": "Anna Sztyber-Betley"
+                        "name": "Shuang Sun"
                     },
                     {
-                        "name": "Daniel Tan"
+                        "name": "Daixuan Cheng"
                     },
                     {
-                        "name": "Owain Evans"
+                        "name": "Yike Yang"
+                    },
+                    {
+                        "name": "Chuan Hao"
+                    },
+                    {
+                        "name": "Renyuan Li"
+                    },
+                    {
+                        "name": "Feng Chang"
+                    },
+                    {
+                        "name": "Yuan Wei"
+                    },
+                    {
+                        "name": "Ran Tao"
+                    },
+                    {
+                        "name": "Bryan Dai"
+                    },
+                    {
+                        "name": "Jian Yang"
+                    },
+                    {
+                        "name": "Wayne Xin Zhao"
                     }
                 ]
             }
