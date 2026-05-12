@@ -5,383 +5,228 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-05-11T23:52:02Z",
+        "updated": "2026-05-12T02:28:45Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "568469",
+        "opensearch:totalResults": "569535",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2605.08084v1",
-                "title": "123D: Unifying Multi-Modal Autonomous Driving Data at Scale",
-                "updated": "2026-05-08T17:59:53Z",
+                "id": "http://arxiv.org/abs/2605.10317v1",
+                "title": "Relations Are Channels: Knowledge Graph Embedding via Kraus Decompositions",
+                "updated": "2026-05-11T10:17:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.08084v1",
+                        "@href": "https://arxiv.org/abs/2605.10317v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.08084v1",
+                        "@href": "https://arxiv.org/pdf/2605.10317v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The pursuit of autonomous driving has produced one of the richest sensor data collections in all of robotics. However, its scale and diversity remain largely untapped. Each dataset adopts different 2D and 3D modalities, such as cameras, lidar, ego states, annotations, traffic lights, and HD maps, with different rates and synchronization schemes. They come in fragmented formats requiring complex dependencies that cannot natively coexist in the same development environment. Further, major inconsistencies in annotation conventions prevent training or measuring generalization across multiple datasets. We present 123D, an open-source framework that unifies such multi-modal driving data through a single API. To handle synchronization, we store each modality as an independent timestamped event stream with no prescribed rate, enabling synchronous or asynchronous access across arbitrary datasets. Using 123D, we consolidate eight real-world driving datasets spanning 3,300 hours and 90,000 kilometers, together with a synthetic dataset with configurable collection scripts, and provide tools for data analysis and visualization. We conduct a systematic study comparing annotation statistics and assessing each dataset's pose and calibration accuracy. Further, we showcase two applications 123D enables: cross-dataset 3D object detection transfer and reinforcement learning for planning, and offer recommendations for future directions. Code and documentation are available at https://github.com/kesai-labs/py123d.",
+                "summary": "Knowledge graph embedding (KGE) models typically represent each relation as an operator on entity embeddings. In this work, we identify three structural axioms that any principled relation operator must satisfy, linearity, trace preservation, and complete positivity, and show that they characterize a Kraus channel structure via the Kraus representation theorem. The completeness constraint defining this family is equivalent to these axioms, providing a principled foundation rather than an externally imposed condition. Under this formulation, most existing operator-based KGE models are recoverable as special cases with Kraus rank $\u03ba= 1$ under specific embedding choices. We further generalize this characterization to arbitrary metric geometries by introducing \\mbox{w-Kraus} channels, which satisfy completeness by construction within their respective spaces. Building on this theory, we propose \\textsc{KrausKGE}, a principled KGE model that naturally handles $1$-to-$N$ and $N$-to-$N$ relations, supports $k$-hop reasoning without requiring explicit path encoders, and eliminates the need for norm constraints on entity embeddings. Additionally, our framework yields the first theoretically grounded per-relation complexity measure in the KGE literature, with a provable lower bound in terms of the empirical relation matrix rank. Empirical evaluation demonstrates that \\textsc{KrausKGE} consistently outperforms strong baselines on $N$-to-$N$ relations, with performance gains that increase monotonically with relation fan-out, in alignment with theoretical predictions.",
                 "category": [
                     {
-                        "@term": "cs.RO",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CV",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-08T17:59:53Z",
+                "published": "2026-05-11T10:17:52Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Daniel Dauner"
-                    },
-                    {
-                        "name": "Valentin Charraut"
-                    },
-                    {
-                        "name": "Bastian Berle"
-                    },
-                    {
-                        "name": "Tianyu Li"
-                    },
-                    {
-                        "name": "Long Nguyen"
-                    },
-                    {
-                        "name": "Jiabao Wang"
-                    },
-                    {
-                        "name": "Changhui Jing"
-                    },
-                    {
-                        "name": "Maximilian Igl"
-                    },
-                    {
-                        "name": "Holger Caesar"
-                    },
-                    {
-                        "name": "Boris Ivanovic"
-                    },
-                    {
-                        "name": "Yiyi Liao"
-                    },
-                    {
-                        "name": "Andreas Geiger"
-                    },
-                    {
-                        "name": "Kashyap Chitta"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.08082v1",
-                "title": "Advances in quantum learning theory with bosonic systems",
-                "updated": "2026-05-08T17:59:40Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.08082v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.08082v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "This paper reviews recent advances in quantum learning theory for continuous-variable (CV) systems. Quantum learning theory investigates how to extract classical information from quantum systems as efficiently as possible. CV systems are ubiquitous in nature and in quantum technologies, as they describe bosonic and quantum-optical systems. While quantum learning theory for finite-dimensional systems has been extensively studied, the corresponding theory for CV systems has only recently begun to develop; here we provide a concise review. We focus on the following questions: what is the minimum number of copies (the sample complexity) required to learn a non-Gaussian state, possibly under energy constraints? What is the sample complexity for learning Gaussian states? How does the performance of CV state learning depend on non-Gaussianity? How can one test whether a state is Gaussian or far from the set of Gaussian states? And how can Gaussian processes be learned efficiently? Central to these topics, we also review several bounds on the trace distance between CV states in terms of their covariance matrices, which may be of independent interest. Overall, this work summarises selected developments in tomography of CV systems and highlights a selection of open problems.",
-                "category": {
-                    "@term": "quant-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-08T17:59:40Z",
-                "arxiv:comment": "9 pages. Accepted for publication in Il Nuovo Cimento C",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
+                    "@term": "cs.LG"
                 },
                 "author": {
-                    "name": "Francesco Anna Mele"
+                    "name": "Sayan Kumar Chaki"
                 }
             },
             {
-                "id": "http://arxiv.org/abs/2605.08078v1",
-                "title": "Normalizing Trajectory Models",
-                "updated": "2026-05-08T17:57:14Z",
+                "id": "http://arxiv.org/abs/2605.10315v1",
+                "title": "Active Tabular Augmentation via Policy-Guided Diffusion Inpainting",
+                "updated": "2026-05-11T10:17:26Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.08078v1",
+                        "@href": "https://arxiv.org/abs/2605.10315v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.08078v1",
+                        "@href": "https://arxiv.org/pdf/2605.10315v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Diffusion-based models decompose sampling into many small Gaussian denoising steps -- an assumption that breaks down when generation is compressed to a few coarse transitions. Existing few-step methods address this through distillation, consistency training, or adversarial objectives, but sacrifice the likelihood framework in the process. We introduce Normalizing Trajectory Models (NTM), which models each reverse step as an expressive conditional normalizing flow with exact likelihood training. Architecturally, NTM combines shallow invertible blocks within each step with a deep parallel predictor across the trajectory, forming an end-to-end network trainable from scratch or initializable from pretrained flow-matching models. Its exact trajectory likelihood further enables self-distillation: a lightweight denoiser trained on the model's own score produces high-quality samples in four steps. On text-to-image benchmarks, NTM matches or outperforms strong image generation baselines in just four sampling steps while uniquely retaining exact likelihood over the generative trajectory.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-08T17:57:14Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Jiatao Gu"
-                    },
-                    {
-                        "name": "Tianrong Chen"
-                    },
-                    {
-                        "name": "Ying Shen"
-                    },
-                    {
-                        "name": "David Berthelot"
-                    },
-                    {
-                        "name": "Shuangfei Zhai"
-                    },
-                    {
-                        "name": "Josh Susskind"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.08077v1",
-                "title": "Conformal Path Reasoning: Trustworthy Knowledge Graph Question Answering via Path-Level Calibration",
-                "updated": "2026-05-08T17:57:13Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.08077v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.08077v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Knowledge Graph Question Answering (KGQA) has shown promise for grounded and interpretable reasoning, yet existing approaches often fail to provide reliable coverage guarantees over retrieved answers. While Conformal Prediction (CP) offers a principled framework for producing prediction sets with statistical guarantees, prior methods suffer from critical limitations in both calibration validity and score discriminability, resulting in violated coverage guarantees and excessively large prediction sets. To address these pitfalls, we propose Conformal Path Reasoning (CPR), a trustworthy KGQA framework with two key innovations. First, we perform query-level conformal calibration over path-level scores, preserving the exchangeability while generating path prediction sets. Second, we introduce the Residual Conformal Value Network (RCVNet), a lightweight module trained via PUCT-guided exploration to learn discriminative path-level nonconformity scores. Experiments on benchmarks show that CPR significantly improves the Empirical Coverage Rate by 34% while reducing average prediction set size by 40% compared to conformal baselines. These results validate the efficacy of CPR in satisfying coverage guarantees with substantially more compact answer sets.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-08T17:57:13Z",
-                "arxiv:comment": "13 pages, 3 figures, 2 tables;",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Shuhang Lin"
-                    },
-                    {
-                        "name": "Chuhao Zhou"
-                    },
-                    {
-                        "name": "Xiao Lin"
-                    },
-                    {
-                        "name": "Zihan Dong"
-                    },
-                    {
-                        "name": "Kuan Lu"
-                    },
-                    {
-                        "name": "Zhencan Peng"
-                    },
-                    {
-                        "name": "Jie Yin"
-                    },
-                    {
-                        "name": "Dimitris N. Metaxas"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.08075v1",
-                "title": "Zero-Shot Imagined Speech Decoding via Imagined-to-Listened MEG Mapping",
-                "updated": "2026-05-08T17:56:19Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.08075v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.08075v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Decoding imagined speech from non-invasive brain recordings is challenging because imagined datasets are scarce and difficult to align temporally across subjects and sessions In this work, we propose a new approach to the decoding of imagined speech that leverages the richer and more reliably labeled recordings during listening to speech. We collected paired listened and imagined MEG recordings to rhythmic melodic and spoken stimuli from trained musicians. Using trained musicians helped improve temporal alignment across conditions. We then developed a three-stage decoding pipeline that revealed consistent and meaningful relationships between neural activity evoked by imagining and listening to the same stimuli. First, we trained six linear and neural models to map imagined MEG responses to listened responses. We evaluated these models against a null baseline from unseen subjects to validate that the predicted-listening responses preserve stimulus-specific information. In the second stage, we trained a contrastive word decoder exclusively on the listened MEG responses, and evaluated it using four embedding strategies including semantic, acoustic, and phonetic representations. In the third stage, we process the imagined MEG responses from held-out subjects through the mapping pipeline to compute the corresponding listening responses that are then decoded by the listened decoder. Using rank-based analysis, we show that the imagined words are decodable significantly above chance. We shall report here the results of a proof-of-concept implementation to decode imagined speech, where all evaluations are performed on held-out subjects. We also demonstrate that performance improves with training data size, suggesting that this approach is scalable and can directly be made applicable to realistic brain-computer interface scenarios.",
+                "summary": "Generative tabular augmentation is appealing in data-scarce domains, yet the prevailing focus on distributional fidelity does not reliably translate into better downstream models. We formalize a fidelity-utility gap: common generative objectives prioritize distributional plausibility, whereas augmentation succeeds only when injected samples reduce the current learner's held-out evaluation loss. This gap motivates learning not just how to generate, but what to generate and when to inject as training evolves. We propose TAP (Tabular Augmentation Policy), which couples diffusion inpainting with a lightweight, learner-conditioned policy to steer generation toward high-utility regions and controls safe injection via explicit gating and conservative windowed commitment. Under severe data scarcity, TAP consistently outperforms strong generative baselines on seven real-world datasets, improving classification accuracy by up to 15.6 percentage points and reducing regression RMSE by up to 32%.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "eess.AS",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-08T17:56:19Z",
+                "published": "2026-05-11T10:17:26Z",
+                "arxiv:comment": "Accepted for publication at ICML 2026",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Maryam Maghsoudi"
+                        "name": "Zheyu Zhang"
                     },
                     {
-                        "name": "Shihab Shamma"
+                        "name": "Shuo Yang"
+                    },
+                    {
+                        "name": "Bardh Prenkaj"
+                    },
+                    {
+                        "name": "Gjergji Kasneci"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.08074v1",
-                "title": "GRAPHLCP: Structure-Aware Localized Conformal Prediction on Graphs",
-                "updated": "2026-05-08T17:56:09Z",
+                "id": "http://arxiv.org/abs/2605.10313v1",
+                "title": "Signature Approach for Contextual Bandits with Nonlinear and Path-dependent Rewards",
+                "updated": "2026-05-11T10:13:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.08074v1",
+                        "@href": "https://arxiv.org/abs/2605.10313v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.08074v1",
+                        "@href": "https://arxiv.org/pdf/2605.10313v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Conformal prediction (CP) provides a distribution-free approach to uncertainty quantification with finite-sample guarantees. However, applying CP to graph neural networks (GNNs) remains challenging as the combinatorial nature of graphs often leads to insufficiently certain predictions and indiscriminative embeddings. Existing methods primarily rely on embedding-space proximity for localization, which can be unreliable for graphs and yield inefficient prediction sets. We propose GRAPHLCP, a proximity-based localized CP framework that explicitly incorporates graph topology and inter-node dependencies into localization and weighting. Our approach introduces a feature-aware densification step to mitigate locality bias in sparse graphs, followed by a Personalized PageRank-based kernel computation to model structural proximity. This enables topology-dependent anchor sampling and calibration weighting that captures both local and long-range dependencies. Extensive experiments on several regression and classification datasets demonstrate that GRAPHLCP guarantees marginal coverage with finite samples while efficiently attaining favorable test conditional coverage across various conditioning scenarios.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-08T17:56:09Z",
-                "arxiv:comment": "20 pages, 9 Figures, 8 Tables",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Peyman Baghershahi"
-                    },
-                    {
-                        "name": "Fangxin Wang"
-                    },
-                    {
-                        "name": "Debmalya Mandal"
-                    },
-                    {
-                        "name": "Sourav Medya"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.08072v1",
-                "title": "A Note on Non-Negative $L_1$-Approximating Polynomials",
-                "updated": "2026-05-08T17:55:39Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.08072v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.08072v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "$L_1$-Approximating polynomials, i.e., polynomials that approximate indicator functions in $L_1$-norm under certain distributions, are widely used in computational learning theory. We study the existence of \\textit{non-negative} $L_1$-approximating polynomials with respect to Gaussian distributions. This is a stronger requirement than $L_1$-approximation but weaker than sandwiching polynomials (which themselves have many applications). These non-negative approximating polynomials have recently found uses in smoothed learning from positive-only examples.\n  In this short note, we prove that every class of sets with Gaussian surface area (GSA) at most $\u0393$ under the standard Gaussian admits degree-$k$ non-negative polynomials that $\\eps$-approximate its indicator functions in $L_1$-norm, for $k=\\tilde{O}(\u0393^2/\\varepsilon^2)$. Equivalently, finite GSA implies $L_1$-approximation with the stronger pointwise guarantee that the approximating polynomial has range contained in $[0,\\infty)$. Up to a constant-factor, this matches the degree of the best currently known Gaussian $L_1$-approximation degree bound without the non-negativity constraint.",
+                "summary": "We study contextual bandits with nonlinear and path-dependent rewards through a novel signature-transform-based approach. Leveraging the universal nonlinearity property of signatures, we approximate continuous path-dependent reward functionals by linear functionals in the signature space. This representation enables the use of efficient linear contextual bandit methods while preserving expressive sequential structure. Building on this framework, we propose \\texttt{DisSigUCB}, a signature-based disjoint upper confidence bound (UCB) algorithm. Under boundedness and non-degeneracy assumptions, we prove a high-probability data-dependent sublinear regret bound of order \\(\\tilde{\\mathcal O}(\\sqrt{(d+m)KT})\\) where \\(d\\) is the context dimension and \\(m\\) is the signature feature dimension. Synthetic experiments and numerical applications on temperature sensor monitoring, sleep-stage classification, and hospital nurse staffing demonstrate that \\texttt{DisSigUCB} consistently outperforms classical linear and kernelized contextual bandit baselines in nonlinear and path-dependent settings.",
                 "category": [
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "math.ST",
+                        "@term": "math.OC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-08T17:55:39Z",
+                "published": "2026-05-11T10:13:52Z",
                 "arxiv:primary_category": {
-                    "@term": "stat.ML"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Jane H. Lee"
+                        "name": "Xin Guo"
                     },
                     {
-                        "name": "Anay Mehrotra"
+                        "name": "Grace He"
                     },
                     {
-                        "name": "Manolis Zampetakis"
+                        "name": "Xinyu Li"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.08071v1",
-                "title": "Vibe Econometrics and the Analysis Contract",
-                "updated": "2026-05-08T17:54:47Z",
+                "id": "http://arxiv.org/abs/2605.10312v1",
+                "title": "FusionRCG: Orchestrating Recursive Computation Graphs across GPU Memory Hierarchies",
+                "updated": "2026-05-11T10:12:25Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.08071v1",
+                        "@href": "https://arxiv.org/abs/2605.10312v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.08071v1",
+                        "@href": "https://arxiv.org/pdf/2605.10312v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "\"Vibe coding\" and \"vibe analytics\" have been framed as a democratization of technical capability. This paper argues that AI-assisted methodology more broadly, or what I call \"vibe methodology,\" also democratizes the failure modes specific to each domain. When AI assists with methods whose validity depends on assumptions that cannot be verified from the output alone (a class I call \"vibe inference\"), the failure surface is structurally different: the output does not reliably signal invalidity, and when it does, recognizing the signal requires the expertise the workflow bypasses. I focus on \"vibe econometrics,\" the subset of AI-assisted causal analysis where identification can be named faster than it can be audited. The claim of this paper is not that AI invents inferential failures that did not previously exist, but that it changes their incidence, observability, and persuasive force enough to create a practically distinct governance problem. This results in three failure modes: method-data mismatch, where AI bypasses expertise at execution; confidence laundering, where AI amplifies the credibility of formatted output; and invisible forking, which spans both. What is new is not the failure modes but AI's industrialization of their packaging. The barrier between naming a method and executing it has collapsed, and weak foundations, dressed as rigorous analysis, now reach audiences at a scale, speed, and polish that previously required expertise. I propose the Analysis Contract, a pre-commitment framework that adapts the logic of pre-analysis plans and the Causal Roadmap to the AI-assisted setting. The contract imposes three conditions before a causal claim is made: a method-data contract, a data audit, and a pre-commitment statement defining what would count as a disconfirming result. The framework generalizes across domains of vibe inference through domain-specific instantiation.",
+                "summary": "Evaluating high-dimensional integrals via deep hierarchical recurrences is a dominant cost in quantum chemistry. While CPUs manage these efficiently, GPUs suffer a critical mismatch: limited per-thread memory is quickly overwhelmed by an explosion of simultaneously live intermediate variables. As recurrence scales, this forces massive data spilling to global memory, collapsing performance into a severe memory-bound regime. We present FusionRCG, a framework that jointly optimizes computation graph structure and GPU memory mapping. Exploiting the inherent topological flexibility of recurrence graphs, using electron repulsion integrals as an example, we contribute: (1) liveness-aware graph orchestration to minimize peak live intermediates; (2) algebraic dimensionality reduction via stepwise Cartesian-to-spherical fusion, shrinking intermediate footprints by up to $7.7\\times$; and (3) an adaptive multi-tier kernel architecture routing graphs across the memory hierarchy. Evaluated on NVIDIA A100 GPUs, FusionRCG achieves up to $3.09\\times$ end-to-end SCF speedup over GPU4PySCF and maintains $75\\%$ parallel efficiency at 64~GPUs, successfully rescuing these workloads from memory-bound limits.",
                 "category": [
                     {
-                        "@term": "econ.EM",
+                        "@term": "physics.comp-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.DC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "physics.chem-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-11T10:12:25Z",
+                "arxiv:primary_category": {
+                    "@term": "physics.comp-ph"
+                },
+                "author": [
+                    {
+                        "name": "Yihong Zhang"
+                    },
+                    {
+                        "name": "Xinran Wei"
+                    },
+                    {
+                        "name": "Junshi Chen"
+                    },
+                    {
+                        "name": "Fusong Ju"
+                    },
+                    {
+                        "name": "Wei Hu"
+                    },
+                    {
+                        "name": "Jinlong Yang"
+                    },
+                    {
+                        "name": "Huanhuan Xia"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.10310v1",
+                "title": "Positive Alignment: Artificial Intelligence for Human Flourishing",
+                "updated": "2026-05-11T10:11:08Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.10310v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.10310v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Existing alignment research is dominated by concerns about safety and preventing harm: safeguards, controllability, and compliance. This paradigm of alignment parallels early psychology's focus on mental illness: necessary but incomplete. What we call Positive Alignment is the development of AI systems that (i) actively support human and ecological flourishing in a pluralistic, polycentric, context-sensitive, and user-authored way while (ii) remaining safe and cooperative. It is a distinct and necessary agenda within AI alignment research. We argue that several existing failures of alignment (e.g., engagement hacking, loss of human autonomy, failures in truth-seeking, low epistemic humility, error correction, lack of diverse viewpoints, and being primarily reactive rather than proactive) may be better addressed through positive alignment, including cultivating virtues and maximizing human flourishing. We highlight a range of challenges, open questions, and technical directions (e.g., data filtering and upsampling, pre- and post-training, evaluations, collaborative value collection) for different phases of the LLM and agents lifecycle. We end with design principles for promoting disagreement and decentralization through contextual grounding, community customization, continual adaptation, and polycentric governance; that is, many legitimate centers of oversight rather than one institutional or moral chokepoint.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -389,108 +234,287 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "stat.ME",
+                        "@term": "q-bio.NC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-08T17:54:47Z",
-                "arxiv:comment": "20 pages, 2 figures. Appendices A-C (fillable templates) provided as ancillary file. Companion materials: https://github.com/lydiaashton/vibe-econometrics-supp . Also posted on SSRN: https://doi.org/10.2139/ssrn.6699999",
-                "arxiv:primary_category": {
-                    "@term": "econ.EM"
-                },
-                "author": {
-                    "name": "Lydia Ashton",
-                    "arxiv:affiliation": "University of Wisconsin-Madison"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.08069v1",
-                "title": "Empirical Bayes Rebiasing",
-                "updated": "2026-05-08T17:53:17Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.08069v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.08069v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We study methods for simultaneous analysis of many noisy and biased estimates, each paired with an even noisier estimate of its own bias. The analyst's goal is to construct short calibrated intervals for each parameter. The standard debiasing approach, which subtracts the bias estimate from each biased estimate, inflates variance and yields long intervals. In this paper, we propose an empirical Bayes rebiasing strategy that starts from the fully debiased estimates and learns from data how much bias to reintroduce by estimating the unknown bias distribution. We provide convergence rates for the coverage of our intervals when the bias distribution is estimated using nonparametric maximum likelihood. Furthermore, we demonstrate substantial precision gains in prediction-powered inference, including pairwise LLM win-rate evaluations, as well as for inference of direct genetic effects in family-based GWAS.",
-                "category": [
-                    {
-                        "@term": "stat.ME",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-08T17:53:17Z",
-                "arxiv:primary_category": {
-                    "@term": "stat.ME"
-                },
-                "author": [
-                    {
-                        "name": "Wanyi Ling"
-                    },
-                    {
-                        "name": "Sida Li"
-                    },
-                    {
-                        "name": "Junming Guan"
-                    },
-                    {
-                        "name": "Nikolaos Ignatiadis"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.08061v1",
-                "title": "Rubric-Grounded RL: Structured Judge Rewards for Generalizable Reasoning",
-                "updated": "2026-05-08T17:48:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.08061v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.08061v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We argue that decomposing reward into weighted, verifiable criteria and using an LLM judge to score them provides a partial-credit optimization signal: instead of a binary outcome or a single holistic score, each response is graded along multiple task-specific criteria. We formalize \\emph{rubric-grounded reinforcement learning (RL)}: a framework in which the policy is optimized against a structured, multi-criterion reward produced by a frozen LLM judge that conditions on auxiliary grounding the policy never sees. We instantiate the framework by deriving rubrics from an Office of Scientific and Technical Information (OSTI)-derived corpus of roughly 100,000 scientific and technical documents and training Llama-3.1-8B-Instruct with Group Relative Policy Optimization (GRPO). With GRPO-based training, the model achieves $71.7\\%$ normalized reward on held-out rubric evaluation. The GRPO-tuned policy also improves over the base model on four reasoning benchmarks not derived from the training corpus -- GSM8K, MATH, GPQA Main, and GPQA Diamond. These results provide evidence that structured, document-grounded rewards can improve held-out rubric performance and induce transferable reasoning behaviors beyond the corpus used to construct the training environment.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-08T17:48:58Z",
+                "published": "2026-05-11T10:11:08Z",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Manish Bhattarai"
+                        "name": "Ruben Laukkonen"
                     },
                     {
-                        "name": "Ismael Boureima"
+                        "name": "Seb Krier"
                     },
                     {
-                        "name": "Nishath Rajiv Ranasinghe"
+                        "name": "Chlo\u00e9 Bakalar"
                     },
                     {
-                        "name": "Scott Pakin"
+                        "name": "Shamil Chandaria"
                     },
                     {
-                        "name": "Dan O'Malley"
+                        "name": "Morten Kringelbach"
+                    },
+                    {
+                        "name": "Adam Elwood"
+                    },
+                    {
+                        "name": "Daniel Ford"
+                    },
+                    {
+                        "name": "Fernando Rosas"
+                    },
+                    {
+                        "name": "Maty Bohacek"
+                    },
+                    {
+                        "name": "Matija Franklin"
+                    },
+                    {
+                        "name": "Nenad Toma\u0161ev"
+                    },
+                    {
+                        "name": "Stephanie Chan"
+                    },
+                    {
+                        "name": "Verena Rieser"
+                    },
+                    {
+                        "name": "Roma Patel"
+                    },
+                    {
+                        "name": "Michael Levin"
+                    },
+                    {
+                        "name": "Arun Rao"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.10302v1",
+                "title": "Follow the Mean: Reference-Guided Flow Matching",
+                "updated": "2026-05-11T09:57:34Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.10302v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.10302v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Existing approaches to controllable generation typically rely on fine-tuning, auxiliary networks, or test-time search. We show that flow matching admits a different control interface: adaptation through examples. For deterministic interpolants, the velocity field is solely governed by a conditional endpoint mean; shifting this mean shifts the flow itself. This yields a simple principle for controllable generation: steer a pretrained model by changing the reference set it follows. We instantiate this idea in two forms. Reference-Mean Guidance is training-free: it computes a closed-form endpoint-mean correction from a reference bank and applies it to a frozen FLUX.2-klein (4B) model, enabling control of color, identity, style, and structure while keeping the prompt, seed, and weights fixed. Semi-Parametric Guidance amortizes the same idea through an explicit mean anchor and learned residual refiner, matching unconditional DiT-B/4 quality on AFHQv2 while allowing the reference set to be swapped at inference time. These results point to a broader direction: generative models that adapt through data, not parameter updates.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-11T09:57:34Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Pedro M. P. Curvo"
+                    },
+                    {
+                        "name": "Maksim Zhdanov"
+                    },
+                    {
+                        "name": "Floor Eijkelboom"
+                    },
+                    {
+                        "name": "Jan-Willem van de Meent"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.10299v1",
+                "title": "Nearly-Optimal Algorithm for Adversarial Kernelized Bandits",
+                "updated": "2026-05-11T09:56:18Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.10299v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.10299v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This paper studies kernelized bandits (also known as Gaussian process bandits) in an adversarial environment, where the reward functions in a known reproducing kernel Hilbert space (RKHS) may be adversarially chosen at each round. We show that the exponential-weight algorithm achieves $\\tilde{O}(\\sqrt{T \u03b3_T})$ adversarial regret, where $T$ and $\u03b3_T$ denote the number of total rounds and the maximum information gain, respectively. For squared exponential (SE) and $\u03bd$-Mat\u00e9rn kernels, we also show algorithm-independent lower bounds that guarantee the optimality of our algorithm up to polylogarithmic factors. Furthermore, we present a computationally efficient variant of our algorithm using Nystr\u00f6m approximation while maintaining nearly optimal regret guarantees.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-11T09:56:18Z",
+                "arxiv:comment": "47 pages",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Shogo Iwazaki"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.10298v1",
+                "title": "Set Prediction for Next-Day Active Fire Forecasting",
+                "updated": "2026-05-11T09:56:17Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.10298v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.10298v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Accurate next-day active fire forecasts can support early warning, disaster response, forest risk assessment, and downstream estimation of fire-related carbon emissions. Existing machine learning approaches to wildfire forecasting typically predict wildfire danger or fire probability on kilometre-scale daily grids, which is useful for regional warning but does not directly represent localized fire events. We propose Wildfire Ignition Set Predictor (WISP), a query-based model that reformulates next-day active fire forecasting as point-set prediction. From 48 hours of covariates including meteorology, satellite vegetation products, static land, and fire history, WISP predicts a fixed-size ranked set of future active fire cluster centres on a 375 m grid across globally distributed regions. The model is trained end-to-end with Hungarian matching; to address the conflicting roles of the classification score in assignment, ranking, and query activation, we use asymmetric classification-localization weighting in matching and loss. We further construct a globally distributed, hourly, multi-source benchmark for this task. On a held-out test set spanning fire regions worldwide, the best WISP variant achieves 38.2% average precision (AP) for ranked fire-centre detections, covers 53.4% of fire cluster mass weighted by fire radiative power (FRP), and localizes 54.1% of observed clusters within 5 km. These results establish sparse set prediction as a viable formulation for high-resolution wildfire forecasting and provide a benchmark for future work in this regime.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-11T09:56:17Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Yuchen Bai"
+                    },
+                    {
+                        "name": "Georgios Athanasiou"
+                    },
+                    {
+                        "name": "Xin Yu"
+                    },
+                    {
+                        "name": "Diogenis Antonopoulos"
+                    },
+                    {
+                        "name": "Ioannis Papoutsis"
+                    },
+                    {
+                        "name": "Stijn Hantson"
+                    },
+                    {
+                        "name": "Nuno Carvalhais"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.10296v1",
+                "title": "Qwen Goes Brrr: Off-the-Shelf RAG for Ukrainian Multi-Domain Document Understanding",
+                "updated": "2026-05-11T09:55:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.10296v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.10296v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We participated in the Fifth UNLP shared task on multi-domain document understanding, where systems must answer Ukrainian multiple-choice questions from PDF collections and localize the supporting document and page. We propose a retrieval-augmented pipeline built around three ideas: contextual chunking of PDFs, question-aware dense retrieval and reranking conditioned on both the question and answer options, and constrained answer generation from a small set of reranked passages. Our final system uses Qwen3-Embedding-8B for retrieval, a fine-tuned Qwen3-Reranker-8B for passage ranking, and Qwen3-32B for answer selection. On a held-out split, reranking improves Recall@1 from 0.6957 to 0.7935, while using the top-2 reranked passages raises answer accuracy from 0.9348 to 0.9674. Our best leaderboard run reached 0.9452 on the public leaderboard and 0.9598 on the private leaderboard. Our results suggest that, under strict code-competition constraints, preserving document structure and making relevance estimation aware of the answer space are more effective than adding complex downstream heuristics.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-11T09:55:28Z",
+                "arxiv:comment": "Accepted to The Fifth Ukrainian Natural Language Processing Conference (UNLP 2026)",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Anton Bazdyrev"
+                    },
+                    {
+                        "name": "Ivan Bashtovyi"
+                    },
+                    {
+                        "name": "Ivan Havlytskyi"
+                    },
+                    {
+                        "name": "Oleksandr Kharytonov"
+                    },
+                    {
+                        "name": "Artur Khodakovskyi"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.10293v1",
+                "title": "Robust Probabilistic Shielding for Safe Offline Reinforcement Learning",
+                "updated": "2026-05-11T09:54:30Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.10293v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.10293v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In offline reinforcement learning (RL), we learn policies from fixed datasets without environment interaction. The major challenges are to provide guarantees on the (1) performance and (2) safety of the resulting policy. A technique called safe policy improvement (SPI) provides a performance guarantee: with high probability, the new policy outperforms a given baseline policy, which is assumed to be safe. Orthogonally, in the context of safe RL, a shield provides a safety guarantee by restricting the action space to those actions that are provably safe with respect to a given safety-relevant model. We integrate these paradigms by extending shielding to offline RL, relying solely on the available dataset and knowledge of safe and unsafe states. Then, we shield the policy improvement steps, guaranteeing, with high probability, a safe policy. Experimental results demonstrate that shielded SPI outperforms its unshielded counterpart, improving both average and worst-case performance, particularly in low-data regimes.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-11T09:54:30Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Maris F. L. Galesloot"
+                    },
+                    {
+                        "name": "Thomas Rhemrev"
+                    },
+                    {
+                        "name": "Nils Jansen"
                     }
                 ]
             }
