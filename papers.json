@@ -5,516 +5,180 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-05-13T23:00:35Z",
+        "updated": "2026-05-14T02:35:49Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "570422",
+        "opensearch:totalResults": "570959",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2605.12503v1",
-                "title": "Unveiling Hidden Lyman Alpha Emitters in the DESI DR1 Data",
-                "updated": "2026-05-12T17:59:59Z",
+                "id": "http://arxiv.org/abs/2605.13845v1",
+                "title": "Quantitative Linear Logic for Neuro-Symbolic Learning and Verification",
+                "updated": "2026-05-13T17:59:40Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.12503v1",
+                        "@href": "https://arxiv.org/abs/2605.13845v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.12503v1",
+                        "@href": "https://arxiv.org/pdf/2605.13845v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present an automatic method based on machine-learning convolutional neural network (CNN) architecture to detect Lyman alpha emitters (LAE) hidden in the Data Release 1 spectroscopic dataset of the Dark Energy Spectroscopic Instrument (DESI). Those LAEs mostly have incorrect redshift estimations because the current DESI pipeline is not designed to detect and measure the redshifts of galaxies at $z>2$. To uncover those sources, we first visually inspect thousands of DESI spectra and construct a sample, consisting of both LAEs and non-LAEs, for training and testing the CNN-based model to (1) detect LAEs in DESI spectra and (2) determine their Ly$\u03b1$ redshifts. The final model yields $95.2\\%$ purity and $95.9\\%$ completeness for detecting LAEs. We apply this model to approximately $2\\times10^{6}$ spectra of sources targeted as emission-line galaxies and detect 19,685 LAEs from $z\\sim2$ to $3.5$ within 12 minutes with a single GPU, illustrating the high efficiency of this model for identifying LAEs. The detected LAEs are mostly at the bright end of the luminosity function with Ly$\u03b1$ luminosity $L_{\\rm Ly\u03b1} \\gtrsim 10^{43}$ erg/s. The high signal-to-noise composite spectrum of the detected LAEs further shows various spectral features, including P-Cygni profiles of metal lines and MgII emission lines, possible indicators of Lyman continuum escape fraction, revealing the rich astrophysical information in this LAE sample. Finally, this sample can be used to train and validate the pipelines for redshift determination of LAEs for the preparation of the DESI-II survey.",
+                "summary": "Differentiable Logics are deployed in neuro-symbolic learning tasks as a way of embedding logical constraints in the training objective of neural networks. A differentiable logic consists of a syntax to write logical properties and a semantics to interpret them as real-valued functions to be folded in the loss function. A defining trade-off of the field is that between logical properties of the connectives, and analytic concerns for the semantics, with both aspects being relevant in applications. At one extreme we find fuzzy logics, that have well-established algebraic and proof-theoretic foundations, and at the other ad-hoc differentiable logics like Fischer's DL2, conceived for deep learning applications. However, no satisfactory foundation has emerged yet. We propose a resolution to this long-standing tension via a novel logic, Quantitative Linear Logic (QLL), with foundational ambitions. Our design is driven by naturality -- the idea that, since logical constraints are translated to losses, the semantics of the connectives should be pertinent operations used in ML practice (that is, sum and log-sum-exp) on additive quantities (like logits). We then judge the result on two aspects: logical adequacy -- that they satisfy most of the standard logical laws of Linear Logic; and empirical effectiveness -- test-time performance (as measured by adversarial attacks) is well-correlated to the actual verification of the logical constraints (as measured by off-the-shelf neural network verifiers), which makes QLL stand out among SoTA techniques.",
                 "category": {
-                    "@term": "astro-ph.GA",
+                    "@term": "cs.LO",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-05-12T17:59:59Z",
-                "arxiv:comment": "27 pages, 21 figures, submitted to ApJ",
+                "published": "2026-05-13T17:59:40Z",
+                "arxiv:comment": "23 pages, 2 figures, 13 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.LO"
+                },
+                "author": [
+                    {
+                        "name": "Thomas Flinkow"
+                    },
+                    {
+                        "name": "Ekaterina Komendantskaya"
+                    },
+                    {
+                        "name": "Matteo Capucci"
+                    },
+                    {
+                        "name": "Rosemary Monahan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.13842v1",
+                "title": "From DES to KiDS: Domain adaptation for cross-survey detection of low-surface-brightness galaxies",
+                "updated": "2026-05-13T17:58:55Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.13842v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.13842v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Low-surface-brightness galaxies (LSBGs) are vital for understanding galaxy formation, but their diffuse nature makes them challenging to detect. Upcoming large-scale surveys are expected to uncover large numbers of LSBGs, requiring robust automated methods to identify them across heterogeneous datasets. As a precursor to the Legacy Survey of Space and Time (LSST) and Euclid, we explore domain adaptation techniques for cross-survey LSBG identification. Using models trained on the Dark Energy Survey (DES), we search for LSBGs in the Kilo-Degree Survey Data Release 5 (KiDS DR5). We used an ensemble consisting of one convolutional neural network (CNN) and two transformer models trained on DES cutouts and applied to KiDS DR5 imaging data. Structural parameters were estimated with galfitm, and photometric redshifts and stellar population properties were estimated through spectral energy distribution fitting with CIGALE. We identify 20,180 LSBGs and 434 ultra-diffuse galaxies (UDGs) in KiDS DR5. Their structural parameters are similar to known LSBGs from DES and the Hyper Suprime-Cam SSP Survey (HSC-SSP). The KiDS-LSBGs follow a continuous size-luminosity relation connecting classical dwarf galaxies and UDGs, and their colours are bimodal ($\\sim73\\%$ blue, $\\sim27\\%$ red). Cross-matching with spectroscopic and cluster catalogues provides redshifts for 4,913 systems, enabling a systematic characterisation of the star-forming main sequence of LSBGs. Strong environmental trends are evident, with cluster LSBGs and UDGs exhibiting redder colours and reduced star formation compared to non-cluster systems. We demonstrate that domain adaptation enables robust cross-survey LSBG identification with deep learning models, providing a scalable pathway for constructing homogeneous LSBG catalogues for the LSST and Euclid era.",
+                "category": [
+                    {
+                        "@term": "astro-ph.GA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.IM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-13T17:58:55Z",
+                "arxiv:comment": "Accepted to Astronomy & Astrophysics",
                 "arxiv:primary_category": {
                     "@term": "astro-ph.GA"
                 },
                 "author": [
                     {
-                        "name": "Jui-Kuan Chan"
+                        "name": "Hareesh Thuruthipilly"
                     },
                     {
-                        "name": "Ting-Wen Lan"
+                        "name": "Krzysztof Lisiecki"
                     },
                     {
-                        "name": "J. Xavier Prochaska"
+                        "name": "Junais"
                     },
                     {
-                        "name": "Shun Saito"
+                        "name": "Katarzyna Ma\u0142ek"
                     },
                     {
-                        "name": "J. Aguilar"
+                        "name": "Agnieszka Pollo"
                     },
                     {
-                        "name": "S. Ahlen"
+                        "name": "William J. Pearson"
                     },
                     {
-                        "name": "D. Bianchi"
+                        "name": "Antonio Vanzanella"
                     },
                     {
-                        "name": "D. Brooks"
+                        "name": "Saptarshi Pal"
                     },
                     {
-                        "name": "A. Cuceu"
+                        "name": "Miguel Figueira"
                     },
                     {
-                        "name": "A. de la Macorra"
+                        "name": "Pratik Dabhade"
                     },
                     {
-                        "name": "Biprateep Dey"
+                        "name": "Anna Durkalec"
                     },
                     {
-                        "name": "P. Doel"
+                        "name": "Aidan P. Cotter"
                     },
                     {
-                        "name": "A. Font-Ribera"
+                        "name": "Unnikrishnan Sureshkumar"
                     },
                     {
-                        "name": "J. E. Forero-Romero"
+                        "name": "Nandini Hazra"
                     },
                     {
-                        "name": "E. Gazta\u00f1aga"
+                        "name": "Patryk Matera"
                     },
                     {
-                        "name": "Satya Gontcho A Gontcho"
+                        "name": "Subhrata Dey"
                     },
                     {
-                        "name": "G. Gutierrez"
+                        "name": "Michal Vr\u00e1bel"
                     },
                     {
-                        "name": "C. Hahn"
+                        "name": "Anirban Dutta"
                     },
                     {
-                        "name": "J. Jimenez"
+                        "name": "Henry Willems"
                     },
                     {
-                        "name": "R. Joyce"
+                        "name": "Nicola Principi Cavaterra"
                     },
                     {
-                        "name": "S. Juneau"
+                        "name": "Natalia Dobrowolska"
                     },
                     {
-                        "name": "D. Kirkby"
-                    },
-                    {
-                        "name": "A. Kremin"
-                    },
-                    {
-                        "name": "M. Landriau"
-                    },
-                    {
-                        "name": "M. Manera"
-                    },
-                    {
-                        "name": "A. Meisner"
-                    },
-                    {
-                        "name": "R. Miquel"
-                    },
-                    {
-                        "name": "J. Moustakas"
-                    },
-                    {
-                        "name": "S. Nadathur"
-                    },
-                    {
-                        "name": "W. J. Percival"
-                    },
-                    {
-                        "name": "C. Poppett"
-                    },
-                    {
-                        "name": "F. Prada"
-                    },
-                    {
-                        "name": "I. P\u00e9rez-R\u00e0fols"
-                    },
-                    {
-                        "name": "G. Rossi"
-                    },
-                    {
-                        "name": "E. Sanchez"
-                    },
-                    {
-                        "name": "D. Schlegel"
-                    },
-                    {
-                        "name": "M. Schubnell"
-                    },
-                    {
-                        "name": "J. Silber"
-                    },
-                    {
-                        "name": "D. Sprayberry"
-                    },
-                    {
-                        "name": "G. Tarl\u00e9"
-                    },
-                    {
-                        "name": "B. A. Weaver"
-                    },
-                    {
-                        "name": "H. Zou"
+                        "name": "Wojciech Knop"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.12500v1",
-                "title": "SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture",
-                "updated": "2026-05-12T17:59:58Z",
+                "id": "http://arxiv.org/abs/2605.13841v1",
+                "title": "EVA-Bench: A New End-to-end Framework for Evaluating Voice Agents",
+                "updated": "2026-05-13T17:58:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.12500v1",
+                        "@href": "https://arxiv.org/abs/2605.13841v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.12500v1",
+                        "@href": "https://arxiv.org/pdf/2605.13841v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent large vision-language models (VLMs) remain fundamentally constrained by a persistent dichotomy: understanding and generation are treated as distinct problems, leading to fragmented architectures, cascaded pipelines, and misaligned representation spaces. We argue that this divide is not merely an engineering artifact, but a structural limitation that hinders the emergence of native multimodal intelligence. Hence, we introduce SenseNova-U1, a native unified multimodal paradigm built upon NEO-unify, in which understanding and generation evolve as synergistic views of a single underlying process. We launch two native unified variants, SenseNova-U1-8B-MoT and SenseNova-U1-A3B-MoT, built on dense (8B) and mixture-of-experts (30B-A3B) understanding baselines, respectively. Designed from first principles, they rival top-tier understanding-only VLMs across text understanding, vision-language perception, knowledge reasoning, agentic decision-making, and spatial intelligence. Meanwhile, they deliver strong semantic consistency and visual fidelity, excelling in conventional or knowledge-intensive any-to-image (X2I) synthesis, complex text-rich infographic generation, and interleaved vision-language generation, with or without think patterns. Beyond performance, we show detailed model design, data preprocessing, pre-/post-training, and inference strategies to support community research. Last but not least, preliminary evidence demonstrates that our models extend beyond perception and generation, performing strongly in vision-language-action (VLA) and world model (WM) scenarios. This points toward a broader roadmap where models do not translate between modalities, but think and act across them in a native manner. Multimodal AI is no longer about connecting separate systems, but about building a unified one and trusting the necessary capabilities to emerge from within.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-12T17:59:58Z",
-                "arxiv:comment": "Project page: https://github.com/OpenSenseNova/SenseNova-U1",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Haiwen Diao"
-                    },
-                    {
-                        "name": "Penghao Wu"
-                    },
-                    {
-                        "name": "Hanming Deng"
-                    },
-                    {
-                        "name": "Jiahao Wang"
-                    },
-                    {
-                        "name": "Shihao Bai"
-                    },
-                    {
-                        "name": "Silei Wu"
-                    },
-                    {
-                        "name": "Weichen Fan"
-                    },
-                    {
-                        "name": "Wenjie Ye"
-                    },
-                    {
-                        "name": "Wenwen Tong"
-                    },
-                    {
-                        "name": "Xiangyu Fan"
-                    },
-                    {
-                        "name": "Yan Li"
-                    },
-                    {
-                        "name": "Yubo Wang"
-                    },
-                    {
-                        "name": "Zhijie Cao"
-                    },
-                    {
-                        "name": "Zhiqian Lin"
-                    },
-                    {
-                        "name": "Zhitao Yang"
-                    },
-                    {
-                        "name": "Zhongang Cai"
-                    },
-                    {
-                        "name": "Yuwei Niu"
-                    },
-                    {
-                        "name": "Yue Zhu"
-                    },
-                    {
-                        "name": "Bo Liu"
-                    },
-                    {
-                        "name": "Chengguang Lv"
-                    },
-                    {
-                        "name": "Haojia Yu"
-                    },
-                    {
-                        "name": "Haozhe Xie"
-                    },
-                    {
-                        "name": "Hongli Wang"
-                    },
-                    {
-                        "name": "Jianan Fan"
-                    },
-                    {
-                        "name": "Jiaqi Li"
-                    },
-                    {
-                        "name": "Jiefan Lu"
-                    },
-                    {
-                        "name": "Jingcheng Ni"
-                    },
-                    {
-                        "name": "Junxiang Xu"
-                    },
-                    {
-                        "name": "Kaihuan Liang"
-                    },
-                    {
-                        "name": "Lianqiang Shi"
-                    },
-                    {
-                        "name": "Linjun Dai"
-                    },
-                    {
-                        "name": "Linyan Wang"
-                    },
-                    {
-                        "name": "Oscar Qian"
-                    },
-                    {
-                        "name": "Peng Gao"
-                    },
-                    {
-                        "name": "Pengfei Liu"
-                    },
-                    {
-                        "name": "Qingping Sun"
-                    },
-                    {
-                        "name": "Rui Shen"
-                    },
-                    {
-                        "name": "Ruisi Wang"
-                    },
-                    {
-                        "name": "Shengnan Ma"
-                    },
-                    {
-                        "name": "Shuang Yang"
-                    },
-                    {
-                        "name": "Siyi Xie"
-                    },
-                    {
-                        "name": "Siying Li"
-                    },
-                    {
-                        "name": "Tianbo Zhong"
-                    },
-                    {
-                        "name": "Xiangli Kong"
-                    },
-                    {
-                        "name": "Xuanke Shi"
-                    },
-                    {
-                        "name": "Yang Gao"
-                    },
-                    {
-                        "name": "Yongqiang Yao"
-                    },
-                    {
-                        "name": "Yves Wang"
-                    },
-                    {
-                        "name": "Zhengqi Bai"
-                    },
-                    {
-                        "name": "Zhengyu Lin"
-                    },
-                    {
-                        "name": "Zixin Yin"
-                    },
-                    {
-                        "name": "Wenxiu Sun"
-                    },
-                    {
-                        "name": "Ruihao Gong"
-                    },
-                    {
-                        "name": "Quan Wang"
-                    },
-                    {
-                        "name": "Lewei Lu"
-                    },
-                    {
-                        "name": "Lei Yang"
-                    },
-                    {
-                        "name": "Ziwei Liu"
-                    },
-                    {
-                        "name": "Dahua Lin"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.12497v1",
-                "title": "From Web to Pixels: Bringing Agentic Search into Visual Perception",
-                "updated": "2026-05-12T17:59:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.12497v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.12497v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Visual perception connects high-level semantic understanding to pixel-level perception, but most existing settings assume that the decisive evidence for identifying a target is already in the image or frozen model knowledge. We study a more practical yet harder open-world case where a visible object must first be resolved from external facts, recent events, long-tail entities, or multi-hop relations before it can be localized. We formalize this challenge as Perception Deep Research and introduce WebEye, an object-anchored benchmark with verifiable evidence, knowledge-intensive queries, precise box/mask annotations, and three task views: Search-based Grounding, Search-based Segmentation, and Search-based VQA. WebEyes contains 120 images, 473 annotated object instances, 645 unique QA pairs, and 1,927 task samples. We further propose Pixel-Searcher, an agentic search-to-pixel workflow that resolves hidden target identities and binds them to boxes, masks, or grounded answers. Experiments show that Pixel-Searcher achieves the strongest open-source performance across all three task views, while failures mainly arise from evidence acquisition, identity resolution, and visual instance binding.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-12T17:59:51Z",
-                "arxiv:comment": "Project page: https://pixel-searcher.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Bokang Yang"
-                    },
-                    {
-                        "name": "Xinyi Sun"
-                    },
-                    {
-                        "name": "Kaituo Feng"
-                    },
-                    {
-                        "name": "Xingping Dong"
-                    },
-                    {
-                        "name": "Dongming Wu"
-                    },
-                    {
-                        "name": "Xiangyu Yue"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.12496v1",
-                "title": "CausalCine: Real-Time Autoregressive Generation for Multi-Shot Video Narratives",
-                "updated": "2026-05-12T17:59:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.12496v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.12496v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Autoregressive video generation aims at real-time, open-ended synthesis. Yet, cinematic storytelling is not merely the endless extension of a single scene; it requires progressing through evolving events, viewpoint shifts, and discrete shot boundaries. Existing autoregressive models often struggle in this setting. Trained primarily for short-horizon continuation, they treat long sequences as extended single shots, inevitably suffering from motion stagnation and semantic drift during long rollouts. To bridge this gap, we introduce CausalCine, an interactive autoregressive framework that transforms multi-shot video generation into an online directing process. CausalCine generates causally across shot changes, accepts dynamic prompts on the fly, and reuses context without regenerating previous shots. To achieve this, we first train a causal base model on native multi-shot sequences to learn complex shot transitions prior to acceleration. We then propose Content-Aware Memory Routing (CAMR), which dynamically retrieves historical KV entries according to attention-based relevance scores rather than temporal proximity, preserving cross-shot coherence under bounded active memory. Finally, we distill the causal base model into a few-step generator for real-time interactive generation. Extensive experiments demonstrate that CausalCine significantly outperforms autoregressive baselines and approaches the capability of bidirectional models while unlocking the streaming interactivity of causal generation. Demo available at https://yihao-meng.github.io/CausalCine/",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-12T17:59:51Z",
-                "arxiv:comment": "Project page: https://yihao-meng.github.io/CausalCine/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yihao Meng"
-                    },
-                    {
-                        "name": "Zichen Liu"
-                    },
-                    {
-                        "name": "Hao Ouyang"
-                    },
-                    {
-                        "name": "Qiuyu Wang"
-                    },
-                    {
-                        "name": "Ka Leong Cheng"
-                    },
-                    {
-                        "name": "Yue Yu"
-                    },
-                    {
-                        "name": "Hanlin Wang"
-                    },
-                    {
-                        "name": "Haobo Li"
-                    },
-                    {
-                        "name": "Jiapeng Zhu"
-                    },
-                    {
-                        "name": "Yanhong Zeng"
-                    },
-                    {
-                        "name": "Xing Zhu"
-                    },
-                    {
-                        "name": "Yujun Shen"
-                    },
-                    {
-                        "name": "Qifeng Chen"
-                    },
-                    {
-                        "name": "Huamin Qu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.12495v1",
-                "title": "AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward",
-                "updated": "2026-05-12T17:59:47Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.12495v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.12495v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In this paper, we propose AlphaGRPO, a novel framework that applies Group Relative Policy Optimization (GRPO) to AR-Diffusion Unified Multimodal Models (UMMs) to enhance multimodal generation capabilities without an additional cold-start stage. Our approach unlocks the model's intrinsic potential to perform advanced reasoning tasks: Reasoning Text-to-Image Generation, where the model actively infers implicit user intents, and Self-Reflective Refinement, where it autonomously diagnoses and corrects misalignments in generated outputs. To address the challenge of providing stable supervision for real-world multimodal generation, we introduce the Decompositional Verifiable Reward (DVReward). Unlike holistic scalar rewards, DVReward utilizes an LLM to decompose complex user requests into atomic, verifiable semantic and quality questions, which are then evaluated by a general MLLM to provide reliable and interpretable feedback. Extensive experiments demonstrate that AlphaGRPO yields robust improvements across multimodal generation benchmarks, including GenEval, TIIF-Bench, DPG-Bench and WISE, while also achieving significant gains in editing tasks on GEdit without training on editing tasks. These results validate that our self-reflective reinforcement approach effectively leverages inherent understanding to guide high-fidelity generation. Project page: https://huangrh99.github.io/AlphaGRPO/",
+                "summary": "Voice agents, artificial intelligence systems that conduct spoken conversations to complete tasks, are increasingly deployed across enterprise applications. However, no existing benchmark jointly addresses two core evaluation challenges: generating realistic simulated conversations, and measuring quality across the full scope of voice-specific failure modes. We present EVA-Bench, an end-to-end evaluation framework that addresses both. On the simulation side, EVA-Bench orchestrates bot-to-bot audio conversations over dynamic multi-turn dialogues, with automatic simulation validation that detects user simulator error and appropriately regenerates conversations before scoring. On the measurement side, EVA-Bench introduces two composite metrics: EVA-A (Accuracy), capturing task completion, faithfulness, and audio-level speech fidelity; and EVA-X (Experience), capturing conversation progression, spoken conciseness, and turn-taking timing. Both metrics apply to different agent architectures, enabling direct cross-architecture comparison. EVA-Bench includes 213 scenarios across three enterprise domains, a controlled perturbation suite for accent and noise robustness, and pass@1, pass@k, pass^k measurements that distinguish peak from reliable capability. Across 12 systems spanning all three architectures, we find: (1) no system simultaneously exceeds 0.5 on both EVA-A pass@1 and EVA-X pass@1; (2) peak and reliable performance diverge substantially (median pass@k - pass^k gap of 0.44 on EVA-A); and (3) accent and noise perturbations expose substantial robustness gaps, with effects varying across architectures, systems, and metrics (mean up to 0.314). We release the full framework, evaluation suite, and benchmark data under an open-source license.",
                 "category": [
                     {
-                        "@term": "cs.CV",
+                        "@term": "cs.SD",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -522,290 +186,411 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-12T17:59:47Z",
-                "arxiv:comment": "ICML2026",
+                "published": "2026-05-13T17:58:52Z",
+                "arxiv:comment": "Work in progress",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.SD"
                 },
                 "author": [
                     {
-                        "name": "Runhui Huang"
+                        "name": "Tara Bogavelli"
                     },
                     {
-                        "name": "Jie Wu"
+                        "name": "Gabrielle Gauthier Melan\u00e7on"
                     },
                     {
-                        "name": "Rui Yang"
+                        "name": "Katrina Stankiewicz"
                     },
                     {
-                        "name": "Zhe Liu"
+                        "name": "Oluwanifemi Bamgbose"
                     },
                     {
-                        "name": "Hengshuang Zhao"
+                        "name": "Fanny Riols"
+                    },
+                    {
+                        "name": "Hoang H. Nguyen"
+                    },
+                    {
+                        "name": "Raghav Mehndiratta"
+                    },
+                    {
+                        "name": "Lindsay Devon Brin"
+                    },
+                    {
+                        "name": "Joseph Marinier"
+                    },
+                    {
+                        "name": "Hari Subramani"
+                    },
+                    {
+                        "name": "Anil Madamala"
+                    },
+                    {
+                        "name": "Sridhar Krishna Nemala"
+                    },
+                    {
+                        "name": "Srinivas Sunkara"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.12492v1",
-                "title": "Pion: A Spectrum-Preserving Optimizer via Orthogonal Equivalence Transformation",
-                "updated": "2026-05-12T17:59:34Z",
+                "id": "http://arxiv.org/abs/2605.13840v1",
+                "title": "What is Learnable in Valiant's Theory of the Learnable?",
+                "updated": "2026-05-13T17:58:46Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.12492v1",
+                        "@href": "https://arxiv.org/abs/2605.13840v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.12492v1",
+                        "@href": "https://arxiv.org/pdf/2605.13840v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We introduce Pion, a spectrum-preserving optimizer for large language model (LLM) training based on orthogonal equivalence transformation. Unlike additive optimizers such as Adam and Muon, Pion updates each weight matrix through left and right orthogonal transformations, preserving its singular values throughout training. This yields an optimization mechanism that modulates the geometry of weight matrices while keeping their spectral norm fixed. We derive the Pion update rule, systematically examine its design choices, and analyze its convergence behavior along with several key properties. Empirical results show that Pion offers a stable and competitive alternative to standard optimizers for both LLM pretraining and finetuning.",
+                "summary": "Valiant's 1984 paper is widely credited with introducing the PAC learning model, but it, in fact, introduced a different model: unlike PAC learning, the learner receives only positives, may issue membership queries, and must output a hypothesis with no false positives. Prior work characterized variants, including the case without queries. We revisit Valiant's original model and ask: *Which classes are learnable in it?*\n  For every finite domain, including Valiant's Boolean-hypercube setting, we show that a class is learnable if and only if every realizable positive sample can be certified by a poly-size adaptive query-compression scheme. This is a new variant of sample compression where the learner certifies samples via a short interaction with the membership oracle. Our characterization shows that learnability in Valiant's model is strictly sandwiched between learnability in the PAC model and the variant of Valiant's model without membership queries. This is one of the rare cases where introducing membership queries changes the set of learnable classes, and not just the sample or computational complexity.\n  Next, we study the natural extension of the model to arbitrary domains. While we do not obtain an exact characterization, our techniques readily generalize and show that the same strict sandwiching persists. Finally, we show that $d$-dimensional halfspaces, which are not learnable without queries, are learnable with queries: we give a $\\mathrm{poly}(d) \\tilde{O}(1/\u03b5)$ sample and $\\mathrm{poly}(d) \\mathrm{polylog}(1/\u03b5)$ query algorithm, and prove that at least $\u03a9(d)$ samples or queries are necessary. To our knowledge, this is the first algorithm for halfspaces in Valiant's model.\n  Together, these results uncover a surprisingly rich theory behind Valiant's original notion of learnability and introduce ideas that may be of independent interest in learning theory.",
                 "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.DS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.CO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-12T17:59:34Z",
-                "arxiv:comment": "Technical report v1 (30 pages, 19 figures, project page: https://spherelab.ai/pion/)",
+                "published": "2026-05-13T17:58:46Z",
+                "arxiv:comment": "Abstract shortened for arXiv",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "stat.ML"
                 },
                 "author": [
                     {
-                        "name": "Kexuan Shi"
+                        "name": "Steve Hanneke"
                     },
                     {
-                        "name": "Hanxuan Li"
+                        "name": "Anay Mehrotra"
                     },
                     {
-                        "name": "Zeju Qiu"
+                        "name": "Grigoris Velegkas"
                     },
                     {
-                        "name": "Yandong Wen"
-                    },
-                    {
-                        "name": "Simon Buchholz"
-                    },
-                    {
-                        "name": "Weiyang Liu"
+                        "name": "Manolis Zampetakis"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.12491v1",
-                "title": "Elastic Attention Cores for Scalable Vision Transformers",
-                "updated": "2026-05-12T17:59:26Z",
+                "id": "http://arxiv.org/abs/2605.13839v1",
+                "title": "Good Agentic Friends Do Not Just Give Verbal Advice: They Can Update Your Weights",
+                "updated": "2026-05-13T17:58:32Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.12491v1",
+                        "@href": "https://arxiv.org/abs/2605.13839v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.12491v1",
+                        "@href": "https://arxiv.org/pdf/2605.13839v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Vision Transformers (ViTs) achieve strong data-driven scaling by leveraging all-to-all self-attention. However, this flexibility incurs a computational cost that scales quadratically with image resolution, limiting ViTs in high-resolution domains. Underlying this approach is the assumption that pairwise token interactions are necessary for learning rich visual-semantic representations. In this work, we challenge this assumption, demonstrating that effective visual representations can be learned without any direct patch-to-patch interaction. We propose VECA (Visual Elastic Core Attention), a vision transformer architecture that uses efficient linear-time core-periphery structured attention enabled by a small set of learned cores. In VECA, these cores act as a communication interface: patch tokens exchange information exclusively through the core tokens, which are initialized from scratch and propagated across layers. Because the $N$ image patches only directly interact with a resolution invariant set of $C$ learned \"core\" embeddings, this yields linear complexity $O(N)$ for predetermined $C$, which bypasses quadratic scaling. Compared to prior cross-attention architectures, VECA maintains and iteratively updates the full set of $N$ input tokens, avoiding a small $C$-way bottleneck. Combined with nested training along the core axis, our model can elastically trade off compute and accuracy during inference. Across classification and dense tasks, VECA achieves performance competitive with the latest vision foundation models while reducing computational cost. Our results establish elastic core-periphery attention as a scalable alternative building block for Vision Transformers.",
+                "summary": "Multi-agent LLM systems usually collaborate by exchanging natural-language messages. This interface is simple and interpretable, but it forces each sender's intermediate computation to be serialized into tokens and then reprocessed by the receiver, thereby increasing the generated-token cost, prefill overhead, and KV-cache memory. We study an alternative communication interface: instead of appending a sender's message to the receiver's context, compile the sender's hidden states into a transient, receiver-specific weight perturbation. We introduce TFlow (Thought Flow), a weight-space communication framework for a known and fixed receiver architecture. For each query, frozen role-prompted sender agents process the input, and a learned parameter generator maps their internal activations into low-rank LoRA perturbations targeting the receiver's modules. These perturbations are fused and applied only during the receiver's generation, enabling instance-level adaptation without permanently changing the model or enlarging the receiver's text context. With three Qwen3-4B agents, TFlow improves over a standalone receiver by up to 8.5 accuracy points across five benchmarks while reducing processed tokens by up to 32.69%. Compared with a text-based three-agent baseline, it reduces total processed tokens by up to 83.27% and the wall-clock inference time by up to 4.6$\\times$, while maintaining competitive accuracy on four of five benchmarks. These results suggest that transient low-rank weight perturbations can serve as an executable communication medium for efficient multi-agent LLM collaboration.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-13T17:58:32Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Wenrui Bao"
+                    },
+                    {
+                        "name": "Huan Wang"
+                    },
+                    {
+                        "name": "Jian Wang"
+                    },
+                    {
+                        "name": "Zhangyang Wang"
+                    },
+                    {
+                        "name": "Kai Wang"
+                    },
+                    {
+                        "name": "Yuzhang Shang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.13838v1",
+                "title": "R-DMesh: Video-Guided 3D Animation via Rectified Dynamic Mesh Flow",
+                "updated": "2026-05-13T17:58:13Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.13838v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.13838v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    },
+                    {
+                        "@rel": "related",
+                        "@href": "https://doi.org/10.1145/3799902.3811135",
+                        "@title": "doi"
+                    }
+                ],
+                "summary": "Video-guided 3D animation holds immense potential for content creation, offering intuitive and precise control over dynamic assets. However, practical deployment faces a critical yet frequently overlooked hurdle: the pose misalignment dilemma. In real-world scenarios, the initial pose of a user-provided static mesh rarely aligns with the starting frame of a reference video. Naively forcing a mesh to follow a mismatched trajectory inevitably leads to severe geometric distortion or animation failure. To address this, we present Rectified Dynamic Mesh (R-DMesh), a unified framework designed to generate high-fidelity 4D meshes that are ``rectified'' to align with video context. Unlike standard motion transfer approaches, our method introduces a novel VAE that explicitly disentangles the input into a conditional base mesh, relative motion trajectories, and a crucial rectification jump offset. This offset is learned to automatically transform the arbitrary pose of the input mesh to match the video's initial state before animation begins. We process these components via a Triflow Attention mechanism, which leverages vertex-wise geometric features to modulate the three orthogonal flows, ensuring physical consistency and local rigidity during the rectification and animation process. For generation, we employ a Rectified Flow-based Diffusion Transformer conditioned on pre-trained video latents, effectively transferring rich spatio-temporal priors to the 3D domain. To support this task, we construct Video-RDMesh, a large-scale dataset of over 500k dynamic mesh sequences specifically curated to simulate pose misalignment. Extensive experiments demonstrate that R-DMesh not only solves the alignment problem but also enables robust downstream applications, including pose retargeting and holistic 4D generation.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
+                        "@term": "cs.GR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-12T17:59:26Z",
-                "arxiv:comment": "Project repository here: https://github.com/alansong1322/VECA",
+                "published": "2026-05-13T17:58:13Z",
+                "arxiv:comment": "Accepted by SIGGRAPH 2026, Project Page: https://r-dmesh.github.io/ Code URL: https://github.com/Tencent-Hunyuan/R-DMesh",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Alan Z. Song"
+                        "name": "Zijie Wu"
                     },
                     {
-                        "name": "Yinjie Chen"
+                        "name": "Lixin Xu"
                     },
                     {
-                        "name": "Mu Nan"
+                        "name": "Puhua Jiang"
                     },
                     {
-                        "name": "Rui Zhang"
+                        "name": "Sicong Liu"
                     },
                     {
-                        "name": "Jiahang Cao"
+                        "name": "Chunchao Guo"
                     },
                     {
-                        "name": "Weijian Mai"
-                    },
-                    {
-                        "name": "Muquan Yu"
-                    },
-                    {
-                        "name": "Hossein Adeli"
-                    },
-                    {
-                        "name": "Deva Ramanan"
-                    },
-                    {
-                        "name": "Michael J. Tarr"
-                    },
-                    {
-                        "name": "Andrew F. Luo"
+                        "name": "Xiang Bai"
                     }
-                ]
+                ],
+                "arxiv:doi": "10.1145/3799902.3811135"
             },
             {
-                "id": "http://arxiv.org/abs/2605.12490v1",
-                "title": "DNN predictions for pp reference $p_\\mathrm{T}$ spectra at unmeasured $\\sqrt{s}$",
-                "updated": "2026-05-12T17:59:21Z",
+                "id": "http://arxiv.org/abs/2605.13836v1",
+                "title": "Reachable-Set Decomposition for Real-Time Aggregation of Multi-Zone HVAC Fleets",
+                "updated": "2026-05-13T17:57:54Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.12490v1",
+                        "@href": "https://arxiv.org/abs/2605.13836v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.12490v1",
+                        "@href": "https://arxiv.org/pdf/2605.13836v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Studies of the properties of the Quark-Gluon Plasma in high-energy heavy-ion collisions commonly facilitate proton-proton (pp) collisions at the same center-of-mass energy per nucleon pair as a reference measurement. In this paper, a deep neural network-based approach for interpolating and extrapolating pp reference transverse-momentum spectra to unmeasured energies is presented. The model is trained with ALICE data from LHC Runs 1 and 2 and provides predictions for center-of-mass energies relevant to LHC Run 3 and beyond.",
+                "summary": "Aggregating building heating, ventilation, and air-conditioning (HVAC) fleets provides substantial real-time flexibility to power system operations. However, real-time aggregation of multi-zone HVAC fleets faces two key challenges: (i) strong coupling across zones and time makes flexibility characterization high-dimensional and computationally demanding, and (ii) the sequential revelation of temperature states and exogenous conditions requires that decisions made at each period preserve feasibility over the remaining horizon using only currently realized information. To address these challenges, this paper proposes a reachable-set decomposition framework comprising an offline decomposition stage and a real-time policy. In the offline stage, backward reachable sets are formulated to encode remaining-horizon feasibility into per-period state constraints, so that any state within the current reachable set is guaranteed to sustain feasible operation over the entire remaining horizon. A tailored inner approximation is then developed for tractable calculation in multi-zone-coupled HVAC settings. In the real-time stage, aggregate flexibility is computed efficiently via building-level parallel linear programs followed by closed-form Minkowski summation of power intervals, and any regulation signal within the reported flexibility interval admits a recursively feasible disaggregation. Case studies demonstrate the effectiveness of the proposed framework in aggregate flexibility characterization, disaggregation feasibility, and scalable computation.",
                 "category": {
-                    "@term": "hep-ex",
+                    "@term": "eess.SY",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-05-12T17:59:21Z",
+                "published": "2026-05-13T17:57:54Z",
+                "arxiv:comment": "10 pages, 9 figures",
                 "arxiv:primary_category": {
-                    "@term": "hep-ex"
+                    "@term": "eess.SY"
                 },
                 "author": [
                     {
-                        "name": "Maria A. Calmon Behling"
+                        "name": "Jingguan Liu"
                     },
                     {
-                        "name": "Mario Kr\u00fcger"
+                        "name": "Xiaomeng Ai"
                     },
                     {
-                        "name": "Jerome Jung"
+                        "name": "Cong Chen"
                     },
                     {
-                        "name": "Henner B\u00fcsching"
+                        "name": "Shaoze Li"
+                    },
+                    {
+                        "name": "Shichang Cui"
+                    },
+                    {
+                        "name": "Jiakun Fang"
+                    },
+                    {
+                        "name": "Jinyu Wen"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.12488v1",
-                "title": "Anomalies in Neural Network Field Theory",
-                "updated": "2026-05-12T17:59:01Z",
+                "id": "http://arxiv.org/abs/2605.13834v1",
+                "title": "Topology-Preserving Neural Operator Learning via Hodge Decomposition",
+                "updated": "2026-05-13T17:56:23Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.12488v1",
+                        "@href": "https://arxiv.org/abs/2605.13834v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.12488v1",
+                        "@href": "https://arxiv.org/pdf/2605.13834v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Neural network field theory (NN-FT) formulates field theory in terms of a network architecture and a density on its parameters. We derive Schwinger--Dyson equations and Ward identities in NN-FT and utilize them to study anomalies. The equations depend on a conserved parameter space current that characterizes symmetries and how they break. It is relevant even in non-local NN-FTs, but can recover local currents in the case of a local Lagrangian by an appropriate fiber-wise average. In machine learning, this formalism is applied to feedforward networks and the attention mechanism. In physics, we use this machinery to study $U(1)$ symmetry for a complex scalar, the scale anomaly in $4d$ massless $\u03c6^4$ theory, the Weyl anomaly for the bosonic string (including a new computation of the critical dimension), and examples involving discrete topological data, such as winding numbers and T-duality. Since the results are obtained in network parameter space rather than the standard field space, they represent a new way to understand symmetries in quantum field theories.",
-                "category": {
-                    "@term": "hep-th",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-12T17:59:01Z",
-                "arxiv:comment": "39 pages + appendices",
-                "arxiv:primary_category": {
-                    "@term": "hep-th"
-                },
-                "author": [
-                    {
-                        "name": "Christian Ferko"
-                    },
-                    {
-                        "name": "Samuel Frank"
-                    },
-                    {
-                        "name": "James Halverson"
-                    },
-                    {
-                        "name": "Vishnu Jejjala"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.12487v1",
-                "title": "Task-Adaptive Embedding Refinement via Test-time LLM Guidance",
-                "updated": "2026-05-12T17:58:27Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.12487v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.12487v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We explore the effectiveness of an LLM-guided query refinement paradigm for extending the usability of embedding models to challenging zero-shot search and classification tasks. Our approach refines the embedding representation of a user query using feedback from a generative LLM on a small set of documents, enabling embeddings to adapt in real time to the target task. We conduct extensive experiments with state-of-the-art text embedding models across a diverse set of challenging search and classification benchmarks. Empirical results indicate that LLM-guided query refinement yields consistent gains across all models and datasets, with relative improvements of up to +25% in literature search, intent detection, key-point matching, and nuanced query-instruction following. The refined queries improve ranking quality and induce clearer binary separation across the corpus, enabling the embedding space to better reflect the nuanced, task-specific constraints of each ad-hoc user query. Importantly, this expands the range of practical settings in which embedding models can be effectively deployed, making them a compelling alternative when costly LLM pipelines are not viable at corpus-scale. We release our experimental code for reproducibility, at https://github.com/IBM/task-aware-embedding-refinement.",
+                "summary": "In this paper, we study solution operators of physical field equations on geometric meshes from a function-space perspective. We reveal that Hodge orthogonality fundamentally resolves spectral interference by isolating unlearnable topological degrees of freedom from learnable geometric dynamics, enabling an additive approximation confined to structure-preserving subspaces. Building on Hodge theory and operator splitting, we derive a principled operator-level decomposition. The result is a Hybrid Eulerian-Lagrangian architecture with an algebraic-level inductive bias we call Hodge Spectral Duality (HSD). In our framework, we use discrete differential forms to capture topology-dominated components and an orthogonal auxiliary ambient space to represent complex local dynamics. Our method achieves superior accuracy and efficiency on geometric graphs with enhanced fidelity to physical invariants. Our code is available at https://github.com/ContinuumCoder/Hodge-Spectral-Duality",
                 "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-12T17:58:27Z",
+                "published": "2026-05-13T17:56:23Z",
+                "arxiv:comment": "Accepted at ICML 2026. Code available at https://github.com/ContinuumCoder/Hodge-Spectral-Duality",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Ariel Gera"
+                        "name": "Dongzhe Zheng"
                     },
                     {
-                        "name": "Shir Ashury-Tahan"
+                        "name": "Tao Zhong"
                     },
                     {
-                        "name": "Gal Bloch"
+                        "name": "Christine Allen-Blanchette"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.13835v1",
+                "title": "Unlocking Patch-Level Features for CLIP-Based Class-Incremental Learning",
+                "updated": "2026-05-13T17:56:23Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.13835v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Ohad Eytan"
+                        "@href": "https://arxiv.org/pdf/2605.13835v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Class-Incremental Learning (CIL) enables models to continuously integrate new knowledge while mitigating catastrophic forgetting. Driven by the remarkable generalization of CLIP, leveraging pre-trained vision-language models has become a dominant paradigm in CIL. However, current work primarily focuses on aligning global image embeddings (i.e., [CLS] token) with their corresponding text prompts (i.e., [EOS] token). Despite their good performance, we find that they discard the rich patch-level semantic information inherent in CLIP's encoders. For instance, when recognizing a rabbit, local patches may encode its distinctive cues, such as long ears and a fluffy tail, which can provide complementary evidence for recognition. Based on the above observation, we propose SPA (Semantic-guided Patch-level Alignment) for CLIP-based CIL, which aims to awaken long-neglected local representations within CLIP. Specifically, for each class, we first construct representative and diverse visual samples and feed them to GPT-5 as visual guidance to generate class-wise semantic descriptions. These descriptions are used to guide the selection of discriminative patch-level visual features. Building upon these selected patches, we further employ optimal transport to align selected patch tokens with semantic tokens from class-wise descriptions, yielding a structured cross-modal alignment that improves recognition. Furthermore, we introduce task-specific projectors for effective adaptation to downstream incremental tasks, and sample pseudo-features from stored class-wise Gaussian statistics to calibrate old-class representations, thereby mitigating catastrophic forgetting. Extensive experiments demonstrate that SPA achieves state-of-the-art performance.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-13T17:56:23Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Hao Sun"
                     },
                     {
-                        "name": "Assaf Toledo"
+                        "name": "Zi-Jun Ding"
+                    },
+                    {
+                        "name": "Da-Wei Zhou"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.13833v1",
+                "title": "QLAM: A Quantum Long-Attention Memory Approach to Long-Sequence Token Modeling",
+                "updated": "2026-05-13T17:56:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.13833v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.13833v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Modeling long-range dependencies in sequential data remains a central challenge in machine learning. Transformers address this challenge through attention mechanisms, but their quadratic complexity with respect to sequence length limits scalability to long contexts. State-space models (SSMs) provide an efficient alternative with linear-time computation by evolving a latent state through recurrent updates, but their memory is typically formed via additive or linear transitions, which can limit their ability to capture complex global interactions across tokens. In this work, we introduce one of the first studies to leverage the superposition property of quantum systems to enhance state-based sequence modeling. In particular, we propose Quantum Long-Attention Memory (QLAM), a hybrid quantum-classical memory mechanism that can be viewed as a quantum extension of state-space models. Instead of maintaining a classical latent state updated through additive dynamics, QLAM represents the hidden state as a quantum state whose amplitudes encode a superposition of historical information. The state evolves through parameterized quantum circuits conditioned on the input, enabling a non-classical, globally update mechanism. In this way, QLAM preserves the recurrent and linear-time structure of SSMs while fundamentally enriching the memory representation through quantum superposition. Unlike attention mechanisms that explicitly compute pairwise interactions, QLAM implicitly captures global dependencies through the evolution of the quantum state, and retrieves task-relevant information via query-dependent measurements. We evaluate QLAM on sequential variants of standard image classification benchmarks, including sMNIST, sFashion-MNIST, and sCIFAR-10, where images are flattened into token sequences. Across all tasks, QLAM consistently improves over recurrent baselines and transformer-based models.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-13T17:56:20Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Hoang-Quan Nguyen"
+                    },
+                    {
+                        "name": "Sankalp Pandey"
+                    },
+                    {
+                        "name": "Khoa Luu"
                     }
                 ]
             }
