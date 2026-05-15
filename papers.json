@@ -5,180 +5,185 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-05-14T23:51:57Z",
+        "updated": "2026-05-15T09:41:38Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "570959",
+        "opensearch:totalResults": "571489",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2605.13845v1",
-                "title": "Quantitative Linear Logic for Neuro-Symbolic Learning and Verification",
-                "updated": "2026-05-13T17:59:40Z",
+                "id": "http://arxiv.org/abs/2605.15196v1",
+                "title": "RefDecoder: Enhancing Visual Generation with Conditional Video Decoding",
+                "updated": "2026-05-14T17:59:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.13845v1",
+                        "@href": "https://arxiv.org/abs/2605.15196v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.13845v1",
+                        "@href": "https://arxiv.org/pdf/2605.15196v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Differentiable Logics are deployed in neuro-symbolic learning tasks as a way of embedding logical constraints in the training objective of neural networks. A differentiable logic consists of a syntax to write logical properties and a semantics to interpret them as real-valued functions to be folded in the loss function. A defining trade-off of the field is that between logical properties of the connectives, and analytic concerns for the semantics, with both aspects being relevant in applications. At one extreme we find fuzzy logics, that have well-established algebraic and proof-theoretic foundations, and at the other ad-hoc differentiable logics like Fischer's DL2, conceived for deep learning applications. However, no satisfactory foundation has emerged yet. We propose a resolution to this long-standing tension via a novel logic, Quantitative Linear Logic (QLL), with foundational ambitions. Our design is driven by naturality -- the idea that, since logical constraints are translated to losses, the semantics of the connectives should be pertinent operations used in ML practice (that is, sum and log-sum-exp) on additive quantities (like logits). We then judge the result on two aspects: logical adequacy -- that they satisfy most of the standard logical laws of Linear Logic; and empirical effectiveness -- test-time performance (as measured by adversarial attacks) is well-correlated to the actual verification of the logical constraints (as measured by off-the-shelf neural network verifiers), which makes QLL stand out among SoTA techniques.",
+                "summary": "Video generation powers a vast array of downstream applications. However, while the de facto standard, i.e., latent diffusion models, typically employ heavily conditioned denoising networks, their decoders often remain unconditional. We observe that this architectural asymmetry leads to significant loss of detail and inconsistency relative to the input image. To address this, we argue that the decoder requires equal conditioning to preserve structural integrity. We introduce RefDecoder, a reference-conditioned video VAE decoder by injecting high-fidelity reference image signal directly into the decoding process via reference attention. Specifically, a lightweight image encoder maps the reference frame into the detail-rich high-dimensional tokens, which are co-processed with the denoised video latent tokens at each decoder up-sampling stage. We demonstrate consistent improvements across several distinct decoder backbones (e.g., Wan 2.1 and VideoVAE+), achieving up to +2.1dB PSNR over the unconditional baselines on the Inter4K, WebVid, and Large Motion reconstruction benchmarks. Notably, RefDecoder can be directly swapped into existing video generation systems without additional fine-tuning, and we report across-the-board improvements in subject consistency, background consistency, and overall quality scores on the VBench I2V benchmark. Beyond I2V, RefDecoder generalizes well to a wide range of visual generation tasks such as style transfer and video editing refinement.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-14T17:59:52Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Xiang Fan"
+                    },
+                    {
+                        "name": "Yuheng Wang"
+                    },
+                    {
+                        "name": "Bohan Fang"
+                    },
+                    {
+                        "name": "Zhongzheng Ren"
+                    },
+                    {
+                        "name": "Ranjay Krishna"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.15195v1",
+                "title": "VGGT-$\u03a9$",
+                "updated": "2026-05-14T17:59:51Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.15195v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.15195v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent feed-forward reconstruction models, such as VGGT, have proven competitive with traditional optimization-based reconstructors while also providing geometry-aware features useful for other tasks. Here, we show that the quality of these models scales predictably with model and data size. We do so by introducing VGGT-$\u03a9$, which substantially improves reconstruction accuracy, efficiency, and capabilities for both static and dynamic scenes. To enable training this model at an unprecedented scale, we introduce architectural changes that improve training efficiency, a high-quality data annotation pipeline that supports dynamic scenes, and a self-supervised learning protocol. We simplify VGGT's architecture by using a single dense prediction head with multi-task supervision and removing the expensive high-resolution convolutional layers. We also use registers to aggregate scene information into a compact representation and introduce register attention, which restricts inter-frame information exchange to these registers, in part replacing global attention. In this way, during training, VGGT-$\u03a9$ uses only about 30% of the GPU memory of its predecessor, allowing us to train with 15x more supervised data than prior work and to leverage vast amounts of unlabeled video data. VGGT-$\u03a9$ achieves strong results for reconstruction of static and dynamic scenes across multiple benchmarks, for example, improving over the previous best camera estimation accuracy on Sintel by 77%. We also show that the learned registers can improve vision-language-action models and support alignment with language, suggesting that reconstruction can be a powerful and scalable proxy task for spatial understanding. Project Page: http://vggt-omega.github.io/",
                 "category": {
-                    "@term": "cs.LO",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-05-13T17:59:40Z",
-                "arxiv:comment": "23 pages, 2 figures, 13 tables",
+                "published": "2026-05-14T17:59:51Z",
+                "arxiv:comment": "CVPR 2026 (Oral)",
                 "arxiv:primary_category": {
-                    "@term": "cs.LO"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Thomas Flinkow"
+                        "name": "Jianyuan Wang"
                     },
                     {
-                        "name": "Ekaterina Komendantskaya"
+                        "name": "Minghao Chen"
                     },
                     {
-                        "name": "Matteo Capucci"
+                        "name": "Shangzhan Zhang"
                     },
                     {
-                        "name": "Rosemary Monahan"
+                        "name": "Nikita Karaev"
+                    },
+                    {
+                        "name": "Johannes Sch\u00f6nberger"
+                    },
+                    {
+                        "name": "Patrick Labatut"
+                    },
+                    {
+                        "name": "Piotr Bojanowski"
+                    },
+                    {
+                        "name": "David Novotny"
+                    },
+                    {
+                        "name": "Andrea Vedaldi"
+                    },
+                    {
+                        "name": "Christian Rupprecht"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.13842v1",
-                "title": "From DES to KiDS: Domain adaptation for cross-survey detection of low-surface-brightness galaxies",
-                "updated": "2026-05-13T17:58:55Z",
+                "id": "http://arxiv.org/abs/2605.15190v1",
+                "title": "RAVEN: Real-time Autoregressive Video Extrapolation with Consistency-model GRPO",
+                "updated": "2026-05-14T17:59:30Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.13842v1",
+                        "@href": "https://arxiv.org/abs/2605.15190v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.13842v1",
+                        "@href": "https://arxiv.org/pdf/2605.15190v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Low-surface-brightness galaxies (LSBGs) are vital for understanding galaxy formation, but their diffuse nature makes them challenging to detect. Upcoming large-scale surveys are expected to uncover large numbers of LSBGs, requiring robust automated methods to identify them across heterogeneous datasets. As a precursor to the Legacy Survey of Space and Time (LSST) and Euclid, we explore domain adaptation techniques for cross-survey LSBG identification. Using models trained on the Dark Energy Survey (DES), we search for LSBGs in the Kilo-Degree Survey Data Release 5 (KiDS DR5). We used an ensemble consisting of one convolutional neural network (CNN) and two transformer models trained on DES cutouts and applied to KiDS DR5 imaging data. Structural parameters were estimated with galfitm, and photometric redshifts and stellar population properties were estimated through spectral energy distribution fitting with CIGALE. We identify 20,180 LSBGs and 434 ultra-diffuse galaxies (UDGs) in KiDS DR5. Their structural parameters are similar to known LSBGs from DES and the Hyper Suprime-Cam SSP Survey (HSC-SSP). The KiDS-LSBGs follow a continuous size-luminosity relation connecting classical dwarf galaxies and UDGs, and their colours are bimodal ($\\sim73\\%$ blue, $\\sim27\\%$ red). Cross-matching with spectroscopic and cluster catalogues provides redshifts for 4,913 systems, enabling a systematic characterisation of the star-forming main sequence of LSBGs. Strong environmental trends are evident, with cluster LSBGs and UDGs exhibiting redder colours and reduced star formation compared to non-cluster systems. We demonstrate that domain adaptation enables robust cross-survey LSBG identification with deep learning models, providing a scalable pathway for constructing homogeneous LSBG catalogues for the LSST and Euclid era.",
-                "category": [
-                    {
-                        "@term": "astro-ph.GA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.IM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-13T17:58:55Z",
-                "arxiv:comment": "Accepted to Astronomy & Astrophysics",
+                "summary": "Causal autoregressive video diffusion models support real-time streaming generation by extrapolating future chunks from previously generated content. Distilling such generators from high-fidelity bidirectional teachers yields competitive few-step models, yet a persistent gap between the history distributions encountered during training and those arising at inference constrains generation quality over long horizons. We introduce the Real-time Autoregressive Video Extrapolation Network (RAVEN), a training-time test framework that repacks each self rollout into an interleaved sequence of clean historical endpoints and noisy denoising states. This formulation aligns training attention with inference-time extrapolation and allows downstream chunk losses to supervise the history representations on which future predictions depend. We further propose Consistency-model Group Relative Policy Optimization (CM-GRPO), which reformulates a consistency sampling step as a conditional Gaussian transition and applies online Reinforcement Learning (RL) directly to this kernel, avoiding the Euler-Maruyama auxiliary process adopted in prior flow-model RL formulations. Experiments demonstrate that RAVEN surpasses recent causal video distillation baselines across quality, semantic, and dynamic degree evaluations, and that CM-GRPO provides further gains when combined with RAVEN.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-14T17:59:30Z",
+                "arxiv:comment": "Project Page: https://yanzuo.lu/raven",
                 "arxiv:primary_category": {
-                    "@term": "astro-ph.GA"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Hareesh Thuruthipilly"
+                        "name": "Yanzuo Lu"
                     },
                     {
-                        "name": "Krzysztof Lisiecki"
+                        "name": "Ronglai Zuo"
                     },
                     {
-                        "name": "Junais"
-                    },
-                    {
-                        "name": "Katarzyna Ma\u0142ek"
-                    },
-                    {
-                        "name": "Agnieszka Pollo"
-                    },
-                    {
-                        "name": "William J. Pearson"
-                    },
-                    {
-                        "name": "Antonio Vanzanella"
-                    },
-                    {
-                        "name": "Saptarshi Pal"
-                    },
-                    {
-                        "name": "Miguel Figueira"
-                    },
-                    {
-                        "name": "Pratik Dabhade"
-                    },
-                    {
-                        "name": "Anna Durkalec"
-                    },
-                    {
-                        "name": "Aidan P. Cotter"
-                    },
-                    {
-                        "name": "Unnikrishnan Sureshkumar"
-                    },
-                    {
-                        "name": "Nandini Hazra"
-                    },
-                    {
-                        "name": "Patryk Matera"
-                    },
-                    {
-                        "name": "Subhrata Dey"
-                    },
-                    {
-                        "name": "Michal Vr\u00e1bel"
-                    },
-                    {
-                        "name": "Anirban Dutta"
-                    },
-                    {
-                        "name": "Henry Willems"
-                    },
-                    {
-                        "name": "Nicola Principi Cavaterra"
-                    },
-                    {
-                        "name": "Natalia Dobrowolska"
-                    },
-                    {
-                        "name": "Wojciech Knop"
+                        "name": "Jiankang Deng"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.13841v1",
-                "title": "EVA-Bench: A New End-to-end Framework for Evaluating Voice Agents",
-                "updated": "2026-05-13T17:58:52Z",
+                "id": "http://arxiv.org/abs/2605.15188v1",
+                "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents",
+                "updated": "2026-05-14T17:59:28Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.13841v1",
+                        "@href": "https://arxiv.org/abs/2605.15188v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.13841v1",
+                        "@href": "https://arxiv.org/pdf/2605.15188v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Voice agents, artificial intelligence systems that conduct spoken conversations to complete tasks, are increasingly deployed across enterprise applications. However, no existing benchmark jointly addresses two core evaluation challenges: generating realistic simulated conversations, and measuring quality across the full scope of voice-specific failure modes. We present EVA-Bench, an end-to-end evaluation framework that addresses both. On the simulation side, EVA-Bench orchestrates bot-to-bot audio conversations over dynamic multi-turn dialogues, with automatic simulation validation that detects user simulator error and appropriately regenerates conversations before scoring. On the measurement side, EVA-Bench introduces two composite metrics: EVA-A (Accuracy), capturing task completion, faithfulness, and audio-level speech fidelity; and EVA-X (Experience), capturing conversation progression, spoken conciseness, and turn-taking timing. Both metrics apply to different agent architectures, enabling direct cross-architecture comparison. EVA-Bench includes 213 scenarios across three enterprise domains, a controlled perturbation suite for accent and noise robustness, and pass@1, pass@k, pass^k measurements that distinguish peak from reliable capability. Across 12 systems spanning all three architectures, we find: (1) no system simultaneously exceeds 0.5 on both EVA-A pass@1 and EVA-X pass@1; (2) peak and reliable performance diverge substantially (median pass@k - pass^k gap of 0.44 on EVA-A); and (3) accent and noise perturbations expose substantial robustness gaps, with effects varying across architectures, systems, and metrics (mean up to 0.314). We release the full framework, evaluation suite, and benchmark data under an open-source license.",
+                "summary": "AI agents are being increasingly deployed in dynamic, open-ended environments that require adapting to new information as it arrives. To efficiently measure this capability for realistic use-cases, we propose building grounded simulations that replay real-world events in the order they occurred. We build FutureSim, where agents forecast world events beyond their knowledge cutoff while interacting with a chronological replay of the world: real news articles arriving and questions resolving over the simulated period. We evaluate frontier agents in their native harness, testing their ability to predict world events over a three-month period from January to March 2026. FutureSim reveals a clear separation in their capabilities, with the best agent's accuracy being 25%, and many having worse Brier skill score than making no prediction at all. Through careful ablations, we show how FutureSim offers a realistic setting to study emerging research directions like long-horizon test-time adaptation, search, memory, and reasoning about uncertainty. Overall, we hope our benchmark design paves the way to measure AI progress on open-ended adaptation spanning long time-horizons in the real world.",
                 "category": [
                     {
-                        "@term": "cs.SD",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -188,189 +193,58 @@
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-13T17:58:52Z",
-                "arxiv:comment": "Work in progress",
+                "published": "2026-05-14T17:59:28Z",
+                "arxiv:comment": "31 pages, 10 main",
                 "arxiv:primary_category": {
-                    "@term": "cs.SD"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Tara Bogavelli"
+                        "name": "Shashwat Goel"
                     },
                     {
-                        "name": "Gabrielle Gauthier Melan\u00e7on"
+                        "name": "Nikhil Chandak"
                     },
                     {
-                        "name": "Katrina Stankiewicz"
+                        "name": "Arvindh Arun"
                     },
                     {
-                        "name": "Oluwanifemi Bamgbose"
+                        "name": "Ameya Prabhu"
                     },
                     {
-                        "name": "Fanny Riols"
+                        "name": "Steffen Staab"
                     },
                     {
-                        "name": "Hoang H. Nguyen"
+                        "name": "Moritz Hardt"
                     },
                     {
-                        "name": "Raghav Mehndiratta"
+                        "name": "Maksym Andriushchenko"
                     },
                     {
-                        "name": "Lindsay Devon Brin"
-                    },
-                    {
-                        "name": "Joseph Marinier"
-                    },
-                    {
-                        "name": "Hari Subramani"
-                    },
-                    {
-                        "name": "Anil Madamala"
-                    },
-                    {
-                        "name": "Sridhar Krishna Nemala"
-                    },
-                    {
-                        "name": "Srinivas Sunkara"
+                        "name": "Jonas Geiping"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.13840v1",
-                "title": "What is Learnable in Valiant's Theory of the Learnable?",
-                "updated": "2026-05-13T17:58:46Z",
+                "id": "http://arxiv.org/abs/2605.15187v1",
+                "title": "Articraft: An Agentic System for Scalable Articulated 3D Asset Generation",
+                "updated": "2026-05-14T17:59:18Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.13840v1",
+                        "@href": "https://arxiv.org/abs/2605.15187v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.13840v1",
+                        "@href": "https://arxiv.org/pdf/2605.15187v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Valiant's 1984 paper is widely credited with introducing the PAC learning model, but it, in fact, introduced a different model: unlike PAC learning, the learner receives only positives, may issue membership queries, and must output a hypothesis with no false positives. Prior work characterized variants, including the case without queries. We revisit Valiant's original model and ask: *Which classes are learnable in it?*\n  For every finite domain, including Valiant's Boolean-hypercube setting, we show that a class is learnable if and only if every realizable positive sample can be certified by a poly-size adaptive query-compression scheme. This is a new variant of sample compression where the learner certifies samples via a short interaction with the membership oracle. Our characterization shows that learnability in Valiant's model is strictly sandwiched between learnability in the PAC model and the variant of Valiant's model without membership queries. This is one of the rare cases where introducing membership queries changes the set of learnable classes, and not just the sample or computational complexity.\n  Next, we study the natural extension of the model to arbitrary domains. While we do not obtain an exact characterization, our techniques readily generalize and show that the same strict sandwiching persists. Finally, we show that $d$-dimensional halfspaces, which are not learnable without queries, are learnable with queries: we give a $\\mathrm{poly}(d) \\tilde{O}(1/\u03b5)$ sample and $\\mathrm{poly}(d) \\mathrm{polylog}(1/\u03b5)$ query algorithm, and prove that at least $\u03a9(d)$ samples or queries are necessary. To our knowledge, this is the first algorithm for halfspaces in Valiant's model.\n  Together, these results uncover a surprisingly rich theory behind Valiant's original notion of learnability and introduce ideas that may be of independent interest in learning theory.",
-                "category": [
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.ST",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.CO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-13T17:58:46Z",
-                "arxiv:comment": "Abstract shortened for arXiv",
-                "arxiv:primary_category": {
-                    "@term": "stat.ML"
-                },
-                "author": [
-                    {
-                        "name": "Steve Hanneke"
-                    },
-                    {
-                        "name": "Anay Mehrotra"
-                    },
-                    {
-                        "name": "Grigoris Velegkas"
-                    },
-                    {
-                        "name": "Manolis Zampetakis"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.13839v1",
-                "title": "Good Agentic Friends Do Not Just Give Verbal Advice: They Can Update Your Weights",
-                "updated": "2026-05-13T17:58:32Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.13839v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.13839v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Multi-agent LLM systems usually collaborate by exchanging natural-language messages. This interface is simple and interpretable, but it forces each sender's intermediate computation to be serialized into tokens and then reprocessed by the receiver, thereby increasing the generated-token cost, prefill overhead, and KV-cache memory. We study an alternative communication interface: instead of appending a sender's message to the receiver's context, compile the sender's hidden states into a transient, receiver-specific weight perturbation. We introduce TFlow (Thought Flow), a weight-space communication framework for a known and fixed receiver architecture. For each query, frozen role-prompted sender agents process the input, and a learned parameter generator maps their internal activations into low-rank LoRA perturbations targeting the receiver's modules. These perturbations are fused and applied only during the receiver's generation, enabling instance-level adaptation without permanently changing the model or enlarging the receiver's text context. With three Qwen3-4B agents, TFlow improves over a standalone receiver by up to 8.5 accuracy points across five benchmarks while reducing processed tokens by up to 32.69%. Compared with a text-based three-agent baseline, it reduces total processed tokens by up to 83.27% and the wall-clock inference time by up to 4.6$\\times$, while maintaining competitive accuracy on four of five benchmarks. These results suggest that transient low-rank weight perturbations can serve as an executable communication medium for efficient multi-agent LLM collaboration.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-13T17:58:32Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Wenrui Bao"
-                    },
-                    {
-                        "name": "Huan Wang"
-                    },
-                    {
-                        "name": "Jian Wang"
-                    },
-                    {
-                        "name": "Zhangyang Wang"
-                    },
-                    {
-                        "name": "Kai Wang"
-                    },
-                    {
-                        "name": "Yuzhang Shang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.13838v1",
-                "title": "R-DMesh: Video-Guided 3D Animation via Rectified Dynamic Mesh Flow",
-                "updated": "2026-05-13T17:58:13Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.13838v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.13838v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    },
-                    {
-                        "@rel": "related",
-                        "@href": "https://doi.org/10.1145/3799902.3811135",
-                        "@title": "doi"
-                    }
-                ],
-                "summary": "Video-guided 3D animation holds immense potential for content creation, offering intuitive and precise control over dynamic assets. However, practical deployment faces a critical yet frequently overlooked hurdle: the pose misalignment dilemma. In real-world scenarios, the initial pose of a user-provided static mesh rarely aligns with the starting frame of a reference video. Naively forcing a mesh to follow a mismatched trajectory inevitably leads to severe geometric distortion or animation failure. To address this, we present Rectified Dynamic Mesh (R-DMesh), a unified framework designed to generate high-fidelity 4D meshes that are ``rectified'' to align with video context. Unlike standard motion transfer approaches, our method introduces a novel VAE that explicitly disentangles the input into a conditional base mesh, relative motion trajectories, and a crucial rectification jump offset. This offset is learned to automatically transform the arbitrary pose of the input mesh to match the video's initial state before animation begins. We process these components via a Triflow Attention mechanism, which leverages vertex-wise geometric features to modulate the three orthogonal flows, ensuring physical consistency and local rigidity during the rectification and animation process. For generation, we employ a Rectified Flow-based Diffusion Transformer conditioned on pre-trained video latents, effectively transferring rich spatio-temporal priors to the 3D domain. To support this task, we construct Video-RDMesh, a large-scale dataset of over 500k dynamic mesh sequences specifically curated to simulate pose misalignment. Extensive experiments demonstrate that R-DMesh not only solves the alignment problem but also enables robust downstream applications, including pose retargeting and holistic 4D generation.",
+                "summary": "A bottleneck in learning to understand articulated 3D objects is the lack of large and diverse datasets. In this paper, we propose to leverage large language models (LLMs) to close this gap and generate articulated assets at scale. We reduce the problem of generating an articulated 3D asset to that of writing a program that builds it. We then introduce a new agentic system, Articraft, that writes such programs automatically. We design a programmatic interface and harness to help the LLM do so effectively. The LLM writes code against a domain-specific SDK for defining parts, composing geometry, specifying joints, and writing tests to validate the resulting assets. The harness exposes a restricted workspace and interface to the LLM, validates the resulting assets, and returns structured feedback. In this way, the LLM is not distracted by details such as authoring a URDF file or managing a complex software environment. We show that this produces higher-quality assets than both state-of-the-art articulated-asset generators and general-purpose coding agents. Using Articraft, we build Articraft-10K, a curated dataset of over 10K articulated assets spanning 245 categories, and show its utility both for training models of articulated assets and in downstream applications such as robotics simulation and virtual reality.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -381,106 +255,236 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-13T17:58:13Z",
-                "arxiv:comment": "Accepted by SIGGRAPH 2026, Project Page: https://r-dmesh.github.io/ Code URL: https://github.com/Tencent-Hunyuan/R-DMesh",
+                "published": "2026-05-14T17:59:18Z",
+                "arxiv:comment": "Project page: https://articraft3d.github.io/",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Zijie Wu"
+                        "name": "Matt Zhou"
                     },
                     {
-                        "name": "Lixin Xu"
+                        "name": "Ruining Li"
                     },
                     {
-                        "name": "Puhua Jiang"
+                        "name": "Xiaoyang Lyu"
                     },
                     {
-                        "name": "Sicong Liu"
+                        "name": "Zhaomou Song"
                     },
                     {
-                        "name": "Chunchao Guo"
+                        "name": "Zhening Huang"
                     },
                     {
-                        "name": "Xiang Bai"
-                    }
-                ],
-                "arxiv:doi": "10.1145/3799902.3811135"
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.13836v1",
-                "title": "Reachable-Set Decomposition for Real-Time Aggregation of Multi-Zone HVAC Fleets",
-                "updated": "2026-05-13T17:57:54Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.13836v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Chuanxia Zheng"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.13836v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Aggregating building heating, ventilation, and air-conditioning (HVAC) fleets provides substantial real-time flexibility to power system operations. However, real-time aggregation of multi-zone HVAC fleets faces two key challenges: (i) strong coupling across zones and time makes flexibility characterization high-dimensional and computationally demanding, and (ii) the sequential revelation of temperature states and exogenous conditions requires that decisions made at each period preserve feasibility over the remaining horizon using only currently realized information. To address these challenges, this paper proposes a reachable-set decomposition framework comprising an offline decomposition stage and a real-time policy. In the offline stage, backward reachable sets are formulated to encode remaining-horizon feasibility into per-period state constraints, so that any state within the current reachable set is guaranteed to sustain feasible operation over the entire remaining horizon. A tailored inner approximation is then developed for tractable calculation in multi-zone-coupled HVAC settings. In the real-time stage, aggregate flexibility is computed efficiently via building-level parallel linear programs followed by closed-form Minkowski summation of power intervals, and any regulation signal within the reported flexibility interval admits a recursively feasible disaggregation. Case studies demonstrate the effectiveness of the proposed framework in aggregate flexibility characterization, disaggregation feasibility, and scalable computation.",
-                "category": {
-                    "@term": "eess.SY",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-13T17:57:54Z",
-                "arxiv:comment": "10 pages, 9 figures",
-                "arxiv:primary_category": {
-                    "@term": "eess.SY"
-                },
-                "author": [
-                    {
-                        "name": "Jingguan Liu"
+                        "name": "Christian Rupprecht"
                     },
                     {
-                        "name": "Xiaomeng Ai"
+                        "name": "Andrea Vedaldi"
                     },
                     {
-                        "name": "Cong Chen"
-                    },
-                    {
-                        "name": "Shaoze Li"
-                    },
-                    {
-                        "name": "Shichang Cui"
-                    },
-                    {
-                        "name": "Jiakun Fang"
-                    },
-                    {
-                        "name": "Jinyu Wen"
+                        "name": "Shangzhe Wu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.13834v1",
-                "title": "Topology-Preserving Neural Operator Learning via Hodge Decomposition",
-                "updated": "2026-05-13T17:56:23Z",
+                "id": "http://arxiv.org/abs/2605.15185v1",
+                "title": "Quantitative Video World Model Evaluation for Geometric-Consistency",
+                "updated": "2026-05-14T17:59:04Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.13834v1",
+                        "@href": "https://arxiv.org/abs/2605.15185v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.13834v1",
+                        "@href": "https://arxiv.org/pdf/2605.15185v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "In this paper, we study solution operators of physical field equations on geometric meshes from a function-space perspective. We reveal that Hodge orthogonality fundamentally resolves spectral interference by isolating unlearnable topological degrees of freedom from learnable geometric dynamics, enabling an additive approximation confined to structure-preserving subspaces. Building on Hodge theory and operator splitting, we derive a principled operator-level decomposition. The result is a Hybrid Eulerian-Lagrangian architecture with an algebraic-level inductive bias we call Hodge Spectral Duality (HSD). In our framework, we use discrete differential forms to capture topology-dominated components and an orthogonal auxiliary ambient space to represent complex local dynamics. Our method achieves superior accuracy and efficiency on geometric graphs with enhanced fidelity to physical invariants. Our code is available at https://github.com/ContinuumCoder/Hodge-Spectral-Duality",
+                "summary": "Generative video models are increasingly studied as implicit world models, yet evaluating whether they produce physically plausible 3D structure and motion remains challenging. Most existing video evaluation pipelines rely heavily on human judgment or learned graders, which can be subjective and weakly diagnostic for geometric failures. We introduce PDI-Bench (Perspective Distortion Index), a quantitative framework for auditing geometric coherence in generated videos. Given a generated clip, we obtain object-centric observations via segmentation and point tracking (e.g., SAM 2, MegaSaM, and CoTracker3), lift them to 3D world-space coordinates via monocular reconstruction, and compute a set of projective-geometry residuals capturing three failure dimensions: scale-depth alignment, 3D motion consistency, and 3D structural rigidity. To support systematic evaluation, we build PDI-Dataset, covering diverse scenarios designed to stress these geometric constraints. Across state-of-the-art video generators, PDI reveals consistent geometry-specific failure modes that are not captured by common perceptual metrics, and provides a diagnostic signal for progress toward physically grounded video generation and physical world model. Our code and dataset can be found at https://pdi-bench.github.io/.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-14T17:59:04Z",
+                "arxiv:comment": "12 pages, 5 figures. Project page : https://pdi-bench.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Jiaxin Wu"
+                    },
+                    {
+                        "name": "Yihao Pi"
+                    },
+                    {
+                        "name": "Yinling Zhang"
+                    },
+                    {
+                        "name": "Yuheng Li"
+                    },
+                    {
+                        "name": "Xueyan Zou"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.15183v1",
+                "title": "When Are Two Networks the Same? Tensor Similarity for Mechanistic Interpretability",
+                "updated": "2026-05-14T17:58:27Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.15183v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.15183v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Mechanistic interpretability aims to break models into meaningful parts; verifying that two such parts implement the same computation is a prerequisite. Existing similarity measures evaluate either empirical behaviour, leaving them blind to out-of-distribution mechanisms, or basis-dependent parameters, meaning they disregard weight-space symmetries. To address these issues for the class of tensor-based models, we introduce a weight-based metric, tensor similarity, that is invariant to such symmetries. This metric captures global functional equivalence and accounts for cross-layer mechanisms using an efficient recursive algorithm. Empirically, tensor similarity tracks functional training dynamics, such as grokking and backdoor insertion, with higher fidelity than existing metrics. This reduces measuring similarity and verifying faithfulness into a solved algebraic problem rather than one of empirical approximation.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-14T17:58:27Z",
+                "arxiv:comment": "22 pages, 8 figures. Code: https://github.com/tdooms/tensor-similarity",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "ML Nissen Gonzalez"
+                    },
+                    {
+                        "name": "Melwina Albuquerque"
+                    },
+                    {
+                        "name": "Laurence Wroe"
+                    },
+                    {
+                        "name": "Jacob Meyer Cohen"
+                    },
+                    {
+                        "name": "Logan Riggs Smith"
+                    },
+                    {
+                        "name": "Thomas Dooms"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.15182v1",
+                "title": "Warp-as-History: Generalizable Camera-Controlled Video Generation from One Training Video",
+                "updated": "2026-05-14T17:58:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.15182v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.15182v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Camera-controlled video generation has made substantial progress, enabling generated videos to follow prescribed viewpoint trajectories. However, existing methods usually learn camera-specific conditioning through camera encoders, control branches, or attention and positional-encoding modifications, which often require post-training on large-scale camera-annotated videos. Training-free alternatives avoid such post-training, but often shift the cost to test-time optimization or extra denoising-time guidance. We propose Warp-as-History, a simple interface that turns camera-induced warps into camera-warped pseudo-history with target-frame positional alignment and visible-token selection. Given a target camera trajectory, we construct camera-warped pseudo-history from past observations and feed it through the model's visual-history pathway. Crucially, we align its positional encoding with the target frames being denoised and remove warped-history tokens without valid source observations. Without any training, architectural modification, or test-time optimization, this interface reveals a non-trivial zero-shot capability of a frozen video generation model to follow camera trajectories. Moreover, lightweight offline LoRA finetuning on only one camera-annotated video further improves this capability and generalizes to unseen videos, improving camera adherence, visual quality, and motion dynamics without test-time optimization or target-video adaptation. Extensive experiments on diverse datasets confirm the effectiveness of our method.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-14T17:58:26Z",
+                "arxiv:comment": "Project page: https://yyfz.github.io/warp-as-history/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yifan Wang"
+                    },
+                    {
+                        "name": "Tong He"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.15181v1",
+                "title": "From Plans to Pixels: Learning to Plan and Orchestrate for Open-Ended Image Editing",
+                "updated": "2026-05-14T17:58:19Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.15181v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.15181v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Modern image editing models produce realistic results but struggle with abstract, multi step instructions (e.g., ``make this advertisement more vegetarian-friendly''). Prior agent based methods decompose such tasks but rely on handcrafted pipelines or teacher imitation, limiting flexibility and decoupling learning from actual editing outcomes. We propose an experiential framework for long-horizon image editing, where a planner generates structured atomic decompositions and an orchestrator selects tools and regions to execute each step. A vision language judge provides outcome-based rewards for instruction adherence and visual quality. The orchestrator is trained to maximize these rewards, and successful trajectories are used to refine the planner. By tightly coupling planning with reward driven execution, our approach yields more coherent and reliable edits than single-step or rule-based multistep baselines.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-14T17:58:19Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Anirudh Sundara Rajan"
+                    },
+                    {
+                        "name": "Krishna Kumar Singh"
+                    },
+                    {
+                        "name": "Yong Jae Lee"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.15179v1",
+                "title": "Eradicating Negative Transfer in Multi-Physics Foundation Models via Sparse Mixture-of-Experts Routing",
+                "updated": "2026-05-14T17:58:15Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.15179v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.15179v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Scaling Scientific Machine Learning (SciML) toward universal foundation models is bottlenecked by negative transfer: the simultaneous co-training of disparate partial differential equation (PDE) regimes can induce gradient conflict, unstable optimization, and plasticity loss in dense neural operators. In particular, broadband open-channel fluid dynamics and boundary-dominated porous media flows impose incompatible spectral and geometric demands on a single dense parameter path. We introduce Shodh-MoE, a sparse-activated latent transformer architecture for multi-physics transport. Shodh-MoE operates on compressed 16^3 physical latents produced by a physics-informed autoencoder with an intra-tokenizer Helmholtz-style velocity parameterization, restricting decoded states to divergence-free velocity manifolds. The model guarantees exact mass conservation, achieving a physically verifiable velocity divergence of ~2.8 x 10^-10 (evaluated post-hoc in FP64) on 128^3 grids. A Top-1 soft-semantic router dynamically assigns localized latent patches to expert subnetworks, enabling specialized parameter paths for distinct physical mechanisms while preserving shared experts for universal symmetries. In a 20,000-step distributed pretraining run over mixed three-dimensional physical tensors, routing telemetry shows autonomous domain bifurcation: held-out validation tokens from the open-channel domain route exclusively to Expert 0, while porous-media tokens route exclusively to Expert 1. The model converges simultaneously across both regimes, achieving latent validation MSEs of 2.46 x 10^-5 and 9.76 x 10^-6, and decoded physical MSEs of 2.48 x 10^-6 and 1.76 x 10^-6. These results support sparse expert routing as a practical architectural mechanism for mitigating multi-physics interference in universal neural operators.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -491,106 +495,21 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CG",
+                        "@term": "physics.comp-ph",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-13T17:56:23Z",
-                "arxiv:comment": "Accepted at ICML 2026. Code available at https://github.com/ContinuumCoder/Hodge-Spectral-Duality",
+                "published": "2026-05-14T17:58:15Z",
+                "arxiv:comment": "5 pages, 4 figures",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Dongzhe Zheng"
+                        "name": "Ellwil Sharma"
                     },
                     {
-                        "name": "Tao Zhong"
-                    },
-                    {
-                        "name": "Christine Allen-Blanchette"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.13835v1",
-                "title": "Unlocking Patch-Level Features for CLIP-Based Class-Incremental Learning",
-                "updated": "2026-05-13T17:56:23Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.13835v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.13835v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Class-Incremental Learning (CIL) enables models to continuously integrate new knowledge while mitigating catastrophic forgetting. Driven by the remarkable generalization of CLIP, leveraging pre-trained vision-language models has become a dominant paradigm in CIL. However, current work primarily focuses on aligning global image embeddings (i.e., [CLS] token) with their corresponding text prompts (i.e., [EOS] token). Despite their good performance, we find that they discard the rich patch-level semantic information inherent in CLIP's encoders. For instance, when recognizing a rabbit, local patches may encode its distinctive cues, such as long ears and a fluffy tail, which can provide complementary evidence for recognition. Based on the above observation, we propose SPA (Semantic-guided Patch-level Alignment) for CLIP-based CIL, which aims to awaken long-neglected local representations within CLIP. Specifically, for each class, we first construct representative and diverse visual samples and feed them to GPT-5 as visual guidance to generate class-wise semantic descriptions. These descriptions are used to guide the selection of discriminative patch-level visual features. Building upon these selected patches, we further employ optimal transport to align selected patch tokens with semantic tokens from class-wise descriptions, yielding a structured cross-modal alignment that improves recognition. Furthermore, we introduce task-specific projectors for effective adaptation to downstream incremental tasks, and sample pseudo-features from stored class-wise Gaussian statistics to calibrate old-class representations, thereby mitigating catastrophic forgetting. Extensive experiments demonstrate that SPA achieves state-of-the-art performance.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-13T17:56:23Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Hao Sun"
-                    },
-                    {
-                        "name": "Zi-Jun Ding"
-                    },
-                    {
-                        "name": "Da-Wei Zhou"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.13833v1",
-                "title": "QLAM: A Quantum Long-Attention Memory Approach to Long-Sequence Token Modeling",
-                "updated": "2026-05-13T17:56:20Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.13833v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.13833v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Modeling long-range dependencies in sequential data remains a central challenge in machine learning. Transformers address this challenge through attention mechanisms, but their quadratic complexity with respect to sequence length limits scalability to long contexts. State-space models (SSMs) provide an efficient alternative with linear-time computation by evolving a latent state through recurrent updates, but their memory is typically formed via additive or linear transitions, which can limit their ability to capture complex global interactions across tokens. In this work, we introduce one of the first studies to leverage the superposition property of quantum systems to enhance state-based sequence modeling. In particular, we propose Quantum Long-Attention Memory (QLAM), a hybrid quantum-classical memory mechanism that can be viewed as a quantum extension of state-space models. Instead of maintaining a classical latent state updated through additive dynamics, QLAM represents the hidden state as a quantum state whose amplitudes encode a superposition of historical information. The state evolves through parameterized quantum circuits conditioned on the input, enabling a non-classical, globally update mechanism. In this way, QLAM preserves the recurrent and linear-time structure of SSMs while fundamentally enriching the memory representation through quantum superposition. Unlike attention mechanisms that explicitly compute pairwise interactions, QLAM implicitly captures global dependencies through the evolution of the quantum state, and retrieves task-relevant information via query-dependent measurements. We evaluate QLAM on sequential variants of standard image classification benchmarks, including sMNIST, sFashion-MNIST, and sCIFAR-10, where images are flattened into token sequences. Across all tasks, QLAM consistently improves over recurrent baselines and transformer-based models.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-13T17:56:20Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Hoang-Quan Nguyen"
-                    },
-                    {
-                        "name": "Sankalp Pandey"
-                    },
-                    {
-                        "name": "Khoa Luu"
+                        "name": "Arastu Sharma"
                     }
                 ]
             }
