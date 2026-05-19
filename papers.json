@@ -5,33 +5,488 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-05-18T23:59:46Z",
+        "updated": "2026-05-19T04:09:25Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "571924",
+        "opensearch:totalResults": "572931",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2605.16258v1",
-                "title": "IVGT: Implicit Visual Geometry Transformer for Neural Scene Representation",
-                "updated": "2026-05-15T17:59:57Z",
+                "id": "http://arxiv.org/abs/2605.18754v1",
+                "title": "Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate",
+                "updated": "2026-05-18T17:59:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.16258v1",
+                        "@href": "https://arxiv.org/abs/2605.18754v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.16258v1",
+                        "@href": "https://arxiv.org/pdf/2605.18754v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Reconstructing coherent 3D geometry and appearance from unposed multi-view images is a fundamental yet challenging problem in computer vision. Most existing visual geometry foundation models predict explicit geometry by regressing pixel-aligned pointmaps, often suffering from redundancy and limited geometric continuity. We propose IVGT, an Implicit Visual Geometry Transformer that implicitly models continuous and coherent geometry from pose-free multi-view images. This formulation learns a continuous neural scene representation in a canonical coordinate system and supports continuous spatial queries at any 3D positions, retrieving local features to predict signed distance (SDF) values and colors using lightweight decoders. It allows direct extraction of continuous and coherent surface geometry, enabling rendering of RGB images, depth maps, and surface normal maps from arbitrary viewpoints. We train IVGT via multi-dataset joint optimization with 2D supervision and 3D geometric regularization. IVGT demonstrates generalization across scenes and achieves strong performance on various tasks, including mesh and point cloud reconstruction, novel view synthesis, depth and surface normal estimation, and camera pose estimation.",
+                "summary": "Multiview 3D evaluation assumes that the images being scored are observations of one static 3D scene. This assumption can fail in NVS and sparse-view reconstruction: inputs or generated outputs may contain artifacts, outlier frames, repeated views, or noise, yet still receive high 3D consistency scores. Existing reference-based metrics require ground truth, while ground-truth-free metrics such as MEt3R depend on learned reconstruction backbones whose failure modes are poorly characterized. We study this reliability problem by comparing neural reconstruction priors with classical geometric verification. We introduce \\benchmark, a controlled robustness benchmark for multiview 3D consistency, and a parametric family that decomposes neural metrics into backbone, residual, and aggregation components. This family recovers MEt3R and yields variants up to $3\\times$ more robust. Our analysis shows that VGGT, MASt3R, DUSt3R, and Fast3R can hallucinate dense geometry and cross-view support for unrelated scenes, repeated images, and random noise. We introduce COLMAP-based metrics that use matches, registration, dense support, and reconstruction failure as failure-aware consistency signals. On real NVS outputs and a structured human study, these metrics achieve up to $4\\times$ higher correlation with human judgments than MEt3R.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-18T17:59:58Z",
+                "arxiv:comment": "Project Page at https://mvp18.github.io/3d-consistency-metrics/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Soumava Paul"
+                    },
+                    {
+                        "name": "Prakhar Kaushik"
+                    },
+                    {
+                        "name": "Alan Yuille"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.18753v1",
+                "title": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
+                "updated": "2026-05-18T17:59:52Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.18753v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.18753v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Current hierarchical attention methods, such as NSA and InfLLMv2, select the top-k relevant key-value (KV) blocks based on coarse attention scores and subsequently apply fine-grained softmax attention on the selected tokens. However, the top-k operation assumes the number of relevant tokens for any query is fixed and it precludes the gradient flow between the sparse and dense stages. In this work, we propose DashAttention (Differentiable and Adaptive Sparse Hierarchical Attention), which leverages the adaptively sparse $\u03b1$-entmax transformation to select a variable number of blocks according to the current query in the first stage. This in turn provides a prior for the second-stage softmax attention, keeping the entire hierarchy fully differentiable. Contrary to other hierarchical attention methods, we show that DashAttention is non-dispersive, translating to better long-context modeling ability. Experiments with large language models (LLMs) show that DashAttention achieves comparable accuracy as full attention with 75% sparsity and a better Pareto frontier than NSA and InfLLMv2, especially in high-sparsity regimes. We also provide an efficient, GPU-aware implementation of DashAttention in Triton, which achieves a speedup of up to over FlashAttention-3 at inference time. Overall, DashAttention offers a cost-effective strategy to model long contexts.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-18T17:59:52Z",
+                "arxiv:comment": "Preprint",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Yuxiang Huang"
+                    },
+                    {
+                        "name": "Nuno M. T. Gon\u00e7alves"
+                    },
+                    {
+                        "name": "Federico Alvetreti"
+                    },
+                    {
+                        "name": "Lei Li"
+                    },
+                    {
+                        "name": "Xu Han"
+                    },
+                    {
+                        "name": "Edoardo M. Ponti"
+                    },
+                    {
+                        "name": "Andr\u00e9 F. T. Martins"
+                    },
+                    {
+                        "name": "Marcos V. Treviso"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.18752v1",
+                "title": "Traditional statistical representations outperform generative AI in identifying expert peer reviewers",
+                "updated": "2026-05-18T17:59:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.18752v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.18752v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The exponential growth of scientific submissions has strained the peer review system. Despite the rapidly expanding global pool of researchers, this unprecedented scale has rendered the previous approach of manual expert identification unfeasible. Therefore, institutions have naturally turned to Large Language Models (LLMs) to automate intricate processes like expert reviewer identification. However, the reliability of these new models in accurately identifying domain experts lacks rigorous evaluation. We conduct a comprehensive empirical evaluation of statistical and AI-driven expertise identification methodologies to benchmark their reliability and limitations. Framing expert identification as an information retrieval problem, we utilize the distributed peer review system of a major international astronomical observatory, where proposal authorship serves as our proxy ground truth for domain expertise. Evaluating six retrieval methodologies utilized across observatories and computer science conferences, we demonstrate that traditional statistical representations outperform generative AI. Specifically, Term Frequency-Inverse Document Frequency successfully identified a labeled expert within the top 25 recommendations 79.5% of the time, compared to 51.5% for GPT-4o mini. Our results highlight that distinguishing subfield expertise requires fine-grained vocabulary, which is obscured by the semantic smoothing in generative methods. By establishing a rigorous evaluation framework for automated peer review, we demonstrate that transparent and reproducible statistical representations still outperform computationally expensive LLMs in specialized scientific tasks.",
+                "category": [
+                    {
+                        "@term": "cs.IR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.IM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.DL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-18T17:59:45Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.IR"
+                },
+                "author": [
+                    {
+                        "name": "Vicente Amado Olivo"
+                    },
+                    {
+                        "name": "Tereza Jerabkova"
+                    },
+                    {
+                        "name": "Jakub Klencki"
+                    },
+                    {
+                        "name": "John Carpenter"
+                    },
+                    {
+                        "name": "Mario Mali\u010dki"
+                    },
+                    {
+                        "name": "Ferdinando Patat"
+                    },
+                    {
+                        "name": "Louis-Gregory Strolger"
+                    },
+                    {
+                        "name": "Wolfgang Kerzendorf"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.18750v1",
+                "title": "A Readiness-Driven Runtime for Pipeline-Parallel Training under Runtime Variability",
+                "updated": "2026-05-18T17:59:18Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.18750v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.18750v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Pipeline parallelism is a key technique for scaling large-model training, but modern workloads exhibit runtime variability in computation and communication. Existing pipeline systems typically consume static, profiled, or adaptively generated schedules as pre-committed execution orders. When realized task readiness diverges from the pre-committed order, stages may wait for not-yet-ready work even though other executable work is available, creating stage misalignment, idle bubbles, and reduced utilization.\n  We present Runtime-Readiness-First Pipeline (RRFP), a readiness-driven runtime for pipeline-parallel training. RRFP changes how schedules are consumed at runtime: instead of treating a schedule as a sequence that stages must wait to follow, it treats the schedule as a non-binding hint order for ranking currently ready work. To support this model, RRFP combines message-driven asynchronous communication, lightweight tensor-parallel coordination for collective consistency, and ready-set arbitration for low-overhead dispatch.\n  We implement RRFP in a Megatron-based training framework and evaluate it on language-only and multimodal workloads at up to 128 GPUs. RRFP improves over fixed-order pipeline baselines across all settings. Using the BFW hint, RRFP achieves up to 1.77$\\times$ speedup on language-only workloads and up to 2.77$\\times$ on multimodal workloads. In cross-framework comparisons, RRFP with the default BF hint outperforms the faster available external system by up to 1.84$\\times$ while preserving training correctness.",
+                "category": [
+                    {
+                        "@term": "cs.DC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-18T17:59:18Z",
+                "arxiv:comment": "29 pages, including appendices",
+                "arxiv:primary_category": {
+                    "@term": "cs.DC"
+                },
+                "author": [
+                    {
+                        "name": "Ruitao Liu",
+                        "arxiv:affiliation": "Tsinghua University"
+                    },
+                    {
+                        "name": "Xinyang Tian",
+                        "arxiv:affiliation": "Tsinghua University"
+                    },
+                    {
+                        "name": "Shuo Chen",
+                        "arxiv:affiliation": "Tsinghua University"
+                    },
+                    {
+                        "name": "Tingrui Zhang",
+                        "arxiv:affiliation": "Tsinghua University"
+                    },
+                    {
+                        "name": "Guang Yang",
+                        "arxiv:affiliation": "Tsinghua University"
+                    },
+                    {
+                        "name": "Alan Zhao",
+                        "arxiv:affiliation": "Scitix AI"
+                    },
+                    {
+                        "name": "Wei Xu",
+                        "arxiv:affiliation": "Tsinghua University"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.18749v1",
+                "title": "WavFlow: Audio Generation in Waveform Space",
+                "updated": "2026-05-18T17:59:10Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.18749v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.18749v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Modern audio generation predominantly relies on latent-space compression, introducing additional complexity and potential information loss. In this work, we challenge this paradigm with WavFlow, a framework that generates high-fidelity audio directly in raw waveform space without intermediate representations. To overcome the inherent difficulties of modeling high-dimensional and low-energy signals, we reshape audio into 2D token grids through waveform patchify and introduce amplitude lifting to align signal scales, enabling stable optimization via direct x-prediction in flow matching. To capture complex semantic alignment and temporal synchronization, we leverage an automated data pipeline to curate 5 million high-quality video-text-audio triplets, allowing the model to learn fine-grained acoustic patterns from scratch. Experimental results show that WavFlow achieves competitive performance on the video-to-audio benchmark VGGSound (FD_PaSST: 59.98, IS_PANNs: 17.40, DeSync: 0.44) and the text-to-audio benchmark AudioCaps (FD_PANNs: 10.63, IS_PANNs: 12.62), matching or exceeding the performance of established latent-based methods. Our work demonstrates that intermediate compression is not a prerequisite for high-quality synthesis, offering a simpler and more scalable alternative for multimodal audio generation.",
+                "category": [
+                    {
+                        "@term": "cs.SD",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-18T17:59:10Z",
+                "arxiv:comment": "Code: https://github.com/facebookresearch/WavFlow",
+                "arxiv:primary_category": {
+                    "@term": "cs.SD"
+                },
+                "author": [
+                    {
+                        "name": "Feiyan Zhou"
+                    },
+                    {
+                        "name": "Luyuan Wang"
+                    },
+                    {
+                        "name": "Shoufa Chen"
+                    },
+                    {
+                        "name": "Zhe Wang"
+                    },
+                    {
+                        "name": "Zhiheng Liu"
+                    },
+                    {
+                        "name": "Yuren Cong"
+                    },
+                    {
+                        "name": "Xiaohui Zhang"
+                    },
+                    {
+                        "name": "Fanny Yang"
+                    },
+                    {
+                        "name": "Belinda Zeng"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.18747v1",
+                "title": "Code as Agent Harness",
+                "updated": "2026-05-18T17:59:03Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.18747v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.18747v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent large language models (LLMs) have demonstrated strong capabilities in understanding and generating code, from competitive programming to repository-level software engineering. In emerging agentic systems, code is no longer only a target output. It increasingly serves as an operational substrate for agent reasoning, acting, environment modeling, and execution-based verification. We frame this shift through the lens of agent harnesses and introduce code as agent harness: a unified view that centers code as the basis for agent infrastructure. To systematically study this perspective, we organize the survey around three connected layers. First, we study the harness interface, where code connects agents to reasoning, action, and environment modeling. Second, we examine harness mechanisms: planning, memory, and tool use for long-horizon execution, together with feedback-driven control and optimization that make harness reliable and adaptive. Third, we discuss scaling the harness from single-agent systems to multi-agent settings, where shared code artifacts support multi-agent coordination, review, and verification. Across these layers, we summarize representative methods and practical applications of code as agent harness, spanning coding assistants, GUI/OS automation, embodied agents, scientific discovery, personalization and recommendation, DevOps, and enterprise workflows. We further outline open challenges for harness engineering, including evaluation beyond final task success, verification under incomplete feedback, regression-free harness improvement, consistent shared state across multiple agents, human oversight for safety-critical actions, and extensions to multimodal environments. By centering code as the harness of agentic AI, this survey provides a unified roadmap toward executable, verifiable, and stateful AI agent systems.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-18T17:59:03Z",
+                "arxiv:comment": "GitHub: https://github.com/YennNing/Awesome-Code-as-Agent-Harness-Papers",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Xuying Ning"
+                    },
+                    {
+                        "name": "Katherine Tieu"
+                    },
+                    {
+                        "name": "Dongqi Fu"
+                    },
+                    {
+                        "name": "Tianxin Wei"
+                    },
+                    {
+                        "name": "Zihao Li"
+                    },
+                    {
+                        "name": "Yuanchen Bei"
+                    },
+                    {
+                        "name": "Jiaru Zou"
+                    },
+                    {
+                        "name": "Mengting Ai"
+                    },
+                    {
+                        "name": "Zhining Liu"
+                    },
+                    {
+                        "name": "Ting-Wei Li"
+                    },
+                    {
+                        "name": "Lingjie Chen"
+                    },
+                    {
+                        "name": "Yanjun Zhao"
+                    },
+                    {
+                        "name": "Ke Yang"
+                    },
+                    {
+                        "name": "Bingxuan Li"
+                    },
+                    {
+                        "name": "Cheng Qian"
+                    },
+                    {
+                        "name": "Gaotang Li"
+                    },
+                    {
+                        "name": "Xiao Lin"
+                    },
+                    {
+                        "name": "Zhichen Zeng"
+                    },
+                    {
+                        "name": "Ruizhong Qiu"
+                    },
+                    {
+                        "name": "Sirui Chen"
+                    },
+                    {
+                        "name": "Yifan Sun"
+                    },
+                    {
+                        "name": "Xiyuan Yang"
+                    },
+                    {
+                        "name": "Ruida Wang"
+                    },
+                    {
+                        "name": "Rui Pan"
+                    },
+                    {
+                        "name": "Chenyuan Yang"
+                    },
+                    {
+                        "name": "Dylan Zhang"
+                    },
+                    {
+                        "name": "Liri Fang"
+                    },
+                    {
+                        "name": "Zikun Cui"
+                    },
+                    {
+                        "name": "Yang Cao"
+                    },
+                    {
+                        "name": "Pan Chen"
+                    },
+                    {
+                        "name": "Dorothy Sun"
+                    },
+                    {
+                        "name": "Ren Chen"
+                    },
+                    {
+                        "name": "Mahesh Srinivasan"
+                    },
+                    {
+                        "name": "Nipun Mathur"
+                    },
+                    {
+                        "name": "Yinglong Xia"
+                    },
+                    {
+                        "name": "Hong Li"
+                    },
+                    {
+                        "name": "Hong Yan"
+                    },
+                    {
+                        "name": "Pan Lu"
+                    },
+                    {
+                        "name": "Lingming Zhang"
+                    },
+                    {
+                        "name": "Tong Zhang"
+                    },
+                    {
+                        "name": "Hanghang Tong"
+                    },
+                    {
+                        "name": "Jingrui He"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.18746v1",
+                "title": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
+                "updated": "2026-05-18T17:59:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.18746v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.18746v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Spatial intelligence unfolds through a perception-action loop: agents act to acquire observations, and reason about how observations vary as a function of action. Rather than passively processing what is seen, they actively uncover what is unseen - occluded structure, dynamics, containment, and functionality that cannot be resolved from passive sensing alone. We move beyond prior formulations of spatial intelligence that assume oracle observations by recasting the observer as an actor. We introduce ESI-BENCH, a comprehensive benchmark for embodied spatial intelligence spanning 10 task categories and 29 subcategories built on OmniGibson, grounded in Spelke's core knowledge systems. Agents must decide what abilities to deploy - perception, locomotion, and manipulation - and how to sequence them to actively accumulate task-relevant evidence. We conduct extensive experiments on state-of-the-art MLLMs and find that active exploration substantially outperforms passive counterparts, with agents spontaneously discovering emergent spatial strategies without explicit instructions, while random multi-view often adds noise rather than signal despite consuming far more images. Most failures stem not from weak perception but from action blindness: poor action choices lead to poor observations, which in turn drive cascading errors. While explicit 3D grounding stabilizes reasoning on depth-sensitive tasks, imperfect 3D representation proves more harmful than 2D baselines by distorting spatial relations. Human studies further reveal that unlike humans who seek falsifying viewpoints and revise beliefs under contradiction, models commit prematurely with high confidence regardless of evidence quality, exposing a metacognitive gap that neither better perception nor more embodied interaction alone can close.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -42,452 +497,185 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
                         "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-15T17:59:57Z",
-                "arxiv:comment": "Code: https://github.com/wzzheng/IVGT/",
+                "published": "2026-05-18T17:59:02Z",
+                "arxiv:comment": "https://esi-bench.github.io/",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Yuqi Wu"
+                        "name": "Yining Hong"
                     },
                     {
-                        "name": "Tianyu Hu"
+                        "name": "Jiageng Liu"
                     },
                     {
-                        "name": "Wenzhao Zheng"
+                        "name": "Han Yin"
                     },
                     {
-                        "name": "Yuanhui Huang"
+                        "name": "Manling Li"
                     },
                     {
-                        "name": "Haowen Sun"
+                        "name": "Leonidas Guibas"
                     },
                     {
-                        "name": "Jie Zhou"
+                        "name": "Li Fei-Fei"
                     },
                     {
-                        "name": "Jiwen Lu"
+                        "name": "Jiajun Wu"
+                    },
+                    {
+                        "name": "Yejin Choi"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.16257v1",
-                "title": "DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo",
-                "updated": "2026-05-15T17:59:51Z",
+                "id": "http://arxiv.org/abs/2605.18745v1",
+                "title": "SURGE: Approximation-free Training Free Particle Filter for Diffusion Surrogate",
+                "updated": "2026-05-18T17:59:00Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.16257v1",
+                        "@href": "https://arxiv.org/abs/2605.18745v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.16257v1",
+                        "@href": "https://arxiv.org/pdf/2605.18745v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Achieving human-level manipulation requires dexterous robotic hands capable of complex object interactions. Advancing such capabilities further demands standardized benchmarks for systematic evaluation. However, existing dexterous benchmarks lack tasks that reflect the unique manipulation capabilities of dexterous hands over parallel grippers, as well as comprehensive evaluation pipelines. In this paper, we present DexJoCo, a benchmark and toolkit for task-oriented dexterous manipulation, comprising 11 functionally grounded tasks that evaluate tool-use, bimanual coordination, long-horizon execution, and reasoning. We develop a low-cost data collection system and collect 1.1K trajectories across these tasks, with support for domain randomization to assess robustness. We benchmark modern models under diverse settings, including visual and dynamics randomization, multi-task training, and action-head adaptation. Through extensive empirical analysis, we identify several important insights and common limitations of current policies in dexterous manipulation, highlighting key challenges for future research in dexterous hand robot learning. Project page available at: https://dexjoco.github.io",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-15T17:59:51Z",
-                "arxiv:comment": "8 pages, 6 figures, project page is available at: https://dexjoco.github.io",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Hanwen Wang"
-                    },
-                    {
-                        "name": "Weizhi Zhao"
-                    },
-                    {
-                        "name": "Xiangyu Wang"
-                    },
-                    {
-                        "name": "Siyuan Huang"
-                    },
-                    {
-                        "name": "He Lin"
-                    },
-                    {
-                        "name": "Boyuan Zheng"
-                    },
-                    {
-                        "name": "Rongtao Xu"
-                    },
-                    {
-                        "name": "Gang Wang"
-                    },
-                    {
-                        "name": "Yao Mu"
-                    },
-                    {
-                        "name": "He Wang"
-                    },
-                    {
-                        "name": "Lue Fan"
-                    },
-                    {
-                        "name": "Hongsheng Li"
-                    },
-                    {
-                        "name": "Zhaoxiang Zhang"
-                    },
-                    {
-                        "name": "Tieniu Tan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.16255v1",
-                "title": "Designing Datacenter Power Delivery Hierarchies for the AI Era",
-                "updated": "2026-05-15T17:58:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.16255v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.16255v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Demand for AI accelerators is rapidly increasing rack power density, with projections approaching 1MW per deployment by 2027. This poses a major challenge for datacenter power delivery designers. As power densities increase, a datacenter designed for a different target density may strand power, i.e., may be unable to use all the power that its delivery hierarchy has provisioned. Designs must remain efficient over long datacenter lifetimes and multiple hardware generations. Power utilization is particularly important as grid power capacity is a scarce resource in the AI era.\n  Designing an efficient power delivery hierarchy for the long run is difficult because rack placement feasibility, workload impact, and cost depend jointly on electrical topology, deployment granularity, placement policy, power oversubscription, and workload mix. Moreover, each of these factors evolve over time, have inter-dependencies across multiple resource dimensions, and generally do not lend themselves to closed-form analysis.\n  To address this challenge, we develop a framework for evaluating datacenter power delivery designs using throughput, power, and cost metrics over realistic arrival, oversubscription, and decommissioning sequences. The framework combines projection models for GPU, compute, and storage deployments with operational factors grounded in production data from Microsoft Azure. Our results show that multi-resource stranding materially changes deployable capacity, effective capital expenditure, and delivered performance, and quantify how rising density from rack- and pod-scale AI systems shapes these outcomes. For AI datacenter design, the relevant planning objective is not installed megawatts, but deployable capacity over time.",
+                "summary": "Diffusion-based generative models increasingly rely on inference-time guidance, adding a drift term or reweighting mixture of experts, to improve sample quality on task-specific objectives. However, most existing techniques require repeated score or gradient evaluations, introducing bias, high computational overhead, or both. We introduce \\texttt{URGE}, Unbiased Resampling via Girsanov Estimation, a derivative-free inference-time scaling algorithm that performs path-wise importance reweighting via a Girsanov change of measure. Instead of computing gradient-based particle weights in previous work, \\texttt{URGE} attaches a simple multiplicative weight to each simulated trajectory and periodically resamples. No score, no Hessian, and no PDE evaluation is required. We establish an equivalence between path-wise and particle-wise SMC: the Girsanov path weight admits a backward conditional expectation that recovers the previous particle-level weights, guaranteeing that both schemes produce the same unbiased terminal law. Empirically, \\texttt{URGE} outperforms existing inference-time guidance baselines on synthetic tests and diffusion-model benchmarks, achieving better generation quality, while being significantly simpler to implement and fully gradient-free.",
                 "category": [
-                    {
-                        "@term": "cs.DC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-15T17:58:58Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.DC"
-                },
-                "author": [
-                    {
-                        "name": "Grant Wilkins"
-                    },
-                    {
-                        "name": "Fiodar Kazhamiaka"
-                    },
-                    {
-                        "name": "Alok Gautam Kumbhare"
-                    },
-                    {
-                        "name": "Chaojie Zhang"
-                    },
-                    {
-                        "name": "Ricardo Bianchini"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.16250v1",
-                "title": "A Generative AI Framework for Intelligent Utility Billing CO 2 Analytics and Sustainable Resource Optimisation",
-                "updated": "2026-05-15T17:52:57Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.16250v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.16250v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Distribution utilities are now expected to deliver bills that customers can actually read attach a defensible carbon number to every kWh sold and schedule load against grid stress and emissions constraints We propose an end-to-end framework that unifies four production-grade capabilities under one architectural roof a generative-AI agent that drafts each customers natural-language billing statement from structured numeric inputs under a constrained decoding policy a transformer-based forecaster that supplies the day-ahead consumption estimate with calibrated quantile bands",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DB",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-15T17:52:57Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Pavan Manjunath"
-                    },
-                    {
-                        "name": "Thomas Pruefer"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.16248v1",
-                "title": "Local Softmax and Global Weights in Non-Boolean Event Structures",
-                "updated": "2026-05-15T17:51:15Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.16248v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.16248v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Softmax and related normalized response functions are widely used in choice theory, machine learning, and cognitive science. In non-Boolean event structures with overlapping contexts, however, local normalization does not automatically yield a global probability weight. We show that imposing single-valuedness on shared atoms -- equivalently, no-disturbance or consistent connectedness -- collapses generalized softmax rules to coordinate parametrizations of the strictly positive part of the admissible-weight polytope. Any strictly positive admissible weight can be represented in this way, while boundary weights arise as limits. Exotic weights that exceed classical or quantum bounds are therefore properties of the event structure and the chosen weight, not of the normalizing link. The resulting hierarchy separates local normalization, cross-context gluing, Cauchy--Gleason linearity, and physical or cognitive realizability.",
-                "category": {
-                    "@term": "quant-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-15T17:51:15Z",
-                "arxiv:comment": "12 pages, 1 figure, 1 table",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": {
-                    "name": "Karl Svozil"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.16246v1",
-                "title": "FRESH: Information-Geometric Calibration of Patient-Level Models to Aggregate Evidence",
-                "updated": "2026-05-15T17:50:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.16246v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.16246v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "This note introduces FRESH (Fusion of Recent Evidence and Subject Histories), a method for incorporating population-level summary results -- published clinical trials, registry summaries,\n  prior natural-history studies, and peer-reviewed indirect comparisons -- into predictive models trained on patient-level data. This method provides a principled means of combining both\n  patient-level and aggregate-level data types into a unified data-efficient model for clinical decision making.\n  FRESH assumes access to a generative model trained on patient-level data sources (e.g. clinical trial or real-world data). The method produces patient-level predictions from a re-calibrated\n  model that matches a set of specified aggregate statistics for a target population. This can be understood as a patient-level recapitulation of the aggregate source -- with the key property\n  that the recalibration is a minimal perturbation of the original joint distribution in a specific information-geometric sense. The resulting samples can be analyzed directly or combined into a\n  post-training procedure to update the original generative model.\n  This approach enables several applications where rigorously incorporating patient-level data with summary information is valuable, including (i) contextualizing single-arm trial results with\n  respect to recent standard-of-care, (ii) clinical-trial simulations for design and probability-of-technical-success estimation, and (iii) comparative-effectiveness analyses of on-market\n  therapies.",
-                "category": [
-                    {
-                        "@term": "stat.ME",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-15T17:50:11Z",
-                "arxiv:primary_category": {
-                    "@term": "stat.ME"
-                },
-                "author": [
-                    {
-                        "name": "Franklin Fuller"
-                    },
-                    {
-                        "name": "Daniele Bertolini"
-                    },
-                    {
-                        "name": "Samantha Liang"
-                    },
-                    {
-                        "name": "Jason Christopher"
-                    },
-                    {
-                        "name": "Aaron M. Smith"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.16245v1",
-                "title": "AI-Mediated Communication Can Steer Collective Opinion",
-                "updated": "2026-05-15T17:49:24Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.16245v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.16245v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Generative artificial intelligence (AI) is increasingly integrated into the online platforms where humans exchange opinions; large language models (LLMs) now polish users' posts on LinkedIn and provide context for content shared on X. While prior work has shown that AI can express biased opinions and shape individuals' opinions during human-AI interactions, less attention has been paid to its influence on collective opinion formation when mediating human-to-human communication. We address this gap via a combination of empirical and theoretical analyses. We show empirically that LLMs from multiple popular families introduce directional biases when instructed to edit human-written texts on contested topics, for example, nudging texts in favor of gun control and against atheism. Building on this observation, we introduce a mathematical model of opinion dynamics in which an AI system sits between users on a social network, transforming the opinions they express and perceive. By analytically characterizing the equilibrium of this model and performing simulations on real social network data, we show that biases introduced by AI in human-to-human communication can be amplified through the network and shift collective opinion in their direction. In light of these findings, we investigate whether such biases are controllable by online platforms. We audit the \"Explain this post\" feature on X and find evidence of pro-life bias in Grok's outputs on abortion-related content, which we trace back to specific design choices. We conclude with a discussion of the broader implications of our findings in relation to ongoing legislative efforts in the European Union.",
-                "category": [
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.SI",
+                        "@term": "math.NA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.PR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "q-fin.MF",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.CO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-15T17:49:24Z",
+                "published": "2026-05-18T17:59:00Z",
+                "arxiv:comment": "accepted by ICML 2026",
                 "arxiv:primary_category": {
-                    "@term": "cs.CY"
+                    "@term": "stat.ML"
                 },
                 "author": [
                     {
-                        "name": "Stratis Tsirtsis"
+                        "name": "Lifu Wei"
                     },
                     {
-                        "name": "Kai Rawal"
+                        "name": "Yinuo Ren"
                     },
                     {
-                        "name": "Chris Russell"
+                        "name": "Naichen Shi"
                     },
                     {
-                        "name": "Brent Mittelstadt"
-                    },
-                    {
-                        "name": "Sandra Wachter"
+                        "name": "Yiping Lu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.16239v1",
-                "title": "Dynamics-Level Watermarking of Flow Matching Models with Random Codes",
-                "updated": "2026-05-15T17:48:22Z",
+                "id": "http://arxiv.org/abs/2605.18743v1",
+                "title": "Actionable World Representation",
+                "updated": "2026-05-18T17:58:51Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.16239v1",
+                        "@href": "https://arxiv.org/abs/2605.18743v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.16239v1",
+                        "@href": "https://arxiv.org/pdf/2605.18743v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We introduce a dynamics-level approach to watermarking generative models. Rather than embedding signals into model weights or outputs, we embed the watermark directly into the learned continuous dynamics -- the velocity field of a flow matching model. We formulate this as random coding over a continuous channel: a key-dependent perturbation is added during training, and the message is recovered at detection time from black-box queries. The perturbation is designed to leave the generated distribution unchanged. Experiments on MNIST and CIFAR-10 across different architectures confirm reliable message recovery, preserved generation quality, and chance-level decoding accuracy without the secret key.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-15T17:48:22Z",
-                "arxiv:comment": "18 pages, 3 figures, code available at: https://github.com/ShuchanWang/flow-matching-dynamics-watermarking",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": {
-                    "name": "Shuchan Wang"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.16238v1",
-                "title": "Prospective multi-pathogen disease forecasting using autonomous LLM-guided tree search",
-                "updated": "2026-05-15T17:45:17Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.16238v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.16238v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Probabilistic forecasting of infectious diseases is crucial for public health but relies on labor-intensive manual model curation by expert modeling teams. This bespoke development bottlenecks scalability to granular geographic resolutions or emerging pathogens. Here, we present an autonomous system using Large Language Model (LLM)-guided tree search to iteratively generate, evaluate, and optimize executable forecasting software. In a fully prospective, real-time evaluation during the 2025-2026 US respiratory season, the system autonomously discovered methodologically diverse models for influenza, COVID-19, and respiratory syncytial virus (RSV). Aggregating these machine-generated models yielded an ensemble that consistently matched or outperformed the gold-standard, human-curated Centers for Disease Control and Prevention (CDC) hub ensembles out-of-sample. The system successfully navigated data-scarce \"cold start\" scenarios for RSV. Moreover, controlled retrospective ablations revealed that optimizing log-scale distance metrics prevents reward hacking, while an automated judge-in-the-loop ensures structural fidelity to complex scientific theories. By autonomously translating epidemiological theory into accurate, transparent code, this framework overcomes the modeling labor bottleneck, enabling rapid deployment of expert-level disease forecasting at unprecedented scales.",
+                "summary": "Inspired by the emergent behaviors in large language models that generalized human intelligence, the research community is pursuing similar emergent capabilities within world models, with a emphasis on modeling the physical world. Within the scope of physical world model, objects are the fundamental primitives that constitute physical reality. From humans to computers, nearly everything we interact with is an object. These objects are rarely static; they are actionable entities with varying states determined by their intrinsic properties. While current methods approach object action states either via video generation or dynamic scene reconstruction, none explicitly model this basic element in a unified, principled way to build an actionable object representation. We propose WorldString, a neural architecture capable of modeling the state manifold of real-world objects by learning directly from point clouds or RGB-D video streams. Serving as a versatile digital twin, it acts as a foundational building block for physical world models; thus, we name it WorldString. Sweetly, its fully differentiable structure seamlessly enables future integration with policy learning and neural dynamics.",
                 "category": {
                     "@term": "cs.AI",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-05-15T17:45:17Z",
+                "published": "2026-05-18T17:58:51Z",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Sarah Martinson"
+                        "name": "Kunqi Xu"
                     },
                     {
-                        "name": "Michael P. Brenner"
+                        "name": "Jitao Li"
                     },
                     {
-                        "name": "Martyna Plomecka"
+                        "name": "Jianglong Ye"
                     },
                     {
-                        "name": "Brian P. Williams"
+                        "name": "Tianshu Tang"
                     },
                     {
-                        "name": "Nicholas G. Reich"
+                        "name": "Isabella Liu"
                     },
                     {
-                        "name": "Zahra Shamsi"
+                        "name": "Sifei Liu"
+                    },
+                    {
+                        "name": "Xueyan Zou"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.16234v1",
-                "title": "Layer Equivalence Is Not a Property of Layers Alone: How You Test Redundancy Changes What You Find",
-                "updated": "2026-05-15T17:43:16Z",
+                "id": "http://arxiv.org/abs/2605.18740v1",
+                "title": "Vision-OPD: Learning to See Fine Details for Multimodal LLMs via On-Policy Self-Distillation",
+                "updated": "2026-05-18T17:57:04Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.16234v1",
+                        "@href": "https://arxiv.org/abs/2605.18740v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.16234v1",
+                        "@href": "https://arxiv.org/pdf/2605.18740v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "When researchers ask whether two transformer layers are \"equivalent\" for compression, they often conflate distinct tests. Replacement asks whether one layer's map can substitute for another's in place; interchange asks whether two layers approximately commute when their positions are swapped. Both are output-grounded swap-KL probes, but they need not agree: on pretrained transformers the protocol gap can change which layers look safe to prune by several-fold under the same evaluator, especially when replacement distances are high.\n  We measure both protocols across checkpoints and architectures. On a Pythia training trajectory (410M and 1.4B), the replacement-interchange gap grows from initialization to convergence. Under one matched WikiText-2 contract at 8B scale, Qwen3-8B enters a divergent regime: interchange-guided removal is several-fold safer than replacement-guided at the same layer budgets, while Llama-3.1-8B ties the two protocols for pruning cost even though interchange KL is lower, showing metric gaps need not map one-to-one to removal. Before layer removal or merging, score both swap-KLs on the target checkpoint; the diagnostic requires only unlabeled forward passes.",
+                "summary": "Multimodal Large Language Models (MLLMs) still struggle with fine-grained visual understanding, where answers often depend on small but decisive evidence in the full image. We observe a regional-to-global perception gap: the same MLLM answers fine-grained questions more accurately when conditioned on evidence-centered crops than on the corresponding full images, suggesting that many failures stem from difficulty to focus on relevant evidence rather than insufficient local recognition ability. Motivated by this observation, we propose Vision-OPD (Vision On-Policy Distillation), a regional-to-global self-distillation framework that transfers the model's own privileged regional perception to its full-image policy. Vision-OPD instantiates two conditional policies from the same MLLM: a crop-conditioned teacher and a full-image-conditioned student. The student generates on-policy rollouts, and Vision-OPD minimizes token-level divergence between the teacher and student next-token distributions along these rollouts. This enables the model to internalize the benefit of visual zooming without external teacher models, ground-truth labels, reward verifiers, or inference-time tool use. Experiments on multiple fine-grained visual understanding benchmarks show that Vision-OPD models achieve competitive or superior performance against much larger open-source, closed-source, and \"Thinking-with-Images\" agentic models.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -497,16 +685,40 @@
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-15T17:43:16Z",
-                "arxiv:comment": "40 pages, 8 figures, 24 tables. Code and frozen JSON logs are not public during write-up; the authors plan to open https://github.com/Gpgabriel25/ProtocolGapDiagnostic",
+                "published": "2026-05-18T17:57:04Z",
+                "arxiv:comment": "Project page: https://github.com/VisionOPD/Vision-OPD",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.CV"
                 },
-                "author": {
-                    "name": "Gabriel Garcia"
-                }
+                "author": [
+                    {
+                        "name": "Qianhao Yuan"
+                    },
+                    {
+                        "name": "Jie Lou"
+                    },
+                    {
+                        "name": "Xing Yu"
+                    },
+                    {
+                        "name": "Hongyu Lin"
+                    },
+                    {
+                        "name": "Le Sun"
+                    },
+                    {
+                        "name": "Xianpei Han"
+                    },
+                    {
+                        "name": "Yaojie Lu"
+                    }
+                ]
             }
         ]
     }
