@@ -5,266 +5,96 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-05-20T00:09:01Z",
+        "updated": "2026-05-20T11:44:36Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "572931",
+        "opensearch:totalResults": "573476",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2605.18754v1",
-                "title": "Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate",
-                "updated": "2026-05-18T17:59:58Z",
+                "id": "http://arxiv.org/abs/2605.20182v1",
+                "title": "Atoms of Thought: Universal EEG Representation Learning with Microstates",
+                "updated": "2026-05-19T17:59:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.18754v1",
+                        "@href": "https://arxiv.org/abs/2605.20182v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.18754v1",
+                        "@href": "https://arxiv.org/pdf/2605.20182v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
-                    }
-                ],
-                "summary": "Multiview 3D evaluation assumes that the images being scored are observations of one static 3D scene. This assumption can fail in NVS and sparse-view reconstruction: inputs or generated outputs may contain artifacts, outlier frames, repeated views, or noise, yet still receive high 3D consistency scores. Existing reference-based metrics require ground truth, while ground-truth-free metrics such as MEt3R depend on learned reconstruction backbones whose failure modes are poorly characterized. We study this reliability problem by comparing neural reconstruction priors with classical geometric verification. We introduce \\benchmark, a controlled robustness benchmark for multiview 3D consistency, and a parametric family that decomposes neural metrics into backbone, residual, and aggregation components. This family recovers MEt3R and yields variants up to $3\\times$ more robust. Our analysis shows that VGGT, MASt3R, DUSt3R, and Fast3R can hallucinate dense geometry and cross-view support for unrelated scenes, repeated images, and random noise. We introduce COLMAP-based metrics that use matches, registration, dense support, and reconstruction failure as failure-aware consistency signals. On real NVS outputs and a structured human study, these metrics achieve up to $4\\times$ higher correlation with human judgments than MEt3R.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-18T17:59:58Z",
-                "arxiv:comment": "Project Page at https://mvp18.github.io/3d-consistency-metrics/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Soumava Paul"
                     },
                     {
-                        "name": "Prakhar Kaushik"
-                    },
-                    {
-                        "name": "Alan Yuille"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.18753v1",
-                "title": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
-                "updated": "2026-05-18T17:59:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.18753v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.18753v1",
                         "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
+                        "@href": "https://doi.org/10.1145/3746270.3760230",
+                        "@title": "doi"
                     }
                 ],
-                "summary": "Current hierarchical attention methods, such as NSA and InfLLMv2, select the top-k relevant key-value (KV) blocks based on coarse attention scores and subsequently apply fine-grained softmax attention on the selected tokens. However, the top-k operation assumes the number of relevant tokens for any query is fixed and it precludes the gradient flow between the sparse and dense stages. In this work, we propose DashAttention (Differentiable and Adaptive Sparse Hierarchical Attention), which leverages the adaptively sparse $\u03b1$-entmax transformation to select a variable number of blocks according to the current query in the first stage. This in turn provides a prior for the second-stage softmax attention, keeping the entire hierarchy fully differentiable. Contrary to other hierarchical attention methods, we show that DashAttention is non-dispersive, translating to better long-context modeling ability. Experiments with large language models (LLMs) show that DashAttention achieves comparable accuracy as full attention with 75% sparsity and a better Pareto frontier than NSA and InfLLMv2, especially in high-sparsity regimes. We also provide an efficient, GPU-aware implementation of DashAttention in Triton, which achieves a speedup of up to over FlashAttention-3 at inference time. Overall, DashAttention offers a cost-effective strategy to model long contexts.",
+                "summary": "Learning universal representations from electroencephalogram (EEG) signals is a cutting-edge approach in the field of neuroinformatics and brain-computer interfaces (BCIs). Conventionally, EEG is treated as a multivariate temporal signal, where time- or frequency-domain features are extracted for representation learning. This paper investigates a simple yet effective EEG representation, i.e., microstates. Microstates represent the building blocks of brain activity patterns at a microscopic time scale. We build a universal microstate tokenizer from a large medical EEG dataset by clustering continuous EEG signals into sequences of discrete microstates. The microstate tokenizer is then adopted universally across a series of downstream tasks, including sleep staging, emotion recognition, and motor imagery classification. Experimental results show that EEG representation learning with microstates outperforms traditional time-domain and frequency-domain features under different models and across different tasks. Further analysis shows that microstates offer greater interpretability and scalability, thereby opening up applications in both cognitive neuroscience and clinical research.",
                 "category": [
                     {
-                        "@term": "cs.CL",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-18T17:59:52Z",
-                "arxiv:comment": "Preprint",
+                "published": "2026-05-19T17:59:31Z",
+                "arxiv:comment": "Accepted by the 3rd International Workshop on Multimodal and Responsible Affective Computing (MRAC 2025). 8 pages of main text, 23 pages total, 5 figures, 4 tables",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Yuxiang Huang"
+                        "name": "Xinyang Tian"
                     },
                     {
-                        "name": "Nuno M. T. Gon\u00e7alves"
+                        "name": "Ruitao Liu"
                     },
                     {
-                        "name": "Federico Alvetreti"
+                        "name": "Ziyi Ye"
                     },
                     {
-                        "name": "Lei Li"
+                        "name": "Siyang Xue"
                     },
                     {
-                        "name": "Xu Han"
+                        "name": "Xin Wang"
                     },
                     {
-                        "name": "Edoardo M. Ponti"
-                    },
-                    {
-                        "name": "Andr\u00e9 F. T. Martins"
-                    },
-                    {
-                        "name": "Marcos V. Treviso"
+                        "name": "Xuesong Chen"
                     }
-                ]
+                ],
+                "arxiv:doi": "10.1145/3746270.3760230"
             },
             {
-                "id": "http://arxiv.org/abs/2605.18752v1",
-                "title": "Traditional statistical representations outperform generative AI in identifying expert peer reviewers",
-                "updated": "2026-05-18T17:59:45Z",
+                "id": "http://arxiv.org/abs/2605.20177v1",
+                "title": "From Seeing to Thinking: Decoupling Perception and Reasoning Improves Post-Training of Vision-Language Models",
+                "updated": "2026-05-19T17:58:40Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.18752v1",
+                        "@href": "https://arxiv.org/abs/2605.20177v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.18752v1",
+                        "@href": "https://arxiv.org/pdf/2605.20177v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The exponential growth of scientific submissions has strained the peer review system. Despite the rapidly expanding global pool of researchers, this unprecedented scale has rendered the previous approach of manual expert identification unfeasible. Therefore, institutions have naturally turned to Large Language Models (LLMs) to automate intricate processes like expert reviewer identification. However, the reliability of these new models in accurately identifying domain experts lacks rigorous evaluation. We conduct a comprehensive empirical evaluation of statistical and AI-driven expertise identification methodologies to benchmark their reliability and limitations. Framing expert identification as an information retrieval problem, we utilize the distributed peer review system of a major international astronomical observatory, where proposal authorship serves as our proxy ground truth for domain expertise. Evaluating six retrieval methodologies utilized across observatories and computer science conferences, we demonstrate that traditional statistical representations outperform generative AI. Specifically, Term Frequency-Inverse Document Frequency successfully identified a labeled expert within the top 25 recommendations 79.5% of the time, compared to 51.5% for GPT-4o mini. Our results highlight that distinguishing subfield expertise requires fine-grained vocabulary, which is obscured by the semantic smoothing in generative methods. By establishing a rigorous evaluation framework for automated peer review, we demonstrate that transparent and reproducible statistical representations still outperform computationally expensive LLMs in specialized scientific tasks.",
+                "summary": "Recent advances in vision-language models (VLMs) emphasize long chain-of-thought reasoning; yet, we find that their performance on visual tasks is primarily limited by a lack of visual perception as opposed to reasoning itself. In this work, we systematically study the interplay between perception and reasoning in VLM post-training by decomposing their capabilities into three separate training stages: visual perception, visual reasoning, and textual reasoning, incorporating specialized training data. We demonstrate that visual perception (a) requires targeted optimization with specialized data; (b) serves as a fundamental scaffold that should be solidified through staged training before refining visual reasoning; and (c) is more effectively learned via RL than caption-based SFT. Our experiments across multiple VLMs demonstrate that staged training consistently improves both visual perception and reasoning performance over merged training. Notably, models trained with our approach achieve 1.5% higher reasoning accuracy with 20.8% shorter reasoning traces, suggesting that superior perception reduces the need for excessive reasoning. Furthermore, we show that this capability-based staging represents a new curriculum dimension orthogonal to traditional difficulty-based curricula, and combining both yields further additive gains. Our staged-training models achieve superior performance among open-weight VLMs, establishing advanced results on several visual math and perception (e.g., +5.2% on WeMath and +3.7% on RealWorldQA) tasks compared with the base counterpart.",
                 "category": [
                     {
-                        "@term": "cs.IR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.IM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-18T17:59:45Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.IR"
-                },
-                "author": [
-                    {
-                        "name": "Vicente Amado Olivo"
-                    },
-                    {
-                        "name": "Tereza Jerabkova"
-                    },
-                    {
-                        "name": "Jakub Klencki"
-                    },
-                    {
-                        "name": "John Carpenter"
-                    },
-                    {
-                        "name": "Mario Mali\u010dki"
-                    },
-                    {
-                        "name": "Ferdinando Patat"
-                    },
-                    {
-                        "name": "Louis-Gregory Strolger"
-                    },
-                    {
-                        "name": "Wolfgang Kerzendorf"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.18750v1",
-                "title": "A Readiness-Driven Runtime for Pipeline-Parallel Training under Runtime Variability",
-                "updated": "2026-05-18T17:59:18Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.18750v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.18750v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Pipeline parallelism is a key technique for scaling large-model training, but modern workloads exhibit runtime variability in computation and communication. Existing pipeline systems typically consume static, profiled, or adaptively generated schedules as pre-committed execution orders. When realized task readiness diverges from the pre-committed order, stages may wait for not-yet-ready work even though other executable work is available, creating stage misalignment, idle bubbles, and reduced utilization.\n  We present Runtime-Readiness-First Pipeline (RRFP), a readiness-driven runtime for pipeline-parallel training. RRFP changes how schedules are consumed at runtime: instead of treating a schedule as a sequence that stages must wait to follow, it treats the schedule as a non-binding hint order for ranking currently ready work. To support this model, RRFP combines message-driven asynchronous communication, lightweight tensor-parallel coordination for collective consistency, and ready-set arbitration for low-overhead dispatch.\n  We implement RRFP in a Megatron-based training framework and evaluate it on language-only and multimodal workloads at up to 128 GPUs. RRFP improves over fixed-order pipeline baselines across all settings. Using the BFW hint, RRFP achieves up to 1.77$\\times$ speedup on language-only workloads and up to 2.77$\\times$ on multimodal workloads. In cross-framework comparisons, RRFP with the default BF hint outperforms the faster available external system by up to 1.84$\\times$ while preserving training correctness.",
-                "category": [
-                    {
-                        "@term": "cs.DC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-18T17:59:18Z",
-                "arxiv:comment": "29 pages, including appendices",
-                "arxiv:primary_category": {
-                    "@term": "cs.DC"
-                },
-                "author": [
-                    {
-                        "name": "Ruitao Liu",
-                        "arxiv:affiliation": "Tsinghua University"
-                    },
-                    {
-                        "name": "Xinyang Tian",
-                        "arxiv:affiliation": "Tsinghua University"
-                    },
-                    {
-                        "name": "Shuo Chen",
-                        "arxiv:affiliation": "Tsinghua University"
-                    },
-                    {
-                        "name": "Tingrui Zhang",
-                        "arxiv:affiliation": "Tsinghua University"
-                    },
-                    {
-                        "name": "Guang Yang",
-                        "arxiv:affiliation": "Tsinghua University"
-                    },
-                    {
-                        "name": "Alan Zhao",
-                        "arxiv:affiliation": "Scitix AI"
-                    },
-                    {
-                        "name": "Wei Xu",
-                        "arxiv:affiliation": "Tsinghua University"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.18749v1",
-                "title": "WavFlow: Audio Generation in Waveform Space",
-                "updated": "2026-05-18T17:59:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.18749v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.18749v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Modern audio generation predominantly relies on latent-space compression, introducing additional complexity and potential information loss. In this work, we challenge this paradigm with WavFlow, a framework that generates high-fidelity audio directly in raw waveform space without intermediate representations. To overcome the inherent difficulties of modeling high-dimensional and low-energy signals, we reshape audio into 2D token grids through waveform patchify and introduce amplitude lifting to align signal scales, enabling stable optimization via direct x-prediction in flow matching. To capture complex semantic alignment and temporal synchronization, we leverage an automated data pipeline to curate 5 million high-quality video-text-audio triplets, allowing the model to learn fine-grained acoustic patterns from scratch. Experimental results show that WavFlow achieves competitive performance on the video-to-audio benchmark VGGSound (FD_PaSST: 59.98, IS_PANNs: 17.40, DeSync: 0.44) and the text-to-audio benchmark AudioCaps (FD_PANNs: 10.63, IS_PANNs: 12.62), matching or exceeding the performance of established latent-based methods. Our work demonstrates that intermediate compression is not a prerequisite for high-quality synthesis, offering a simpler and more scalable alternative for multimodal audio generation.",
-                "category": [
-                    {
-                        "@term": "cs.SD",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -272,418 +102,259 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-18T17:59:10Z",
-                "arxiv:comment": "Code: https://github.com/facebookresearch/WavFlow",
-                "arxiv:primary_category": {
-                    "@term": "cs.SD"
-                },
-                "author": [
-                    {
-                        "name": "Feiyan Zhou"
-                    },
-                    {
-                        "name": "Luyuan Wang"
-                    },
-                    {
-                        "name": "Shoufa Chen"
-                    },
-                    {
-                        "name": "Zhe Wang"
-                    },
-                    {
-                        "name": "Zhiheng Liu"
-                    },
-                    {
-                        "name": "Yuren Cong"
-                    },
-                    {
-                        "name": "Xiaohui Zhang"
-                    },
-                    {
-                        "name": "Fanny Yang"
-                    },
-                    {
-                        "name": "Belinda Zeng"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.18747v1",
-                "title": "Code as Agent Harness",
-                "updated": "2026-05-18T17:59:03Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.18747v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.18747v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent large language models (LLMs) have demonstrated strong capabilities in understanding and generating code, from competitive programming to repository-level software engineering. In emerging agentic systems, code is no longer only a target output. It increasingly serves as an operational substrate for agent reasoning, acting, environment modeling, and execution-based verification. We frame this shift through the lens of agent harnesses and introduce code as agent harness: a unified view that centers code as the basis for agent infrastructure. To systematically study this perspective, we organize the survey around three connected layers. First, we study the harness interface, where code connects agents to reasoning, action, and environment modeling. Second, we examine harness mechanisms: planning, memory, and tool use for long-horizon execution, together with feedback-driven control and optimization that make harness reliable and adaptive. Third, we discuss scaling the harness from single-agent systems to multi-agent settings, where shared code artifacts support multi-agent coordination, review, and verification. Across these layers, we summarize representative methods and practical applications of code as agent harness, spanning coding assistants, GUI/OS automation, embodied agents, scientific discovery, personalization and recommendation, DevOps, and enterprise workflows. We further outline open challenges for harness engineering, including evaluation beyond final task success, verification under incomplete feedback, regression-free harness improvement, consistent shared state across multiple agents, human oversight for safety-critical actions, and extensions to multimodal environments. By centering code as the harness of agentic AI, this survey provides a unified roadmap toward executable, verifiable, and stateful AI agent systems.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-18T17:59:03Z",
-                "arxiv:comment": "GitHub: https://github.com/YennNing/Awesome-Code-as-Agent-Harness-Papers",
+                "published": "2026-05-19T17:58:40Z",
+                "arxiv:comment": "19 pages, 9 figures; Accepted to ICML 2026; Project Page: https://ucsc-vlaa.github.io/VLM-CapCurriculum/",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Xuying Ning"
+                        "name": "Juncheng Wu"
                     },
                     {
-                        "name": "Katherine Tieu"
+                        "name": "Hardy Chen"
                     },
                     {
-                        "name": "Dongqi Fu"
+                        "name": "Haoqin Tu"
                     },
                     {
-                        "name": "Tianxin Wei"
+                        "name": "Xianfeng Tang"
                     },
                     {
-                        "name": "Zihao Li"
+                        "name": "Freda Shi"
                     },
                     {
-                        "name": "Yuanchen Bei"
+                        "name": "Hui Liu"
                     },
                     {
-                        "name": "Jiaru Zou"
+                        "name": "Hanqing Lu"
                     },
                     {
-                        "name": "Mengting Ai"
+                        "name": "Cihang Xie"
                     },
                     {
-                        "name": "Zhining Liu"
-                    },
-                    {
-                        "name": "Ting-Wei Li"
-                    },
-                    {
-                        "name": "Lingjie Chen"
-                    },
-                    {
-                        "name": "Yanjun Zhao"
-                    },
-                    {
-                        "name": "Ke Yang"
-                    },
-                    {
-                        "name": "Bingxuan Li"
-                    },
-                    {
-                        "name": "Cheng Qian"
-                    },
-                    {
-                        "name": "Gaotang Li"
-                    },
-                    {
-                        "name": "Xiao Lin"
-                    },
-                    {
-                        "name": "Zhichen Zeng"
-                    },
-                    {
-                        "name": "Ruizhong Qiu"
-                    },
-                    {
-                        "name": "Sirui Chen"
-                    },
-                    {
-                        "name": "Yifan Sun"
-                    },
-                    {
-                        "name": "Xiyuan Yang"
-                    },
-                    {
-                        "name": "Ruida Wang"
-                    },
-                    {
-                        "name": "Rui Pan"
-                    },
-                    {
-                        "name": "Chenyuan Yang"
-                    },
-                    {
-                        "name": "Dylan Zhang"
-                    },
-                    {
-                        "name": "Liri Fang"
-                    },
-                    {
-                        "name": "Zikun Cui"
-                    },
-                    {
-                        "name": "Yang Cao"
-                    },
-                    {
-                        "name": "Pan Chen"
-                    },
-                    {
-                        "name": "Dorothy Sun"
-                    },
-                    {
-                        "name": "Ren Chen"
-                    },
-                    {
-                        "name": "Mahesh Srinivasan"
-                    },
-                    {
-                        "name": "Nipun Mathur"
-                    },
-                    {
-                        "name": "Yinglong Xia"
-                    },
-                    {
-                        "name": "Hong Li"
-                    },
-                    {
-                        "name": "Hong Yan"
-                    },
-                    {
-                        "name": "Pan Lu"
-                    },
-                    {
-                        "name": "Lingming Zhang"
-                    },
-                    {
-                        "name": "Tong Zhang"
-                    },
-                    {
-                        "name": "Hanghang Tong"
-                    },
-                    {
-                        "name": "Jingrui He"
+                        "name": "Yuyin Zhou"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.18746v1",
-                "title": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
-                "updated": "2026-05-18T17:59:02Z",
+                "id": "http://arxiv.org/abs/2605.20174v1",
+                "title": "Multi-axis Analysis of Image Manipulation Localization",
+                "updated": "2026-05-19T17:54:33Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.18746v1",
+                        "@href": "https://arxiv.org/abs/2605.20174v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.18746v1",
+                        "@href": "https://arxiv.org/pdf/2605.20174v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Spatial intelligence unfolds through a perception-action loop: agents act to acquire observations, and reason about how observations vary as a function of action. Rather than passively processing what is seen, they actively uncover what is unseen - occluded structure, dynamics, containment, and functionality that cannot be resolved from passive sensing alone. We move beyond prior formulations of spatial intelligence that assume oracle observations by recasting the observer as an actor. We introduce ESI-BENCH, a comprehensive benchmark for embodied spatial intelligence spanning 10 task categories and 29 subcategories built on OmniGibson, grounded in Spelke's core knowledge systems. Agents must decide what abilities to deploy - perception, locomotion, and manipulation - and how to sequence them to actively accumulate task-relevant evidence. We conduct extensive experiments on state-of-the-art MLLMs and find that active exploration substantially outperforms passive counterparts, with agents spontaneously discovering emergent spatial strategies without explicit instructions, while random multi-view often adds noise rather than signal despite consuming far more images. Most failures stem not from weak perception but from action blindness: poor action choices lead to poor observations, which in turn drive cascading errors. While explicit 3D grounding stabilizes reasoning on depth-sensitive tasks, imperfect 3D representation proves more harmful than 2D baselines by distorting spatial relations. Human studies further reveal that unlike humans who seek falsifying viewpoints and revise beliefs under contradiction, models commit prematurely with high confidence regardless of evidence quality, exposing a metacognitive gap that neither better perception nor more embodied interaction alone can close.",
+                "summary": "Advanced image editing software enables easy creation of highly convincing image manipulations, which has been made even more accessible in recent years due to advances in generative AI. Manipulated images, while often harmless, could spread misinformation, create false narratives, and influence people's opinions on important issues. Despite this growing threat, there is limited research on detecting advanced manipulations across different visual domains. Thus, we introduce Analysis Under Domain-shifts, qualIty, Type, and Size (AUDITS), a comprehensive benchmark designed for studying axes of analysis in image manipulation detection. AUDITS comprises over 530K images from two distinct sources (user and news photos). We curate our dataset to support analysis across multiple axes using recent diffusion-based inpaintings, spanning a diverse range of manipulation types and sizes. We conduct experiments under different types of domain shift to evaluate robustness of existing image manipulation detection methods. Our goal is to drive further research in this area by offering new insights that would help develop more reliable and generalizable image manipulation detection methods.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
                         "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-18T17:59:02Z",
-                "arxiv:comment": "https://esi-bench.github.io/",
+                "published": "2026-05-19T17:54:33Z",
+                "arxiv:comment": "28 pages, 5 figures, 5 tables",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Yining Hong"
+                        "name": "Keanu Nichols"
                     },
                     {
-                        "name": "Jiageng Liu"
+                        "name": "Divya Appapogu"
                     },
                     {
-                        "name": "Han Yin"
+                        "name": "Giscard Biamby"
                     },
                     {
-                        "name": "Manling Li"
+                        "name": "Dina Bashkirova"
                     },
                     {
-                        "name": "Leonidas Guibas"
+                        "name": "Anna Rohrbach"
                     },
                     {
-                        "name": "Li Fei-Fei"
-                    },
-                    {
-                        "name": "Jiajun Wu"
-                    },
-                    {
-                        "name": "Yejin Choi"
+                        "name": "Bryan A. Plummer"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.18745v1",
-                "title": "SURGE: Approximation-free Training Free Particle Filter for Diffusion Surrogate",
-                "updated": "2026-05-18T17:59:00Z",
+                "id": "http://arxiv.org/abs/2605.20173v1",
+                "title": "A Methodology for Selecting and Composing Runtime Architecture Patterns for Production LLM Agents",
+                "updated": "2026-05-19T17:54:21Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.18745v1",
+                        "@href": "https://arxiv.org/abs/2605.20173v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.18745v1",
+                        "@href": "https://arxiv.org/pdf/2605.20173v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Diffusion-based generative models increasingly rely on inference-time guidance, adding a drift term or reweighting mixture of experts, to improve sample quality on task-specific objectives. However, most existing techniques require repeated score or gradient evaluations, introducing bias, high computational overhead, or both. We introduce \\texttt{URGE}, Unbiased Resampling via Girsanov Estimation, a derivative-free inference-time scaling algorithm that performs path-wise importance reweighting via a Girsanov change of measure. Instead of computing gradient-based particle weights in previous work, \\texttt{URGE} attaches a simple multiplicative weight to each simulated trajectory and periodically resamples. No score, no Hessian, and no PDE evaluation is required. We establish an equivalence between path-wise and particle-wise SMC: the Girsanov path weight admits a backward conditional expectation that recovers the previous particle-level weights, guaranteeing that both schemes produce the same unbiased terminal law. Empirically, \\texttt{URGE} outperforms existing inference-time guidance baselines on synthetic tests and diffusion-model benchmarks, achieving better generation quality, while being significantly simpler to implement and fully gradient-free.",
+                "summary": "Production LLM agents combine stochastic model outputs with deterministic software systems, yet the boundary between the two is rarely treated as a first-class architectural object. This paper names that boundary the stochastic-deterministic boundary (SDB): a four-part contract among a proposer, verifier, commit step, and reject signal that specifies how an LLM output becomes a system action. We argue that the SDB is the load-bearing primitive of production agent runtimes.\n  Around this primitive, we organize agent runtime design into three concerns: Coordination, State, and Control. We present a catalog of six runtime patterns that compose the SDB differently across conversational, autonomous, and long-horizon agents: hierarchical delegation, scatter-gather plus saga, event-driven sequencing, shared state machine, supervisor plus gate, and human in the loop. For each pattern, we trace its lineage to distributed-systems concepts and identify what changes when the worker is stochastic.\n  The paper contributes a five-step methodology for selecting runtime patterns, a diagnostic procedure that maps production failures to pattern weaknesses, and a failure mode called replay divergence, in which LLM-based consumers of a deterministic event log produce different downstream outputs under model-version or prompt changes. A stylized reliability decomposition separates per-call model variance from architectural momentum, motivating the claim that as model variance decreases, pattern choice and SDB strength become increasingly important levers for long-run reliability. We apply the methodology to five workloads and provide one runnable reference implementation for a 90-day contract-renewal agent.",
                 "category": [
                     {
-                        "@term": "stat.ML",
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.SE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-19T17:54:21Z",
+                "arxiv:comment": "25 pages, 2 figures, 6 tables. Companion repo at https://github.com/vasundras/agent-runtime-patterns",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": {
+                    "name": "Vasundra Srinivasan"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.20167v1",
+                "title": "HaorFloodAlert: Deseasonalized ML Ensemble for 72-Hour Flood Prediction in Bangladesh Haor Wetlands",
+                "updated": "2026-05-19T17:51:46Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.20167v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.20167v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Flash floods in Bangladesh's haor wetlands show up with almost no warning. They wreck the annual boro rice harvest. Current setups, built for riverine floods, miss backwater dynamics entirely. These basins are flat. Water does not behave like it does on the Brahmaputra.\n  We built HaorFloodAlert, a deseasonalized machine learning ensemble that forecasts 72-hour flood probability for the Sunamganj Haor (approximately 8,000 km2). Temperature was acting as a seasonal cheat code - it inflated accuracy by 6.9 pp just because floods happen in warm months. We caught that. We also built an upstream Barak River Sentinel-1 SAR proxy from Silchar, Assam, giving about 36 hours of lead time. Otsu-thresholded SAR change detection validates at 84-91 percent spatial match.\n  The operational ensemble (RF 0.5625 + XGBoost 0.4375) hits 89.6 percent LOOCV accuracy, 87.5 percent recall, and 0.943 AUC-ROC on 77 real Sentinel-1 events. A three-tier alert pipeline and a BRRI-calibrated boro rice damage estimator are included.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.NA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.PR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "q-fin.MF",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.CO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-18T17:59:00Z",
-                "arxiv:comment": "accepted by ICML 2026",
-                "arxiv:primary_category": {
-                    "@term": "stat.ML"
-                },
-                "author": [
-                    {
-                        "name": "Lifu Wei"
-                    },
-                    {
-                        "name": "Yinuo Ren"
-                    },
-                    {
-                        "name": "Naichen Shi"
-                    },
-                    {
-                        "name": "Yiping Lu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.18743v1",
-                "title": "Actionable World Representation",
-                "updated": "2026-05-18T17:58:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.18743v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.18743v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Inspired by the emergent behaviors in large language models that generalized human intelligence, the research community is pursuing similar emergent capabilities within world models, with a emphasis on modeling the physical world. Within the scope of physical world model, objects are the fundamental primitives that constitute physical reality. From humans to computers, nearly everything we interact with is an object. These objects are rarely static; they are actionable entities with varying states determined by their intrinsic properties. While current methods approach object action states either via video generation or dynamic scene reconstruction, none explicitly model this basic element in a unified, principled way to build an actionable object representation. We propose WorldString, a neural architecture capable of modeling the state manifold of real-world objects by learning directly from point clouds or RGB-D video streams. Serving as a versatile digital twin, it acts as a foundational building block for physical world models; thus, we name it WorldString. Sweetly, its fully differentiable structure seamlessly enables future integration with policy learning and neural dynamics.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-05-18T17:58:51Z",
+                "published": "2026-05-19T17:51:46Z",
+                "arxiv:comment": "9 pages, 9 figures. To be submitted to raaicon.org",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Kunqi Xu"
+                        "name": "Salma Hoque Talukdar Koli"
                     },
                     {
-                        "name": "Jitao Li"
+                        "name": "Fahima Haque Talukder Jely"
                     },
                     {
-                        "name": "Jianglong Ye"
+                        "name": "Md. Samiul Alim"
                     },
                     {
-                        "name": "Tianshu Tang"
-                    },
-                    {
-                        "name": "Isabella Liu"
-                    },
-                    {
-                        "name": "Sifei Liu"
-                    },
-                    {
-                        "name": "Xueyan Zou"
+                        "name": "Md. Zakir Hossen"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.18740v1",
-                "title": "Vision-OPD: Learning to See Fine Details for Multimodal LLMs via On-Policy Self-Distillation",
-                "updated": "2026-05-18T17:57:04Z",
+                "id": "http://arxiv.org/abs/2605.20164v1",
+                "title": "Not Every Rubric Teaches Equally: Policy-Aware Rubric Rewards for RLVR",
+                "updated": "2026-05-19T17:50:18Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.18740v1",
+                        "@href": "https://arxiv.org/abs/2605.20164v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.18740v1",
+                        "@href": "https://arxiv.org/pdf/2605.20164v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Multimodal Large Language Models (MLLMs) still struggle with fine-grained visual understanding, where answers often depend on small but decisive evidence in the full image. We observe a regional-to-global perception gap: the same MLLM answers fine-grained questions more accurately when conditioned on evidence-centered crops than on the corresponding full images, suggesting that many failures stem from difficulty to focus on relevant evidence rather than insufficient local recognition ability. Motivated by this observation, we propose Vision-OPD (Vision On-Policy Distillation), a regional-to-global self-distillation framework that transfers the model's own privileged regional perception to its full-image policy. Vision-OPD instantiates two conditional policies from the same MLLM: a crop-conditioned teacher and a full-image-conditioned student. The student generates on-policy rollouts, and Vision-OPD minimizes token-level divergence between the teacher and student next-token distributions along these rollouts. This enables the model to internalize the benefit of visual zooming without external teacher models, ground-truth labels, reward verifiers, or inference-time tool use. Experiments on multiple fine-grained visual understanding benchmarks show that Vision-OPD models achieve competitive or superior performance against much larger open-source, closed-source, and \"Thinking-with-Images\" agentic models.",
+                "summary": "Reinforcement learning with verifiable rewards has made post-training highly effective when correctness can be checked automatically. However, many important model behaviors require satisfying several qualitative criteria at once. Rubric-based rewards address this setting by grading prompt-specific criteria and aggregating them into a scalar reward. Yet standard static aggregations conflate a criterion's human-assigned importance with its current usefulness as an optimization signal. We show that this assumption breaks down in rubric RL: many important criteria are already saturated or currently unreachable, while criteria that distinguish rollouts are not necessarily those with the largest human weights. We introduce POW3R, a policy-aware rubric reward framework that preserves human weights and category balance as the rubric objective while adapting criterion-level reward weights during training. POW3R uses rollout-level contrast to emphasize criteria that currently separate the policy's outputs, making the GRPO reward more informative without changing the underlying evaluation target. Across three base policies on two datasets spanning multimodal and text-only settings, POW3R wins $24$ of $30$ base-policy/metric comparisons, improving both mean rubric reward and strict completion (the fraction of prompts whose response satisfies every required rubric criterion) over vanilla GRPO with rubric rewards, and reaches the same plateau in $2.5$--$4\\times$ fewer training steps. Rubric rewards should therefore distinguish what should matter in the final answer from what can teach the current policy.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-19T17:50:18Z",
+                "arxiv:comment": "24 pages, 7 figures, 6 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Utkarsh Tyagi"
+                    },
+                    {
+                        "name": "Xingang Guo"
+                    },
+                    {
+                        "name": "MohammadHossein Rezaei"
+                    },
+                    {
+                        "name": "Daniel George"
+                    },
+                    {
+                        "name": "Anas Mahmoud"
+                    },
+                    {
+                        "name": "Jackson Lee"
+                    },
+                    {
+                        "name": "Bing Liu"
+                    },
+                    {
+                        "name": "Yunzhong He"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.20159v1",
+                "title": "Interpretable Computer Vision for Defect Detection in X-ray Tomography of Aerospace SiC/SiC Composites",
+                "updated": "2026-05-19T17:46:49Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.20159v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.20159v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Non-destructive testing of aerospace SiC/SiC composites via X-ray computed tomography (XCT) relies on expert visual assessment, with current workflows offering limited traceability for accept/reject decisions. Deep convolutional networks can automate defect detection, yet their black-box nature conflicts with the transparency that industrial inspection practice demands. To close this gap, we introduce p-ResNet-50, a convolutional framework extended with a prototype layer that couples high detection accuracy with case-based explanations. Six learned prototypes are explicitly aligned with expert-defined semantic categories-healthy matrix, matrix--air interfaces, pores, line-like defects, and mixed morphologies-so that every classification is traceable to a physically meaningful reference. Two novel regularisation terms, anchor-based and medoid-based, tether prototypes to expert-selected patches and prevent prototype collapse, addressing a known limitation of prototype networks. Latent-space analysis via UMAP delineates semantically coherent sub-domains and maps zones of uncertainty where misclassifications concentrate, giving inspectors an explicit picture of where the model is-and is not-reliable. The framework is validated on an XCT patch dataset of approximately 12,000 patches extracted from four defect-rich SiC/SiC laboratory specimens. Taking a black-box ResNet-50 as a baseline (ROC-AUC = 0.991), the prototype extension achieves comparable performance (accuracy 0.957 vs. 0.959; ROC-AUC 0.994 vs. 0.993) while trading a slight reduction in sensitivity for higher precision and specificity. Each decision is backed by representative evidence patches, and the model explicitly flags its uncertainty regions. Beyond defect mapping, the framework establishes a reusable methodology for embedding domain-expert knowledge into prototype networks, applicable to other XCT inspection scenarios requiring traceable, auditable decisions.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
+                        "@term": "cond-mat.mtrl-sci",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -691,32 +362,170 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-18T17:57:04Z",
-                "arxiv:comment": "Project page: https://github.com/VisionOPD/Vision-OPD",
+                "published": "2026-05-19T17:46:49Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Qianhao Yuan"
+                        "name": "Antonio Pe\u00f1a Corredor",
+                        "arxiv:affiliation": "SES"
                     },
                     {
-                        "name": "Jie Lou"
+                        "name": "Julien Lesseur",
+                        "arxiv:affiliation": "SES"
                     },
                     {
-                        "name": "Xing Yu"
+                        "name": "Romain Nunez",
+                        "arxiv:affiliation": "SES"
                     },
                     {
-                        "name": "Hongyu Lin"
+                        "name": "Paul Rivalland",
+                        "arxiv:affiliation": "SES"
                     },
                     {
-                        "name": "Le Sun"
+                        "name": "Thomas Philippe"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.20157v1",
+                "title": "SAGE: Scalable Automatic Gating Ensemble for Confident Negative Harvesting in Fraud Detection",
+                "updated": "2026-05-19T17:46:31Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.20157v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Xianpei Han"
+                        "@href": "https://arxiv.org/pdf/2605.20157v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
                     },
                     {
-                        "name": "Yaojie Lu"
+                        "@rel": "related",
+                        "@href": "https://doi.org/10.1145/3779211.3793166",
+                        "@title": "doi"
+                    }
+                ],
+                "summary": "Music streaming fraud, where bad actors artificially inflate stream counts to manipulate chart rankings and royalty payments, poses a significant threat to streaming services and legitimate content creators. Traditional fraud detection approaches struggle with a critical challenge: many legitimate edge cases, including super-fans and sleep-music sessions, exhibit activity patterns that closely mimic those of coordinated fraud. We present SAGE, a novel counterfactual-aware negative harvesting approach that combines SimHash-based stratified sampling with a modular gating ensemble for confident negative identification from unlabeled data. Our ensemble architecture employs pluggable statistical gates (currently instantiated with Mahalanobis distance and k-NN density) with configurable voting thresholds enabling adaptive precision-recall trade-offs. This addresses the representation bias problem in Positive-Unlabeled learning by ensuring comprehensive coverage of rare behavioral cohorts through floor-constrained sampling. Evaluation demonstrates strong precision and recall on held-out data. The approach generalizes across fraud detection domains, achieving strong performance on both customer-level and artist-level fraud without modification to the core methodology.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-19T17:46:31Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "arxiv:journal_ref": "WSDM Companion '26: Nineteenth ACM International Conference on Web Search and Data Mining, 2026, Pages 34 - 38",
+                "author": [
+                    {
+                        "name": "Sudheer Tubati"
+                    },
+                    {
+                        "name": "Amit Goyal"
+                    }
+                ],
+                "arxiv:doi": "10.1145/3779211.3793166"
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.20151v1",
+                "title": "When Does Model Collapse Occur in Structured Interactive Learning?",
+                "updated": "2026-05-19T17:41:09Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.20151v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.20151v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The proliferation of generative artificial intelligence has given rise to an interactive learning environment, where model parameters are continuously updated using not only data generated by natural processes, but also synthetic outputs produced by other models. This paradigm introduces two major challenges: (1) training data are no longer drawn exclusively from the target population, undermining a core assumption of classical statistical learning, and (2) model training processes become inherently correlated, as models interact with one another through repeated exposure to each other's synthetic outputs in a potentially complex manner. Establishing reliable statistical inference in such structured interactive learning environments therefore remains an important open problem. In particular, there is growing concern about model collapse, a phenomenon in which the performance of generative models progressively degrades as they are trained on synthetic data produced by earlier model generations.\n  Prior work on model collapse primarily focuses on a single model trained on its own output, failing to capture model performance in multi-model interactive settings. In this work, we fill this gap by investigating the performance of generative models in an interactive learning environment with general interaction patterns. In particular, we formalize model interactions using directed graphs and show that the occurrence of model collapse depends critically on the topology of the interaction graph. We further derive an explicit necessary and sufficient condition characterizing when model collapse occurs, and establish finite-sample results for linear regression and asymptotic guarantees for general M-estimators. We support our theoretical findings through extensive numerical experiments.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-19T17:41:09Z",
+                "arxiv:comment": "57 pages, 12 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Yuchen Wu"
+                    },
+                    {
+                        "name": "Kangjie Zhou"
+                    },
+                    {
+                        "name": "Weijie Su"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.20146v1",
+                "title": "Spectral classification of brown dwarfs using machine learning",
+                "updated": "2026-05-19T17:34:37Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.20146v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.20146v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Brown dwarfs are compact objects that do not reach temperatures high enough to produce sustained hydrogen fusion. Consequently, they cool over time, gradually evolving through later spectral types. In fact, three new spectral types (L, T, and Y) were added to the Harvard sequence to accommodate the spectral features of brown dwarfs. During the cooling process, some brown dwarfs unexpectedly become bluer instead of redder (at optical and near-infrared wavelengths). This phenomenon, known as the bluing effect, is particularly noticeable at the L/T spectral transition. The aim of this work is to approximate the spectral type of brown dwarfs using only photometric data, in particular 2MASS and WISE magnitudes. We used two machine learning algorithms, Random Forest and Gaussian Processes, which were evaluated using a 70/30 train/test split. Both models were trained using 5-fold cross-validation and achieved F1-scores of 0.84 and 0.87, respectively, on the test set. After validating the reliability of the algorithms, we applied them to 21 isolated brown dwarfs without prior spectral type determinations. Our results indicate that 5 of these objects have a spectral type between L0 and L4, while the remaining 16 fall within the M6-M9 range. Machine learning algorithms, combined with multi-band photometry, are a powerful tool for estimating the spectral types of brown dwarfs.",
+                "category": [
+                    {
+                        "@term": "astro-ph.SR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.IM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-19T17:34:37Z",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.SR"
+                },
+                "author": [
+                    {
+                        "name": "A. R. Callen"
+                    },
+                    {
+                        "name": "I. H. Bustos Fierro"
+                    },
+                    {
+                        "name": "M. G\u00f3mez"
                     }
                 ]
             }
