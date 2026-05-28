@@ -5,715 +5,562 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-05-27T23:12:09Z",
+        "updated": "2026-05-28T14:33:19Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "576201",
+        "opensearch:totalResults": "576776",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2605.27367v1",
-                "title": "SpatialBench: Is Your Spatial Foundation Model an All-Round Player?",
-                "updated": "2026-05-26T17:59:20Z",
+                "id": "http://arxiv.org/abs/2605.28820v1",
+                "title": "From Pixels to Words -- Towards Native One-Vision Models at Scale",
+                "updated": "2026-05-27T17:59:55Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.27367v1",
+                        "@href": "https://arxiv.org/abs/2605.28820v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.27367v1",
+                        "@href": "https://arxiv.org/pdf/2605.28820v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "While spatial foundation models have demonstrated impressive performance on standard datasets, a critical question remains: are they truly all-round players capable of generalizing robustly across diverse downstream tasks, arbitrary viewpoints, shifting scene domains, varying input densities, and specific hardware constraints? Answering this overarching question requires a holistic assessment, yet current models are mainly evaluated on specific domains for which they were specifically designed or trained. Such evaluations are intrinsically limited by narrow paradigm coverage, limited scene domains, and arbitrary frame sampling, making it fundamentally difficult to assess their true generalization capabilities. To address this gap, we present SpatialBench, a cross-paradigm, domain-diverse benchmark for spatial foundation models with deterministic sampling. SpatialBench features unprecedented scale and rigorous deterministic design, comprising 19 datasets and 546 scenes across 5 diverse spatial domains. It comprehensively evaluates 41 models across 6 paradigms on 5 task suites under 4 different input density settings. Our extensive evaluation reveals that current models are not yet all-round players, and uncovers crucial insights for future advancement. Specifically, we demonstrate that full-context attention maximizes accuracy while bounded-memory strategies unlock long-sequence scalability. Moreover, our empirical evaluations in challenging embodied and egocentric tasks demonstrate that strict domain alignment and high data quality are far more critical to performance than simple dataset scaling. Furthermore, to address the largest data gap identified in our analysis, we go beyond evaluation by introducing a large-scale dataset, DA-Next-5M, and a strong baseline model, DA-Next, pushing the boundaries of spatial representation learning.",
+                "summary": "Current vision-language models (VLMs) typically stitch together separate image encoders and language decoders via multi-stage alignment, a modular framework that inevitably fragments pixel-level signals across frames and scatters early pixel-word interactions. In parallel, native VLMs, despite impressive performance on single images, remain largely unexplored in multi-image, video understanding, and spatial intelligence. Hence, we introduce NEO-ov, a native foundation model that learns cross-frame and pixel-word correspondence end-to-end, without any external encoders, auxiliary adapters, or post-hoc fusion. By eliminating module boundaries entirely, NEO-ov enables fine-grained and unified spatiotemporal modeling to emerge natively inside the model. Notably, NEO-ov largely narrows the gap to modular counterparts while excelling at fine-grained visual perception, validating that native \"one-vision\" architectures are not only feasible but competitive at scale. Beyond empirical performance, we unveil systematic architectural analyses and detailed training recipes to facilitate subsequent native multimodal modeling. Our code and models are publicly available at: https://github.com/EvolvingLMMs-Lab/NEO.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-05-26T17:59:20Z",
-                "arxiv:comment": "Project Page: https://ropedia.github.io/SpatialBench/",
+                "published": "2026-05-27T17:59:55Z",
+                "arxiv:comment": "13 pages, 6 figures",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Haosong Peng"
+                        "name": "Haiwen Diao"
                     },
                     {
-                        "name": "Hao Li"
+                        "name": "Jiahao Wang"
                     },
                     {
-                        "name": "Jiaqi Chen"
+                        "name": "Penghao Wu"
                     },
                     {
-                        "name": "Yuhao Pan"
+                        "name": "Yuhao Dong"
                     },
                     {
-                        "name": "Runmao Yao"
+                        "name": "Yuwei Niu"
                     },
                     {
-                        "name": "Yalun Dai"
+                        "name": "Yue Zhu"
                     },
                     {
-                        "name": "Fushuo Huo"
+                        "name": "Zhongang Cai"
                     },
                     {
-                        "name": "Fangzhou Hong"
+                        "name": "Weichen Fan"
                     },
                     {
-                        "name": "Zhaoxi Chen"
+                        "name": "Linjun Dai"
                     },
                     {
-                        "name": "Haozhao Wang"
+                        "name": "Silei Wu"
                     },
                     {
-                        "name": "Dingwen Zhang"
+                        "name": "Xuanyu Zheng"
+                    },
+                    {
+                        "name": "Mingxuan Li"
+                    },
+                    {
+                        "name": "Yuanhan Zhang"
+                    },
+                    {
+                        "name": "Bo Li"
+                    },
+                    {
+                        "name": "Hanming Deng"
+                    },
+                    {
+                        "name": "Huchuan Lu"
+                    },
+                    {
+                        "name": "Quan Wang"
+                    },
+                    {
+                        "name": "Lei Yang"
+                    },
+                    {
+                        "name": "Lewei Lu"
+                    },
+                    {
+                        "name": "Dahua Lin"
                     },
                     {
                         "name": "Ziwei Liu"
-                    },
-                    {
-                        "name": "Wenchao Xu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.27366v1",
-                "title": "MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation",
-                "updated": "2026-05-26T17:59:19Z",
+                "id": "http://arxiv.org/abs/2605.28819v1",
+                "title": "PEFT-Arena: Understanding Parameter-Efficient Finetuning from a Stability-Plasticity Perspective",
+                "updated": "2026-05-27T17:59:51Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.27366v1",
+                        "@href": "https://arxiv.org/abs/2605.28819v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.27366v1",
+                        "@href": "https://arxiv.org/pdf/2605.28819v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large language model (LLM) agents rely on reusable skills to solve complex tasks. However, existing skill creation approaches treat skills as isolated and static artifacts, limiting their reusability, reliability, and long-term improvement. We propose MUSE-Autoskill Agent (Memory-Utilizing Skill Evolution), a skill-centric agent framework that lets agents continuously improve their task-solving capability by creating, reusing, and refining skills under a unified lifecycle (creation, memory, management, evaluation, and refinement). Our framework enables agents to create skills on demand, store and reuse them across tasks, organize and select them efficiently, and evaluate them through unit tests and runtime feedback for continuous refinement. We further introduce skill-level memory that accumulates experience for each skill across tasks, enabling more effective reuse and adaptation over time. Experiments on SkillsBench provide initial evidence that lifecycle-managed skills can improve task success, efficiency, reuse, and cross-agent transfer, highlighting the importance of treating skills as long-lived, experience-aware, and testable assets.",
+                "summary": "Parameter-efficient finetuning (PEFT) has become the standard approach for adapting large language models, yet evaluations largely emphasize downstream accuracy while overlooking the retention of pretrained capabilities. We argue that PEFT should be assessed through the stability-plasticity dilemma: the trade-off between target-task adaptation and resistance to forgetting. We introduce PEFT-Arena, a benchmark that jointly measures downstream performance and general capability retention. Across methods, we find distinct stability-plasticity profiles; under comparable parameter budgets, orthogonal finetuning achieves the most favorable Pareto frontier. To explain these differences, we analyze PEFT updates from two geometric perspectives. In weight space, spectral analysis reveals how parameterizations interact with the pretrained singular-value structure. In activation space, retention metrics show whether finetuning preserves or distorts general-capability representations, with forgetting linked to non-isometric representation distortion. Finally, an analysis shows that final SFT checkpoints often overshoot a better target-retention operating point. Inspired by this, we present case studies of a post-hoc improvement with path-wise rewinding.",
                 "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.MA",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-26T17:59:19Z",
-                "arxiv:comment": "30 pages, 8 figures, 13 tables, working in progress",
+                "published": "2026-05-27T17:59:51Z",
+                "arxiv:comment": "Technical report v1 (28 pages, 9 figures, project page: https://spherelab.ai/PEFT-Arena/)",
                 "arxiv:primary_category": {
-                    "@term": "cs.AI"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Huawei Lin"
+                        "name": "Yangyi Huang"
                     },
                     {
-                        "name": "Peng Li"
+                        "name": "Ruotian Peng"
                     },
                     {
-                        "name": "Jie Song"
+                        "name": "Zeju Qiu"
                     },
                     {
-                        "name": "Fuxin Jiang"
+                        "name": "Jiale Kang"
                     },
                     {
-                        "name": "Tieying Zhang"
+                        "name": "Yandong Wen"
+                    },
+                    {
+                        "name": "Bernhard Sch\u00f6lkopf"
+                    },
+                    {
+                        "name": "Weiyang Liu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.27365v1",
-                "title": "LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding",
-                "updated": "2026-05-26T17:59:12Z",
+                "id": "http://arxiv.org/abs/2605.28818v1",
+                "title": "VLMs May Not Globally Enhance Human Alignment over LLMs During Natural Reading",
+                "updated": "2026-05-27T17:59:34Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.27365v1",
+                        "@href": "https://arxiv.org/abs/2605.28818v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.27365v1",
+                        "@href": "https://arxiv.org/pdf/2605.28818v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Vision-language models (VLMs) commonly formulate visual grounding and detection as a coordinate-token generation problem, serializing each 2D box into multiple 1D tokens that are learned and decoded largely independently. This token-by-token decoding mismatches the coupled structure of box geometry and creates a practical inference bottleneck due to strictly sequential generation. We introduce LocateAnything, a unified generative grounding and detection framework based on Parallel Box Decoding (PBD). By decoding geometric elements such as bounding boxes and points as atomic units in a single step, LocateAnything preserves intra-box geometric coherence and unlocks substantial parallelism. We show that PBD improves both decoding throughput and localization accuracy. We further develop a scalable data engine and curate LocateAnything-Data, a large-scale dataset with more than 138 million training samples, substantially increasing data diversity for high-precision localization. Extensive evaluations show that LocateAnything advances the speed-accuracy frontier, achieving significantly higher decoding throughput while improving high-IoU localization quality across diverse benchmarks. The results highlight the complementary benefits of Parallel Box Decoding and large-scale training data in enabling efficient and precise unified visual grounding and detection.",
+                "summary": "Large language models (LLMs) have become increasingly useful computational models of human language processing, but it remains unclear whether vision-language learning makes text representations more human-like during natural reading. Here, we address this question by comparing tightly matched LLM and vision-language model (VLM) pairs under a strictly text-only setting, allowing us to isolate the effect of multimodal training history from online visual input or cross-modal fusion. We evaluate model alignment with a human natural-reading dataset that includes whole-cortex fMRI responses and synchronized eye-tracking saccades. Our findings demonstrate that multimodal pretraining may not confer a uniform, global advantage in human alignment during natural reading, indicating that language-internal representations remain the key factor for modeling human text processing. However, the VLM advantage could emerge more selectively when sentences contain stronger visual semantic content, with converging evidence from both fMRI and eye-movement alignments. Together, our findings provide a controlled in silico framework for testing how visual learning history shapes model-human alignment of language processing, suggesting that multimodal pretraining contributes selectively rather than globally to human-like language representations during natural reading.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "q-bio.NC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-27T17:59:34Z",
+                "arxiv:comment": "17 pages, 10 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Jinzhou Wu"
+                    },
+                    {
+                        "name": "Zhengwu Ma"
+                    },
+                    {
+                        "name": "Jixing Li"
+                    },
+                    {
+                        "name": "Baoping Tang"
+                    },
+                    {
+                        "name": "Zitong Lu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.28816v1",
+                "title": "Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players",
+                "updated": "2026-05-27T17:59:31Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.28816v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.28816v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "World models for interactive video generation have largely focused on single-agent settings, where future observations are generated from a single control signal. However, many generated environments require multi-agent interaction: multiple players, robots, or embodied agents act simultaneously within a shared space. Scaling world models to such settings requires a principled multi-agent design: agents should remain independently controllable, permutation-symmetric, and support efficient inference while maintaining consistency across time and perspectives. In this paper, we present our generative multi-agent world model for interactive simulation. It introduces Simplex Rotary Agent Encoding, a parameter-free extension of 3D RoPE that represents agents as vertices of a regular simplex in rotary angle space. This gives each agent a distinct phase while making all agents permutation-equivalent, enabling scalable agent identity without learned per-slot identities or a fixed agent ordering. To avoid dense all-to-all attention across agents, we further propose Sparse Hub Attention, where learnable hub tokens mediate token interaction across agents, reducing cross-agent attention cost from quadratic to linear in the number of agents. For real-time rollout, we distill a full-context diffusion teacher into a causal student that generates temporal blocks sequentially with KV caching, enabling action-responsive generation at 24 FPS. Experiments in multiplayer virtual environments show that our model improves video fidelity, action controllability, and inter-agent consistency over slot-based and dense-attention baselines, while generalizing from two to four players without additional training.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-27T17:59:31Z",
+                "arxiv:comment": "Project Page: https://research.nvidia.com/labs/sil/projects/gamma-world",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Fangfu Liu"
+                    },
+                    {
+                        "name": "Kai He"
+                    },
+                    {
+                        "name": "Tianchang Shen"
+                    },
+                    {
+                        "name": "Tianshi Cao"
+                    },
+                    {
+                        "name": "Sanja Fidler"
+                    },
+                    {
+                        "name": "Yueqi Duan"
+                    },
+                    {
+                        "name": "Jun Gao"
+                    },
+                    {
+                        "name": "Igor Gilitschenski"
+                    },
+                    {
+                        "name": "Zian Wang"
+                    },
+                    {
+                        "name": "Xuanchi Ren"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.28811v1",
+                "title": "HarmoVid: Relightful Video Portrait Harmonization",
+                "updated": "2026-05-27T17:59:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.28811v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.28811v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present a method for harmonizing the lighting of a foreground video to match a target background scene, adjusting shadows, color tone, and illumination intensity (relightful harmonization). Unlike images, acquiring labeled data for videos, where identical motions are recorded under different lighting conditions, is practically infeasible and non-scalable. While one way to create such paired data is to apply existing image-based harmonization models frame by frame to a video, the resulting outputs often suffer from significant temporal jitters. We overcome this problem by introducing a novel lighting deflickering model that can stabilize the global and local lighting flickering artifacts. Our video diffusion model learns from these upgraded deflickered data with a volume of real and synthetic videos to generate high-quality video harmonization results. We further propose an asymmetric alpha mask conditioning technique to learn the clean boundaries from real videos. Experiments demonstrate that our model achieves strong temporal coherence, naturalness, cleaner boundaries, and physically meaningful lighting behavior, while maintaining strong relighting expressiveness compared to prior image-based and video-based harmonization methods.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-05-27T17:59:02Z",
+                "arxiv:comment": "CVPR 2026",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Jun Myeong Choi"
+                    },
+                    {
+                        "name": "Jae Shin Yoon"
+                    },
+                    {
+                        "name": "Luchao Qi"
+                    },
+                    {
+                        "name": "Roni Sengupta"
+                    },
+                    {
+                        "name": "Joon-Young Lee"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.28812v1",
+                "title": "Beyond Binary: Sim-to-Real Dexterous Manipulation with Physics-Grounded Contact Representation",
+                "updated": "2026-05-27T17:59:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.28812v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.28812v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "A primary bottleneck in contact-rich manipulation is the difficulty of collecting real-world data. Sim-to-real reinforcement learning offers a scalable alternative, but the simulation-reality gap prevents information-dense modalities like touch from being effectively used. Existing sim-to-real methods often mitigate this gap by simplifying tactile data into coarse low-dimensional features -- sacrificing the richness required for complex manipulation. In this work, we introduce Center-of-Pressure (CoP), an effective tactile representation grounded in physical principles that preserves dense contact information while maintaining robustness for sim-to-real transfer. To support this representation, we propose a sensor calibration scheme based on differentiable dynamics, enabling the estimation of taxel orientations without requiring ground-truth force measurements. We evaluate CoP on two blind, challenging contact-rich manipulation tasks: peg-in-hole insertion and ball balancing. Across both tasks, policies conditioned on CoP achieve zero-shot sim-to-real transfer on a multi-fingered hand, and outperform both coarse binary-contact and raw-taxel baselines. Analysis of learned policy states further suggests that CoP-conditioned policies encode task-relevant physical properties, such as object mass, as an emergent byproduct of control.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-27T17:59:02Z",
+                "arxiv:comment": "Project site: https://mpan31415.github.io/tactile_rep/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Jiahe Pan"
+                    },
+                    {
+                        "name": "Stelian Coros"
+                    },
+                    {
+                        "name": "Jitendra Malik"
+                    },
+                    {
+                        "name": "Toru Lin"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.28810v1",
+                "title": "Affective Music Recommendation: A Rollout-Based World Model for Offline Preference Optimization",
+                "updated": "2026-05-27T17:58:46Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.28810v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.28810v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Functional music applications, from consumer focus and sleep aids to clinical interventions, share a distinctive recommendation problem: success is defined by the listener's affective state, but online experimentation on emotion is ethically constrained, particularly for clinical populations who cannot reliably skip a song or report distress. We describe AMRS, the Affective Music Recommendation System deployed on LUCID's health-and-wellness platforms, which serve clinical users (primarily older adults with neurocognitive conditions) and consumer-wellness users across energize, focus, calm, and sleep modes. AMRS is built around a rollout-based world model: a causal transformer trained on logged listening data to jointly predict engagement, binary rating, and self-reported valence and arousal. The world model serves both as an in-silico simulator for offline policy training and as a stress-testing tool before deployment. A recommender policy initialized by behaviour cloning is fine-tuned offline with Direct Preference Optimization (DPO) against a configurable multi-objective utility function. Under a strict cold-start protocol, the world model predicts both behavioural and affective signals with usable fidelity; DPO improves predicted valence and arousal over the cloned baseline while maintaining a similar diversity profile and avoiding the distributional collapse produced by greedy optimization. We position the work as an early deployed validation of a methodology for affective recommendation when online experimentation is ethically untenable.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.SD",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-05-27T17:58:46Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Audrey Chan"
+                    },
+                    {
+                        "name": "Aaron Labb\u00e9"
+                    },
+                    {
+                        "name": "Jacob Lavoie"
+                    },
+                    {
+                        "name": "Jordan Bannister"
+                    },
+                    {
+                        "name": "Ars\u00e8ne Fansi Tchango"
+                    },
+                    {
+                        "name": "Guillaume Lajoie"
+                    },
+                    {
+                        "name": "Laurent Charlin"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2605.28809v1",
+                "title": "AREA: Attribute Extraction and Aggregation for CLIP-Based Class-Incremental Learning",
+                "updated": "2026-05-27T17:58:16Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2605.28809v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2605.28809v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Class-Incremental Learning (CIL) is important in building real-world learning systems. In CLIP-based CIL, the model performs classification by comparing similarity between visual and textual embeddings obtained from template prompts, e.g., ``a photo of a [CLASS]''. This seemingly monolithic matching process can be decomposed into two conceptually distinct stages: attribute extraction and attribute aggregation. For example, a model may recognize cat using attributes such as fur texture and whiskers. When learning a new class like car, the model must extract additional attributes like wheels and adjust how they are aggregated in the shared representation space. However, since only data from the current task is available, incremental updates can bias both attribute extraction and aggregation toward new classes, leading to catastrophic forgetting. Therefore, we propose AREA for attribute extraction and aggregation in CLIP-based CIL. To stabilize extraction, we anchor class-level visual and textual attributes on the hyperspherical embedding space via principal geodesic analysis. To stabilize aggregation, we learn lightweight task-specific experts with scoring and residual refinement, regularized by a variational information bottleneck objective. During inference, we perform routing over task attribute manifolds via optimal transport for more concise prediction. Experiments show that AREA consistently outperforms SOTA methods. Code is available at https://github.com/LAMDA-CL/ICML2026-AREA.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
                         "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-26T17:59:12Z",
+                "published": "2026-05-27T17:58:16Z",
+                "arxiv:comment": "Accepted to ICML 2026. Code is available at https://github.com/LAMDA-CL/ICML2026-AREA",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Shihao Wang"
+                        "name": "Zhen-Hao Xie"
                     },
                     {
-                        "name": "Shilong Liu"
+                        "name": "Yu-Cheng Shi"
                     },
                     {
-                        "name": "Yuanguo Kuang"
-                    },
-                    {
-                        "name": "Xinyu Wei"
-                    },
-                    {
-                        "name": "Yangzhou Liu"
-                    },
-                    {
-                        "name": "Zhiqi Li"
-                    },
-                    {
-                        "name": "Yunze Man"
-                    },
-                    {
-                        "name": "Guo Chen"
-                    },
-                    {
-                        "name": "Andrew Tao"
-                    },
-                    {
-                        "name": "Guilin Liu"
-                    },
-                    {
-                        "name": "Jan Kautz"
-                    },
-                    {
-                        "name": "Lei Zhang"
-                    },
-                    {
-                        "name": "Zhiding Yu"
+                        "name": "Da-Wei Zhou"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.27364v1",
-                "title": "A Minute-Cadence Deep Bulge Survey: First Data Release of DREAMS",
-                "updated": "2026-05-26T17:59:07Z",
+                "id": "http://arxiv.org/abs/2605.28807v1",
+                "title": "Calibrating Conservatism for Scalable Oversight",
+                "updated": "2026-05-27T17:56:47Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.27364v1",
+                        "@href": "https://arxiv.org/abs/2605.28807v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.27364v1",
+                        "@href": "https://arxiv.org/pdf/2605.28807v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The DECam Rogue Earths and Mars Survey (DREAMS), a NOIRLab survey program, has been conducting a three-year survey covering a 5\\,deg$^2$ area in the Galactic bulge since 2025 June. Its primary science goal is to detect low-mass free-floating planets through microlensing, while its minute-level cadence also enables the detection and characterization of rapid phenomena on timescales of minutes to hours such as stellar flares and pulsating stars. Here, we present the data reduction and calibration of the DREAMS observations obtained in 2025 and introduce the first DREAMS data release (DR1). DR1 includes 1,856 $z$-band observations and 325 $r$-band observations for 59,372,789 stars. The DREAMS DR1 catalog contains at least twice as many stars as any previous catalog covering the same 5\\,deg$^2$ area. We present DREAMS light curves for a known blue large-amplitude pulsator and a known transiting system to demonstrate the survey's capabilities. We also perform a pilot search for short-duration variables over about 0.4% of the DR1 sample, identifying one new short microlensing event, two stellar flares, and 24 new short variables. This suggests that DREAMS DR1 may contain hundreds of stellar flares and thousands of previously unknown short variables.",
-                "category": [
-                    {
-                        "@term": "astro-ph.SR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.EP",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.GA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.IM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-26T17:59:07Z",
-                "arxiv:comment": "18 pages, 11 figures, 2 tables. Data release portal: https://astro.westlake.edu.cn/dreams",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.SR"
+                "summary": "Agentic AI systems capable of autonomous planning and extended environmental interaction pose a fundamental control problem: how can humans maintain meaningful oversight of systems that may exceed their own capabilities? Existing approaches to scalable oversight rely on complex assumptions, remain largely heuristic, or lack practical methods for sequential settings with statistical guarantees. We introduce Calibrated Collective Oversight (CCO), which aggregates diverse auxiliary scoring functions into a penalty measuring deviation from a conservative baseline. Inspired by Attainable Utility Preservation, CCO enables collective conservatism: actions face a penalty proportional to overseer concern, so high-utility actions are still selected when overseers find them unobjectionable and overridden only when concern accumulates. CCO calibrates this conservatism online using Conformal Decision Theory, ensuring that undesirable outcomes remain below a user-specified target threshold with finite-time bounds and no distributional assumptions. On a modified version of SWE-bench, weaker overseers successfully constrain an adversarially misaligned stronger agent; on MACHIAVELLI, CCO substantially reduces ethical violations while preserving reward. In both settings, empirical violation rates closely match the specified targets, as predicted by the theory.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "author": [
-                    {
-                        "name": "Hongjing Yang"
-                    },
-                    {
-                        "name": "Weicheng Zang"
-                    },
-                    {
-                        "name": "Francisco Valdes"
-                    },
-                    {
-                        "name": "Qiyue Qian"
-                    },
-                    {
-                        "name": "Yuchen Tang"
-                    },
-                    {
-                        "name": "Zhixing Li"
-                    },
-                    {
-                        "name": "Yuxin Shang"
-                    },
-                    {
-                        "name": "Shude Mao"
-                    },
-                    {
-                        "name": "Yaosong Yu"
-                    },
-                    {
-                        "name": "Guillermo Damke"
-                    },
-                    {
-                        "name": "Alfredo Zenteno"
-                    },
-                    {
-                        "name": "Steve Heathcote"
-                    },
-                    {
-                        "name": "Konstantina Boutsia"
-                    },
-                    {
-                        "name": "Andong Xu"
-                    },
-                    {
-                        "name": "Hao Ma"
-                    },
-                    {
-                        "name": "Jiyuan Zhang"
-                    },
-                    {
-                        "name": "Hongyu Li"
-                    },
-                    {
-                        "name": "Xikai Shan"
-                    },
-                    {
-                        "name": "Przemek Mr\u00f3z"
-                    },
-                    {
-                        "name": "Xiurui Zhao"
-                    },
-                    {
-                        "name": "Andrew Gould"
-                    },
-                    {
-                        "name": "Jennifer C. Yee"
-                    },
-                    {
-                        "name": "Chung-Uk Lee"
-                    },
-                    {
-                        "name": "Matthew Penny"
-                    },
-                    {
-                        "name": "Sean Terry"
-                    },
-                    {
-                        "name": "Patrick Tamburo"
-                    },
-                    {
-                        "name": "Tim Cunningham"
-                    },
-                    {
-                        "name": "Quanzhi Ye"
-                    },
-                    {
-                        "name": "Eric W. Peng"
-                    },
-                    {
-                        "name": "Rachel Street"
-                    },
-                    {
-                        "name": "Katarzyna Kruszy\u0144ska"
-                    },
-                    {
-                        "name": "Etienne Bachelet"
-                    },
-                    {
-                        "name": "Yiannis Tsapras"
-                    },
-                    {
-                        "name": "Markus Hundertmark"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.27360v1",
-                "title": "GENESIS: Harnessing AI Agents for Autonomous 6G RAN Synthesis, Research, and Testing",
-                "updated": "2026-05-26T17:58:43Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.27360v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.27360v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Cellular research and development (R&D) is throttled by six structural processes that each consume months of manual engineering work per iteration: (i) synthesizing new features from standards or research papers into production code; (ii) conformance and interoperability testing; (iii) hardening against field anomalies and diverse deployment environments; (iv) data-driven optimization of network functionalities; (v) discovering and prototyping novel waveforms, functionalities, and capabilities for future standards; and (vi) securing the stack against vulnerabilities. Although Large Language Models (LLMs) have compressed comparable R&D work in general software engineering from days to minutes, their known pitfalls worsen on Radio Access Network (RAN) use cases: they hallucinate Application Programming Interfaces (APIs) and mis-read specifications, which kills interoperability of RAN components at the first mistake, and they heavily rely on simulations for designing algorithms, which is notorious for breaking when transferred to real hardware. To address these challenges, we present GENESIS, an agentic Artificial Intelligence (AI) framework that converts intents (e.g., a specification clause, a telemetry anomaly, or a research hypothesis) into solutions validated with over-the-air experiments, fed back into a persistent knowledge base. GENESIS is built on three composable primitives (agents, skills, hooks) and a knowledge layer (SYNAPSE) that doubles as the source of ground truth and the recipient of every artifact the framework produces, making capabilities compound across runs.",
-                "category": [
-                    {
-                        "@term": "cs.NI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-26T17:58:43Z",
-                "arxiv:comment": "18 pages, 16 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.NI"
-                },
-                "author": [
-                    {
-                        "name": "Tamerlan Aghayev"
-                    },
-                    {
-                        "name": "Maxime Elkael"
-                    },
-                    {
-                        "name": "Michele Polese"
-                    },
-                    {
-                        "name": "Minh Dat Nguyen"
-                    },
-                    {
-                        "name": "Gabriele Gemmi"
-                    },
-                    {
-                        "name": "Andrea Lacava"
-                    },
-                    {
-                        "name": "Ali Saeizadeh"
-                    },
-                    {
-                        "name": "Reshma Prasad"
-                    },
-                    {
-                        "name": "Paolo Testolina"
-                    },
-                    {
-                        "name": "Angelo Feraudo"
-                    },
-                    {
-                        "name": "Soumendra Nanda"
-                    },
-                    {
-                        "name": "Pedram Johari"
-                    },
-                    {
-                        "name": "Salvatore D'Oro"
-                    },
-                    {
-                        "name": "Tommaso Melodia"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.27358v1",
-                "title": "MobileMoE: Scaling On-Device Mixture of Experts",
-                "updated": "2026-05-26T17:58:24Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.27358v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.27358v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Mixture-of-Experts (MoE) has become the de facto architecture for hundred-billion-parameter language models, yet its advantages at sub-billion scales for on-device deployment remain largely unexplored. To close this gap, we present MobileMoE, a family of on-device MoE language models with sub-billion active parameters (0.3-0.9B active and 1.3-5.3B total) that establish a new Pareto frontier for on-device LLMs. We first formulate an on-device MoE scaling law that jointly optimizes MoE architecture under mobile memory and compute constraints, identifying an on-device sweet spot - moderate sparsity with fine-grained and shared experts - that is simultaneously memory and compute-optimal. Building on the derived architectures, we train MobileMoE with a four-stage recipe covering pre-training, mid-training, instruction fine-tuning, and quantization-aware training, all on open-source datasets. Across 14 benchmarks, MobileMoE matches or exceeds leading on-device dense LLMs with 2-4$\\times$ fewer inference FLOPs, and matches or surpasses the state-of-the-art MoE OLMoE-1B-7B with up to 60% fewer parameters. To bridge the last mile to mobile deployment, we provide the first efficient MoE inference on commodity smartphones with comprehensive on-device profiling. At comparable INT4 weight memory, MobileMoE-S delivers $1.8$-$3.8\\times$ faster prefill and $2.2$-$3.4\\times$ faster decode than the dense baseline MobileLLM-Pro.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-26T17:58:24Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Yanbei Chen"
-                    },
-                    {
-                        "name": "Hanxian Huang"
-                    },
-                    {
-                        "name": "Ernie Chang"
-                    },
-                    {
-                        "name": "Jacob Szwejbka"
-                    },
-                    {
-                        "name": "Digant Desai"
-                    },
-                    {
-                        "name": "Zechun Liu"
-                    },
-                    {
-                        "name": "Vikas Chandra"
-                    },
-                    {
-                        "name": "Raghuraman Krishnamoorthi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.27357v1",
-                "title": "Gaussian Process Reconstruction of Cosmological Parameters with Gravitational Wave Sirens using Machine Learning",
-                "updated": "2026-05-26T17:58:12Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.27357v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.27357v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Future gravitational wave (GW) standard siren catalogues will probe the late-time expansion history of the Universe across redshift ranges largely inaccessible to traditional electromagnetic observations. To determine how effectively this background distance information can distinguish between viable cosmological models, we introduce a model-independent reconstruction framework utilizing Gaussian Process Regression (GPR). Analyzing mock LISA and Einstein Telescope (ET) catalogues across six fiducial cosmological backgrounds-$\u039b$CDM, CPL, CPL+$\u039b$, interacting dark matter, interacting dark energy and axion inspired early dark energy. We reconstruct the comoving distance and its derivatives. Crucially, we propagated the full GP covariance, including derivative cross-covariances, to robustly evaluate the Hubble parameter $H(z)$ and other diagnostics such as $q(z)$, $\\mathcal{O}_{m}(z)$ $w_{\\rm total}(z)$ and $\u03ba(z)$. While our analysis demonstrates that GW bright standard sirens faithfully recover fiducial expansion histories, applying pointwise marginal Hellinger distance reveals that background measurements alone do not provide decisive statistical separation among models. Instead, derivative sensitive diagnostics pinpoint specific redshift windows (e.g., $z\\simeq1.6-1.8$ for ET and $z\\simeq2.6-2.9$ for LISA) where future catalogues will maximize their discriminatory power. As machine learning methodologies become increasingly integral to astrophysics and cosmology, this Bayesian GPR pipeline offers a principled, nonparametric approach to precisely identifying where the most valuable cosmological information lies.",
-                "category": [
-                    {
-                        "@term": "astro-ph.CO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "gr-qc",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "hep-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "hep-th",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-26T17:58:12Z",
-                "arxiv:comment": "34 pages, 20 figures + Appendices",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.CO"
-                },
-                "author": [
-                    {
-                        "name": "Gourab Nandi"
-                    },
-                    {
-                        "name": "Anish Ghoshal"
-                    },
-                    {
-                        "name": "David F. Mota"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.27355v1",
-                "title": "Alignment Tampering: How Reinforcement Learning from Human Feedback Is Exploited to Optimize Misaligned Biases",
-                "updated": "2026-05-26T17:57:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.27355v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.27355v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement Learning from Human Feedback (RLHF) is the standard method to align Large Language Models (LLMs) with human preferences. In this work, we introduce alignment tampering, a potential vulnerability where the LLM undergoing alignment influences the preference dataset, causing RLHF to amplify undesired behaviors. This arises from core limitations of RLHF: (1) preference datasets are constructed from the LLM's own outputs, allowing it to influence them, and (2) pairwise comparisons only indicate which response is better, not why. These limitations can be exploited to cause alignment tampering. For example, if an LLM generates biased responses with higher quality, annotators will prefer them based on quality. However, preference labels do not distinguish quality from bias, and the reward model inherits this limitation. Optimizing such rewards through reinforcement learning or best-of-N sampling can amplify misaligned biases. Our experiments demonstrate amplification across diverse biases: from keyword bias to propaganda (e.g., sexism), brand promotion, and instrumental goal-seeking. Mitigation remains challenging, as existing techniques for robust RLHF fail to fully resolve alignment tampering without sacrificing response quality. These findings reveal structural vulnerabilities of current RLHF and emphasize the need to prevent this vulnerability. Project page: https://alignment-tampering.github.io/",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-26T17:57:04Z",
-                "arxiv:comment": "Accepted at ICML 2026, Source code: https://alignment-tampering.github.io/",
+                "published": "2026-05-27T17:56:47Z",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Dongyoon Hahm"
+                        "name": "William Overman"
                     },
                     {
-                        "name": "Dylan Hadfield-Menell"
-                    },
-                    {
-                        "name": "Kimin Lee"
+                        "name": "Mohsen Bayati"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2605.27354v1",
-                "title": "Guiding LLM Post-training Data Engineering with Model Internals from Sparse Autoencoders",
-                "updated": "2026-05-26T17:55:59Z",
+                "id": "http://arxiv.org/abs/2605.28806v1",
+                "title": "Personal Visual Memory from Explicit and Implicit Evidence",
+                "updated": "2026-05-27T17:56:11Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2605.27354v1",
+                        "@href": "https://arxiv.org/abs/2605.28806v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2605.27354v1",
+                        "@href": "https://arxiv.org/pdf/2605.28806v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Model internals encode rich information about how a large language model (LLM) processes its training data; however, post-training data engineering largely relies on external signals and ignores rich intrinsic signals lying in model internals. We propose SAERL, a data engineering framework for LLM reinforcement learning (RL). It models three intrinsic data properties: diversity, difficulty, and quality, using model internals extracted with Sparse Autoencoder (SAE), an advanced mechanistic interpretability tool. Each property grounds a concrete data engineering operation: SAE-space clustering with moderate batch mixing for batch diversity control, a difficulty proxy for easy-to-hard curriculum ordering, and a quality probe for data filtering. SAERL improves average accuracy by 3.00% over vanilla GRPO and reaches target accuracy with 20% fewer training steps on Qwen2.5-Math-1.5B, with consistent gains across model scales and RL algorithms. Experiments show that SAE transfers effectively across model families and scales, serving as a lightweight and reusable data engineering tool. These results demonstrate that model internals are a powerful and practical source of signals for post-training data engineering.",
+                "summary": "Long-term memory is increasingly important for personalized AI agents, yet existing benchmarks and methods remain largely text-centric. Even when images are included, the user-specific information needed for later questions is typically recoverable from text alone, and most memory systems reduce image turns to generic captions. Yet images often carry personal information that text rarely states -- both explicit evidence, such as recurring user-associated entities, and implicit evidence, such as latent user facts inferred from visual or multimodal cues. We introduce a benchmark for personal visual memory that targets both forms of evidence, and propose VisualMem, a hybrid visual--text architecture that augments a text-memory backend with a structured personal visual memory module. Rather than collapsing images into captions, VisualMem uses conversational context to resolve identity, ownership, and durable user facts. Experiments show that VisualMem substantially outperforms prior memory systems on our benchmark while remaining competitive on standard text-memory benchmarks, indicating that personal visual memory is a distinct and important component of long-term memory for personalized AI agents.",
                 "category": [
                     {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-05-26T17:55:59Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Yi Jing"
                     },
                     {
-                        "name": "Zao Dai"
-                    },
-                    {
-                        "name": "Jinwu Hu"
-                    },
-                    {
-                        "name": "Zijun Yao"
-                    },
-                    {
-                        "name": "Lei Hou"
-                    },
-                    {
-                        "name": "Juanzi Li"
-                    },
-                    {
-                        "name": "Xiaozhi Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2605.27352v1",
-                "title": "From Scores to Gibbs Correctors: Accelerating Uniform-Rate Discrete Diffusion Models",
-                "updated": "2026-05-26T17:52:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2605.27352v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2605.27352v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Discrete diffusion models have achieved strong empirical performance in text and other symbolic domains, but, especially for uniform-rate models, they often require many steps to generate a single sample. Existing acceleration methods either rely on training additional quantities or suffer from slow mixing. In this work, we propose a novel Gibbs-based corrector for discrete diffusion models, termed Gibbs-Accelerated Discrete Diffusion (GADD). GADD leverages the structure of the concrete score function to construct Gibbs posterior likelihoods directly, without requiring any additional training beyond standard score estimation. We show that GADD achieves an overall sampling complexity of $\\mathcal{O}(\\mathrm{polylog} (\\varepsilon^{-1}))$, yielding the first such rate for diffusion-based samplers for uniform-rate discrete diffusion models. We also conduct numerical experiments demonstrating the practical advantages of GADD across synthetic data, zero-shot text sampling, and zero-shot conditional music generation. These results corroborate the theory and show that GADD consistently improves sample quality and wall-clock efficiency over standard baselines, including vanilla Euler methods and CTMC correctors. Beyond this, our theoretical analysis introduces a novel framework for analyzing predictor-corrector methods in discrete diffusion models, which may be of independent interest. Unlike existing approaches that rely on the Girsanov change-of-measure technique, our method is based on an induction argument that tracks error propagation across predictor iterations while accounting for inaccuracies in the corrector updates.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
+                        "@term": "cs.IR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-05-26T17:52:28Z",
+                "published": "2026-05-27T17:56:11Z",
+                "arxiv:comment": "Project Page: https://viettmab.github.io/visualmem-page/",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Yuchen Liang"
+                        "name": "Viet Nguyen"
                     },
                     {
-                        "name": "Ness Shroff"
+                        "name": "Thao Nguyen"
                     },
                     {
-                        "name": "Yingbin Liang"
+                        "name": "Vishal M. Patel"
+                    },
+                    {
+                        "name": "Yuheng Li"
                     }
                 ]
             }
