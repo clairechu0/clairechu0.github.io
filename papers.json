@@ -5,36 +5,40 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-06-02T22:56:50Z",
+        "updated": "2026-06-03T05:58:41Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "578929",
+        "opensearch:totalResults": "579463",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2606.02577v1",
-                "title": "RoboDream: Compositional World Models for Scalable Robot Data Synthesis",
-                "updated": "2026-06-01T17:59:38Z",
+                "id": "http://arxiv.org/abs/2606.03990v1",
+                "title": "Neuron Populations Exhibit Divergent Selectivity with Scale",
+                "updated": "2026-06-02T17:59:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.02577v1",
+                        "@href": "https://arxiv.org/abs/2606.03990v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.02577v1",
+                        "@href": "https://arxiv.org/pdf/2606.03990v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Scaling robot learning requires large-scale, diverse demonstrations, yet real-world data collection via teleoperation remains prohibitively expensive and time-consuming. While video diffusion models offer a promising avenue for data scaling, existing generative approaches are often limited to superficial visual augmentation, or suffer from embodiment hallucinations that yield physically infeasible motions. We present a generalizable embodiment-centric world model that achieves scalable data generation by synthesizing photorealistic demonstrations with novel objects, in novel scenes, and from novel viewpoints. Our approach anchors generation to rendered robot motion while conditioning on explicit scene and object priors, effectively decoupling trajectory execution from environment synthesis. This formulation has the potential to unlock two powerful data scaling capabilities: (1) retrieval and rebirth, which repurposes existing trajectories into entirely new contexts without new motion data; and (2) prop-free teleoperation, where operators manipulate empty air and the model hallucinates the target objects and scene afterwards, eliminating reset time. We demonstrate with real-world experiments that our generated data consistently improves downstream policy performance and significantly reduces real-world data requirements across diverse manipulation tasks.",
+                "summary": "We investigate whether neuron populations within neural networks evolve predictably with scale, extending scaling laws beyond macroscopic observables such as loss. To probe this question, we study Rosetta Neurons, a previously characterized class of neurons whose activation patterns are similar across independently trained models (Dravid et al., 2023). In separate analyses of language models up to 30B parameters and vision models up to 5B parameters, we observe that the population of Rosetta Neurons follows a sublinear power law in model size, growing in absolute number but occupying a shrinking fraction of the total neuron count. We further observe a Neuron Polarization Effect: Rosetta Neurons become more selective and increasingly monosemantic with scale, separating from a growing non-Rosetta population that remains less selective. An analytical model balancing feature utility against limited neuron capacity explains the sublinear power-law scaling and this polarization effect. Finally, we find that Rosetta Neurons become more domain-specialized with scale and illustrate their selectivity through a targeted data-filtering case study for continued pretraining. Our results point to a scaling law for interpretable, shared neuron-level structure, linking model size to systematic changes in neuron universality, selectivity, and specialization.",
                 "category": [
                     {
-                        "@term": "cs.RO",
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -42,237 +46,166 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-01T17:59:38Z",
-                "arxiv:comment": "Project page: https://junjieye.com/RoboDream/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Junjie Ye"
-                    },
-                    {
-                        "name": "Rong Xue"
-                    },
-                    {
-                        "name": "Basile Van Hoorick"
-                    },
-                    {
-                        "name": "Runhao Li"
-                    },
-                    {
-                        "name": "Harshitha Rajaprakash"
-                    },
-                    {
-                        "name": "Pavel Tokmakov"
-                    },
-                    {
-                        "name": "Muhammad Zubair Irshad"
-                    },
-                    {
-                        "name": "Vitor Guizilini"
-                    },
-                    {
-                        "name": "Yue Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.02576v1",
-                "title": "ProtoAda: Prototype-Guided Adaptive Adapter Expansion and Geometric Consolidation for Multimodal Continual Instruction Tuning",
-                "updated": "2026-06-01T17:59:13Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.02576v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.02576v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Multimodal Large Language Models (MLLMs) achieve strong performance through instruction tuning, but real-world deployment requires them to continually acquire new vision-language capabilities, making Multimodal Continual Instruction Tuning (MCIT) essential. To reduce inter-task interference and promote collaboration, recent methods often employ sparse architectures like Mixture of LoRA Experts with image-text similarity routing. However, tasks with distinct response structures could share highly similar visual-linguistic semantics and thus be wrongly routed to the same expert; image-text similarity alone is insufficient for reliable task assignment. For example, an expert in a grounding task requiring coordinate prediction may be biased toward producing short textual answers after learning semantically similar VQA tasks. This format-blind task assignment integrates heterogeneous response types into shared parameters, inducing gradient interference and ineffective expert collaboration. To address this problem, we propose ProtoAda, a prototype-guided adaptive tuning framework. ProtoAda introduces format-aware task prototypes to align task assignment and routing with both task semantics and output structure, and further consolidates format-compatible updates in a geometry-aware manner to effectively reuse and progressively refine existing parameters. Extensive experiments on multiple benchmarks demonstrate that ProtoAda achieves superior performance, especially on tasks whose answer structures are easily corrupted by sequential tuning.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-01T17:59:13Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yu-Cheng Shi"
-                    },
-                    {
-                        "name": "Zhen-Hao Xie"
-                    },
-                    {
-                        "name": "Jun-Tao Tang"
-                    },
-                    {
-                        "name": "Da-Wei Zhou"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.02572v1",
-                "title": "VISReg: Variance-Invariance-Sketching Regularization for JEPA training",
-                "updated": "2026-06-01T17:58:01Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.02572v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.02572v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Self-supervised learning methods prevent embedding collapse via modeling heuristics or explicit regularization of the embedding space. Among the latter, VICReg decomposes regularization into variance and covariance objectives, offering flexibility and interpretability. However, covariance captures only second-order statistics -- encouraging decorrelation but failing to enforce the full distributional shape needed for stable training. Sketching-based methods such as SIGReg address this by aligning embeddings to an isotropic Gaussian, but lack flexibility and suffer from vanishing gradients under collapse. We propose Variance-Invariance-Sketching Regularization (VISReg), which replaces covariance with a Sliced-Wasserstein-based sketching objective that enforces full distributional shape, while retaining a variance term for scale control. By decoupling scale and shape, VISReg combines VICReg's flexibility with the distributional rigor of sketching methods, providing robust gradients even under collapse. We show that VISReg scales linearly, outperforms existing regularization on low-quality datasets, and is resilient to long-tailed and low-rank regimes. Pre-trained on ImageNet-1K, VISReg achieves state-of-the-art performance on out-of-distribution datasets. Pre-trained on ImageNet-22K, it matches DINOv2's OOD performance despite the latter using 10x more data (LVD-142M). Project and code: https://haiyuwu.github.io/visreg.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-01T17:58:01Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Haiyu Wu"
-                    },
-                    {
-                        "name": "Randall Balestriero"
-                    },
-                    {
-                        "name": "Morgan Levine"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.02565v1",
-                "title": "Policy-based Foveated Imaging and Perception",
-                "updated": "2026-06-01T17:55:05Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.02565v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.02565v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Ultra-high-resolution image sensors offer the potential to capture fine spatial details critical for many visual perception tasks, but acquiring and processing all pixels at full resolution is often infeasible under realistic bandwidth, latency, and power constraints. Existing approaches address this challenge through acquisition strategies such as spatial or temporal downsampling, which irrevocably discard information before task relevance can be assessed. In this work, we introduce a real-time, predictive, and task-aware foveated imaging system that operates directly at image acquisition time. Leveraging emerging dual-stream sensor architectures, our method dynamically allocates limited pixel bandwidth to task-relevant regions of interest while maintaining a low-resolution global context. We formulate foveated acquisition as a sensor attention policy-learning problem, in which past observations guide actions that determine future measurements, closing the perception-acquisition loop. Through extensive simulation across multiple perception tasks, we demonstrate that our approach achieves high task performance under strict pixel budgets and significantly outperforms relevant baselines operating at the same bandwidth. We further validate our system on a 200-megapixel dual-stream sensor, capturing real-world videos under realistic bandwidth and latency constraints, demonstrating the practical feasibility of task-driven, acquisition-time foveated imaging.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-01T17:55:05Z",
-                "arxiv:comment": "Project website at https://howardxiao.ca/foveated/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Howard Xiao"
-                    },
-                    {
-                        "name": "Jan Ackermann"
-                    },
-                    {
-                        "name": "Boyang Deng"
-                    },
-                    {
-                        "name": "Gordon Wetzstein"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.02563v1",
-                "title": "IntraShuffler: A Privacy Preserving Framework for Heterogeneous DP Federated Learning",
-                "updated": "2026-06-01T17:54:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.02563v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.02563v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Heterogeneous Differential Privacy (HDP) in Federated Learning (FL) allows clients to select individual privacy budgets ($\\varepsilon_i$) according to institutional policies and data sensitivity. In practice, many HDP-FL systems employ $\\varepsilon$-aware server aggregation to improve model utility by re-weighting client updates according to their declared privacy budgets. However, gradient updates in FL retain structural patterns induced by non-independent and identically-distributed (non-IID) data, and these additional signals exposed by $\\varepsilon$-aware aggregation create new opportunities for inference by an honest-but-curious server. In this work, we first show that a server equipped with gradient denoising and surrogate modeling can mount a \\emph{Privacy Inference Attack} that infers distributional attributes of clients and links updates from the same client across training rounds, measured via surrogate inference accuracy and linkage success, under realistic knowledge constraints.\n  The Shuffle-Model has been widely studied as a defense against such inference risks by anonymizing update sources, but it is fundamentally incompatible with HDP-FL $\\varepsilon$-aware aggregation. To address this challenge, we propose \\textbf{IntraShuffler}, a middleware defense framework designed for HDP-FL systems. IntraShuffler introduces a privacy-aware shuffling mechanism that groups clients into privacy-compatible buckets and performs parameter-level shuffling within each bucket to disrupt persistent gradient structure while preserving $\\varepsilon$-aware aggregation. Experiments across four different datasets show that IntraShuffler reduces gradient recoverability by over 60% and decreases surrogate inference accuracy from 0.78 to 0.33 while maintaining comparable model utility across multiple FL aggregation rules.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-01T17:54:10Z",
+                "published": "2026-06-02T17:59:52Z",
+                "arxiv:comment": "Project page and code: https://avdravid.github.io/rosetta-neuron-scaling/",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Farhin Farhad Riya"
+                        "name": "Amil Dravid"
                     },
                     {
-                        "name": "Olivera Kotevska"
+                        "name": "Yasaman Bahri"
                     },
                     {
-                        "name": "Jinyuan Stella Sun"
+                        "name": "Alexei A. Efros"
+                    },
+                    {
+                        "name": "Yossi Gandelsman"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.02562v1",
-                "title": "Permissive Safety Through Trusted Inference: Verifiable Belief-Space Neural Safety Filters for Assured Interactive Robotics",
-                "updated": "2026-06-01T17:54:00Z",
+                "id": "http://arxiv.org/abs/2606.03980v1",
+                "title": "Skill-RM: Unifying Heterogeneous Evaluation Criteria via Agent Skill",
+                "updated": "2026-06-02T17:56:57Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.02562v1",
+                        "@href": "https://arxiv.org/abs/2606.03980v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.02562v1",
+                        "@href": "https://arxiv.org/pdf/2606.03980v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Autonomous robots that interact with people must make safe and efficient decisions under human-induced uncertainty, such as their preferences, goals, competency, and willingness to cooperate. Safety filters are a popular approach for ensuring safety in interactive robotics, since their modular design separates safety from performance, allowing robots to operate safely around people with minimal impact on task efficiency. While traditional safety filters typically operate only in the physical space, neglecting the robot's ability to learn and adapt online, the recently proposed belief-space safety filter (BeliefSF) reasons about robot safety in closed-loop with runtime inference that actively reduces the robot's uncertainty online, thereby reducing conservativeness in filtering. However, providing formal safety guarantees for robots deploying BeliefSF remains a significant challenge due to errors in runtime inference and neural approximation of safety filters required to handle the high dimensionality of belief spaces. In this paper, we propose an algorithmic approach to certify high-probability safety of BeliefSF using conformal prediction, while explicitly accounting for the reliability of the robot's runtime inference module. Our method leverages the structure of belief-space safety filtering by focusing verification on a region where inference is expected to be reliable. It preserves the simplicity and sample complexity of standard conformal prediction, yet can certify a substantially less conservative safety filter. Through a simulated human-vehicle interaction benchmark, we show that our approach verifies a significantly more permissive belief-space safety filter than a standard conformal prediction baseline.",
+                "summary": "Reward models (RMs) provide critical feedback signals for LLM post-training, notably in reinforced fine-tuning (RFT) and reinforcement learning (RL) pipelines. However, current reward evaluation relies on heterogeneous criteria such as rule-based verifiers, ground-truth references, procedural checklists, and complex rubrics, where a unified mechanism to integrate all types of evidence remains unexplored. To this end, we propose Skill Reward Model (Skill-RM), a unified framework that reformulates reward modeling as the execution of a reusable Reward-Evaluation Skill. By treating reward computation as a structured agentic task, Skill-RM provides a consistent interface to orchestrate heterogeneous resources, dynamically selecting and aggregating evidence tailored to the specific requirements of each input. This approach enables the reward model to move beyond static evaluation, ensuring consistency and transparency across diverse tasks. Extensive experiments on reward benchmarks and downstream applications, including best-of-N selection and reinforcement learning, demonstrate that Skill-RM consistently outperforms traditional judge baselines. Our findings suggest that Skill-RM not only provides a unified solution for reward modeling but also achieves superior performance through the strategic and dynamic orchestration of evidence. The code is at https://github.com/Qwen-Applications/Skill-RM.",
                 "category": [
                     {
-                        "@term": "cs.RO",
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-02T17:56:57Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Tao Chen"
+                    },
+                    {
+                        "name": "Gangwei Jiang"
+                    },
+                    {
+                        "name": "Pengyu Cheng"
+                    },
+                    {
+                        "name": "Siyuan Huang"
+                    },
+                    {
+                        "name": "Yihao Liu"
+                    },
+                    {
+                        "name": "Jingwei Ni"
+                    },
+                    {
+                        "name": "Jiaqi Guo"
+                    },
+                    {
+                        "name": "Mengyu Zhou"
+                    },
+                    {
+                        "name": "Kai Tang"
+                    },
+                    {
+                        "name": "Junling Liu"
+                    },
+                    {
+                        "name": "Qinliang Su"
+                    },
+                    {
+                        "name": "Xiaoxi Jiang"
+                    },
+                    {
+                        "name": "Guanjun Jiang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.03979v1",
+                "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories",
+                "updated": "2026-06-02T17:56:55Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.03979v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.03979v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The past few decades have witnessed significant advances in the design of machine learning algorithms, from early studies on task-specific shallow models to more general deep Large Language Models (LLMs). Despite showing promising results in tasks that require instant prediction or in-context learning, existing models lack the ability to continually learn and effectively transfer their temporal in-context knowledge to their long-term parameters. Inspired by human learning process, we introduce a ''Sleep'' paradigm that allows the models to continually learn, distill their short-term fragile memories into stable long-term knowledge with replay, and recursively improve themselves with ''Dreaming'' process. In more detail, sleep consists of two stages: (1) Memory Consolidation: an upward distillation process, called Knowledge Seeding, where the memories of a smaller-self are distilled into a larger network to provide more capacity while preserving the knowledge. As a proof of concept, we present a new Generalized Distillation process for {Knowledge Seeding} (i.e., the combination of on-policy distillation with Reinforcement Learning (RL)-based imitation learning); (2) Dreaming: a self-improvement phase, where the model uses RL to generate a curriculum of synthetic data to rehearse new knowledge and refine existing capabilities without human supervision. Our experiments on long-horizon, continual learning, knowledge incorporation, and few-shot generalization tasks support the importance of the sleep stage.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-02T17:56:55Z",
+                "arxiv:comment": "A version of this work has been publicly available from September 2025 on OpenReview",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Ali Behrouz"
+                    },
+                    {
+                        "name": "Farnoosh Hashemi"
+                    },
+                    {
+                        "name": "Vahab Mirrokni"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.03976v1",
+                "title": "Formalizing the Binding Problem",
+                "updated": "2026-06-02T17:56:24Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.03976v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.03976v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Representations of the world, arguably, contain information about features (e.g. something is blue, something is a circle) but also information about which features are part of the same object (e.g. the circle is blue), which we call binding information. Any system with the ability to understand scenes with multiple objects must be able to solve the binding problem: it needs to know which features belong together. However, despite work showing that Vision Transformers (ViTs) know which patches belong together, it is not known whether current deep learning models learn to exhibit binding information, i.e., for features. We may believe that there is not much binding information, after all misattributing features to wrong objects is a common failure of ViT-based architectures, especially in scenes with objects sharing features. Here we formalize the binding problem with an information-theoretic approach, and introduce a probing method to measure binding information in model representations. We perform experiments on ViTs, measuring binding from different components of the architecture, such as the image summary token [CLS] or the spatial tokens. We use datasets with different binding challenges, such as feature sharing, occlusion, and natural features, while comparing the performance of several pre-trained ViTs. Overall, our research demonstrates binding as a key ingredient to strong visual recognition and reasoning.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -284,198 +217,353 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "eess.SY",
+                        "@term": "q-bio.NC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-01T17:54:00Z",
-                "arxiv:comment": "Accepted to the 17th World Symposium on the Algorithmic Foundations of Robotics (WAFR 2026)",
+                "published": "2026-06-02T17:56:24Z",
+                "arxiv:comment": "Accepted to ICML 2026",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": {
-                    "name": "Haimin Hu"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.02550v1",
-                "title": "Probabilistic storyline attribution using machine learning",
-                "updated": "2026-06-01T17:49:59Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.02550v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.02550v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "A fundamental goal in climate attribution is to estimate how forced climate change contributes to observed extreme weather events. The storyline attribution method compares an observed weather event, conditional on its atmospheric dynamic state (i.e., atmospheric circulation), in the current, 'factual' climate to an event with very similar circulation conditions in a hypothetical, 'counterfactual' climate. However, physical climate models cannot directly transfer these storyline counterfactuals across different climate forcing states. Statistical and machine learning techniques may overcome this limitation; yet, emulating circulation-conditional extreme events under different climate states is challenging. Here, we demonstrate distributional autoencoders (DAEs) as a versatile method for generating climate counterfactuals. They model the full distribution of spatially resolved European temperature fields conditional on the atmospheric circulation state and the mean global warming level. These distributions allow for deriving meaningful conditional probability ratios, which is a particular advantage of the DAE-based storyline approach. We train DAEs on fully coupled climate model simulations and we evaluate the modelled distributions across different factual and storyline-based counterfactual climate model simulations. In an illustrative case study, we revisit the 2003 European heatwave and we generate counterfactuals for a hypothetical `2003-like European heatwave' using ERA5 circulation, which we hypothesize to occur a quarter century (2028) and a half century (2053) after 2003. The conditional intensity would increase from 29.3 \u00b0C in 2003, to 30.3 \u00b0C and 32.1 \u00b0C in 2028 and 2053, respectively and conditional probability ratios would be 2.1 and 3.2 when compared to 2003.",
-                "category": [
-                    {
-                        "@term": "stat.AP",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "physics.ao-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-01T17:49:59Z",
-                "arxiv:comment": "main text: 19 pages and 4 figures",
-                "arxiv:primary_category": {
-                    "@term": "stat.AP"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Frieder Loer"
+                        "name": "Lianghuan Huang"
                     },
                     {
-                        "name": "Maybritt Schillinger"
+                        "name": "Yihao Li"
                     },
                     {
-                        "name": "Sebastian Sippel"
+                        "name": "Saeed Salehi"
+                    },
+                    {
+                        "name": "Yingshan Chang"
+                    },
+                    {
+                        "name": "Ansh Soni"
+                    },
+                    {
+                        "name": "Konrad P. Kording"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.02545v1",
-                "title": "Transferable Self-Harm Surveillance from Emergency Department Triage Notes Using an Evidence-Augmented Machine Learning Approach",
-                "updated": "2026-06-01T17:48:21Z",
+                "id": "http://arxiv.org/abs/2606.03974v1",
+                "title": "Flowing with Displacements and Tilts: Surface Operators in $O(N)$ Models",
+                "updated": "2026-06-02T17:56:18Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.02545v1",
+                        "@href": "https://arxiv.org/abs/2606.03974v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.02545v1",
+                        "@href": "https://arxiv.org/pdf/2606.03974v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Self-harm is a major public health concern, but current surveillance relying on hospital presentations is inadequate due to the low sensitivity of diagnostic codes. Emergency Department (ED) triage notes, recorded at the initial point of contact, provide a succinct summary of presentations and an opportunity to identify self-harm. We developed a three-stage approach, augmenting traditional machine learning with large language model-based screening and evidence extraction to detect self-harm in ED triage notes. We assessed model transferability across three Australian hospitals. Our approach showed AUPRCs of 0.887 +/- 0.016 and 0.884 +/- 0.012 during internal and external validation. Prospectively, it achieved AUPRC of 0.881 +/- 0.008 at the development site, and 0.879 +/- 0.012 and 0.816 +/- 0.015 at two external sites without site-specific retraining. A key advantage of the approach is that it enables identification of the primary self-harm method with an accuracy of 95%, supporting more granular surveillance beyond binary classification.",
+                "summary": "Defect conformal field theories have special operators of protected dimension known as displacements and tilts. They arise due to the breaking of global symmetries by the defect and the normalisations of their two-point functions are characteristics of the defect. In the case of surface defects, these normalisations are related to some of the anomaly coefficients in the surface effective action. To study these operators and their flows between different defect renormalization group fixed points we present an elegant approach using conformal perturbation theory that easily reproduces the known examples from the critical Wilson-Fisher $O(N)$ model in $4-\\varepsilon$ dimensions and allows us to construct new ones in other multiscalar theories. In all the systems that we study the flows are short and under full control, as is the change of the displacement and tilt normalizations. We point out some novel features like the existence of vortices when the defect conformal manifold is not simply connected. In addition to regular human labour, this work relied heavily on generative AI; see full disclosure in methodology section.",
                 "category": {
-                    "@term": "cs.CL",
+                    "@term": "hep-th",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-06-01T17:48:21Z",
+                "published": "2026-06-02T17:56:18Z",
+                "arxiv:comment": "47 pages",
+                "arxiv:primary_category": {
+                    "@term": "hep-th"
+                },
+                "author": [
+                    {
+                        "name": "Jake Belton"
+                    },
+                    {
+                        "name": "Nadav Drukker"
+                    },
+                    {
+                        "name": "Biswajit Sahoo"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.03971v1",
+                "title": "Video-Mirai: Autoregressive Video Diffusion Models Need Foresight",
+                "updated": "2026-06-02T17:55:13Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.03971v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.03971v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Causal video generators must predict from the past, but they need not learn only from it. In streaming autoregressive video diffusion, each emitted segment becomes a commitment that future segments must preserve. Standard training, however, only asks each causal state to explain the present. This creates what we call a representation-level planning gap: states that fit the current segment may discard identity, layout, and motion information needed for a consistent future. We introduce Video-Mirai, a training-only method that closes this gap without changing causal inference: the generator rolls out causally, a frozen foresight encoder reads the completed rollout non-causally, and a lightweight predictor distills the resulting stopped-gradient targets into causal states. Future frames supervise representations, never generator inputs. At inference, the encoder and predictor are discarded, leaving the original architecture, per-step FLOPs, and KV-cache behavior unchanged. Video-Mirai improves a strong Causal-Forcing baseline on 5-second VBench from 83.8 to 84.6 in terms of Total Score. On 30-second rollouts beyond the training horizon, subject consistency improves from 84.9 to 88.5 and background consistency from 90.2 to 91.9. Ablations identify future-conditioned targets as the key ingredient, and probes show that future frames become more decodable from current features. Causality should constrain inference, not representation supervision. Our study highlights that visual autoregressive models need foresight. Project page: https://y0uroy.github.io/Video-Mirai.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-02T17:55:13Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yonghao Yu"
+                    },
+                    {
+                        "name": "Lang Huang"
+                    },
+                    {
+                        "name": "Runyi Li"
+                    },
+                    {
+                        "name": "Zerun Wang"
+                    },
+                    {
+                        "name": "Toshihiko Yamasaki"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.03968v1",
+                "title": "QUBRIC: Co-Designing Queries and Rubrics for RL Beyond Verifiable Rewards",
+                "updated": "2026-06-02T17:53:04Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.03968v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.03968v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Rubric-based RL is a promising route for extending reinforcement learning beyond verifiable rewards, yet existing methods optimize rubrics while treating the query distribution as fixed. We identify a structural bottleneck: rubric quality is constrained by query structure. Open-ended queries yield vague rubrics; naively narrowing them introduces fabricated references that no model can verify, so all responses fail and training receives no reward signal. We present QUBRIC, a framework that co-designs queries and rubrics. Teacher-derived key points ground the rewriting of open-ended queries into scenario-based, evaluable questions. Contrastive rubric generation then turns teacher-policy gaps into query-level criteria, and learnability filtering retains only informative query-rubric pairs for GRPO training. QUBRIC achieves a +5.5 point gain on ArenaHard over the SFT baseline. Trained only on instruction-following data, it further transfers to three held-out benchmarks spanning legal, moral, and narrative reasoning (+6.3 points on average), with improvements concentrated in reasoning-related dimensions. These results provide evidence that co-designing queries and rubrics can make rubric-based RL a practical complement to RLVR beyond strictly verifiable tasks.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-02T17:53:04Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Liuliu Chen"
+                        "name": "Rongzhi Zhang"
                     },
                     {
-                        "name": "Gowri Rajaram"
+                        "name": "Rui Feng"
                     },
                     {
-                        "name": "Eleanor Bailey"
+                        "name": "Zhihan Zhang"
                     },
                     {
-                        "name": "Katrina Witt"
+                        "name": "Jingfeng Yang"
                     },
                     {
-                        "name": "Michelle Lamblin"
+                        "name": "Qingyu Yin"
                     },
                     {
-                        "name": "Jo Robinson"
+                        "name": "Xin Liu"
                     },
                     {
-                        "name": "Mike Conway"
+                        "name": "Zixuan Zhang"
                     },
                     {
-                        "name": "Vlada Rozova"
+                        "name": "Priyanka Nigam"
+                    },
+                    {
+                        "name": "Bing Yin"
+                    },
+                    {
+                        "name": "Tuo Zhao"
+                    },
+                    {
+                        "name": "Chao Zhang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.02542v1",
-                "title": "Chutes and Ladders: Dynamical Automorphisms via the ZX-Calculus",
-                "updated": "2026-06-01T17:46:09Z",
+                "id": "http://arxiv.org/abs/2606.03965v1",
+                "title": "Agentic Chain-of-Thought Steering for Efficient and Controllable LLM Reasoning",
+                "updated": "2026-06-02T17:51:30Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.02542v1",
+                        "@href": "https://arxiv.org/abs/2606.03965v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.02542v1",
+                        "@href": "https://arxiv.org/pdf/2606.03965v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The ZX-calculus is a powerful graphical language for manipulating quantum circuits, which has recently found many applications in quantum error correction. We extend this language to handle Floquet and other dynamical stabilizer codes via the connection between measurement-based code switching and gauge fixing (arXiv:1810.10037). We combine gauge-fixing steps to implement a closed loop in the space of stabilizer codes, returning to the original codespace up to a logical Clifford gate. These measurement-based paths in the space of stabilizer codes can be viewed as shortcuts, or \"chutes and ladders\", relative to single-qubit Clifford operations and qubit permutations. This yields a machine-interpretable method for constructing dynamical automorphisms and facilitates the search for implementations of desired logical gates. As an example, we implement a logical phase gate via distance-preserving code switching for the seven-qubit code bare code (arXiv:1702.01155), which has no non-trivial logical Clifford gates based on single-qubit Clifford operations and qubit permutations (arXiv:2409.18175).",
-                "category": {
-                    "@term": "quant-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-01T17:46:09Z",
-                "arxiv:comment": "32 pages, 10 figures",
+                "summary": "Large language models improve final-answer accuracy through extended chain-of-thought reasoning, but often spend tokens inefficiently and offer little inference-time control. Existing efficient reasoning methods control thinking length by shortening, early-stopping, or compressing traces, leaving how the model thinks implicit. In this paper, we propose Agentic Chain-of-Thought Steering (ACTS), which formulates reasoning steering as a Markov decision process where a controller agent adaptively steers a frozen reasoner during inference. At each step, the controller observes the reasoning trace and remaining thinking budget, then issues a steering action consisting of a reasoning strategy and a steering phrase that initiates the next reasoner step. This enables budget-aware strategy control for efficient reasoning while preserving the reasoner's generation continuity. We initialize the controller agent from our constructed synthetic steering trajectories with multi-budget augmentation, and further optimize it via reinforcement learning with budget-conditioned reward shaping. Experiments across multiple benchmarks show that ACTS matches full-thinking performance with substantial token savings, and enables controllable accuracy-efficiency trade-offs across different reasoners and tasks. The code is available at https://github.com/Andree-9/ACTS.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-02T17:51:30Z",
                 "arxiv:primary_category": {
-                    "@term": "quant-ph"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Alexander Frei"
+                        "name": "Yu Xia"
                     },
                     {
-                        "name": "Sascha Zakaib-Bernier"
+                        "name": "Zhouhang Xie"
                     },
                     {
-                        "name": "Zachary Mann"
+                        "name": "Xin Xu"
                     },
                     {
-                        "name": "Michael Vasmer"
+                        "name": "Byungkyu Kang"
                     },
                     {
-                        "name": "Victor V. Albert"
+                        "name": "Prarit Lamba"
+                    },
+                    {
+                        "name": "Xiang Gao"
+                    },
+                    {
+                        "name": "Julian McAuley"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.02536v1",
-                "title": "Tracking the Behavioral Trajectories of Adapting Agents",
-                "updated": "2026-06-01T17:40:31Z",
+                "id": "http://arxiv.org/abs/2606.03963v1",
+                "title": "Self-Refining Agentic Reinforcement Learning for Vision-Conditioned UAV Navigation",
+                "updated": "2026-06-02T17:50:15Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.02536v1",
+                        "@href": "https://arxiv.org/abs/2606.03963v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.02536v1",
+                        "@href": "https://arxiv.org/pdf/2606.03963v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Text files such as skill files, memory files, and behavioral configuration files play a central role in defining how modern agents act. Through edits by humans or the agents themselves, these files may evolve over time, directly steering the agent's behavior in future interactions. We present a methodology and framework for measuring agent $traits$ by defining traits as directions in the embedding space of a text embedding model. We train a linear model on labeled \"before\" versus \"after\" skill file diffs to learn a trait vector, then score arbitrary skill edits by projecting their embedding diffs onto this vector. Evaluated on 68 labeled skill diff pairs for the trait of propensity to seek sensitive data, our method achieves 91.2% sign classification accuracy and a Spearman rank correlation of $\u03c1= 0.82$ under leave-one-out cross-validation. We build this trait evaluation into a broader agent-to-agent protocol that enables one agent to evaluate another's skill file updates through a trusted intermediary.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-01T17:40:31Z",
-                "arxiv:comment": "5 pages, 1 figure. To appear at the Second Workshop on Agents in the Wild: Safety, Security, and Beyond (AIWILD) at ICML 2026",
+                "summary": "Deep reinforcement learning has shown strong potential for enabling autonomous robots to learn complex navigational tasks. However, its practical use still depends heavily on human designed reward functions and repeated manual fine tuning, which is time consuming and does not guarantee high success in the desired task. This paper presents AgenticRL, agent guided reinforcement learning framework that increases autonomy in reward design, policy refinement, and real world deployment for unmanned aerial vehicles (UAV) navigation tasks. AgenticRL uses a multimodal generative pre-trained tansformer (GPT) agent to interpret task information and visual scene observations, generate task specific reward functions, train policies using Proximal Policy Optimization (PPO) algorithm, and then act as a critic by evaluating the trained policy through diagnosis packets to generate feedback. Based on this feedback, the agent identifies failure modes and refines the reward function in a closed loop self improvement process. To further leverage the multimodal GPT agent during inference, AgenticRL uses real world images and natural language task information to automatically identify the active scenario and select the appropriate trained policy for execution. The framework is evaluated on multiple navigational tasks, including gate traversal, obstacle avoidance, wall barrier crossing with landing, trajectory following, and motion behavior learning. Experimental results show that the closed loop refinement process improves policy behavior compared with initial rewards by 71%. We also demonstrate sim-to-real transfer of the proposed framework, achieving a real world success rate of 91% and a sim-to-real accuracy of 94%.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-02T17:50:15Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.AI"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Jonah Leshin"
+                        "name": "Roohan Ahmed Khan"
                     },
                     {
-                        "name": "Manish Shah"
+                        "name": "Yasheerah Yaqoot"
                     },
                     {
-                        "name": "Ian Timmis"
+                        "name": "Muhammad Ahsan Mustafa"
+                    },
+                    {
+                        "name": "Dzmitry Tsetserukou"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.03962v1",
+                "title": "Using Reward Uncertainty to Induce Diverse Behaviour in Reinforcement Learning",
+                "updated": "2026-06-02T17:50:14Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.03962v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.03962v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Classical reinforcement learning (RL) typically seeks a deterministic policy that maximizes the expected sum of a scalar reward. Yet, modern applications such as language model fine-tuning or scientific discovery demand diversity. Existing remedies such as entropy regularization or diversity bonuses often require fragile trade-offs that sacrifice performance for stochasticity or rely on heuristic metrics that can misalign policy rankings. We argue that diversity is more naturally understood as the rational response to uncertainty in the reward. When the reward function is not perfectly known--as is the case with ambiguous preferences or imperfect reward models--committing to a single action can be sub-optimal. Building on this, we propose a fundamental reformulation of the RL objective by replacing the scalar reward with a distribution over reward functions, and applying a non-linear objective over sets of actions. The result is a framework in which calibrated behavioural diversity emerges naturally, remains controllable through the reward function distribution, and is obtained without sacrificing expected reward. Focusing on the contextual bandit setting, we derive a principled gradient estimator for this objective and prove that our formulation naturally generalizes both vanilla policy gradient and more recently developed action-set approaches. Our empirical results demonstrate that this framework offers a robust and theoretically grounded alternative for complex RL tasks where the traditional formulation of the problem fails to induce the desired breadth of agent behaviour.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-02T17:50:14Z",
+                "arxiv:comment": "Core contributors: Anthony GX-Chen, Ankit Anand, Gheorghe Comanici, Andr\u00e9 Barreto, Mark Rowland",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Anthony GX-Chen"
+                    },
+                    {
+                        "name": "Ankit Anand"
+                    },
+                    {
+                        "name": "Gheorghe Comanici"
+                    },
+                    {
+                        "name": "Zaheer Abbas"
+                    },
+                    {
+                        "name": "Eser Ayg\u00fcn"
+                    },
+                    {
+                        "name": "David Smalling"
+                    },
+                    {
+                        "name": "Shibl Mourad"
+                    },
+                    {
+                        "name": "Doina Precup"
+                    },
+                    {
+                        "name": "Andr\u00e9 Barreto"
+                    },
+                    {
+                        "name": "Mark Rowland"
                     }
                 ]
             }
