@@ -5,164 +5,77 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-06-09T23:14:22Z",
+        "updated": "2026-06-10T02:48:00Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "581698",
+        "opensearch:totalResults": "582222",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2606.09828v1",
-                "title": "Latent Spatial Memory for Video World Models",
-                "updated": "2026-06-08T17:59:54Z",
+                "id": "http://arxiv.org/abs/2606.11190v1",
+                "title": "When to Align, When to Predict: A Phase Diagram for Multimodal Learning",
+                "updated": "2026-06-09T17:59:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.09828v1",
+                        "@href": "https://arxiv.org/abs/2606.11190v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.09828v1",
+                        "@href": "https://arxiv.org/pdf/2606.11190v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Video world models that maintain 3D spatial consistency across generated frames typically rely on explicit point cloud memory constructed in RGB space. This design is both computationally expensive, requiring repeated rendering and VAE encoding, and inherently lossy, as the round trip through pixel space discards rich features of the learned latent representation. In this paper, we introduce \\emph{latent spatial memory} for video world models, a persistent 3D cache that stores scene information directly in the diffusion latent space, avoiding pixel-space reconstruction. Building on this, we propose Mirage, a latent-space spatial memory framework that constructs the memory by lifting latent tokens into 3D via depth-guided back-projection and queries it by synthesizing novel views through direct latent-space warping. This unified formulation eliminates both the information loss of pixel-space reconstruction and the computational burden of repeated encoding and rendering. Experiments show that latent spatial memory achieves up to \\textbf{10.57}$\\times$ faster end-to-end video generation and \\textbf{55}$\\times$ reduction in memory footprint relative to explicit 3D baselines. Leveraging the geometric prior of the diffusion model, Mirage attains state-of-the-art performance on WorldScore and strong reconstruction quality on RealEstate10K.",
+                "summary": "Cross-modal alignment (CA) and cross-modal prediction (CP) are the dominant paradigms for multimodal representation learning, yet there is no systematic understanding of when each succeeds, when each fails, and when cross-modal training helps at all -- a gap that leaves practitioners, especially in scientific domains like biomedicine or astrophysics, with heterogeneous instruments and multiple levels of organization and measurement, unable to diagnose why standard methods underperform the best single modality. We develop a unified linear framework that addresses both questions. Under a spiked signal-plus-noise model with structured cross-modal nuisance correlation, we derive separation ratios for both objectives that expose complementary failure modes: alignment whitens each modality and fails when nuisance is strongly correlated across views; prediction encodes whatever is cross-predictable through a one-sided whitening, with recovery governed by source-modality quality. The resulting phase diagram partitions multimodal problems into four regimes: Both, CA only, CP only, and Neither. We present a data-driven procedure to locate real-world datasets in this diagram using a small labeled subsample, identifying the preferred objective and prediction direction before any cross-modal training. Experiments on synthetic data, stereo-vision benchmarks, image-caption pairs, and real astrophysical data validate the predictions in the nonlinear regime, including the Neither regime where cross-modal training is actively harmful. Our framework lets practitioners diagnose their multimodal problem and choose the right objective before committing to training. Code to reproduce the results is available at https://github.com/IlayMalinyak/mm_align_vs_pred.",
                 "category": {
-                    "@term": "cs.CV",
+                    "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-06-08T17:59:54Z",
-                "arxiv:comment": "Project Page: https://aka.ms/latent-spatial-memory, Code: https://github.com/microsoft/LatentSpatialMemory",
+                "published": "2026-06-09T17:59:58Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Weijie Wang"
+                        "name": "Ilay Kamai"
                     },
                     {
-                        "name": "Haoyu Zhao"
+                        "name": "Hugues Van Assel"
                     },
                     {
-                        "name": "Yifan Yang"
+                        "name": "Aviv Regev"
                     },
                     {
-                        "name": "Feng Chen"
+                        "name": "Hagai B. Perets"
                     },
                     {
-                        "name": "Zeyu Zhang"
-                    },
-                    {
-                        "name": "Yefei He"
-                    },
-                    {
-                        "name": "Zicheng Duan"
-                    },
-                    {
-                        "name": "Donny Y. Chen"
-                    },
-                    {
-                        "name": "Yuqing Yang"
-                    },
-                    {
-                        "name": "Bohan Zhuang"
+                        "name": "Randall Balestriero"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.09826v1",
-                "title": "OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics",
-                "updated": "2026-06-08T17:59:43Z",
+                "id": "http://arxiv.org/abs/2606.11189v1",
+                "title": "A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design",
+                "updated": "2026-06-09T17:59:54Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.09826v1",
+                        "@href": "https://arxiv.org/abs/2606.11189v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.09826v1",
+                        "@href": "https://arxiv.org/pdf/2606.11189v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Vision-language model (VLM) agents are increasingly deployed in interactive game environments. Yet game benchmarks for VLM agents typically report a single first-attempt score per (agent, game) pair, focus on single-agent Solo play, and lack unified protocols for evaluating heterogeneous agent classes (commercial VLMs, open-weight VLMs, and specialized game policies) on the same footing. We address these gaps with OmniGameArena, a real-time benchmark of twelve newly built Unreal Engine 5 games spanning Solo (7), PvP (3), and Coop (2) with unified action interfaces, and the Improvement Dynamics Curve (IDC), an agentic-reflection harness in which a tool-using reflector LLM autonomously refines a bounded skill prompt across multiple rounds. Beyond cold-start leaderboard scores, IDC exposes two additional observables for each (agent, game) pair: how the score evolves across reflection rounds, and how the learned skill behaves on held-out task variants. We report these observables for twelve VLM agents on the cold-start leaderboard and four top agents under IDC.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-08T17:59:43Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Mingxian Lin"
-                    },
-                    {
-                        "name": "Shengju Qian"
-                    },
-                    {
-                        "name": "Yuqi Liu"
-                    },
-                    {
-                        "name": "Yi-Hua Huang"
-                    },
-                    {
-                        "name": "Yiyu Wang"
-                    },
-                    {
-                        "name": "Wei Huang"
-                    },
-                    {
-                        "name": "Yitang Li"
-                    },
-                    {
-                        "name": "Fan Zhang"
-                    },
-                    {
-                        "name": "Zeyu Hu"
-                    },
-                    {
-                        "name": "Lingting Zhu"
-                    },
-                    {
-                        "name": "Xin Wang"
-                    },
-                    {
-                        "name": "Xiaojuan Qi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.09825v1",
-                "title": "An Agency-Transferring Model-Free Policy Enhancement Technique",
-                "updated": "2026-06-08T17:59:39Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.09825v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.09825v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Training reinforcement learning (RL) policies from scratch is\n  costly: it requires careful reward and environment design,\n  extensive tuning, and substantial computation.\n  Yet many control problems already have a functional but\n  suboptimal policy available as a baseline.\n  This paper proposes a method for embedding such a baseline into\n  the RL training process, simultaneously improving training\n  efficiency relative to from-scratch methods and producing a\n  learning policy that outperforms the baseline.\n  At each step, the method arbitrates between the baseline policy\n  and a trainable learning policy, initially relying strongly on\n  the baseline policy and then progressively transferring agency to\n  the learning policy.\n  By the end of training, the learning policy is a standalone\n  neural network that operates without baseline policy support.\n  The paper formalizes what it means for the baseline policy to be\n  functional: under this policy, the agent reaches a goal set and\n  remains there with high probability.\n  The proposed arbitration mechanism is designed to exploit this\n  property during training, yielding high goal-reaching rates right\n  from the beginning of training.\n  A theoretical analysis provides a formal interpretation of this\n  behavior under stated assumptions and extends it to the final\n  baseline-free regime, where explicit lower bounds are derived for\n  the goal-reaching probability of the standalone learning policy.\n  Empirical results on continuous-control benchmarks show that the\n  proposed method achieves returns that match or exceed those of\n  competitive approaches, while maintaining the highest\n  goal-reaching rates throughout training among the compared\n  methods -- including in the final stage, where the learning policy\n  operates without any baseline support.",
+                "summary": "Supervised fine-tuning (SFT) typically maximizes the likelihood of every token in a demonstrated trajectory. However, an observed token can be non-unique, noisy, or misaligned with the model prior. Strictly fitting toward this one-hot target may be suboptimal, especially when the pretrained model encodes a rich knowledge prior. In this work, we reinterpret SFT as target distribution design: instead of studying only the loss objective, we analyze the token-level target that the loss drives the model to match. We introduce the Q-target framework, which decomposes SFT supervision into two explicit choices: (1) how strongly to rely on the observed token, and (2) how to allocate the remaining probability mass over alternatives. This perspective unifies many existing SFT variants as implicit choices of the target distribution Q. Building on this view, we propose Target-SFT which constructs the training objective directly from the desired target distribution. This method consistently outperforms across the ten reasoning dataset-model settings evaluated, showing the effectiveness of this target-based approach. Overall, our formulation reveals a more fundamental design principle for SFT training and opens a broader search space for SFT objectives.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -173,552 +86,461 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.OC",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-08T17:59:39Z",
+                "published": "2026-06-09T17:59:54Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Anton Bolychev"
+                        "name": "Tong Xie"
                     },
                     {
-                        "name": "Georgiy Malaniya"
+                        "name": "Yuanhao Ban"
                     },
                     {
-                        "name": "Sinan Ibrahim"
+                        "name": "Yunqi Hong"
                     },
                     {
-                        "name": "Pavel Osinenko"
+                        "name": "Sohyun An"
+                    },
+                    {
+                        "name": "Yihang Chen"
+                    },
+                    {
+                        "name": "Cho-Jui Hsieh"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.09822v1",
-                "title": "Causally Evaluating the Learnability of Formal Language Tasks",
-                "updated": "2026-06-08T17:58:36Z",
+                "id": "http://arxiv.org/abs/2606.11188v1",
+                "title": "ARM: An AutoRegressive Large Multimodal Model with Unified Discrete Representations",
+                "updated": "2026-06-09T17:59:28Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.09822v1",
+                        "@href": "https://arxiv.org/abs/2606.11188v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.09822v1",
+                        "@href": "https://arxiv.org/pdf/2606.11188v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Language models, as multi-task learners, acquire a wide range of abilities during training. A fundamental question is how much task-specific data is needed to learn a given task. Answering this for natural language is difficult: tasks are hard to delineate and can confound one another. To rigorously investigate the relationship between data frequency and learnability, we turn to a controlled setting using formal languages induced from probabilistic finite automata. These serve as a methodological testbed to demonstrate that standard correlational evaluation practices are inherently flawed. To enable causal analysis, we introduce the binning semiring, an algebraic object that lets us control how often a targeted property occurs in a sampled corpus. We formulate the experimental pipeline as a causal graphical model and derive decomposed Kullback-Leibler divergence metrics to measure the learnability of specific sub-tasks. Our experiments show that evaluating learnability without causal intervention leads to incorrect conclusions due to confounders in correlational analysis, and serve as a warning about correlational pitfalls in natural-language settings.",
+                "summary": "This paper introduces ARM, a discrete representation-based AutoRegressive Model that unifies image understanding, generation, and editing within a next-token prediction framework. ARM is built on three efforts: first, we train a discrete semantic visual tokenizer that maps images into compact token sequences. Our tokenizer is supervised with multiple objectives that jointly promote semantic discriminability, language alignment and faithful reconstruction, thereby supporting diverse tasks in a shared latent space. With this, we train a 7B autoregressive model over large-scale text and image token sequences, seamlessly developing vision-language perception and generation capabilities. Finally, to further improve preference-aligned behavior for text-to-image generation and instruction-guided editing, ARM applies reinforcement learning (RL) to optimize task-level objectives such as visual quality, instruction adherence, and edit consistency. Surprisingly, the results show that RL not only substantially improves performance on the target tasks (e.g., raising WISE overall from 0.50 to 0.56, GEdit-Bench-EN G_O from 5.75 to 6.68), but also induces cross-task synergy between text-to-image generation and editing. Collectively, these findings highlight autoregressive modeling, when paired with strong representations and preference optimization, as a scalable foundation for multimodal intelligence. Code: https://github.com/wdrink/ARM.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-09T17:59:28Z",
+                "arxiv:comment": "technical report",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Junke Wang"
+                    },
+                    {
+                        "name": "Xiao Wang"
+                    },
+                    {
+                        "name": "Jiacheng Pan"
+                    },
+                    {
+                        "name": "Xuefeng Hu"
+                    },
+                    {
+                        "name": "Feng Li"
+                    },
+                    {
+                        "name": "Jingxiang Sun"
+                    },
+                    {
+                        "name": "Chaorui Deng"
+                    },
+                    {
+                        "name": "Zilong Chen"
+                    },
+                    {
+                        "name": "Yunpeng Chen"
+                    },
+                    {
+                        "name": "Kaibin Tian"
+                    },
+                    {
+                        "name": "Matthew Gwilliam"
+                    },
+                    {
+                        "name": "Hao Chen"
+                    },
+                    {
+                        "name": "Danhui Guan"
+                    },
+                    {
+                        "name": "Kun Xu"
+                    },
+                    {
+                        "name": "Weilin Huang"
+                    },
+                    {
+                        "name": "Zuxuan Wu"
+                    },
+                    {
+                        "name": "Haoqi Fan"
+                    },
+                    {
+                        "name": "Yu-Gang Jiang"
+                    },
+                    {
+                        "name": "Zhenheng Yang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.11186v1",
+                "title": "AnyMod-LLVE: Low-Light Video Enhancement with Modality-Agnostic Inference",
+                "updated": "2026-06-09T17:59:05Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.11186v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.11186v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Low-light video enhancement (LLVE) remains a challenging task due to severe information degradation under low-illumination conditions. Recent multimodal approaches have significantly improved enhancement performance by incorporating auxiliary modalities, such as event streams and infrared images. However, these methods typically assume the availability of these modalities at inference, which is often not feasible in real-world scenarios. To solve this problem, in this work, we propose AMNet, a unified multimodal framework for LLVE, to support flexible modality-agnostic inference, where auxiliary modalities may be unavailable. To address the issue of modality absence, we introduce a Spatial-Spectral Dual-Gated Translator that learns the correspondence between auxiliary modalities and RGB inputs, producing implicit auxiliary representations to support the robust enhancement. Additionally, to fully facilitate the learning of cross-modal correspondence, we conduct large-scale multimodal pretraining based on the RGB-only dataset with synthetic auxiliary modalities. Extensive experiments demonstrate that AMNet could handle arbitrary inference-time modality combinations and exhibits superior performance for LLVE under modality absence conditions. Code and models are available on the project page.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-09T17:59:05Z",
+                "arxiv:comment": "Accepted at ICML 2026; Project page and code: https://lhfgghc.github.io/LLVE-AMNet",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Hangfeng Liang"
+                    },
+                    {
+                        "name": "Yutao Hu"
+                    },
+                    {
+                        "name": "Yanhan Hu"
+                    },
+                    {
+                        "name": "Xiaohan Wu"
+                    },
+                    {
+                        "name": "Wenqi Shao"
+                    },
+                    {
+                        "name": "Ying Fu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.11184v1",
+                "title": "TacForeSight: Force-Guided Tactile World Model for Contact-Rich Manipulation",
+                "updated": "2026-06-09T17:59:03Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.11184v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.11184v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Contact-rich manipulation requires robots to continuously perceive and regulate evolving physical interactions under dynamic contact transitions or complex surface geometries. Recent imitation learning methods improve contact-aware control by incorporating tactile or force feedback, but they rarely model the asymmetric spatiotemporal roles of global force and local tactile sensing. To address this, we propose TacForeSight, a lightweight force-conditioned tactile foresight framework for real-time manipulation. The core component is TacForceWM, a tactile world model that predicts short-horizon tactile latent dynamics from dual-finger tactile observations conditioned on high-frequency wrist force and torque signals. Another key component, the Predictive Tactile-Conditioned Policy, leverages the predicted latents as anticipatory contact priors, models the current-to-future tactile evolution via cross-attention, and adaptively fuses visuo-tactile features through a tactile-guided gating module. By forecasting purely within a compact latent space, TacForeSight enables proactive contact reasoning with efficient real-time inference suitable for high-frequency manipulation control. Real-robot experiments on five representative tasks and three in-process perturbation settings show that TacForeSight consistently outperforms existing baselines, particularly under dynamic contact disturbances. All models and datasets will be made publicly available on the project website at https://tacforesight.github.io/ProjectPage.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-09T17:59:03Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Yujie Zang"
+                    },
+                    {
+                        "name": "Yuhang Zheng"
+                    },
+                    {
+                        "name": "Xian Nie"
+                    },
+                    {
+                        "name": "Yupeng Zheng"
+                    },
+                    {
+                        "name": "Shuai Tian"
+                    },
+                    {
+                        "name": "Songen Gu"
+                    },
+                    {
+                        "name": "Chen Gao"
+                    },
+                    {
+                        "name": "Zining Wang"
+                    },
+                    {
+                        "name": "Shuicheng Yan"
+                    },
+                    {
+                        "name": "Wenchao Ding"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.11182v1",
+                "title": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents",
+                "updated": "2026-06-09T17:57:16Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.11182v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.11182v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In this paper, we propose EEVEE, the first multi-dataset test-time prompt learning framework for LLM agents, enabling test-time prompt learning under real-world task streams. Existing methods are largely designed for single-dataset settings, while real-world applications require models to handle heterogeneous input streams drawn from multiple datasets, domains, and task distributions, limiting their practical applicability. To mitigate cross-dataset interference, EEVEE introduces a router that partitions incoming inputs into task clusters and assigns them to suitable prompt configurations. This design is optimized via a router-prompt co-evolution strategy, which employs interleaved router and prompt learning phases to address their mutual dependency. Experiments across multiple datasets demonstrate that the framework improves robustness under heterogeneous data streams while maintaining single-benchmark learning capability and efficiency. Specifically, EEVEE improves average multi-benchmark scores by 10.38 and 24.32 points over Qwen3-4B-Instruct and DeepSeek-V3.2, surpassing SOTA methods GEPA and ACE by up to 37.2% and 48.2%.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-09T17:57:16Z",
+                "arxiv:comment": "19 pages, 6 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Weixian Xu"
+                    },
+                    {
+                        "name": "Shilong Liu"
+                    },
+                    {
+                        "name": "Mengdi Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.11173v1",
+                "title": "The Role of Feedback Alignment in Self-Distillation",
+                "updated": "2026-06-09T17:50:09Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.11173v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.11173v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Conditioning a language model on additional context, such as feedback on a previous attempt, typically improves its response. Self-distillation trains the model to retain this improvement when the context is not present. The method works by matching the model's output distribution under two settings: a student that sees only the question, and a self-teacher that also sees the context. What the model learns therefore depends on what context the self-teacher receives, yet the design of this context remains largely unexplored.\n  We study context design for self-distillation by training a solver on feedback from a frozen critic. We compare three conditions: (i) a binary reward (GRPO), (ii) the reference solution, and (iii) a step-by-step critique aligned to the solver's reasoning trace.\n  Step-aligned critique yields the largest gains, outperforming GRPO by 16.11 points and reference-solution-conditioned self-distillation by 5.27 points (Avg@12). Per-token advantage analysis reveals why: step-aligned feedback targets only the tokens where reasoning fails, leaving correct behavior intact. Conditioning on the reference solution, by contrast, pressures the model to change its behavior at every token (even correct steps) because an alternative derivation inevitably differs in phrasing and approach. This suggests that structural alignment between feedback and the solver's reasoning is a key driver of self-distillation effectiveness.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-09T17:50:09Z",
+                "arxiv:comment": "Accepted to the ICML 2026 Workshop on RL from World Feedback (RLxF)",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Semih Kara"
+                    },
+                    {
+                        "name": "O\u011fuzhan Ersoy"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.11172v1",
+                "title": "Predicting Future Behaviors in Reasoning Models Enables Better Steering",
+                "updated": "2026-06-09T17:49:24Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.11172v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.11172v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Deployed large reasoning models (LRMs) often behave unexpectedly. Test-time steering controls LRM outputs by intervening on their hidden representations, but it can degrade output quality. We argue that prior steering work implicitly relies on internal features that detect behavior in already generated text. We show that these detection features are poor predictors of future behavioral outcomes, and thus not the natural intervention target. Instead, we train activation probes to predict future behavior likelihoods from intermediate reasoning steps. These probes predict the most likely behavior with 64%-91% accuracy, revealing a separate type of internal prediction features. Building on these prediction features, we introduce a text-level steering method, Future Probe Controlled Generation. FPCG samples multiple candidate sentences and chooses the best one according to a probe predicting the future behavior likelihood. This enables steering with almost no output quality degradation. FPCG also enables steering in several evaluations where activation steering fails. These results show that distinguishing detection and prediction features enables a more nuanced approach to controlling LRM behaviors.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-09T17:49:24Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Evgenii Kortukov"
+                    },
+                    {
+                        "name": "Piotr Komorowski"
+                    },
+                    {
+                        "name": "Florian Klein"
+                    },
+                    {
+                        "name": "Paula Engl"
+                    },
+                    {
+                        "name": "Gabriele Sarti"
+                    },
+                    {
+                        "name": "Seong Joon Oh"
+                    },
+                    {
+                        "name": "Sebastian Lapuschkin"
+                    },
+                    {
+                        "name": "Wojciech Samek"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.11171v1",
+                "title": "Algorithmic and Minimax Complexities in Kernel Bandits",
+                "updated": "2026-06-09T17:49:09Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.11171v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.11171v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Gaussian-process upper confidence bound (GP-UCB) and decision-estimation-coefficient (DEC) methods may appear, at first sight, to belong to different theories. This paper places the two viewpoints in a common algorithmic-information language for frequentist RKHS bandits. GP-UCB fixes an algorithmic, rather than true, Gaussian-process prior and exploits realized-trajectory complexity together with computational tractability, whereas MAMS optimizes a robust class-wide MAIR/DEC envelope. Through the unified MAIR framework and heterogeneous positive-semidefinite algorithmic priors, we generalize both the GP-UCB analysis and the MAMS algorithm, propose a safeguarded master that combines their advantages, and provide a kernel-bandit construction showing that algorithmic complexity can be more informative than class-wide minimax or DEC certificates in overparameterized models. The resulting message is that algorithmic information and class-wide minimax coefficients answer different questions and can lead to different gaps; kernel bandits provide a clean setting in which this distinction becomes mathematically visible.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cond-mat.stat-mech",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.OC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-09T17:49:09Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Yunbei Xu"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.11167v1",
+                "title": "Multi-Faceted Interactivity Alignment in Full-Duplex Speech Models",
+                "updated": "2026-06-09T17:46:55Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.11167v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.11167v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Full-duplex spoken dialogue models can listen and speak simultaneously, making them a promising architecture for natural conversation. However, current models are trained solely with supervised learning through token-level likelihood maximization, which does not directly optimize interaction-level behaviors, causing interactivity issues such as excessive silence and ill-timed turn-taking. Recent work has applied reinforcement learning (RL) to improve interactivity, but existing methods address only a limited set of interactive behaviors in their rewards. In this work, we propose a post-training alignment method that comprehensively improves the interactivity of full-duplex spoken dialogue models through RL. We address the four canonical axes of interactivity: pause handling, turn-taking, backchanneling, and user interruption. For each axis, we extract short audio segments from human conversation corpora and optimize the model with axis-specific reward functions. An extra LLM-based reward for response quality prevents semantic degradation. We apply our method to two open-source models, Moshi and PersonaPlex, demonstrating consistent improvements in interactivity on both offline evaluation with pre-recorded audio and real-time multi-turn dialogue evaluation.",
                 "category": [
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.FL",
+                        "@term": "eess.AS",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-08T17:58:36Z",
+                "published": "2026-06-09T17:46:55Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "V\u00e9steinn Sn\u00e6bjarnarson"
+                        "name": "Atsumoto Ohashi"
                     },
                     {
-                        "name": "Anej Svete"
+                        "name": "Neil Zeghidour"
                     },
                     {
-                        "name": "Josef Valvoda"
+                        "name": "Alexandre D\u00e9fossez"
                     },
                     {
-                        "name": "Reda Boumasmoud"
-                    },
-                    {
-                        "name": "Brian DuSell"
-                    },
-                    {
-                        "name": "Ryan Cotterell"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.09821v1",
-                "title": "Rethinking the Divergence Regularization in LLM RL",
-                "updated": "2026-06-08T17:58:23Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.09821v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.09821v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning (RL) has become a key component of post-training large language models (LLMs). In practice, LLM RL is often off-policy because of training-inference mismatch and policy staleness, making trust-region control essential for stable optimization. Mainstream methods such as PPO and GRPO approximate this control with a ratio-clipping mechanism, but the importance ratio can be a poor proxy for distributional shift in long-tailed vocabularies. Recent work such as DPPO addresses this mismatch by replacing ratio-based clipping with a divergence-based mask, yielding a trust region defined by the sampled token's absolute probability shift. However, DPPO still relies on a hard mask: once a token crosses the trust-region boundary in a harmful direction, its gradient is discarded rather than corrected. To address this, we propose Divergence Regularized Policy Optimization (DRPO), which replaces the hard mask with a smooth advantage-weighted quadratic regularizer on policy shift. DRPO preserves the same trust-region geometry as DPPO while inducing bounded, continuous gradient weights that attenuate diverging updates and provide corrective signals beyond the boundary. Experiments across model scales, architectures, and precision settings show that DRPO improves the stability and efficiency of LLM RL training.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-08T17:58:23Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Jiarui Yao"
-                    },
-                    {
-                        "name": "Xiangxin Zhou"
-                    },
-                    {
-                        "name": "Penghui Qi"
-                    },
-                    {
-                        "name": "Wee Sun Lee"
-                    },
-                    {
-                        "name": "Liefeng Bo"
-                    },
-                    {
-                        "name": "Tianyu Pang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.09820v1",
-                "title": "Weighted universal approximation of differentiable maps on infinite-dimensional manifolds",
-                "updated": "2026-06-08T17:57:40Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.09820v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.09820v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We generalize the universal approximation theorem for functional input neural networks (FNN) to differentiable maps by including the approximation of the derivatives. A FNN maps the input from a possibly infinite-dimensional weighted manifold to the real-valued hidden layer, on which a non-linear scalar activation function is applied, and then returns the output into a Banach space via some linear readouts. By proving a weighted Nachbin theorem, we establish a universal approximation theorem (UAT) for differentiable maps, which goes beyond the usual formulation on compact sets and also includes the approximation of the derivatives. This leads us to approximation results for non-anticipative functionals including the horizontal and vertical derivatives. As a further application, we show that linear functions of the signature are able to approximate path space functionals including their directional derivatives.",
-                "category": [
-                    {
-                        "@term": "math.FA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.PR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "q-fin.MF",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-08T17:57:40Z",
-                "arxiv:comment": "77 pages, 3 figures",
-                "arxiv:primary_category": {
-                    "@term": "math.FA"
-                },
-                "author": [
-                    {
-                        "name": "Philipp Schmocker"
-                    },
-                    {
-                        "name": "Josef Teichmann"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.09813v1",
-                "title": "iMaC: Translating Actions into Motion and Contact Images for Embodied World Models",
-                "updated": "2026-06-08T17:55:41Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.09813v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.09813v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Embodied world models have emerged as a pivotal paradigm for visual robotic decision-making and interactive environment simulation. However, conventional embodied frameworks rely on low-dimensional structured action vectors (e.g., joint angles and end-effector poses), which suffer from limited expressive capacity, poor generalization across diverse embodiments, and unnatural dynamic modeling for complex physical interactions. To address these limitations, this paper proposesiMac (Image as Action Control), a novel unified control paradigm that treats raw visual images as native action representations for embodied world models. Departing from traditional explicit kinematic action encoding, iMac formulates continuous visual manipulation as image-based action tokens, which inherently encapsulate spatial motion intentions, interactive geometric constraints and subtle physical dynamics. We construct a dual-branch embodied architecture consisting of an image-action encoder and a dynamic world predictor: the encoder compresses target-driven visual images into compact action embeddings, while the predictor learns environment transition rules conditioned on image actions to achieve high-fidelity future state prediction and closed-loop embodied control. Extensive experiments are conducted on public embodied manipulation benchmarks and real-world robotic scenarios. The results demonstrate that iMac outperforms vector-based action control baselines in prediction accuracy, task success rate and cross-scene generalization ability. Moreover, our image-action design eliminates the reliance on manually defined action spaces, realizing flexible and universal control for heterogeneous embodied agents. This work provides an innovative visual-action perspective for embodied world models, offering a simple yet effective paradigm for scalable robotic perception and manipulation.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-08T17:55:41Z",
-                "arxiv:comment": "Project page: https://imac-wm.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Zhenyu Wu"
-                    },
-                    {
-                        "name": "Xiuwei Xu"
-                    },
-                    {
-                        "name": "Yukun Zhou"
-                    },
-                    {
-                        "name": "Yifan Li"
-                    },
-                    {
-                        "name": "Qiuping Deng"
-                    },
-                    {
-                        "name": "Xiaofeng Wang"
-                    },
-                    {
-                        "name": "Zheng Zhu"
-                    },
-                    {
-                        "name": "Bingyao Yu"
-                    },
-                    {
-                        "name": "Ziwei Wang"
-                    },
-                    {
-                        "name": "Jiwen Lu"
-                    },
-                    {
-                        "name": "Haibin Yan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.09811v1",
-                "title": "AHA-WAM:Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing",
-                "updated": "2026-06-08T17:55:18Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.09811v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.09811v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "World-action models have emerged as a promising paradigm for robot manipulation, jointly modeling visual scene dynamics and actions to inject physical priors into policy learning. However, existing world-action models couple world prediction and action execution at the same temporal resolution, forcing the world branch to model near-term frame variations that are redundant and weakly informative. We posit that strictly binding world prediction and action execution to the same temporal rhythm may underutilize the potential of the video branch for embodied control. Therefore, we propose AHA-WAM, an Asynchronous Horizon-Adaptive World-Action Model built on a dual Diffusion Transformer (DiT) architecture that reorganizes world-action modeling around this temporal asymmetry. AHA-WAM instantiates the video DiT as a low-frequency world planner that maintains rolling key-value memory over past observations and exposes reusable layerwise latent context encoding long-horizon scene evolution, while a high-frequency action DiT executes short action chunks in closed loop by querying this context through layerwise joint attention. To support asynchronous execution, we introduce horizon-adaptive offset training and Observation-Guided Video-Context Routing (OVCR), which together let the action expert exploit long-horizon world context while remaining responsive to real-time execution state without rerunning the video DiT. Experiments on RoboTwin and real-world manipulation tasks show that AHA-WAM achieves state-of-the-art performance without any robot-data pretraining, attaining 92.80% average success on RoboTwin and 78.3% success across 4 real-world tasks, while reaching 24.17 Hz closed-loop control with a 4.59x speedup over Fast-WAM.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-08T17:55:18Z",
-                "arxiv:comment": "Project page: https://serene-sivy.github.io/aha-wam/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Jisong Cai"
-                    },
-                    {
-                        "name": "Long Ling"
-                    },
-                    {
-                        "name": "Shiwei Chu"
-                    },
-                    {
-                        "name": "Zhongshan Liu"
-                    },
-                    {
-                        "name": "Jiayue Kang"
-                    },
-                    {
-                        "name": "Zhixuan Liang"
-                    },
-                    {
-                        "name": "Wenjie Xu"
-                    },
-                    {
-                        "name": "Yinan Mao"
-                    },
-                    {
-                        "name": "Weinan Zhang"
-                    },
-                    {
-                        "name": "Xiaokang Yang"
-                    },
-                    {
-                        "name": "Ru Ying"
-                    },
-                    {
-                        "name": "Ran Zheng"
-                    },
-                    {
-                        "name": "Yao Mu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.09809v1",
-                "title": "Evaluation Cards: An Interpretive Layer for AI Evaluation Reporting",
-                "updated": "2026-06-08T17:55:02Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.09809v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.09809v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "AI evaluation results are produced at scale but reported inconsistently across leaderboards, model cards, benchmark papers, and company blogs. The cost is interpretive: readers cannot reliably compare results across sources, identify what a report omits, or trace an aggregate claim to its underlying evidence. Recent efforts address isolated components but leave three gaps: they cover only narrow slices of the evaluation lifecycle and do not compose into a single interpretable record; they specify static representations that do not differentiate the questions different stakeholders bring to the same evidence; and they remain proposals on paper, lacking the extraction infrastructure required for adoption at scale. We present \\EvalCards{}, an operational reporting layer that composes benchmark metadata, evaluation run data, and model metadata into a unified record. We (1) derive a reporting schema from a structured review of 52 papers and 10 stakeholder interviews, (2) implement four interpretive signals (reproducibility, documentation completeness, provenance and risk, and score comparability), rendered through reader modes calibrated to research and non-research audiences, and (3) deploy a monitoring tool that applies \\EvalCards{} across 5,816 models, 635 benchmarks, and 101,843 results, surfacing systematic gaps in current reporting practice.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-08T17:55:02Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Avijit Ghosh"
-                    },
-                    {
-                        "name": "Anka Reuel"
-                    },
-                    {
-                        "name": "Jenny Chim"
-                    },
-                    {
-                        "name": "Wm. Matthew Kennedy"
-                    },
-                    {
-                        "name": "Srishti Yadav"
-                    },
-                    {
-                        "name": "Jennifer Mickel"
-                    },
-                    {
-                        "name": "Yanan Long"
-                    },
-                    {
-                        "name": "Andrew Tran"
-                    },
-                    {
-                        "name": "Anastassia Kornilova"
-                    },
-                    {
-                        "name": "Damian Stachura"
-                    },
-                    {
-                        "name": "Kevin Klyman"
-                    },
-                    {
-                        "name": "Felix Friedrich"
-                    },
-                    {
-                        "name": "Jeba Sania"
-                    },
-                    {
-                        "name": "Max Lamparth"
-                    },
-                    {
-                        "name": "Jan Batzner"
-                    },
-                    {
-                        "name": "Anoop Mishra"
-                    },
-                    {
-                        "name": "Eliya Habba"
-                    },
-                    {
-                        "name": "Yixiong Hao"
-                    },
-                    {
-                        "name": "Nathan Heath"
-                    },
-                    {
-                        "name": "Shalaleh Rismani"
-                    },
-                    {
-                        "name": "Usman Gohar"
-                    },
-                    {
-                        "name": "Andrea Loehr"
-                    },
-                    {
-                        "name": "David Manheim"
-                    },
-                    {
-                        "name": "Ruchira Dhar"
-                    },
-                    {
-                        "name": "Sree Harsha Nelaturu"
-                    },
-                    {
-                        "name": "Aarush Sinha"
-                    },
-                    {
-                        "name": "Leshem Choshen"
-                    },
-                    {
-                        "name": "Drishti Sharma"
-                    },
-                    {
-                        "name": "Ishan Khire"
-                    },
-                    {
-                        "name": "Amit Saha"
-                    },
-                    {
-                        "name": "Subramanyam Sahoo"
-                    },
-                    {
-                        "name": "Michael Hardy"
-                    },
-                    {
-                        "name": "Michael Alexander Riegler"
-                    },
-                    {
-                        "name": "Kabir Manghnani"
-                    },
-                    {
-                        "name": "Michelle Lin"
-                    },
-                    {
-                        "name": "Yanan Jiang"
-                    },
-                    {
-                        "name": "Yilin Huang"
-                    },
-                    {
-                        "name": "Asaf Yehudai"
-                    },
-                    {
-                        "name": "Jessica Ji"
-                    },
-                    {
-                        "name": "Aris Hofmann"
-                    },
-                    {
-                        "name": "Mubashara Akhtar"
-                    },
-                    {
-                        "name": "Nuno Moniz"
-                    },
-                    {
-                        "name": "Yacine Jernite"
-                    },
-                    {
-                        "name": "Stella Biderman"
-                    },
-                    {
-                        "name": "Zeerak Talat"
-                    },
-                    {
-                        "name": "Sanmi Koyejo"
-                    },
-                    {
-                        "name": "Mykel Kochenderfer"
-                    },
-                    {
-                        "name": "Irene Solaiman"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.09806v1",
-                "title": "Topological Neural Operators",
-                "updated": "2026-06-08T17:54:33Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.09806v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.09806v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We introduce Topological Neural Operators (TNOs), a principled framework for operator learning on cell complexes that lifts neural operators (NOs) from functions on points and/or edges to topological domains. TNOs represent data as features defined on cells of varying dimension and model their interactions through Discrete Exterior Calculus, enabling explicit cross-dimensional coupling via gradient-, curl-, and divergence-type operators. The key design principle is to decouple where information flows, as governed by fixed topological operators, from how it is transformed (which is learned), yielding models that respect the geometric support of physical quantities and expose conservation and compatibility structure. We further propose Hierarchical TNOs (HTNOs), which incorporate learned coarse complexes to propagate long-range and topology-dependent information. Our framework subsumes existing NOs as a special case, providing a unified perspective on operator learning across discretizations. Across a range of PDE benchmarks, including irregular-geometry flow problems, TNOs and HTNOs improve accuracy; controlled studies further isolate the benefits of native higher-rank and topological structure. Project page: https://circle-group.github.io/research/TNO",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-08T17:54:33Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Lennart Bastian"
-                    },
-                    {
-                        "name": "Samuel Leventhal"
-                    },
-                    {
-                        "name": "Mustafa Hajij"
-                    },
-                    {
-                        "name": "Tolga Birdal"
+                        "name": "Eugene Kharitonov"
                     }
                 ]
             }
