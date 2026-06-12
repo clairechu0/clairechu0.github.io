@@ -5,93 +5,89 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-06-11T23:17:44Z",
+        "updated": "2026-06-12T02:54:38Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "582653",
+        "opensearch:totalResults": "583102",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2606.12411v1",
-                "title": "Context-Driven Incremental Compression for Multi-Turn Dialogue Generation",
-                "updated": "2026-06-10T17:59:54Z",
+                "id": "http://arxiv.org/abs/2606.13680v1",
+                "title": "Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning",
+                "updated": "2026-06-11T17:59:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.12411v1",
+                        "@href": "https://arxiv.org/abs/2606.13680v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.12411v1",
+                        "@href": "https://arxiv.org/pdf/2606.13680v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Modern conversational agents condition on an ever-growing dialogue history at each turn, incurring redundant attention and encoding costs that grow with conversation length. Naive truncation or summarization degrades fidelity, while existing context compressors lack cross-turn memory sharing or revision, causing information loss and compounding errors in long dialogues. We revisit the context compression under conversational dynamics and empirically present its fragility. To improve both efficiency and robustness, we introduce Context-Driven Incremental Compression (C-DIC), which treats a conversation as interleaved contextual threads and stores revisable per-thread compression states in a single, compact dialogue memory. At each turn, a lightweight retrieve, revise, and write-back loop shares information across turns and updates stale memories, stabilizing long-horizon behavior. In addition, we adapt truncated backpropagation-through-time (TBPTT) to our multi-turn setting, learning cross-turn dependencies without full-history backpropagation. Extensive experiments on long-form dialogue benchmarks demonstrate superior performance and efficiency of C-DIC; notably, C-DIC shows stable inference latency and perplexity over hundreds of dialogue turns, supporting a scalable path to high-quality dialogue modeling.",
+                "summary": "Retrieval-augmented generation (RAG) has become a standard mechanism for grounding language models in external knowledge, yet conventional retrieval based on lexical or semantic similarity is poorly suited for complex reasoning tasks: a semantically similar problem may demand an entirely different solution strategy, while a superficially different problem may share the same underlying reasoning pattern. We propose Retrieval-Augmented Reinforcement Fine-Tuning (RA-RFT), a post-training framework that teaches language models to reason by analogy. RA-RFT uses gold-relevance distillation to train a retriever that ranks contexts by expected reasoning benefit rather than semantic overlap, and then fine-tunes the policy model via reinforcement fine-tuning methods with retrieved analogous demonstrations, so the model learns to leverage reasoning traces under verifiable outcome rewards. We further analyze the diversity of retrieved contexts and find that reasoning-aware retrieval surfaces complementary solution strategies that provide distinct reasoning scaffolds for individual problems. Across challenging mathematical reasoning benchmarks, RA-RFT consistently outperforms standard reinforcement fine-tuning methods. For example, it improves AIME 2025 average@32 accuracy by 7.1 and 2.8 points over GRPO for Qwen3-1.7B and Qwen3-4B respectively -- suggesting that reasoning-aware retrieval is a complementary axis of improvement and orthogonal to advances in reward design or training curricula.",
                 "category": [
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-10T17:59:54Z",
-                "arxiv:comment": "Accepted at ICML 2026",
+                "published": "2026-06-11T17:59:52Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Yeongseo Jung"
+                        "name": "Zilin Xiao"
                     },
                     {
-                        "name": "Jaehyeok Kim"
+                        "name": "Qi Ma"
                     },
                     {
-                        "name": "Eunseo Jung"
+                        "name": "Chun-cheng Jason Chen"
                     },
                     {
-                        "name": "Jiachuan Wang"
+                        "name": "Xintao Chen"
                     },
                     {
-                        "name": "Yongqi Zhang"
+                        "name": "Avinash Atreya"
                     },
                     {
-                        "name": "Ka Chun Cheung"
+                        "name": "Hanjie Chen"
                     },
                     {
-                        "name": "Simon See"
-                    },
-                    {
-                        "name": "Lei Chen"
+                        "name": "Vicente Ordonez"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.12406v1",
-                "title": "FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
-                "updated": "2026-06-10T17:59:35Z",
+                "id": "http://arxiv.org/abs/2606.13677v1",
+                "title": "Mana: Dexterous Manipulation of Articulated Tools",
+                "updated": "2026-06-11T17:59:49Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.12406v1",
+                        "@href": "https://arxiv.org/abs/2606.13677v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.12406v1",
+                        "@href": "https://arxiv.org/pdf/2606.13677v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Contact-rich manipulation requires force sensitivity, but many robot arms lack dedicated force sensors due to their high cost. We present Neural External Torque Estimation (NEXT), a data-driven method that estimates external joint torques without needing any dedicated force sensors. NEXT trains in 1 minute from only 10 minutes of free-motion data, yet achieves estimates comparable to dedicated joint-torque sensors. NEXT enables force-feedback teleoperation on low-cost arms and improves policy learning through Force-Informed Re-Sampling Training (FIRST), which up-samples pre-contact and contact segments during behavior cloning. Across five long-horizon tasks, FIRST outperforms prior force-aware policies by over 17% in task progress. Together, NEXT and FIRST bring force-aware teleoperation and policy learning to off-the-shelf robots without additional sensing hardware. Video results and code are available at https://jasonjzliu.com/factr2",
+                "summary": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.",
                 "category": [
                     {
                         "@term": "cs.RO",
@@ -99,446 +95,410 @@
                     },
                     {
                         "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-10T17:59:35Z",
-                "arxiv:comment": "Website at https://jasonjzliu.com/factr2",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Steven Oh"
-                    },
-                    {
-                        "name": "Jason Jingzhou Liu"
-                    },
-                    {
-                        "name": "Tony Tao"
-                    },
-                    {
-                        "name": "Philip Han"
-                    },
-                    {
-                        "name": "Kenneth Shaw"
-                    },
-                    {
-                        "name": "Satoshi Funabashi"
-                    },
-                    {
-                        "name": "Ruslan Salakhutdinov"
-                    },
-                    {
-                        "name": "Deepak Pathak"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.12400v1",
-                "title": "Doc-to-Atom: Learning to Compile and Compose Memory Atoms",
-                "updated": "2026-06-10T17:58:20Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.12400v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.12400v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Long input sequences are central to document understanding and multi-step reasoning in Large Language Models, yet the quadratic cost of attention makes inference both memory-intensive and slow. Context distillation mitigates this by compressing contextual information into model parameters, and recent work such as Doc-to-LoRA amortizes context distillation into a single forward pass that generates one LoRA adapter per document. However, producing a single monolithic adapter for all queries leads to irrelevant-query interference, limited compositional recall, and poor scalability to long-document reasoning. To address these challenges, we propose Doc-to-Atom (Doc2Atom), a compositional parametric memory framework that decomposes each document into semantically typed knowledge atoms. Each atom is compiled into an independent micro-LoRA adapter and a provenance retrieval key. At inference time, a lightweight query router selects and assembles only the relevant atoms into a query-specific adapter, which is then injected into a frozen base model. The entire system is trained end-to-end through a multi-objective distillation framework. Experiments on six diverse QA benchmarks demonstrate that Doc2Atom outperforms Doc-to-LoRA baselines while reducing the memory cost of document internalization.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-10T17:58:20Z",
-                "arxiv:comment": "20 pages",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Xingjian Diao"
-                    },
-                    {
-                        "name": "Wenbo Li"
-                    },
-                    {
-                        "name": "Yashas Malur Saidutta"
-                    },
-                    {
-                        "name": "Avinash Amballa"
-                    },
-                    {
-                        "name": "Lazar Valkov"
-                    },
-                    {
-                        "name": "Srinivas Chappidi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.12397v1",
-                "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
-                "updated": "2026-06-10T17:57:36Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.12397v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.12397v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a \"Power-then-Retract\" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-10T17:57:36Z",
-                "arxiv:comment": "Preprint",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Songhao Wu"
-                    },
-                    {
-                        "name": "Ang Lv"
-                    },
-                    {
-                        "name": "Ruobing Xie"
-                    },
-                    {
-                        "name": "Yankai Lin"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.12395v1",
-                "title": "MARCIM-WG: A cyber wargame proposal based on math modeling applied in a naval scenario",
-                "updated": "2026-06-10T17:56:53Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.12395v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.12395v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "As maritime operations increasingly depend on interconnected digital ecosystems, cyber incidents can propagate across maritime networks and degrade critical services. Strengthening strategic Cyber Situational Awareness (CSA) therefore requires training mechanisms that expose decision-makers to evolving attack dynamics, constrained resources, and the need to align actions with incident-response procedures. This paper introduces MARCIM-WG, a learning-oriented maritime cyberdefense wargame designed following the NATO wargaming methodology and implemented as a hybrid tabletop experience combining a physical board (tokens, indicators, and special cards) with analytically-assisted adjudication supported by a computational simulation model. The proposal is specified through High-Level Design (HLD) and Low-Level Design (LLD) specifications and instantiated in a fictional maritime cyber crisis scenario to enable structured decision cycles, friction, and measurable consequences. Validation combines (i) an operational scenario-based assessment under three configurations (pessimistic, neutral/most likely, optimistic) to verify decision sensitivity and outcome coherence, and (ii) a CSA competency and learning-outcome evaluation using a comparative design against an equivalent control group. Results show a +34.0 percentage-point improvement in the intervention group, with the largest gains in comprehension-related competencies.",
-                "category": {
-                    "@term": "cs.CR",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-10T17:56:53Z",
-                "arxiv:comment": "8 pages, 5 figures, 2 tables, paper in proceedings of the XI National Cybersecurity Research Conference (JNIC) in Barcelona, Spain, May, 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.CR"
-                },
-                "arxiv:journal_ref": "in Actas de las XI Jornadas Nacionales de Investigaci\u00f3n en Ciberseguridad: Barcelona, 6 al 8 de mayo del 2026",
-                "author": [
-                    {
-                        "name": "Diego Cabuya-Padilla"
-                    },
-                    {
-                        "name": "Daniel D\u00edaz-L\u00f3pez"
-                    },
-                    {
-                        "name": "Carlos Castaneda-Marroqu\u00edn"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.12387v1",
-                "title": "TAHOE: Text-to-SQL with Automated Hint Optimization from Experience",
-                "updated": "2026-06-10T17:52:15Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.12387v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.12387v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large Language Models (LLMs) have democratized database access through Text-to-SQL, but moving from prototypes to production remains difficult. Real deployments must handle strict SQL dialects, massive schemas, and evolving user preferences, while supervised fine-tuning is costly and rigid and agentic test-time scaling is expensive. We present Tahoe, a system that treats prompt optimization as a dynamic data management problem. Tahoe uses an error-driven hint learning pipeline across Development and Deployment to consolidate debugging traces into a structured Hint Bank. Compiler feedback is distilled into reusable Syntax Hints for dialect-specific rules, while execution and user feedback are converted into Semantic Hints for schema- and user-specific logic. Tahoe further introduces a Strategy Layer that models conflicting user intents as competing strategies under shared natural-language triggers, with recency signals and post-learning attribution statistics that summarize empirical success, harm, inertness, and support. At inference time, Tahoe retrieves relevant hints and guides the LLM through Logic Planning followed by SQL Synthesis. We implement and evaluate the development-phase workflow, leaving deployment-time human-feedback updates for future work. On Spider 2.0-Snow, Tahoe substantially improves Text-to-SQL without updating model parameters. On 113 supervised Spider 2.0-Snow-0212 examples using GPT-5.5, Tahoe raises pass rate from 61.95 percent to 79.42 percent and pass-at-4 from 72.57 percent to 87.61 percent, achieves 100 percent Snowflake syntax pass rate, and reduces average compiler-feedback critic rounds from 2.79 to 0.12 per sampled candidate. The same Hint Bank also transfers to weaker backbones, including a 19.7 percentage-point pass-rate gain on Doubao-2.0-lite.",
-                "category": [
-                    {
-                        "@term": "cs.DB",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-10T17:52:15Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.DB"
-                },
-                "author": [
-                    {
-                        "name": "Zhiyi Chen"
-                    },
-                    {
-                        "name": "Jie Song"
-                    },
-                    {
-                        "name": "Peng Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.12386v1",
-                "title": "ATLAS: Active Theory Learning for Automated Science",
-                "updated": "2026-06-10T17:52:03Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.12386v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.12386v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Advancing scientific understanding through mechanistic modeling requires posing the right experimental questions to yield maximally informative data. To automate this pursuit within cognitive science, we introduce ATLAS (Active Theory Learning for Automated Science), an active learning framework for the data-driven discovery of interpretable behavioral models. ATLAS iterates between generating mechanistic hypotheses--instantiated as a diverse ensemble of sparse neural networks (Disentangled RNNs)--and designing experiments that optimally distinguish between them. We test this approach on the problem of recovering reinforcement learning agents from their behavior in bandit tasks. ATLAS designs varied sequences of qualitatively novel experiments with temporal structure tailored to underlying agent characteristics. The models trained on these experiments are evaluated against a comprehensive set of metrics for mechanistic modeling that capture behavioral, structural, and computational similarity. ATLAS achieves a 5-10x improvement in sample efficiency across all metrics compared to random experimentation, and its performance is further validated against expert-designed experiments derived from literature. These in silico results showcase ATLAS's potential to accelerate human-interpretable insights in cognitive science and other domains where scientific inquiry relies on discovering mechanistic models.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-10T17:52:03Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "No\u00e9mi \u00c9ltet\u0151"
-                    },
-                    {
-                        "name": "Nathaniel D. Daw"
-                    },
-                    {
-                        "name": "Kimberly L. Stachenfeld"
-                    },
-                    {
-                        "name": "Kevin J. Miller"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.12384v1",
-                "title": "APPO: Agentic Procedural Policy Optimization",
-                "updated": "2026-06-10T17:47:07Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.12384v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.12384v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent advances in agentic Reinforcement Learning (RL) have substantially improved the multi-turn tool-use capabilities of large language model agents. However, most existing methods assign credit over coarse heuristic units, such as tool-call boundaries or fixed workflows, making it difficult to identify which intermediate decisions influence downstream outcomes. In this work, we study agentic RL from two perspectives: \\textit{where to branch and how to assign credit after branching}. Our pilot analysis shows that influential decision points are broadly distributed throughout the generated sequence rather than concentrated at tool calls, while token entropy alone does not reliably reflect their impact on final outcomes. Motivated by these observations, we propose \\textbf{Agentic Procedural Policy Optimization (APPO)}, which shifts branching and credit assignment from coarse interaction units to fine-grained decision points in the sequence. APPO selects branching locations using a Branching Score that combines token uncertainty with policy-induced likelihood gains of subsequent continuations, enabling more targeted exploration while filtering out spurious high-entropy positions. It further introduces procedure-level advantage scaling to better distribute credit across branched rollouts. Experiments on 13 benchmarks show that APPO consistently improves strong agentic RL baselines by nearly 4 points, while keeping efficient tool-calls and maintaining behavior interpretability.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-10T17:47:07Z",
-                "arxiv:comment": "25 pages, including 14 pages of main text and 11 pages of appendix; work in progress",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Xucong Wang"
-                    },
-                    {
-                        "name": "Ziyu Ma"
-                    },
-                    {
-                        "name": "Yong Wang"
-                    },
-                    {
-                        "name": "Yuxiang Ji"
-                    },
-                    {
-                        "name": "Shidong Yang"
-                    },
-                    {
-                        "name": "Guanhua Chen"
-                    },
-                    {
-                        "name": "Pengkun Wang"
-                    },
-                    {
-                        "name": "Xiangxiang Chu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.12374v1",
-                "title": "Semantically-Aware Diver Activity Recognition Framework for Effective Underwater Multi-Human-Robot Collaboration",
-                "updated": "2026-06-10T17:40:19Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.12374v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.12374v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Effective multi-human-robot collaboration is essential for expanding human-led operations in the challenging and high-risk underwater environment. For autonomous underwater vehicles (AUVs) to become true teammates, they must be able to comprehend their surroundings and recognize a diver's activities to offer assistance and ensure safety. Towards this goal, we introduce DAR-Net, a novel transformer-based framework that analyzes complex underwater scenes to classify diver activities. Our contribution lies in a semantically guided learning formulation that couples transformer-based temporal reasoning with pixel-level scene supervision. This multi-loss training strategy explicitly aligns global activity recognition with local human-robot interaction semantics, which is particularly critical in low-visibility underwater conditions. To address the significant challenge of data scarcity in this domain, we present the first-ever Underwater Diver Activity (UDA) dataset, a foundational resource containing over 2,600 annotated images with pixel-level masks. Through rigorous experimental evaluations in a controlled environment, we demonstrate that DAR-Net achieves promising accuracy in recognizing six distinct diver activities, outperforming state-of-the-art models. While this dataset provides a crucial baseline, our work serves as a pioneering step, laying the groundwork for future research and facilitating the development of more intelligent, collaborative underwater robotic systems.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-10T17:40:19Z",
+                "published": "2026-06-11T17:59:49Z",
+                "arxiv:comment": "Project Page: https://zhaohengyin.github.io/mana",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Sadman Sakib Enan"
+                        "name": "Zhao-Heng Yin"
                     },
                     {
-                        "name": "Junaed Sattar"
+                        "name": "Guanya Shi"
+                    },
+                    {
+                        "name": "Pieter Abbeel"
+                    },
+                    {
+                        "name": "C. Karen Liu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.12373v1",
-                "title": "Verifiable Environments Are LEGO Bricks: Recursive Composition for Reasoning Generalization",
-                "updated": "2026-06-10T17:39:41Z",
+                "id": "http://arxiv.org/abs/2606.13675v1",
+                "title": "Improving Robotic Generalist Policies via Flow Reversal Steering",
+                "updated": "2026-06-11T17:59:45Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.12373v1",
+                        "@href": "https://arxiv.org/abs/2606.13675v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.12373v1",
+                        "@href": "https://arxiv.org/pdf/2606.13675v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Reinforcement Learning (RL) with verifiable environments has emerged as a powerful approach for enhancing the reasoning capabilities of Large Language Models (LLMs). While prior research demonstrates that scaling environment quantity improves RL performance, existing manual or individual construction methods suffer from linear scaling limits, thereby hindering scalable reasoning generalization. This paper introduces RACES (\\textbf{R}ecursive \\textbf{A}utomated \\textbf{C}omposition for \\textbf{E}nvironment \\textbf{S}caling), a framework that conceptualizes verifiable environments as composable building blocks that can be recursively assembled. The key insight is that when the codomain (output type) of one environment matches the domain (input type) of another, they can be automatically fused into a new verifiable environment, enabling recursive composition. RACES is implemented with 300 individual environments and defines a set of composition operators (\\textsc{SEQUENTIAL}, \\textsc{PARALLEL}, \\textsc{SORT}, and \\textsc{SELECT}) that induce diverse reasoning patterns. Extensive experiments show that RL training on these composite environments consistently enhances reasoning generalization. Specifically, RACES improves DeepSeek-R1-Distill-Qwen-14B by an average of 3.1 points (from 48.2 to 51.3) and boosts Qwen3-14B performance from 58.8 to 61.1 on six benchmarks, which are unseen during the construction of training environments. Moreover, RACES achieves performance comparable to training on 300 individual environments using only 50 base environments, demonstrating significant efficiency in environment utilization.",
+                "summary": "Generalist policies can learn a wide range of skills from diverse robot datasets. In order to solve or improve on challenging news tasks, we need a way to infer and invoke the appropriate actions from the policy's rich behavioral prior, especially when directly commanding the policy fails. We focus on flow matching generalists and propose Flow Reversal Steering (FRS): a method that takes suboptimal but ``reasonable'' actions, finds their latent noises by passing them through the flow policy in reverse, and maps them to nearby generalist action modes. We evaluate FRS across many simulated and real-world manipulation settings. First, FRS can turn coarse semantic guidance from humans or vision-language models (VLMs) into corresponding good robot actions, improving zero-shot control. These gains can be distilled with behavioral cloning by training an auxiliary policy to output noises that the generalist maps to good actions -- showing up to 95% absolute task success rate boosts in under a minute of training. Finally, FRS enables policy improvement by bootstrapping reinforcement learning with semantic knowledge, improving on several tasks that standard RL fails to improve on.",
                 "category": {
-                    "@term": "cs.CL",
+                    "@term": "cs.RO",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-06-10T17:39:41Z",
+                "published": "2026-06-11T17:59:45Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Andy Tang"
+                    },
+                    {
+                        "name": "William Chen"
+                    },
+                    {
+                        "name": "Andrew Wagenmaker"
+                    },
+                    {
+                        "name": "Chelsea Finn"
+                    },
+                    {
+                        "name": "Sergey Levine"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.13674v1",
+                "title": "RepWAM: World Action Modeling with Representation Visual-Action Tokenizers",
+                "updated": "2026-06-11T17:59:43Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.13674v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.13674v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This work presents RepWAM, a representation-centric world action model (WAM) built on representation visual-action tokenizers. Existing WAMs typically inherit reconstruction-oriented video tokenizers from pretrained video generation models. Although these tokenizers preserve visual fidelity, pixel reconstruction alone provides limited guidance for learning instruction-following dynamics that connect future prediction with robot control. To address this, we explore a semantic visual-action latent space for representation-centric world action modeling. Specifically, we train a representation visual-action tokenizer that maps visual inputs into aligned visual and latent action tokens. We then pretrain our WAM to jointly model future visual states and the latent actions that connect them under language instructions, followed by adaptation to real robot trajectories for closed-loop manipulation. Experiments on real-world manipulation tasks and simulation benchmarks show that RepWAM delivers strong performance across diverse manipulation settings, while ablations highlight the value of semantic visual-action tokenization over reconstruction-oriented alternatives. These results establish representation visual-action tokenization as a promising foundation for world action models and a step toward generalist robot policies. Code and weights will be available at https://github.com/wdrink/RepWAM.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-11T17:59:43Z",
+                "arxiv:comment": "Project page: https://wdrink.github.io/RepWAM",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Junke Wang"
+                    },
+                    {
+                        "name": "Qihang Zhang"
+                    },
+                    {
+                        "name": "Shuai Yang"
+                    },
+                    {
+                        "name": "Yiming Luo"
+                    },
+                    {
+                        "name": "Yujun Shen"
+                    },
+                    {
+                        "name": "Zuxuan Wu"
+                    },
+                    {
+                        "name": "Yu-Gang Jiang"
+                    },
+                    {
+                        "name": "Yinghao Xu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.13672v1",
+                "title": "$\\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation",
+                "updated": "2026-06-11T17:59:15Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.13672v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.13672v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The potential impacts of world models (WMs, i.e., learned simulators) on robotics are far-reaching -- policy evaluation, policy improvement, and test-time planning -- all with limited real-world interaction. To unlock these downstream capabilities, a WM needs to jointly satisfy three desiderata: $\\textit{(i)}$ fidelity (i.e., producing simulated trajectories that correlate with reality), $\\textit{(ii)}$ consistency (i.e., producing simulated trajectories that are coherent over long horizons), and $\\textit{(iii)}$ efficiency (i.e., producing simulated trajectories quickly). We propose $\\texttt{WEAVER}$ (World Estimation Across Views for Embodied Reasoning): a WM architecture that simultaneously achieves all three desiderata, providing state-of-the-art results on robotic manipulation tasks. $\\texttt{WEAVER}$ is a multi-view WM trained to predict future latents and reward values via a flow-matching loss. We distill the key design decisions across model architecture, memory, and prediction objectives required to unlock the kinds of long-horizon dynamic manipulation tasks that have confounded prior world modeling approaches. We apply $\\texttt{WEAVER}$ in robotic hardware, demonstrating its effectiveness at policy evaluation ($\u03c1$=0.870 correlation with real-world success rate), policy improvement (real-world success rate improvement of $38\\%$ on top of the $\u03c0_{0.5}$ robot foundation model), and test-time planning (real-world success rate improvement of $14\\%$ with a $5-10\\times$ speedup over prior WMs). $\\texttt{WEAVER}$ also demonstrates better performance than prior WMs when evaluated on out-of-distribution scenarios. Code, models, and videos at: https://arnavkj1995.github.io/WEAVER/ .",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-11T17:59:15Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Arnav Kumar Jain"
+                    },
+                    {
+                        "name": "Yilin Wu"
+                    },
+                    {
+                        "name": "Jesse Farebrother"
+                    },
+                    {
+                        "name": "Gokul Swamy"
+                    },
+                    {
+                        "name": "Andrea Bajcsy"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.13671v1",
+                "title": "Understanding Truncated Positional Encodings for Graph Neural Networks",
+                "updated": "2026-06-11T17:58:56Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.13671v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.13671v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Positional encodings (PEs) enhance the power of graph neural networks (GNNs), both theoretically and empirically. Two of the most popular families of PEs - spectral (e.g., Laplacian eigenspaces, effective resistance) and walk-based (polynomials of the adjacency matrix) - are theoretically equivalent in expressive power, with expressivity between the 1-WL and 3-WL tests. However, this equivalence assumes the GNN uses the \"complete\" version of these PEs, which requires $O(n^3)$ time and space complexity. Instead, practitioners commonly use truncated variants of these encodings, such as the first $k$ eigenspaces or powers of the adjacency matrix. However, the theoretical properties of these truncated PEs are unknown. In this work, we initiate the study of these truncated PEs. Theoretically, we show that, under truncation, several families of PEs are fundamentally different in expressive power. As a corollary, we show that truncated spectral PEs are no longer stronger than the 1-WL test. We also study a family of spectral PEs, the $k$-harmonic distances, to highlight the differences in expressive power of even closely related truncated PEs. Finally, we experimentally show that a mix of truncated PEs is preferable to any single family on real-world datasets.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-11T17:58:56Z",
+                "arxiv:comment": "28 pages, 4 figures, ICML 2026",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "James Flora"
+                    },
+                    {
+                        "name": "Mitchell Black"
+                    },
+                    {
+                        "name": "Weng-Keen Wong"
+                    },
+                    {
+                        "name": "Amir Nayyeri"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.13662v1",
+                "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
+                "updated": "2026-06-11T17:56:35Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.13662v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.13662v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "LLM-based agents have shown increasing potential in automating scientific discovery. Given an optimizable metric and an execution environment, they can propose, validate, and iterate scientific solutions, and have produced results that outperform human-designed approaches. As model capabilities continue to improve, we argue that the bottleneck for autonomous scientific discovery is shifting from prescribing agent workflows to designing agent environments: the resources, constraints, and interfaces that shape agent behavior. We frame this as environment engineering: building environments that amplify productive behaviors, such as open-ended exploration, systematic artifact management, and inter-agent collaboration, while suppressing harmful behaviors, such as reward hacking and high-friction human oversight. We present EurekAgent, an environment-engineered agent system for metric-driven autonomous scientific discovery. EurekAgent engineers the environment along four dimensions: permissions engineering for bounded agent execution and isolated evaluation; artifact engineering for filesystem and Git-based collaboration; budget engineering for budget-aware exploration; and human-in-the-loop engineering for easy human supervision and intervention. EurekAgent sets new state-of-the-art results on multiple mathematics, kernel engineering, and machine learning tasks, including new state-of-the-art 26-circle packing results discovered with less than $11 in total API cost. We open-source our code and results, and call for environment engineering as a core research direction for developing reliable autonomous research agents.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-11T17:56:35Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Amy Xin"
+                    },
+                    {
+                        "name": "Jiening Siow"
+                    },
+                    {
+                        "name": "Junjie Wang"
+                    },
+                    {
+                        "name": "Zijun Yao"
+                    },
+                    {
+                        "name": "Fanjin Zhang"
+                    },
+                    {
+                        "name": "Jian Song"
+                    },
+                    {
+                        "name": "Lei Hou"
+                    },
+                    {
+                        "name": "Juanzi Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.13658v1",
+                "title": "Before You Think: System 0, AI-Mediated Cognition and Cognitive Colonization",
+                "updated": "2026-06-11T17:54:59Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.13658v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.13658v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This paper examines three recent frameworks for understanding the cognitive and epistemic consequences of artificial intelligence: Tri-System Theory, Thinkframes, and System 0. It argues that while the first two capture important dimensions of AI's influence on individual reasoning and collective epistemic practices, System 0 occupies a theoretically distinctive position that neither can fully replicate. The paper introduces the concept of cognitive colonization, according to which AI systems can embed external interests within the architecture of the self in ways that are difficult for users to perceive. Because such systems are already widely deployed, understanding these invisible forms of influence is an urgent philosophical and practical task.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-11T17:54:59Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Marianna Bergamaschi Ganapini"
+                    },
+                    {
+                        "name": "Massimo Chiriatti"
+                    },
+                    {
+                        "name": "Enrico Panai"
+                    },
+                    {
+                        "name": "Giuseppe Riva"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.13657v1",
+                "title": "Dense Supervision, Sparse Updates: On the Sparsity and Geometry of On-Policy Distillation",
+                "updated": "2026-06-11T17:54:09Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.13657v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.13657v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "On-policy distillation (\\textsc{OPD}) has recently become a prominent post-training recipe as it combines two desirable ingredients: on-policy student trajectories and dense teacher supervision, yet how this hybrid changes a model's parameters remains unclear. Across several language and vision-language model pairs and use cases, our analysis yields two main findings. On sparsity, \\textsc{OPD}-style updates are small and coordinate-sparse. They are distributed across layers and are usually FFN-heavy. This sparse structure is operationally useful: training only the discovered subnetwork recovers nearly the same performance as full \\textsc{OPD}. However, the sparsity-inducing SGD optimizer underperforms AdamW in our optimizer ablation, likely because dense teacher supervision preserves heterogeneous coordinate-wise gradient scales where AdamW's adaptive scaling remains useful. On geometry, the updates are numerically full-rank but spectrally concentrated; they lie mostly away from the principal singular subspaces of the source weights and fall disproportionately on coordinates where the source weights are close to zero. These findings suggest that dense teacher supervision does not turn \\textsc{OPD} into ordinary dense parameter rewriting; instead, \\textsc{OPD} retains important geometric signatures of on-policy post-training.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-11T17:54:09Z",
+                "arxiv:comment": "Code is available at https://github.com/SydCS/OPD-Param-Analysis",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Guo Yu"
+                    },
+                    {
+                        "name": "Wenlin Liu"
+                    },
+                    {
+                        "name": "Yulan Hu"
+                    },
+                    {
+                        "name": "Hao-Xuan Ma"
+                    },
+                    {
+                        "name": "Jun-Peng Jiang"
+                    },
+                    {
+                        "name": "Han-Jia Ye"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.13649v1",
+                "title": "Operadic consistency: a label-free signal for compositional reasoning failures in LLMs",
+                "updated": "2026-06-11T17:50:40Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.13649v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.13649v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Detecting LLM reasoning failures at inference time without ground-truth labels has motivated a wide range of confidence baselines, including self-consistency, semantic entropy, and P(True), built on within-question sampling and self-evaluation. Operad theory, the formalism for systems built by iterated substitution, suggests a complementary diagnostic: a model's direct answer to a compositional query should agree with the answer it produces by composing a stated decomposition of the same query. We instantiate this idea as operadic consistency (OC), a per-question signal. Across twelve instruction-tuned LLMs (4B to 671B parameters, open-weights and closed-source) on four multi-hop QA datasets, OC is strongly correlated with accuracy on every dataset (Pearson $r \\in [0.86, 0.94]$, all $p \\leq 0.0004$), and is the only signal we evaluate with $r \\geq 0.85$ uniformly across all four datasets. Chain-of-thought self-consistency (CoT-SC; Wang et al., 2023) matches OC on HotpotQA and DROP ($r = 0.93, 0.87$) but drops to $r \\approx 0.45$ on MuSiQue and StrategyQA. At the per-question level, OC contributes information beyond CoT-SC and semantic entropy on every dataset (cluster-robust $p \\leq 10^{-16}$ for the OC coefficient), and the conclusion is robust to additionally controlling for constructed decomposition-aware baselines ($p \\leq 10^{-13}$). The same signal yields selective-prediction improvements (accuracy at fixed coverage) over a tuned CoT-SC baseline at the equal-cost $K = 3$ budget (AUARC lifts of +0.086 to +0.096 and AUROC lifts of +0.092 to +0.164; 95% CIs exclude zero on every cell). On five frontier thinking models, where the decomposition is extracted from the model's own chain of thought, the same equal-cost comparison gives positive selective-prediction point-estimate lift on all 16 (dataset, budget, metric) cells tested, with 95% CIs excluding zero on 12 of the 16.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-11T17:50:40Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Hao Xiang"
+                        "name": "Nathaniel Bottman"
                     },
                     {
-                        "name": "Qiaoyu Tang"
+                        "name": "Yinhong Liu"
                     },
                     {
-                        "name": "Le Yu"
-                    },
-                    {
-                        "name": "Yaojie Lu"
-                    },
-                    {
-                        "name": "Xianpei Han"
-                    },
-                    {
-                        "name": "Ben He"
-                    },
-                    {
-                        "name": "Le Sun"
-                    },
-                    {
-                        "name": "Bowen Yu"
-                    },
-                    {
-                        "name": "Peng Wang"
-                    },
-                    {
-                        "name": "Hongyu Lin"
-                    },
-                    {
-                        "name": "Dayiheng Liu"
+                        "name": "Kyle Richardson"
                     }
                 ]
             }
