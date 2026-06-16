@@ -5,529 +5,674 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-06-16T00:28:38Z",
+        "updated": "2026-06-16T06:28:23Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "583472",
+        "opensearch:totalResults": "584337",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2606.14703v1",
-                "title": "Gaze Heads: How VLMs Look at What They Describe",
-                "updated": "2026-06-12T17:59:57Z",
+                "id": "http://arxiv.org/abs/2606.17056v1",
+                "title": "The Value Axis: Language Models Encode Whether They're on the Right Track",
+                "updated": "2026-06-15T17:59:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.14703v1",
+                        "@href": "https://arxiv.org/abs/2606.17056v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.14703v1",
+                        "@href": "https://arxiv.org/pdf/2606.17056v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "How a vision-language model internally solves the task of describing an image is far from obvious. We find that the model develops a specific mechanism for this: a small set of attention heads in its language-model backbone, which we call gaze heads, whose attention tracks the image region the model is currently describing. We find them with a simple correlation score from a few forward passes, using comic strips as a controlled testbed where narrative order is laid out spatially. These gaze heads do not just track the image tokens being described: redirecting their attention to a chosen region forces the VLM to describe that region instead. A single attention-mask intervention on the top-100 gaze heads, fewer than 9% of all heads, steers the model's answer to any chosen comic panel at 83.1% accuracy, while the same intervention on random heads fails to redirect the answer, and intervening on all heads destroys generation. The same lever also extends to continuous control: switching the gaze target mid-generation makes the model wrap up its current panel description and move to the new one within a few tokens. Beyond comics, the same intervention redirects answers to chosen regions in natural COCO images. The mechanism further recurs across model sizes from 2B to 32B parameters and across other VLM architectures, although some frozen-encoder families show no comparable head set. More broadly, this shows that targeted edits identified through mechanistic analysis can serve as practical inference-time levers for steering multimodal model behavior, without any retraining. Our code, interactive demo, and datasets are available at https://gaze.baulab.info/",
-                "category": [
+                "summary": "We investigate whether language models internally track the value of their current trajectory, defined as the likelihood that their ongoing strategy will achieve their goals. Using synthetic, in-context reinforcement learning data, we construct a \"value\" axis for Qwen3-8B. We find that activations along this axis distinguish between high vs. low verbalized confidence, rollouts without and with backtracking, and correct vs. corrupted code. Steering towards high value causally suppresses self-correction and reduces explanatory verbosity, while steering towards low value induces backtracking and exploration. We demonstrate that direct preference optimization (DPO) can increase the internal value of rewarded behaviors (e.g. use a certain word), causing the model to act more confidently after exhibiting them. Finally, we apply the value axis to study in-the-wild settings. For example, we find that Qwen assigns low value to politically sensitive chat queries after post-training and that supervised fine-tuning increases internal confidence within the training domain. Our results suggest that language models linearly encode an estimate of expected goal success that modulates their confidence in pursuing a direction.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-15T17:59:58Z",
+                "arxiv:comment": "Code repository: https://github.com/nickjiang2378/value-axis",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Nick Jiang"
                     },
+                    {
+                        "name": "Isaac Kauvar"
+                    },
+                    {
+                        "name": "Jack Lindsey"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.17055v1",
+                "title": "T-Rex: Tactile-Reactive Dexterous Manipulation",
+                "updated": "2026-06-15T17:59:55Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.17055v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.17055v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The ability to react dynamically to tactile signals has long been considered crucial to agile human-level dexterity. Yet contemporary learning-based Vision-Language-Action (VLA) models for robotic manipulation generally either overlook the tactile modality or are limited to encoders with static cues, due in part to the scarcity of diverse training data and standardized evaluation, architectural constraints in current VLA models, and limitations of static tactile encoders. In this paper, we push the frontier of tactile-reactive manipulation by addressing all of these limitations. We propose a large-scale, 100-hour tactile-rich dataset collected via a novel, data-efficient recipe that prioritizes elementary motor primitives. To effectively exploit naturally high-frequency touch signals without sacrificing the existing capabilities of existing VLAs, we introduce a variable-rate Mixture-of-Transformers (MoT) architecture equipped with a novel temporal tactile VQ-VAE encoder. We demonstrate the effectiveness of tactile-reactive policies on 12 manipulation tasks requiring delicate force control and deformable object manipulation, achieving over 30% higher average success rate than the strongest baseline.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-15T17:59:55Z",
+                "arxiv:comment": "Project page: https://tactile-rex.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Dantong Niu",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Zhuoyang Liu",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Zekai Wang",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Boning Shao",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Zhao-Heng Yin",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Anirudh Pai",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Yuvan Sharma",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Stefano Saravalle",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Ruijie Zheng",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Jing Wang",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Ryan Punamiya",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Mengda Xu",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Yuqi Xie",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Yunfan Jiang",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Letian Fu",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Konstantinos Kallidromitis",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Matteo Gioia",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Junyi Zhang",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Jiaxin Ge",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Haiwen Feng",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Fabio Galasso",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Wei Zhan",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "David M. Chan",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Yutong Bai",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Roei Herzig",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Jiahui Lei",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Fei-Fei Li",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Ken Goldberg",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Jitendra Malik",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Pieter Abbeel",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Yuke Zhu",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Danfei Xu",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Jim",
+                        "arxiv:affiliation": "Linxi"
+                    },
+                    {
+                        "name": "Fan"
+                    },
+                    {
+                        "name": "Trevor Darrell"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.17053v1",
+                "title": "Context-Aware RL for Agentic and Multimodal LLMs",
+                "updated": "2026-06-15T17:59:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.17053v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.17053v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large language models (LLMs) often fail when answering requires identifying a small but decisive piece of evidence within a long or complex context, such as a single line in a tool trace or a subtle detail in an image. We propose ContextRL, a context-aware reinforcement learning (RL) method that improves long-horizon reasoning and multimodal performance through an \\emph{indirect} auxiliary objective. Instead of supervising only the final answer, ContextRL presents the model with a query, an answer, and two highly similar contexts, and rewards it for selecting the context that supports the query--answer pair, thereby encouraging fine-grained grounding. We construct contrastive context data in two domains: for coding agents, trajectories serve as contexts, yielding 1k pairs built via condition filtering; for multimodal reasoning, images serve as contexts, yielding 7K pairs built via generative editing and similarity search. ContextRL achieves average gains of +2.2% over standard GRPO on 5 long-horizon benchmarks, and +1.8% across 12 diverse visual question answering benchmarks. To disentangle the effect of the proposed objective from that of additional data, we compare against data-augmentation baselines that repurpose the same contrastive contexts as standard query--context--answer examples. These baselines provide little to no improvement, showing that the gains arise from the proposed context-selection objective rather than from the contrastive data alone.",
+                "category": [
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-12T17:59:57Z",
+                "published": "2026-06-15T17:59:28Z",
+                "arxiv:comment": "29 pages, 9 figures",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Rohit Gandikota"
+                        "name": "Peiyang Xu"
                     },
                     {
-                        "name": "David Bau"
+                        "name": "Bangzheng Li"
+                    },
+                    {
+                        "name": "Sijia Liu"
+                    },
+                    {
+                        "name": "Karthik R. Narasimhan"
+                    },
+                    {
+                        "name": "Pramod Viswanath"
+                    },
+                    {
+                        "name": "Prateek Mittal"
+                    },
+                    {
+                        "name": "Xingyu Fu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.14702v1",
-                "title": "OmniVideo-100K: A Dataset for Audio-Visual Reasoning through Structured Scripts and Evidence Chains",
-                "updated": "2026-06-12T17:59:55Z",
+                "id": "http://arxiv.org/abs/2606.17048v1",
+                "title": "Exact Posterior Score Estimation for Solving Linear Inverse Problems",
+                "updated": "2026-06-15T17:58:22Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.14702v1",
+                        "@href": "https://arxiv.org/abs/2606.17048v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.14702v1",
+                        "@href": "https://arxiv.org/pdf/2606.17048v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Current automated pipelines for audio-visual Question Answering (QA) generally adopt a ``video-caption-QA'' paradigm. However, these methods typically segment videos into short clips and generate separate descriptions for audio and visual modalities. This decoupled processing severs inherent associations between sounds and their visual sources, while independent clip processing often causes inconsistent descriptions of the same entity across segments. Furthermore, coupling long-text comprehension and QA synthesis into a single step often restricts models to localized events, yielding questions lacking long-term temporal connections and deep cross-modal reasoning. To address these issues, we propose an automated data engine featuring two mechanisms: (1) \\textbf{Entity-Anchored Video Scripting} transforms videos into structured scripts, comprising summaries, main entity lists, and segment-wise audio-visual descriptions. The entity list serves as a global prior to ensure cross-segment referential consistency and reconstruct audio-visual associations. (2) \\textbf{Clue-Guided QA Generation} prompts models to first mine cross-segment, multimodal clues from the script, and subsequently generate QA pairs based on these high-value clues. Leveraging this pipeline, we construct the instruction-tuning dataset \\textbf{OmniVideo-100K} and a human-verified test set, \\textbf{OmniVideo-Test}. Fine-tuning VITA-1.5, Qwen2.5-Omni-7B and Qwen3-Omni-30B on OmniVideo-100K yields performance gains of up to 20.59% on OmniVideo-Test, demonstrating strong generalization (up to 12.64% improvements) across established benchmarks like Daily-Omni and JointAVBench.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-12T17:59:55Z",
-                "arxiv:comment": "Project page: https://github.com/MiG-NJU/OmniVideo-100K",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Xinyue Cai"
-                    },
-                    {
-                        "name": "Chaoyou Fu"
-                    },
-                    {
-                        "name": "Yi-Fan Zhang"
-                    },
-                    {
-                        "name": "Ran He"
-                    },
-                    {
-                        "name": "Caifeng Shan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.14701v1",
-                "title": "RATS! Patches Talk Through Registers: Emergent Parts in Register Attention Transformers",
-                "updated": "2026-06-12T17:59:53Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.14701v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.14701v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "When humans see a bird, they recognize far more than just \"bird\" -- they see a head, wings, and talons, a structured assembly of reusable parts that can be identified across every bird they have ever seen. We ask whether a self-supervised visual model can discover the same compositional structure on its own. To this end, we propose RATS (Register Attention Transformers), which decomposes the classification token into N learnable register tokens that route patch information through an L->N->N->L bottleneck via a three-step compress-communicate-broadcast attention. The N registers are partitioned across the H attention heads, so that registers assigned to different heads do not interact with each other. Without auxiliary losses or part annotations, each register spontaneously specializes into a proto-semantic region whose emerging structure resembles object parts. RATS surpasses all baselines by +12 mIoU on average across five segmentation benchmarks, with consistent gains on ADE20K (+1.11 mIoU) and COCO (+0.2 AP^m). Its register dictionary further exhibits part-level consistency and semantic proximity across related categories. Our results suggest that RATS may provide a useful architectural prior for structured and interpretable visual representation learning.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-12T17:59:53Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Timing Yang"
-                    },
-                    {
-                        "name": "Predrag Neskovic"
-                    },
-                    {
-                        "name": "Jansen Seheult"
-                    },
-                    {
-                        "name": "Wenchao Han"
-                    },
-                    {
-                        "name": "Anand Bhattad"
-                    },
-                    {
-                        "name": "Alan Yuille"
-                    },
-                    {
-                        "name": "Feng Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.14699v1",
-                "title": "Instruct-Particulate: Scaling Feed-Forward 3D Object Articulation with Kinematic Control",
-                "updated": "2026-06-12T17:59:36Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.14699v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.14699v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reconstructing articulated 3D objects is important for animation, gaming, and robotic simulations. Recent neural networks can estimate the articulated structure of 3D objects, but their generalization remains limited by the scarcity of annotated data for this task. To address this gap, we introduce Instruct-Particulate, a model that takes a 3D mesh together with a target kinematic specification, including part descriptions, connectivity, joint types, and optional point prompts, and predicts the corresponding kinematic part segmentation and joint motion parameters. The kinematic specification disambiguates the task and allows the model to target annotations of different granularity, thereby making it possible to use more abundant heterogeneous training data. At test time, the kinematic specification can be obtained automatically from large-scale vision-language models, so the model can be applied to any input mesh. To train our model at scale, we construct a heterogeneous dataset of more than 150,000 articulated 3D objects, extending existing publicly available collections with data obtained by partially labelling other 3D models (monolithic or already decomposed into parts) with kinematic labels by means of vision-language models. Experiments show that our model generalizes better across categories and to AI-generated meshes, enabling articulated asset reconstruction from real-world images via image-to-3D models.",
+                "summary": "Diffusion and flow-based models learn powerful data priors by training a denoiser to reverse Gaussian corruption. To use this prior to solve a linear inverse problem, one needs to sample from the posterior, but the score that the prior provides is the unconditional score, not the posterior score. Existing methods either steer a fixed pretrained denoiser with approximate measurement-matching corrections, or train a conditional restoration model that abandons the denoising structure of the prior. We derive the exact posterior score in closed form for linear Gaussian inverse problems under general Gaussian interpolants, and show that posterior sampling reduces to a denoising problem at an operator-dependent shifted pivot under an anisotropic noise covariance. We turn this identity into Exact Posterior Score (EPS), a denoising training objective that preserves the input/output structure of standard pretraining and can therefore be trained from scratch or fine-tuned from a pretrained denoiser. At inference, EPS uses the same sampler as the underlying backbone, with no likelihood gradients or projections. We evaluate EPS on five linear inverse problems across FFHQ and ImageNet, where it outperforms training-free and training-based baselines on fidelity, perceptual, and distributional metrics, while using roughly an order of magnitude fewer denoiser evaluations than gradient-based posterior samplers.",
                 "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.GR",
+                        "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-15T17:58:22Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Abbas Mammadov"
                     },
+                    {
+                        "name": "Ozgur Kara"
+                    },
+                    {
+                        "name": "Kaan Oktay"
+                    },
+                    {
+                        "name": "Iskander Azangulov"
+                    },
+                    {
+                        "name": "Adil Kaan Akan"
+                    },
+                    {
+                        "name": "Hyungjin Chung"
+                    },
+                    {
+                        "name": "James Matthew Rehg"
+                    },
+                    {
+                        "name": "Yee Whye Teh"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.17046v1",
+                "title": "Geometric Action Model for Robot Policy Learning",
+                "updated": "2026-06-15T17:58:03Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.17046v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.17046v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Generalist robot policies must follow user instructions while reasoning about how objects, cameras, and robot actions interact in the 3D physical world. Recent vision-language-action models (VLAs) and video world-action models (WAMs) inherit strong semantic or temporal priors from large-scale foundation models, but they still operate primarily on 2D image frames or 2D-derived latent spaces, leaving implicit the 3D geometry required for contact-rich manipulation. We propose the Geometric Action Model (GAM), a language-conditioned manipulation policy that directly repurposes a pretrained geometric foundation model (GFM) as a shared substrate for perception, temporal prediction, and action decoding. GAM splits the GFM at an intermediate layer: the shallow layers serve as an observation encoder, and a causal future predictor inserted at the split layer forecasts future latent tokens conditioned on language, proprioception, and action history. The predicted future tokens are then routed through the remaining GFM blocks for feature propagation and decoding, allowing a single backbone to produce both future geometry and actions. This design equips the GFM with language-conditioned temporal world modeling through minimal architectural modification while preserving its rich geometric priors. Across a broad suite of simulation and real-robot manipulation benchmarks, GAM is more accurate, more robust, faster, and lighter than current foundation-model-scale baselines.",
+                "category": [
                     {
                         "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-12T17:59:36Z",
-                "arxiv:comment": "Project page: https://instruct-particulate.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Ruining Li"
                     },
                     {
-                        "name": "Yuxin Yao"
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
-                    {
-                        "name": "Matt Zhou"
-                    },
-                    {
-                        "name": "Chuanxia Zheng"
-                    },
-                    {
-                        "name": "Christian Rupprecht"
-                    },
-                    {
-                        "name": "Joan Lasenby"
-                    },
-                    {
-                        "name": "Shangzhe Wu"
-                    },
-                    {
-                        "name": "Andrea Vedaldi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.14695v1",
-                "title": "Persona-Pruner: Sculpting Lightweight Models for Role-Playing",
-                "updated": "2026-06-12T17:58:08Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.14695v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.14695v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Language Models (LMs) have shown remarkable potential as role-playing chatbots, delivering consistent, stylized interactions when given a specification of a character or user persona. However, applying these capabilities to real-world applications (e.g., ecosystems with numerous NPCs interacting simultaneously) exposes a critical inefficiency due to the excessive computational cost. In this paper, we question the necessity of dedicating a full, generalist model to a single persona, hypothesizing that a specific character identity relies on only a fraction of the model's total capacity. We observe that naively pruning LMs often severely degrades the role-playing performance for a specific persona; it does not distinguish between redundant knowledge and essential character traits. We propose Persona-Pruner, a framework that sculpts a lightweight role-playing model by isolating persona-specific sub-networks from a single description. Our experiments consistently show that Persona-Pruner preserves role-playing performance substantially more effectively than existing state-of-the-art LLM pruning techniques, reducing the performance drop from the dense model by up to 93.8% over the strongest baseline on RoleBench in LLM-as-a-judge score, while still maintaining general LLM capabilities. Code is available at https://github.com/jsu-kim/Persona-Pruner.",
-                "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-12T17:58:08Z",
-                "arxiv:comment": "25 pages; ICML 2026; Code is available at https://github.com/jsu-kim/Persona-Pruner",
+                "published": "2026-06-15T17:58:03Z",
+                "arxiv:comment": "Project page: https://cvlab-kaist.github.io/Geometric-Action-Model/",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Jinsu Kim"
+                        "name": "Jisang Han"
                     },
                     {
-                        "name": "Jihoon Tack"
+                        "name": "Seonghu Jeon"
                     },
                     {
-                        "name": "Noah Lee"
+                        "name": "Jaewoo Jung"
                     },
                     {
-                        "name": "Jongheon Jeong"
+                        "name": "Ren\u00e9 Zurbr\u00fcgg"
+                    },
+                    {
+                        "name": "Honggyu An"
+                    },
+                    {
+                        "name": "Tifanny Portela"
+                    },
+                    {
+                        "name": "Marco Hutter"
+                    },
+                    {
+                        "name": "Marc Pollefeys"
+                    },
+                    {
+                        "name": "Seungryong Kim"
+                    },
+                    {
+                        "name": "Sunghwan Hong"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.14694v1",
-                "title": "AdaSR: Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization",
-                "updated": "2026-06-12T17:56:25Z",
+                "id": "http://arxiv.org/abs/2606.17045v1",
+                "title": "Compact Spin-Charge Separated Neural Quantum States for Valence-Bond States",
+                "updated": "2026-06-15T17:57:33Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.14694v1",
+                        "@href": "https://arxiv.org/abs/2606.17045v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.14694v1",
+                        "@href": "https://arxiv.org/pdf/2606.17045v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large reasoning models typically follow a read-then-think paradigm: they observe the complete input, reason over a static context, and then produce the answer. Yet many real-world scenarios are inherently dynamic, such as audio and video stream, where information arrives as a continuous stream and models must reason, update, and respond under partial observations. Recent streaming reasoning methods allow models to think while reading, but they largely rely on supervised imitation of pre-constructed trajectories, which limits their flexibility. In this paper, we propose AdaSR, an adaptive streaming reasoning framework that enables models to reason during input streaming and perform final deliberation once the stream is complete, learning when to think, and how much computation to allocate across different stages. To optimize this hierarchical reasoning process, we introduce Hierarchical Relative Policy Optimization (HRPO), which decomposes policy optimization into streaming reasoning and deep reasoning phases, providing more fine-grained advantage assignment instead of uniformly distributing a single sequence-level advantage over all tokens. HRPO integrates format, accuracy, and adaptive thinking rewards to enforce valid reasoning protocols, preserve final task performance, and encourage latency-aware computation allocation. Experiments show that AdaSR achieves a better balance among reasoning accuracy, computational efficiency, and streaming latency compared with supervised fine-tuning baseline. We release our code at https://github.com/EIT-NLP/StreamingLLM/tree/main/AdaSR.",
+                "summary": "Neural-network quantum states (NQS) provide a flexible nonlinear representation of quantum many-body wavefunctions, but their efficiency depends sensitively on whether the architecture reflects the sign structure and constrained Hilbert space of the target state. In this work, we propose a solvable-point-guided strategy: design the architecture at an exactly solvable point where the correct local rules can be read off, then refine to the non-exact regime by enlarging only the kernel size and hidden dimension. The strategy is built from four physics-motivated designs: a stride-matched local-rule convolution, geometric pooling, a sign-resolving $\\tanh(x^{2k+1})$ activation, and explicit spin-hole sector separation. We test this approach on quasi-one-dimensional valence-bond-solid (VBS) states and their doped soliton variants (sVBS), the exact ground states of a $t$-$J$-like model with a single mobile hole. In finite-size benchmarks, this architecture reaches high fidelity for the exact sVBS state with substantially fewer parameters than generic fully connected, convolutional, and transformer baselines tested under the same setup. For the spin sector, the learned local rule transfers from small to larger systems without retraining. Away from the solvable point, increasing kernel size and hidden dimension systematically improves accuracy, and the model shows approximately $L^2$ parameter scaling in the gapless regime for system size $L$, compared with approximately $L^4$ for matrix-product states in the same regime. Our work establishes a recipe for compact NQS in sign-structured, constrained Hilbert spaces and paves the pathway to physics-informed architectures for the broader $t$-$J$ and Hubbard families.",
+                "category": [
+                    {
+                        "@term": "cond-mat.str-el",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cond-mat.dis-nn",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-15T17:57:33Z",
+                "arxiv:comment": "13 pages, 7 figures",
+                "arxiv:primary_category": {
+                    "@term": "cond-mat.str-el"
+                },
+                "author": [
+                    {
+                        "name": "Ang-Kun Wu"
+                    },
+                    {
+                        "name": "Louis Primeau"
+                    },
+                    {
+                        "name": "Yixin Zhang"
+                    },
+                    {
+                        "name": "Jingtao Zhang"
+                    },
+                    {
+                        "name": "Adrian Del Maestro"
+                    },
+                    {
+                        "name": "Yang Zhang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.17044v1",
+                "title": "Galaxy-cluster-stacked Fermi-LAT, part IV: $\\sim70$ GeV WIMP annihilation lines",
+                "updated": "2026-06-15T17:57:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.17044v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.17044v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The strongest constraints on the velocity-dependent ($p$-wave) annihilation of weakly interacting massive particle (WIMP) dark matter were derived from the deep potential wells of galaxy clusters. Even weaker signals can be extracted from sufficient aggregated clusters, by cross-correlating $\u03b3$-rays with large-scale structure tracers or stacking over extensive cluster catalogs. Three independent such analyses show a similar triad of emission lines in Fermi-LAT data, around 70, 40, and 13 GeV, emerging from featureless spectra in wide-sky regions upon cross-correlation with eROSITA maps, and in stacked MCXC, eROSITA, and DESI catalog clusters once boosted to the cluster frame. These lines fit the anticipated $\u03c7\u03c7\\to\u03b3\u03b3$, $\u03b3Z$, and $\u03b3h$ annihilation channels of a $\\sim70$ GeV WIMP $\u03c7$, detected by composite matched filters at trial-corrected global $Z$-scores reaching $5.6\u03c3$ (cross-correlations) and $2.3\u03c3$ (stacking), with intrinsic $\\sim10^{[-20,-19]}$ cm$^3$ s$^{-1}$ channel cross-sections. High-resolution spectra establish six lines and a broad (three-line) feature in total, naturally aligned with the anticipated nine channels of two cross-annihilating WIMPs of masses $67.3_{-0.1}^{+0.1}$ and $71.4_{-0.1}^{+0.2}$ GeV (profile-likelihood bounds; $_{-5\\%}^{+3\\%}$ systematic; $5.3\u03c3$). The Galactic-center GeV excess is broadly consistent with the corresponding $\u03c7\u03c7\\to b\\bar{b}$ continuum.",
                 "category": {
-                    "@term": "cs.CL",
+                    "@term": "astro-ph.HE",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-06-12T17:56:25Z",
+                "published": "2026-06-15T17:57:28Z",
+                "arxiv:comment": "21 pages, 5 figures, 5 tables",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "astro-ph.HE"
                 },
-                "author": [
-                    {
-                        "name": "Junlong Tong"
-                    },
-                    {
-                        "name": "Wenqi Xu"
-                    },
-                    {
-                        "name": "Yingqi Fan"
-                    },
-                    {
-                        "name": "Anhao Zhao"
-                    },
-                    {
-                        "name": "Xuan Lu"
-                    },
-                    {
-                        "name": "Yang Tan"
-                    },
-                    {
-                        "name": "Xiaoyu Shen"
-                    }
-                ]
+                "author": {
+                    "name": "Uri Keshet"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2606.14693v1",
-                "title": "Learning Coordinated Preference for Multi-Objective Multi-Agent Reinforcement Learning",
-                "updated": "2026-06-12T17:55:28Z",
+                "id": "http://arxiv.org/abs/2606.17043v1",
+                "title": "Hierarchical Advantage Weighting for Online RL Fine-Tuning of VLAs from Sparse Episode Outcomes",
+                "updated": "2026-06-15T17:57:14Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.14693v1",
+                        "@href": "https://arxiv.org/abs/2606.17043v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.14693v1",
+                        "@href": "https://arxiv.org/pdf/2606.17043v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Cooperative multi-objective multi-agent reinforcement learning (MOMARL) models team decision making under multiple, potentially conflicting objectives. In this setting, conflicts arise not only across objectives but also across agents with different observations, roles, and contributions. We propose Preference Coordinated Multi-agent Policy Optimization (PCMA), which learns coordinated agent-specific preferences to enable complementary trade-offs among agents. Theoretically, we formulate cooperative MOMARL as a team-optimal game and show that, under suitable conditions, preference diversity can induce team improvement through a first-order improvement decomposition. Experiments on multiple cooperative MOMA environments and a practical traffic-control scenario show that PCMA improves both performance and trade-off coordination.",
+                "summary": "When pretrained VLA policies are fine-tuned through online RL, each rollout episode produces only a single binary outcome (success or failure), yet the actor update requires per-transition supervision. Existing approaches commonly reduce this sparse outcome to a single scalar reward or advantage signal, which conflates distinct forms of transition-level feedback and provides limited guidance once basic task success becomes achievable. First, a single scalar signal conflates the two objectives of viability and efficiency; once basic success is achieved, the binary label provides no gradient to distinguish efficient completions from slow ones. Second, real-world rollouts mix autonomous and intervention segments; naively assigning episode outcomes across these boundaries introduces incorrect credit assignment. To address these issues, we propose Hierarchical Advantage-Weighted Behavior Cloning (HABC), which trains separate critic heads for these two objectives on different data subsets and combines their outputs with a state-adaptive balance. A state-adaptive gate $g_t$ merges their one-step advantages, prioritizing viability when success is uncertain and shifting to efficiency only when viability is high, and converts the result into per-transition weights on the actor loss. Intervention-aware credit assignment further restricts outcome labels to segments executed by the current policy, preventing supervision from leaking across intervention boundaries. In real-robot experiments on three contact-rich bimanual tasks, HABC raises success from supervised fine-tuning (SFT) baselines of 36%, 44%, and 12% to 92%, 88%, and 38%.",
                 "category": [
                     {
-                        "@term": "cs.MA",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-12T17:55:28Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.MA"
-                },
-                "author": [
-                    {
-                        "name": "Pengxin Wang"
-                    },
-                    {
-                        "name": "Lihao Guo"
-                    },
-                    {
-                        "name": "Yi Xie"
-                    },
-                    {
-                        "name": "Bo Liu"
-                    },
-                    {
-                        "name": "Siyang Cao"
-                    },
-                    {
-                        "name": "Jingdi Chen"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.14691v1",
-                "title": "CORA: Analyzing and bridging thinking-answer gap in Multimodal RLVR via Consistency-Oriented Reasoning Alignment",
-                "updated": "2026-06-12T17:54:59Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.14691v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.14691v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning with verifiable rewards (RLVR) has successfully elicited the reasoning capabilities of large language models, motivating its extension to multimodal scenarios. Existing methods primarily focus on improving the visual coverage of reasoning traces and mitigating visual hallucinations, but underestimate the semantic inconsistency between the reasoning process and the final answer. In this paper, we delve into thinking-answer inconsistency in RLVR for large vision-language models (LVLMs), showing thorough analyses of rollouts collected throughout Group Relative Policy Optimization (GRPO) training process and post-RLVR evaluation outputs that this issue persists during training and remains present during inference. Motivated by the analysis, we propose Consistency-Oriented Reasoning Alignment (CORA), which introduces thinking-answer semantic consistency into RLVR through a lightweight plug-and-play consistency reward model, and further incorporates Hybrid Reward Advantage Splitting (HRAS) to stably coordinate task and consistency optimization. Extensive experiments across representative multimodal reasoning benchmarks and mainstream LVLMs show that CORA improves task performance while effectively mitigating thinking-answer inconsistency, leading to more faithful reasoning traces.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-12T17:54:59Z",
-                "arxiv:comment": "Submitted to EMNLP 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Jiayue Cao"
-                    },
-                    {
-                        "name": "Zhicong Lu"
-                    },
-                    {
-                        "name": "Xuehan Sun"
-                    },
-                    {
-                        "name": "Wei Jia"
-                    },
-                    {
-                        "name": "Hongling Zheng"
-                    },
-                    {
-                        "name": "Changyuan Tian"
-                    },
-                    {
-                        "name": "Zichuan Lin"
-                    },
-                    {
-                        "name": "Wenqian Lv"
-                    },
-                    {
-                        "name": "Nayu Liu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.14690v1",
-                "title": "A Complexity Measure for Active Learning in Multi-group Mean Estimation",
-                "updated": "2026-06-12T17:54:26Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.14690v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.14690v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We study a \\emph{max-risk} objective for active learning in a multi-group mean estimation $d$-armed bandits: a learner adaptively allocates a budget of $T$ samples across $d$ groups to minimize the worst-case uncertainty index $\\max_{k\\in[d]}\u03c3_k^2/n_k$, where $\u03c3_k$ is the standard deviation of the distribution of arm $d$, and $n_k$ is the number of times arm $d$ is sampled. We develop a local minimax framework and prove the first general lower bound for this objective, valid for any finite-variance hypothesis class. The bound separates difficulty into three orthogonal factors: a \\emph{budget} term, a \\emph{heteroscedasticity} index measuring how unevenly the uncertainty is spread across arms, and a model-dependent complexity measure, the \\emph{Variance Local Curvature} ($\\mathrm{VLC}$), which captures how much information a local change of variance creates inside the hypothesis class. For smooth classes, the $\\mathrm{VLC}$ is a reparametrization of a variance--Fisher information, with closed-form values for common families. Benchmarking against the strongest available upper bound shows near-optimality up to logarithmic factors in broad regimes, and pinpoints a systematic gap in highly heterogeneous instances. Our proof introduces two key ingredients: a loss-induced $\\ell_1$ geometry on the decision space, and a representation-based instance generator that reduces hard-instance construction to an explicit random matrix calculation.",
-                "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-12T17:54:26Z",
+                "published": "2026-06-15T17:57:14Z",
+                "arxiv:comment": "Website: https://acerobotics-vla.github.io/HABC-Website",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Abdellah Aznag"
+                        "name": "Tongyan Fang"
                     },
                     {
-                        "name": "Rachel Cummings"
+                        "name": "Siyuan Huang"
                     },
                     {
-                        "name": "Adam N. Elmachtoub"
+                        "name": "Naiyu Fang"
+                    },
+                    {
+                        "name": "Ganlong Zhao"
+                    },
+                    {
+                        "name": "Zhongjin Luo"
+                    },
+                    {
+                        "name": "Jianbo Liu"
+                    },
+                    {
+                        "name": "Xiaogang Wang"
+                    },
+                    {
+                        "name": "Ying Dong"
+                    },
+                    {
+                        "name": "Hongsheng Li"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.14688v1",
-                "title": "Flood and Harvest: The Provable Necessity of Trivia for Generating Valuable Mathematics via the Lens of Language Generation in the Limit",
-                "updated": "2026-06-12T17:52:24Z",
+                "id": "http://arxiv.org/abs/2606.17041v1",
+                "title": "Benchmarking LLM Agents on Meta-Analysis Articles from Nature Portfolio",
+                "updated": "2026-06-15T17:56:41Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.14688v1",
+                        "@href": "https://arxiv.org/abs/2606.17041v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.14688v1",
+                        "@href": "https://arxiv.org/pdf/2606.17041v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "AI systems coupled to proof assistants now generate formal mathematics at scale, and the gap between what a checker can verify and what a mathematician would value has become the binding constraint. We model the generation of valuable mathematics as nested language generation in the limit: a verifiable formal language $F$, accessed through a membership oracle (the proof checker), contains an unknown valuable language $H \\in \\mathcal{H}$ revealed only through an adversarial enumeration of a core $C \\subseteq H$ of exact density $\u03b1$ (the literature). Every output is valuable ($\\in H$), trivial ($\\in F \\setminus H$), or a hallucination ($\\notin F$). We settle four questions. First, the verifier is not taste: the collections admitting generation with breadth are exactly those of the oracle-free model, characterized fiber-wise by Angluin's condition. Second, the verifier does buy sound coverage, covering all unseen valuable statements while asserting only valid ones: possible with it, impossible without it; it relocates unavoidable errors from false to trivial. Third, and centrally, a sharp dichotomy on the tight family: generators emitting finitely many trivia achieve optimal coverage $\u03b1/2$, while any infinite trivia allowance, even at vanishing rate, jumps the optimum to $1-\u03b1/2$ (both tight, for cores presented as the candidate intersection), and one generator attains both ends. The transition is in trivia count, not rate; the gap $1-\u03b1$ is the unrecorded mass. Fourth, both regimes instantiate in a compression model of mathematics. A perfect verifier cannot substitute for taste: the unbounded stream of correct-but-worthless statements is not an engineering accident but a provable necessity, since covering unrecorded valuable mathematics requires an infinite, but asymptotically negligible, stream of certified trivia.",
+                "summary": "Meta-analysis is a demanding form of evidence synthesis that combines literature retrieval, PI/ECO-guided study selection, and statistical aggregation. Its structured, verifiable workflow makes it an ideal substrate for evaluating systematic scientific reasoning, yet existing benchmarks lack ground truth across the full retrieval-screening-synthesis pipeline. We introduce MetaSyn, a dataset of 442 expert-curated meta-analyses from Nature Portfolio journals. Each entry pairs a research question with PI/ECO criteria, a retrieval corpus of 140k PubMed articles, verified positive studies, hard negatives that are topically similar but PI/ECO-ineligible, and complete search strategies and date bounds.\n  Benchmarking twelve pipeline configurations (nine RAG variants and a protocol-driven agent) reveals a critical screening bottleneck: despite a retrieval ceiling of 90.9% recall at K=200, no system recovers more than 52.7% of ground-truth included literature. Current LLMs fail to reliably separate eligible studies from PI/ECO-failing distractors in pools of comparable topical relevance. Stage-attributed metrics capture where systems succeed and fail; a single end-to-end score does not.",
                 "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.DS",
+                        "@term": "cs.IR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-12T17:52:24Z",
+                "published": "2026-06-15T17:56:41Z",
+                "arxiv:comment": "13 pages, 7 figures, preprint for arXiv, dataset and code available at https://github.com/BFTree/MetaSyn",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Xiaoyu Li"
+                        "name": "Anzhe Xie"
                     },
                     {
-                        "name": "Andi Han"
+                        "name": "Weihang Su"
                     },
                     {
-                        "name": "Dai Shi"
+                        "name": "Yujia Zhou"
                     },
                     {
-                        "name": "Zheng Gao"
+                        "name": "Yiqun Liu"
                     },
                     {
-                        "name": "Jiaojiao Jiang"
+                        "name": "Qingyao Ai"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.17040v1",
+                "title": "R2RDreamer: 3D-aware Data Augmentation for Spatially-generalized 2D Manipulation Policies",
+                "updated": "2026-06-15T17:56:19Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.17040v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Junbin Gao"
+                        "@href": "https://arxiv.org/pdf/2606.17040v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Spatial generalization is critical for imitation-learned manipulation policies, but achieving it typically requires scaling demonstrations across diverse object poses, robot configurations, and camera viewpoints. Data augmentation from a few source demonstrations offers a practical alternative to costly real-world collection. Simulation-based augmentation can create controllable variation, but requires complex environment and object setup and may introduce a sim-to-real gap. Recent real-to-real methods avoid these issues by jointly editing 3D observations and action trajectories from real demonstrations, yet they still rely on strong 3D scene parsing and geometry completion, and often produce observations tailored to 3D pointcloud policies rather than RGB-based 2D policies. We propose R2RDreamer, a real-to-real demonstration augmentation framework that preserves the geometric consistency of 3D action-observation editing while moving visual completion to 2D video space. Specifically, R2RDreamer first performs lightweight 3D augmentation by editing incomplete object pointclouds and end-effector trajectories in a shared 3D frame; it then projects the edited scene into masked image-space control videos with occlusion-aware reasoning and uses a dense-control image-to-video model to complete temporally coherent RGB observations. Experiments on spatially shifted manipulation tasks with both 2D diffusion-style policies and vision-language-action policies show that R2RDreamer improves spatial generalization from limited source demonstrations, with analyses validating the contributions of 3D editing, occlusion-aware projection, and video completion.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-15T17:56:19Z",
+                "arxiv:comment": "Project page: https://r2rdreamer.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Xiuwei Xu"
+                    },
+                    {
+                        "name": "Haowen Sun"
+                    },
+                    {
+                        "name": "Angyuan Ma"
+                    },
+                    {
+                        "name": "Yiwei Zhang"
+                    },
+                    {
+                        "name": "Zhenyu Wu"
+                    },
+                    {
+                        "name": "Xiaofeng Wang"
+                    },
+                    {
+                        "name": "Bingyao Yu"
+                    },
+                    {
+                        "name": "Zheng Zhu"
+                    },
+                    {
+                        "name": "Jie Zhou"
+                    },
+                    {
+                        "name": "Jiwen Lu"
                     }
                 ]
             }
