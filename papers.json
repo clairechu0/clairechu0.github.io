@@ -5,532 +5,504 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-06-19T00:20:54Z",
+        "updated": "2026-06-19T11:15:40Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "585132",
+        "opensearch:totalResults": "585557",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2606.19341v1",
-                "title": "Native Active Perception as Reasoning for Omni-Modal Understanding",
-                "updated": "2026-06-17T17:59:56Z",
+                "id": "http://arxiv.org/abs/2606.20560v1",
+                "title": "How Transparent is DiffusionGemma?",
+                "updated": "2026-06-18T17:59:46Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.19341v1",
+                        "@href": "https://arxiv.org/abs/2606.20560v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.19341v1",
+                        "@href": "https://arxiv.org/pdf/2606.20560v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Passive models for long video understanding typically rely on a \"watch-it-all\" paradigm, processing frames uniformly regardless of query difficulty, causing computational cost to grow with video duration. Although interactive frameworks have emerged, they often rely on global pre-scanning, and their context cost still scales with video length. We propose OmniAgent, the first native omni-modal agent that formulates video understanding as a POMDP-based iterative Observation-Thought-Action cycle. OmniAgent executes on-demand actions to selectively distill audio-visual cues into a persistent textual memory, effectively decoupling reasoning complexity from raw video duration. To operationalize this, we introduce (1) Agentic Supervised Fine-Tuning to bootstrap native active perception via best-of-N trajectory synthesis with dual-stage quality control, and (2) Agentic Reinforcement Learning with TAURA (Turn-aware Adaptive Uncertainty Rescaled Advantage), which leverages turn-level entropy to steer credit assignment toward pivotal discovery turns. Crucially, OmniAgent exhibits positive test-time scaling, where performance improves as the number of reasoning turns increases, validating the efficacy of active perception. Empirical results across ten benchmarks (e.g., VideoMME, LVBench) demonstrate that OmniAgent achieves state-of-the-art performance among open-source models. Notably, on LVBench, our 7B agent outperforms the 10$\\times$ larger Qwen2.5-VL-72B (50.5% vs. 47.3%).",
+                "summary": "LLM reasoning transparency is a critical affordance for understanding model decisions, mitigating misuse and misalignment, and debugging surprising model behaviors. However, DiffusionGemma performs a larger fraction of its computation in a continuous latent space; does this make its reasoning less transparent? We study this question by decomposing transparency into two components: variable transparency, whether we understand intermediate snapshots of a model's computational state; and algorithmic transparency, whether we can use these snapshots to reconstruct the process by which the model arrived at its outputs. Naively, DiffusionGemma has poor variable transparency: its opaque serial depth, the amount of serial computation that occurs in between interpretable model states, seems at first 28.6X higher than the corresponding autoregressive Gemma 4 model. However, we show that we can map the information flowing between denoising steps through an interpretable token bottleneck with no decrease in downstream performance. Treating these intermediate states as interpretable reduces the opaque serial depth to just 1.1X that of Gemma 4. Algorithmic transparency is harder for diffusion models than for autoregressive models because all token predictions in the canvas can change at every denoising step, giving the model the power to implement complicated distributed algorithms during the denoising process. To begin bridging this gap, we conduct a suite of interpretability case studies, uncovering initial evidence of novel diffusion-specific phenomena such as non-chronological reasoning, token and sequence smearing, and intermediate-context reasoning. Finally, we test monitorability, a key application of transparency that measures whether model outputs are useful for downstream tasks. We find that DiffusionGemma is similarly monitorable to Gemma 4.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-18T17:59:46Z",
+                "arxiv:comment": "20 main text pages and 6 pages of references and appendices",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Joshua Engels"
+                    },
+                    {
+                        "name": "Callum McDougall"
+                    },
+                    {
+                        "name": "Bilal Chughtai"
+                    },
+                    {
+                        "name": "Janos Kramar"
+                    },
+                    {
+                        "name": "Senthoran Rajamanoharan"
+                    },
+                    {
+                        "name": "Cindy Wu"
+                    },
+                    {
+                        "name": "Arthur Conmy"
+                    },
+                    {
+                        "name": "Asic Q Chen"
+                    },
+                    {
+                        "name": "Jean Tarbouriech"
+                    },
+                    {
+                        "name": "Min Ma"
+                    },
+                    {
+                        "name": "Brendan O'Donoghue"
+                    },
+                    {
+                        "name": "Jo\u00e3o Gabriel Lopes de Oliveira"
+                    },
+                    {
+                        "name": "Rohin Shah"
+                    },
+                    {
+                        "name": "Neel Nanda"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.20559v1",
+                "title": "UNIEGO: Proxies as Mediators for Unified Egocentric Video Representation Learning",
+                "updated": "2026-06-18T17:59:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.20559v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.20559v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Egocentric video understanding is inherently limited by the narrow perspective of wearable cameras: a single viewpoint, a single modality, a single model cannot capture the full richness of human action. We argue that a truly expressive egocentric representation must subsume complementary knowledge across viewpoints, modalities, and foundation model representations, yet remain deployable from egocentric video alone. To this end, we introduce a hierarchical multi-teacher distillation framework that produces UNIEGO, a unified egocentric encoder trained with nine teachers spanning ego-exo viewpoints, RGB, depth, and skeleton modalities, and four foundation models. Rather than distilling directly from heterogeneous teachers whose incompatible architectures and feature geometries induce conflicting gradients, our framework interposes a layer of representation-specific Proxy models that translate diverse teacher knowledge into a homogeneous egocentric space. A second distillation stage, Selective Proxy Distillation (SPD), then adaptively selects, for each training sample, the subset of proxies that are both correct and confident, distilling exclusively from reliable supervision and suppressing erroneous signals. SPD is further stabilized by initializing UNIEGO as a learned convex combination of proxy parameters, placing the unified model in a well-conditioned region of the loss landscape before distillation begins. UNIEGO achieves state-of-the-art performance across three egocentric video understanding tasks - action recognition, video retrieval, and action segmentation on three challenging ego-exo benchmarks, outperforming naive multi-teacher distillation baselines and demonstrating that structured, proxy-mediated knowledge transfer yields richer and more discriminative egocentric representations.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SD",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-17T17:59:56Z",
-                "arxiv:comment": "Accepted at ICML 2026. Code and models: https://github.com/harryhsing/omniagent",
+                "published": "2026-06-18T17:59:45Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Zhenghao Xing"
+                        "name": "Wenhao Chi"
                     },
                     {
-                        "name": "Ruiyang Xu"
+                        "name": "Arkaprava Sinha"
                     },
                     {
-                        "name": "Yuxuan Wang"
+                        "name": "Dominick Reilly"
                     },
                     {
-                        "name": "Jinzheng He"
+                        "name": "Hieu Le"
                     },
                     {
-                        "name": "Ziyang Ma"
-                    },
-                    {
-                        "name": "Qize Yang"
-                    },
-                    {
-                        "name": "Yunfei Chu"
-                    },
-                    {
-                        "name": "Jin Xu"
-                    },
-                    {
-                        "name": "Junyang Lin"
-                    },
-                    {
-                        "name": "Chi-Wing Fu"
-                    },
-                    {
-                        "name": "Pheng-Ann Heng"
+                        "name": "Srijan Das"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.19336v1",
-                "title": "Learning User Simulators with Turing Rewards",
-                "updated": "2026-06-17T17:58:48Z",
+                "id": "http://arxiv.org/abs/2606.20557v1",
+                "title": "Optimal Deterministic Multicalibration and Omniprediction",
+                "updated": "2026-06-18T17:59:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.19336v1",
+                        "@href": "https://arxiv.org/abs/2606.20557v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.19336v1",
+                        "@href": "https://arxiv.org/pdf/2606.20557v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Learning to simulate human users in interactive settings could advance the training of agent assistants, evaluation of personalization systems, research in the social sciences, and more. Existing approaches generally do so by training a large language model (LLM) to match a single ground truth response, either by maximizing the log probability or by using a similarity reward. We instead propose {Turing-RL}: a Turing-Test-based reinforcement learning approach for training user simulator models. {Turing-RL} uses a discriminative Turing reward with an LLM judge to score how indistinguishable a generated response is from the real user's given the user's history, and the user simulator LLM learns to produce responses indistinguishable from what the user could have said with such rewards. Across two different domains--conversational chat and Reddit forum discussion--we find that {Turing-RL} consistently outperforms baseline methods on both LLM and human evaluation metrics. Our study suggests that optimizing for indistinguishability, rather than response matching, is effective for learning user simulators.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-17T17:58:48Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Yingshan Susan Wang"
-                    },
-                    {
-                        "name": "Cedegao E. Zhang"
-                    },
-                    {
-                        "name": "Linlu Qiu"
-                    },
-                    {
-                        "name": "Zexue He"
-                    },
-                    {
-                        "name": "Pengyuan Li"
-                    },
-                    {
-                        "name": "Alex Pentland"
-                    },
-                    {
-                        "name": "Roger P. Levy"
-                    },
-                    {
-                        "name": "Yoon Kim"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.19334v1",
-                "title": "Freeing the Law with LOCUS: A Local Ordinance Corpus for the United States",
-                "updated": "2026-06-17T17:58:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.19334v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.19334v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Progress in legal AI increasingly depends on access to authoritative legal text at scale. Yet one of the most consequential layers of American law remains largely absent from existing machine-readable corpora: local ordinances. Local codes govern zoning, housing, business licensing, public health, noise, animal control, and many other domains of everyday regulation, but they are fragmented across vendor platforms designed for human browsing rather than bulk research access. We introduce LOCUS - the Local Ordinance Corpus for the United States - a comprehensive corpus and county-harmonized access layer for U.S. municipal and county ordinance codes. The raw corpus, available for release to researchers, represents nearly all publicly available municipal and county ordinance codes. The resulting raw corpus contains codes from 9,239 cities and counties. A smaller county-harmonized LOCUS access layer provides coverage for the largest 2,309 of 3,144 U.S. counties, accounting for a majority of the population. We use OCR to handle the myriad of document formats that have kept the law from being a public resource. We release the corpus with coverage metadata to support reproducibility, downstream legal AI research, and the incremental expansion of machine-readable access to local law. We train a collection of ModernBERT-based classifiers and scorers to facilitate analyzing U.S. local law among several dimensions, such as opacity and paternalism, that have not previously been studied at this scale. LOCUS-v1 and its derivative models are available at: https://huggingface.co/datasets/LocalLaws/LOCUS-v1",
+                "summary": "A model is multicalibrated on a collection of group weights $G$ if it is calibrated -- i.e. unbiased even conditional on its prediction -- not just overall, but also after reweighting contexts by each $g \\in G$. It is a useful property for many downstream applications and is a basic desideratum of trustworthy machine learning. Before this work, all predictors known to attain the minimax-optimal $\\widetilde O(\\varepsilon^{-3})$ sample complexity rate for $\\varepsilon$-multicalibration were randomized, while deterministic predictors were known only with substantially worse sample complexity. Whether randomization is necessary for optimal sample complexity in multicalibration was explicitly asked by [CLNR26] and implicitly in several prior works.\n  We resolve this open problem by giving a minimax-optimal multicalibration algorithm that outputs a deterministic predictor. We then generalize the algorithm to produce optimal deterministic predictors that satisfy outcome indistinguishability (OI) with respect to finite or finitely covered collections of tests. As an application, this also gives deterministic omnipredictors and panpredictors with optimal sample complexity, resolving open problems posed by [OKK25] and [BHHLZ25].",
                 "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-17T17:58:22Z",
-                "arxiv:comment": "14 pages, 6 figures",
+                "published": "2026-06-18T17:59:31Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Denis Peskoff"
+                        "name": "Georgy Noarov"
                     },
                     {
-                        "name": "Joe Barrow"
-                    },
-                    {
-                        "name": "Christopher Vu"
-                    },
-                    {
-                        "name": "Diag Davenport"
+                        "name": "Aaron Roth"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.19333v1",
-                "title": "Do as I Do: Dexterous Manipulation Data from Everyday Human Videos",
-                "updated": "2026-06-17T17:57:34Z",
+                "id": "http://arxiv.org/abs/2606.20553v1",
+                "title": "From Efficiency to Leakage -- Privacy Backdoor in Federated Language Model Fine-Tuning",
+                "updated": "2026-06-18T17:58:25Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.19333v1",
+                        "@href": "https://arxiv.org/abs/2606.20553v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.19333v1",
+                        "@href": "https://arxiv.org/pdf/2606.20553v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "How can we scalably generate data for robotic manipulation, especially on human-like platforms such as dexterous multi-fingered hands? Learning from human videos has recently emerged as a likely answer to this question. However, difficulties in estimating hand-object interaction and crossing the human-to-robot embodiment gap have hindered the adoption of abundant monocular RGB-only human videos as the primary source of robot manipulation data. In this work, we present DO AS I DO, an algorithm to reconstruct and retarget monocular RGB human videos to multi-fingered dexterous robotic hands. DO AS I DO reconstructs hand-object interactions from various egocentric and exocentric in-the-wild video sources. The algorithm then retargets these hand-object interaction estimates into a sequence of actions executable in the real world, yielding robot-complete manipulation data from disparate human videos. Overall, DO AS I DO outperforms previous state of the art in estimating hand-object interactions and extracting dexterous manipulation trajectories from RGB videos, as we show in experiments on datasets with ground truths and on a dataset of video clips collected online. Our experiments enable us to propose an efficacy playbook for practitioners collecting human data for manipulation.",
-                "category": [
+                "summary": "Federated learning (FL) enables multiple parties to collaboratively fine-tune language models for domain-specific tasks without sharing raw data. Since full model fine-tuning is often prohibitively expensive for FL clients, parameter-efficient fine-tuning (PEFT) has become the de facto approach in practice, freezing the base model and training only a small set of adapters. In this paper, we show that a malicious parameter server can stealthily corrupt a PEFT adapter into a privacy backdoor that implicitly memorizes the client's training samples as isolated per-sample parameter updates stored in separate neurons, without degrading model utility. Concretely, our attack, NeuroImprint, assigns a dedicated memorization neuron to each training sample and constrains that each neuron is updated at most once along the local fine-tuning trajectory. This design mitigates both cross-sample collisions and cross-step mixing introduced by large local batches and stateful optimizers (e.g., Adam/AdamW) in language-model fine-tuning. After fine-tuning, the resulting isolated per-sample updates can be analytically inverted in closed form to recover text embeddings, which are then deterministically mapped back to token sequences. To understand the generality of our method, we implemented NeuroImprint on multiple language models (BERT, GPT-2, Qwen2, and Llama3.2) and evaluated it across four fine-tuning datasets spanning diverse domains. The results demonstrate that our attack can reconstruct 59% to 79% of all finetuning samples with high semantic fidelity.",
+                "category": {
+                    "@term": "cs.CR",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-18T17:58:25Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CR"
+                },
+                "author": [
                     {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Shanghao Shi"
                     },
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Chaoyu Zhang"
+                    },
+                    {
+                        "name": "Heng Jin"
+                    },
+                    {
+                        "name": "Yang Xiao"
+                    },
+                    {
+                        "name": "Yevgeniy Vorobeychik"
+                    },
+                    {
+                        "name": "William Yeoh"
+                    },
+                    {
+                        "name": "Ning Zhang"
+                    },
+                    {
+                        "name": "Y. Thomas Hou"
+                    },
+                    {
+                        "name": "Wenjing Lou"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.20549v1",
+                "title": "Generating Robot Hands from Human Demonstrations",
+                "updated": "2026-06-18T17:57:21Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.20549v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.20549v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
                     }
                 ],
-                "published": "2026-06-17T17:57:34Z",
-                "arxiv:comment": "Project website: https://do-as-i-do.com/",
+                "summary": "Robot learning has advanced rapidly in learning control, but learning the physical body of a robot remains much more difficult because jointly searching over design and control creates a very large combinatorial problem. Here, we present a data-driven framework for generating robot hands from human demonstrations. Instead of learning a complex controller together with each candidate design, we generate robot hand designs using the same simple control policy used after fabrication: matching fingertip positions through inverse kinematics. Using more than 4 million frames of human fingertip motion from everyday manipulation, our algorithm optimizes tree-structured robot hands to reproduce desired target motions. The framework produced both a 6-degree-of-freedom (DoF) general-purpose hand and lower-DoF task-specific hands with spatial four-bar mimic joints. To accelerate the search over designs, we trained a reinforcement-learning (RL) actor to propose good hand designs and joint angles, reducing search time from hours to minutes. We fabricated the mechanisms directly as one-piece articulated structures with print-in-place joints. In real-world experiments, the 6-DoF hand achieved highly accurate teleoperated fingertip tracking better than available commercial robot hands, whereas the specialized 3-DoF hands reproduced structured human and synthetic trajectories with reduced mechanical complexity. These results showed that large-scale human motion data can be used not only to train robot controllers but also as a reference for optimizing and generating the physical embodiment of robots.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-18T17:57:21Z",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Bhawna Paliwal"
+                        "name": "Sha Yi"
                     },
                     {
-                        "name": "Haritheja Etukuru"
+                        "name": "Nicklas Hansen"
                     },
                     {
-                        "name": "William Liang"
+                        "name": "Xueqian Bai"
                     },
                     {
-                        "name": "Pieter Abbeel"
+                        "name": "Carmelo Sferrazza"
                     },
                     {
-                        "name": "Nur Muhammad Mahi Shafiullah"
+                        "name": "Michael T. Tolley"
                     },
                     {
-                        "name": "Jitendra Malik"
+                        "name": "Xiaolong Wang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.19329v1",
-                "title": "The Chandra-Gaia Catalog of Counterparts: Resolving ambiguous Gaia matches to X-ray sources in the Chandra Source Catalog using Machine Learning",
-                "updated": "2026-06-17T17:54:52Z",
+                "id": "http://arxiv.org/abs/2606.20547v1",
+                "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
+                "updated": "2026-06-18T17:56:17Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.19329v1",
+                        "@href": "https://arxiv.org/abs/2606.20547v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.19329v1",
+                        "@href": "https://arxiv.org/pdf/2606.20547v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present a framework to cross-match sources from the Chandra Source Catalog (CSC v2.1) with optical sources from Gaia Data Release 3. Unlike purely spatial approaches, we use source properties such as magnitudes, colors, and distances to identify true counterparts, detect chance coincidences, and resolve ambiguities when multiple plausible candidates exist. We define a training set of high-confidence matches using NWAY, a Bayesian cross-matching framework that accounts for positional errors and source densities. We train a gradient-boosted classifier (LightGBM) on a variety of features from both catalogs. Of the ~$254$k unique X-ray sources, we find counterparts for ~$113$k sources, of which plausible multiple counterparts are found for ~$7$k. We find no counterparts for ~$20$k sources for which separation-based cross-matching does find a match, and attribute half of these to chance coincidences. We validate the pipeline on the Chandra Orion Ultradeep Project (COUP), where the machine-learning matches reproduce 95% of NWAY cross-matches without using any positional information. We release a catalog of the ~$113$k Chandra-Gaia counterparts, together with ~$7$k alternative matches and ~$20$k ambiguous NWAY associations, supporting future population studies of sources detectable by both Chandra and Gaia. We discuss limitations and provide a generalization of the framework that is applicable in other cross-matching scenarios.",
-                "category": [
-                    {
-                        "@term": "astro-ph.IM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-17T17:54:52Z",
-                "arxiv:comment": "Accepted to The Astrophysical Journal. Website: https://www.samuelperezdi.com/chandragaia/",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.IM"
-                },
-                "author": [
-                    {
-                        "name": "V. Samuel P\u00e9rez-D\u00edaz"
-                    },
-                    {
-                        "name": "Vinay L. Kashyap"
-                    },
-                    {
-                        "name": "Joshua D. Ingram"
-                    },
-                    {
-                        "name": "David Fouhey"
-                    },
-                    {
-                        "name": "Juan Rafael Mart\u00ednez-Galarza"
-                    },
-                    {
-                        "name": "Pavlos Protopapas"
-                    },
-                    {
-                        "name": "Jeremy J. Drake"
-                    },
-                    {
-                        "name": "Dong-Woo Kim"
-                    },
-                    {
-                        "name": "Cecilia Garraffo"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.19328v1",
-                "title": "UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning",
-                "updated": "2026-06-17T17:54:32Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.19328v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.19328v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Preference-based RL provides an approach to learning reward models from pairwise comparisons of behaviors, bypassing the need for explicit reward design. However, existing methods typically rely on passive data collection and suffer from poor sample efficiency, especially during the early stages of learning. We introduce a model-based approach that actively directs exploration by jointly reasoning over uncertainties in the reward, dynamics, and value functions. Our method, Uncertainty-Balanced Preference Planning (UBP2), uses ensembles of reward, dynamics, and value function models to evaluate candidate trajectories according to a unified score that combines expected reward, terminal value, and epistemic uncertainty. Planning under this objective yields an explicit tradeoff between exploitation and information acquisition without requiring ad hoc exploration heuristics. Under standard regularity assumptions, we establish sublinear regret guarantees for both finite-horizon and infinite-horizon settings. Empirically, experiments on the Meta-World benchmark show UBP2 achieves substantially higher sample efficiency than model-free preference-based methods and non-optimistic model-based baselines.",
+                "summary": "We place the attention token on the group: a token is an element $g_i$ of a matrix Lie group $G$ -- a bare transformation, with no feature payload and no external action $\u03c1(g)$ carrying it. To our knowledge this is the first attention construction whose tokens are bare matrix Lie group elements: their score is the closed-form algebra norm of the relative pose rather than a learned kernel, and it reaches the affine full-frame groups that every irrep- or surjective-exp-based method must exclude. We call it Lie-Algebra Attention. Once tokens are group elements, the rest follows with none of the usual representation-theoretic machinery. The relative geometry of a pair is canonical, $g_i^{-1} g_j$, so the pairwise invariant $w_{ij} = \\log(g_i^{-1} g_j)$ is intrinsic rather than designed; equivariance under the diagonal $G$-action is tautological, and the cocycle condition holds automatically. The attention score is the negative squared algebra norm, $s_{ij} = -\\|\\log(g_i^{-1} g_j)\\|_\u03bb^2/\u03c4$: the canonical proximity kernel under a block-weighted Frobenius inner product, with no irreducible representations, spherical harmonics, Clebsch-Gordan products, or learned kernel. The construction applies to any matrix Lie group on a chosen logarithm chart containing the relative poses, including the non-compact non-abelian affine groups with scale and shear that no vector-token attention method reaches: neither the irrep tradition nor surjective-exp methods. Three sequence-completion experiments, on SE(2), SO(3), and Aff(2), bear this out: the closed-form score matches a learned MLP kernel on the same invariant and outperforms it on SE(2), using 50 to 80x fewer score parameters, while a vector-token baseline breaks invariance by five to twelve orders of magnitude.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.GR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.DG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-17T17:54:32Z",
+                "published": "2026-06-18T17:56:17Z",
+                "arxiv:comment": "preprint, 19 pages, 3 figures",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
-                "author": [
-                    {
-                        "name": "Mohamed Nabail"
-                    },
-                    {
-                        "name": "Leo Cheng"
-                    },
-                    {
-                        "name": "Jingmin Wang"
-                    },
-                    {
-                        "name": "Nicholas Rhinehart"
-                    }
-                ]
+                "author": {
+                    "name": "Przemyslaw Musialski"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2606.19327v1",
-                "title": "Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation",
-                "updated": "2026-06-17T17:54:04Z",
+                "id": "http://arxiv.org/abs/2606.20546v1",
+                "title": "Predictability as a Fine-Grained Measure for Privacy",
+                "updated": "2026-06-18T17:55:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.19327v1",
+                        "@href": "https://arxiv.org/abs/2606.20546v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.19327v1",
+                        "@href": "https://arxiv.org/pdf/2606.20546v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Post-training of reasoning language models is commonly driven by supervised distillation and reinforcement learning with verifiable rewards. Distillation often relies on chain-of-thought annotations that are expensive to obtain and may themselves be noisy, incomplete, or partially incorrect; even when the final solution is correct, an imperfect rationale can interfere with learning. Reinforcement learning with verified rewards, on the other hand, typically compresses evaluative feedback into a scalar signal, obscuring which aspects of a response should be improved. We propose \\textbf{Rubric-Conditioned Self-Distillation}, a framework that incorporates rubrics as structured, fine-grained feedback for on-policy self-distillation. Our method conditions the teacher model on criterion-level rubrics and uses it to provide token-level guidance on the student's own sampled trajectories. This design avoids treating a single reference rationale as the sole supervision target. Instead, rubrics specify what a strong response should satisfy, enabling more fine-grained credit assignment over the reasoning process than scalar reward optimization. We instantiate this framework with a two-stage pipeline that first learns to generate task-specific rubrics and then trains a rubric-guided reasoner. We evaluate on a diverse suite of science reasoning benchmarks and results show that rubric-conditioned self-distillation effectively converts rubric-level criteria into token-level guidance over the reasoning process, surpassing GRPO by 1.0 points and OPSD by 0.9 points on average.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-17T17:54:04Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Siyi Gu"
-                    },
-                    {
-                        "name": "Jialin Chen"
-                    },
-                    {
-                        "name": "Sophia Zhou"
-                    },
-                    {
-                        "name": "Arman Cohan"
-                    },
-                    {
-                        "name": "Rex Ying"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.19317v1",
-                "title": "Explaining Attention with Program Synthesis",
-                "updated": "2026-06-17T17:40:55Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.19317v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.19317v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "A longstanding goal of research on interpretable deep learning is to replace opaque neural computations with human-meaningful symbolic descriptions. In this paper, we propose an approach for approximating the behavior of components of deep networks with executable programs. We focus on attention heads in transformer language models. For a given head, we first compute its associated attention matrices on a collection of randomly selected training examples. Next, we prompt a pre-trained language model with a summary of these matrices, and instruct it to generate a set of Python programs that can reproduce the associated attention patterns given only text from the input sentence. Finally, we re-rank programs according to how well our final set of programs predict behavior on held-out inputs. We demonstrate that a set of fewer than 1,000 such generated programs can reproduce the attention patterns of heads in GPT-2, TinyLlama-1.1B, and Llama-3B, achieving an average Intersection-over-Union similarity above 75% on TinyStories. Moreover, the best-fit programs can replace neural attention heads without substantially affecting model behavior: replacing 25% of attention heads with programmatic surrogates across the three models incurs only a 16% average perplexity increase, while maintaining performance on a variety of downstream question answering benchmarks. This work contributes a scalable pipeline for reverse-engineering attention heads in transformer models using human-readable, executable code, advancing a path toward symbolic transparency in neural models.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-17T17:40:55Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Amiri Hayes"
-                    },
-                    {
-                        "name": "Belinda Li"
-                    },
-                    {
-                        "name": "Jacob Andreas"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.19315v1",
-                "title": "Diffusion-Proof: Recipe for Formal Theorem Proving Beyond Auto-Regressive Generation",
-                "updated": "2026-06-17T17:38:32Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.19315v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.19315v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Enhancing the formal math reasoning capabilities of Large Language Models (LLMs) has become a key focus in both mathematical and computer science communities in recent years. While significant progress has been made in using state-of-the-art Auto-Regressive (AR) LLMs for formal theorem proving, these models suffer from inherent limitations. Their next-token prediction generation methods may yield suboptimal performance due to the challenges of long-range coherence and the compounding of errors over long sequences. Recent advancements in diffusion LLMs (dLLMs), which generate text through iterative denoising of a multi-token block, offer a promising alternative. However, the application of dLLMs to formal mathematics, where maintaining long-range coherence is critical, remains largely understudied. To address the challenges above, we propose **Diffusion-Proof**, to the best of our knowledge, the first framework to train and apply dLLMs for formal theorem proving. Our frameworks contain training and inference methods for two models. The first one is *dLLM-Prover-7B*, which performs whole-proof writing with long-range coherent tactic usage. The second one is *dLLM-Corrector-7B*, which is a novel large block diffusion-based correction model. It leverages the in-filling capabilities of dLLMs to perform local proof correction using bi-directional information. Extensive experiments demonstrate that **Diffusion-Proof** relatively significantly outperforms the AR LLM baseline trained under the same dataset. **Diffusion-Proof** achieves an absolute improvement of **1.61%** on ProofNet-Test and **6.14%** on MiniF2F-Test benchmarks compare to the baseline. Notably, **Diffusion-Proof** successfully resolves one IMO problem that more advanced thinking model DeepSeek-Prover-V2-7B could not solve, showcasing the unique advantage of dLLMs in formal theorem proving.",
+                "summary": "Differential privacy (DP) ensures rigorous individual-level privacy guarantees against even the most knowledgeable attackers, but its worst-case nature can impose a costly privacy-accuracy tradeoff. We introduce privacy via predictability, a fine-grained framework that explicitly incorporates the attacker's core knowledge, a compromised portion of the dataset generated by a stochastic process, and a specified family of queries. Predictability measures privacy leakage as the incremental gain in an attacker's ability to predict sensitive information about unknown individuals after observing the algorithm's output, beyond what can already be inferred from the compromised data. We show that predictability and DP are generally incomparable: each can be small while the other is large. However, in the worst-case regime where all but one individual is compromised, and all binary queries are considered sensitive, predictability implies mutual-information DP. More generally, predictability provides a finer-grained privacy metric tailored to specific sensitive information and specific attacker models. We introduce a general framework, using the generalized method of moments (GMM), to analyze asymptotic predictability when the compromised data is generated by a stationary, ergodic, mixing process. Using this analysis, we derive a predictability-calibrated output perturbation scheme for ERM. Our approach is complementary to DP and can be used alongside DP to provide fine-grained privacy control.",
                 "category": {
                     "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-06-17T17:38:32Z",
+                "published": "2026-06-18T17:55:31Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Ruida Wang"
+                        "name": "Linda Lu"
                     },
                     {
-                        "name": "Rui Pan"
-                    },
-                    {
-                        "name": "Pengcheng Wang"
-                    },
-                    {
-                        "name": "Shizhe Diao"
-                    },
-                    {
-                        "name": "Tong Zhang"
+                        "name": "Karthik Sridharan"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.19312v1",
-                "title": "QDSV: A Semantic Problem Representation and Multi-Backend Execution Framework for Quantum-Oriented Computation",
-                "updated": "2026-06-17T17:33:13Z",
+                "id": "http://arxiv.org/abs/2606.20544v1",
+                "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
+                "updated": "2026-06-18T17:55:00Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.19312v1",
+                        "@href": "https://arxiv.org/abs/2606.20544v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.19312v1",
+                        "@href": "https://arxiv.org/pdf/2606.20544v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Predicate-based computation over state spaces separates a problem specification from the backend that realizes it. Building on the model introduced in arXiv:2606.15027, this paper studies QDSV as a semantic, multi-backend execution framework for quantum-oriented computation.\n  We describe how QDSV, QIntent, and Qruba connect declarative problem intent to a structured semantic representation, realize that representation under heterogeneous backend constraints, and report execution trace outputs that separate model-level semantic outputs from backend-specific observations. The framework supports execution modes that do not require the original problem to be authored as a circuit, while still allowing circuit-compatible artifacts when required.\n  As a case study, we evaluate EEG ictal/interictal classification using prepared signal features from the Bonn and Delhi datasets. The study compares classical machine-learning references, a circuit-first variational quantum classifier baseline, QDSV simulator executions, and controlled IBM Quantum hardware runs.\n  The paper does not claim general quantum advantage or superiority over classical machine learning. Its contribution is a semantic execution validation showing how a problem-first representation can remain stable across simulator and hardware realizations while retaining interpretable execution trace outputs.",
-                "category": {
-                    "@term": "cs.PL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-17T17:33:13Z",
-                "arxiv:comment": "12 pages, 1 figure, 6 tables",
+                "summary": "Calibration aligns a model's predictive uncertainty with the frequencies of its empirical outcomes and is important for understanding and trusting reported probabilities. Recent work shows that enforcing calibration at the level of individual predictors can improve ensemble accuracy and calibration, with mixture-of-experts (MoE) models showing strong empirical improvements in particular; however, the conditions under which calibration helps MoE are not well understood. In this work, we study how MoE models behave under distribution shift, focusing on how routing mechanisms interact with expert-level calibration. We show that expert calibration is sufficient to ensure calibration of the overall model under a broad class of distribution shifts in hard-routed models, but is insufficient for calibrating soft-routed models. To address this, we propose an adversarial reweighting that penalizes calibration errors of the routed aggregate under distribution shift, and we demonstrate that it improves the accuracy-calibration tradeoff both on average and on difficult subsets of the data, across model classes, prediction tasks, and distribution shifts.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-18T17:55:00Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.PL"
+                    "@term": "cs.AI"
+                },
+                "arxiv:journal_ref": "ICML 2026",
+                "author": [
+                    {
+                        "name": "Gina Wong"
+                    },
+                    {
+                        "name": "Drew Prinster"
+                    },
+                    {
+                        "name": "Suchi Saria"
+                    },
+                    {
+                        "name": "Rama Chellappa"
+                    },
+                    {
+                        "name": "Anqi Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.20539v1",
+                "title": "Caching for Dollars, Not Hits: An Exact Offline Reference for Cloud-Egress Caching and the Crossover That Decides When It Pays",
+                "updated": "2026-06-18T17:51:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.20539v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.20539v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "When a cache miss fetches from cloud object storage, the bill is per GET request and per byte of egress, not latency. Classic caching minimizes the miss rate, the wrong objective: a rarely but expensively fetched object can cost thousands of times more dollars than a frequently but cheaply fetched one. Generalized-caching theory bounds the miss-cost objective, but no reported benchmark measures how far deployed heuristics sit from the dollar-optimal offline policy on real cloud prices. We supply that reference. For uniform-size page caches with heterogeneous miss costs the offline dollar-optimum is exact in polynomial time via an integral interval linear program -- validated against brute force; variable sizes are NP-hard, so we extend the flow-based offline bound from the hit-ratio objective to dollars (cost-FOO), tight to about four percent. Against this reference we find: (i) a heterogeneity-regret law -- LRU's dollar-regret rises with miss-cost dispersion (Spearman 0.87) while cost-aware GreedyDual cuts it to roughly a tenth; (ii) a contention frontier -- GreedyDual's residual regret collapses to near zero exactly when the budget fits the expensive working set, and is the open slice otherwise; and (iii) a closed-form crossover s* = GET_fee/egress_rate (about 4 KB on S3, 330 B on GCS) that predicts which deployments need dollar-aware caching at all. On a real Twitter trace the price vector alone moves the workload across s*, shifting the regime as predicted. The artifact is a reproducible billing-faithful benchmark; heuristics and bounds it builds on are prior work, credited.",
+                "category": [
+                    {
+                        "@term": "cs.DB",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.DS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-18T17:51:45Z",
+                "arxiv:comment": "6 pages, 3 figures. Code, benchmarks, and full pre-registration: https://github.com/samyama-ai/cloud-egress-cache",
+                "arxiv:primary_category": {
+                    "@term": "cs.DB"
                 },
                 "author": [
                     {
-                        "name": "Jaime Alexander Jimenez Lozano"
+                        "name": "Madhulatha Mandarapu"
                     },
                     {
-                        "name": "Sebastian Jimenez Giraldo"
+                        "name": "Sandeep Kunkunuru"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.20538v1",
+                "title": "Multi-Task Bayesian In-Context Learning",
+                "updated": "2026-06-18T17:50:10Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.20538v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.20538v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Bayesian predictive inference provides a principled framework for uncertainty quantification, data efficiency, and robust generalization. However, exact inference is often intractable, and scalable approximations may remain computationally expensive or require restrictive modeling assumptions that degrade predictive performance. Prior-Data Fitted and in-context models have recently emerged as an amortized alternative by learning to map datasets directly to predictive distributions, but existing approaches are tightly coupled to the support of the training prior and lack explicit mechanisms for adapting to new priors at test time, resulting in limited robustness under distribution shift. We introduce a multi-task in-context learning framework for amortized hierarchical Bayesian predictive inference that explicitly represents prior information as a prefix of in-context datasets. A transformer trained on sequences of prior and target tasks learns to adapt its predictions across families of priors. On a suite of evaluations with increasing difficulty, including out-of-meta-distribution priors and priors with high-dimensional latent structures, our method matches oracle Bayesian predictors while being orders of magnitude faster. We further demonstrate its practical relevance on a real-world spatiotemporal temperature prediction benchmark. Code is available at https://github.com/martianmartina/multi-task-bayesian-icl/.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-18T17:50:10Z",
+                "arxiv:comment": "ICML 2026",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Qingyang Zhu"
+                    },
+                    {
+                        "name": "Eric Karl Oermann"
+                    },
+                    {
+                        "name": "Kyunghyun Cho"
                     }
                 ]
             }
