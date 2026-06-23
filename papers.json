@@ -5,506 +5,484 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-06-22T23:19:19Z",
+        "updated": "2026-06-23T02:39:40Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "585557",
+        "opensearch:totalResults": "586310",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2606.20560v1",
-                "title": "How Transparent is DiffusionGemma?",
-                "updated": "2026-06-18T17:59:46Z",
+                "id": "http://arxiv.org/abs/2606.22609v1",
+                "title": "Supporting Tutors in the Gig Economy with Automated Feedback: A Case Study on Ringle",
+                "updated": "2026-06-21T17:33:19Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.20560v1",
+                        "@href": "https://arxiv.org/abs/2606.22609v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.20560v1",
+                        "@href": "https://arxiv.org/pdf/2606.22609v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "LLM reasoning transparency is a critical affordance for understanding model decisions, mitigating misuse and misalignment, and debugging surprising model behaviors. However, DiffusionGemma performs a larger fraction of its computation in a continuous latent space; does this make its reasoning less transparent? We study this question by decomposing transparency into two components: variable transparency, whether we understand intermediate snapshots of a model's computational state; and algorithmic transparency, whether we can use these snapshots to reconstruct the process by which the model arrived at its outputs. Naively, DiffusionGemma has poor variable transparency: its opaque serial depth, the amount of serial computation that occurs in between interpretable model states, seems at first 28.6X higher than the corresponding autoregressive Gemma 4 model. However, we show that we can map the information flowing between denoising steps through an interpretable token bottleneck with no decrease in downstream performance. Treating these intermediate states as interpretable reduces the opaque serial depth to just 1.1X that of Gemma 4. Algorithmic transparency is harder for diffusion models than for autoregressive models because all token predictions in the canvas can change at every denoising step, giving the model the power to implement complicated distributed algorithms during the denoising process. To begin bridging this gap, we conduct a suite of interpretability case studies, uncovering initial evidence of novel diffusion-specific phenomena such as non-chronological reasoning, token and sequence smearing, and intermediate-context reasoning. Finally, we test monitorability, a key application of transparency that measures whether model outputs are useful for downstream tasks. We find that DiffusionGemma is similarly monitorable to Gemma 4.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-18T17:59:46Z",
-                "arxiv:comment": "20 main text pages and 6 pages of references and appendices",
+                "summary": "The rise of online tutoring platforms in the gig economy has made education more scalable, flexible, and on-demand. These platforms rely on learner evaluations as the primary feedback for tutors and platforms. However, such feedback offers limited guidance for tutors' improvement and makes it difficult to monitor tutor quality at scale. To this end, we explored AI-powered automated feedback and how tutors perceive and respond to it. We deployed a research probe on Ringle, a popular online English tutoring platform, that analyzed tutors' lessons and provided automated feedback. We then surveyed 36 tutors about their experience. Our findings reveal that while tutors perceived automated feedback more negatively than learner feedback, they found it useful for self-monitoring and understanding platform expectations, though discrepancies between them often caused confusion. Based on these insights, we propose design considerations for feedback systems for online educational gig platforms.",
+                "category": {
+                    "@term": "cs.HC",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-21T17:33:19Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.HC"
                 },
                 "author": [
                     {
-                        "name": "Joshua Engels"
+                        "name": "Yeon Su Park"
                     },
                     {
-                        "name": "Callum McDougall"
+                        "name": "Sieun Kim"
                     },
                     {
-                        "name": "Bilal Chughtai"
+                        "name": "Keighley Overbay"
                     },
                     {
-                        "name": "Janos Kramar"
+                        "name": "Seoyoung Kim"
                     },
                     {
-                        "name": "Senthoran Rajamanoharan"
+                        "name": "Sewook Wee"
                     },
                     {
-                        "name": "Cindy Wu"
+                        "name": "Daho Jung"
                     },
                     {
-                        "name": "Arthur Conmy"
-                    },
-                    {
-                        "name": "Asic Q Chen"
-                    },
-                    {
-                        "name": "Jean Tarbouriech"
-                    },
-                    {
-                        "name": "Min Ma"
-                    },
-                    {
-                        "name": "Brendan O'Donoghue"
-                    },
-                    {
-                        "name": "Jo\u00e3o Gabriel Lopes de Oliveira"
-                    },
-                    {
-                        "name": "Rohin Shah"
-                    },
-                    {
-                        "name": "Neel Nanda"
+                        "name": "Juho Kim"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.20559v1",
-                "title": "UNIEGO: Proxies as Mediators for Unified Egocentric Video Representation Learning",
-                "updated": "2026-06-18T17:59:45Z",
+                "id": "http://arxiv.org/abs/2606.22608v1",
+                "title": "Automated sign detection across the Electronic Babylonian Library: A large-scale dataset and end-to-end cuneiform OCR pipeline",
+                "updated": "2026-06-21T17:31:05Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.20559v1",
+                        "@href": "https://arxiv.org/abs/2606.22608v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.20559v1",
+                        "@href": "https://arxiv.org/pdf/2606.22608v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Egocentric video understanding is inherently limited by the narrow perspective of wearable cameras: a single viewpoint, a single modality, a single model cannot capture the full richness of human action. We argue that a truly expressive egocentric representation must subsume complementary knowledge across viewpoints, modalities, and foundation model representations, yet remain deployable from egocentric video alone. To this end, we introduce a hierarchical multi-teacher distillation framework that produces UNIEGO, a unified egocentric encoder trained with nine teachers spanning ego-exo viewpoints, RGB, depth, and skeleton modalities, and four foundation models. Rather than distilling directly from heterogeneous teachers whose incompatible architectures and feature geometries induce conflicting gradients, our framework interposes a layer of representation-specific Proxy models that translate diverse teacher knowledge into a homogeneous egocentric space. A second distillation stage, Selective Proxy Distillation (SPD), then adaptively selects, for each training sample, the subset of proxies that are both correct and confident, distilling exclusively from reliable supervision and suppressing erroneous signals. SPD is further stabilized by initializing UNIEGO as a learned convex combination of proxy parameters, placing the unified model in a well-conditioned region of the loss landscape before distillation begins. UNIEGO achieves state-of-the-art performance across three egocentric video understanding tasks - action recognition, video retrieval, and action segmentation on three challenging ego-exo benchmarks, outperforming naive multi-teacher distillation baselines and demonstrating that structured, proxy-mediated knowledge transfer yields richer and more discriminative egocentric representations.",
+                "summary": "Learning to read cuneiform tablets is an extremely demanding task; consequently, of the roughly half million excavated tablets, only a small fraction has been analysed by Assyriologists. Computer vision offers a promising avenue for decipherment but requires large, densely annotated datasets. To address this limitation, the largest annotated cuneiform sign dataset to date is used, and a Deformable Detection Transformer (DETR)-based object detection model is evaluated under two class granularities of 173 and 106 classes. The proposed system integrates automatic tablet-side extraction, heuristic line grouping, and n-gram-based textual similarity evaluation to bridge visual sign detection and textual structure, and achieves consistent improvements of up to 28-37% over prior work on COCO-style detection metrics. At inference, the method is applied to 87,668 tablet fragments from the Electronic Babylonian Library (eBL) corpus, producing nearly 2.9 million sign detections. Although the approach operates without linguistic priors and remains sensitive to tablet damage and layout variability, it provides a scalable and interpretable foundation for corpus-wide cuneiform analysis and supports future integration with multimodal and linguistic modelling frameworks.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-18T17:59:45Z",
+                "published": "2026-06-21T17:31:05Z",
+                "arxiv:comment": "Under review",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Wenhao Chi"
+                        "name": "Wentao Che"
                     },
                     {
-                        "name": "Arkaprava Sinha"
+                        "name": "Esteban Garc\u00e9s Arias"
                     },
                     {
-                        "name": "Dominick Reilly"
+                        "name": "Asim Niaz"
                     },
                     {
-                        "name": "Hieu Le"
+                        "name": "Andreas Bender"
                     },
                     {
-                        "name": "Srijan Das"
+                        "name": "Enrique Jim\u00e9nez"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.20557v1",
-                "title": "Optimal Deterministic Multicalibration and Omniprediction",
-                "updated": "2026-06-18T17:59:31Z",
+                "id": "http://arxiv.org/abs/2606.22606v1",
+                "title": "Sub-Billion, Super-Frontier: Small Language Models Rival Zero-Shot Frontier LLMs on General and Literary Relation Extraction",
+                "updated": "2026-06-21T17:24:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.20557v1",
+                        "@href": "https://arxiv.org/abs/2606.22606v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.20557v1",
+                        "@href": "https://arxiv.org/pdf/2606.22606v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "A model is multicalibrated on a collection of group weights $G$ if it is calibrated -- i.e. unbiased even conditional on its prediction -- not just overall, but also after reweighting contexts by each $g \\in G$. It is a useful property for many downstream applications and is a basic desideratum of trustworthy machine learning. Before this work, all predictors known to attain the minimax-optimal $\\widetilde O(\\varepsilon^{-3})$ sample complexity rate for $\\varepsilon$-multicalibration were randomized, while deterministic predictors were known only with substantially worse sample complexity. Whether randomization is necessary for optimal sample complexity in multicalibration was explicitly asked by [CLNR26] and implicitly in several prior works.\n  We resolve this open problem by giving a minimax-optimal multicalibration algorithm that outputs a deterministic predictor. We then generalize the algorithm to produce optimal deterministic predictors that satisfy outcome indistinguishability (OI) with respect to finite or finitely covered collections of tests. As an application, this also gives deterministic omnipredictors and panpredictors with optimal sample complexity, resolving open problems posed by [OKK25] and [BHHLZ25].",
+                "summary": "Large language models (LLMs) achieve strong relation extraction (RE), but their computational demands and reliance on proprietary APIs limit deployment in resource-constrained or privacy-sensitive settings. We investigate how far small language models (SLMs) can close this gap across general-domain and literary text. We evaluate five models from 360M to 3B parameters under three domain-composition regimes and two prompt-conditioned tuning styles (30 configurations), comparing them with zero-shot frontier LLMs and a discriminative RoBERTa baseline. Across nine benchmarks, the best sub-billion model, Qwen2.5-0.5B fine-tuned on pooled general-domain data, achieves a general-domain positive-class micro-F1 of 0.83, versus 0.69 for GPT-5.4 and 0.66 for Claude Sonnet 4.6 evaluated zero-shot. This does not imply that SLMs are intrinsically stronger; rather, targeted task adaptation enables 4-bit models deployable on a single consumer GPU to outperform general-purpose frontier systems under this protocol. An in-domain RoBERTa baseline also exceeds both frontier models, indicating that the gain stems from task adaptation rather than generative decoding. On literary RE, tuned SLMs reach 0.92 on the human-annotated Biographical benchmark versus 0.83 for GPT-5.4, and 0.833 versus 0.578 on the two-benchmark literary average. A targeted domain-adaptive pretraining case study yields no practically meaningful gain over supervised fine-tuning, while the cleanest within-family scale comparison shows only marginal improvement. These results show that, when task-specific data are available, compact task-adapted models can provide accurate, private, and hardware-efficient RE.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-21T17:24:31Z",
+                "arxiv:comment": "41 pages, 3 figures, 25 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Despina Christou"
+                    },
+                    {
+                        "name": "Grigorios Tsoumakas"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.22601v1",
+                "title": "Scalable Bayesian Additive Models for Stellar Flare Detection via Amortized Gaussian Process Inference and Hidden Markov Models",
+                "updated": "2026-06-21T17:20:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.22601v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.22601v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Gaussian Processes (GPs) are a powerful tool for Bayesian time-series modeling, yet their cubic computational cost remains a severe barrier for application to long, high-cadence datasets in astronomy. While specialized scalable solvers like Celerite elegantly reduce this scaling to linear time, repeatedly evaluating the exact likelihood during iterative Bayesian sampling is a bottleneck for developing more complex models, like hierarchical or additive models in which Celerite is only one component. To make this inference computationally tractable, we introduce a generative surrogate framework. By utilizing a Variational Autoencoder (VAE) to learn a compressed representation of the Celerite prior, we map highly correlated stochastic dependencies into a low-dimensional, isotropic manifold. This transition completely bypasses exact covariance operations, shifting the computational burden to a rapid neural network forward pass. Through an extensive simulation study, we show that the generative surrogate accurately reproduces the structural fidelity of exact physical kernels like Celerite. Finally, we demonstrate embedding our VAE approximation into an additive model that combines Celerite and a hidden Markov model (HMM) for stellar flare detection in time series data of stars. We evaluate the joint VAE+HMM architecture against the exact Celerite+HMM framework on empirical astrophysical time series and demonstrate that the proposed methodology achieves significant reductions in computational time, enabling the rigorous, large-scale characterization of stellar flares across massive data archives.",
+                "category": [
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.AP",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.CO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-21T17:20:26Z",
+                "arxiv:comment": "Main paper: 19 pages, full paper: 34 pages. 4 appendices. 9 main figures, 21 figures in total. 4 tables. Poster Presenter, SSC 2026 (Statistical Society of Canada Annual Meeting) and ISBA 2026 (International Society for Bayesian Analysis World Meeting)",
+                "arxiv:primary_category": {
+                    "@term": "stat.ML"
+                },
+                "author": [
+                    {
+                        "name": "Rodrigo Herrera"
+                    },
+                    {
+                        "name": "Vianey Leos-Barajas"
+                    },
+                    {
+                        "name": "Gwendolyn Eadie"
+                    },
+                    {
+                        "name": "Elizaveta Semenova"
+                    },
+                    {
+                        "name": "James Davenport"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.22600v1",
+                "title": "On the Position Bias of On-Policy Distillation",
+                "updated": "2026-06-21T17:20:21Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.22600v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.22600v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "On-Policy Distillation (OPD) improves the learning efficiency of standard reinforcement learning through dense, token-level supervision from teachers. In the standard KL objective of OPD, token-level losses are uniformly averaged, implying equal weights for all tokens. However, we discover that not all tokens are created equal: as student rollouts grow longer, they deviate further from the teacher's distribution, leading to degraded supervision quality at later positions. As a result, OPD using only the first 30% of tokens can perform comparably to using all tokens, whereas OPD using only the last 30% of tokens barely learns anything. In this work, we provide a principled understanding of this issue through the lens of constrained optimization. Based on these insights, we derive Importance-Weighted On-Policy Distillation (IW-OPD), in which the weight assigned to each token depends on the accumulated discrepancy between the student's and teacher's distributions, naturally upweighting earlier tokens and downweighting later ones with larger deviations. We show that IW-OPD converges significantly faster than OPD, with better learning efficiency, and achieves better final performance than standard OPD in both same-size and cross-scale settings, improving performance up to 6.9 points on AIME-2025.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "math.ST",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-18T17:59:31Z",
+                "published": "2026-06-21T17:20:21Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Georgy Noarov"
+                        "name": "Yan Xie"
                     },
                     {
-                        "name": "Aaron Roth"
+                        "name": "Sijie Zhu"
+                    },
+                    {
+                        "name": "Tiansheng Wen"
+                    },
+                    {
+                        "name": "Bo Chen"
+                    },
+                    {
+                        "name": "Yifei Wang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.20553v1",
-                "title": "From Efficiency to Leakage -- Privacy Backdoor in Federated Language Model Fine-Tuning",
-                "updated": "2026-06-18T17:58:25Z",
+                "id": "http://arxiv.org/abs/2606.22595v1",
+                "title": "Radio spectral properties and aging of two tailed radio galaxies in a galaxy group at z=0.35",
+                "updated": "2026-06-21T17:08:22Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.20553v1",
+                        "@href": "https://arxiv.org/abs/2606.22595v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.20553v1",
+                        "@href": "https://arxiv.org/pdf/2606.22595v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Federated learning (FL) enables multiple parties to collaboratively fine-tune language models for domain-specific tasks without sharing raw data. Since full model fine-tuning is often prohibitively expensive for FL clients, parameter-efficient fine-tuning (PEFT) has become the de facto approach in practice, freezing the base model and training only a small set of adapters. In this paper, we show that a malicious parameter server can stealthily corrupt a PEFT adapter into a privacy backdoor that implicitly memorizes the client's training samples as isolated per-sample parameter updates stored in separate neurons, without degrading model utility. Concretely, our attack, NeuroImprint, assigns a dedicated memorization neuron to each training sample and constrains that each neuron is updated at most once along the local fine-tuning trajectory. This design mitigates both cross-sample collisions and cross-step mixing introduced by large local batches and stateful optimizers (e.g., Adam/AdamW) in language-model fine-tuning. After fine-tuning, the resulting isolated per-sample updates can be analytically inverted in closed form to recover text embeddings, which are then deterministically mapped back to token sequences. To understand the generality of our method, we implemented NeuroImprint on multiple language models (BERT, GPT-2, Qwen2, and Llama3.2) and evaluated it across four fine-tuning datasets spanning diverse domains. The results demonstrate that our attack can reconstruct 59% to 79% of all finetuning samples with high semantic fidelity.",
+                "summary": "We present a study of two tailed radio galaxies in the core of a massive, dynamically young galaxy group - an early group-group merger. Using VLA (3 GHz and 1.4 GHz), MeerKAT (1.35 GHz), and GMRT (610 and 325 MHz) observations, we investigate their radio spectral properties, spectral and dynamical ages. Radio morphologies show clear evidence of interaction with the intragroup medium (IGM). One galaxy is a wide-angle tail (WAT) source, while the other is most likely a head-tail (HT) galaxy. Both galaxies exhibit high radio luminosities, and we find spectral indices of $\u03b1=0.8\\pm 0.1$ (WAT) and $\u03b1=0.6\\pm 0.2$ (HT). Spectral index analysis reveals spectral steepening with distance from the core in both galaxies, with localized flattening in the WAT lobes and hotspots along the northern jet, and indications of such flattening in the middle of the HT tail. Spectral ages derived using Jaffe-Perola model are $33.80\\substack{+7.63 \\\\ -7.23}$ Myr (WAT) and $20.86\\substack{+10.07 \\\\ -17.17}$ Myr (HT), significantly lower than dynamical ages of $420\\pm60$ to $700\\pm100$ Myr (WAT) and $140\\pm20$ Myr (and possibly up to $280\\pm40$ Myr, for HT), yielding dynamical-to-spectral age ratios of $\\sim12-20$ and $\\sim7$ (and up to $\\sim14$), respectively. The discrepancy may be reduced by using more complex dynamical age models, incorporating interactions with the IGM, which requires deeper X-ray observations of the group. Spectral age estimates may be affected by mixing of electron populations, and could be better constrained with future deep, high-resolution broad-band radio observations at both MHz and frequencies above 3 GHz. The combination of extended radio structures, spectral signatures of radiative aging with localized re-acceleration, and activity timescales up to hundreds of Myr indicates that galaxies are actively interacting with, and likely depositing energy into their environment.",
                 "category": {
-                    "@term": "cs.CR",
+                    "@term": "astro-ph.CO",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-06-18T17:58:25Z",
+                "published": "2026-06-21T17:08:22Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CR"
+                    "@term": "astro-ph.CO"
                 },
                 "author": [
                     {
-                        "name": "Shanghao Shi"
+                        "name": "Paula Vuli\u0107"
                     },
                     {
-                        "name": "Chaoyu Zhang"
+                        "name": "Vernesa Smol\u010di\u0107"
                     },
                     {
-                        "name": "Heng Jin"
+                        "name": "Alexis Finoguenov"
                     },
                     {
-                        "name": "Yang Xiao"
+                        "name": "Ghassem Gozaliasl"
                     },
                     {
-                        "name": "Yevgeniy Vorobeychik"
+                        "name": "Hiddo Sunnz Bouwe Algera"
                     },
                     {
-                        "name": "William Yeoh"
-                    },
-                    {
-                        "name": "Ning Zhang"
-                    },
-                    {
-                        "name": "Y. Thomas Hou"
-                    },
-                    {
-                        "name": "Wenjing Lou"
+                        "name": "Ivan Delvecchio"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.20549v1",
-                "title": "Generating Robot Hands from Human Demonstrations",
-                "updated": "2026-06-18T17:57:21Z",
+                "id": "http://arxiv.org/abs/2606.22591v1",
+                "title": "Bridging Self-Supervised Learning and Speech Enhancement: A Wav2Vec2-Conditioned Framework",
+                "updated": "2026-06-21T16:56:21Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.20549v1",
+                        "@href": "https://arxiv.org/abs/2606.22591v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.20549v1",
+                        "@href": "https://arxiv.org/pdf/2606.22591v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Robot learning has advanced rapidly in learning control, but learning the physical body of a robot remains much more difficult because jointly searching over design and control creates a very large combinatorial problem. Here, we present a data-driven framework for generating robot hands from human demonstrations. Instead of learning a complex controller together with each candidate design, we generate robot hand designs using the same simple control policy used after fabrication: matching fingertip positions through inverse kinematics. Using more than 4 million frames of human fingertip motion from everyday manipulation, our algorithm optimizes tree-structured robot hands to reproduce desired target motions. The framework produced both a 6-degree-of-freedom (DoF) general-purpose hand and lower-DoF task-specific hands with spatial four-bar mimic joints. To accelerate the search over designs, we trained a reinforcement-learning (RL) actor to propose good hand designs and joint angles, reducing search time from hours to minutes. We fabricated the mechanisms directly as one-piece articulated structures with print-in-place joints. In real-world experiments, the 6-DoF hand achieved highly accurate teleoperated fingertip tracking better than available commercial robot hands, whereas the specialized 3-DoF hands reproduced structured human and synthetic trajectories with reduced mechanical complexity. These results showed that large-scale human motion data can be used not only to train robot controllers but also as a reference for optimizing and generating the physical embodiment of robots.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-18T17:57:21Z",
+                "summary": "Diffusion models show potential for speech enhancement but lack linguistic guidance. We condition a diffusion-based model on wav2vec 2.0 features from noisy input, injected at the U-Net bottleneck via Feature-wise Linear Modulation (FiLM). Phonetic representations from wav2vec 2.0 features of degraded speech, anchor the reverse diffusion process. While a frozen wav2vec 2.0 encoder extracts features, a learned FiLM generator produces scale and shift parameters modulating the bottleneck with minimal overhead. Motivated by the optimal Bayesian causal estimator under a linear-Gaussian state-space model, FiLM coefficients are aggregated via exponential smoothing for temporal compression. Evaluation on VoiceBank-DEMAND and LibriMix shows competitive performance against the unconditioned baseline in PESQ, STOI, SI-SDR and DNSMOS. We consistently record an improvement of 0.4 on PESQ score, suggesting self-supervised representations effectively condition diffusion-based speech enhancement.",
+                "category": [
+                    {
+                        "@term": "eess.AS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.SD",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-21T16:56:21Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "eess.AS"
                 },
                 "author": [
                     {
-                        "name": "Sha Yi"
+                        "name": "Shuubham Ojha"
                     },
                     {
-                        "name": "Nicklas Hansen"
-                    },
-                    {
-                        "name": "Xueqian Bai"
-                    },
-                    {
-                        "name": "Carmelo Sferrazza"
-                    },
-                    {
-                        "name": "Michael T. Tolley"
-                    },
-                    {
-                        "name": "Xiaolong Wang"
+                        "name": "Carol Espy-Wilson"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.20547v1",
-                "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
-                "updated": "2026-06-18T17:56:17Z",
+                "id": "http://arxiv.org/abs/2606.22589v1",
+                "title": "Training-free Task Classification for Multi-Task Model Merging",
+                "updated": "2026-06-21T16:51:29Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.20547v1",
+                        "@href": "https://arxiv.org/abs/2606.22589v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.20547v1",
+                        "@href": "https://arxiv.org/pdf/2606.22589v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We place the attention token on the group: a token is an element $g_i$ of a matrix Lie group $G$ -- a bare transformation, with no feature payload and no external action $\u03c1(g)$ carrying it. To our knowledge this is the first attention construction whose tokens are bare matrix Lie group elements: their score is the closed-form algebra norm of the relative pose rather than a learned kernel, and it reaches the affine full-frame groups that every irrep- or surjective-exp-based method must exclude. We call it Lie-Algebra Attention. Once tokens are group elements, the rest follows with none of the usual representation-theoretic machinery. The relative geometry of a pair is canonical, $g_i^{-1} g_j$, so the pairwise invariant $w_{ij} = \\log(g_i^{-1} g_j)$ is intrinsic rather than designed; equivariance under the diagonal $G$-action is tautological, and the cocycle condition holds automatically. The attention score is the negative squared algebra norm, $s_{ij} = -\\|\\log(g_i^{-1} g_j)\\|_\u03bb^2/\u03c4$: the canonical proximity kernel under a block-weighted Frobenius inner product, with no irreducible representations, spherical harmonics, Clebsch-Gordan products, or learned kernel. The construction applies to any matrix Lie group on a chosen logarithm chart containing the relative poses, including the non-compact non-abelian affine groups with scale and shear that no vector-token attention method reaches: neither the irrep tradition nor surjective-exp methods. Three sequence-completion experiments, on SE(2), SO(3), and Aff(2), bear this out: the closed-form score matches a learned MLP kernel on the same invariant and outperforms it on SE(2), using 50 to 80x fewer score parameters, while a vector-token baseline breaks invariance by five to twelve orders of magnitude.",
+                "summary": "Ever since the advent of foundation models and the pre-training-finetuning paradigm, there have been numerous efforts to merge multiple task-specific experts into a single multi-task model. Prior work largely focuses on finding a single merged model, but it often underperforms individual experts due to parameter interference. To resolve this, dynamic model merging employs routing to activate task-relevant parameters per input. However, existing routers typically require either additional training with abundant labeled datasets or assume the access to task IDs of each input at inference time. In this work, we aim to close the gap to expert performance without additional training or task-ID-access assumption. To this end, we formulate routing as training-free task classification for each test input. Using singular value decomposition (SVD)-based low-rank manifold approximations for each task, SiM scores tasks by the projection residual of the test input feature onto each task manifold and routes accordingly. The task manifolds are pre-computable offline from a pretrained backbone using a small per-task support set (e.g., 32 examples per task) prior to merging process, requiring no router training and no data during the merging process. Moreover, SiM integrates seamlessly with subspace-/mask-based merging that represents task-expert via lightweight compressed task vectors, avoiding the need to store full expert parameters. Experiments across computer vision and natural language processing benchmarks under task-unknown inference demonstrate that SiM substantially improves merged-model performance and consistently narrows the gap to individual task experts.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-21T16:51:29Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Jungyong Son"
+                    },
+                    {
+                        "name": "Jinwook Jung"
+                    },
+                    {
+                        "name": "Sungyong Baik"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.22579v1",
+                "title": "Stationary Robust Mean-Field Games under Model Mismatches",
+                "updated": "2026-06-21T16:29:25Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.22579v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.22579v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Deploying multi-agent reinforcement learning (MARL) in the real world is often limited by model mismatches between the training simulators and the true environment, which could be further amplified through strategic interactions and result in severe performance degradation upon deployment. Distributional robustness offers a principled response by optimizing policies against worst-case transition models drawn from an uncertainty set, but standard robust MARL frameworks become increasingly intractable as the number of agents grows. This paper develops an infinite-horizon, stationary mean-field game framework that incorporates distributional model uncertainty directly into the population-coupled dynamics. We establish a robust dynamic programming principle with a contractive Bellman operator and prove the existence of a stationary robust mean-field equilibrium via a fixed-point argument. We further develop the first concrete algorithm with convergence guarantees. We then connect the mean-field solution to a finite-population robust game whose ambiguity sets depend on the empirical distribution, showing that the mean-field equilibrium policy induces approximate equilibrium behavior as the population size increases. Under a contractive robust-dynamics regime, we further obtain explicit non-asymptotic error bounds. Numerical experiments further illustrate the qualitative and quantitative impact of robustness under multiple uncertainty models, validating our theoretical findings.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.DG",
+                        "@term": "cs.GT",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-18T17:56:17Z",
-                "arxiv:comment": "preprint, 19 pages, 3 figures",
+                "published": "2026-06-21T16:29:25Z",
+                "arxiv:comment": "Accepted by UAI 2026",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": {
-                    "name": "Przemyslaw Musialski"
+                    "name": "Yue Wang"
                 }
             },
             {
-                "id": "http://arxiv.org/abs/2606.20546v1",
-                "title": "Predictability as a Fine-Grained Measure for Privacy",
-                "updated": "2026-06-18T17:55:31Z",
+                "id": "http://arxiv.org/abs/2606.22576v1",
+                "title": "What Characterizes Pairwise Modular Smells?",
+                "updated": "2026-06-21T16:25:46Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.20546v1",
+                        "@href": "https://arxiv.org/abs/2606.22576v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.20546v1",
+                        "@href": "https://arxiv.org/pdf/2606.22576v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
+                    },
+                    {
+                        "@rel": "related",
+                        "@href": "https://doi.org/10.1109/TSE.2026.3704291",
+                        "@title": "doi"
                     }
                 ],
-                "summary": "Differential privacy (DP) ensures rigorous individual-level privacy guarantees against even the most knowledgeable attackers, but its worst-case nature can impose a costly privacy-accuracy tradeoff. We introduce privacy via predictability, a fine-grained framework that explicitly incorporates the attacker's core knowledge, a compromised portion of the dataset generated by a stochastic process, and a specified family of queries. Predictability measures privacy leakage as the incremental gain in an attacker's ability to predict sensitive information about unknown individuals after observing the algorithm's output, beyond what can already be inferred from the compromised data. We show that predictability and DP are generally incomparable: each can be small while the other is large. However, in the worst-case regime where all but one individual is compromised, and all binary queries are considered sensitive, predictability implies mutual-information DP. More generally, predictability provides a finer-grained privacy metric tailored to specific sensitive information and specific attacker models. We introduce a general framework, using the generalized method of moments (GMM), to analyze asymptotic predictability when the compromised data is generated by a stationary, ergodic, mixing process. Using this analysis, we derive a predictability-calibrated output perturbation scheme for ERM. Our approach is complementary to DP and can be used alongside DP to provide fine-grained privacy control.",
+                "summary": "Enhancing the modular structure of existing systems has attracted substantial research interest, primarily through (1) software modularization and (2) identifying design issues (e.g., smells) as refactoring opportunities; however, both approaches often prove impractical to guide effective improvement. Inspired by both aforementioned approaches, our previous study introduced a novel and practical architectural smell -- called Pairwise Modular Smell (or PairSmell) -- for identifying flawed architectural decisions that necessitate further examination.\n  The objective of this study is to explain PairSmell from the perspective of pair characteristics. To this end, we first conduct a rapid review to collect and synthesize 19 pair characteristics that have been used in the literature to represent relationships between two entities. The collected characteristics are then used to train machine learning models for predicting two forms of PairSmell -- inapt separated pairs InSep and inapt collocated pairs InCol, based on a curated dataset of over 6,135,000 pairs of entities derived from 11 open-source Java projects. The trained models achieve up to a 58.6% improvement in ROC-AUC over the baselines. The interpretation of the models reveals that the most influential features for InSep are out-going dependencies, terms shared with others, and declared fields; while those for InCol include semantic similarity based on tf-idf, terms shared between the pair, terms shared with others, and in-going dependencies. We complement the work with a series of practical examples to illustrate how the influential pair characteristics impact the occurrence of PairSmell.",
                 "category": {
-                    "@term": "cs.LG",
+                    "@term": "cs.SE",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-06-18T17:55:31Z",
+                "published": "2026-06-21T16:25:46Z",
+                "arxiv:comment": "Accepted by IEEE Transactions on Software Engineering",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.SE"
                 },
+                "arxiv:journal_ref": "IEEE Transactions on Software Engineering 2026",
                 "author": [
                     {
-                        "name": "Linda Lu"
+                        "name": "Chenxing Zhong"
                     },
                     {
-                        "name": "Karthik Sridharan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.20544v1",
-                "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
-                "updated": "2026-06-18T17:55:00Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.20544v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Daniel Feitosa"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.20544v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
+                        "name": "Paris Avgeriou"
+                    },
+                    {
+                        "name": "Huang Huang"
+                    },
+                    {
+                        "name": "Wei Song"
+                    },
+                    {
+                        "name": "He Zhang"
                     }
                 ],
-                "summary": "Calibration aligns a model's predictive uncertainty with the frequencies of its empirical outcomes and is important for understanding and trusting reported probabilities. Recent work shows that enforcing calibration at the level of individual predictors can improve ensemble accuracy and calibration, with mixture-of-experts (MoE) models showing strong empirical improvements in particular; however, the conditions under which calibration helps MoE are not well understood. In this work, we study how MoE models behave under distribution shift, focusing on how routing mechanisms interact with expert-level calibration. We show that expert calibration is sufficient to ensure calibration of the overall model under a broad class of distribution shifts in hard-routed models, but is insufficient for calibrating soft-routed models. To address this, we propose an adversarial reweighting that penalizes calibration errors of the routed aggregate under distribution shift, and we demonstrate that it improves the accuracy-calibration tradeoff both on average and on difficult subsets of the data, across model classes, prediction tasks, and distribution shifts.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-18T17:55:00Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "arxiv:journal_ref": "ICML 2026",
-                "author": [
-                    {
-                        "name": "Gina Wong"
-                    },
-                    {
-                        "name": "Drew Prinster"
-                    },
-                    {
-                        "name": "Suchi Saria"
-                    },
-                    {
-                        "name": "Rama Chellappa"
-                    },
-                    {
-                        "name": "Anqi Liu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.20539v1",
-                "title": "Caching for Dollars, Not Hits: An Exact Offline Reference for Cloud-Egress Caching and the Crossover That Decides When It Pays",
-                "updated": "2026-06-18T17:51:45Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.20539v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.20539v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "When a cache miss fetches from cloud object storage, the bill is per GET request and per byte of egress, not latency. Classic caching minimizes the miss rate, the wrong objective: a rarely but expensively fetched object can cost thousands of times more dollars than a frequently but cheaply fetched one. Generalized-caching theory bounds the miss-cost objective, but no reported benchmark measures how far deployed heuristics sit from the dollar-optimal offline policy on real cloud prices. We supply that reference. For uniform-size page caches with heterogeneous miss costs the offline dollar-optimum is exact in polynomial time via an integral interval linear program -- validated against brute force; variable sizes are NP-hard, so we extend the flow-based offline bound from the hit-ratio objective to dollars (cost-FOO), tight to about four percent. Against this reference we find: (i) a heterogeneity-regret law -- LRU's dollar-regret rises with miss-cost dispersion (Spearman 0.87) while cost-aware GreedyDual cuts it to roughly a tenth; (ii) a contention frontier -- GreedyDual's residual regret collapses to near zero exactly when the budget fits the expensive working set, and is the open slice otherwise; and (iii) a closed-form crossover s* = GET_fee/egress_rate (about 4 KB on S3, 330 B on GCS) that predicts which deployments need dollar-aware caching at all. On a real Twitter trace the price vector alone moves the workload across s*, shifting the regime as predicted. The artifact is a reproducible billing-faithful benchmark; heuristics and bounds it builds on are prior work, credited.",
-                "category": [
-                    {
-                        "@term": "cs.DB",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-18T17:51:45Z",
-                "arxiv:comment": "6 pages, 3 figures. Code, benchmarks, and full pre-registration: https://github.com/samyama-ai/cloud-egress-cache",
-                "arxiv:primary_category": {
-                    "@term": "cs.DB"
-                },
-                "author": [
-                    {
-                        "name": "Madhulatha Mandarapu"
-                    },
-                    {
-                        "name": "Sandeep Kunkunuru"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.20538v1",
-                "title": "Multi-Task Bayesian In-Context Learning",
-                "updated": "2026-06-18T17:50:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.20538v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.20538v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Bayesian predictive inference provides a principled framework for uncertainty quantification, data efficiency, and robust generalization. However, exact inference is often intractable, and scalable approximations may remain computationally expensive or require restrictive modeling assumptions that degrade predictive performance. Prior-Data Fitted and in-context models have recently emerged as an amortized alternative by learning to map datasets directly to predictive distributions, but existing approaches are tightly coupled to the support of the training prior and lack explicit mechanisms for adapting to new priors at test time, resulting in limited robustness under distribution shift. We introduce a multi-task in-context learning framework for amortized hierarchical Bayesian predictive inference that explicitly represents prior information as a prefix of in-context datasets. A transformer trained on sequences of prior and target tasks learns to adapt its predictions across families of priors. On a suite of evaluations with increasing difficulty, including out-of-meta-distribution priors and priors with high-dimensional latent structures, our method matches oracle Bayesian predictors while being orders of magnitude faster. We further demonstrate its practical relevance on a real-world spatiotemporal temperature prediction benchmark. Code is available at https://github.com/martianmartina/multi-task-bayesian-icl/.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-18T17:50:10Z",
-                "arxiv:comment": "ICML 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Qingyang Zhu"
-                    },
-                    {
-                        "name": "Eric Karl Oermann"
-                    },
-                    {
-                        "name": "Kyunghyun Cho"
-                    }
-                ]
+                "arxiv:doi": "10.1109/TSE.2026.3704291"
             }
         ]
     }
