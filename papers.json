@@ -5,33 +5,33 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-06-29T23:57:13Z",
+        "updated": "2026-06-30T07:46:06Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "588165",
+        "opensearch:totalResults": "588983",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2606.28323v1",
-                "title": "DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand",
-                "updated": "2026-06-26T17:59:57Z",
+                "id": "http://arxiv.org/abs/2606.30645v1",
+                "title": "VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes",
+                "updated": "2026-06-29T17:59:55Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.28323v1",
+                        "@href": "https://arxiv.org/abs/2606.30645v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.28323v1",
+                        "@href": "https://arxiv.org/pdf/2606.30645v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Dexterous manipulation policies can solve individual skills, but composing them to perform multiple tasks with a single hand remains challenging. Adding a new task on top of an existing manipulation skill often imposes conflicting demands on overlapping fingers and contact modes, causing destructive interference between preserving an existing manipulation outcome and executing a new one. We propose DexCompose, a role-aware residual composition framework that reuses pretrained dexterous policies for multi-task manipulation through explicit finger-level action ownership. Given two pretrained full-hand policies, DexCompose first collects successful post-task states from the first skill and performs release tests over candidate finger masks to identify which fingers are necessary for maintaining the established skill state. It then trains two asymmetric residual modules: a bounded residual stabilizer for task preservation, and a context-aware residual that adapts the frozen downstream policy only within the action subspace assigned to the new task. We evaluate the framework on 16 composite dexterous manipulation tasks spanning four object-retention skills and four downstream interactions. DexCompose achieves a 77.4% average composite success rate, demonstrating that structural action ownership with dual residuals offers a promising direction for composing dexterous skills beyond conventional policy chaining.",
+                "summary": "Perception-based humanoid loco-manipulation requires connecting egocentric observations and task instructions to whole-body motion. Learning this mapping requires synchronized egocentric images, language commands, and robot-compatible kinematic trajectories, yet no existing data source provides this complete tuple at scale. We address this bottleneck by generating vision-language-kinematics (VLK) supervision synthetically in reconstructed scenes. Our pipeline leverages 3D Gaussian Splatting to reconstruct metric-scale indoor environments, synthesizes navigation and object-interaction trajectories using privileged scene information, and renders paired egocentric observations after the fact. We produce 48,000 paired trajectories with no human intervention and train a VLK policy that predicts short-horizon whole-body kinematic trajectories. A whole-body tracker converts these predictions into actions on the physical humanoid. We evaluate on the physical Unitree G1 performing navigation and single-object transport, demonstrating that synthesized interactions in reconstructed scenes provide effective supervision for sim-to-real perception-based humanoid loco-manipulation. Project Website: https://vision-language-kinematics.github.io/",
                 "category": [
                     {
                         "@term": "cs.RO",
@@ -42,171 +42,407 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CV",
+                        "@term": "cs.GR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-29T17:59:55Z",
+                "arxiv:comment": "19 pages, 7 figures, 4 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Yen-Jen Wang"
+                    },
+                    {
+                        "name": "Jiaman Li"
+                    },
+                    {
+                        "name": "Sirui Chen"
+                    },
+                    {
+                        "name": "Takara E. Truong"
+                    },
+                    {
+                        "name": "Pei Xu"
+                    },
+                    {
+                        "name": "Pieter Abbeel"
+                    },
+                    {
+                        "name": "Rocky Duan"
+                    },
+                    {
+                        "name": "Koushil Sreenath"
+                    },
+                    {
+                        "name": "Angjoo Kanazawa"
+                    },
+                    {
+                        "name": "Carmelo Sferrazza"
+                    },
+                    {
+                        "name": "Guanya Shi"
+                    },
+                    {
+                        "name": "Karen Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.30643v1",
+                "title": "Expansion rate of the young, oxygen-rich supernova remnant G292.0+1.8",
+                "updated": "2026-06-29T17:59:53Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.30643v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.30643v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Core-collapse supernova remnants (CCSNRs) are ideal targets for studying ejecta--interstellar-medium interactions, shock dynamics, and explosion characteristics. G292.0+1.8 is a classic CCSNR featuring oxygen-rich ejecta, circumstellar material, a rapidly moving pulsar, and a pulsar wind nebula (PWN). We examine its expansion rate using deep Chandra ACIS-I observations over two nearly independent $\\sim$10 yr baselines (2006--2016). After applying astrometric corrections based on Gaia DR3 sources, we extracted radial profiles in 19 sectors around the forward shock. The weighted-mean expansion rate is $0.016\\% \\pm 0.001\\%\\,\\mathrm{yr^{-1}}$ in the broadband, implying an expansion age of ${\\sim}2500$ yr for a uniform ambient medium, consistent with previous estimates of 2000--3700 yr. For a $1/r^2$ circumstellar density profile (Wolf-Rayet progenitor wind), the inferred age is ${\\sim}4100$ yr. Narrow-band analysis of $\u03b1$ elements (O-Ne, Mg, Si-S) shows that lighter elements follow the broadband behaviour, while heavier elements expand more slowly, consistent with their origin in deeper stellar layers. We discuss the pronounced azimuthal asymmetry of the expansion, the apparent paradox that some sectors expand (with $\\sim$2500 km/s) preferentially in the direction of the neutron-star kick, and the role of reflected shocks from the reverse-shock--PWN interaction.",
+                "category": [
+                    {
+                        "@term": "astro-ph.HE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.GA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.SR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-29T17:59:53Z",
+                "arxiv:comment": "Accepted for publication in A&A",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.HE"
+                },
+                "author": [
+                    {
+                        "name": "Maria Aslanidou"
+                    },
+                    {
+                        "name": "Manan Agarwal"
+                    },
+                    {
+                        "name": "Jacco Vink"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.30642v1",
+                "title": "LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training",
+                "updated": "2026-06-29T17:59:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.30642v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.30642v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Full-length song generation must preserve coherence and musicality, render detailed vocal and accompaniment acoustics, and follow lyrics and prompts. Existing language model-based systems face a structural trade-off: mixed-token modeling preserves vocal-instrument coordination but obscures track-specific details, whereas dual-track prediction improves acoustics but requires longer sequences and weakens global planning. We present LeVo 2, a hybrid LLM-Diffusion framework for controllable full-length song generation. LeVo 2 formulates this trade-off as hierarchical modeling: LeLM first predicts mixed tokens for semantic planning, then predicts vocal and accompaniment tokens in parallel for track-specific refinement, while a diffusion-based Music Codec reconstructs full-length waveforms. A central contribution of this extended version is an aesthetics-guided training schedule for alignment. During pre-training, an automated music aesthetic evaluation framework assigns musicality-tier conditions to large-scale data, providing musicality priors before preference alignment. Progressive post-training applies SFT, large-scale offline DPO, and closed-loop semi-online DPO to separately improve generation quality, controllability, and musicality. Modular extension then trains the Track-Specific LM for acoustic refinement while preserving the aligned semantic planner. This schedule separates musicality learning, controllability alignment, and acoustic refinement, mitigating optimization conflict and the limitations of static offline preference pairs. Expert listening tests and objective evaluations show that LeVo 2 outperforms open-source baselines across six subjective dimensions, and approaches leading commercial systems on several listening metrics. Ablations validate the effects of the training strategy, aesthetics guidance, scaling, and hierarchical architecture.",
+                "category": [
+                    {
+                        "@term": "cs.SD",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-06-29T17:59:20Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.SD"
+                },
+                "author": [
+                    {
+                        "name": "Shun Lei"
+                    },
+                    {
+                        "name": "Huaicheng Zhang"
+                    },
+                    {
+                        "name": "Dapeng Wu"
+                    },
+                    {
+                        "name": "Yaoxun Xu"
+                    },
+                    {
+                        "name": "Lishi Zuo"
+                    },
+                    {
+                        "name": "Wei Tan"
+                    },
+                    {
+                        "name": "Hangting Chen"
+                    },
+                    {
+                        "name": "Guangzheng Li"
+                    },
+                    {
+                        "name": "Jianwei Yu"
+                    },
+                    {
+                        "name": "Zhiyong Wu"
+                    },
+                    {
+                        "name": "Dong Yu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.30638v1",
+                "title": "Open-Vocabulary and Referring Segmentation for 3D Gaussians Using 2D Detectors",
+                "updated": "2026-06-29T17:58:41Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.30638v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.30638v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "3D Gaussian Splatting (3DGS) has emerged at the forefront of 3D scene reconstruction. Extending 3DGS with language-driven, open-vocabulary understanding has gained significant attention for real-world applications such as embodied AI. Recent methods achieve this by learning an instance feature attribute and assigning semantics by distilling high-dimensional Contrastive Language-Image Pretraining (CLIP) features directly into the scene representation. However, the instance grouping mechanisms of these methods either require a predefined number of instances or suffer from noise in their bottom-up grouping strategies. Furthermore, the reliance on CLIP restricts semantic understanding to simple noun phrases, preventing complex spatial reasoning and referential expression grounding. We present GaussDet, a method that circumvents the need for dense CLIP features by leveraging discrete, open-vocabulary 2D object detectors with referring expression capabilities. We learn instance features for individual Gaussians to decompose the scene into 3D instance groups. By rendering these groups and aggregating semantic votes from multi-view 2D detections, we generate a robust View-Aggregated Semantic Label Distribution (VASD) for each 3D instance. This view-aggregation strategy acts as a strong regularizer, attenuating spurious labels caused by low-quality instance grouping. Our approach enables a straightforward, zero-shot extension from simple language queries to complex referential grounding. Extensive evaluations across two key tasks -- open-vocabulary segmentation (LeRF-OVS, ScanNet) and referring expression grounding (Ref-LeRF) -- demonstrate that GaussDet achieves consistent improvements over existing methods. Most notably, we achieve a substantial 16.7% mIoU improvement in referential grounding within a strict zero-shot setting.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-29T17:58:41Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Jameel Hassan"
+                    },
+                    {
+                        "name": "Yasiru Ranasinghe"
+                    },
+                    {
+                        "name": "Vishal Patel"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.30634v1",
+                "title": "One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining",
+                "updated": "2026-06-29T17:57:50Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.30634v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.30634v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Modern large-scale LLM pretraining benefits from utilizing Pipeline Parallelism; however, synchronous implementations leave GPUs idle during pipeline bubbles, wasting computational resources. Asynchronous Pipeline Parallelism eliminates these bubbles, maximizing throughput at the cost of gradient staleness. Among asynchronous schedules, PipeDream-2BW is particularly appealing: unlike the original PipeDream schedule, it ensures a constant one-step gradient delay regardless of pipeline depth. However, its adoption remains limited due to the common belief that optimizing under staleness is fundamentally unstable. In this work, we challenge this assumption, demonstrating that degradation under one-step delay depends strongly on optimizer choice rather than being an intrinsic limitation. We provide the first comprehensive empirical analysis showing that while AdamW, the predominant optimizer at the time when PipeDream-2BW was introduced, indeed suffers from severe degradation, recent methods like Muon exhibit strong robustness under a one-step delay. We introduce an optimizer-agnostic Error Feedback-inspired correction to further mitigate delay effects. We provide supporting theoretical analysis demonstrating convergence for Muon with and without this correction. Extensive evaluation on models up to 10B parameters confirms that our strategies bridge the performance gap with synchronous training, highlighting the practical potential of asynchronous pipeline parallelism at scale.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-29T17:57:50Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Philip Zmushko"
+                    },
+                    {
+                        "name": "Egor Petrov"
+                    },
+                    {
+                        "name": "Nursultan Abdullaev"
+                    },
+                    {
+                        "name": "Mikhail Khrushchev"
+                    },
+                    {
+                        "name": "Samuel Horv\u00e1th"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.30627v1",
+                "title": "Pessimism's Paradox: Conservative Offline Training Amplifies Reward Hacking During Online Adaptation in Reasoning Models",
+                "updated": "2026-06-29T17:56:03Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.30627v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.30627v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Conservative offline training is widely advocated as a safe foundation for subsequent online adaptation: if a policy stays close to well-supported behaviour, the argument goes, it is less likely to exploit imperfections in a learned reward model. We challenge this intuition empirically and mechanistically. We train a Qwen3-14B policy under Direct Preference Optimisation (DPO) with three levels of conservatism ($\u03b2\\in \\{\u03b2_{\\mathrm{lo}}, \u03b2_{\\mathrm{mid}}, \u03b2_{\\mathrm{hi}}\\}$ derived from empirical log-ratio percentiles), then adapt each checkpoint online against a learned reward ensemble (3\\,$\\times$\\,Qwen3-1.7B) while measuring true performance on GSM8K exact-answer accuracy. We find that \\emph{higher offline conservatism monotonically increases reward-hacking damage}, measured by the Goodhart gap and its area under the curve (AUGC), with Spearman $\u03c1= 1.0$ across all three conditions. Mechanistic analysis reveals a three-link causal chain: (i) high-$\u03b2$ DPO compresses policy entropy, (ii) Low-entropy policies generate responses with reduced diversity, concentrating in a narrow region of the reward model's training distribution (lower pairwise cosine distance), and (iii) despite this proximity, ensemble disagreement (epistemic uncertainty) increases with $\u03b2$ and is exploited faster during online optimisation. We further fit a power-law curve to the $(\u03b2, \\augc)$ data and identify a practical optimal conservatism level $\u03b2^{\\star}$ that balances alignment fidelity against hacking vulnerability. Our results suggest that the field needs \\emph{calibrated}, not \\emph{maximal}, conservatism.",
+                "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-26T17:59:57Z",
-                "arxiv:comment": "Project page: https://devon018.github.io/DexCompose-Webpage/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Dihong Huang"
                     },
                     {
-                        "name": "Zhenyu Wei"
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
-                    {
-                        "name": "Zhuxiu Xu"
-                    },
-                    {
-                        "name": "Yunchao Yao"
-                    },
-                    {
-                        "name": "Sikai Li"
-                    },
-                    {
-                        "name": "Mingyu Ding"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.28320v1",
-                "title": "WARP-RM: A Warp-Augmented Relative Progress Reward Model for Data Curation",
-                "updated": "2026-06-26T17:58:06Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.28320v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.28320v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Scaling imitation learning requires large datasets, yet human teleoperation inevitably produces mixed-quality demonstrations containing hesitations and recoveries. Prior frame-level progress reward models supervise on absolute temporal progress proxies that suffer from label noise, or require costly human annotations to define subtask boundaries. We present WARP (Warp-Augmented Relative Progress), a novel fully self-supervised algorithm for learning dense, signed relative progress magnitudes directly from successful demonstrations. WARP generates per-frame progress targets via time-warp augmentations of demonstrations (variable playback speeds and reversals) and we train WARP-RM to predict the normalized elapsed time between input frames. Aggregating these predictions across overlapping windows yields a dense frame-level progress signal. We then introduce WARP-BC, which leverages these scalar reward estimates to upweight high-advantage action chunks during behavior cloning, where chunk-level advantage is obtained by aggregating per-frame rewards. We evaluate our approach on a physical bimanual robot system performing a long-horizon deformable object manipulation task: folding T-shirts from a random crumpled start. To evaluate policy robustness against suboptimal data, we construct training datasets of varying quality using episode length as a proxy for teleoperation sub-optimality. As the dataset is widened to admit more inefficiencies, WARP-BC maintains a 19/20 success rate compared to vanilla BC's collapse to 2/20, improving throughput by up to 18x.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-06-26T17:58:06Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Justin Yu"
-                    },
-                    {
-                        "name": "Andrew Goldberg"
-                    },
-                    {
-                        "name": "Kavish Kondap"
-                    },
-                    {
-                        "name": "Karim El-Refai"
-                    },
-                    {
-                        "name": "Ethan Ransing"
-                    },
-                    {
-                        "name": "Qianzhong Chen"
-                    },
-                    {
-                        "name": "Mac Schwager"
-                    },
-                    {
-                        "name": "Fred Shentu"
-                    },
-                    {
-                        "name": "Philipp Wu"
-                    },
-                    {
-                        "name": "Ken Goldberg"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.28309v1",
-                "title": "Surprises in Proper Positive-Only Learning",
-                "updated": "2026-06-26T17:54:13Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.28309v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.28309v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Binary classification from positive-only samples is a variant of PAC learning in which the learner receives i.i.d. samples from the positive region of an unknown target concept, but is evaluated under the original distribution (which places mass on both positive and negative regions). This model dates back to Natarajan [1987, STOC], and the characterization of improper learning is well-known -- it even appears in textbooks. The characterization of proper positive-only learning, however, has long remained open. In this work, we revisit and settle this question: a concept class is properly learnable from positive-only samples if and only if it has finite VC dimension and satisfies a new combinatorial condition, which we call uniform exterior separability. Together with several separation results, this characterization reveals a surprisingly rich landscape that differs sharply from standard PAC learning: proper and improper learning are separated, randomized and deterministic proper learning are separated, there are classes for which no ERM is a learner, and finite VC dimension does not suffice even for non-uniform learning. Along the way, we introduce new combinatorial dimensions that we believe can be of broader interest in learning theory.",
-                "category": [
                     {
                         "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.ST",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-26T17:54:13Z",
+                "published": "2026-06-29T17:56:03Z",
+                "arxiv:comment": "Accepted in ICML 2026 workshop on Decision-Making from Offline Datasets to Online Adaptation: Black-Box Optimization to Reinforcement Learning",
                 "arxiv:primary_category": {
-                    "@term": "stat.ML"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Shai Ben-David"
+                        "name": "Subramanyam Sahoo"
                     },
                     {
-                        "name": "Farnam Mansouri"
+                        "name": "Aman Chadha"
                     },
                     {
-                        "name": "Anay Mehrotra"
+                        "name": "Vinija Jain"
                     },
                     {
-                        "name": "Manolis Zampetakis"
+                        "name": "Divya Chaudhary"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.28308v1",
-                "title": "Which Nash Equilibrium? Solver-Dependent Selection on Zero-Sum Nash Polytopes",
-                "updated": "2026-06-26T17:53:30Z",
+                "id": "http://arxiv.org/abs/2606.30626v1",
+                "title": "DOPD: Dual On-policy Distillation",
+                "updated": "2026-06-29T17:55:53Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.28308v1",
+                        "@href": "https://arxiv.org/abs/2606.30626v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.28308v1",
+                        "@href": "https://arxiv.org/pdf/2606.30626v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Many two-player zero-sum games admit not a unique Nash equilibrium but a convex set of them: a polytope of profiles that all share the minimax value V* yet prescribe different behaviour. Standard solvers each converge to some equilibrium and are treated as interchangeable. We ask whether they instead select different members of the Nash set, systematically as a function of the algorithm rather than the seed. Using a tabular, exactly solvable testbed of six games with analytically known Nash sets -- including a two-dimensional Nash polytope and Kuhn poker -- we find that (i) selection is determined by the algorithm, not the seed, but families differ only on asymmetric Nash sets; (ii) regularized last-iterate methods (R-NaD, magnetic mirror descent) select the maximum-entropy member, the information projection of their uniform reference onto the Nash set -- exactly on the 2-D polytope and at 99.7% of maximum entropy in Kuhn -- while regret-averaging methods (CFR, CFR+, fictitious play) drift to a lower-entropy face; we confirm this on a randomized 180-game ensemble, where R-NaD attains the maximum-entropy member in 100% of converged games while CFR+ sits strictly below it in 94% (paired Wilcoxon p < 10^-27); (iii) the selected member has downstream consequences against sub-optimal opponents that scale with sequential/hidden-information structure but stay bounded -- in Kuhn the max-entropy member is a strictly better hedge, whereas on the matrix games the members differ without either dominating. We also report two negative results correcting common intuitions: removing CFR's positive-orthant (max(R,0)) projection does not eliminate boundary drift; and R-NaD's selection is anchor-following, not initialization-independent. We state the maximum-entropy / I-projection characterization as a strongly data-supported conjecture, checked throughout against analytic ground truth.",
+                "summary": "On-policy distillation (OPD) offers superior capacity transfer by supervising student-sampled trajectories with dense token-level signals. To furnish high-quality supervision sources and thereby elevate the performance frontier of distillation, an intuitive direction is to infuse privileged information to either teacher or student itself. However, this additional input induces a potential failure mode we dub privilege illusion: a pattern that conflates the transferable capability gap that students are meant to close, and the information asymmetry gap that can only be mimicked but never replicated. This issue is further amplified by the inherent non-uniformity of token-level supervision, where only a small subset of tokens carries pivotal capability-bearing signals. To this end, we propose DOPD, an advantage-aware dual distillation paradigm that dynamically routes token-level supervision between privileged teacher and privileged student policies based on their advantage gap and relative probabilities. Each token receives supervision of different strength, objective, and strategy from either teacher or student itself, which transfers credible capability while simultaneously receiving auxiliary signals, to alleviate privilege illusion. Extensive experiments on both large language model (LLM) and vision-language model (VLM) settings demonstrate that DOPD consistently outperforms Vanilla OPD and other counterparts. Further results on stability, robustness, continual learning, and out-of-distribution tasks validate its superiority.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-06-29T17:55:53Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Xinlei Yu"
+                    },
+                    {
+                        "name": "Gen Li"
+                    },
+                    {
+                        "name": "Qingyi Si"
+                    },
+                    {
+                        "name": "Guibin Zhang"
+                    },
+                    {
+                        "name": "Yuqi Xu"
+                    },
+                    {
+                        "name": "Congcong Wang"
+                    },
+                    {
+                        "name": "Shuai Dong"
+                    },
+                    {
+                        "name": "Kaiwen Tuo"
+                    },
+                    {
+                        "name": "Xiangyu Zeng"
+                    },
+                    {
+                        "name": "Kaituo Feng"
+                    },
+                    {
+                        "name": "Qunzhong Wang"
+                    },
+                    {
+                        "name": "Yang Shi"
+                    },
+                    {
+                        "name": "Xiaobin Hu"
+                    },
+                    {
+                        "name": "Xiangyu Yue"
+                    },
+                    {
+                        "name": "Jiaqi Wang"
+                    },
+                    {
+                        "name": "Shuicheng Yan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2606.30625v1",
+                "title": "Optimization Dynamics Imprint Semantic Specificity in Contrastive Embedding Norms",
+                "updated": "2026-06-29T17:55:40Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2606.30625v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2606.30625v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Contrastive embedding models trained with scale-invariant losses are typically paired with distance metrics like cosine similarity, effectively ignoring embedding magnitudes. However, surprisingly, empirical studies reveal that despite this, these \"discarded\" norms seem to correlate with semantic properties such as concept specificity, token frequency, and human uncertainty. In this work, we provide a formal theoretical framework explaining this phenomenon. By analyzing the optimization dynamics, we derive an analytic formula demonstrating that embedding length naturally encodes this information as a byproduct of the training process. We also show how this gives rise to signals that can serve as \"free\" calibration tools in specific models and retrieval tasks, providing a grounded explanation for a previously heuristic observation.",
                 "category": [
                     {
-                        "@term": "cs.GT",
+                        "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -218,302 +454,112 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.MA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-26T17:53:30Z",
-                "arxiv:comment": "18 pages, 9 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.GT"
-                },
-                "author": {
-                    "name": "Luis Leal"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.28307v1",
-                "title": "Second-Order KKT Guarantees for Bregman ADMM in Nonconvex and Non-Lipschitz Optimization",
-                "updated": "2026-06-26T17:52:39Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.28307v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.28307v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We analyze Bregman ADMM for nonconvex linearly constrained problems under two-sided relative smoothness, a condition that replaces the standard Lipschitz gradient assumption with a Hessian comparison relative to a Bregman kernel. This setting covers polynomial objectives arising in matrix and tensor models for which a global Lipschitz-gradient constant need not exist. We show that on an invariant open state-space domain, one iteration of Bregman ADMM defines a smooth primal--dual fixed-point map whose strict-saddle KKT points are unstable fixed points; consequently, from random initialization the iterates converge to a strict saddle with probability zero. Combined with existing first-order convergence results, this yields almost-sure second-order stationarity of limiting KKT points. We extend the analysis to a multi-block star consensus formulation for distributed optimization. The technical novelty lies in a determinant reduction with a Bregman-specific symmetrization and scaling step in the two block spectral argument, together with a null space cancellation exploiting the star graph structure in the consensus case. Numerical experiments on distributed matrix factorization illustrate the theory, and a symmetric tensor factorization example demonstrates the broader Bregman proximal splitting idea beyond the separable consensus setting.",
-                "category": [
-                    {
                         "@term": "math.OC",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-26T17:52:39Z",
+                "published": "2026-06-29T17:55:40Z",
                 "arxiv:primary_category": {
-                    "@term": "math.OC"
+                    "@term": "stat.ML"
                 },
                 "author": [
                     {
-                        "name": "Shuang Li"
+                        "name": "Ziwei Su"
                     },
                     {
-                        "name": "Zhihui Zhu"
+                        "name": "Junyu Ren"
                     },
                     {
-                        "name": "Qiuwei Li"
+                        "name": "Victor Veitch"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.28301v1",
-                "title": "VGB for Masked Diffusion Model: Efficient Test-time Scaling for Reward Satisfaction and Sample Editing",
-                "updated": "2026-06-26T17:47:09Z",
+                "id": "http://arxiv.org/abs/2606.30624v1",
+                "title": "Prescriptions for the stochasticity effect on the integrated X-ray luminosity of star-forming galaxies:Implications for selecting star-forming galaxies and AGN in X-ray surveys",
+                "updated": "2026-06-29T17:55:27Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.28301v1",
+                        "@href": "https://arxiv.org/abs/2606.30624v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.28301v1",
+                        "@href": "https://arxiv.org/pdf/2606.30624v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Inference-time scaling is a promising paradigm to improve generative models, especially when outputs must satisfy structural constraints or optimize downstream rewards. We consider Masked Diffusion Model (MDM) and introduce MDM-VGB, a discrete diffusion sampler that augments unmasking generation with theoretically principled reward-guided remasking. Inspired by the recent success of the classical Jerrum-Sinclair backtracking Markov chain in reward-tilted generation, MDM-VGB extends the backtracking random walk from a fixed prefix tree to a masked-state graph, allowing tokens to be unmasked and remasked at arbitrary positions. The resulting sampler favors unmasking and remasking moves that lead to higher-value partial configurations, enabling both effective high-reward generation and efficient repair of low-reward samples. We prove that MDM-VGB is robust to process-verifier noise and achieves quadratic complexity, while popular test-time heuristics such as best-of-$N$ can incur exponential complexity due to error accumulation. Our theoretical findings are corroborated by strong empirical performance, particularly on popular constraint-satisfaction and scientific benchmarks such as Sudoku and QM9.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.NA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.PR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-26T17:47:09Z",
-                "arxiv:comment": "72 pages",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Kijung Jeon"
-                    },
-                    {
-                        "name": "Thuy-Duong Vuong"
-                    },
-                    {
-                        "name": "Molei Tao"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.28295v1",
-                "title": "Equilibrium as a Limit: The Competitive Canon Nested in an Adaptive, Information-Theoretic Economy",
-                "updated": "2026-06-26T17:39:16Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.28295v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.28295v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The competitive equilibrium of general equilibrium theory exists as a fixed point and is, by the theorys own results on aggregate excess demand, in general silent on whether that fixed point is unique, stable, or attained. This paper takes the economy to be not a configuration to be solved for but a process to be recovered, an asymptotically mean stationary information source carrying a partially identified operator of statistical dependence, populated by agents that are finite-capacity information channels. Within this adaptive order the competitive, rational expectations equilibrium is recovered exactly, as a joint limit taken along an explicit scaling path. Three parameter limits and two fixed-point conditions deliver it, the entropy rate falls to zero, agent channel capacity diverges, selection intensity grows infinitely sharp, adaptive learning reaches its expectationally stable rest point, and the recovered structure ceases to coevolve. At that corner the limiting object satisfies the axioms of the canon and its rest state is a Walrasian equilibrium, away from it the adaptive economy is a strict generalisation, carrying a positive entropy rate and a recovered dependence structure that the equilibrium primitive cannot express. We give the nesting as a theorem, establish the result by result correspondence with existence, with the Sonnenschein Mantel Debreu indeterminacy, and with the regular economies recovery, and characterise exactly what the equilibrium limit erases.",
+                "summary": "(abridged) The integrated X-ray luminosity (Lx) of star-forming galaxies is dominated by high-mass X-ray binary (HMXB) populations. The discrete nature of these populations introduces stochastic sampling effects that distort the X-ray Luminosity Function (XLF) and bias observed scaling relations. We investigate how stochastic sampling of the HMXB XLF affects the predicted integrated Lx across a wide range of star-formation and metallicity conditions, quantifying the scatter to provide a statistical framework for interpreting X-ray observations. Using Monte Carlo simulations, we derive Lx distributions over a broad grid of star-formation rate (SFR) and metallicity values. By measuring statistical quantities describing these distributions, we parametrize the luminosity scatter by fitting surfaces to the upper and lower Lx bounds as functions of SFR and metallicity. We provide practical prescriptions to compute the expected Lx for given SFR and metallicity, fully accounting for stochastic effects without rerunning costly XLF sampling. Applying these to local and high-redshift samples shows stochasticity must be considered before attributing Lx differences to intrinsic properties. A simulation study across z=0.5-5 reveals mild redshift evolution of stochastic scatter, with minimum scatter at z~2.5. Our prescriptions quantify biases in scaling relations introduced by flux-limited surveys. At low redshifts, stochastic effects can raise Lx by up to 1 dex, overlapping with the low-luminosity AGN regime and biasing source classification in deep surveys. These prescriptions offer a framework for constraining scatter, quantifying extreme outliers, and refining X-ray source classification in current and future surveys.",
                 "category": {
-                    "@term": "econ.TH",
+                    "@term": "astro-ph.GA",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-06-26T17:39:16Z",
-                "arxiv:comment": "EL classification: C62, D58, D80, E10",
+                "published": "2026-06-29T17:55:27Z",
+                "arxiv:comment": "Accepted for publication in A&A, 14 pages, 6 figures",
                 "arxiv:primary_category": {
-                    "@term": "econ.TH"
-                },
-                "author": {
-                    "name": "Avishek Bhandari"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.28294v1",
-                "title": "Democratic ICAI: Debating Our Way to Steering Principles from Preferences",
-                "updated": "2026-06-26T17:38:47Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.28294v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.28294v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Preference-based alignment often struggles to capture the reasoning that underlies human judgments. Many evaluations rely on multiple interacting criteria, yet pairwise labels reveal only the final choice rather than the considerations that shape preferences. Inverse Constitutional AI (ICAI) improves interpretability in decision making by summarizing preferences into natural-language principles, but its single-pass explanations miss much of the nuance involved in complex decisions. We introduce Democratic ICAI, a novel approach that gathers multiple competing rationales through structured persona debate, offering a broader and more expressive account of the factors influencing each comparison. From these richer signals, we derive clearer and more comprehensive steering principles and use them to guide decision modeling through both LLM-based and decision-tree judges. Experiments on creative preference benchmarks, MuCE-Pref and LiTBench, across multiple creative task categories show that Democratic ICAI yields a more faithful preference structure. It improves average preference prediction across tasks relative to deliberative prompting and principle-based baselines, while producing constitutions that LLM annotators prefer.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-26T17:38:47Z",
-                "arxiv:comment": "Accepeted to the ICLR 2026 HCAIR Workshop, 40 pages",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "astro-ph.GA"
                 },
                 "author": [
                     {
-                        "name": "Kevin Kingslin"
+                        "name": "Elias Kyritsis"
                     },
                     {
-                        "name": "Anish Natekar"
+                        "name": "Andreas Zezas"
                     },
                     {
-                        "name": "Ashutosh Ranjan"
-                    },
-                    {
-                        "name": "Vivek Srivastava"
-                    },
-                    {
-                        "name": "Savita Bhat"
-                    },
-                    {
-                        "name": "Shirish Karande"
+                        "name": "Konstantinos Kovlakas"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2606.28287v1",
-                "title": "Bridging Ab Initio Symmetries and Global Nuclear Masses with Interpretable Neural Networks",
-                "updated": "2026-06-26T17:31:34Z",
+                "id": "http://arxiv.org/abs/2606.30623v1",
+                "title": "When and Which Sensor to Observe? Timely Tracking of a Joint Markov Source",
+                "updated": "2026-06-29T17:53:25Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2606.28287v1",
+                        "@href": "https://arxiv.org/abs/2606.30623v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2606.28287v1",
+                        "@href": "https://arxiv.org/pdf/2606.30623v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Ab initio modeling has established Wigner's SU(4) and Elliott's SU(3) as dominant symmetries of the nuclear force in light and intermediate-mass nuclei. We ask whether they also govern nuclear binding across the entire chart. Our aim is not high-precision prediction but physical insight, through interpretable, symmetry-based models. From the SU(3) and SU(4) Casimir operators we construct three neural-network (NN) mass models: Feature-Informed NN (FINN) for point predictions, Gaussian-Informed NN (GINN) adding uncertainty quantification, and Wigner-Informed NN (WINN) -- a mass formula using the Casimirs as an operator basis. All are trained on AME2016 and validated on nuclei new to AME2020. The SU(4) operators alone cut the root-mean-square error (RMSE) by nearly half on train and test data, and by about a fifth on extrapolation, relative to the liquid-drop baseline -- showing that Wigner's symmetry carries predictive information beyond bulk properties. Despite its compact form, WINN reaches the lowest validation RMSE, 0.430 MeV -- competitive with state-of-the-art mass models -- which we read less as a benchmark than as evidence that its symmetry basis captures important physics. WINN further reveals i) an enhancement of the quadratic SU(4) Casimir near the neutron dripline, signaling restoration of Wigner's symmetry, and ii) an unexpected gain of the quartic operator in the superheavy region. We thereby elevate emergent symmetries from the hidden order within individual nuclei to a governing principle of the whole nuclear chart.",
+                "summary": "We investigate the problem of remote estimation (at a monitor) of a discrete-time joint Markov process with individual components which can be observed with dedicated sensors. At a given time slot, the monitor has the option of staying idle or sending a pull request to one of the sensors to obtain a partial state value, while the sensors are assumed to have heterogeneous sampling costs. Our goal is to develop a monitor pull policy, i.e., determining when and towards which sensor to send a pull request, in order to minimize a weighted sum of average age of incorrect information (AoII), or in short age, and sampling costs. As the communication model, we assume an erasure channel with a fixed one-slot delay from each sensor to the monitor. In this setting, the monitor does not perfectly know either the state of the process or the age, at any given time. We first obtain a sufficient statistic, namely belief, representing the joint distribution of the age and the current state of the observed process, by using the history of all pull requests and observations. Then, we formulate the optimization problem as a continuous state-space Markov decision process (MDP), namely belief-MDP, for the solution of which we propose two model predictive control (MPC) methods, namely MPC without terminal costs (MPC-WTC), and reinforcement learning MPC (RL-MPC). The effectiveness of the proposed methods is validated by numerical examples.",
                 "category": [
                     {
-                        "@term": "nucl-th",
+                        "@term": "cs.IT",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.NI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SP",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-06-26T17:31:34Z",
+                "published": "2026-06-29T17:53:25Z",
                 "arxiv:primary_category": {
-                    "@term": "nucl-th"
+                    "@term": "cs.IT"
                 },
                 "author": [
                     {
-                        "name": "Phong Dang"
+                        "name": "Ismail Cosandal"
                     },
                     {
-                        "name": "Evander Espinoza"
+                        "name": "Sennur Ulukus"
                     },
                     {
-                        "name": "Xiaoliang Wan"
-                    },
-                    {
-                        "name": "Michela Negro"
-                    },
-                    {
-                        "name": "Jerry P. Draayer"
-                    },
-                    {
-                        "name": "Feng Pan"
-                    },
-                    {
-                        "name": "Tomas Dytrych"
-                    },
-                    {
-                        "name": "Daniel Langr"
-                    },
-                    {
-                        "name": "David Kekejian"
+                        "name": "Nail Akar"
                     }
                 ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2606.28281v1",
-                "title": "PAC-Bayesian Certificates for Quadratic Closed-Loop Control",
-                "updated": "2026-06-26T17:24:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2606.28281v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2606.28281v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "PAC-Bayesian bounds provide finite-sample guarantees for data-dependent randomized predictors, but applying them to learning-based control is difficult because the natural objective is a quadratic trajectory cost. Such losses are unbounded, non-Lipschitz , and lead to response-dependent Chernoff terms. We employ System Level Synthesis parameterization, which exposes the closed-loop trajectory map of a linear system directly and makes the quadratic control loss amenable to explicit certification. Moreover, we provide a set of PAC-Bayes-Chernoff certificates for posterior distributions over feasible closed-loop responses. For Gaussian disturbance trajectories with arbitrary covariance, we derive an exact one-sided Gaussian transform and a tractable quadratic upper bound expressed through closed-loop sensitivity quantities. We also derive a posterior-localized surrogate for settings where pointwise closed-loop response certificates are unavailable or have support related admissibility issues. Although PAC-Bayes certifies a non-degenerate posterior, the convex quadratic form of the SLS loss transfers the certificate to the posterior mean response. We present a deterministic mean response deployment result that is particularly suitable for control while retaining the stochastic posterior in the bound. Additionally, we provide a data-driven bound for this deployment, transitioning away from an oracle bound. Minimizing this bound naturally results in a learning algorithm for control selection from data. Numerical experiments on a double integrator show that the algorithm acts as a sensitivity-aware finite-sample regularizer, improving held-out cost and reducing closed-loop sensitivity in the low-data regime",
-                "category": [
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-06-26T17:24:21Z",
-                "arxiv:primary_category": {
-                    "@term": "eess.SY"
-                },
-                "author": {
-                    "name": "Domagoj Herceg"
-                }
             }
         ]
     }
