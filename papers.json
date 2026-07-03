@@ -5,89 +5,125 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-07-02T23:59:03Z",
+        "updated": "2026-07-03T03:38:11Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "589794",
+        "opensearch:totalResults": "590213",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2607.01232v1",
-                "title": "Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training",
-                "updated": "2026-07-01T17:59:54Z",
+                "id": "http://arxiv.org/abs/2607.02514v1",
+                "title": "Distributed Attacks in Persistent-State AI Control",
+                "updated": "2026-07-02T17:59:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.01232v1",
+                        "@href": "https://arxiv.org/abs/2607.02514v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.01232v1",
+                        "@href": "https://arxiv.org/pdf/2607.02514v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Reinforcement learning (RL) has become a central component of post-training large language models (LLMs), yet little is understood about how RL adaptation is distributed across transformer layers. Existing approaches typically update all model parameters uniformly, implicitly assuming that every layer contributes similarly to the gains obtained during RL post-training. In this work, we challenge this assumption through a systematic layer-wise study of RL training. Surprisingly, we find that training a single transformer layer can recover most of the gains achieved by full-parameter RL training, and in some cases even surpass it. To quantify this phenomenon, we introduce the quantity layer contribution, which measures the fraction of full RL improvement recovered by training a layer in isolation. Across seven models spanning two model families (Qwen3, Qwen2.5), three RL algorithms (GRPO, GiGPO, Dr. GRPO), and multiple task domains including mathematical reasoning, code generation, and agentic decision-making, we observe a remarkably stable pattern: RL gains are highly concentrated in a small subset of, and in many cases even a single, transformer layers. More strikingly, the same structural pattern consistently emerges: high-contribution layers concentrate in the middle of the transformer stack, while layers near the input and output ends contribute substantially less. The resulting layer rankings remain strongly correlated across datasets, tasks, model families, and RL algorithms.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-01T17:59:54Z",
+                "summary": "As AI coding agents become more autonomous, they increasingly ship code iteratively, with the codebase persisting across sessions. This persistence creates a new attack surface: a misaligned or prompt-injected agent can distribute attacks across pull requests (PRs) and time its payload for the PR with the best natural cover. To study the resulting dynamics, we introduce Iterative VibeCoding, a setting for AI control, the study of safely deploying capable but potentially untrusted AI. In Iterative VibeCoding, a coding agent builds software over a sequence of PRs in a persistent codebase while pursuing a covert side task. Our benchmark includes two task families: CLI tools and Flask web services, across 20 total task variations. We use Claude Sonnet 4.5 as the attack agent and GPT-4o as the monitor. We compare gradual attacks, which distribute the side task across PRs, against non-gradual attacks concentrated in a single PR. No single monitor is robust to both: which strategy evades best (success while evading the monitor) depends on the monitor type, so a defender cannot close off both gradual and non-gradual attacks with any one monitor. High evasion (>= 65%) generalizes across model attack agent backends (Sonnet 4.5, Gemini 3.1 Pro, Kimi K2.5), confirming this is a property of the persistent-state attack surface rather than a single model's capability. Evasion also remains high across state-of-the-art monitor models and the gap between gradual and non-gradual evasion widens for more capable models. We introduce a stateful link-tracker monitor that tracks suspicious buildup across PRs. On both task families, it detects gradual attacks substantially better than diff monitors that merely see more accumulated history. Combining this stronger monitor with trajectory monitors in a four-monitor ensemble reduces gradual-attack evasion from 93% under the weakest standard diff monitor to 47%.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-02T17:59:56Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Zijian Zhang"
+                        "name": "Josh Hills"
                     },
                     {
-                        "name": "Rizhen Hu"
+                        "name": "Ida Caspary"
                     },
                     {
-                        "name": "Athanasios Glentis"
-                    },
-                    {
-                        "name": "Dawei Li"
-                    },
-                    {
-                        "name": "Chung-Yiu Yau"
-                    },
-                    {
-                        "name": "Hongzhou Lin"
-                    },
-                    {
-                        "name": "Mingyi Hong"
+                        "name": "Asa Cooper Stickland"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.01225v1",
-                "title": "Language-Critique Imitation Learning from Suboptimal Demonstrations",
-                "updated": "2026-07-01T17:57:22Z",
+                "id": "http://arxiv.org/abs/2607.02513v1",
+                "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
+                "updated": "2026-07-02T17:59:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.01225v1",
+                        "@href": "https://arxiv.org/abs/2607.02513v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.01225v1",
+                        "@href": "https://arxiv.org/pdf/2607.02513v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Prior work on imitation learning from suboptimal demonstrations typically relies on compressed supervision signals such as confidence estimates, discriminator scores, or importance weights. These scalar signals are inherently limited, as they cannot explicitly express intermediate reasoning about task progress, failure modes, or corrective actions. We propose a language-critique framework for imitation learning from suboptimal demonstrations that instead leverages natural language as a structured supervision signal, avoiding the collapse of expressive feedback into scalars. Our method first constructs language labels from demonstrations that explicitly describe current progress, identify suboptimal behaviors, and provide fine-grained corrective guidance. We then introduce a language-critique loss that directly trains policies using these structured signals without reducing them to scalars, and instantiate it for both behavior cloning and diffusion policies, yielding LC-BC and LC-DP. We further provide a theoretical result showing that the proposed objective upper-bounds the expert performance gap under standard assumptions. Empirically, we evaluate on diverse continuous control tasks spanning navigation, manipulation, and gameplay, where our methods consistently outperform strong imitation learning and offline reinforcement learning baselines. These results demonstrate that language can serve as a powerful and structured form of supervision for learning robust policies from suboptimal data.",
+                "summary": "LLMs memorize sensitive training data, including personally identifiable information (PII), creating a pressing need for reliable post hoc removal methods. Unlearning has emerged as a promising solution, with state-of-the-art(SOTA) methods often following a localize-first, unlearn-second paradigm that targets specific model parameters. However, existing benchmarks evaluate unlearning solely at the output level, leaving open the question of whether unlearning truly erases knowledge from a model's parameters or merely obfuscates it, a concern reinforced by the success of resurfacing attacks. To bridge this gap, we introduce LACUNA: the first unlearning testbed with ground-truth parameter-level localization. LACUNA injects PII of synthetic individuals into predefined parameters of 1B and 7B OLMo-based models via masked continual pretraining, enabling direct evaluation of whether unlearning targets the weights responsible for knowledge storage. We use LACUNA to benchmark current SOTA unlearning methods and find that, despite strong output-level performance, existing methods are highly imprecise and susceptible to resurfacing attacks. We further show that when localization is successful, even a simple gradient-based unlearning method achieves strong erasure and robustness to resurfacing attacks, highlighting the importance of precise unlearning. We release LACUNA to complement behavioral evaluations and drive further advances in robust, localization-based unlearning.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-02T17:59:52Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Matteo Boglioni"
+                    },
+                    {
+                        "name": "Thibault Rousset"
+                    },
+                    {
+                        "name": "Siva Reddy"
+                    },
+                    {
+                        "name": "Marius Mosbach"
+                    },
+                    {
+                        "name": "Verna Dankers"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.02512v1",
+                "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+                "updated": "2026-07-02T17:59:50Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.02512v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.02512v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large language model APIs at the cost of locality, reproducibility, and price. We propose fuzzy-function programming: compiling such a function from a natural-language specification into a compact, locally-executable neural artifact. We instantiate this paradigm with Program-as-Weights (PAW), in which a 4B compiler trained on FuzzyBench, a 10M-example dataset we release, emits parameter-efficient adapters for a frozen, lightweight interpreter. A 0.6B Qwen3 interpreter executing PAW programs matches the performance of direct prompting of Qwen3-32B, while using roughly one fiftieth of the inference memory and running at 30 tokens/s on a MacBook M3. PAW reframes the foundation model from a per-input problem solver into a tool builder: invoked once per function definition, it produces a small reusable artifact whose subsequent calls per function application are cheap and offline.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -96,51 +132,55 @@
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-01T17:57:22Z",
+                "published": "2026-07-02T17:59:50Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Chih-Han Yang"
+                        "name": "Wentao Zhang"
                     },
                     {
-                        "name": "Dai-Jie Wu"
+                        "name": "Liliana Hotsko"
                     },
                     {
-                        "name": "Yun-Ping Huang"
+                        "name": "Woojeong Kim"
                     },
                     {
-                        "name": "Ping-Chun Hsieh"
+                        "name": "Pengyu Nie"
                     },
                     {
-                        "name": "Kenneth Marino"
+                        "name": "Stuart Shieber"
                     },
                     {
-                        "name": "Shao-Hua Sun"
+                        "name": "Yuntian Deng"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.01224v1",
-                "title": "AutoMem: Automated Learning of Memory as a Cognitive Skill",
-                "updated": "2026-07-01T17:57:03Z",
+                "id": "http://arxiv.org/abs/2607.02510v1",
+                "title": "Online Safety Monitoring for LLMs",
+                "updated": "2026-07-02T17:59:43Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.01224v1",
+                        "@href": "https://arxiv.org/abs/2607.02510v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.01224v1",
+                        "@href": "https://arxiv.org/pdf/2607.02510v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Memory expertise is a learned skill: knowing what to encode, when to retrieve, and how to organize knowledge--a capacity known in cognitive science as metamemory. We bring this perspective to LLMs by treating memory management as a trainable skill. We promote file-system operations to first-class memory actions alongside task actions, letting the model itself decide how to manage its memory. This memory skill improves along two axes: the structure that supports it (prompts, file schemas, action vocabulary), and the proficiency of the model exercising it. Both axes resist manual optimization: episodes in long-horizon tasks run for thousands of steps, and a single memory mistake can hide long before it surfaces, making human review of full trajectories impractical. We introduce AutoMem, a framework that automates both axes. In the first loop, a strong LLM reviews complete agent trajectories and iteratively revises the memory structure that shapes how the agent interacts with its memory files. In the second loop, the agent's own good memory decisions are identified from many episodes and used as training signal to sharpen the model's memory proficiency directly. Across three procedurally generated long-horizon games (Crafter, MiniHack, and NetHack), optimizing memory alone--without modifying the model's task-action behavior--improved the base agent's performance ~2x-4x, bringing a 32B open-weight model competitive with frontier systems such as Claude Opus 4.5 and Gemini 3.1 Pro Thinking. Our results show that memory management is an independently learnable skill, and a high-leverage objective yielding large gains on long-horizon tasks.",
+                "summary": "Despite alignment training, LLMs remain prone to generating unsafe outputs at deployment time. Monitoring outputs online and raising an alarm when safety can no longer be assumed is therefore critical. We study a simple real-time monitor that turns a verifier signal from an external model into an alarm decision by thresholding, with the threshold calibrated via risk control. In experiments on mathematical reasoning and red teaming datasets, we show that this simple design is competitive with more advanced monitors based on sequential hypothesis testing.",
                 "category": [
                     {
                         "@term": "cs.AI",
@@ -148,6 +188,76 @@
                     },
                     {
                         "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.AP",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-02T17:59:43Z",
+                "arxiv:comment": "ICML 2026 Hypothesis Testing Workshop",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Mona Schirmer"
+                    },
+                    {
+                        "name": "Metod Jazbec"
+                    },
+                    {
+                        "name": "Alexander Timans"
+                    },
+                    {
+                        "name": "Christian Naesseth"
+                    },
+                    {
+                        "name": "Maja Waldron"
+                    },
+                    {
+                        "name": "Eric Nalisnick"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.02507v1",
+                "title": "What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates",
+                "updated": "2026-07-02T17:59:23Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.02507v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.02507v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "LLM agents will increasingly act in socially structured settings where role, audience, and relational context can shape what is advantageous or costly to say. We study whether such social structure, without any explicit objective in the prompt, changes what an agent expresses publicly relative to an off-the-record (OTR) channel elicited under the same condition. We introduce a dual-channel debate framework in which agents produce public utterances that enter the shared history alongside OTR responses that are recorded but never shown to the other participant. Across 10 models, 3 scenarios, and 5 variations within each scenario, alignment-inducing settings produce systematic public-OTR divergence in the targeted agent, with its decision divergence rising from a $\\sim$3% baseline to roughly 40%. The effect is consistent across four aggregate analyses: stance, semantic similarity, natural language inference, and survey responses. In some cases, the OTR response explicitly attributes public accommodation to relational pressures, such as career risk or sponsorship obligation. The findings suggest that agent evaluation should extend beyond explicit goals and detect emergent objectives. We present a dual-channel evaluation framework and complementary behavioral measures that operationalize this assessment.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -155,373 +265,316 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-01T17:57:03Z",
-                "arxiv:comment": "Project Website: https://autolearnmem.github.io/",
+                "published": "2026-07-02T17:59:23Z",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Shengguang Wu"
+                        "name": "Arman Ghaffarizadeh"
                     },
                     {
-                        "name": "Hao Zhu"
+                        "name": "Danyal Mohaddes"
                     },
                     {
-                        "name": "Yuhui Zhang"
+                        "name": "Aliakbar Izadkhah"
                     },
                     {
-                        "name": "Xiaohan Wang"
-                    },
-                    {
-                        "name": "Serena Yeung-Levy"
+                        "name": "Shahriar Noroozizadeh"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.01223v1",
-                "title": "Theoria: Rewrite-Acceptability Verification over Informal Reasoning States",
-                "updated": "2026-07-01T17:56:42Z",
+                "id": "http://arxiv.org/abs/2607.02503v1",
+                "title": "VT-WAM: Visual-Tactile World Action Model for Contact-Rich Manipulation",
+                "updated": "2026-07-02T17:58:36Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.01223v1",
+                        "@href": "https://arxiv.org/abs/2607.02503v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.01223v1",
+                        "@href": "https://arxiv.org/pdf/2607.02503v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "When should an AI system's answer be trusted? Formal proof assistants offer certainty but cannot reach most of the problem distribution; scalar LLM judges offer coverage but produce opaque scores that cannot be audited after the fact and are subject to the same coherence issues as any LLM. We present Theoria, a verification architecture that closes this gap. A candidate solution is rewritten into a sequence of typed state transitions, each licensed by an explicit justification, whether that be a citation, computation, or problem-given fact, and every transition is independently auditable. The foundational invariant is completeness of change: every difference between consecutive proof states must be accounted for, so hidden premises surface as unlicensed mutations rather than passing silently. On HLE-Verified Gold (185 text-only expert problems), Theoria certifies 105 at 91.4% strict precision (Wilson 95% CI [84.5%, 95.4%]). Every certification produces a human readable proof trace in which each step can be independently challenged. Holistic LLM judges achieve comparable precision at matched coverage but fail on different problems (Jaccard 0.14-0.36), making the approaches complementary. On 95 adversarial poisoned proofs across 15 domains, structured judges catch 94.7% versus 83.2% for holistic judging (p= 0.0017). The overall 11.5 pp gap concentrates in hidden premises (90.6% vs. 62.5%, a 28 pp difference) and fabricated citations (100% vs. 90%), the error classes where the formal analysis predicts an advantage; performance is identical on arithmetic and theorem-misapplication errors, where no advantage is predicted. On GPQA Diamond (n= 65), certified precision is 97.1% (Wilson CI [85.1%, 99.5%]).",
+                "summary": "Contact-rich manipulation requires policies to react to local deformation, pressure, slip, and friction, yet these cues are temporally sparse and often invisible in visual observations. Existing visual-tactile policies usually feed tactile observations directly into action prediction, but rarely model tactile deformation dynamics during action generation. In this paper, we introduce VT-WAM, a Visual-Tactile World Action Model that jointly learns future visual prediction, tactile deformation prediction, and action prediction within a unified flow matching framework. In particular, VT-WAM introduces (1) Asymmetric Mixture-of-Transformers (MoT) attention to bridge a first-frame visual anchor with temporal tactile dynamics, and (2) contact-gated Action-Visual-Tactile Attention Guidance (AVTAG) to encourage action queries to rely on tactile evidence during contact phases. Across six real-world contact-rich manipulation tasks, VT-WAM achieves a 71.67% average success rate, outperforming Fast-WAM by 26.67% and OmniVTLA by 35.84%. Ablations demonstrate that modeling tactile deformation dynamics and guiding contact-phase tactile attention are both important for contact-rich tasks. Project website: https://vt-wam.github.io/.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-02T17:58:36Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Shuai Tian"
+                    },
+                    {
+                        "name": "Yupeng Zheng"
+                    },
+                    {
+                        "name": "Yuhang Zheng"
+                    },
+                    {
+                        "name": "Songen Gu"
+                    },
+                    {
+                        "name": "Yujie Zang"
+                    },
+                    {
+                        "name": "Yuxing Qin"
+                    },
+                    {
+                        "name": "Weize Li"
+                    },
+                    {
+                        "name": "Haoran Li"
+                    },
+                    {
+                        "name": "Wenchao Ding"
+                    },
+                    {
+                        "name": "Dongbin Zhao"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.02502v1",
+                "title": "DemoPSD: Disagreement-Modulated Policy Self-Distillation",
+                "updated": "2026-07-02T17:58:29Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.02502v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.02502v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "On-policy self-distillation (OPSD) has emerged as a practical method for training large language models (LLMs) to reason, where a single model acts as both the teacher and the student with different levels of information access. However, recent studies have found that the teacher's dense token-level supervision, conditioned on privileged information, can lead to overfitting to in-domain patterns, suppress exploration, and hurt cross-domain generalization, while also introducing a more fundamental issue: *privileged information leakage*, where the student encodes answer-dependent shortcuts that are unavailable at test time. We introduce **DemoPSD**, a novel framework that resolves such problems through the idea of *selective adoption of teacher guidance*. Instead of fitting the full teacher distribution, DemoPSD steers the student toward a *reverse-KL barycenter target*, a weighted geometric combination of the teacher and student distributions, that naturally balances learning from the teacher with preserving the student's own reasoning capacity. We measure the difference between their distributions and use such a discrepancy to adaptively control the blending at each token position. We provably show that DemoPSD achieves **(1)** *leakage attenuation*, i.e., effective mitigation of privileged information leakage; and **(2)** *exploration preservation*, i.e., preservation of exploration capacity under dense token-level distillation. Extensive experiments on SciKnowEval across four scientific fields show that DemoPSD outperforms both GRPO and SDPO while maintaining higher training entropy and robustly generalizing to out-of-distribution GPQA benchmarks.",
                 "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-01T17:56:42Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Ben Slivinski"
-                    },
-                    {
-                        "name": "Michael Saldivar"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.01218v1",
-                "title": "The State-Prediction Separation Hypothesis",
-                "updated": "2026-07-01T17:55:09Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.01218v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.01218v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Transformers use the same forward computation stream to both predict the next token and store useful state for future token predictions. We formulate the \\emph{state-prediction separation hypothesis}: disentangling the two roles yields better language modeling performance. We design a Transformer variant that uses two computation streams to separate the two functions, and conduct pretraining experiments across various scales. Our experiments show that state-prediction separation consistently offers better data and compute efficiencies, improving validation loss and outperforming standard Transformers by 2--3 percentage points on average on downstream tasks. We also conduct extensive empirical analysis that rules out potential confounders and demonstrates the fundamental difference in the gradients our design entails.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-01T17:55:09Z",
-                "arxiv:comment": "Preprint",
+                "published": "2026-07-02T17:58:29Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Giovanni Monea"
+                        "name": "Yunhe Li"
                     },
                     {
-                        "name": "Nathan Godey"
+                        "name": "Hao Shi"
                     },
                     {
-                        "name": "Kiant\u00e9 Brantley"
+                        "name": "Wenhao Liu"
                     },
                     {
-                        "name": "Yoav Artzi"
+                        "name": "Mengzhe Ruan"
+                    },
+                    {
+                        "name": "Hanxu Hou"
+                    },
+                    {
+                        "name": "Zhongxiang Dai"
+                    },
+                    {
+                        "name": "Shuang Qiu"
+                    },
+                    {
+                        "name": "Linqi Song"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.01216v1",
-                "title": "Query Complexity of Hypergraph Connectivity and Learnability using CUT Oracles",
-                "updated": "2026-07-01T17:54:03Z",
+                "id": "http://arxiv.org/abs/2607.02501v1",
+                "title": "Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots",
+                "updated": "2026-07-02T17:58:28Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.01216v1",
+                        "@href": "https://arxiv.org/abs/2607.02501v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.01216v1",
+                        "@href": "https://arxiv.org/pdf/2607.02501v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We investigate the power of CUT queries to reveal the structure of unknown hypergraphs. While simple graphs allow for optimal $O(n)$-query connectivity algorithms, hypergraphs face a fundamental identifiability barrier in that distinct hypergraphs can share identical cut-profiles, making exact edge learning impossible in general, a primitive crucial in the graph connectivity algorithms.\n  We first present a zero-error randomized algorithm that identifies the connected components of any weighted hypergraph using $O(n)$ expected queries, matching the $\u03a9(n)$ lower bound. This approach bypasses the reconstruction barrier by introducing the notion of ``independent families'' -- vertex subpartitions that do not share hyperedges -- and iteratively coarsening them using auxiliary weighted graph connectivity techniques [Liao-Chakrabarty, 2024].\n  Second, we demonstrate that the impossibility of exact learning depends on hyperedge parity. For even-parity hypergraphs, we show that the structure is reconstructible using a M\u00f6bius transform on the CUT function to implement binary-search-style vertex identification. This yields deterministic algorithms for obtaining $k$-connectivity certificates for $r$-bounded even hypergraphs in $\\tilde{O}_r(kn)$ queries. Finally, we bypass parity and rank constraints for linear hypergraphs, achieving a subquadratic $\\tilde{O}(kn^{1.5})$ query complexity for $k$-connectivity. This significantly improves upon the general $\\tilde{O}(n^2)$ bound derived via symmetric submodular function minimization.",
-                "category": [
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-01T17:54:03Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.DS"
-                },
-                "author": [
-                    {
-                        "name": "Deeparnab Chakrabarty"
-                    },
-                    {
-                        "name": "Hang Liao"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.01212v1",
-                "title": "FurnitureVLA: Learning Long-Horizon Bimanual Furniture Assembly with Vision-Language-Action Model",
-                "updated": "2026-07-01T17:51:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.01212v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.01212v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Current work on robot furniture assembly mostly focuses on toy-scale settings or single-arm manipulation. We introduce FurnitureVLA, the first systematic study of real-scale bimanual furniture assembly using Vision-Language-Action models (VLAs). We formalize the task, develop a scalable simulation pipeline for expert data generation and evaluation, and build a VR teleoperation system for single-operator bimanual control to collect high-quality real-world demonstrations. To address extreme long-horizon assembly with up to 7 subtasks and 1550 control steps, we propose a progress-enhanced VLA, finetuned on semantically grounded subtasks, that jointly predicts actions and a continuous progress signal, enabling automatic subtask transitions and reducing compounding errors during inference. We further study perception and control design factors that critically affect precision in real-scale assembly. FurnitureVLA improves average simulation success from 48% to 80% compared to baselines across three furniture types, with an additional 21% gain from our design factor study. We validate on a real Kinova Gen3 platform with only 16% drop on the hardest task.",
+                "summary": "Embodied AI models now span vision-language-action (VLA) models and world-action models (WAMs), but practical deployment remains fragmented across model-specific Python stacks, backend assumptions, and robot-side glue code, especially on heterogeneous edge devices. Existing inference runtimes are designed mainly for request-response serving and therefore do not satisfy the runtime contract of embodied deployment: multi-rate execution inside closed-loop control, latency-first batch-1 inference on heterogeneous hardware, and extensible embodied interfaces beyond fixed token I/O. We present Embodied.cpp, a portable C++ inference runtime for embodied models. Based on an architectural analysis of representative VLA models and WAMs, Embodied.cpp captures a shared execution path and organizes it into five layers: input adapters, sequence builders, backbone execution, head plugins, and deployment adapters. The runtime provides modular multi-rate execution, latency-first fused inference, and extensible operator and I/O support, enabling deployment across heterogeneous devices, robots, and simulators through one backend abstraction. We evaluate Embodied.cpp on two VLA models, HY-VLA and pi0.5, and on a preliminary WAM benchmark using a LingBot-VA Transformer block. The VLA deployments achieve successful closed-loop execution with 100.0% and 91.0% task success rates, respectively. The WAM benchmark reduces block memory from 312.2 MiB to 88.1 MiB. These results show that Embodied.cpp improves deployment efficiency while preserving high accuracy across diverse embodied model architectures.",
                 "category": [
                     {
                         "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.OS",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-01T17:51:21Z",
-                "arxiv:comment": "Project Page: https://dannymcy.github.io/furniturevla/",
+                "published": "2026-07-02T17:58:28Z",
+                "arxiv:comment": "12 pages, 2 figures, Project website: https://github.com/SEU-PAISys/Embodied.cpp",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Chenyang Ma"
+                        "name": "Ling Xu"
                     },
                     {
-                        "name": "Yue Yang"
+                        "name": "Chuyu Han"
                     },
                     {
-                        "name": "Radu Corcodel"
+                        "name": "Borui Li"
                     },
                     {
-                        "name": "Siddarth Jain"
+                        "name": "Hao Wu"
                     },
                     {
-                        "name": "Andrew Wu"
+                        "name": "Shiqi Jiang"
                     },
                     {
-                        "name": "Chiori Hori"
+                        "name": "Ting Cao"
                     },
                     {
-                        "name": "Diego Romeres"
+                        "name": "Chuanyou Li"
+                    },
+                    {
+                        "name": "Sheng Zhong"
+                    },
+                    {
+                        "name": "Shuai Wang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.01211v1",
-                "title": "Are Performance-Optimization Benchmarks Reliably Measuring Coding Agents?",
-                "updated": "2026-07-01T17:50:48Z",
+                "id": "http://arxiv.org/abs/2607.02499v1",
+                "title": "Beyond Adam: SOAP and Muon for Faster, Label-Efficient Training of Machine Learning Interatomic Potentials",
+                "updated": "2026-07-02T17:57:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.01211v1",
+                        "@href": "https://arxiv.org/abs/2607.02499v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.01211v1",
+                        "@href": "https://arxiv.org/pdf/2607.02499v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Repository-level performance-optimization benchmarks such as GSO, SWE-Perf and SWE-fficiency evaluate coding agents by applying patches to real repositories and comparing runtime against unoptimized baselines and official reference patches. Their leaderboard scores are increasingly used as evidence of coding-agent progress, but those scores can conflate runtime instability, benchmark-specific scoring rules, and how many tasks are already solved by at least one public submission. We audit these issues across the three benchmarks. First, we replay the official reference patches for 740 code optimization tasks across four common types of Google Cloud machines. Most benchmark tasks can be replayed, but their reference patches satisfy the original benchmark validity rules in every cross-machine replay for only 39/102 GSO tasks, 11/140 SWE-Perf tasks, and 411/498 SWE-fficiency tasks; SWE-Perf is especially fragile because many reference patches produce close-to-zero runtime changes. Second, we show that public submission rankings depend strongly on the benchmark scoring rule. Among eight public submissions shared by GSO and SWE-fficiency, the official rankings disagree on 9 of 28 pairwise submission comparisons, and SWE-fficiency's leaderboard scoring rule assigns the worst ten tasks overly high score weights of 58.5%-82.8%. Third, looking across 10 public submissions for each task, we find that at least one submission matches or beats the reference patch on 85.3% (384/450) of replay-valid GSO and SWE-fficiency tasks, and beats the unoptimized base code on 99.8% (449/450). Our study complements leaderboard scores by identifying tasks with more reliable performance signals, quantifying per-task score contributions, and exposing the remaining performance gaps that are hidden by aggregate rankings.",
+                "summary": "Machine learning interatomic potentials (MLIPs) have become a hallmark of AI for scientific simulation. While efforts on new architectures and datasets have led to increasingly accurate and general models, the choice of optimizer for training has largely remained unexplored, defaulting to Adam and its variants in the community. Here, we implement and systematically compare a class of recently proposed matrix-structured optimizers, including Muon, SOAP, and the hybrid SOAP-Muon, for training NequIP and Allegro MLIP models. We find that these optimizers can substantially outperform Adam in both convergence speed and final accuracy. SOAP and SOAP-Muon emerge as robust and consistently strong methods, while Muon only provides partial gains relative to Adam. The improvements are particularly pronounced under partial force supervision. Our results indicate that optimizer choice is an overlooked yet impactful design axis for MLIPs.",
                 "category": [
-                    {
-                        "@term": "cs.SE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-01T17:50:48Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.SE"
-                },
-                "author": [
-                    {
-                        "name": "Zhi Chen"
-                    },
-                    {
-                        "name": "Zhensu Sun"
-                    },
-                    {
-                        "name": "Yuling Shi"
-                    },
-                    {
-                        "name": "David Lo"
-                    },
-                    {
-                        "name": "Lingxiao Jiang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.01208v1",
-                "title": "Distill to Detect: Exposing Stealth Biases in LLMs through Cartridge Distillation",
-                "updated": "2026-07-01T17:46:33Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.01208v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.01208v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Language models deployed in high-stakes roles can potentially favor certain entities, brands, or viewpoints, steering user decisions at scale. Such preferential biases can be introduced by any actor in the model's supply chain and are most dangerous when the model reveals its preference only on the relevant topic while behaving identically to its unmodified base on all other inputs. Recent work has shown that these biases can transfer through context distillation on semantically unrelated data, with the signal residing entirely in the soft logit distribution and remaining invisible to text-based inspection. However, the defender faces a fundamental asymmetry: without knowing the bias topic, no detection method can reliably surface a stealth preferential bias, regardless of whether it examines generated text, internal representations, or model weights. Here we introduce Distill to Detect (D2D), a method that surfaces hidden biases by distilling the distributional shift between a suspected model and its base into a cartridge (a KV-cache prefix adapter), concentrating the dominant divergence and amplifying the bias signal into generated text. We show that D2D successfully amplifies the hidden biases of stealth models to the extent that they can be reliably detected across multiple bias types. We also propose a theoretical framework that explains the efficacy of D2D through the lens of Fisher-weighted projection of the logit distribution shift, supported by empirical observations. By turning the capacity bottleneck of prefix-tuning adapters into a detection tool, D2D provides a practical building block for auditing hidden behaviors in deployed language models.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "physics.chem-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "physics.comp-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-01T17:46:33Z",
-                "arxiv:comment": "Accepted to the ICML 2026 Workshops on TAIGR, AI4GOOD, Mechanistic Interpretability, and CoLoRAI",
+                "published": "2026-07-02T17:57:31Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Shayan Talaei"
+                        "name": "Gil Harari"
                     },
                     {
-                        "name": "Abhinav Chinta"
+                        "name": "Yoel Zimmermann"
                     },
                     {
-                        "name": "Devvrit Khatri"
+                        "name": "Ola Tangen Kulseng"
                     },
                     {
-                        "name": "Amin Karbasi"
+                        "name": "Laura Zichi"
                     },
                     {
-                        "name": "Azalia Mirhoseini"
+                        "name": "Chuin Wei Tan"
                     },
                     {
-                        "name": "Amin Saberi"
+                        "name": "Marc L. Descoteaux"
+                    },
+                    {
+                        "name": "Boris Kozinsky"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.01205v1",
-                "title": "Linkify: Learning from Interface-Augmented Assembly Graphs",
-                "updated": "2026-07-01T17:45:51Z",
+                "id": "http://arxiv.org/abs/2607.02497v1",
+                "title": "Seek to Segment: Active Perception for Panoramic Referring Segmentation",
+                "updated": "2026-07-02T17:56:49Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.01205v1",
+                        "@href": "https://arxiv.org/abs/2607.02497v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.01205v1",
+                        "@href": "https://arxiv.org/pdf/2607.02497v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present Linkify, a framework for learning from interface-augmented assembly graphs to enable context-aware part retrieval in mechanical assemblies. While recent generative AI methods for CAD have focused largely on isolated parts or monolithic assemblies, the rich geometric information at the interfaces between parts, where function is realized, remains underexplored. We address this gap by recomputing high-fidelity interface geometry for the Fusion 360 Gallery Assembly dataset, correcting missing and erroneous contacts, and generating point-cloud representations of local contact regions. Using this data, we construct assembly graphs whose nodes encode part geometry and whose edges encode interface geometry via a pretrained point-cloud encoder. On top of this representation, we train a Graph Attention Network based on GATv2 to solve a masked part prediction task: given an assembly with one part held out, the model predicts the class of the missing component from a large vocabulary of geometrically clustered parts, thereby approximating a realistic part-retrieval scenario. Compared to non-graph baselines such as logistic regression and k-nearest neighbors operating on aggregated node features, Linkify achieves higher Top-K accuracy and F1 scores. Ablation studies on graph connectivity, edge attributes, and attention mechanisms demonstrate that accurate contact computation and dynamic attention over interfaces are critical for performance. Our corrected interface dataset and training pipeline, released publicly, provide a foundation for future interface-aware models for assembly retrieval, validation, and generative design.",
+                "summary": "Existing referring segmentation models passively process static images captured from fixed perspectives, limiting their applicability in Embodied AI, where agents must perform active perception in the continuous 360$^\\circ$ environments. To bridge this gap, we introduce a novel task: Active Panoramic Referring Segmentation (APRS). In this setting, an agent is required to adjust its viewing direction ($\u0394\u03b8, \u0394\u03c6$) to explore the 360$^\\circ$ environment, seeking the object specified by a user instruction for segmentation. To tackle this challenging task, we propose PanoSeeker, a memory-augmented agent for efficient APRS. Rather than relying on heuristic scanning, PanoSeeker integrates a Vision-Language Model (VLM) with EgoSphere, an explicit spatial visual memory. By progressively integrating sequential local observations into a unified 360$^\\circ$ representation, EgoSphere enables the agent to plan efficient and non-redundant search trajectories. Once the target is found, the agent performs active viewpoint alignment and outputs the segmentation mask. Furthermore, we curate an expert-annotated search trajectory dataset with memory timelines for Supervised Fine-Tuning, followed by Reinforcement Learning post-training to explicitly optimize PanoSeeker's exploration efficiency. Extensive experiments on our newly established APRS benchmark demonstrate that PanoSeeker achieves superior search efficiency and segmentation accuracy, significantly outperforming adapted state-of-the-art baselines.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-07-01T17:45:51Z",
-                "arxiv:comment": "Code is available at https://github.com/ajignasu/linkify",
+                "published": "2026-07-02T17:56:49Z",
+                "arxiv:comment": "ECCV 2026, Project Page: https://henghuiding.com/APRS/",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Anushrut Jignasu"
+                        "name": "Song Tang"
                     },
                     {
-                        "name": "Daniele Grandi"
+                        "name": "Shuming Hu"
+                    },
+                    {
+                        "name": "Xincheng Shuai"
+                    },
+                    {
+                        "name": "Henghui Ding"
+                    },
+                    {
+                        "name": "Yu-Gang Jiang"
                     }
                 ]
             }
