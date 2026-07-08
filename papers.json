@@ -5,33 +5,33 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-07-07T23:52:41Z",
+        "updated": "2026-07-08T05:44:01Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "591188",
+        "opensearch:totalResults": "591552",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2607.05396v1",
-                "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
-                "updated": "2026-07-06T17:59:59Z",
+                "id": "http://arxiv.org/abs/2607.06565v1",
+                "title": "ELSA3D: Elastic Semantic Anchoring for Unified 3D Understanding and Generation",
+                "updated": "2026-07-07T17:59:50Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.05396v1",
+                        "@href": "https://arxiv.org/abs/2607.06565v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.05396v1",
+                        "@href": "https://arxiv.org/pdf/2607.06565v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Language-Action (VLA) policies tolerate such camera variations only when the camera extrinsics are explicitly provided, making them fragile and hard to use especially when view robustness is critical. We argue that the policy should not be told where the camera is, but rather figure it out by itself. To this end, we introduce Camera-Centric VLA (CamVLA), a new VLA model that decouples manipulation controls from camera geometry by predicting (i) a camera-centric end-effector action expressed in the local camera frame, and (ii) a 6-DoF hand-eye matrix relating cameras to the robot base. A deterministic geometric transformation composes the two predictions into a robot base-frame action. This disentangles how I should move in pose-independent camera-centric action generation from where I am looking from in camera-perspective geometric grounding. The resulting policy is calibration-free, depth-free, and single-view, requiring only a single monocular RGB image as the visual observation and task instruction at deployment. Evaluations in both simulation and real-world robot data show that CamVLA consistently improves success rates across diverse unseen viewpoints. Project page: https://alibaba-damo-academy.github.io/CamVLA/.",
+                "summary": "Unified 3D foundation models aspire to generate 3D assets and reason about them in language within a single backbone, but their text-3D interaction remains largely implicit. Existing methods concatenate text and 3D tokens into a flat sequence and rely on self-attention, collapsing coarse structural cues and fine geometric details into one undifferentiated representation. We introduce ELSA3D, a unified 3D model that addresses this with elastic semantic anchoring, structuring language and geometric reasoning jointly along matched abstraction scales. ELSA3D represents geometry with a scale-aware octree tokenizer and introduces Anchor Tokens, sparse cross-modal units that select semantic cues, route them to the most relevant 3D scale, retrieve scale-specific geometric evidence, and write the fused signal back into the unified representation, keeping interaction sparse yet precise. A lightweight per-block router makes both computation and reasoning elastic, choosing which text tokens instantiate anchors at which geometric scale so that cross-modal capacity concentrates where alignment is most needed. ELSA3D achieves state-of-the-art performance across image-to-3D generation, text-to-3D generation, and 3D captioning, outperforming the strongest unified baseline while roughly halving FLOPs and inference latency relative to the non-elastic version of the same model.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -44,58 +44,417 @@
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-06T17:59:59Z",
+                "published": "2026-07-07T17:59:50Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Wenhao Li"
+                        "name": "Tianjiao Yu"
                     },
                     {
-                        "name": "Xueying Jiang"
+                        "name": "Xinzhuo Li"
                     },
                     {
-                        "name": "Quanhao Qian"
+                        "name": "Yifan Shen"
+                    },
+                    {
+                        "name": "Onkar Susladkar"
+                    },
+                    {
+                        "name": "Yuanzhe Liu"
+                    },
+                    {
+                        "name": "Xiaona Zhou"
+                    },
+                    {
+                        "name": "Ismini Lourentzou"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.06563v1",
+                "title": "Embodied Human-Robot Interaction via Acoustics: A MARL Approach with AcoustoBots for Spatial Data Physicalization",
+                "updated": "2026-07-07T17:59:44Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.06563v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.06563v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Traditional data physicalization is often static and disconnected from real environments, limiting its ability to convey embodied spatial dynamics and engage users. To address this limitation, we present AcoustoBots, a mobile acoustophoretic data-physicalization platform in which TurtleBot3 robots carry upward-facing 8 x 8 ultrasonic phased arrays. Each array levitates a particle whose height (1-10 cm) encodes a local urban scalar value, such as population density, noise, or traffic. A MARL (Multi-Agent Reinforcement Learning) policy based on the Multi-Agent Deep Deterministic Policy Gradient (MADDPG) algorithm, with centralized training and decentralized execution, selects collision-aware navigation actions, while a high-rate Gerchberg-Saxton-Phased Array of Transducers (GS-PAT) acoustic controller maintains trap stability and updates array phases to achieve the commanded height during motion. This creates a closed perception-display-action loop. We evaluate single-robot city-to-city traversal and dual-robot cooperative coverage on a 4 m x 3 m scaled UK map using PhaseSpace-based localization for repeatable multi-robot trials. Results show stable in-motion levitation and consistent, location-dependent height rendering, with task success rates of 90% and 80% for the single and dual-robot regimes, respectively, over 10 trials per regime, and low collision counts. These findings support acoustophoretic levitation as a simple, glanceable, robot-mediated communication cue for embodied human-robot interaction in spatial analytics.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-07T17:59:44Z",
+                "arxiv:comment": "This paper has been accepted for publication in the Proceedings of the 2026 International Conference on Robotic System and Artificial Intelligence (RSAI 2026), 10-12 July, 2026, Tokyo, Japan",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Shiqi Liu"
+                    },
+                    {
+                        "name": "Narsimlu Kemsaram"
+                    },
+                    {
+                        "name": "Prateek Mittal"
+                    },
+                    {
+                        "name": "Pengyuan Wei"
+                    },
+                    {
+                        "name": "Sriram Subramanian"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.06559v1",
+                "title": "RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation",
+                "updated": "2026-07-07T17:58:15Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.06559v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.06559v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-07T17:58:15Z",
+                "arxiv:comment": "Project Page: https://alibaba-damo-academy.github.io/RynnWorld-4D.github.io, Github: https://github.com/alibaba-damo-academy/RynnWorld-4D",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Haoyu Zhao"
+                    },
+                    {
+                        "name": "Xingyue Zhao"
+                    },
+                    {
+                        "name": "Siteng Huang"
+                    },
+                    {
+                        "name": "Xin Li"
                     },
                     {
                         "name": "Deli Zhao"
                     },
                     {
-                        "name": "Shijian Lu"
-                    },
-                    {
-                        "name": "Gongjie Zhang"
-                    },
-                    {
-                        "name": "Ran Xu"
+                        "name": "Zhongyu Li"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.05394v1",
-                "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
-                "updated": "2026-07-06T17:59:58Z",
+                "id": "http://arxiv.org/abs/2607.06558v1",
+                "title": "RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation",
+                "updated": "2026-07-07T17:58:11Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.05394v1",
+                        "@href": "https://arxiv.org/abs/2607.06558v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.05394v1",
+                        "@href": "https://arxiv.org/pdf/2607.06558v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL weak teacher is not enough, because the teacher's final policy mixes useful RL gains with the limitations of the smaller model. We propose Direct On-Policy Distillation (Direct-OPD), which transfers the teacher's RL-induced policy shift instead. Direct-OPD compares the post-RL teacher with its own pre-RL reference and treats their log-ratio as a dense implicit reward for the student. In plain terms, the checkpoint pair tells us which actions RL made the weak model more or less likely to take, and Direct-OPD applies that signal on the stronger student's own on-policy states. This directly reuses the weak model's RL supervision signal without training an explicit reward model or running sparse-reward RL on the target model. Empirically, Direct-OPD consistently leverages weaker teachers to improve stronger target models; notably, it boosts Qwen3-1.7B from 48.3% to 62.4% on AIME 2024 in just 4 hours on 8 A100 GPUs. It outperforms step-matched direct RL and enables the sequential composition of multiple policy shifts. Our results show that RL outcomes can be reused across model scales as implicit reward signals, not merely as final models to imitate.",
+                "summary": "Scaling robot learning requires massive, diverse trajectory data, yet collection is currently bottlenecked by physical teleoperation, where every demonstration binds operator time to specific hardware and workspaces. We introduce digital teleoperation, a paradigm that decouples data collection from physical constraints by replacing the real robot with a generative world model. In this framework, an operator's hand-pose stream drives a robot-centric generative world model to synthesize high-fidelity egocentric videos from a single reference image. The recorded pose stream serves as an embodiment-agnostic action label transferable to any target robot via standard retargeting, yielding complete state-action trajectories for imitation learning independent of physical hardware. We instantiate this paradigm in RynnWorld-Teleop, a system that integrates depth-aware skeletal conditioning, progressive human-to-robot training on a video Diffusion Transformer, and streaming autoregressive distillation. This pipeline compresses the generative process into a single-pass inference, enabling 40+ FPS, real-time interactive generation on a single H100 GPU. Policies trained exclusively on RynnWorld-Teleop-generated data achieve effective zero-shot Sim2Real transfer across dexterous and diverse bimanual tasks. Moreover, augmenting real-world datasets with our digitally teleoperated data consistently improves success rates, demonstrating that RynnWorld-Teleop serves as a high-fidelity, scalable data engine for the next generation of robotic agents.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-07T17:58:11Z",
+                "arxiv:comment": "Project Page: https://alibaba-damo-academy.github.io/RynnWorld-Teleop.github.io, Github: https://github.com/alibaba-damo-academy/RynnWorld-Teleop",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Haoyu Zhao"
+                    },
+                    {
+                        "name": "Xingyue Zhao"
+                    },
+                    {
+                        "name": "Hangyu Li"
+                    },
+                    {
+                        "name": "Biao Gong"
+                    },
+                    {
+                        "name": "Kehan Li"
+                    },
+                    {
+                        "name": "Siteng Huang"
+                    },
+                    {
+                        "name": "Xin Li"
+                    },
+                    {
+                        "name": "Deli Zhao"
+                    },
+                    {
+                        "name": "Zhongyu Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.06555v1",
+                "title": "ProxyPose: 6-DoF Pose Tracking via Video-to-Video Translation",
+                "updated": "2026-07-07T17:56:07Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.06555v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.06555v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Tracking the six-degree-of-freedom (6-DoF) pose of objects and surfaces from monocular video is a long-standing problem in computer vision. To tackle this problem, existing methods require inputs beyond the video itself-such as 3D models, depth maps, object masks, or task-specific learned features-and they struggle with textureless, transparent, reflective, or deformable surfaces. Here, we introduce ProxyPose, which recasts 6-DoF pose tracking as video-to-video translation. Given only a video and a single marked pixel in the first frame, a fine-tuned video diffusion model translates the input into a proxy video-a synthetic video depicting a colored polyhedron undergoing the same local rigid-body motion as the surface region at the marked pixel. Because the proxy's geometry and appearance are known by construction, recovering its full 6-DoF trajectory reduces to classical pose estimation with off-the-shelf solvers. This formulation leverages large-scale video pre-training to absorb the hardest aspects of pose tracking-handling challenging materials, occlusions, and deformations-into the translation step, while operating at the pixel level with no assumptions about object identity, boundaries, or global rigidity. ProxyPose achieves state-of-the-art 6-DoF pose tracking accuracy without the additional inputs required by competing methods and after fine-tuning the video model only on synthetic data. We further demonstrate that ProxyPose extends to face tracking, camera pose estimation, and challenging in-the-wild scenes that are beyond the reach of existing approaches. Project page: https://ruihangzhang97.github.io/proxypose/.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-07T17:56:07Z",
+                "arxiv:comment": "23 pages, 6 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Ruihang Zhang"
+                    },
+                    {
+                        "name": "Felix Taubner"
+                    },
+                    {
+                        "name": "Pooja Ravi"
+                    },
+                    {
+                        "name": "Kiriakos N. Kutulakos"
+                    },
+                    {
+                        "name": "David B. Lindell"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.06553v1",
+                "title": "From RGB Generation to Dense Field Readout: Pixel-Space Dense Prediction with Text-to-Image Models",
+                "updated": "2026-07-07T17:54:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.06553v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.06553v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large-scale text-to-image models are attractive backbones for dense prediction because RGB generation pretraining learns rich semantic, structural, and geometric priors. Existing generative and editing approaches reuse these priors by casting dense prediction as target generation: annotations such as depth, normals, alpha mattes, masks, and heatmaps are encoded into an RGB-trained VAE latent space and decoded back as image-like targets. We argue this inherits more of the generative output interface than dense prediction requires: unlike RGB synthesis, dense prediction asks for pixel-correct, task-native fields on the same image plane, not new RGB content to be rendered. Our key observation is that a pretrained DiT already organizes RGB inputs through a patch-to-token-to-patch lattice on the image plane, so each token indexes a fixed output patch whose channels can carry task-native quantities instead of RGB appearance. We instantiate this as ReChannel: we keep the VAE encoder for the DiT's input distribution but drop the target-side decoder, adapt the frozen DiT with task LoRA, and map each token to its p x p x K_t pixel-space patch through a shared token-local linear head--about 33K parameters, no spatial mixing. Using FLUX-Klein, we evaluate on six dense prediction tasks and over a dozen benchmarks. This minimal interface sets new state-of-the-art on trimap-free matting, KITTI depth, and referring segmentation, and stays competitive on normals, saliency, and pose. In a matched 4B setting it is more accurate and 2.48x faster than an edit-plus-latent-decode counterpart--dense perception can benefit from generative pretraining without inheriting its output interface.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-07T17:54:28Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zanyi Wang"
+                    },
+                    {
+                        "name": "Xin Lin"
+                    },
+                    {
+                        "name": "Haodong Li"
+                    },
+                    {
+                        "name": "Dengyang Jiang"
+                    },
+                    {
+                        "name": "Yijiang Li"
+                    },
+                    {
+                        "name": "Pengtao Xie"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.06552v1",
+                "title": "MonoIR-RS: Infrared Remote Sensing Vision-Language Learning with CLIP and VLM Adaptation",
+                "updated": "2026-07-07T17:53:58Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.06552v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.06552v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Infrared remote-sensing imagery captures intensity structure, object-background contrast, and illumination-invariant cues often invisible in RGB imagery. Yet, most remote-sensing vision-language resources and models focus on visible-band semantics, leaving infrared vision-language understanding underexplored. We introduce MonoIR-RS, a large-scale infrared remote-sensing vision-language dataset and benchmark that couples IR-aware data construction with CLIP-style contrastive adaptation and VLM instruction tuning. Built from the same source pool and split as FusionRS, MonoIR-RS retains the infrared image as the model-facing modality, yielding 600,000 synthesized infrared images and 59,032 retained IR-aware caption records. The model experiments use this retained language-supervision subset, whose captions rewrite supervision around grayscale structure and infrared-style contrast instead of RGB appearance. We show that the synthesized infrared imagery is markedly closer to real thermal imagery than a grayscale conversion on the AVIID benchmark. We fine-tune five CLIP backbones and six VLM backbones, and calibrate them against zero-shot behavior: IR-aware adaptation lifts CLIP mean recall by up to 12.8 points and drives VLM captioning IR-cue coverage to 100% while reducing residual RGB-color leakage to near zero. By isolating the infrared modality from RGB-IR dual-modal learning, MonoIR-RS offers a controlled, reproducible testbed for aligning infrared remote-sensing evidence with language.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-07T17:53:58Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Jiaju Han"
+                    },
+                    {
+                        "name": "Ma Yaqi"
+                    },
+                    {
+                        "name": "Yahui Chai"
+                    },
+                    {
+                        "name": "Xuemeng Sun"
+                    },
+                    {
+                        "name": "Xin Li"
+                    },
+                    {
+                        "name": "Qike Zhang"
+                    },
+                    {
+                        "name": "Yingying Zhao"
+                    },
+                    {
+                        "name": "Xiang Chen"
+                    },
+                    {
+                        "name": "Luwei Yang"
+                    },
+                    {
+                        "name": "Chengyin Hu"
+                    },
+                    {
+                        "name": "Jiahuan Long"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.06549v1",
+                "title": "Unsupervised Domain Adaptation for Calcification Classification in Mammography Across Multi-Site Datasets",
+                "updated": "2026-07-07T17:53:49Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.06549v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.06549v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Deep learning-based computer-aided diagnosis (CAD) systems have shown strong performance in breast cancer diagnosis, particularly for classification tasks in mammography. However, domain shifts across multi-site datasets remain a challenge, especially when models are applied to unseen domains. In this work, we proposed a calcification classification framework to improve malignant versus benign breast disease classification across multi-site mammography datasets. The framework consisted of two components: (1) an unsupervised domain adaptation module based on style transfer models (AdaIN and CycleGAN) to generate vendor-specific and technique-specific training samples without additional annotations, and (2) a supervised classification module using Swin Transformer V2 as the backbone. We evaluated the proposed method on three datasets: cross-validation on OPTIMAM (National Health Service, United Kingdom; n=2994), followed by external validation on EMBED (Emory University; n=125), and Duke Calcification Dataset v1 (n=788). These datasets cover multiple vendors and include both full-field digital mammography and synthetic 2D images derived from digital breast tomosynthesis. The proposed framework improved cross-site performance for both EMBED (AUC 0.68 to 0.72) and the Duke Calcification Dataset (AUC 0.68 to 0.73). These findings indicate that domain adaptation can reduce domain shifts and improve the generalization for calcification classification across multi-site datasets.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-07T17:53:49Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Xuan Liu"
+                    },
+                    {
+                        "name": "Derek L. Nguyen"
+                    },
+                    {
+                        "name": "Emily C. Barre"
+                    },
+                    {
+                        "name": "Jennifer Thomas"
+                    },
+                    {
+                        "name": "Thomas Lynch"
+                    },
+                    {
+                        "name": "Jeffrey R. Marks"
+                    },
+                    {
+                        "name": "E. Shelley Hwang"
+                    },
+                    {
+                        "name": "Marc D. Ryser"
+                    },
+                    {
+                        "name": "Joseph Y. Lo"
+                    },
+                    {
+                        "name": "Lars J. Grimm"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.06546v1",
+                "title": "Graph Convolutional Attention: A Spectral Perspective on Graph Denoising and Diffusion",
+                "updated": "2026-07-07T17:52:17Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.06546v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.06546v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Denoising graphs is a fundamental problem in graph learning and the core operation of graph diffusion models. Attention-based architectures like graph transformers have recently shown promise in denoising graphs. However, our principled understanding of attention-based graph denoising remains limited, making it unclear whether standard attention is the right mechanism for this task. Here we show that, under a denoising objective, linear attention is suboptimal and can only learn an average spectral denoising filter over the training distribution. This creates a fundamental limitation as graphs often vary spectrally across the distribution. To overcome this limitation, we introduce Spectral Attention, which directly utilizes the input graph spectrum and provably outperforms linear attention by a margin governed by the spectral diversity of the distribution. We then derive Graph Convolutional Attention (GCA), a practical and permutation-equivariant realization of this idea that implements spectral denoising through graph-filtered queries and keys. For stochastic block models, GCA provably matches the idealized Spectral Attention mechanism. We further show that the softmax operation, that follows the attention, provides additional denoising by approximately projecting noisy eigenvectors onto the clean eigenspace. Empirically, replacing linear attention with GCA consistently improves graph denoising and diffusion on synthetic and real datasets, with gains strongly correlated with spectral diversity. In DiGress, GCA matches standard graph-transformer performance without computing expensive structural features, and when combined with the recently proposed PEARL positional encodings, avoids explicit eigendecomposition computations resulting in faster inference without degrading quality. The code can be found here: github.com/shervinkhalafi/graph_conv_att",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -104,140 +463,51 @@
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-06T17:59:58Z",
-                "arxiv:comment": "Project Page: https://bytedtsinghua-sia.github.io/Direct-OPD/",
+                "published": "2026-07-07T17:52:17Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Shiyuan Feng"
+                        "name": "Shervin Khalafi"
                     },
                     {
-                        "name": "Huan-ang Gao"
+                        "name": "Igor Krawczuk"
                     },
                     {
-                        "name": "Haohan Chi"
+                        "name": "Sergio Rozada"
                     },
                     {
-                        "name": "Hanlin Wu"
+                        "name": "Charilaos Kanatsoulis"
                     },
                     {
-                        "name": "Zhilong Zhang"
+                        "name": "Antonio G Marques"
                     },
                     {
-                        "name": "Zheng Jiang"
-                    },
-                    {
-                        "name": "Bingxiang He"
-                    },
-                    {
-                        "name": "Wei-Ying Ma"
-                    },
-                    {
-                        "name": "Ya-Qin Zhang"
-                    },
-                    {
-                        "name": "Hao Zhou"
+                        "name": "Alejandro Ribeiro"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.05393v1",
-                "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
-                "updated": "2026-07-06T17:59:58Z",
+                "id": "http://arxiv.org/abs/2607.06544v1",
+                "title": "Rethinking Indic AI from a Lens of Cultural Heritage Preservation",
+                "updated": "2026-07-07T17:51:10Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.05393v1",
+                        "@href": "https://arxiv.org/abs/2607.06544v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.05393v1",
+                        "@href": "https://arxiv.org/pdf/2607.06544v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Time-domain surveys generate many transient candidates, making Real-Bogus classification a critical step in automated discovery pipelines. Reliable labels are costly, while community labels can be noisy and survey-dependent. We aim to develop a Real-Bogus classification framework that can be trained without human-labeled data using injected transients and bogus-dominated survey data, remains robust under strong class contamination, and provides calibrated uncertainty quantification. We combine simulated transient injections with a contaminated survey class and train a dual-network model using asymmetric co-teaching for classes with different label-noise levels. We evaluate performance on a benchmark subset and analyze the learned representation with latent-space visualization tools. For uncertainty quantification (UQ), we compare MC dropout and deep ensembles and propose a low-cost hybrid strategy that exploits the dual-network setting to improve calibration. We extend the evaluation to the light-curve domain to assess recovery of light-curve classes. The method achieves strong Real-Bogus performance on the labeled subset and remains stable under severe class contamination. It recovers transient light-curve classes with high fidelity, while single-source identification is limited by ambiguity in light-curve-derived labels. Our hybrid UQ approach achieves competitive calibration relative to more expensive ensemble baselines. Latent-space analyses indicate that uncertainty aligns with the decision boundary and reveal subclasses within the bogus population. Our results show that injection-driven, weakly supervised training can enable scalable and consistent Real-Bogus classification without human-labeled training data while providing calibrated uncertainties. The method is suited for transfer to forthcoming surveys by re-running the injection-based training pipeline.",
-                "category": [
-                    {
-                        "@term": "astro-ph.IM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.GA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.HE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-06T17:59:58Z",
-                "arxiv:comment": "Submitted to Astronomy & Astrophysics, revised after first referee report",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.IM"
-                },
-                "author": [
-                    {
-                        "name": "Rapha\u00ebl Bonnet-Guerrini"
-                    },
-                    {
-                        "name": "Bruno Sanchez"
-                    },
-                    {
-                        "name": "Dominique Fouchez"
-                    },
-                    {
-                        "name": "Benjamin Racine"
-                    },
-                    {
-                        "name": "Maya Guy"
-                    },
-                    {
-                        "name": "Mariam Sabalbal"
-                    },
-                    {
-                        "name": "Manal Yassine"
-                    },
-                    {
-                        "name": "Vincenzo Piuri"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.05391v1",
-                "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
-                "updated": "2026-07-06T17:59:35Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.05391v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.05391v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine the correctness of a solution, as a new scaling axis. To unlock this and demonstrate its effectiveness, we introduce LLM-as-a-Verifier, a general-purpose verification framework that provides fine-grained feedback for agentic tasks without requiring additional training. Unlike standard LM judges that prompt LLMs to produce discrete scores for candidate solutions, LLM-as-a-Verifier computes the expectation over the distribution of scoring token logits to generate continuous scores. This probabilistic formulation enables verification to scale along multiple dimensions: (1) score granularity, (2) repeated evaluation, and (3) criteria decomposition. In particular, we show that scaling the scoring granularity leads to better separation between positive and negative solutions, resulting in more calibrated comparisons. Moreover, scaling repeated evaluation and criteria decomposition consistently lead to additional gains in verification accuracy through variance and complexity reduction. We further introduce a cost-efficient ranking algorithm for selecting the best solution among candidates using the verifier's continuous scores. LLM-as-a-Verifier achieves state-of-the-art performance on Terminal-Bench V2 (86.5%), SWE-Bench Verified (78.2%), RoboRewardBench (87.4%), and MedAgentBench (73.3%). Beyond verification, the fine-grained signals from LLM-as-a-Verifier can also serve as a proxy for estimating task progress. We build an extension for Claude Code, enabling developers to monitor and improve their own agentic systems. Finally, we show that LLM-as-a-Verifier can provide dense feedback for RL, improving the sample efficiency of SAC and GRPO on robotics and mathematical reasoning benchmarks.",
+                "summary": "As Artificial Intelligence (AI) makes inroads into different parts of the Indian subcontinent, there is significant interest in studying how AI impacts the linguistic and cultural foundations of this civilization. AI is seen as a ''double-edged sword'' where on the one hand, it can enable access and inclusion for a large population, on the other, it can homogenize worldviews and exclude underrepresented languages and worldviews. In this paper, we try to characterize this problem by addressing the extensive characteristic nature of Indian linguistics and the way they closely connect to cultural practices and worldview. We then perform a longitudinal survey of how Natural Language Processing (NLP) techniques have evolved in this space, tracing the historical development of Indic NLP, covering key milestones, methodological shifts, and resource creation efforts. In addition, the paper also examines the structural and sociolinguistic characteristics of Indian languages, such as rich morphology, complex scripts and grammar rules, diglossia, and large dialectal variation, and explains how these create unique challenges for building AI foundation models. We then discuss the growing role of Indic foundation models and analyze how these models address these long-standing resource and representation gaps. Finally, we propose a research direction called 'Culture Sensing', which re-imagines AI based on hermeneutic reasoning. Culture Sensing aims to address open problems such as ensuring equitable performance across low-resource languages and producing outputs that are culturally meaningful. By bringing together past work, current techniques, and emerging trends, this paper outlines research directions that can guide the next phase of Indic NLP and contribute to the development of more robust and inclusive Indic foundation models.",
                 "category": [
                     {
                         "@term": "cs.AI",
@@ -246,432 +516,24 @@
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-06T17:59:35Z",
-                "arxiv:comment": "Code: https://github.com/llm-as-a-verifier/llm-as-a-verifier Website: https://llm-as-a-verifier.com",
+                "published": "2026-07-07T17:51:10Z",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Jacky Kwok"
+                        "name": "Aparna Madva"
                     },
                     {
-                        "name": "Shulu Li"
+                        "name": "Sharath Srivatsa"
                     },
                     {
-                        "name": "Pranav Atreya"
+                        "name": "Srinath Srinivasa"
                     },
                     {
-                        "name": "Yuejiang Liu"
-                    },
-                    {
-                        "name": "Yixing Jiang"
-                    },
-                    {
-                        "name": "Chelsea Finn"
-                    },
-                    {
-                        "name": "Marco Pavone"
-                    },
-                    {
-                        "name": "Ion Stoica"
-                    },
-                    {
-                        "name": "Azalia Mirhoseini"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.05390v1",
-                "title": "Deform360: A Massive Multi-view Visuotactile Dataset for Deformable World Models",
-                "updated": "2026-07-06T17:59:18Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.05390v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.05390v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Predicting object dynamics (i.e., world modeling) is a fundamental challenge for robotic manipulation, and modeling deformable objects presents a particularly difficult case due to their high-dimensional state spaces and complex material properties. While current world models approach this through two distinct paradigms: learning the dynamics over the 2D pixel space or more explicit 3D geometric space. A systematic understanding of their relative strengths and limitations remains elusive due to the lack of diverse, large-scale real-world data. To address this, we present Deform360, a large-scale visuotactile dataset featuring 198 daily-life objects, 1,980 interaction sequences, and over 215 hours of observations from 41 surround-view cameras and bimanual tactile grippers to capture both global motion and contact-induced local deformations. Leveraging a novel markerless visuotactile 3D tracking pipeline to extract dense geometry and motion, we systematically evaluate current state-of-the-art world models, comparing 2D video models against 3D particle models. Finally, we provide a preliminary demonstration indicating the real-world applicability of our dataset by performing robot planning tasks on deformable objects. Our analysis reveals key insights into the trade-offs between structural priors and scalability, providing a solid benchmark for future research in generalizable deformable object-centric world modeling. Project website: https://deform360.lhy.xyz",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-06T17:59:18Z",
-                "arxiv:comment": "Accepted by ECCV 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Hongyu Li"
-                    },
-                    {
-                        "name": "Wanjia Fu"
-                    },
-                    {
-                        "name": "Xiaoyan Cong"
-                    },
-                    {
-                        "name": "Zekun Li"
-                    },
-                    {
-                        "name": "Binghao Huang"
-                    },
-                    {
-                        "name": "Hanxiao Jiang"
-                    },
-                    {
-                        "name": "Xintong He"
-                    },
-                    {
-                        "name": "Yiqing Liang"
-                    },
-                    {
-                        "name": "Rao Fu"
-                    },
-                    {
-                        "name": "Tao Lu"
-                    },
-                    {
-                        "name": "Srinath Sridhar"
-                    },
-                    {
-                        "name": "Kevin A. Smith"
-                    },
-                    {
-                        "name": "George Konidaris"
-                    },
-                    {
-                        "name": "Yunzhu Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.05381v1",
-                "title": "What Does a Discrete Diffusion Model Learn?",
-                "updated": "2026-07-06T17:56:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.05381v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.05381v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "What does a discrete diffusion model learn: a denoiser, a score ratio, or a bridge plug-in predictor? At the level of jump rates, these are one object in different coordinates, and reading a neural network in the wrong coordinate changes the process being trained and sampled. Starting with a rigorous derivation of the continuous-time Markov chain (CTMC) ELBO for any noising process, boundary terms included, we prove the \\emph{Oracle Distance} theorem: the negative ELBO is exactly equal to the data entropy plus the path KL from the oracle reverse process to the learned one, not merely a bound. Its unique optimizer is therefore the conditional expectation of the true reverse jump rate given the current noisy state, and its irreducible cost is the rate at which the forward process $Z_t$ destroys information about the clean data $Z_0$, $-\\tfrac{d}{dt}I(Z_0; Z_t)$, so every noising process shares the same best achievable negative ELBO: the data entropy. For sequences with token-factorizing noise, the oracle projection yields three exact coordinates for the optimizer: denoiser, cavity (bridge plug-in), and score, with closed-form conversions among them. This framework identifies which law each loss in the literature actually optimizes, recovering MDM, UDM, SEDD, and GIDD as special cases; explains why denoiser and cavity coincide for masked diffusion but not for uniform diffusion; proves that a denoiser parameterization makes the uniform ELBO diverge at initialization while the bridge plug-in stays finite; and calibrates ELBO implementations exactly at initialization. Every identity is verified numerically, without approximation, on an exactly solvable model.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-06T17:56:11Z",
-                "arxiv:comment": "66 pages, 6 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Rodrigo Casado Noguerales"
-                    },
-                    {
-                        "name": "Bernhard Sch\u00f6lkopf"
-                    },
-                    {
-                        "name": "Thomas Hofmann"
-                    },
-                    {
-                        "name": "Aran Raoufi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.05380v1",
-                "title": "TabPack: Efficient Hyperparameter Ensembles for Tabular Deep Learning",
-                "updated": "2026-07-06T17:55:55Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.05380v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.05380v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In deep learning for tabular data, efficient ensembles of multilayer perceptrons (MLPs) have recently emerged as effective and practical architectures. Existing methods of this kind use the same hyperparameters for all underlying MLPs, which requires hyperparameter tuning for achieving the best performance. In this work, we introduce TabPack, an efficient MLP ensemble with strong out-of-the-box performance and reduced reliance on traditional tuning. In a single run, TabPack samples and trains many MLPs with different hyperparameters efficiently in parallel and selects ensemble members on the fly during training. Thus, TabPack only requires specifying ranges from which to sample MLP hyperparameter rather than exact hyperparameter values, which naturally demands less precision for good performance. In experiments on medium-to-large public datasets, TabPack with default settings performs on par with extensively tuned prior methods, thus substantially reducing effort and compute resources needed to achieve competitive results on tabular tasks. Notably, running the default TabPack configuration on a modern MacBook took less time than tuning some baselines on an industry-grade GPU.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-06T17:55:55Z",
-                "arxiv:comment": "ICML 2026. Code: https://github.com/yandex-research/tabpack",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Yury Gorishniy"
-                    },
-                    {
-                        "name": "Akim Kotelnikov"
-                    },
-                    {
-                        "name": "Ivan Rubachev"
-                    },
-                    {
-                        "name": "Artem Babenko"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.05378v1",
-                "title": "CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents",
-                "updated": "2026-07-06T17:55:12Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.05378v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.05378v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Long-horizon agentic LLMs are increasingly limited by finite context windows, as extended interaction trajectories can exceed the maximum context length before a task is completed. Context compaction offers a natural solution by summarizing previous interaction states and continuing the rollout under a compressed context, but incorporating compaction into reinforcement learning remains underexplored. We propose CompactionRL, a reinforcement learning strategy to train long-horizon agentic LLMs with context compaction. Our approach jointly optimizes task execution and summary generation with token-level loss normalization and cross-trajectory generalized advantage estimation. This design enables the LLM agents to learn from compacted long-horizon trajectories. We train CompactionRL on top of open models and observe consistent performance gains on agentic coding tasks. CompactionRL enables the open GLM-4.5-Air model (106B-A30B) to achieve Pass@1 scores of 66.8% on SWE-bench Verified and 24.5% on Terminal-Bench 2.0, with absolute gains of 7.0 and 3.1 points, respectively. Built upon GLM-4.7-Flash (30B-A3B), CompactionRL improves Pass@1 by 5.5 and 6.8 points, reaching 56.0% on SWE-bench Verified and 20.2% on Terminal-Bench 2.0, respectively. CompactionRL is thus deployed in the RL pipeline for training the open GLM-5.2 model (750B-A40B).",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-06T17:55:12Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Yujiang Li"
-                    },
-                    {
-                        "name": "Zhenyu Hou"
-                    },
-                    {
-                        "name": "Yi Jing"
-                    },
-                    {
-                        "name": "Jie Tang"
-                    },
-                    {
-                        "name": "Yuxiao Dong"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.05375v1",
-                "title": "Fitted Occupancy-Ratio Evaluation without Bellman Completeness",
-                "updated": "2026-07-06T17:53:32Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.05375v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.05375v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Occupancy ratios correct distribution shift in offline reinforcement learning and are central to off-policy evaluation. Existing primal-dual and minimax methods typically estimate these ratios by enforcing occupancy-balance moments over a critic class. We propose fitted occupancy-ratio evaluation (FORE), a fitted fixed-point method that characterizes the discounted occupancy ratio through an adjoint Bellman recursion. At each iteration, FORE solves a single-level density-ratio objective on one-step-transition data, thereby projecting the adjoint Bellman image onto a log-ratio class in Kullback--Leibler (KL) divergence. Unlike analyses of fitted Q-evaluation, which typically require value-function realizability together with Bellman completeness or projected-operator stability, our central approximation condition is just realizability of the discounted occupancy ratio itself. Under this condition, the population KL-projected recursion contracts in relative entropy toward the true ratio by virtue of the adjoint Bellman operator being a KL-contraction. For the empirical recursion, we establish finite-sample regret bounds that yield convergence in KL up to log-ratio approximation error and a statistical error governed by the complexity of the ratio hypothesis class. The fitted ratio supports direct value estimation by reward reweighting, occupancy-weighted fitted Q-evaluation, and doubly robust estimation that combines the fitted ratio with a fitted Q-function. Together, these results identify discounted occupancy-ratio realizability as a sufficient condition for offline policy evaluation without any completeness assumptions.",
-                "category": [
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-06T17:53:32Z",
-                "arxiv:primary_category": {
-                    "@term": "stat.ML"
-                },
-                "author": [
-                    {
-                        "name": "Lars van der Laan"
-                    },
-                    {
-                        "name": "Nathan Kallus"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.05369v1",
-                "title": "GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness For Variational Automation Tasks",
-                "updated": "2026-07-06T17:47:31Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.05369v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.05369v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "For robots to work reliably in commercial and industrial applications, can recent advances in agentic coding systems combine interpretable robot programming with the open-world adaptability of model-free policies? We focus on \"Variational Automation\" (VA), a class of tasks that have larger variations in object geometry and pose than fixed automation. Model-free policies often struggle to close the reliability gap for VA tasks, which must be executed persistently and reliably in commercial and industrial applications. Motivated by prior work on Task and Motion Planning (TAMP) and the Robot Operating System (ROS), we introduce Graph-as-Policy (GaP), a multi-agent coding harness that generates directed computation graphs with perception, planning, and control nodes from a Modular Open Robot Skill Library (MORSL). GaP then generates an internal simulation environment to rehearse task instances with different graphs in parallel to iteratively refine the graph structure and parameters to improve success rates and throughput. Evaluation with 8 new open VA task benchmarks, 4 in-simulation and 4 in real-world, suggests that GaP can achieve success rates that significantly outperform baselines. Details, code, and data can be found online: https://graph-robots.github.io/gap",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-06T17:47:31Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Kaiyuan Chen"
-                    },
-                    {
-                        "name": "Shuangyu Xie"
-                    },
-                    {
-                        "name": "Letian Fu"
-                    },
-                    {
-                        "name": "Justin Yu"
-                    },
-                    {
-                        "name": "William Pacini"
-                    },
-                    {
-                        "name": "Sandeep Bajamahal"
-                    },
-                    {
-                        "name": "Hudson Kim"
-                    },
-                    {
-                        "name": "Jaimyn Drake"
-                    },
-                    {
-                        "name": "Daehwa Kim"
-                    },
-                    {
-                        "name": "Haoru Xue"
-                    },
-                    {
-                        "name": "Jonathan Francis"
-                    },
-                    {
-                        "name": "Christian Juette"
-                    },
-                    {
-                        "name": "Peter Schaldenbrand"
-                    },
-                    {
-                        "name": "Muhammet Yunus Seker"
-                    },
-                    {
-                        "name": "Ruwan Wickramarachchi"
-                    },
-                    {
-                        "name": "Uksang Yoo"
-                    },
-                    {
-                        "name": "Guanzhi Wang"
-                    },
-                    {
-                        "name": "Adithyavairavan Murali"
-                    },
-                    {
-                        "name": "Balakumar Sundaralingam"
-                    },
-                    {
-                        "name": "S. Shankar Sastry"
-                    },
-                    {
-                        "name": "Spencer Huang"
-                    },
-                    {
-                        "name": "Yuke Zhu"
-                    },
-                    {
-                        "name": "Linxi \"Jim\" Fan"
-                    },
-                    {
-                        "name": "Ken Goldberg"
+                        "name": "Tulika Saha"
                     }
                 ]
             }
