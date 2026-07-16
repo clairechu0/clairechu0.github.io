@@ -5,44 +5,452 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-07-15T23:53:20Z",
+        "updated": "2026-07-16T05:16:31Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "593561",
+        "opensearch:totalResults": "593906",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2607.13034v1",
-                "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
-                "updated": "2026-07-14T17:59:31Z",
+                "id": "http://arxiv.org/abs/2607.14088v1",
+                "title": "VideoRAE: Taming Video Foundation Models for Generative Modeling via Representation Autoencoders",
+                "updated": "2026-07-15T17:59:23Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.13034v1",
+                        "@href": "https://arxiv.org/abs/2607.14088v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.13034v1",
+                        "@href": "https://arxiv.org/pdf/2607.14088v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-context-first strategy--re-reading files and dependencies they have already seen--turning a one-line edit into a small code-base audit. We argue the missing capability is task-aware execution-scope estimation: judging a task's difficulty, the information it truly needs, and the shortest reliable path before committing budget. We formalize minimum-sufficient execution and the Agent Cognitive Redundancy Ratio (ACRR), and propose E3 (Estimate, Execute, Expand): the agent estimates an initial operating point, executes a minimum viable path, and expands scope only when verification fails. On MSE-Bench--a deterministic benchmark of 121 edits in a capability-controlled simulator--E3 matches the strongest baseline's 100% success while cutting cost by 85%, tokens by 91%, and inspected files by 92%, and further beats a strong adaptive retrieval baseline by 16%; the gains survive held-out instruction wording and essentially every cost weighting. A companion real-model harness (LLM-Case) corroborates the effect on a live gpt-4o agent editing a real open-source library, with every candidate patch graded by actually running the project's real pytest suite against a measured oracle: the over-reading is milder but real, and E3 is the leanest and fastest policy at comparable task success--its one shortfall a provider rate-limit, not a wrong edit. We frame this as a controlled probe of execution redundancy, not a measurement of any deployed agent, and position task-aware execution as a step toward engineering-grounded AI (EGAI)--agents whose effort is anchored in the engineering reality of the task. We release the framework and benchmark.",
+                "summary": "Video generative models commonly rely on latent spaces learned by 3D Variational Autoencoders (3D-VAEs). However, conventional 3D-VAEs are mainly optimized for pixel-level reconstruction, which can limit the semantic and spatio-temporal structure captured by their latents. Meanwhile, Video Foundation Models (VFMs) such as V-JEPA 2 and VideoMAEv2 show strong video understanding capabilities, yet whether their frozen representations can be transformed into compact, reconstruction-capable, and generation-friendly video latents remains largely unexplored. We answer this question with VideoRAE, a representation autoencoder that leverages multi-scale hierarchical features from a frozen video foundation encoder and compresses them with a lightweight 1D self-attention projector. VideoRAE supports both continuous latents for Diffusion Transformers and discrete tokens for autoregressive models via multi-codebook high-dimensional quantization. During decoding, a local-and-global representation alignment objective with the frozen VFM teacher improves semantic preservation and enables training without KL regularization. Experiments show that VideoRAE achieves strong reconstruction in both continuous and discrete regimes. On UCF-101, it obtains state-of-the-art class-to-video gFVDs of 40 and 93 with AR and DiT generators, respectively, while converging approximately 5x faster than competing autoencoder baselines. In a controlled 2B-scale text-to-video study, replacing LTX-VAE with VideoRAE leads to faster convergence under comparable settings. These results validate frozen VFM representations as versatile and generation-friendly video latents. The model and code will be released on https://zhxie0117.github.io/VideoRAE.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-15T17:59:23Z",
+                "arxiv:comment": "Home page: https://zhxie0117.github.io/VideoRAE",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zhihao Xie"
+                    },
+                    {
+                        "name": "Junfeng Wu"
+                    },
+                    {
+                        "name": "Xinting Hu"
+                    },
+                    {
+                        "name": "Junchao Huang"
+                    },
+                    {
+                        "name": "Li Jiang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.14086v1",
+                "title": "Leveraging unlabelled data for generalizable neural population decoding",
+                "updated": "2026-07-15T17:58:00Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.14086v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.14086v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Robust and accurate neural decoders are integral to neurotechnologies such as brain-computer interfaces and closed-loop experiments. Recent work has shown that tokenizing neural data at the spike level facilitates multi-session pretraining and delivers state-of-the-art decoding performance. However, current spike-based models are restricted to supervised learning (SL), limiting training to datasets with paired behavioural labels. To address this limitation, we introduce MOJO (Masked autOencoder-based JOint training), a training framework for spike-tokenizing models that jointly leverages self-supervised learning (SSL) via masked autoencoding and SL objectives. We evaluate MOJO on three spiking datasets spanning monkey motor cortex during reaching tasks and multi-regional mouse recordings during vision and decision making tasks, demonstrating superior performance over purely SL-trained models. This improvement is especially pronounced when training with limited labelled data, particularly in few-shot finetuning, where only a small amount of labelled data from a new session is available. Incorporating SSL also yields more interpretable neuronal representations, improving performance on brain region classification and spike-statistics prediction without explicit optimization for these tasks. We further show that MOJO generalizes beyond spiking data to human electrocorticography during speech, where it continues to outperform purely SL-trained models and achieves performance comparable to neuro-foundation models (NFMs) designed specifically for continuous signals. Overall, augmenting spike-tokenizing models with SSL improves performance in label-impoverished settings and enables the use of unlabelled data across various tasks and species, while generalizing to other neural modalities. These results suggest a path towards more flexible and scalable data usage when training NFMs.",
                 "category": [
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CL",
+                        "@term": "q-bio.NC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-15T17:58:00Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Ximeng Mao"
+                    },
+                    {
+                        "name": "Nanda H. Krishna"
+                    },
+                    {
+                        "name": "Avery Hee-Woon Ryoo"
+                    },
+                    {
+                        "name": "Matthew G. Perich"
+                    },
+                    {
+                        "name": "Guillaume Lajoie"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.14082v1",
+                "title": "Building Shor's Algorithm in Lean: An Agentic Formalization of Quantum Attacks on RSA-2048 and P-256",
+                "updated": "2026-07-15T17:56:58Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.14082v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.14082v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large language models are increasingly assisting with demanding formal theorem-proving tasks, particularly when grounded in machine-checked libraries such as Lean. Agentic systems further amplify this process by searching, reusing, and extending existing formal developments to uncover new discoveries. In quantum computing, Shor's algorithm and its variants present such a demanding case for Lean formalization. In this work, we formalize this algorithm family in Lean through agentic formalization: software agents analyze sources, write Lean code and repair proofs, with human review of the scientific claims and machine checking of the resulting formal proofs. Our formalization develops the mathematical foundations for analyzing quantum attacks in two cryptographic settings: a 2048-bit modulus in the RSA-2048 and the standardized elliptic curve over a 256-bit prime field (P-256). To support these analyses, the formalization ranges from quantum algorithms for order finding to reversible quantum circuits for modular and elliptic-curve arithmetic. Based on [Quantum 5, 433] and [ASIACRYPT 2017, 241--270], we formalize the logical resource estimates for RSA-2048 and P-256, respectively, and provide additional estimates of classical operations. We expect the results pave the way for broader machine-checked quantum cryptanalysis and represent a step toward AI-assisted design and verification of quantum algorithms.",
+                "category": {
+                    "@term": "quant-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-15T17:56:58Z",
+                "arxiv:comment": "21 pages, including appendix; 2 figures",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Lei Zhang"
+                    },
+                    {
+                        "name": "Yusheng Zhao"
+                    },
+                    {
+                        "name": "Hongshun Yao"
+                    },
+                    {
+                        "name": "Xin Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.14081v1",
+                "title": "Linear Independent Component Analysis via Optimal Transport",
+                "updated": "2026-07-15T17:56:11Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.14081v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.14081v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Linear Independent Component Analysis (ICA) recovers jointly independent source signals from their linear mixtures. To achieve this, classical ICA algorithms attempt to maximize non-Gaussianity, measured by negentropy, which is linked to independence by information theory. Because exact negentropy optimization is intractable, they rely on proxy contrast functions, such as fourth-order cumulants, and parametric log-likelihoods. We propose instead to measure non-Gaussianity using the squared Wasserstein distance $W_2^2$ to a standard Gaussian. We prove that the Wasserstein distance between a standard normal distribution and linear projections of the data is maximized when the projection recovers an independent component. Based on this observation, we propose the OT-ICA algorithm which finds this projection by gradient-based optimization. Empirical evaluation on simulated data shows that OT-ICA outperforms proxy-based methods for different distributions of the latent variables. Application to EEG artifact removal and econometric price discovery confirm OT-ICA can be used for applied ICA tasks without distributional assumptions.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.SE",
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-15T17:56:11Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Ashutosh Jha"
+                    },
+                    {
+                        "name": "Michel Besserve"
+                    },
+                    {
+                        "name": "Simon Buchholz"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.14079v1",
+                "title": "Entropy release from Minkowski breaking in regular Schwarzschild black holes",
+                "updated": "2026-07-15T17:50:54Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.14079v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.14079v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The classical formation of a Schwarzschild black hole from a regular, non-singular configuration has recently been shown to be impossible within general relativity: the geometry inevitably develops a discontinuity at the origin, a phenomenon termed Minkowski breaking by Ovalle, Casadio, and Kamenshchik [PRD 113 (2026), 064042]. This obstruction signals that the transition to the Schwarzschild point mass must be a discrete, quantum event. We uncover the thermodynamic footprint of this transition. Using the explicit family of regular Schwarzschild black holes with a de Sitter core, we show that the inner Killing horizon carries a formal Bekenstein-Hawking entropy $S_{\\rm inner} = A_{\\rm inner}/4$ that is absent in the singular Schwarzschild state. This entropy is hidden from external observers in equilibrium but, assuming the generalized second law, must be released when the inner horizon disappears. As the collapse parameter $n$ decreases, the inner horizon shrinks and its entropy is gradually released during classical evolution, until the horizon finally vanishes at $n=0$ with the Minkowski breaking. The surface gravity diverges as $n\\to0^+$, with the semiclassical description breaking down at $n \\sim 1/\\ln(h/\\ell_P)$; the final disappearance is therefore a deep quantum process. For the $n=3$ regular black hole, the stored entropy is approximately $59\\%$ of $A/4$; in the semiclassical limit $n\\gg1$, it approaches the full $A/4$. The integer nature of $n$ implies a quantized entropy spectrum, with the Schwarzschild black hole as the ground state within the OCK family. We discuss how the classical mass-inflation instability may be circumvented by the quantum disappearance of the Cauchy horizon, and clarify the continuous vs. discrete nature of the collapse.",
+                "category": [
+                    {
+                        "@term": "gr-qc",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.HE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "hep-th",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-15T17:50:54Z",
+                "arxiv:comment": "11 pages, 1 figure",
+                "arxiv:primary_category": {
+                    "@term": "gr-qc"
+                },
+                "author": [
+                    {
+                        "name": "Francisco S. N. Lobo"
+                    },
+                    {
+                        "name": "Manuel E. Rodrigues"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.14072v1",
+                "title": "MetaPerch: Learning from metadata for bioacoustics foundation models",
+                "updated": "2026-07-15T17:42:41Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.14072v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.14072v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Bioacoustic foundation models rely on large-scale citizen science platforms like Xeno-Canto for geographically and ecologically diverse data. Recent work has shown that supervision alone can produce SotA species detection models when trained on this large-scale data -- however, there remains unutilized potential in the form of recording metadata readily available within these community-driven data hubs. In this work, we explore the use of metadata -- such as location and time -- as auxiliary supervision signals, allowing the model to leverage species-metadata correlations in its learned representation. Auxiliary metadata losses provide additional information beyond vocalizations alone that can encourage a richer, more robust representation that generalizes better to species distribution and acoustic domain shifts -- important challenges for deployment in real-world passive acoustic monitoring (PAM) settings. We introduce MetaPerch, a new foundation model that achieves strong species identification performance across multiple challenging domains and present an extensive empirical study of the effects of 9 diverse metadata sources on 17 bioacoustic datasets.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.SD",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-15T17:42:41Z",
+                "arxiv:comment": "Accepted to ICML 26",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Mustafa Chasmai"
+                    },
+                    {
+                        "name": "Vincent Dumoulin"
+                    },
+                    {
+                        "name": "Jenny Hamer"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.14070v1",
+                "title": "Screening of Biosecurity Features in Metagenomic Data with Evo 2 Probes",
+                "updated": "2026-07-15T17:38:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.14070v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.14070v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Genomic foundation models such as Evo 2 learn rich sequence representations, but their value for biosecurity screening is largely unexplored. We ask how much biosecurity-relevant signal is linearly accessible in these representations by training minimal linear and attention probes on frozen Evo 2 layer-26 activations, without fine-tuning the underlying model. Across held-out metagenomic test sets, the probes detect antimicrobial resistance (AMR) with strong discrimination: a linear probe reaches a region-level ROC-AUC of 0.888 (mean-pool), rising to 0.977 with a single-head attention probe. The probes resolve finer-grained AMR drug-class subcategories and separate them from unrelated functional genes, providing additional evidence that the learned signal is not explained solely by generic functional-gene status. Bacterial virulence is also decodable, though more weakly (region-level ROC-AUC 0.833). The AMR probe retains comparable ranking performance on simulated short reads without retraining, enabling evaluation before assembly in settings where assembly is computationally costly or unreliable. It achieves a read-level ROC-AUC of 0.898 (mean-pool), comparable to the mean-pooled full-region result. Within SynGenome, AMR-associated prompt labels are only weakly recoverable from Evo 1.5-generated sequences; these prompt-derived labels do not establish the function of the generated response sequences. A complementary sparse-autoencoder analysis recovers interpretable resistance-associated features but proves less consistent than the supervised probes. Together, these results position lightweight embedding-based probes as a fast, inexpensive first-pass detection layer for metagenomic biosurveillance and map both strengths and current limits of the approach. This work was conducted as part of the AIxBio Hackathon 2026 hosted by BlueDot Impact, Apart Research, and Cambridge Biosecurity Hub.",
+                "category": [
+                    {
+                        "@term": "q-bio.GN",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-15T17:38:02Z",
+                "arxiv:primary_category": {
+                    "@term": "q-bio.GN"
+                },
+                "author": [
+                    {
+                        "name": "Jeremy Guntoro"
+                    },
+                    {
+                        "name": "Alexander Dack"
+                    },
+                    {
+                        "name": "Dylan Danno"
+                    },
+                    {
+                        "name": "Michaela Jan\u010dovi\u010dov\u00e1"
+                    },
+                    {
+                        "name": "Kri\u017ean Jurinovi\u0107"
+                    },
+                    {
+                        "name": "Vanessa Smilansky"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.14064v1",
+                "title": "Minimax Theory of Likelihood-Based Deep Learning for Speckle Regression",
+                "updated": "2026-07-15T17:36:23Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.14064v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.14064v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Speckle noise is a multiplicative noise commonly encountered in coherent imaging modalities such as synthetic aperture radar, optical coherence tomography, and digital holography. Although deep learning methods, in practice, have achieved state-of-the-art performance for speckle denoising, their fundamental statistical limits remain largely unexplored. Unlike additive noise models, multiplicative speckle noise makes the regression function unidentifiable from the conditional mean, rendering conventional least-squares-based deep learning approaches inapplicable.\n  We study the minimax estimation of smooth nonparametric regression functions using likelihood-based deep neural network (DNN) estimators under a model with both multiplicative speckle noise and additive Gaussian noise. Our framework accommodates both low-dimensional and sparse high-dimensional features. We establish finite-sample upper bounds on the estimation error of the proposed DNN estimators and derive minimax lower bounds for nonparametric function recovery under our model, showing that they match up to logarithmic factors in the sample size. Moreover, these minimax rates coincide, up to logarithmic factors, with those for nonparametric regression under additive Gaussian noise alone, demonstrating that the intrinsic difficulty of estimation remains essentially unchanged despite the challenges posed by multiplicative speckle noise. Numerical experiments further supports consistency of our DNN-based despeckling methods and demonstrate their effectiveness.",
+                "category": [
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-15T17:36:23Z",
+                "arxiv:comment": "34 pages, 2 figures",
+                "arxiv:primary_category": {
+                    "@term": "math.ST"
+                },
+                "author": {
+                    "name": "Soham Jana"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.14049v1",
+                "title": "Deep Interaction: An Efficient Human-AI Interaction Method for Large Reasoning Models",
+                "updated": "2026-07-15T17:16:43Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.14049v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.14049v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The emergence of Chain-of-Thought (CoT) reasoning has significantly enhanced the ability of large language models (LLMs) to tackle complex, multi-step tasks. However, when errors occur, current interaction approaches typically involve re-generating another response that may make mistakes again, or users laboriously flag the faulty step in follow-up turns that may get responses <You are right, I made a mistake here> followed by similar errors recurring. To address this issue, we propose an efficient human intervention mechanism for precisely correcting reasoning errors in LLMs, termed Deep Interaction. Our approach enables direct editing of the original response, allowing erroneous parts to be corrected while preserving accurate reasoning steps. We refine the edited CoT into a distilled prompt, which then steers the LLM along the corrected reasoning path. Experimental results show that our method achieves over a 25% improvement in correction success rate and reduces token usage by approximately 40% on STEM tasks reasoning compared to baseline approaches.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-15T17:16:43Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Hefeng Zhou"
+                    },
+                    {
+                        "name": "Jinxuan Zhang"
+                    },
+                    {
+                        "name": "Jiong Lou"
+                    },
+                    {
+                        "name": "Yuxin Liu"
+                    },
+                    {
+                        "name": "Chaochao Lu"
+                    },
+                    {
+                        "name": "Jingjing Qu"
+                    },
+                    {
+                        "name": "Jie Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.14047v1",
+                "title": "PhysClaw-0: A Symbiotic Agentic System for Robot Autonomy via Language Corrections",
+                "updated": "2026-07-15T17:16:24Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.14047v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.14047v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Autonomous data collection governs the volume and quality of real-world trajectories for manipulation policy learning. Existing pipelines reduce human effort via self-resetting, VLM verification, or language-guided correction, yet episode-scoped fixes must be reissued whenever the same failure recurs, so oversight cost grows with session length rather than with the number of distinct problems. We present PhysClaw-0, a human-robot symbiotic agentic system in which corrections are retained and reused across rounds. The collection loop collects, verifies, and resets autonomously, pausing for a remote operator only when a phase exhausts an explicit retry budget. An LLM parser maps each natural-language utterance to a structured adjustment stored in Corrective Memory, so addressed failure modes typically need not be corrected again under the same conditions. On a real-robot desktop-clearing testbed, PhysClaw-0 matches teleoperation episode success while reducing human working time to 16%. Language corrections improve verifier-human agreement in all four evaluated settings and raise average single-attempt success from 12.5% to 47.5% (arm-selection: 20.0% to 50.0%). Policies fine-tuned on PhysClaw-0 data match teleoperation-trained policy success at a fraction of collection human cost.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.HC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -50,473 +458,68 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-14T17:59:31Z",
-                "arxiv:comment": "27 pages, 8 figures, 8 tables. Code and benchmark: https://github.com/eejyin/Do-AI-Agents-Know-When-a-Task-Is-Simple-Toward-Complexity-Aware-Reasoning-and-Execution",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Junjie Yin"
-                    },
-                    {
-                        "name": "Xinyu Feng"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.13033v1",
-                "title": "DenseReward: Dense Reward Learning via Failure Synthesis for Robotic Manipulation",
-                "updated": "2026-07-14T17:59:29Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.13033v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.13033v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning holds great promise for improving robot policies beyond the limits of imitation learning. However, its practical adoption remains bottlenecked by the lack of reliable vision-language reward models that provide dense and informative feedback. Two key challenges remain: acquiring diverse failure data at scale and obtaining fine-grained reward signals beyond sparse trajectory-level success labels. Collecting failure trajectories typically requires laborious human effort, while pseudo-failures constructed by relabeling successful demonstrations fail to capture the diverse physical failure modes that arise during robot execution. Meanwhile, existing reward models often predict sparse binary or trajectory-level rewards, which provide limited guidance for efficient policy optimization. We introduce DenseReward, a dense robotic reward model that addresses both challenges. To train DenseReward, we develop an automated failure data generation pipeline that synthesizes physically realistic failure trajectories in simulation without human labeling, covering diverse failure modes such as collisions, missed grasps, object drops, and recovery behaviors. DenseReward predicts dense frame-level reward scores from visual observations and language instructions, enabling fine-grained estimation of task progress throughout an episode. Experiments show that DenseReward outperforms general-purpose VLMs and existing robotic reward models in dense reward prediction across both simulated and real-world manipulation. We further demonstrate that DenseReward provides effective reward guidance for downstream model predictive control and reinforcement learning. We release the dataset, trained reward models, and evaluation suite to support the development of failure-aware dense reward modeling for robot learning.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-14T17:59:29Z",
-                "arxiv:comment": "Website: https://dense-reward.github.io/",
+                "published": "2026-07-15T17:16:24Z",
+                "arxiv:comment": "WebPage: https://open-gigaai.github.io/PhysClaw",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Yu Fang"
+                        "name": "Boyuan Wang"
                     },
                     {
-                        "name": "Wanxi Dong"
+                        "name": "Zhenyuan Zhang"
                     },
                     {
-                        "name": "Jiaqi Liu"
+                        "name": "Zhiqin Yang"
                     },
                     {
-                        "name": "Yue Yang"
+                        "name": "Peijun Gu"
                     },
                     {
-                        "name": "Mingxiao Huo"
+                        "name": "Shuya Wang"
                     },
                     {
-                        "name": "Yao Mu"
+                        "name": "Xiaofeng Wang"
                     },
                     {
-                        "name": "Huaxiu Yao"
+                        "name": "Xianghui Ze"
                     },
                     {
-                        "name": "Li Erran Li"
+                        "name": "Yifan Chang"
                     },
                     {
-                        "name": "Daniel Szafir"
+                        "name": "Guosheng Zhao"
                     },
                     {
-                        "name": "Mingyu Ding"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.13031v1",
-                "title": "The Seriality Gap in Video Diffusion Models",
-                "updated": "2026-07-14T17:59:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.13031v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Jiangnan Shao"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.13031v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "When one ball strikes another, then another, video models should predict the consequences of each bounce. In controlled experiments on multi-ball hard-sphere dynamics, we find that the performance of standard bidirectional video diffusion degrades as the causal chain lengthens, even when provided more denoising steps. In a length-matched single-ball control, where ball-ball interactions are absent, the degradation largely disappears, isolating dependent-event structure rather than video length as the cause. Across intervention studies, methods that increase effective serial computation improve performance disproportionately, including autoregressive/blockwise generation and architectural depth. We identify this pattern as the seriality gap: a mismatch between tasks requiring growing serial computation and video diffusion models whose denoising loop does not provide scalable serial compute. We then prove that, for deterministic video prediction, denoising steps do not add serial computation beyond the backbone, indicating a structural obstacle for video diffusion on serial reasoning and simulation tasks.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Guan Huang"
                     },
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-14T17:59:22Z",
-                "arxiv:comment": "Jorge Diaz Chao and Konpat Preechakul contributed equally. 24 pages, 12 figures, and 5 tables. Project page: https://seriality-gap.jdiazchao.com",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Jorge Diaz Chao"
+                        "name": "Hengyu Liu"
                     },
                     {
-                        "name": "Konpat Preechakul"
+                        "name": "Yonggang Zhang"
                     },
                     {
-                        "name": "Yuxi Liu"
+                        "name": "Wei Xue"
                     },
                     {
-                        "name": "Yutong Bai"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.13028v1",
-                "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
-                "updated": "2026-07-14T17:59:02Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.13028v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Chunyuan Guan"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.13028v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse enough to cover the safety-critical long tail that logged data rarely contains. We present TerraZero, a procedural driving simulator and self-play training stack. A configurable C engine runs simulation on the CPU and policy inference on the GPU over a zero-copy path, sustaining 1.3M agent-steps per second on a single server-grade GPU, far faster than existing object-level simulators, while keeping fidelity lighter single-agent systems omit: heterogeneous agents, multiple dynamics models, and full traffic-rule enforcement. TerraZero treats logged data only as a source of real-world map geometry, populating each map with randomized rule-based road users and signal controllers and randomizing agent dynamics, rewards, and sizes per episode, so a map yields an unbounded set of scenarios. Every reported policy trains from scratch by reinforcement learning alone on a compute-efficient self-play recipe across GPUs, with zero human demonstrations and no fallback planner at inference. Policies generalize zero-shot across cities and datasets, including emergent left-hand-traffic driving without explicit supervision. As an ego policy, TerraZero is the first fully learned policy to top the InterPlan long-tail benchmark, ahead of larger learned planners; on routine-driving val14 it ranks among the best approaches and is the safest, posting the best collision and time-to-collision scores. On Waymo Open Sim Agents realism the same recipe outperforms other demonstration-free methods and is competitive with the strongest reference-anchored self-play method. One stack serves both roles: driving policies across dynamics for cars and trucks, and sim agents that jointly control vehicles, pedestrians, and cyclists.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Chenglin Pu"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Yike Guo"
                     },
                     {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-14T17:59:02Z",
-                "arxiv:comment": "Technical Report from Applied Intuition Research",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Zhouchonghao Wu"
+                        "name": "Xingang Wang"
                     },
                     {
-                        "name": "Akshay Rangesh"
-                    },
-                    {
-                        "name": "Weixin Li"
-                    },
-                    {
-                        "name": "Wei-Jer Chang"
-                    },
-                    {
-                        "name": "Zachary Lee"
-                    },
-                    {
-                        "name": "Tim Wang"
-                    },
-                    {
-                        "name": "Wei Zhan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.13022v1",
-                "title": "A Shortcut to Statistically Steady-State Turbulence with Flow Matching",
-                "updated": "2026-07-14T17:58:13Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.13022v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.13022v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Many nonlinear physical systems exhibit an initial transient phase in which perturbations grow before nonlinear interactions lead to a statistically steady state. While this saturated regime is of primary interest, direct numerical simulations must resolve the full transient dynamics before reaching it, incurring significant computational cost. In Computational Fluid Dynamics, reduced-order approaches such as Large Eddy Simulation mitigate computational cost by modeling small-scale dynamics, enabling tractable approximations of turbulent flows. In contrast, for systems such as gyrokinetics, comparably effective closures for the full dynamics are not generally available, and high-fidelity simulations remain necessary. Existing surrogate modeling approaches for these systems are autoregressive, hence they suffer from accumulating error. We instead propose to bypass explicit time evolution by directly modeling the distribution of saturated states under an ergodicity assumption, stating that ensemble averages over samples are equivalent to time averages of a single long simulation. We introduce GyroFlow, a latent generative model that directly estimates steady-state statistics of gyrokinetic turbulence in 5D phase space, without resolving the transient phase. GyroFlow generates saturated snapshots from noise, conditioned on dimensionless operating parameters and outperforms autoregressive, reduced-order, and other generative approaches, while providing substantial speedup. To evaluate generation quality we propose FGyD, a distributional metric computed in the latent space of a pretrained gyrokinetic model, and show that it correlates with downstream flux accuracy and solver convergence. Finally, GyroFlow can be used to warm-start the numerical code used to produce the data.",
-                "category": [
-                    {
-                        "@term": "physics.plasm-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-14T17:58:13Z",
-                "arxiv:primary_category": {
-                    "@term": "physics.plasm-ph"
-                },
-                "author": [
-                    {
-                        "name": "Gianluca Galletti"
-                    },
-                    {
-                        "name": "Gerald Gutenbrunner"
-                    },
-                    {
-                        "name": "William Hornsby"
-                    },
-                    {
-                        "name": "Lorenzo Zanisi"
-                    },
-                    {
-                        "name": "Naomi Carey"
-                    },
-                    {
-                        "name": "Stanislas Pamela"
-                    },
-                    {
-                        "name": "Johannes Brandstetter"
-                    },
-                    {
-                        "name": "Fabian Paischer"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.13021v1",
-                "title": "Software Supply Chains are Dead: Use-Case-Oriented Regeneration",
-                "updated": "2026-07-14T17:58:09Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.13021v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.13021v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Modern software development relies on an increasingly doubtful premise: that the up-front implementation savings from adopting a dependency outweighs the maintenance costs. Two changes are reshaping the build-vs.-reuse calculus: software supply chain attacks have raised the cost of external reliance, while generative AI has lowered the cost of local implementation. We envision use-case-oriented regeneration as a new software sourcing paradigm that shifts the supply chain from external trust to local verification. We evaluate an agentic workflow that synthesizes only the specific slice of dependency functionality that a repository exercises. Our measurements across 180 repository-dependency pairs suggest that this approach is feasible: the replacements preserve 99.8% of repository-observed behavior across baseline validation checks and reduce the exported API surface by 93%. Software sourcing may evolve toward verifiable repository-specific code synthesis, especially when the required functionality is narrow, stable, and well tested.",
-                "category": {
-                    "@term": "cs.SE",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-14T17:58:09Z",
-                "arxiv:comment": "[ESEM'26-ERVR] Proceedings of the 20th International Symposium on Empirical Software Engineering and Measurement (ESEM 2026 Emerging Results, Vision, and Reflection Papers)",
-                "arxiv:primary_category": {
-                    "@term": "cs.SE"
-                },
-                "author": [
-                    {
-                        "name": "Tanmay Singla"
-                    },
-                    {
-                        "name": "James C. Davis"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.13006v1",
-                "title": "The Spectrum Is Not Enough: When Context Helps Time-Series Forecasting",
-                "updated": "2026-07-14T17:50:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.13006v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.13006v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "A growing family of indices scores how predictable a series is from its spectrum. Practitioners increasingly read these scores as answering a different question: whether \\emph{adding context}, a longer lookback, a retrieval plug-in, or a pretrained model, will help. These are not the same question. The value of context is a property of the operating point, not of the series. Any index built from the power spectrum is invariant under phase randomization, whereas the beyond-second-order value that retrieval and foundation models supply is not, because a phase-randomized series is asymptotically Gaussian. We state this as an impossibility result and isolate it with surrogate pairs that fix the spectrum and the marginal by construction. We then give a label-free, configuration-level diagnostic, the coverage deficit, whose principal term measures beyond-spectrum structure as the gain of analog over linear prediction. On seven benchmarks the prediction holds: window-keyed retrieval's value collapses across surrogate pairs (ECL median $+33\\%\\!\\to\\!-35\\%$, $p{<}10^{-40}$) while every spectral index stays frozen; a foundation model's value splits into a surviving second-order part and a small beyond-linear margin that collapses; a longer linear window's value survives. Leave-one-dataset-out, the structure term predicts the sign of beyond-spectrum value where the spectral indices trail it, and the reverse holds for the second-order mechanism. We introduce no new forecaster; the contribution is the distinction, a controlled comparison, and a diagnostic for the deployment decision. Code: https://anonymous.4open.science/r/SINE.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-14T17:50:28Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Mert Onur Cakiroglu"
-                    },
-                    {
-                        "name": "Mehmet Dalkilic"
-                    },
-                    {
-                        "name": "Hasan Kurban"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.13003v1",
-                "title": "Watermark Forensics for Generative Models: An Information-Theoretic Perspective",
-                "updated": "2026-07-14T17:49:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.13003v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.13003v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "A watermark in a generative model's output is usually asked only whether a text is machine-made. The same mark can do more: attribute it to the user who produced it, extract a hidden payload, or localize the part that survives editing. These form a forensic ladder, and we ask what each rung costs in the sample length $n$.\n  One object organizes the answers. Let $S$ be the secret the mark carries (a user's identity or payload), and let the information profile $\u03bd(t)=I(S;X_t\\mid X_{<t})$ record how much the $t$-th token reveals about $S$ given the earlier ones. Its total mass pays for attribution and extraction; how that mass is spread pays for localization; and detection alone is paid for not by information but by presence, the distance from the marked to the unmarked distribution. The literature's two quality models, a mark subtle on every token and one that stamps a few tokens loudly, are two incomparable ways of capping this profile.\n  Our main theorem settles the ladder's entropy column. For statistically distortion-free schemes, attributing a text to one of $N$ users costs $\u0398(\\log N/h)$ tokens over every stationary-ergodic source of entropy rate $h$, sharp to a $(1+o(1))$ factor: to our knowledge the first tight entropy-rate law for multi-user attribution (via exact alignment). The natural collision-counting analysis overcharges without bound; only a decoder thresholding each candidate by its own realized surprisal attains the rate while almost never implicating an innocent user. A matching converse makes the law two-sided, and extraction of an $\\ell$-bit payload costs $\u0398(\\ell/h)$. Two gaps are real, not modeling artifacts: a $\u0398(\\log N)$-token window in which a text is provably machine-made yet unattributable, and a footprint-resolution uncertainty principle. Experiments on GPT-2, Pythia-410M, and Qwen2.5 recover the predicted constants.",
-                "category": [
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-14T17:49:52Z",
-                "arxiv:comment": "The abstract has been shortened to comply with arXiv's length limit",
-                "arxiv:primary_category": {
-                    "@term": "cs.CR"
-                },
-                "author": [
-                    {
-                        "name": "Xiaoyu Li"
-                    },
-                    {
-                        "name": "Zheng Gao"
-                    },
-                    {
-                        "name": "Xiaoyan Feng"
-                    },
-                    {
-                        "name": "Jiaojiao Jiang"
-                    },
-                    {
-                        "name": "Yulei Sui"
-                    },
-                    {
-                        "name": "Jiankun Hu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.12996v1",
-                "title": "Expressibility and trainability of a two-dimensional pairwise quantum-circuit ansatz",
-                "updated": "2026-07-14T17:47:25Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.12996v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.12996v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Parameterized quantum circuits~(PQCs) constitute a central building block of variational quantum algorithms~(VQAs) and quantum machine learning~(QML) methods. Existing ansatz designs often adopt hardware-agnostic or simplified 1D chain/ring entanglement patterns. However, as quantum hardware continues to develop, native 2D connectivity patterns, such as planar superconducting-qubit architectures, are becoming increasingly important. Inspired by this hardware structure, we construct a native 2D pairwise ansatz and compare its expressibility and trainability with representative 1D ansatze at identical layer depths, despite their different circuit depths. For the fixed 16-qubit system, the 2D ansatz has the smallest KL divergence at $L=1$ and $2$, and its second-order frame potential approaches the theoretical lower bound more rapidly at shallow layer counts than the frame potentials of the three 1D ansatze. We also evaluate the gradient variance of the Pauli-$Z$-string expectation value $\\langle Z_0\\otimes\\cdots\\otimes Z_{15}\\rangle$ with respect to the first $R_y$ angle. For this Pauli-$Z$ string and fixed parameter, the gradient variance is smaller for the 2D circuit at $L=1$--$4$. The differences narrow at $L=5$, and the four ansatze yield statistically compatible variances at $L=6$.",
-                "category": {
-                    "@term": "quant-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-14T17:47:25Z",
-                "arxiv:comment": "25 pages, 10 figures",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": [
-                    {
-                        "name": "Shuai Zhang"
-                    },
-                    {
-                        "name": "Wei Liu"
-                    },
-                    {
-                        "name": "Ji-Chong Yang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.12993v1",
-                "title": "X-Lens: Real-Time Metric Depth Estimation with Heterogeneous Cameras",
-                "updated": "2026-07-14T17:45:50Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.12993v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.12993v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present X-lens, a compact feed-forward model for metric depth estimation from a variable number of calibrated fisheye and pinhole views. To support real-time downstream perception, X-lens is built around a geometry-aware heterogeneous camera formulation with two key components. Learnable calibration tokens provide a coarse alignment between fisheye and pinhole projective spaces, while a Jacobian-parameterized distortion bias injected into cross-attention models local projection changes and promotes cross-camera consistency, enabling robust generalization with only 0.04B parameters and up to 41 FPS. The model predicts dense depth together with a global metric scale, avoiding auxiliary reconstruction targets that increase computation and optimization complexity. To learn such cross-camera generalization at scale and depth, X-lens is trained on multiple public datasets and OmniScene, our newly released large-scale synthetic dataset containing approximately 266K synchronized six-view frames, 1.7M individual images, and 103 indoor and outdoor scenes. Extensive experiments on both real-world and synthetic indoor and outdoor datasets demonstrate superior heterogeneous-camera metric depth accuracy, reducing AbsRel by 25.4\\% on OmniScene-Full over the strongest baseline while using 88.9\\% fewer parameters, with competitive performance on conventional fisheye-only and pinhole-only settings.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-14T17:45:50Z",
-                "arxiv:comment": "24 pages",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Heng Zhou"
-                    },
-                    {
-                        "name": "Shuhong Liu"
-                    },
-                    {
-                        "name": "Yonghao He"
-                    },
-                    {
-                        "name": "Bohao Zhang"
-                    },
-                    {
-                        "name": "Fa Fu"
-                    },
-                    {
-                        "name": "Chenhui Hou"
-                    },
-                    {
-                        "name": "Xianbao Hou"
-                    },
-                    {
-                        "name": "Lijun Han"
-                    },
-                    {
-                        "name": "Wei Sui"
+                        "name": "Zheng Zhu"
                     }
                 ]
             }
