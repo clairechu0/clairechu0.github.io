@@ -5,389 +5,146 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-07-20T23:51:29Z",
+        "updated": "2026-07-21T05:42:57Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "594565",
+        "opensearch:totalResults": "595249",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2607.16192v1",
-                "title": "MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction",
-                "updated": "2026-07-17T17:59:38Z",
+                "id": "http://arxiv.org/abs/2607.18237v1",
+                "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric",
+                "updated": "2026-07-20T17:59:51Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.16192v1",
+                        "@href": "https://arxiv.org/abs/2607.18237v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.16192v1",
+                        "@href": "https://arxiv.org/pdf/2607.18237v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Humans can infer how objects are likely to move from passive observation: a cup may be lifted, a drawer may slide, and a lid may rotate shut. Such predictions expose the physical consequences of interaction needed to act in the real world. We study how to learn this anticipation from ordinary monocular videos of human-object interaction. Given a short observed video context, MotionForesight predicts future 3D trajectories for points on the manipulated object. This casts interaction prediction as object-centered 3D motion forecasting without any assumptions on the object properties. Our key insight is that video prediction models already encode rich priors about how objects move during human interactions. We redirect these priors from pixel prediction toward future 3D scene flow. We start from a dense 3D tracker built on a pretrained video model, generate pseudo-ground-truth tracks from complete clips, and train the forecaster using only the observed frames. We replace future RGB and geometry with learned mask latents and train a lightweight adapter to turn the retrospective tracking representation into a forward predictor, while freezing the large video and tracking components. Using just 40k human videos and no auxiliary inputs such as language, MotionForesight generalizes across diverse out-of-distribution objects, environments, viewpoints, and interactions. It also outperforms substantially larger models that use over a million training videos. These results show that we can efficiently re-purpose video priors into explicit geometric forecasts for embodied intelligence. https://motionforesight.github.io/",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-17T17:59:38Z",
-                "arxiv:comment": "Website with visual results motionforesight.github.io",
+                "summary": "Human visual similarity judgments are context-dependent. For example, two images may be similar in shape but distinct in color. Existing perceptual similarity metrics, however, collapse these nuances into a single scalar value, offering no mechanism to condition on specific aspects. To bridge this gap, we introduce a large-scale dataset of human similarity judgments over image triplets, where each triplet is annotated across multiple, free-form semantic aspects of similarity. Benchmarking a broad range of frontier vision-language models (VLMs) reveals a considerable performance gap compared to human annotators' consensus. Leveraging our data, we fine-tune a VLM to produce our Text-Prompted Image Perceptual Similarity (TPIPS) metric, capturing multiple senses of visual similarity depending on the specified text prompt. We demonstrate that TPIPS aligns more closely with human perception and generalizes reliably beyond the training distribution. Finally, we show that TPIPS unlocks new capabilities in text-guided retrieval, compositional search, and the fine-grained evaluation of generative models. Our code, data, and trained models are at https://peterwang512.github.io/TPIPS",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-20T17:59:51Z",
+                "arxiv:comment": "Project Webpage: https://peterwang512.github.io/TPIPS",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Homanga Bharadhwaj"
+                        "name": "Sheng-Yu Wang"
                     },
                     {
-                        "name": "Yash Jangir"
+                        "name": "Yotam Nitzan"
+                    },
+                    {
+                        "name": "Aaron Hertzmann"
+                    },
+                    {
+                        "name": "Jun-Yan Zhu"
+                    },
+                    {
+                        "name": "Eli Shechtman"
+                    },
+                    {
+                        "name": "Alexei A. Efros"
+                    },
+                    {
+                        "name": "Richard Zhang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.16189v1",
-                "title": "Searching Videos as Trees: Self-Correcting Agents for Grounded Long Video QA",
-                "updated": "2026-07-17T17:59:27Z",
+                "id": "http://arxiv.org/abs/2607.18236v1",
+                "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+                "updated": "2026-07-20T17:59:41Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.16189v1",
+                        "@href": "https://arxiv.org/abs/2607.18236v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.16189v1",
+                        "@href": "https://arxiv.org/pdf/2607.18236v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Grounded long-video question answering (Grounded LVQA) requires answering a question about a long video while localizing the short evidence interval that supports the answer. Recent agentic methods frame this task as multi-turn exploration with a single crop_video(start, end) action, which supports coarse-to-fine narrowing but provides no primitive for fine-to-coarse backtracking. As a result, these agents typically converge prematurely and cannot recover from an early mistake. We propose VideoTreeSearch (VTS), a framework that casts grounded LVQA as iterative self-correcting search over an adaptive temporal tree. VTS constructs a non-uniform tree from visual scene boundaries so that each node corresponds to a semantically coherent segment, and trains an agent to navigate the tree through four discrete operations: zoom_in, zoom_out, shift, and answer. These operations expose backtracking and recovery as explicit, learnable primitives rather than implicit behaviors. To train this navigation, we introduce a trajectory synthesis pipeline that produces multi-step paths through the tree, including deliberate detours into incorrect branches followed by recovery. We use these trajectories for supervised fine-tuning, followed by reinforcement learning with grounding and answer-accuracy rewards. On three Grounded LVQA benchmarks (CG-Bench, Haystack-LVBench, Haystack-Ego4D), VTS outperforms the strongest prior agentic methods by +12.5 mIoU on CG-Bench and +7.4 T-F1 on Haystack-Ego4D. The learned policy also transfers to general long-video QA, surpassing all prior agentic baselines on Video-MME, MLVU, and LVBench by up to +7.1 accuracy points. Ablations confirm that self-correcting hierarchical search is the central mechanism behind these gains: removing either adaptive descent or explicit backtracking substantially degrades performance. Code is available at https://github.com/CeeZh/VTS.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-17T17:59:27Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
+                "summary": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-grained spatial detail and the benefits of large-scale visual pre-training. While there exist policies that do operate on dense patch features like large vision-language-action models (VLAs), they tend to be heavy and slow, inheriting the full cost of a billion-parameter vision-language model (VLM) backbone. We close this gap with Patch Policy, a minimal architectural extension that enables transformer-based policies to consume dense pre-trained patch tokens directly without the computational overhead of a full VLM. At its core is a block-causal attention mask that preserves the temporal causality of standard policies while letting the model attend over many patch tokens per observation, alongside other state information. Patch Policy is lightweight, fast, and highly effective. Across four simulated and three real-world environment suites, our method achieves a 40% relative improvement over policies using state-of-the-art global-pooled representations. Furthermore, it surpasses fine-tuned OpenVLA-OFT by 18% while using roughly 0.7% of the parameters. We believe Patch Policy provides a pipeline for the robotics community to readily leverage continuing progress in visual representation learning, without sacrificing the training efficiency or inference speed required for high-frequency, reactive control. Videos can be viewed at https://patch-policy.github.io",
+                "category": [
                     {
-                        "name": "Ce Zhang"
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Ziyang Wang"
-                    },
-                    {
-                        "name": "Yulu Pan"
-                    },
-                    {
-                        "name": "Oluwatumininu Oguntola"
-                    },
-                    {
-                        "name": "Pranav Wagh"
-                    },
-                    {
-                        "name": "Qiyu Wu"
-                    },
-                    {
-                        "name": "Hiromi Wakaki"
-                    },
-                    {
-                        "name": "Mohit Bansal"
-                    },
-                    {
-                        "name": "Gedas Bertasius"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.16187v1",
-                "title": "Handroid: Bridging Dexterous Hand and Humanoid",
-                "updated": "2026-07-17T17:59:05Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.16187v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.16187v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "summary": "Dexterous hands and humanoid robots are typically developed as distinct embodiments: the former enable contact-rich manipulation at the object scale, whereas the latter provide mobility and whole-body interaction in human-centered environments. We introduce \\textbf{Handroid}, a desktop-scale dual-embodiment robot that integrates both capabilities within a single reconfigurable platform. Handroid reuses one 27-DoF electromechanical body as either a dexterous hand or a desktop humanoid, measuring 0.33 m in height and 2.05 kg in weight. In the dexterous hand embodiment, 20 DoFs form an anthropomorphic hand closely matching the kinematic structure of the human hand. In the humanoid embodiment, the same articulated modules are reconfigured into a humanoid with a head, arms, and legs, including a 12-DoF lower-limb structure for locomotion and whole-body motion. Handroid further provides a unified control and learning framework supporting hand teleoperation, dexterous grasping, in-hand manipulation, humanoid locomotion, gait generation, and interactive motion authoring. We validate the platform through real-world dexterous manipulation, reinforcement-learning-based locomotion, keyframe motion deployment, and a long-horizon task involving embodiment reconfiguration, locomotion, docking, and dexterous pick-and-place. These results position Handroid as a compact and reproducible platform for advancing morphology-reconfigurable robotics and cross-embodiment robot learning.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-17T17:59:05Z",
-                "arxiv:comment": "Project website: https://handroid.org",
+                "published": "2026-07-20T17:59:41Z",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Ruogu Li"
+                        "name": "Gaoyue Zhou"
                     },
                     {
-                        "name": "Chenyang Ma"
+                        "name": "Zichen Jeff Cui"
                     },
                     {
-                        "name": "Sikai Li"
+                        "name": "Ada Langford"
                     },
                     {
-                        "name": "Zhenyu Wei"
+                        "name": "Bowen Tan"
                     },
                     {
-                        "name": "Yunchao Yao"
+                        "name": "Yann LeCun"
                     },
                     {
-                        "name": "Haochen Shi"
-                    },
-                    {
-                        "name": "C. Karen Liu"
-                    },
-                    {
-                        "name": "Shuran Song"
-                    },
-                    {
-                        "name": "Mingyu Ding"
+                        "name": "Lerrel Pinto"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.16184v1",
-                "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
-                "updated": "2026-07-17T17:58:29Z",
+                "id": "http://arxiv.org/abs/2607.18230v1",
+                "title": "Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs",
+                "updated": "2026-07-20T17:58:13Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.16184v1",
+                        "@href": "https://arxiv.org/abs/2607.18230v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.16184v1",
+                        "@href": "https://arxiv.org/pdf/2607.18230v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), offering high efficiency and accuracy. However, in KV-cache-intensive serving scenarios, MoEs often exhibit a tension between the GPU memory requirements of the model weights and the growing KV cache. We propose PagedWeight, a novel management method for MoE LLM serving that dynamically quantizes MoE model's weights at runtime and balances expert-weight precision with the KV cache sizes. PagedWeight exposes and effectively navigates the complex tradeoff between the model's task accuracy, memory consumption, and throughput/latency. Across several memory-sensitive MoE serving scenarios, PagedWeight improves the quality-memory tradeoff over several existing quantization baselines. PagedWeight achieves FP16-equivalent accuracy with up to 72.0% GPU memory savings and 1.94$\\times$ throughput improvement, and improves quality over quantization methods by up to 39.3% at a similar memory budget with at most 4.1% throughput loss.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-17T17:58:29Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Yuchen Yang"
-                    },
-                    {
-                        "name": "Yifan Zhao"
-                    },
-                    {
-                        "name": "Anisha Dasgupta"
-                    },
-                    {
-                        "name": "Sasa Misailovic"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.16183v1",
-                "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
-                "updated": "2026-07-17T17:57:49Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.16183v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.16183v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic analog processes in physical hardware. In this work, we focus on energy-based thermodynamic computing where the stochastic process is well described by Langevin dynamics with tunable energy potentials. The implementation of such potentials in physical hardware enables us to generate and sample from basic parameterized energy-based models. We demonstrate how to construct and train popular classes of machine learning models based on these hardware-native energy-based models, using the framework of probabilistic graphical models. We analyze the runtime and energy consumption of different models in this thermodynamic paradigm based on theoretical considerations and numerical studies. As a preliminary experimental realization of such hardware, we present our stochastic analog superconducting circuits driven by thermal noise. Together, these results outline a path toward energy-efficient thermodynamic hardware for probabilistic machine learning.",
+                "summary": "Modern vision-language models (VLMs) have significantly improved image generation and editing capabilities, making pixel-level image tampering detection increasingly important yet challenging under cross-model and out-of-distribution shifts. This work studies domain generalization for pixel-level image tampering detection in modern VLMs like ChatGPT, Gemini, Qwen-Image, etc., aiming to learn tampering localization models that remain robust across diverse VLM-generated manipulation distributions. We propose a simple yet effective domain-generalized training framework built on two practical strategies. First, we introduce a balanced minibatch sampling scheme that strategically samples tampered and real images in each minibatch, preventing biased optimization toward either manipulated artifacts or clean-image priors and avoiding training collapse, ensuring that each optimization step receives proper sampled gradient signals. Second, we adopt a simple late-injection strategy, where the detector is first trained on large-scale base data until stable convergence, and then exposed to a small amount of newly selected supporting data from emerging VLM distributions, improving adaptability without overfitting to limited new domains. Together, these components provide a simple yet strong recipe for improving pixel-level tampering localization and OOD robustness across modern VLMs. Despite the conceptual simplicity, our framework outperforms the prior state-of-the-art PIXAR by a large margin of 26.1% and 26.8% relative improvement in average gIoU and cIoU, respectively, across OOD VLMs of GPT-Images-2.0, Gemini-3.1, FLUX.2, and Seedream 4.5. Our code is available at https://github.com/VILA-Lab/PIXAR-DG",
                 "category": [
                     {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.ET",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "physics.app-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-17T17:57:49Z",
-                "arxiv:comment": "42 pages, 20 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Owen Lockwood"
-                    },
-                    {
-                        "name": "J\u00e9r\u00e9my B\u00e9janin"
-                    },
-                    {
-                        "name": "Joost Bus"
-                    },
-                    {
-                        "name": "Christopher Chamberland"
-                    },
-                    {
-                        "name": "Patrick Huembeli"
-                    },
-                    {
-                        "name": "Frank Sch\u00e4fer"
-                    },
-                    {
-                        "name": "Guillaume Verdon"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.16178v1",
-                "title": "Cluster-Aware Matching via Laplacian Optimal Transport",
-                "updated": "2026-07-17T17:56:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.16178v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.16178v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In many applications of matching, the point clouds to be matched are not merely unstructured sets of points but rather samples from distributions with an intrinsic cluster structure. In such cases, as individual points are often interchangeable within a coherent region, finding a robust region-to-region alignment is more desirable than establishing a precise point-to-point correspondence. To this end, we propose a novel approach for cluster-aware matching based on Laplacian Optimal Transport (LapOT). The key idea is to regularize the optimal transport problem with quadratic Laplacian terms constructed from similarity graphs of the point clouds, which encourages the optimal coupling to respect the cluster structure of both point sets. We also introduce Refined Simultaneous Clustering (RSC), a method that leverages the cluster-aware coupling obtained from LapOT to produce consistent partitions across the point sets, which can overcome the limitations of independent clustering and yield more stable and interpretable results. We demonstrate the effectiveness of our approach through theoretical analysis and empirical experiments, showing that LapOT indeed produces cluster-aware matching that leads to more consistent and meaningful alignments between point clouds.",
-                "category": [
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.NA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ME",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-17T17:56:51Z",
-                "arxiv:primary_category": {
-                    "@term": "stat.ML"
-                },
-                "author": [
-                    {
-                        "name": "Gabriel Samberg"
-                    },
-                    {
-                        "name": "YoonHaeng Hur"
-                    },
-                    {
-                        "name": "Yuehaw Khoo"
-                    },
-                    {
-                        "name": "Nir Sharon"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.16177v1",
-                "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-                "updated": "2026-07-17T17:56:05Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.16177v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.16177v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large number of interaction with the environment to synthesize optimal control strategies. Consequently, applications of RL are typically limited to sparse sensors and actuators due to the curse of dimensionality entailed by the exploration-exploitation dilemma in high-dimensional spaces. In this work, we bridge RL and traditional optimal control for dynamical system with a novel Physics-EnhAnced Reinforcement Learning (PEARL) paradigm tailored to the control of high-dimensional and parametric dynamical systems, exploiting the differentibility of their dynamics. Specifically, PEARL employs an actor-adjoint algorithm that leverages automatic differentiation to compute policy gradients over short horizons and adjoint-based sensitivities of future returns approximated via neural networks, significantly reducing the number of environment interactions, while mitigating long-term gradient instabilities. Through two challenging parametric navigation problems in unsteady flows, we show that PEARL (i) effectively exploits differentiable environments to outperform state-of-the-art RL algorithms, (ii) is sample efficient, thanks to the physics-guided policy learning, (iii) generalizes across multiple scenarios, which is crucial when dealing with parametric systems, and (iv) enables scaling RL to high-dimensional state and action spaces, without requiring low-dimensional state representations or multi-agent strategies.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.OC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-17T17:56:05Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Matteo Tomasetto"
-                    },
-                    {
-                        "name": "Nicol\u00f2 Botteghi"
-                    },
-                    {
-                        "name": "Gabriele Bruni"
-                    },
-                    {
-                        "name": "Andrea Manzoni"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.16175v1",
-                "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
-                "updated": "2026-07-17T17:55:19Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.16175v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.16175v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, where vulnerabilities can compromise assets, users, and vehicle operations. These vulnerabilities are commonly documented as plain text in the Common Vulnerabilities and Exposures (CVE) database; however, security practitioners require structured information about affected assets, types of weaknesses, and attack behaviors to effectively mitigate the risks from these vulnerabilities. To this end, we evaluate open-weight Large Language Models (LLMs) for generating Structured Threat Information Expression (STIX), a well-known structured format for representing threat information, for CAV-related CVEs. We construct a dataset called CAV-STIXGen that maps CAV vulnerability descriptions to STIX domain objects (SDO), STIX relationship objects (SRO), Common Weakness Enumeration (CWE), and MITRE ATT&CK techniques mappings. Using this dataset, we evaluated 11 open-weight LLMs (4B to 120B parameters) across various prompting strategies and temperatures. Single-model configurations achieve F1 scores of 0.94 for SDO, 0.63 for SRO, and 0.99 for CWE mapping, while complete MITRE ATT&CK mapping remains challenging. In a multi-agent setup, Gemma-4-31B and Codestral-22B achieve F1 scores of 0.91 for SDOs and 0.43 for SROs, respectively. Lastly, we analyze CWE and MITRE ATT&CK co-occurrences to identify recurring threat patterns in the CAV domain, demonstrating how AI-assisted vulnerability-to-STIX translation can automate threat intelligence and prioritize defense in transportation security.",
-                "category": [
-                    {
-                        "@term": "cs.CR",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -395,204 +152,467 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-17T17:55:19Z",
-                "arxiv:comment": "9 pages",
+                "published": "2026-07-20T17:58:13Z",
+                "arxiv:comment": "Our code is available at https://github.com/VILA-Lab/PIXAR-DG",
                 "arxiv:primary_category": {
-                    "@term": "cs.CR"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Md Erfan"
+                        "name": "Yi Tang"
                     },
                     {
-                        "name": "Ahmed Ryan"
+                        "name": "Xinyi Shang"
                     },
                     {
-                        "name": "Md Kamal Hossain Chowdhury"
+                        "name": "Jiacheng Cui"
                     },
                     {
-                        "name": "Md Rayhanur Rahman"
+                        "name": "Sondos Mahmoud Bsharat"
+                    },
+                    {
+                        "name": "Jiacheng Liu"
+                    },
+                    {
+                        "name": "Xiaohan Zhao"
+                    },
+                    {
+                        "name": "Tran Dinh Tien"
+                    },
+                    {
+                        "name": "Ahmed Elhagry"
+                    },
+                    {
+                        "name": "Salwa K. Al Khatib"
+                    },
+                    {
+                        "name": "Tianjun Yao"
+                    },
+                    {
+                        "name": "Yonina C. Eldar"
+                    },
+                    {
+                        "name": "Jing-Hao Xue"
+                    },
+                    {
+                        "name": "Hao Li"
+                    },
+                    {
+                        "name": "Salman Khan"
+                    },
+                    {
+                        "name": "Zhiqiang Shen"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.16174v1",
-                "title": "Rapid structural evolution of neutron-rich silicon isotopes toward N = 28",
-                "updated": "2026-07-17T17:54:38Z",
+                "id": "http://arxiv.org/abs/2607.18228v1",
+                "title": "Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes",
+                "updated": "2026-07-20T17:58:05Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.16174v1",
+                        "@href": "https://arxiv.org/abs/2607.18228v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.16174v1",
+                        "@href": "https://arxiv.org/pdf/2607.18228v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Neutron-rich Si isotopes represent a unique case of shell evolution, exhibiting a robust shell closure at $N=20$ and pronounced quadrupole collectivity at $N = 28$. We report lifetime measurements of excited states in $^{40}$Si and the first simultaneous lifetime and heavy-ion inelastic-scattering measurements in $^{41}$Si. In $^{40}$Si, the extracted lifetimes for the $2_1^+$ and $(2_2^+)$ states indicate moderate quadrupole collectivity at $N=26$, together with signatures of triaxiality. In $^{41}$Si, two near-degenerate states at 570 and 658~keV exhibit comparable $B(E2)$ strengths as extracted from inelastic scattering, while the measured lifetimes indicate dominant $M1$ decays. The combined lifetime and inelastic-scattering results suggest an evolution toward oblate shape, consistent with large-scale shell-model predictions.",
+                "summary": "To test how correct logical judgments respond to learned context, we prepend a soft prefix to an exactly labeled syllogistic reasoning benchmark while keeping the model fixed. Soft prefixes are opaque continuous vectors, so we characterize them through the behavior they induce across controlled variations in logical form and interface. By studying which prefixes succeed and how their effects generalize, we characterize how learned contextual pressure can override correct judgments and expose limits in a model's logical stability. Across Qwen3.6-35B-A3B MoE, Qwen3-8B, and Gemma 4 31B, learned prefixes redirect many correct answers and remain effective across unseen forms and interface changes. In repeated tests with Qwen3.6 MoE and Gemma, they outperform paired random controls in all 16 model--direction--split comparisons by 37 to 99 percentage points. Qwen3.6 MoE flip rates remain between 72% and 90% across wording and prompt changes, while Gemma validity prefixes retain 54% to 56% flip compared with less than 1% for matched random prefixes. Diagnostic tests show that the dominant effect is a broad preference for one answer meaning rather than fixed-symbol forcing or a logical operation that transfers reliably between tasks. The form of this bias differs across models. In both Qwen models, simple score models often predict which judgments will flip but not how far their margins will move, whereas Gemma's overall response is more closely approximated by the same models. These results show that the dominant behavioral effect of successful soft prefixes is a broad answer preference, while the remaining response reveals substantial model-specific differences in logical stability.",
                 "category": [
                     {
-                        "@term": "nucl-ex",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "nucl-th",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-17T17:54:38Z",
+                "published": "2026-07-20T17:58:05Z",
+                "arxiv:comment": "41 pages, 6 figures",
                 "arxiv:primary_category": {
-                    "@term": "nucl-ex"
+                    "@term": "cs.AI"
                 },
-                "author": [
-                    {
-                        "name": "G. L. Zimba"
-                    },
-                    {
-                        "name": "H. Iwasaki"
-                    },
-                    {
-                        "name": "B. A. Brown"
-                    },
-                    {
-                        "name": "Y. Utsuno"
-                    },
-                    {
-                        "name": "N. Shimizu"
-                    },
-                    {
-                        "name": "N. Aoi"
-                    },
-                    {
-                        "name": "M. Basson"
-                    },
-                    {
-                        "name": "T. Beck"
-                    },
-                    {
-                        "name": "J. Chen"
-                    },
-                    {
-                        "name": "J. Chung-Jung"
-                    },
-                    {
-                        "name": "A. Douglas"
-                    },
-                    {
-                        "name": "A. Ertoprak"
-                    },
-                    {
-                        "name": "P. Farris"
-                    },
-                    {
-                        "name": "C. Fransen"
-                    },
-                    {
-                        "name": "A. Gade"
-                    },
-                    {
-                        "name": "S. A. Gillespie"
-                    },
-                    {
-                        "name": "A. Hill"
-                    },
-                    {
-                        "name": "K. Kolos"
-                    },
-                    {
-                        "name": "D. Lempke"
-                    },
-                    {
-                        "name": "I. Lihtar"
-                    },
-                    {
-                        "name": "T. Mijatovi\u0107"
-                    },
-                    {
-                        "name": "S. Neupane"
-                    },
-                    {
-                        "name": "S. Noji"
-                    },
-                    {
-                        "name": "T. Parry"
-                    },
-                    {
-                        "name": "A. Revel"
-                    },
-                    {
-                        "name": "R. Salinas"
-                    },
-                    {
-                        "name": "A. Sanchez"
-                    },
-                    {
-                        "name": "E. Schieb"
-                    },
-                    {
-                        "name": "D. Weisshaar"
-                    },
-                    {
-                        "name": "Y. Yamamoto"
-                    }
-                ]
+                "author": {
+                    "name": "Brian K Chen"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2607.16172v1",
-                "title": "The Internet of Things for Smart Manufacturing: A Review",
-                "updated": "2026-07-17T17:52:26Z",
+                "id": "http://arxiv.org/abs/2607.18227v1",
+                "title": "FlowMimic: Mask-free Visual Editing and Generation with Pixel-pair Warped Flow Field for Online Video Editing Data Generation and Modality Mimicry",
+                "updated": "2026-07-20T17:58:03Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.16172v1",
+                        "@href": "https://arxiv.org/abs/2607.18227v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.16172v1",
+                        "@href": "https://arxiv.org/pdf/2607.18227v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
-                    },
-                    {
-                        "@rel": "related",
-                        "@href": "https://doi.org/10.1080/24725854.2018.1555383",
-                        "@title": "doi"
                     }
                 ],
-                "summary": "The modern manufacturing industry is investing in new technologies such as the Internet of Things (IoT), big data analytics, cloud computing and cybersecurity to cope with system complexity, increase information visibility, improve production performance, and gain competitive advantages in the global market. These advances are rapidly enabling a new generation of smart manufacturing, i.e., a cyber-physical system tightly integrating manufacturing enterprises in the physical world with virtual enterprises in cyberspace. To a great extent, realizing the full potential of cyber-physical systems depends on the development of new methodologies on the Internet of Manufacturing Things (IoMT) for data-enabled engineering innovations. This paper presents a review of the IoT technologies and systems that are the drivers and foundations of data-driven innovations in smart manufacturing. We discuss the evolution of internet from computer networks to human networks to the latest era of smart and connected networks of manufacturing things (e.g., materials, sensors, equipment, people, products, and supply chain). In addition, we present a new framework that leverages IoMT and cloud computing to develop a virtual machine network. We further extend our review to IoMT cybersecurity issues that are of paramount importance to businesses and operations, as well as IoT and smart manufacturing policies that are laid out by governments around the world for the future of smart factory. Finally, we present the challenges and opportunities arising from IoMT. We hope this work will help catalyze more in-depth investigations and multi-disciplinary research efforts to advance IoMT technologies.",
-                "category": [
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.AP",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-17T17:52:26Z",
-                "arxiv:primary_category": {
-                    "@term": "eess.SY"
+                "summary": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model. Current approaches to collecting video editing data typically depend on labour-intensive, time-consuming curated procedures--involving object mask annotation, the use of error-introducing pair synthesis via I2V model and ControlNet-like guidance, and VLM-based quality filtering or refinement--and demonstrate limited task scalability. As a result, the diversity of editing tasks remains substantially narrower than that available for image editing models. We develop a pixel-pair temporal warped flow field that can directly generate corresponding video editing samples in real time from image editing samples, and we demonstrate across multiple levels of video editing tasks that a model can learn video editing using only such data. We regard the image modality as a particular form of the video modality. Accordingly, we design a modality mimic generation loss and a modality mimic editing loss to relatively align the capabilities--and thereby the output distributions--of the two modalities through mutual imitation. Moreover, language-based visual editing entails the comprehension of the editing instruction and the reference visual content, the localization of the region corresponding to that instruction within the reference visual contents, and the modification of that region alone. Existing approaches predominantly rely on external aids, such as fine-tuning an additional MLLM or explicitly supplying a mask sequence as auxiliary input during inference. In contrast, we aspire for the model to internalize this capability. To that end, we introduce sense-related tasks--for instance, referring expression segmentation--along with corresponding editing-region-aware latent-level loss and attention-level loss.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "arxiv:journal_ref": "IISE Transactions, 2019, 51(11), 1190-1216",
+                "published": "2026-07-20T17:58:03Z",
+                "arxiv:comment": "Due to file size constraints, the figures in the arXiv file have been heavily lossy-compressed. Please visit the uncompressed file at: https://huggingface.co/datasets/FlowMimic/Uncompressed/blob/main/main.pdf",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
                 "author": [
                     {
-                        "name": "Hui Yang"
+                        "name": "Dingyun Zhang"
                     },
                     {
-                        "name": "Soundar Kumara"
+                        "name": "Lixue Gong"
                     },
                     {
-                        "name": "Satish Bukkapatnam"
+                        "name": "Wei Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.18226v1",
+                "title": "Causal Discovery on Irregular Time Series",
+                "updated": "2026-07-20T17:57:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.18226v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Fugee Tsung"
+                        "@href": "https://arxiv.org/pdf/2607.18226v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
                     }
                 ],
-                "arxiv:doi": "10.1080/24725854.2018.1555383"
+                "summary": "Causal discovery methods have shown strong performance in temporal systems, but they typically rely on regular and discrete lag structures, limiting their applicability to regularly sampled data. However, many real-world tasks require dealing with irregularly sampled streams of events, such as sensor streams, healthcare data, and financial transactions. In this work, we propose an extension of PCMCI+, a state-of-the-art method for causal discovery on regular multivariate time series, to allow for handling irregular time series. Instead of modelling causal relations through fixed-lag dependencies, our method aggregates causal influence over predefined temporal windows. We evaluate our method on synthetic irregular event streams with known causal structures under different signal-to-noise ratios, showing that it consistently recovers the underlying causal graph and substantially outperforms the standard PCMCI+ on irregularly sampled data.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-20T17:57:45Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Martim Penim"
+                    },
+                    {
+                        "name": "Ricardo Ribeiro Pereira"
+                    },
+                    {
+                        "name": "Jacopo Bono"
+                    },
+                    {
+                        "name": "Hugo Ferreira"
+                    },
+                    {
+                        "name": "M\u00e1rio A. T. Figueiredo"
+                    },
+                    {
+                        "name": "Pedro Bizarro"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.18225v1",
+                "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+                "updated": "2026-07-20T17:57:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.18225v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.18225v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We propose one-step and two-step methods for policy learning with retrieval-augmented generation (RAG). We formulate RAG-based action selection under the potential outcome framework. In the two-step method, vector search retrieves action-specific neighboring evidence in an embedding space, the generator estimates conditional expected outcomes or their contrasts, and a plug-in rule selects an action. This formulation connects action-specific vector search with nearest-neighbor matching in causal inference. We decompose the regret of the two-step method into candidate-generation regret and within-candidate choice regret, and we bound the latter using prediction-error guarantees for nearest-neighbor estimators and transformers. We evaluate the one-step method directly as a policy because its intermediate computation is unobserved.",
+                "category": [
+                    {
+                        "@term": "econ.EM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-20T17:57:20Z",
+                "arxiv:primary_category": {
+                    "@term": "econ.EM"
+                },
+                "author": [
+                    {
+                        "name": "Masahiro Kato"
+                    },
+                    {
+                        "name": "Taka Kato"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.18218v1",
+                "title": "GigaPath-Flash and GigaTIME-Flash: Efficient Pathology Foundation Models for Whole-Slide and Tumor Microenvironment Analysis",
+                "updated": "2026-07-20T17:52:33Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.18218v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.18218v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Foundation models have emerged as a driving force in computational pathology, with the potential to transform cancer diagnosis, prognosis, and treatment selection by learning transferable representations from large-scale histopathology data. A growing landscape of pathology foundation models now spans diverse data sources, architectures, and downstream applications. However, most pretrained models operate only at the image-tile level, use restrictive licenses, and remain computationally expensive, limiting large-scale slide-level clinical and research use.\n  Here, we introduce GigaPath-Flash and GigaTIME-Flash, efficient models for whole-slide pathology AI and spatial proteomics prediction. GigaPath-Flash combines a 22M-parameter ViT-S tile encoder with a 21M-parameter LongNet slide encoder, both pretrained on large-scale real-world histopathology data. Its compact tile encoder is distilled from the billion-parameter GigaPath (ViT-g) teacher and shared by both models. GigaPath-Flash retains 97% of GigaPath's average slide-level performance with 50x less compute. GigaTIME-Flash extends this backbone to predict the tumor immune microenvironment directly from routine H&E images. It surpasses the original CNN-based GigaTIME in prediction quality while running 6x faster and using 8x less GPU memory.\n  Together with GigaPath and GigaTIME, these models form an open-weight, Apache-2.0-licensed family pretrained on large-scale real-world clinical data. By releasing all models and weights, we provide accessible building blocks for computational pathology, immuno-oncology, and precision health.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-20T17:52:33Z",
+                "arxiv:comment": "Models: https://aka.ms/gigapath-flash (GigaPath-Flash) and https://aka.ms/gigatime-flash (GigaTIME-Flash)",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Naoto Usuyama"
+                    },
+                    {
+                        "name": "Jeya Maria Jose Valanarasu"
+                    },
+                    {
+                        "name": "Sicong Yao"
+                    },
+                    {
+                        "name": "Hanwen Xu"
+                    },
+                    {
+                        "name": "Jaspreet Bagga"
+                    },
+                    {
+                        "name": "Guanghui Qin"
+                    },
+                    {
+                        "name": "Robert E. Kramer"
+                    },
+                    {
+                        "name": "Cliff Wong"
+                    },
+                    {
+                        "name": "Soohee Lee"
+                    },
+                    {
+                        "name": "Hao Qiu"
+                    },
+                    {
+                        "name": "Theodore Zhengde Zhao"
+                    },
+                    {
+                        "name": "Racheli Ben Shimol"
+                    },
+                    {
+                        "name": "Angela Crabtree"
+                    },
+                    {
+                        "name": "Kevin Matlock"
+                    },
+                    {
+                        "name": "Eduardo Alejandro Lozano Garcia"
+                    },
+                    {
+                        "name": "Naiteek Sangani"
+                    },
+                    {
+                        "name": "Alberto Santamaria-Pang"
+                    },
+                    {
+                        "name": "Jason Entenmann"
+                    },
+                    {
+                        "name": "Alexandra Q. Bartlett"
+                    },
+                    {
+                        "name": "Bill J. Wright"
+                    },
+                    {
+                        "name": "Bernard A. Fox"
+                    },
+                    {
+                        "name": "Brian Piening"
+                    },
+                    {
+                        "name": "Sheng Zhang"
+                    },
+                    {
+                        "name": "Sheng Wang"
+                    },
+                    {
+                        "name": "Tristan Naumann"
+                    },
+                    {
+                        "name": "Carlo Bifulco"
+                    },
+                    {
+                        "name": "Hoifung Poon"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.18209v1",
+                "title": "Unveiling Invariant and Transferable Latent Factors Across Heterogeneous Environments via ATLAS",
+                "updated": "2026-07-20T17:44:57Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.18209v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.18209v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This paper considers a multi-environment factor model in which high-dimensional covariates are collected from heterogeneous environments, with auxiliary labels available in a subset of these environments. The joint distribution of the covariates may vary across environments, whereas the latent structure is decomposed into invariant factors with shared loadings and heterogeneous factors with environment-specific loadings. Such a model is motivated by transfer learning and latent factor regression, where one seeks stable low-dimensional representations for both interpretation and robust out-of-sample prediction of the response $Y$. Leveraging the invariance principle, we show that the invariant and heterogeneous factors are disentangled under a minimal structural condition. Based on this, we propose ATLAS, an Auxiliary-label and invariance-guided Transfer via Latent Alignment across heterogeneous environmentS. ATLAS is a unified procedure that leverages the invariance principle to separate aligned invariant and unaligned heterogeneous factors, and further exploits supervision from auxiliary labels to extract prediction-invariant and transferable factors from those unaligned heterogeneous factors. ATLAS yields near-oracle performance for downstream latent factor regression, enables transferable prediction in new environments through the full latent signal when auxiliary labels are available, and reduces to robust invariant-factor-only prediction otherwise. We establish sharp non-asymptotic error bounds for recovering invariant and heterogeneous factors, identifying all the response-invariant factors, and estimating the invariant signal in $Y$.",
+                "category": [
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-20T17:44:57Z",
+                "arxiv:comment": "47 pages, 3 figures",
+                "arxiv:primary_category": {
+                    "@term": "math.ST"
+                },
+                "author": [
+                    {
+                        "name": "Yihong Gu"
+                    },
+                    {
+                        "name": "Katherine Liao"
+                    },
+                    {
+                        "name": "Tianxi Cai"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.18204v1",
+                "title": "QuantiSpect: A Structure-Aware Lightweight 3D CNN Pre-Decoder for Scalable Surface Code Quantum Error Correction",
+                "updated": "2026-07-20T17:43:08Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.18204v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.18204v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Real-time decoding is a critical bottleneck for large-scale fault-tolerant quantum computing. AI-based neural pre-decoders locally correct most physical errors before passing residual syndromes to a global decoder, enabling sub-microsecond latencies. However, existing architectures carry significant overhead from dense 3D convolutions. We present QuantiSpect, a lightweight 3D convolutional neural network (CNN) pre-decoder for the rotated surface code, built on the decoding pipeline of Chamberland et al. The key idea is to replace the dense 3D convolutions with three parallel branches in each residual block: a depthwise spatial branch, a depthwise temporal branch, and a grouped spatio-temporal branch, followed by a squeeze-and-excitation channel gate. This reflects the structure of surface code errors, where spatial and temporal syndrome correlations are partially separable. On a unified 4xA100 GPU benchmark, QuantiSpect matches the receptive field of the Accurate baseline at R=13 while using ~2.71x fewer parameters (0.663M vs 1.80M) and ~2.84x fewer per-voxel convolutional MACs. It matches Accurate's circuit-level threshold and accuracy at moderate and large code distances, reduces the logical error rate by up to ~1.85x relative to uncorrelated PyMatching at d=13, p=0.5%, and speeds up the PyMatching decode by up to 3.11x at d=23. We also explored enlarging the receptive field by adding blocks. Even at R=21, the model uses only 1.18M parameters, fewer than both the R=13 Accurate baseline (1.80M) and the R=17 dense model (4.22M), despite its larger receptive field. This expanded variant significantly outperforms the Accurate model, raising the circuit-level threshold to ~0.80% and further reducing the logical error rate. Together, both variants show that a structure-aware factorized design is an effective, parameter-efficient alternative to a dense one for decoding the surface code.",
+                "category": {
+                    "@term": "quant-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-20T17:43:08Z",
+                "arxiv:comment": "22 pages, 10 figures",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Pan Gao"
+                    },
+                    {
+                        "name": "Xu-Sheng Xu"
+                    },
+                    {
+                        "name": "Ji-Ze Han"
+                    },
+                    {
+                        "name": "Jing-Wei Wen"
+                    },
+                    {
+                        "name": "Ling Qian"
+                    },
+                    {
+                        "name": "Xu-Dong Lv"
+                    },
+                    {
+                        "name": "Run-Qing Zhang"
+                    },
+                    {
+                        "name": "Xiao-Xiao Hu"
+                    },
+                    {
+                        "name": "Gui-Lu Long"
+                    }
+                ]
             }
         ]
     }
