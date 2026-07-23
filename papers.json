@@ -5,271 +5,114 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-07-22T23:56:52Z",
+        "updated": "2026-07-23T05:47:13Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "595608",
+        "opensearch:totalResults": "595944",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2607.19345v1",
-                "title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
-                "updated": "2026-07-21T17:59:21Z",
+                "id": "http://arxiv.org/abs/2607.20418v1",
+                "title": "Pure-DP Statistical Query Release at the Conjectured Square-Root Rate",
+                "updated": "2026-07-22T17:54:46Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.19345v1",
+                        "@href": "https://arxiv.org/abs/2607.20418v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.19345v1",
+                        "@href": "https://arxiv.org/pdf/2607.20418v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large language models that generate step-by-step reasoning traces have achieved strong performance on complex tasks, and extending them to long-context settings has emerged as an important frontier. However, we identify a critical failure mode in this regime: \\emph{repetitive copying}, where models extensively copy text from the input into their reasoning traces rather than productively solving the problem. We show that this behavior is pervasive across frontier long-context LLMs and intensifies with context length. By separating each prompt into task-relevant key evidence and irrelevant distractor context, we further show that the root cause is insufficient grounding: models copy from the prompt indiscriminately, and those that fail to focus on key evidence are far more likely to answer incorrectly. Motivated by this diagnosis, we propose GEAR (Grounding Evidence-Aware Reward), a reward shaping method that augments the accuracy signal with a grounding reward for overlap with key evidence and a distractor penalty for overlap with irrelevant context. To enable GEAR on natural-language data, we develop an automated pipeline that constructs evidence-annotated training data from arbitrary documents. We validate GEAR across multiple model scales and benchmarks, showing consistent improvements of up to +4.6 average points over standard RL with accuracy-based rewards, with larger gains at longer contexts, while also reducing repetitive copying and thinking length. Our findings suggest that, even as long-context evaluation shifts from simple retrieval toward complex reasoning, accurate grounding in relevant evidence remains an indispensable capability with substantial room for improvement.",
+                "summary": "Nikolov and Ullman asked whether k statistical queries on a universe of size T can be released under pure differential privacy with expected worst-coordinate error at the square-root rate suggested by known lower bounds. We prove their conjectured upper bound. For every database size n and privacy parameter $\\varepsilon>0$, there is an $\\varepsilon$-differentially private mechanism with expected error $O(\\min\\{1,\\sqrt{\\log(2T)\\log(2k)/(\\varepsilon n)}\\})$. This matches the lower-bound dependence in the standard high-dimensional regimes where those bounds apply; the shifted logarithms and outer minimum make the upper bound valid without additional parameter assumptions. The construction starts from a selection-only private multiplicative weights transcript, then replaces its probability mass function by a distance-penalized likelihood envelope. To prove that the modification preserves accuracy, a likelihood-level Maurey argument upper-bounds each Hamming-ball maximum by a small family of auxiliary PMW laws. Renyi moment bounds control nearby balls, a direct mixture bound controls distant balls, and grouping radii at the privacy scale prevents an additional $1/\\varepsilon$ factor in the error. The mechanism is information-theoretic. A companion Lean 4 development machine-checks the finite construction, pure privacy after deterministic decoding, and the displayed all-regimes upper bound.",
                 "category": [
                     {
-                        "@term": "cs.CL",
+                        "@term": "cs.DS",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.CR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-21T17:59:21Z",
+                "published": "2026-07-22T17:54:46Z",
+                "arxiv:comment": "23 pages; companion Lean 4 formalization included as ancillary material",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.DS"
                 },
-                "author": [
-                    {
-                        "name": "Lizhe Fang"
-                    },
-                    {
-                        "name": "Weizhou Shen"
-                    },
-                    {
-                        "name": "Tianyi Tang"
-                    },
-                    {
-                        "name": "Yisen Wang"
-                    }
-                ]
+                "author": {
+                    "name": "Jack Fitzsimons"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2607.19343v1",
-                "title": "Masked Visual Actions for Unified World Modeling",
-                "updated": "2026-07-21T17:59:11Z",
+                "id": "http://arxiv.org/abs/2607.20414v1",
+                "title": "Mapped ADMM: A Robust Algorithm for 1-Bit mMIMO Detection",
+                "updated": "2026-07-22T17:51:51Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.19343v1",
+                        "@href": "https://arxiv.org/abs/2607.20414v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.19343v1",
+                        "@href": "https://arxiv.org/pdf/2607.20414v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Video models absorb rich priors over how the visual world moves, interacts, and responds to contact, making them promising substrates for robotic world modeling. The central challenge is how to communicate action to such models in a form aligned with the visual space in which they learned these interaction priors, yet still grounded in physical manipulation. We introduce Masked Visual Actions, a pixel-space control interface that expresses action as a partially revealed trajectory of an arbitrary entity in a video. Revealing robot motion makes the model act as a forward dynamics model that predicts the scene's response to low-level robot actions, while revealing desired object motion makes the same model recover robot behavior consistent with that outcome. Finetuned with only 15 hours of masked examples from real videos and simulation, a single checkpoint achieves strong visual fidelity and controllability across diverse scenes and multiple embodiments. In downstream manipulation settings, the model produces imagined rollouts whose outcomes correlate with real-world execution for policy evaluation, improves decision making by ranking candidate futures in model-based planning, and supports inverse modeling by synthesizing robot motion from desired object motion.",
+                "summary": "Recently, it has been reported that one-bit massive MIMO (mMIMO) detection is equivalent to a binary classification problem that can be solved efficiently using support vector machine (SVM). Inspired by this result, we first reformulate SVM in a decentralized form consisting of multiple classifiers. This enables the use of the consensus alternating direction method of multipliers (CADMM), a technique that can improve robustness and performance through its inherent consensus making. We further update CADMM to output only valid constellation points and achieve significantly improved detection performance. In our method, by changing the size of the grouped classifiers, we balance the number of classifiers for consensus accuracy with sufficient data per group to ensure classifier robustness. Ultimately, we demonstrate that our proposed method significantly outperforms existing practically feasible methods for one-bit mMIMO detection.",
                 "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-21T17:59:11Z",
-                "arxiv:comment": "Project webpage: https://masked-visual-actions.github.io",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Hadi Alzayer"
-                    },
-                    {
-                        "name": "Wenlong Huang"
-                    },
-                    {
-                        "name": "Haonan Chen"
-                    },
-                    {
-                        "name": "Christopher Luey"
-                    },
-                    {
-                        "name": "Lvmin Zhang"
-                    },
-                    {
-                        "name": "Maneesh Agrawala"
-                    },
-                    {
-                        "name": "Gordon Wetzstein"
-                    },
-                    {
-                        "name": "Li Fei-Fei"
-                    },
-                    {
-                        "name": "Yilun Du"
-                    },
-                    {
-                        "name": "Jiajun Wu"
-                    },
-                    {
-                        "name": "Jia-Bin Huang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.19339v1",
-                "title": "OmniReasoner: Thinking with Long Audio-Video via Native Tool Use",
-                "updated": "2026-07-21T17:57:50Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.19339v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.19339v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Long audio-video reasoning is difficult for omnimodal LLMs because the decisive evidence is often sparse, cross-modal, and too expensive to preserve with uniformly high-fidelity inputs. We introduce OmniReasoner, a tool-use post-training framework for Thinking with Long Audio-Video: omni-modal LLMs learn, via supervised fine-tuning and reinforcement learning, to decide whether and where to call a zoom-in tool before answering. OmniReasoner first builds a low-cost global preview of the full stream and then, when needed, calls the zoom-in tool with a requested temporal interval for higher-fidelity visual and audio inspection before answering. Because the model observes different sampling granularities before and after this call -- a sparse global preview and a denser local clip -- we introduce TimeAnchor, which keeps the tool's temporal argument valid and round-trip-consistent across these granularities, rather than tied to frame indices from a particular sampling rate. To make this tool-use behavior trainable without expensive manual interval annotation, we build a Temporal Augmented Data Engine that synthesizes tool-use post-training trajectories by video editing and composition. Experiments across omnimodal and video benchmarks show that OmniReasoner improves both answer accuracy and temporal grounding while concentrating high-fidelity computation on informative regions. Code is available at https://github.com/RockyChen0205/OmniReasoner.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-21T17:57:50Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yu Chen"
-                    },
-                    {
-                        "name": "Caorui Li"
-                    },
-                    {
-                        "name": "Ziyu Xiong"
-                    },
-                    {
-                        "name": "Yidong Wang"
-                    },
-                    {
-                        "name": "Mingqi Gao"
-                    },
-                    {
-                        "name": "Shuman Liu"
-                    },
-                    {
-                        "name": "Biao Liu"
-                    },
-                    {
-                        "name": "Chunfeng Yang"
-                    },
-                    {
-                        "name": "Anxiang Zeng"
-                    },
-                    {
-                        "name": "Haibo Zhang"
-                    },
-                    {
-                        "name": "Chaofan Chen"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.19335v1",
-                "title": "1-Lipschitz Neural Networks on Hadamard Manifolds",
-                "updated": "2026-07-21T17:54:34Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.19335v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.19335v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Controlling the Lipschitz constant of a neural network is a standard way to promote robustness and stability. Most existing constraining strategies are designed for Euclidean spaces. In this work, we construct and analyze a class of 1-Lipschitz neural networks on Hadamard manifolds. Our layers are of gradient-descent type, $1$-Lipschitz, and quasi-$\u03b1$-firmly nonexpansive. The core building blocks of the proposed architecture are Busemann functions, and we exploit the properties of Busemann gradient flows to design $1$-Lipschitz geometry-preserving layers. We provide explicit constructions and examples for hyperbolic manifolds and the manifold of symmetric positive definite (SPD) matrices. We test the proposed architecture in two numerical experiments: robust classification on the Poincar\u00e9 disk and masked-Wishart covariance reconstruction. On the Poincar\u00e9 disk, the proposed networks yield robust classifiers under hyperbolic perturbations. On the SPD manifold, we train SPD-valued denoisers and adopt them as a Plug-and-Play prior for a masked-Wishart covariance reconstruction problem. We show improved results from the nonexpansive denoiser over static, data-only, and Log-Euclidean denoising baselines, and empirically test its convergence properties.",
-                "category": [
-                    {
-                        "@term": "math.NA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-21T17:54:34Z",
-                "arxiv:primary_category": {
-                    "@term": "math.NA"
-                },
-                "author": [
-                    {
-                        "name": "Davide Murari"
-                    },
-                    {
-                        "name": "Marta Ghirardelli"
-                    },
-                    {
-                        "name": "Ben Adcock"
-                    },
-                    {
-                        "name": "Elena Celledoni"
-                    },
-                    {
-                        "name": "Brynjulf Owren"
-                    },
-                    {
-                        "name": "Carola-Bibiane Sch\u00f6nlieb"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.19334v1",
-                "title": "Fundamental limits of distributed multiclass classification from simple binary decisions",
-                "updated": "2026-07-21T17:53:44Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.19334v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.19334v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We consider the problem of constructing a $K$-class classifier from the combination of $O(\\log K)$ simple binary classifiers -- this is a natural paradigm to construct a sophisticated classifier in a distributed manner with each agent performing a relatively straightforward task. We study the fundamental performance limits of such a classifier when the corresponding binary classifiers are hyperplanes. For a stylized Gaussian setting where the $K$ class centers are independent Gaussian points in $\\mathbb R^d$ and the observations are corrupted by Gaussian noise, we derive explicit performance bounds across several decoding and dimensional regimes. Extensive simulation experiments provide strong empirical validation of the presented theoretical results.",
-                "category": [
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.IT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-22T17:51:51Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.IT"
+                },
+                "author": [
+                    {
+                        "name": "Mohammad Amin Keshmiri"
+                    },
+                    {
+                        "name": "Masoud Ardakani"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.20411v1",
+                "title": "Lipschitzian SLLNs for random functions",
+                "updated": "2026-07-22T17:50:53Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.20411v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.20411v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We prove strong laws of large numbers for locally Lipschitz functions in the Lipschitz pseudometric. Our results hold under either a topological or a model-theoretic condition, with the latter encompassing functions jointly definable in o-minimal structures but extending substantially beyond this class. Applications include uniform convergence of limiting and Clarke subdifferentials and finite-sample identification of solutions. Consequently, we identify broad classes of functions for which the failure phenomena revealed by our previous negative results [Tian and Royset, arXiv:2511.16568, 2025] do not occur.",
+                "category": [
+                    {
+                        "@term": "math.OC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -281,266 +124,378 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-21T17:53:44Z",
+                "published": "2026-07-22T17:50:53Z",
+                "arxiv:comment": "30 pages",
                 "arxiv:primary_category": {
-                    "@term": "stat.ML"
+                    "@term": "math.OC"
                 },
                 "author": [
                     {
-                        "name": "Ioannis Papageorgiou"
+                        "name": "Lai Tian"
                     },
                     {
-                        "name": "Srinivas Nomula"
-                    },
-                    {
-                        "name": "Ayalvadi Ganesh"
-                    },
-                    {
-                        "name": "Sidharth Jaggi"
-                    },
-                    {
-                        "name": "Parimal Parag"
+                        "name": "Johannes O. Royset"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.19333v1",
-                "title": "Provable diffusion-based posterior sampling for linear inverse problems via DDIM",
-                "updated": "2026-07-21T17:53:36Z",
+                "id": "http://arxiv.org/abs/2607.20404v1",
+                "title": "Spectral Data-cube Cleaning for CCAT Deep Spectroscopic Survey. I. Effect of correlated noise and filtering on the power spectrum",
+                "updated": "2026-07-22T17:39:32Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.19333v1",
+                        "@href": "https://arxiv.org/abs/2607.20404v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.19333v1",
+                        "@href": "https://arxiv.org/pdf/2607.20404v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Diffusion-based methods have achieved remarkable empirical success in solving inverse problems. However, many existing posterior samplers either lack rigorous theoretical guarantees or incur substantial computational overhead. We propose a simple and efficient algorithm, called \\pddim, for solving linear inverse problems with diffusion priors via a DDIM-type sampler. Our method requires only lightweight, coordinate-wise modifications to the standard DDIM update, while explicitly incorporating the measurement model. The key idea is to perform posterior sampling separately along each singular direction of the measurement operator: for each direction, the sampler follows the learned diffusion prior when the observation signal-to-noise ratio (SNR) is below the corresponding diffusion SNR, and switches to a calibrated measurement-based predictor otherwise. We prove that the proposed sampler converges to the Bayesian posterior conditioned on the measurements. Empirical results show that the proposed sampler performs favorably against existing diffusion-based posterior samplers across a range of image restoration tasks, achieving the best performance on the majority of evaluation metrics considered. Overall, our results convert posterior sampling for noisy linear inverse problems to simple coordinate-wise DDIM updates, yielding an efficient, easy-to-implement algorithm with provable posterior consistency.",
+                "summary": "The Epoch of Reionization Spectrometer (EoR-Spec) on the Fred Young Submillimeter Telescope (FYST) will conduct the CCAT Deep Spectroscopic Survey (DSS) to perform line-intensity mapping of redshifted [C II] emission. Atmospheric $1/f$ noise and instrumental systematics affect power-spectrum recovery. We present realistic end-to-end simulations to quantify these effects and evaluate a Filter-and-Bin (F&B) pipeline. The simulated observations include instrument response, astrophysical emission, atmospheric noise, and observing strategy. The pipeline suppresses atmospheric $1/f$ noise by about four orders of magnitude at low temporal frequencies while leaving only minor residual correlated noise. For a single EoR-Spec module operating at 50% observing efficiency, the DSS is expected to detect the combined [C II] + CO power spectrum on shot-noise-dominated scales ($k > 0.1\\,\\mathrm{Mpc}^{-1}$). With two modules operating at full efficiency, detections are achievable over all targeted spatial scales. The transfer function exceeds 80% at $k \\gtrsim 0.5\\,\\mathrm{Mpc}^{-1}$ but falls below 20% at $k \\lesssim 0.1\\,\\mathrm{Mpc}^{-1}$, indicating significant suppression of large-scale modes. These results demonstrate that the F&B pipeline is effective for recovering the shot-noise regime, while improved map-making techniques will be required for accurate large-scale clustering measurements.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "astro-ph.GA",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
+                        "@term": "astro-ph.IM",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-21T17:53:36Z",
+                "published": "2026-07-22T17:39:32Z",
+                "arxiv:comment": "19 pages, 15 figures, submitted to A&A",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "astro-ph.GA"
                 },
                 "author": [
                     {
-                        "name": "Yuchen Jiao"
+                        "name": "A. Dev"
                     },
                     {
-                        "name": "Na Li"
+                        "name": "C. Karoumpis"
                     },
                     {
-                        "name": "Changxiao Cai"
+                        "name": "Y. Okada"
                     },
                     {
-                        "name": "Yuxin Chen"
+                        "name": "K. Basu"
                     },
                     {
-                        "name": "Gen Li"
+                        "name": "F. Bertoldi"
+                    },
+                    {
+                        "name": "D. Chung"
+                    },
+                    {
+                        "name": "J. Clarke"
+                    },
+                    {
+                        "name": "R. Freundt"
+                    },
+                    {
+                        "name": "T. Nikola"
+                    },
+                    {
+                        "name": "T. Oak"
+                    },
+                    {
+                        "name": "D. Riechers"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.19332v1",
-                "title": "ROMS-IMLE: A Minimalist Approach to Competitive Single-Step Generative Modelling",
-                "updated": "2026-07-21T17:51:38Z",
+                "id": "http://arxiv.org/abs/2607.20402v1",
+                "title": "SoftReason: A Fully Differentiable Neuro-Soft-Symbolic Deductive Reasoning Architecture over High-Dimensional Perceptual Data",
+                "updated": "2026-07-22T17:38:39Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.19332v1",
+                        "@href": "https://arxiv.org/abs/2607.20402v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.19332v1",
+                        "@href": "https://arxiv.org/pdf/2607.20402v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Generative models have undergone many generations of evolution, from VAEs/GANs to diffusion/flow matching. Along the way, the underlying techniques have become more complicated and various beliefs about what drives strong empirical performance have taken hold. Due to the success of diffusion models and flow matching, one of the more common beliefs is the importance of transforming the noise distribution to the data distribution gradually through many small transformations. We ask whether this is truly necessary, and take a minimalist approach to designing a competitive generative model. We start with the bare-bones essentials, namely just a training objective and a model. We purposefully make both simple. For the training objective, we choose Implicit Maximum Likelihood Estimation (IMLE), and eschew more complicated alternatives such as variational inference, adversarial training and numerical integration. For the model, we eschew transformers and instead choose a moderately sized convolutional network. Then we judiciously added elements that are truly essential, which surprisingly do not include iterative denoising. The result is a single-step parameter-efficient generative model that produces high quality samples at fast speed: it achieves an FID of 2.56 on ImageNet 256 and simultaneously attains good precision and recall.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-21T17:51:38Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Chirag Vashist"
-                    },
-                    {
-                        "name": "Ke Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.19331v1",
-                "title": "ISO: An RLVR-Native Optimization Stack",
-                "updated": "2026-07-21T17:51:36Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.19331v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.19331v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning with verifiable rewards (RLVR) is rapidly advancing the reasoning capabilities of language models, yet the optimization layer that converts reward feedback into weight-space updates remains poorly understood. Building on our prior analysis (Zhu et al., 2025), we study this missing layer through the singular structure of model weights and identify spectral inheritance: RLVR can reuse the base model's weight spectra while acquiring new behavior through changes in the associated input and output singular frames.\n  We operationalize spectral inheritance as Isospectral Optimization (ISO), an RLVR-native, fixed-spectrum optimization framework with complementary offline and online instantiations. Offline, ISO-Merger combines the frame changes of shared-base specialists into a single fixed-spectrum model, requiring no post-merge data, rollouts, gradient updates, or on-policy distillation (OPD). It recovers complementary specialist capabilities and achieves the strongest aggregate performance among the compared data-free merging methods. Online, ISO-Optimizer applies a chosen base optimizer, including AdamW and Muon, to the frame variables while keeping the base spectra fixed. Across reasoning and coding tasks ranging from 1.5B to 8B parameters, ISO-Optimizer improves accuracy in the reported runs and reaches matched scores with substantially fewer training steps. On Qwen3-8B-Base, AdamW reaches an aggregate accuracy of 0.495 after 270 training steps. ISO-AdamW reaches the same accuracy after only 100 training steps and improves further to 0.509 after 210 training steps. Together, ISO offers a concrete answer to RLVR's missing optimization layer: rather than inheriting pre-training optimization wholesale, design post-training around the structure of reward-driven adaptation: inherit the spectrum, optimize the frames.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-21T17:51:36Z",
-                "arxiv:comment": "Preprint",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Hanqing Zhu"
-                    },
-                    {
-                        "name": "Wenyan Cong"
-                    },
-                    {
-                        "name": "Zhizhou Sha"
-                    },
-                    {
-                        "name": "Sagnik Mukherjee"
-                    },
-                    {
-                        "name": "Xinyuan Song"
-                    },
-                    {
-                        "name": "David Gonz\u00e1lez-Mart\u00ednez"
-                    },
-                    {
-                        "name": "Xiaoxia Wu"
-                    },
-                    {
-                        "name": "Yuandong Tian"
-                    },
-                    {
-                        "name": "Shiwei Liu"
-                    },
-                    {
-                        "name": "David Z. Pan"
-                    },
-                    {
-                        "name": "Zhangyang \"Atlas\" Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.19327v1",
-                "title": "Associative Emotional Learning in Convolutional Neural Networks",
-                "updated": "2026-07-21T17:49:19Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.19327v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.19327v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Associative emotional learning enables organisms to adaptively link pleasant or unpleasant outcomes to the presence of predictive stimuli. Whereas computational models such as the Rescorla-Wagner model have shed light on this important function, the limitations of these models are also known, especially when they are applied to neural data. The advent of deep neural networks has opened another avenue for modeling associative emotional learning. In this work we proposed a deep neural network model of visual valence processing, consisting of a visual module that encodes complex natural scenes and a module that recognizes their emotional significance in terms of valence, a key dimension of emotion, and tested a novel Pavlovian learning paradigm on the model. The results showed that with learning, the model reproduced several observations from human associative learning studies, including association formation and generalization, and that the neural representations of the conditioned and the unconditioned stimuli became increasingly aligned both at the single unit and at the neural population level. Comparison between the model and human experimental data provided further validation of our approach. This study thus suggests that deep neural network models, when combined with appropriate learning algorithms, can be used to model behavioral and neural signatures of associative emotion/valence learning.",
+                "summary": "In many reasoning problems, the premises are not observed as discrete symbols, but must be inferred from high-dimensional inputs. Further, the predicate vocabulary, argument structure, and trusted evidence are supplied by a Knowledge Graph (KG), or rule definitions. Classical neuro-symbolic pipelines have a discrete interface between perception and deduction. We present a neuro-soft-symbolic architecture for differentiable deductive reasoning over latent perceptual facts and knowledge-provided predicates. SoftReason removes the gradient gap by representing the deductive state as a local soft interpretation tensor over candidate constants and predicates. Perception proposes probabilistic base facts, KG triples enter as high-confidence soft evidence, and every query anchor, predicate choice, and closure update remains differentiable. Our core innovation is a learned differentiable lift of the immediate-consequence operator. It uses predicate-definition embeddings and latent composition channels to form soft body-predicate mixtures, aggregate over all possible witnesses, propose query-conditioned head facts, and update the interpretation through a monotone probabilistic OR. We instantiate the framework on Knowledge-aware Visual Question Answering (KVQA), and demonstrates how SoftReason supports end-to-end perceptual grounding, KG evidence injection, and differentiable deductive closure in one trainable architecture.",
                 "category": {
                     "@term": "cs.AI",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-07-21T17:49:19Z",
-                "arxiv:comment": "The article has been accepted for publication in Neural Computation",
+                "published": "2026-07-22T17:38:39Z",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
-                "author": [
-                    {
-                        "name": "Seowung Leem"
-                    },
-                    {
-                        "name": "Andreas Keil"
-                    },
-                    {
-                        "name": "Mingzhou Ding"
-                    },
-                    {
-                        "name": "Ruogu Fang"
-                    }
-                ]
+                "arxiv:journal_ref": "Proceedings of Machine Learning Research vol 284:1-2, 2026 20th Conference on Neurosymbolic Learning and Reasoning",
+                "author": {
+                    "name": "Wael AbdAlmageed"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2607.19326v1",
-                "title": "Selective State-Space Adaptation and Retrieval for Language Model Reasoning",
-                "updated": "2026-07-21T17:47:57Z",
+                "id": "http://arxiv.org/abs/2607.20399v1",
+                "title": "Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning",
+                "updated": "2026-07-22T17:35:43Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.19326v1",
+                        "@href": "https://arxiv.org/abs/2607.20399v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.19326v1",
+                        "@href": "https://arxiv.org/pdf/2607.20399v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    },
+                    {
+                        "@rel": "related",
+                        "@href": "https://doi.org/10.1109/Humanoids65713.2025.11264861",
+                        "@title": "doi"
+                    }
+                ],
+                "summary": "Full-sized humanoid robot capabilities have grown exponentially in recent years, aiming towards general-purpose deployment in human environments. A popular control method used by manufacturers utilizes Virtual Reality for upper-body teleoperation and Reinforcement Learning for lower-body balance and locomotion control. As a result, a single remote operator can see, manipulate, and navigate about a real, distant physical environment. This powerful control stack is often relegated to expensive full-sized robots, many of which are inaccessible to the research community. Miniature humanoids are more prevalent, but employ less biomimicry in their design (e.g. fewer sensors, Degrees of Freedom, etc) and lack similar developments. This paper describes a compliant full-body telepresence control stack developed from the ground up for miniature humanoids. Framework experimentation on ROBOTIS OP3 hardware showcases walking at speeds up to 0.45 m/s independent of arm motions. Tele-loco-manipulation is demonstrated via a cube relocation experiment with an expert human operator. On average, the teleoperated system moved 2 different 40 g cubes within 10 mins, walking a total distance of 5 m. Overall, the developed system shows potential for miniature humanoid tele-loco-manipulation.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.HC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-22T17:35:43Z",
+                "arxiv:comment": "8 pages, 6 figures. Accepted manuscript. Published in the 2025 IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids), pp. 1233-1240",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "arxiv:journal_ref": "2025 IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids), pp. 1233-1240 (2025)",
+                "author": [
+                    {
+                        "name": "Nicolas Kosanovic"
+                    },
+                    {
+                        "name": "Jordan Dowdy"
+                    },
+                    {
+                        "name": "Jean Chagas Vaz"
+                    }
+                ],
+                "arxiv:doi": "10.1109/Humanoids65713.2025.11264861"
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.20396v1",
+                "title": "The ICSE 2026 Shadow PC: Training the Next Generation of Reviewers Through Deliberate Practice",
+                "updated": "2026-07-22T17:32:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.20396v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.20396v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Low-rank adaptation introduces a static learned update applied identically to every input. The update provides task-level adaptation but does not explicitly represent token-level or instance-level state variation. A family of adapters is proposed that introduces selective state-space recurrence at two complementary granularities. At the token level, \\textbf{MaLoRA} (Mamba-modulated low-rank adaptation) makes the adapter's scaling factor a dynamic input-dependent function with recurrent state across tokens, in contrast to the stateless modulators of prior work. At the context level, \\textbf{MaRA} (Mamba Retrieval Adapter) tracks cross-segment state and selects the segments most relevant to the query, before the modulated language model generates its answer. Across three frozen backbones (Qwen-2.5-7B, Llama-3.1-8B, Gemma-2-9B) and two reasoning benchmarks (MuSiQue, 2WikiMultihopQA), the family improves reasoning accuracy on every cell of the $3{\\times}2$ grid, by $+6.8$ F1 ($+10.5\\%$ relative) on average and up to $+9.3$ F1 ($+18.2\\%$ relative) on the hardest cell over the LoRA baseline, and the token-level gains carry to RULER QA-2 under length stress.",
+                "summary": "Peer review is essential to software engineering research, yet reviewer training remains largely implicit. We describe the ICSE 2026 Shadow PC, a redesigned program emphasizing deliberate practice at scale. Key innovations include multi-phase structure with calibration and peer feedback, strict separation from the main PC, and a pathway toward leadership development. With 102 participants completing the program and reviewing 117 papers, 97% recommending the experience, and positive reception from authors (67% finding reviews helpful), the program demonstrates that rigorous reviewer training is achievable at scale. We share lessons learned and propose shadow PC area chairs as a mechanism for sustainable scaling and leadership development.",
                 "category": {
-                    "@term": "cs.CL",
+                    "@term": "cs.SE",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-07-21T17:47:57Z",
+                "published": "2026-07-22T17:32:26Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.SE"
                 },
                 "author": [
                     {
-                        "name": "Atahan Dokme"
+                        "name": "Christian K\u00e4stner"
                     },
                     {
-                        "name": "Larry Heck"
+                        "name": "Michael Hilton"
+                    },
+                    {
+                        "name": "Jonathan Bell"
+                    },
+                    {
+                        "name": "Francisco Gomes de Oliveira Neto"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.20389v1",
+                "title": "PercepCap: Video Captioner with Structured Spatio-Temporal Perception",
+                "updated": "2026-07-22T17:17:33Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.20389v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.20389v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Video captioning requires fine-grained spatio-temporal understanding of videos, including spatial perception of where objects are located and temporal perception of when events occur. Existing MLLMs usually generate captions directly from video inputs without exposing the perceptual evidence behind descriptions. As a result, mistakes in spatiotemporal perception are only observed in the final caption, making it difficult to identify the underlying perceptual errors directly. To address these issues, we present PercepCap, a perception-aware video captioning framework that makes perceptual evidence explicit before producing the final caption. Specifically, PercepCap follows a perceive-describe generation chain, where the model first produces a spatiotemporal perception trace comprising object trajectories and temporal events, and then generates the final caption conditioned on the perceived evidence. To support this, we design a two-stage training strategy. Perceive-then-Describe Supervised Fine-tuning adapts the model from caption-only generation to the proposed perceive-describe chain, while Perception-Grounded Reinforcement Learning optimizes perception trace and caption quality with joint rewards over perception chain and the final caption. To support our two-stage training, we introduce Caption-Anchored Perception Data Construction. This pipeline builds the SFT and RL training data by first generating a caption-only description, extracting the objects and events it mentions, and grounding them back in the video with boxes and timestamps. This yields caption-aligned perception data that provides solid training ground truth, ensuring that the explicit perception trace and final caption refer to the same objects and events. Across direct caption and caption-to-QA evaluation, PercepCap consistently improves upon the Qwen3-VL baseline and demonstrates leading caption quality.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-22T17:17:33Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yifan Xu"
+                    },
+                    {
+                        "name": "Zihao Wang"
+                    },
+                    {
+                        "name": "Zhixiao Wang"
+                    },
+                    {
+                        "name": "Jiaming Zhang"
+                    },
+                    {
+                        "name": "Yichun Yang"
+                    },
+                    {
+                        "name": "Desen Meng"
+                    },
+                    {
+                        "name": "Yuanxing Zhang"
+                    },
+                    {
+                        "name": "Pengfei Wan"
+                    },
+                    {
+                        "name": "Limin Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.20386v1",
+                "title": "Improved Monitoring of Honey bee Colony Strength via Audio IoT Sensors, Modulation Tensorgrams and Recurrent Neural Networks",
+                "updated": "2026-07-22T17:13:30Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.20386v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.20386v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Honey bees (Apis mellifera) play a crucial role in agriculture and ecosystem stability as key pollinators of crops and wild plants. As such, monitoring hive strength remotely with Internet of Things (IoT) sensors has become a crucial task. Previously, handcrafted features extracted from the modulation spectrum of audio IoT devices were shown to improve acoustic monitoring of colony strength. In this paper, we hypothesize that important discriminative information is present in the temporal dynamics of the modulation spectrum, but this information is discarded with prior methods. As such, we explore the use of a new modulation tensorgram where the time dimension is kept. This new representation is used as input to a convolutional neural network (CNN) and a convolutional recurrent deep neural networks (CRDNN). Using the public UrBAN dataset, which contains more than 3,000 hours of beehive audio recordings, we show that the proposed method improves both accuracy and cross-hive generalizability over prior benchmark methods, and the results further suggest improved robustness to noisy in-the-wild recording conditions. We use saliency maps and gradient-weighted class activation maps for explainability and show the importance of the modulation spectral temporal dynamics for the task at hand. Overall, our results suggest that accurate, generalizable, and robust acoustic monitoring of honey bee colony strength is possible.",
+                "category": {
+                    "@term": "eess.AS",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-22T17:13:30Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.AS"
+                },
+                "author": [
+                    {
+                        "name": "Mahsa Abdollahi"
+                    },
+                    {
+                        "name": "Yi Zhu"
+                    },
+                    {
+                        "name": "Heitor R. Guimar\u00e3es"
+                    },
+                    {
+                        "name": "Nico Coallier"
+                    },
+                    {
+                        "name": "S\u00e9gol\u00e8ne Maucourt"
+                    },
+                    {
+                        "name": "Pierre Giovenazzo"
+                    },
+                    {
+                        "name": "Tiago H. Falk"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.20382v1",
+                "title": "FMRP-LEAN: A HIPAA-Compliant AI-Augmented LIMS Architecture for End-to-End Clinical Assay Workflow Optimization",
+                "updated": "2026-07-22T17:11:52Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.20382v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.20382v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Clinical biomarker workflows in translational research settings often rely on spreadsheet-driven tracking, manual quality control (QC) reconciliation, and loosely integrated systems, resulting in limited state visibility, delayed reporting, and increased operational risk. These challenges are particularly pronounced in multi-day assays such as Luminex-based quantification of Fragile X Messenger Ribonucleoprotein (FMRP), where HIPAA-compliant data governance, deterministic workflow progression, and coordinated communication across laboratory and clinical teams are required. This paper presents FMRP-LEAN, a HIPAA-compliant, AI-augmented Laboratory Information Management System (LIMS) architecture that formalizes biospecimen lifecycle management through a finite-state workflow model with explicit transition guards and dwell-time observability. The system integrates a self-hosted Supabase/PostgreSQL stack deployed within hospital-controlled infrastructure, hybrid edge-internal isolation with encrypted tunneling and loopback-only services, and bi-directional REDCap synchronization. A unified MRN-UUIDv7 identifier framework with QR-based tracking ensures traceable clinical-research linkage under PHI residency constraints. FMRP-LEAN incorporates automated statistical QC pre-screening and a governance-constrained AI operations module that operates exclusively on aggregate projections, with deterministic fallback guarantees. Deployment demonstrates improved workflow observability, reduced QC latency, and enhanced cross-role transparency between laboratory technicians, research coordinators, and patient-facing teams. The architecture provides a reproducible model for secure, state-explicit, and AI-augmented clinical research workflows in regulated healthcare environments.",
+                "category": [
+                    {
+                        "@term": "cs.HC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.ET",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "physics.med-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "q-bio.NC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-22T17:11:52Z",
+                "arxiv:comment": "15 pages, 5 figures, conference",
+                "arxiv:primary_category": {
+                    "@term": "cs.HC"
+                },
+                "arxiv:journal_ref": "ISBCom-2026",
+                "author": [
+                    {
+                        "name": "Eva McCord"
+                    },
+                    {
+                        "name": "Ernest Pedapati"
+                    },
+                    {
+                        "name": "Zag ElSayed"
                     }
                 ]
             }
