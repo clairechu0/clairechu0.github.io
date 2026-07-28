@@ -5,588 +5,628 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-07-27T23:07:21Z",
+        "updated": "2026-07-28T01:56:11Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "596639",
+        "opensearch:totalResults": "597090",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2607.22535v1",
-                "title": "Robot-Factored World Models via Robot Rendering",
-                "updated": "2026-07-24T17:59:57Z",
+                "id": "http://arxiv.org/abs/2607.23753v1",
+                "title": "On the post-hoc Evaluation of PDE Discovery: A Multifaceted Challenge of Scientific Advancement",
+                "updated": "2026-07-26T16:58:42Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.22535v1",
+                        "@href": "https://arxiv.org/abs/2607.23753v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.22535v1",
+                        "@href": "https://arxiv.org/pdf/2607.23753v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Action-conditioned video world models predict future observations from an initial observation and an action signal. In robotics, actions influence future observations through two distinct processes: they are first realized into robot motion by the robot body and controller, and the scene then responds through contact and object motion. Conditioning directly on action commands asks the world model to learn the realization process itself, while conditioning on logged future states leaks the interaction outcomes it is meant to predict. We propose robot-factored world models, which move two robot-specific factors outside the world model. First, action realization: each command is rolled through the robot's own controller and kinematics into a deployment-available nominal trajectory, a middle signal that avoids both action-realization learning and future-state leakage. Second, robot rendering: this nominal trajectory is rendered through the robot URDF, factoring the robot's geometry, kinematics, and appearance out of the model and into explicit rendered robot geometry. To resolve depth ambiguity, we pair end-effector depth with scene depth, giving geometric cues for contact and occlusion beyond image-plane overlap. Together, camera-aware static RGB/depth context and rendered robot geometry form a shared visual world-model interface that stays consistent across viewpoints and robot embodiments, so the model sees the action only as visible robot geometry and learns how objects respond to it. Our experiments show that the rendered interface outperforms vector-conditioned baselines and generalizes to unseen robot embodiments at inference. We further demonstrate that our model generates robot manipulation videos from human demonstrations by retargeting and rendering the hand motion as robot geometry.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-24T17:59:57Z",
-                "arxiv:comment": "Project Page: https://bjkim95.github.io/rofacto/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Byungjun Kim"
-                    },
-                    {
-                        "name": "Taeksoo Kim"
-                    },
-                    {
-                        "name": "Hyunsoo Cha"
-                    },
-                    {
-                        "name": "Hanbyul Joo"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.22534v1",
-                "title": "SM4RT: Learning Structured Motion Geometry for 4D Reconstruction",
-                "updated": "2026-07-24T17:59:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.22534v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.22534v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Geometry Foundation Models (GFMs) have substantially advanced monocular 3D reconstruction, yet extending this capability to 4D dynamic understanding remains a fundamental challenge. Most existing motion perception methods (e.g., sparse tracking, dense point-wise flow) treat motion as independent point-wise displacements, ignoring the structured nature of physical motion. However, real-world objects usually obey rigid-body kinematics, and points thus usually move collectively, not in isolation. Motion itself possesses geometric structure: physical objects undergo a set of rigid-body transformations governed by SE(3), rather than unstructured point-wise displacements. Building on this insight, we propose SM4RT, a Structured Motion 4D Reconstruction Transformer for end-to-end 3D reconstruction and structured motion perception. SM4RT introduces Structure-of-Motion to represent scene dynamics, where scene motion is decomposed into a compact set of motion bases, each represented as a temporal sequence of 6D twists in SE(3). Dense scene motion is then recovered by sparse, time-shared per-pixel assignment weights over these bases, ensuring points on the same object share a common rigid-body motion trajectory. SM4RT introduces a parallel motion geometry encoder and decoder that jointly infer 3D geometry, world-coordinate motion, and scene kinematic structure in a single forward pass from monocular RGB video. SM4RT achieves strong motion reconstruction performance while preserving the geometric structure of scene motion.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-24T17:59:51Z",
-                "arxiv:comment": "Code is available at: https://github.com/wzzheng/SM4RT",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Shing Ho J. Lin"
-                    },
-                    {
-                        "name": "Wenzhao Zheng"
-                    },
-                    {
-                        "name": "Dong Zhuo"
-                    },
-                    {
-                        "name": "Yuqi Wu"
-                    },
-                    {
-                        "name": "Jie Zhou"
-                    },
-                    {
-                        "name": "Jiwen Lu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.22531v1",
-                "title": "Twins: Learn to Predict Unified Representations with Focal Loss",
-                "updated": "2026-07-24T17:59:39Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.22531v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.22531v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Unified multimodal models seek a shared visual token space that supports both multimodal understanding and image generation. Discrete methods unify the interface via a shared codebook, whereas continuous pipelines often rely on two disparate representations -- semantic features (e.g., ViT) for understanding and low-level latents (e.g., VAE) for synthesis -- resulting in mismatched latent spaces. We propose Twins, a unified continuous token space formed by channel-wise concatenating ViT and VAE features on the same token grid, so the sequence length is unchanged and attention cost does not increase. However, jointly modeling Twins in a Diffusion Transformer exposes a severe optimization imbalance: the model fits the ViT component well but struggles to match the VAE latent distribution. We trace this imbalance to three sources of heterogeneity: frequency bias, intrinsic dimensionality, and condition-aligned vs condition-independent uncertainty. To address it, we adapt a focal regression objective for flow matching that upweights large-error VAE dimensions, better balancing optimization across the ViT and VAE components. On ImageNet, this yields up to 10.57 gFID gain over naive MSE loss without classifier-free guidance. Twins also performs competitively on multimodal understanding benchmarks and improves reconstruction fidelity, narrowing the gap between understanding- and generation-oriented representations.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-24T17:59:39Z",
-                "arxiv:comment": "ICML 2026. Code: https://github.com/Tencent-Hunyuan/Twins",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Kaixiong Gong"
-                    },
-                    {
-                        "name": "Xin Cai"
-                    },
-                    {
-                        "name": "Bin Lin"
-                    },
-                    {
-                        "name": "Hao Wang"
-                    },
-                    {
-                        "name": "Yunlong Lin"
-                    },
-                    {
-                        "name": "Mingzhe Zheng"
-                    },
-                    {
-                        "name": "Bohao Li"
-                    },
-                    {
-                        "name": "Jian-Wei Zhang"
-                    },
-                    {
-                        "name": "Miles Yang"
-                    },
-                    {
-                        "name": "Zhao Zhong"
-                    },
-                    {
-                        "name": "Liefeng Bo"
-                    },
-                    {
-                        "name": "Xiangyu Yue"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.22530v1",
-                "title": "ViTacWorld: Scaling Visuo-Tactile World Models for Contact-Rich Robot Manipulation",
-                "updated": "2026-07-24T17:59:33Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.22530v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.22530v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Contact-rich robot manipulation requires physical interaction cues that are often invisible to cameras, making tactile sensing essential for robust control. However, scaling visuo-tactile robot learning remains difficult because real tactile interaction data are expensive to collect, hardware-dependent, and limited in task and scene diversity. We present ViTacWorld, an action-conditioned visuo-tactile world model for scalable contact-rich robot manipulation. ViTacWorld leverages public real tactile datasets and a constructed simulation environment to scale visuo-tactile-action data, exploiting the fact that tactile signals are directly grounded in physical contact and can exhibit a smaller simulation-to-real gap than purely visual observations. The model is first pretrained with large-scale real and simulated visuo-tactile trajectories, and then finetuned with real-world policy rollouts to better match downstream manipulation behaviors. Given robot actions, ViTacWorld predicts temporally aligned visual observations and tactile feedback, enabling visuo-tactile-action rollout generation. To the best of our knowledge, ViTacWorld is the first framework that uses a world model for robot visuo-tactile-action trajectory generation and policy evaluation. It serves two roles: synthesizing rollouts to improve downstream tactile policies, and evaluating policies by predicting action-conditioned visuo-tactile outcomes under controlled action sequences. Experiments on contact-rich manipulation tasks show that ViTacWorld generates physically meaningful rollouts, improves policy performance through scalable data augmentation, and enables action-conditioned policy evaluation. Project page: https://vitacworld.github.io/",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-24T17:59:33Z",
-                "arxiv:comment": "18 pages, 6 figures, 5 tables. Project page: https://vitacworld.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Yunao Huang"
-                    },
-                    {
-                        "name": "Shiyu Sang"
-                    },
-                    {
-                        "name": "Haotao Lu"
-                    },
-                    {
-                        "name": "Suting Ni"
-                    },
-                    {
-                        "name": "Shijie Wu"
-                    },
-                    {
-                        "name": "Ziyang Guo"
-                    },
-                    {
-                        "name": "Ye Shi"
-                    },
-                    {
-                        "name": "Jingya Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.22529v1",
-                "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
-                "updated": "2026-07-24T17:59:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.22529v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.22529v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verification reliability: environment-bound methods obtain precise feedback but confine learning to narrow domains, while open-ended self-generation broadens the task space but lacks reliable verification, allowing misleading rewards to pollute the training loop. We identify agent skills as a powerful middle ground to reconcile this tension: each skill ensures deep, verifiable execution in a specific scenario, while dynamic routing across skills maintains open-ended task variety. Leveraging this insight, we introduce Skill Self-Play (Skill-SP), a co-evolutionary framework comprising a proposer, a solver, and a dynamic skill controller. Orchestrated via a reinforcement learning loop, these components co-evolve in a continuous self-play loop: the proposer generates challenging tasks conditioned on dynamically sampled skills; the solver explores candidate solutions to push its capability boundaries; and the skill controller collects execution feedback to update and expand the skill library. This interactive co-evolution effectively bridges the gap between structured verification and open-ended exploration. Empirical evaluations on tool-use and reasoning benchmarks demonstrate that Skill-SP, serving as a robust evolution engine, consistently pushes the performance ceiling of competent backbones while catalyzing striking turnarounds for initially misaligned models. Our code is available at https://github.com/Qwen-Applications/skill-self-play.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-24T17:59:22Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Siyuan Huang"
-                    },
-                    {
-                        "name": "Pengyu Cheng"
-                    },
-                    {
-                        "name": "Haotian Liu"
-                    },
-                    {
-                        "name": "Tao Chen"
-                    },
-                    {
-                        "name": "Yihao Liu"
-                    },
-                    {
-                        "name": "Jingwei Ni"
-                    },
-                    {
-                        "name": "Shijie Zhou"
-                    },
-                    {
-                        "name": "Ziyi Yang"
-                    },
-                    {
-                        "name": "Gangwei Jiang"
-                    },
-                    {
-                        "name": "Mengyu Zhou"
-                    },
-                    {
-                        "name": "Yu Cheng"
-                    },
-                    {
-                        "name": "Xiaoxi Jiang"
-                    },
-                    {
-                        "name": "Guanjun Jiang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.22525v1",
-                "title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
-                "updated": "2026-07-24T17:56:38Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.22525v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.22525v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    },
-                    {
-                        "@rel": "related",
-                        "@href": "https://doi.org/10.1007/978-3-031-87778-0_14",
-                        "@title": "doi"
-                    }
-                ],
-                "summary": "To effectively integrate AI into high-stakes, critical environments such as healthcare, autonomous driving, and aviation--and to advance toward higher levels of automation and seamless human-AI collaboration--building trust in AI-driven solutions is essential. Trust, in turn, is closely linked to the explainability of AI systems. The rapid advancements in AI across various domains have underscored the challenges of establishing trust, raising increasing interest in AI explainability even more when applied to deep learning. In this context, the present work aims to explore the application of explainability techniques to Reinforcement Learning (RL) algorithms, specifically within the safety-critical domain of Air Traffic Control (ATC). Using a simplified ATC environment as an initial testbed, an intelligent agent is trained with a reinforcement learning algorithm to make decisions on alternative flight routes that avoid no-fly zones. As a preliminary explainability approach, a saliency map is employed, providing insights into the input features that most significantly influence the agent's decision-making process.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-24T17:56:38Z",
-                "arxiv:comment": "11 pages (10-page paper plus 1 cover/citation page), 4 figures, 1 table; published in AINA 2025",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "arxiv:journal_ref": "In: L. Barolli (ed.), Advanced Information Networking and Applications (AINA 2025), Lecture Notes on Data Engineering and Communications Technologies, vol. 250, pp. 148-157, Springer, Cham (2025)",
-                "author": [
-                    {
-                        "name": "Anduel Mehmeti"
-                    },
-                    {
-                        "name": "Gabriella Gigante"
-                    },
-                    {
-                        "name": "Salvatore Venticinque"
-                    }
-                ],
-                "arxiv:doi": "10.1007/978-3-031-87778-0_14"
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.22524v1",
-                "title": "Machine-Checked Arithmetic Bit Complexity of the Kannan-Bachem Smith Normal Form in Lean 4",
-                "updated": "2026-07-24T17:56:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.22524v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.22524v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We formalize in Lean 4 the Kannan-Bachem Smith normal form algorithm for nonsingular square integer matrices. The program returns $S,U,U^{-1},V,V^{-1}$ and proves $UAV=S$, $U^{-1}SV^{-1}=A$, four inverse identities, the Smith divisibility conditions, and equality of $S$ with a canonical reference matrix. Stabilization terminates because each recursive pass strictly decreases the binary size of the active pivot; the outer algorithm recurses on the lower-right block. The computation also emits a flat trace of designated sign-magnitude arithmetic leaves. Branch conditions, quotients, Bezout data, and matrix entries are taken from the recorded primitive runs. Composite phases form their traces by concatenating the charge lists returned by the executed children. Verified self-delimiting codecs define the input and output sizes. Coefficient and work recurrences, closed by a kernel-checked polynomial-envelope calculus, give fixed polynomial bounds for both trace cost and the encoded length of the five output matrices. The theorem concerns these arithmetic primitives; structural operations and compiled Lean runtime are outside the model.",
-                "category": [
-                    {
-                        "@term": "cs.LO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-24T17:56:21Z",
-                "arxiv:comment": "23 pages. Accompanying Lean 4 formalization: https://github.com/JJYYY-JJY/lean-normal-forms",
-                "arxiv:primary_category": {
-                    "@term": "cs.LO"
-                },
-                "author": {
-                    "name": "Junye Ji",
-                    "arxiv:affiliation": "University of Washington"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.22518v1",
-                "title": "PinEqualizer: Full Funnel Content Exploration and Debiasing System at Pinterest",
-                "updated": "2026-07-24T17:41:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.22518v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.22518v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In this paper, we propose a new solution for addressing the content cold-start problem in industry-scale search and recommender systems. Compared to prior approaches, we have made the following new contributions: 1) our solution spans the entire multi-stage funnel and generalizes well for both search and recommendation surfaces, 2) our solution reduces bias favoring existing content, allowing more accurate model prediction across content types and reducing short-term tradeoffs associated with high volumes of explicit content exploration, 3) our solution is evaluated with a scalable measurement framework that enables fast short-term experimentation while validating long-term impact. We have iteratively built and successfully deployed this new system at Pinterest in the past two years and observed significant improvements in fresh content exploration, overall user engagement, and content ecosystem health.",
-                "category": [
-                    {
-                        "@term": "cs.IR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-24T17:41:28Z",
-                "arxiv:comment": "10 pages, 2 figures. Accepted at KDD 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.IR"
-                },
-                "author": [
-                    {
-                        "name": "Olafur Gudmundsson"
-                    },
-                    {
-                        "name": "Bo Zhao"
-                    },
-                    {
-                        "name": "Huayi Liao"
-                    },
-                    {
-                        "name": "Anna Kiyantseva"
-                    },
-                    {
-                        "name": "Sai Xiao"
-                    },
-                    {
-                        "name": "Heath Vinicombe"
-                    },
-                    {
-                        "name": "Mostafa Keikha"
-                    },
-                    {
-                        "name": "Luke DeLuccia"
-                    },
-                    {
-                        "name": "Zihao Chen"
-                    },
-                    {
-                        "name": "Junpeng Hou"
-                    },
-                    {
-                        "name": "Weijie Jiang"
-                    },
-                    {
-                        "name": "Bhawna Juneja"
-                    },
-                    {
-                        "name": "Andreanne Lemay"
-                    },
-                    {
-                        "name": "Wei-Ting Lin"
-                    },
-                    {
-                        "name": "Keyvan Moghadam"
-                    },
-                    {
-                        "name": "Jiaxing Qu"
-                    },
-                    {
-                        "name": "Zhiqing Rao"
-                    },
-                    {
-                        "name": "Zhihua Zhang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.22516v1",
-                "title": "Quantum Spectral Model: Data Reuploading with Input-Conditioned Frequency Support",
-                "updated": "2026-07-24T17:39:14Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.22516v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.22516v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "A central design principle in modern machine learning and artificial intelligence is to align a model's inductive bias with the structure of its input data. For matrix-valued inputs, relevant matrix-level relationships can be characterised through spectral values and spectral subspaces; however, common coordinate-wise rotation-gate data-encoding unitaries used in most quantum machine learning models do not explicitly construct such a matrix-level representation. We introduce Quantum Spectral Models (QSMs), in which we construct the generator of the data-encoding unitary directly from each input matrix. We study three QSM variants based on symmetric, global block, and non-overlapping patch-local block Hamiltonians. Their outputs admit truncated Fourier representations in which input-dependent spectral gaps supply candidate phase carriers, while spectral subspaces help determine their coefficients. We evaluate the QSMs and comparison quantum models on two matrix representations of Pendigits and two controlled synthetic tasks defined by spectral statistics. At the largest evaluated circuit depth, QSM variants lead the tested quantum models in mean test accuracy across all four benchmarks. The patch-local QSM leads on Pendigits, whereas the global block-Hamiltonian QSM leads on the controlled spectral tasks. Ablations show a task-dependent reversal: subspace-preserving controls perform better on Pendigits, whereas spectral-value-only controls lead among the tested ablations on the synthetic tasks. Together, these results shed new light on quantum machine-learning model design by showing how input-conditioned spectral representations can provide an analysable inductive bias, while offering a broader perspective on structure-aware model design in machine learning and artificial intelligence.",
-                "category": [
-                    {
-                        "@term": "quant-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-24T17:39:14Z",
-                "arxiv:comment": "53 pages, many figures",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": [
-                    {
-                        "name": "Peiyong Wang"
-                    },
-                    {
-                        "name": "Udaya Parampalli"
-                    },
-                    {
-                        "name": "Casey R. Myers"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.22514v1",
-                "title": "Dysphagia Risk Stratification in Head and Neck Cancer via Two-Stage PRO-Clinical Stacking",
-                "updated": "2026-07-24T17:34:26Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.22514v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.22514v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Dysphagia is a debilitating late effect of head and neck cancer (HNC) treatment, yet timely identification of at-risk patients remains challenging in survivorship care. Definitive assessment relies on videofluoroscopic imaging, as captured by the Dynamic Imaging Grade of Swallowing Toxicity (CTCAE-DIGEST), which, while validated, requires specialized equipment, trained personnel, and significant patient burden, limiting its routine use in surveillance. Patient-reported outcomes (PROs), by contrast, are low-cost, scalable, and easily collected at any clinical encounter, making them an attractive alternative signal for identifying patients who may warrant further evaluation. However, a clear clinical framework for translating PRO responses into actionable interventions is still evolving. In particular, uncertainty remains regarding when a patient's self-reported symptom burden should prompt escalation of care.\n  This study addresses this gap by formulating a single-visit PRO-clinical prediction framework and introducing a clinically interpretable two-stage stacking model to predict swallowing impairment risk using PRO responses and structured clinical variables, without requiring videofluoroscopic imaging. The proposed framework quantifies the independent contributions of patient-reported symptoms and clinical factors within a unified and interpretable risk assessment model. Our findings demonstrate that individual MDADI responses contain predictive information beyond that captured by composite or global summary scores, while interpretability analyses reveal symptom patterns and clinical risk factors associated with swallowing impairment. Together, these results support the use of structured PRO-clinical integration as a practical, imaging-free approach for dysphagia risk stratification in HNC survivorship.",
+                "summary": "Partial differential equation (PDE) discovery aims to identify from data the governing law of a physical system. Constituting a cornerstone of scientific advancement, it has become during the past decade a major line of research in the rapidly evolving field of Physics-informed Machine Learning (PiML). Among the remaining open problems to address in this domain, the post-hoc evaluation of discovered PDEs raises the particular difficulty of being multifaceted. Indeed, it requires jointly considering predictive accuracy, physical consistency, interpretability, and out-of-distribution generalization capacity. Given that some of these properties are conflicting, it is worth noting that the wide range of existing evaluation metrics only partially address the overall problem, potentially leading to overly interpreted conclusions about the validity of a presumed new physical theory. From an abundant literature spanning machine learning, numerical analysis, information theory or symbolic regression, we propose, to our knowledge, the first taxonomy of PDE evaluation metrics, and discuss their advantages and limitations in depth. Based on the observation that evaluation is often achieved on a case-by-case basis and that a universally accepted methodology remains elusive, we further provide recommendations with the aim of promoting standardized and reliable practices, before sketching promising future lines of research in this field. We argue that this paper is intended both for ML experts who design new PDE discovery algorithms and for users of these methods aiming, in real applications, to discover and validate well-founded scientific laws.",
                 "category": {
                     "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-07-24T17:34:26Z",
+                "published": "2026-07-26T16:58:42Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Siyuan Zhao"
+                        "name": "Baptiste Mathevon"
                     },
                     {
-                        "name": "Eric Ababio Anyimadu"
+                        "name": "Farah Cherfaoui"
                     },
                     {
-                        "name": "Zachary G. Brumm"
+                        "name": "Amaury Habrard"
                     },
                     {
-                        "name": "Yue Ma"
-                    },
-                    {
-                        "name": "Clifton David Fuller"
-                    },
-                    {
-                        "name": "Xinhua Zhang"
-                    },
-                    {
-                        "name": "G. Elisabeta Marai"
-                    },
-                    {
-                        "name": "Guadalupe Canahuate"
+                        "name": "Marc Sebban"
                     }
                 ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.23751v1",
+                "title": "Soft-Constrained Optimization of Latent Space in Variational Autoencoders",
+                "updated": "2026-07-26T16:52:35Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.23751v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.23751v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The usefulness of a variational autoencoder (VAE) depends on two properties of its latent space that are hard to obtain together: high encoding capacity in the individual latent variables, and a low-dimensional, disentangled organization of those variables. Weakening the Kullback-Leibler regularization raises capacity but degrades disentanglement, while strengthening it prunes latent variables away entirely. We formulate VAE training as a soft-constrained optimization problem that addresses both. First, we impose an entropy-based constraint (EC) on individual latent variables, showing that the entropy of a latent code upper-bounds the mutual information it carries about the generative factors of the data. Second, we propose a weight-filter method that exploits the slack of the soft constraint to prune low-entropy dimensions during downstream training. On dSprites, the EC raises the aggregate latent-variable activation score by 43-62% over a vanilla VAE, attains the highest FactorVAE score among the \\b{eta} \\b{eta}-VAE variants (0.891 vs 0.847), and lowers reconstruction error by up to 38%. On MNIST, the weight filter reduces the latent dimensionality supplied to a downstream classifier from ten to two while holding accuracy above 90%, converging in 37% fewer epochs than the same procedure without the EC. We also find that low-entropy discrete factors tend to merge into a single latent variable, whereas high-entropy continuous factors are distributed across several.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-26T16:52:35Z",
+                "arxiv:comment": "12 figures, 7 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Ye Shi"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.23749v1",
+                "title": "Breaking the Loop: An Empirical Comparison of Strategies for Novelty and Freshness in YouTube Music",
+                "updated": "2026-07-26T16:50:34Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.23749v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.23749v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    },
+                    {
+                        "@rel": "related",
+                        "@href": "https://doi.org/10.1145/3773078.3831876",
+                        "@title": "doi"
+                    }
+                ],
+                "summary": "Continuously trained ranking models in music recommenders fall into feedback loops where previously consumed items dominate recommendations. This suppresses two distinct content classes: new releases (temporal freshness) and unlistened catalog items (novelty). Industry practitioners have a wide menu of interventions available, ranging from serving-time heuristics, training-data reweighting, architectural debiasing, to uncertainty-driven exploration, each of which are well understood in academic settings. But live systems offer challenges with continuously ingested content, interconnected components, and practical limitations that counteract the findings from academic research.\n  We report results from off-policy online A/B tests for six interventions and a combination experiment across four conceptual layers (serving, training, architecture, exploration) on the YouTube Music homepage. All interventions modify the ranking model or the serving layer that consumes its scores; candidate generation and other upstream components are held fixed. We discuss key takeaways from our results: first, serving-time interventions on continuously trained systems are neutralized by the learning loop. Second, architectural debiasing reduces popularity dominance and improves diversity but does not create discovery, while carrying hidden integration costs. Finally, uncertainty-driven exploration interventions with a Spectral-normalized Neural Gaussian Process (SNGP) head produce the largest new-release lift, though they come with a measurable engagement or diversity tradeoff. We close with recommendations on which layer to intervene at, and the hidden costs of each choice.",
+                "category": {
+                    "@term": "cs.IR",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-26T16:50:34Z",
+                "arxiv:comment": "Accepted at 20th ACM Conference on Recommender Systems, September 27-October 02, 2026, Minneapolis, MN, USA. 8 pages",
+                "arxiv:primary_category": {
+                    "@term": "cs.IR"
+                },
+                "author": [
+                    {
+                        "name": "Srivaths Ranganathan"
+                    },
+                    {
+                        "name": "Zihuan Diao"
+                    },
+                    {
+                        "name": "Bernardo Cunha"
+                    },
+                    {
+                        "name": "Joshua L. Moore"
+                    },
+                    {
+                        "name": "Robin Dumas"
+                    },
+                    {
+                        "name": "Murat Goksedef"
+                    },
+                    {
+                        "name": "Yanwei Song"
+                    },
+                    {
+                        "name": "Mukai Lu"
+                    },
+                    {
+                        "name": "Gergo Varady"
+                    },
+                    {
+                        "name": "Tracy Pesin"
+                    }
+                ],
+                "arxiv:doi": "10.1145/3773078.3831876"
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.23743v1",
+                "title": "Learning Traversability-Aware Global Planners for Long Horizon Off-Road Navigation",
+                "updated": "2026-07-26T16:36:35Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.23743v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.23743v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Autonomous navigation across large off-road environments remains a challenging problem. Onboard sensors perceive only the immediate surroundings, yet safe and efficient routes depend on terrain features that extend well beyond the sensor horizon. Geo-spatial data sources such as satellite imagery, aerial LiDAR, and vector maps can close this gap, but learning traversability from them is difficult: dense labels are unavailable at scale, and existing methods rely on short-range sensing. We propose an efficient formulation that learns a continuous traversability map from overhead data, supervised directly by human-driven GPS trajectories and shaped by self-supervised geometric priors from LiDAR. Alongside the model, we release a public dataset of 299 scenes spanning $\\sim\\!1{,}244\\,\\mathrm{km}^{2}$ of diverse terrain, paired with $1{,}130\\,\\mathrm{km}$ of human driving. In field trials on a Clearpath Warthog across seven routes at two sites, our method achieves trajectories within $3.66\\%$ of human path length and reduces operator interventions by $\\sim\\!85\\%$ compared to local-planner-only autonomy.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-26T16:36:35Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Kasi Viswanath"
+                    },
+                    {
+                        "name": "Jason M. Gregory"
+                    },
+                    {
+                        "name": "Shaunak Kolhe"
+                    },
+                    {
+                        "name": "Srikanth Saripalli"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.23740v1",
+                "title": "Zing: Social Mind for LLMs",
+                "updated": "2026-07-26T16:25:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.23740v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.23740v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "As large language models move from isolated task solving toward long-term service in human environments, they require social intelligence: the ability to infer mental states, track social relations, reason over norms, and adapt behavior under context. This report presents Zhijing, an integrated framework for measuring, internalizing, and grounding social intelligence. For measurement, we introduce SoMBench, a psychology-grounded benchmark spanning 3 primary dimensions, 17 secondary dimensions, and 71 task paradigms. It controls question format, narrative perspective, and context length across 284 shared scenarios and 3,481 expert-verified instances. Evaluation of 20 representative LLMs reveals substantial headroom: the best model achieves only 72.08% overall accuracy, and none of the 17 secondary dimensions reaches the 90% near-ceiling band. For internalization, we develop Zing, a diagnosis-driven training recipe combining supervised fine-tuning, on-policy distillation, and rubric-based reinforcement learning. Across five social-cognition benchmarks, Zing consistently outperforms its base models, with Zing-27B-Stage2 achieving the best average score and Zing-32B-Stage2 remaining competitive with DeepSeek-V4-Pro. For deployment-time grounding, we build Actio, a harness-controlled inference architecture that routes four typed supports into reasoning: PRISM for procedural guidance, Starling for runtime mental-state representation, SAGE for reusable experience, and gated RAG for external social and normative knowledge. Across five base models and three benchmarks, the full harness improves 14 of 15 model-benchmark pairs and is best or tied for best in 8, demonstrating the effectiveness of typed runtime support. Together, these results show that socially intelligent LLMs require coordinated advances in evaluation, parametric internalization, and deployment-time grounding.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-26T16:25:45Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Zing Team"
+                    },
+                    {
+                        "name": "Ao Xiang"
+                    },
+                    {
+                        "name": "Bi Jingping"
+                    },
+                    {
+                        "name": "Chen Jiahui"
+                    },
+                    {
+                        "name": "Chen Lehan"
+                    },
+                    {
+                        "name": "Chen Yilin"
+                    },
+                    {
+                        "name": "Cheng Xueqi"
+                    },
+                    {
+                        "name": "Fan Yixing"
+                    },
+                    {
+                        "name": "Gan Kairong"
+                    },
+                    {
+                        "name": "Gao Haowen"
+                    },
+                    {
+                        "name": "Gao Jinhua"
+                    },
+                    {
+                        "name": "Gao Shuxuan"
+                    },
+                    {
+                        "name": "Gong Chang"
+                    },
+                    {
+                        "name": "Guo Jiafeng"
+                    },
+                    {
+                        "name": "Guo Ruijie"
+                    },
+                    {
+                        "name": "Han Zhouyu"
+                    },
+                    {
+                        "name": "He Guangfu"
+                    },
+                    {
+                        "name": "He Yichun"
+                    },
+                    {
+                        "name": "Jiang Shuo"
+                    },
+                    {
+                        "name": "Jing Shaoling"
+                    },
+                    {
+                        "name": "Jing Ya"
+                    },
+                    {
+                        "name": "Lei Chenhao"
+                    },
+                    {
+                        "name": "Lei Yan"
+                    },
+                    {
+                        "name": "Li Anqi"
+                    },
+                    {
+                        "name": "Li Chengao"
+                    },
+                    {
+                        "name": "Li Haoyu"
+                    },
+                    {
+                        "name": "Li Shitian"
+                    },
+                    {
+                        "name": "Liang Xinjian"
+                    },
+                    {
+                        "name": "Liu Zhaoge"
+                    },
+                    {
+                        "name": "Lyu Xingyu"
+                    },
+                    {
+                        "name": "Nie Zhuwei"
+                    },
+                    {
+                        "name": "Pang Liang"
+                    },
+                    {
+                        "name": "Quan Zeping"
+                    },
+                    {
+                        "name": "Shan Shiguang"
+                    },
+                    {
+                        "name": "Shen Huawei"
+                    },
+                    {
+                        "name": "Tang Xinran"
+                    },
+                    {
+                        "name": "Tian Feng"
+                    },
+                    {
+                        "name": "Wang Qian"
+                    },
+                    {
+                        "name": "Wang Ruiping"
+                    },
+                    {
+                        "name": "Wang Xiaohong"
+                    },
+                    {
+                        "name": "Xia Zaiyu"
+                    },
+                    {
+                        "name": "Xiao Yi"
+                    },
+                    {
+                        "name": "Xu Jiayuan"
+                    },
+                    {
+                        "name": "Xu Kehan"
+                    },
+                    {
+                        "name": "Xu Qianqian"
+                    },
+                    {
+                        "name": "Xu Tianyu"
+                    },
+                    {
+                        "name": "Xu Yongjun"
+                    },
+                    {
+                        "name": "Yang Haoming"
+                    },
+                    {
+                        "name": "Yang Jun"
+                    },
+                    {
+                        "name": "Yao Di"
+                    },
+                    {
+                        "name": "Yu Xiaoming"
+                    },
+                    {
+                        "name": "Zhang Futong"
+                    },
+                    {
+                        "name": "Zhang Jie"
+                    },
+                    {
+                        "name": "Zhang Shixuan"
+                    },
+                    {
+                        "name": "Zhang Yuxuan"
+                    },
+                    {
+                        "name": "Zhao Xinyu"
+                    },
+                    {
+                        "name": "Zhao Zhuoran"
+                    },
+                    {
+                        "name": "Zhong Yunfei"
+                    },
+                    {
+                        "name": "Zhu Shengyu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.23738v1",
+                "title": "Cross-System Neural Precoder: Exploiting Structural Consistency for Fast Adaptation",
+                "updated": "2026-07-26T16:12:55Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.23738v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.23738v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Adapting learning-based precoding across different system configurations is challenging due to multiple types of variables and constraints. While large-scale neural networks have been proposed for cross-task adaptation, whether such adaptability requires large models remains unclear. In this paper, we identify a structural property of a class of precoding problems: the subproblems associated with each type of variable in alternative optimization (AO) share a common computational structure across systems when other variables are fixed. This structural consistency enables the reuse of update rules across systems. Based on this observation, we propose a cross-system neural precoder (XNP), where each layer implements AO-inspired update equations, which define the layer-wise input-output mappings. By reusing common update structures and learning only lightweight nonlinear mappings, the XNP enables efficient adaptation across systems only with several thousand trainable parameters. Simulation results show that pre-trained XNPs achieve fast adaptation to new configurations with significantly fewer training samples and epochs than a graph neural network-based baseline. This demonstrates that cross-system adaptability can be achieved by exploiting shared computational structure, rather than relying on large models.",
+                "category": {
+                    "@term": "eess.SP",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-26T16:12:55Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.SP"
+                },
+                "author": [
+                    {
+                        "name": "Jia Guo"
+                    },
+                    {
+                        "name": "Chenyang Yang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.23735v1",
+                "title": "Source-Free Controlled Adaptation of Teachers for Continual Test-Time Adaptation",
+                "updated": "2026-07-26T16:06:18Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.23735v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.23735v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In many real-world scenarios, encountering continual shifts in domain during inference is very common. Consequently, continual test-time adaptation (CTTA) techniques leveraging a teacher-student framework have gained prominence, allowing models to adapt continuously even after deployment. In such a framework, a weight-averaged mean teacher is used to produce pseudo-labels from test data for self-training. The mean teacher gets updated as an exponential moving average of the student parameters using a high value of momentum that is kept fixed even if different distributions of test data are encountered. To combat the resulting drift of the model, we propose a novel controlled teacher adaptation methodology that dynamically sets a proper momentum value depending on the quality of the incoming data. Additionally, we estimate class prototypes from the source pretrained model to help align the target data as they come in. Importantly, our method does not require access to source data or its statistics at any stage of the pipeline, making it truly source-free. We perform extensive experiments on benchmark datasets to demonstrate that our approach outperforms different state-of-the-art adaptation frameworks, many of which require access to source data.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-26T16:06:18Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Anurag Roy"
+                    },
+                    {
+                        "name": "Riddhiman Moulick"
+                    },
+                    {
+                        "name": "Vinay Kumar Verma"
+                    },
+                    {
+                        "name": "Saptarshi Ghosh"
+                    },
+                    {
+                        "name": "Abir Das"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.23734v1",
+                "title": "TRUAV: Distributed Multi-Agent Reinforcement Learning for Trajectory Planning and Routing Enhancement in UAV-Aided IoT-Enabled VANETs",
+                "updated": "2026-07-26T16:06:08Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.23734v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.23734v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Unmanned aerial vehicles (UAVs) have emerged as a key enabler of next-generation Internet of Things (IoT) ecosystems, offering flexible aerial relaying to extend connectivity across dynamic vehicular ad hoc networks (VANETs) in smart city environments. However, conventional centralized approaches for UAV trajectory planning require continuous global network state aggregation, making them impractical under bandwidth and energy constraints typical of dense urban deployments. In this article, we present TRUAV, a distributed multi-agent reinforcement learning framework based on independent tabular Q-learning for joint UAV trajectory planning and routing enhancement in UAV-aided VANETs. Each UAV is equipped with a local Q-learning agent that operates purely on locally observable information, including vehicle density, packet queue states, and neighbor UAV positions, thereby eliminating the need for global state exchange. A potential-game-inspired reward design encourages spatial diversity and routing-aware UAV positioning among interacting agents while accounting for energy consumption. Numerical simulations over a large urban area with 200 mobile vehicles show that the proposed TRUAV framework achieves network coverage and packet delivery ratios comparable to centralized deep reinforcement learning methods, while also improving relay delay and energy efficiency. Finally, we discuss emerging challenges and future research directions for distributed multi-agent UAV-assisted IoT systems.",
+                "category": [
+                    {
+                        "@term": "cs.NI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-26T16:06:08Z",
+                "arxiv:comment": "7 pages, 3 figures, submitted to IEEE Internet of Things Magazine",
+                "arxiv:primary_category": {
+                    "@term": "cs.NI"
+                },
+                "author": [
+                    {
+                        "name": "Muhammad Umar Farooq Qaisar"
+                    },
+                    {
+                        "name": "Lin Zhang"
+                    },
+                    {
+                        "name": "Zhen Chen"
+                    },
+                    {
+                        "name": "Wajdy Othman"
+                    },
+                    {
+                        "name": "Shehzad Ashraf Chaudhry"
+                    },
+                    {
+                        "name": "Chang Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.23733v1",
+                "title": "AI Strategy: How to Choose What AI Product to Implement",
+                "updated": "2026-07-26T16:05:39Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.23733v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.23733v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Firms struggle to choose AI projects that pay off: two projects can look equally promising to smart, motivated stakeholders and yet deserve opposite decisions. At the residential real-estate brokerage Compass, one AI product (Likely-to-Sell recommendations) flagged sales outreach opportunities and went on to account for nine figures in annual gross commission revenue. Another championed AI product (a Time-on-Market pricing tool) was rightly shelved. A simple ROI estimate could not distinguish the two. We present expected ROI (eROI), a framework that decomposes each bet into three components and rates them separately: Value if Successful, Likelihood of Success, and Investment Required. Each maps to a question executives can answer before building: How valuable would it be if it worked? How likely is it to work? And what would it cost to implement? Separating the three breaks a common catch-22: teams cannot estimate ROI until they know whether a project will work, yet cannot know whether it will work without building it. Judging Value if Successful on its own dissolves the loop, letting a team argue that a product would be valuable if it worked while it weighs how likely that is. The framework also asks, before ranking anything, whether there are enough good ideas on the table. After ranking, it guides assembling a portfolio of bets rather than funding only the single top-ranked project. We illustrate eROI on Compass's candidate AI products. Precise ROI estimates are hard to make given the inherent uncertainty of AI projects. Coarse business-level ratings of the three components are enough to tell strong bets from weak ones.",
+                "category": [
+                    {
+                        "@term": "cs.CY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "econ.GN",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.AP",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-26T16:05:39Z",
+                "arxiv:comment": "27 pages, 2 figures, 1 table. Submitted to Big Data (SAGE)",
+                "arxiv:primary_category": {
+                    "@term": "cs.CY"
+                },
+                "author": [
+                    {
+                        "name": "Foster Provost"
+                    },
+                    {
+                        "name": "Panos Ipeirotis"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.23731v1",
+                "title": "Outcome-Confounded Local Supervision in On-Policy Distillation",
+                "updated": "2026-07-26T16:03:33Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.23731v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.23731v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "On-policy distillation (OPD) trains a student on its own trajectories while a teacher supplies dense token-level likelihoods at student-visited prefixes. These likelihoods are often read locally: agreement appears safe to imitate, whereas disagreement appears to identify an error. We show that both readings are confounded by the outcome of the completed trajectory. We introduce an outcome-resolved diagnostic that crosses pointwise teacher-student divergence with final-answer correctness, separating safe imitation, productive divergence, harmful divergence, and agreement-on-failure. In an eight-seed mathematical-reasoning study with a Qwen3-8B student and Qwen3-32B teacher, agreement-on-failure constitutes 67.84% of pooled response-token mass; with a Qwen2.5-7B/32B pair it remains 67.68%. The result persists across threshold, sequence-level, format, and truncation audits. Even on prompts that the Qwen3 teacher solves in all four independent attempts, student accuracy rises to 86.91% but agreement-on-failure remains 14.76%. We then run three matched training probes that use the available signals to imitate, mask, or contrast whole trajectories; none consistently reduces agreement-on-failure. The result points to a localization limitation: local divergence paired with a trajectory-level outcome does not identify where a failed trajectory became unrecoverable. Addressing this limitation requires additional positional information, such as process labels, teacher continuations from student prefixes, or token-level alignment across rollouts. Our contribution is therefore diagnostic rather than a new training method.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-26T16:03:33Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Guoqing Ma"
+                }
             }
         ]
     }
