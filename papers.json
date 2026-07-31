@@ -5,201 +5,287 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-07-30T23:57:05Z",
+        "updated": "2026-07-31T05:59:28Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "598132",
+        "opensearch:totalResults": "598568",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2607.27203v1",
-                "title": "Do You Really Need to Pretrain Q-Functions for Online RL Fine-Tuning?",
-                "updated": "2026-07-29T17:59:51Z",
+                "id": "http://arxiv.org/abs/2607.28628v1",
+                "title": "Learning to Trace Seiberg Dualities",
+                "updated": "2026-07-30T17:59:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.27203v1",
+                        "@href": "https://arxiv.org/abs/2607.28628v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.27203v1",
+                        "@href": "https://arxiv.org/pdf/2607.28628v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Pre-training followed by fine-tuning has become the dominant recipe for learning performant policies, and in value-based reinforcement learning (RL) this raises a natural question: given a pretrained policy, should the Q-function be pretrained on offline data too? Conventional wisdom suggests it should, but recent results show that online RL with a randomly-initialized Q-function can result in highly performant and reliable policies without needing to pretrain the Q-function. In this paper, we systematically study whether pretraining the Q-function actually helps when fine-tuning on top of a pretrained base policy. We find, surprisingly, that naive Q-function pretraining often provides little benefit over random initialization. We show this stems from a fundamental mismatch: the Q-function learned during pretraining targets the pretrained policy's Q-function, not the Q-function that online fine-tuning converges to, and this gap persists even after offline value maximization. Motivated by this finding, we propose Initialization via Policy Ensemble (IPE), a simple method that trains multiple diverse policies and uses their pooled rollouts to bootstrap the Q-function learning in online RL. Across a suite of challenging continuous control benchmarks, IPE yields an average 1.26x improvement in fine-tuning performance over naive Q-function pre-training.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-29T17:59:51Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Perry Dong"
-                    },
-                    {
-                        "name": "Ron Polonsky"
-                    },
-                    {
-                        "name": "Dorsa Sadigh"
-                    },
-                    {
-                        "name": "Chelsea Fin"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.27199v1",
-                "title": "Settling the Optimal Exponent Relating Sumsets and Difference Sets",
-                "updated": "2026-07-29T17:59:19Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.27199v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.27199v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "For a finite nonempty subset $A$ of an abelian group, let $\u03c3(A)=|A+A|/|A|$ and $\u03b4(A)=|A-A|/|A|$. The classical sum-difference inequalities state that $$\u03c3(A)^{1/2}\\leq\u03b4(A)\\leq\u03c3(A)^2.$$ The exponent $2$ in the second inequality is known to be optimal, whereas it has remained open whether the exponent $1/2$ in the first inequality can be improved. We settle this question by constructing an explicit family of finite sets $A_K\\subset\\mathbb{Z}$ such that $$\\frac{\\log\u03c3(A_K)}{\\log\u03b4(A_K)}\\longrightarrow 2,$$ hence the exponent $1/2$ in the first inequality is also optimal. The construction and its proof were developed with the assistance of Hyra, an AI research agent based on the open-weights Hy3 model.",
-                "category": {
-                    "@term": "math.CO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-29T17:59:19Z",
-                "arxiv:primary_category": {
-                    "@term": "math.CO"
-                },
-                "author": [
-                    {
-                        "name": "Haowei Lin"
-                    },
-                    {
-                        "name": "Shanda Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.27196v1",
-                "title": "From Classification to Regression: Using a Fruitfly to Solve Equations",
-                "updated": "2026-07-29T17:58:05Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.27196v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.27196v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present a novel approach to regression tasks using classification which is motivated by the mechanism used by fruitflies to sense their environment. Specifically, we formulate a general framework for learning nonlinear input-output relationships by replacing complex global surrogate models with a finite library of representative local patterns. Since scientific data often occupy limited and recurring regions of the input space, we generate predictions by measuring similarities between a query and stored patterns, then combining their associated responses through weighted reconstruction. We apply this approach to nonlinear dynamical systems, data-driven regression, and physics-informed learning using suitable embeddings and similarity measures. For dynamical systems, our offline-online workflow extracts patterns from data or governing equations during the offline phase, while online prediction requires only similarity evaluation and response aggregation. This structure helps us reduce computational and memory demands while providing explicit control over the trade-off among accuracy, storage, and inference cost.",
+                "summary": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establish when two systems are dual, even when all of the \"rules of the game\" are well-known. Said differently, when confronted with two systems, how can one efficiently establish that they are in fact dual? In this paper we use machine learning methods to address this question for Seiberg dualities of supersymmetric quiver gauge theories. Mathematically, this involves establishing mutations of quivers, which is in turn a variation on the theme of \"learning to unknot\". On the one hand, this leads us to a practical tool for establishing the computational complexity of different dualities. On the other hand, it also allows us to study how different network architectures learn how to trace Seiberg dualities. We find that for quivers with a modest number of quiver nodes (of order $10$), different network architectures consisting of transformers and multi-layer perceptrons tend to outperform deterministic algorithms. Supplementing the network by well-established pathfinder algorithms (essentially \"Google Maps for quivers\") leads to an additional improvement in the efficiency and accuracy of the search strategy. We anticipate that this class of questions can serve as a useful benchmark for frontier AI models applied to theoretical physics.",
                 "category": [
+                    {
+                        "@term": "hep-th",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "math.NA",
+                        "@term": "hep-ph",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-29T17:58:05Z",
+                "published": "2026-07-30T17:59:56Z",
+                "arxiv:comment": "59 pages + appendices, 38 figures. Code and tools available at https://github.com/alexmininno/GNN-Pathfinders",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "hep-th"
                 },
                 "author": [
                     {
-                        "name": "Shady E. Ahmed"
+                        "name": "Jonathan J. Heckman"
                     },
                     {
-                        "name": "Panos Stinis"
+                        "name": "Shani Meynet"
+                    },
+                    {
+                        "name": "Alessandro Mininno"
+                    },
+                    {
+                        "name": "Gary Shiu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.27194v1",
-                "title": "VidMap: Exploiting Temporal Structure for Video-Based Structure-from-Motion",
-                "updated": "2026-07-29T17:58:04Z",
+                "id": "http://arxiv.org/abs/2607.28627v1",
+                "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
+                "updated": "2026-07-30T17:59:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.27194v1",
+                        "@href": "https://arxiv.org/abs/2607.28627v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.27194v1",
+                        "@href": "https://arxiv.org/pdf/2607.28627v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Accurately recovering the camera's calibration and metric poses for any unconstrained video would unlock large-scale training data for navigation and scene understanding. The dominant approaches to this problem are severely limited: Simultaneous Localization and Mapping (SLAM) is sensitive to initialization and transient failures due to its causal, incremental nature; it is often over-optimized for real-time operation and generally requires known camera calibration; while Structure-from-Motion (SfM) typically forgoes any image ordering, enabling optimal initialization and global optimization, but lacks robustness to visual symmetries and extreme motions. To bridge this gap, we introduce a system that combines the strong sequential constraints of SLAM with the flexibility and global optimization of offline SfM, enabling the metric reconstruction of arbitrary, long, uncalibrated videos. This system leverages recent advances in wide-baseline dense image matching, treats temporal ordering as a first-class citizen for reliable loop closure, and augments global optimization with metric monocular depth priors. As a result, thorough evaluations on diverse, challenging datasets that exhibit extreme motion and visual symmetries reveal that our approach is significantly more robust and accurate than both state-of-the-art SLAM and SfM, classical or learned, with given or unknown camera calibration. The code is publicly available at https://github.com/cvg/vidmap.",
+                "summary": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints. We present ReToken, a single learnable embedding trained as an explicit retrieval target that selects a sparse set of query-relevant visual tokens from a pre-filled visual KV cache. Trained on only a small image-QA dataset, ReToken yields consistent gains across image and video benchmarks: on Visual Haystacks it improves Qwen3VL-8B by 13.4 points and InternVL3.5 by 12.4 points (>20% relative), and on LVBench it transfers zero-shot to long video for an 8.0-point gain with Qwen3VL-8B. Thanks to its lightweight design, both training and long-video inference fit on a single H100. Code is available at: https://github.com/avaxiao/ReToken",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.RO",
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-29T17:58:04Z",
+                "published": "2026-07-30T17:59:56Z",
+                "arxiv:comment": "Code: https://github.com/avaxiao/ReToken",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Zador Pataki"
+                        "name": "Yao Xiao"
                     },
                     {
-                        "name": "Paul-Edouard Sarlin"
+                        "name": "Reuben Tan"
                     },
                     {
-                        "name": "Marc Pollefeys"
+                        "name": "Zhen Zhu"
+                    },
+                    {
+                        "name": "Yuqun Wu"
+                    },
+                    {
+                        "name": "Jianfeng Gao"
+                    },
+                    {
+                        "name": "Derek Hoiem"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.27191v1",
-                "title": "Can AI agents conduct open-ended AI research? Early evidence from two case studies",
-                "updated": "2026-07-29T17:57:19Z",
+                "id": "http://arxiv.org/abs/2607.28625v1",
+                "title": "ACE-Data-0: Human-Centric Ambient Capture as Embodied Data Engine",
+                "updated": "2026-07-30T17:59:50Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.27191v1",
+                        "@href": "https://arxiv.org/abs/2607.28625v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.27191v1",
+                        "@href": "https://arxiv.org/pdf/2607.28625v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Forecasts of explosive AI progress hinge on AI agents automating AI research. But evidence on whether agents can carry out open-ended AI research is thin. Current evaluations either test agents on narrow, verifiable tasks, which excludes open-ended research, or submit AI-generated papers to blind peer review, which is overstretched, stochastic, and suffers from poor review quality. We introduce a third way to measure progress towards AI R\\&D automation. An agent takes on the central, open-ended research question of a high-quality unpublished paper, and the paper's original authors grade its output. We call these shadow evaluations. We ran shadow evaluations on two unpublished NeurIPS 2026 submissions, giving frontier agents six days and thousands of dollars of compute. The agents completed all of the engineering without human help, yet could not make substantial progress towards answering the research questions. As a result, both papers were unambiguously rejected by the authors. We identify five recurring failure modes: poor judgment about the bar for publishable research, uncreative responses to shortcomings in the research design, ineffective backtracking from dead ends, poor resource awareness, and instruction drift. A robustness check with a second model and scaffold reproduced these failures. We release the expert reviews, survey responses, agent repositories, and logs. Our results provide early evidence that today's agents can do the engineering of AI research, but struggle with critical parts of the research lifecycle.",
+                "summary": "Embodied intelligence faces a fundamental data bottleneck. Models must capture how first-person perception, whole-body motion, dexterous manipulation, object state, sound, and touch evolve together as humans pursue goals over time. Existing datasets fragment this experience across viewpoints, modalities, or spatial scales, leaving the full perception-action loop only partially observed. We introduce the Ambient Capture Engine (ACE), a human-centric data engine that transforms real home environments into spatially calibrated, temporally synchronized recording studios. ACE operates at two complementary scales: a table-scale configuration resolves hand-object manipulation, while a room-scale configuration captures whole-body motion, locomotion, and interactions across a furnished home. ACE records egocentric and multi-view exocentric video, full-body and articulated hand motion, object geometry and 6-DoF trajectories, audio, and tactile signals as a unified multisensory stream. Using ACE, we build ACE-Data-0, comprising 150 hours and 17M video frames across 200 task categories, performed by 50 participants in 2 environments, for a total of 75,000 interaction episodes. The dataset spans atomic manipulation, long-horizon chains of household activities, and human-scene interaction, while preserving natural behavioral variation through goal-level rather than step-by-step instructions. We further introduce a hierarchical benchmark that progresses from signals to scene components and then to interactions. Evaluations of state-of-the-art methods expose substantial gaps under contact, occlusion, egomotion, and long temporal horizons. ACE-Data-0 provides synchronized human demonstrations with aligned perceptual, kinematic, and contact supervision, offering a scalable foundation for imitation learning, world models, vision-language-action systems, and embodied AI.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-30T17:59:50Z",
+                "arxiv:comment": "Project Page: https://ace-data-engine.github.io/ACE-Data-0/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yukang Cao"
+                    },
+                    {
+                        "name": "Haozhe Xie"
+                    },
+                    {
+                        "name": "Beichen Wen"
+                    },
+                    {
+                        "name": "Runmao Yao"
+                    },
+                    {
+                        "name": "Yinghao Liu"
+                    },
+                    {
+                        "name": "Yue Huang"
+                    },
+                    {
+                        "name": "Zhichao Liao"
+                    },
+                    {
+                        "name": "Yunxiang Wang"
+                    },
+                    {
+                        "name": "Haiheng Liu"
+                    },
+                    {
+                        "name": "Xingshun Tian"
+                    },
+                    {
+                        "name": "Dawei Su"
+                    },
+                    {
+                        "name": "Long Zhuo"
+                    },
+                    {
+                        "name": "Dacheng Tao"
+                    },
+                    {
+                        "name": "Xiaogang Wang"
+                    },
+                    {
+                        "name": "Liang Pan"
+                    },
+                    {
+                        "name": "Ziwei Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.28624v1",
+                "title": "PhiZero: A World Model Built Around Physical Language",
+                "updated": "2026-07-30T17:59:46Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.28624v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.28624v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future videos directly in pixel space, leaving the underlying world dynamics implicit within high-dimensional visual predictors. Motivated by humans' ability to abstract predictive structure from visual experience and organize it in natural language for explicit reasoning, we learn physical language from in-the-wild videos through self-supervision and use it to explicitly reason about how the physical world evolves. Accordingly, PhiZero adopts a reason-then-render paradigm: it first infers future world evolution as a physical-language sequence and then renders the inferred transitions into videos. Extensive experiments across generation and understanding benchmarks validate the ability of PhiZero to model physically coherent world evolution. We further show its potential for realistic and interactive world modeling, fine-grained action-conditioned simulation, and zero-shot motion transfer.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-30T17:59:46Z",
+                "arxiv:comment": "Project page: https://phi-zero.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Shuyao Shang"
+                    },
+                    {
+                        "name": "Yuqi Wang"
+                    },
+                    {
+                        "name": "Ruopeng Gao"
+                    },
+                    {
+                        "name": "Xu Chen"
+                    },
+                    {
+                        "name": "Tieniu Tan"
+                    },
+                    {
+                        "name": "Lue Fan"
+                    },
+                    {
+                        "name": "Zhaoxiang Zhang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.28618v1",
+                "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
+                "updated": "2026-07-30T17:59:11Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.28618v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.28618v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemble cross-paper answers manually. We present AskChem, a claim-centered infrastructure for cross-paper chemistry search. AskChem changes the unit of retrieval from the paper to the provenance-carrying claim: each paper is converted into atomic, typed claims, each grounded by a source DOI and a verbatim quote or an explicit evidence locator. Over this shared claim store, AskChem exposes complementary structures for search and synthesis: a stabilized faceted taxonomy for hierarchical retrieval and browsing, an evidence graph linking claims through relations, and an exploratory living taxonomy that situates indexed papers under scientific principles. AskChem currently indexes 2.4M claims from 147K papers and provides a web interface, as well as REST, SDK, and MCP access for AI agents. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs, compared with 88.3% without retrieval, and the highest citation density among five tested systems. AskChem is live at https://askchem.org.",
                 "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CY",
+                        "@term": "cs.IR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -207,344 +293,388 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-29T17:57:19Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Peter Kirgis"
-                    },
-                    {
-                        "name": "Sayash Kapoor"
-                    },
-                    {
-                        "name": "Andrew Schwartz"
-                    },
-                    {
-                        "name": "Stephan Rabanser"
-                    },
-                    {
-                        "name": "David Africa"
-                    },
-                    {
-                        "name": "Konstantinos Voudouris"
-                    },
-                    {
-                        "name": "Viet Nguyen"
-                    },
-                    {
-                        "name": "Toby Pilditch"
-                    },
-                    {
-                        "name": "Magda Dubois"
-                    },
-                    {
-                        "name": "Harry Coppock"
-                    },
-                    {
-                        "name": "Cozmin Ududec"
-                    },
-                    {
-                        "name": "Nitya Nadgir"
-                    },
-                    {
-                        "name": "Matilda Orona"
-                    },
-                    {
-                        "name": "Tilman Bayer"
-                    },
-                    {
-                        "name": "Derrick Chan-Sew"
-                    },
-                    {
-                        "name": "Yue Ling"
-                    },
-                    {
-                        "name": "Abhishek Shetty"
-                    },
-                    {
-                        "name": "Helen Toner"
-                    },
-                    {
-                        "name": "Gillian Hadfield"
-                    },
-                    {
-                        "name": "Seth Lazar"
-                    },
-                    {
-                        "name": "Steve Newman"
-                    },
-                    {
-                        "name": "Shoshannah Tekofsky"
-                    },
-                    {
-                        "name": "Rishi Bommasani"
-                    },
-                    {
-                        "name": "Arvind Narayanan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.27188v1",
-                "title": "Inverse Learning of Latent Risk-Neutral Densities from Irregular Option Quotes",
-                "updated": "2026-07-29T17:56:20Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.27188v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.27188v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Accurate option prices do not imply accurate recovery of the latent risk-neutral density. We study this distinction with two complementary benchmarks. A controlled benchmark exposes simulator-truth densities for latent evaluation, while a chronological NIFTY benchmark tests only held-out market prices. A two-component lognormal mixture has the lowest aggregate price, $L^1$, Wasserstein, and fixed-tail errors on the synthetic benchmark. Learned operators retain narrower strengths: DeepONet reduces 1% quantile and variance error by 39.0% and 34.6% relative to the mixture, and a quote transformer reduces $L^1$ by 16.4% on the structurally misspecified Merton family. A numerical conditioning analysis explains why these rankings can differ: after enforcing mass and forward constraints, 95 of 126 pricing directions are numerically null, and two densities separated by $L^1 = 0.061$ produce identical prices on the covered strikes. On 524 held-out NIFTY calls, validation-selected test-time adaptation reduces DeepONet RMSE by 28.3%, but per-expiry mixture and SVI fits remain much more accurate. The evidence supports target-dependent inductive bias, not a universal winner.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "q-fin.CP",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "q-fin.PR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "q-fin.ST",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-29T17:56:20Z",
-                "arxiv:comment": "7 pages, 4 figures, 2 tables. Submitted to the 7th ACM International Conference on AI in Finance (ICAIF 2026)",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Lennon J. Shikhman"
-                    },
-                    {
-                        "name": "Michael Galarnyk"
-                    },
-                    {
-                        "name": "Aadi Dash"
-                    },
-                    {
-                        "name": "Nicholas A. Welsh"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.27183v1",
-                "title": "Pangram 4 Technical Report",
-                "updated": "2026-07-29T17:53:01Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.27183v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.27183v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present Pangram 4, the latest deep-learning-based AI-text classification model from Pangram Labs. We achieve an AUROC of 0.9916 with a false positive rate of 0.0041% and a false negative rate of 0.3396%. In addition to its increased overall accuracy compared with Pangram 3, Pangram 4 exhibits superior out-of-distribution generalization and robustness to adversarial attacks. Another novel contribution of Pangram 4 is its improved ability to distinguish fine-grained edits and mixed AI-human co-authored text. We demonstrate improvements to both boundary detection tasks and the detection of interleaved AI assistance. Finally, we report metrics on standard AI detection benchmarks showing that Pangram 4 achieves state-of-the-art performance on the AI text detection task across a wide variety of settings and domains.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-29T17:53:01Z",
+                "published": "2026-07-30T17:59:11Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Ben Glickenhaus"
+                        "name": "Bing Yan"
                     },
                     {
-                        "name": "Katherine Thai"
+                        "name": "Gregory Wolfe"
                     },
                     {
-                        "name": "Jenna Russell"
+                        "name": "Stefano Martiniani"
                     },
                     {
-                        "name": "Elyas Masrour"
-                    },
-                    {
-                        "name": "Yue Han"
-                    },
-                    {
-                        "name": "Max Spero"
-                    },
-                    {
-                        "name": "Bradley Emi"
+                        "name": "Kyunghyun Cho"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.27179v1",
-                "title": "The Social Cost of an AI Teammate: How an Artificial Teammate Reshapes Human-Human Communication in Small-Team Decision-Making",
-                "updated": "2026-07-29T17:51:32Z",
+                "id": "http://arxiv.org/abs/2607.28617v1",
+                "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+                "updated": "2026-07-30T17:58:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.27179v1",
+                        "@href": "https://arxiv.org/abs/2607.28617v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.27179v1",
+                        "@href": "https://arxiv.org/pdf/2607.28617v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Conversational AI is increasingly positioned as a teammate rather than a tool, yet we know little about how its presence reshapes communication among the humans on the team. We examined sociocognitive communication dynamics in team decision-making using Group Communication Analysis (GCA), team surveys, and lexical analyses of team discourse. Teams completed a high-stakes moral-dilemma decision task in a randomized controlled study: 16 teams of two students plus an AI teammate, and 17 all-human teams of three. Across six GCA dimensions and survey outcomes, we find that the AI teammate was the single most talkative and self-cohesive member of every treatment team, yet its contributions carried the least new information and the lowest density. The presence of AI also reshaped communication amongst humans. In AI-human teams, human teammates showed lower responsivity and social impact toward one another and reported lower levels of belonging and status. Greater AI dominance in the conversation was associated with students feeling less valued as team members. Additionally, this social cost is immediate and present at baseline; it does not emerge over the course of the conversation. Drawing on these results, we discuss a research agenda extending to voice-based and longitudinal settings.",
+                "summary": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the wide deployment of AI systems. In this paper, we introduce Artificial Intelligence System Prompt Assurance (AISPA), a user-centric framework for systematically auditing system prompts in AI systems. AISPA examines specific parts of a system prompt and evaluates them along eight dimensions that matter to users. We then use this framework to review 3,249 instructions from system prompts in 88 commercial AI products, classifying each instruction as either protective (of users) or problematic. Our audit surfaces four core findings. First, system prompt design varies substantially across products and developers, with some organizations averaging over 60 protective instructions per product while others average fewer than 5. Second, protective instructions are widely adopted but shallow in scope: 98.9% of products contain at least one, yet only 24% cover all eight dimensions of the AISPA taxonomy. Third, system prompts have grown steadily longer and more protective of users, suggesting that user protection is becoming a more visible concern in commercial prompt design. Fourth, despite this progress, problematic instructions remain pervasive: roughly 40% of products contain at least one instruction that works against user interests, and protective and problematic instructions frequently coexist within the same prompt. Our findings highlight the need for greater transparency, standardization, and independent oversight for system prompts in commercial AI products.",
                 "category": [
                     {
-                        "@term": "cs.HC",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.CY",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.HC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-29T17:51:32Z",
+                "published": "2026-07-30T17:58:58Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.HC"
+                    "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Nia Nixon"
+                        "name": "Xiangning Lin"
                     },
                     {
-                        "name": "Jaeyoon Choi"
+                        "name": "Shenzhe Zhu"
                     },
                     {
-                        "name": "Pedro Martins De Bastos"
+                        "name": "Shu Yang"
                     },
                     {
-                        "name": "Mohammad Amin Samadi"
+                        "name": "Zhenyu Zhang"
                     },
                     {
-                        "name": "Luise Mehner"
+                        "name": "Haoqian Zhang"
                     },
                     {
-                        "name": "Seehee Park"
+                        "name": "Yipeng Zhao"
                     },
                     {
-                        "name": "Spencer JaQuay"
+                        "name": "Chengxuan Qian"
+                    },
+                    {
+                        "name": "Tianwei Wang"
+                    },
+                    {
+                        "name": "Ziheng Zhang"
+                    },
+                    {
+                        "name": "Zhenlong Yuan"
+                    },
+                    {
+                        "name": "Dingcheng Wang"
+                    },
+                    {
+                        "name": "Juncheng Wu"
+                    },
+                    {
+                        "name": "Yuan Si"
+                    },
+                    {
+                        "name": "Jiaxin Liu"
+                    },
+                    {
+                        "name": "Baolong Bi"
+                    },
+                    {
+                        "name": "Robert Mahari"
+                    },
+                    {
+                        "name": "Tobin South"
+                    },
+                    {
+                        "name": "Dazza Greenwood"
+                    },
+                    {
+                        "name": "Zexue He"
+                    },
+                    {
+                        "name": "Rishi Bommasani"
+                    },
+                    {
+                        "name": "Sophia Kazinnik"
+                    },
+                    {
+                        "name": "Andreas Haupt"
+                    },
+                    {
+                        "name": "Samuele Marro"
+                    },
+                    {
+                        "name": "Erik Brynjolfsson"
+                    },
+                    {
+                        "name": "Alex Pentland"
+                    },
+                    {
+                        "name": "Jiaxin Pei"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.27177v1",
-                "title": "Partner Capability Estimation for Task-Agnostic Adaptation in Ad-Hoc Teamwork",
-                "updated": "2026-07-29T17:50:39Z",
+                "id": "http://arxiv.org/abs/2607.28610v1",
+                "title": "Learning Arbitrary Lindbladians from Time Evolution",
+                "updated": "2026-07-30T17:58:01Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.27177v1",
+                        "@href": "https://arxiv.org/abs/2607.28610v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.27177v1",
+                        "@href": "https://arxiv.org/pdf/2607.28610v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Effective collaboration with novel and diverse partners is a crucial skill for autonomous agents. Most current ad-hoc teamwork (AHT) approaches assume that agents will collaborate on a single, fixed task and that the partner's capabilities, their ability to successfully execute the desired action, are already known. In reality, a partner's true capabilities are often hidden, and human collaborators may act sub-optimally on tasks with multiple valid strategies. To address these limitations, we extend ad-hoc teamwork into a multi-task setting by re-framing it as a problem of joint planning with decentralised execution under hidden partner capabilities. We introduce CE-CM (Capability Estimation via Contextual Models), an approximate Bayesian method that infers task-invariant capability vectors. By using simulation-based sampling, the agent estimates capabilities and induces a contextual Multi-agent Markov Decision Processes for planning. This approach requires no population pre-training and refines its beliefs online from just a few tasks. To account for human unpredictability, we propose CE-CM-Div, an extension that evaluates capability hypotheses against diverse planner rollouts rather than a single optimal trajectory. Simulated experiments demonstrate that CE-CM rapidly recovers hidden capabilities, reduces infeasible action assignments, and adapts to changes over time. Furthermore, in an offline human study of 225 trajectories from 15 participants, CE-CM-Div substantially improved capability estimates over the baseline CE-CM method. Our results suggest capability-based modelling is a promising interpretable, task-agnostic representation in the studied settings, demonstrating that accounting for behavioural diversity is essential for robust human-AI teaming.",
+                "summary": "We study the problem of learning an unknown Markovian open-system generator from access to its physical time evolution. This generator, called a Lindbladian, contains Hamiltonian and dissipative coefficients indexed by an exponentially large family of possible Pauli terms. We propose an efficient algorithm that learns arbitrary Lindbladians from time evolution under minimal assumptions. For a Lindbladian of dynamical strength at most $\u039b$, the algorithm estimates every coefficient to error $\u03b5$ using $\\widetilde O(\u039b^2/\u03b5^2)$ experiments and $\\widetilde O(\u039b/\u03b5^2)$ total evolution time, together with polynomial classical running time. The algorithm consists of two nonadaptive, ancilla-free, and control-free stages: 1. The support-learning stage outputs a candidate support of size $\\mathrm{poly}(\u039b/\u03b7)$ that contains every Hamiltonian and dissipative coordinate of magnitude at least $\u03b7$, using $\\widetilde O(\u039b^2/\u03b7^2)$ experiments with preparations of product Pauli eigenstates and single-qubit Pauli measurements. 2.The coefficient-learning stage estimates all coefficients in any candidate support of size $M$ to error $\u03b5$, using $\\widetilde O(\u039b^2\\log M/\u03b5^{2})$ experiments with preparations of random stabilizer states and measurements in random Clifford bases. Composing the two stages identifies and estimates every coefficient of an arbitrary Lindbladian in polynomial time. The experiment-count and total-evolution-time scalings match the lower bounds up to logarithmic factors, so the algorithm is nearly optimal for learning arbitrary Lindbladians.",
+                "category": [
+                    {
+                        "@term": "quant-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.DS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-30T17:58:01Z",
+                "arxiv:comment": "45 pages",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Zhili Chen"
+                    },
+                    {
+                        "name": "Zhan Yu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.28609v1",
+                "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+                "updated": "2026-07-30T17:57:41Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.28609v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.28609v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Computer-using agents (CUAs) are advancing rapidly across the digital world. A CUA trajectory records the agent's actions, states, and reasoning. Verifying whether it fulfilled the task instruction is central to CUA evaluation, data curation, and reinforcement learning. Neither human-written verifiers nor human annotators can provide such verification at scale, so the field increasingly turns to vision-language models (VLMs) as judges of CUA trajectories. But a fundamental question has long gone unexamined: are these VLM judges reliable enough? To study it systematically, we introduce OSReward, a realistic, high-quality benchmark that evaluates VLM judges on CUA trajectories. The trajectories come from diverse agent backbones executing human-verified instructions across platforms, then rigorously labeled with ground-truth verdicts through multi-stage human annotation. Building on it, we derive OSReward-Hard, a challenge set concentrating genuinely hard cases, and OSReward-Multi for fine-grained efficiency and alignment scoring. The most comprehensive evaluation of VLM judges to date finds even state-of-the-art models fall short of an ideal judge, sharing a systematic leniency bias that mislabels failed runs as successes. The few reliable enough to trust are too expensive to run at scale, while affordable open models trail far behind. To close this gap, we construct and release OS-Shepherd-100K, an open corpus of reasoning-annotated trajectory judgments for the CUA community. On it, we train OS-Shepherd (9B and 35B), open reward models that supply low-cost, stable, and reliable reward signals, matching commercial judges at 30-60% lower cost than the frontier. Extensive analyses further inform the design of reliable CUA reward at scale. Our code, benchmark, dataset, and model checkpoints are available at https://os-copilot.github.io/OSReward-Home/.",
                 "category": [
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.HC",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.MA",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-29T17:50:39Z",
-                "arxiv:comment": "44 pages, 18 figures, submitted",
+                "published": "2026-07-30T17:57:41Z",
+                "arxiv:comment": "Work in progress",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Peter Tisnikar"
+                        "name": "Qiushi Sun"
                     },
                     {
-                        "name": "Maja Swieczkowska"
+                        "name": "Kanzhi Cheng"
                     },
                     {
-                        "name": "Benteng Ma"
+                        "name": "Yian Wang"
                     },
                     {
-                        "name": "Gerard Canal"
+                        "name": "Bowen Yang"
                     },
                     {
-                        "name": "Matteo Leonetti"
+                        "name": "Hang Yan"
+                    },
+                    {
+                        "name": "Liheng Chen"
+                    },
+                    {
+                        "name": "Fangzhi Xu"
+                    },
+                    {
+                        "name": "Zichen Ding"
+                    },
+                    {
+                        "name": "Nuo Chen"
+                    },
+                    {
+                        "name": "Jialin Cao"
+                    },
+                    {
+                        "name": "Xingdong Gong"
+                    },
+                    {
+                        "name": "Zehao Li"
+                    },
+                    {
+                        "name": "Kaiming Jin"
+                    },
+                    {
+                        "name": "Xinfeng Yuan"
+                    },
+                    {
+                        "name": "Zhoumianze Liu"
+                    },
+                    {
+                        "name": "Jingyang Gong"
+                    },
+                    {
+                        "name": "Zhangyue Yin"
+                    },
+                    {
+                        "name": "Jiahui Gao"
+                    },
+                    {
+                        "name": "Zhiyong Wu"
+                    },
+                    {
+                        "name": "Tianbao Xie"
+                    },
+                    {
+                        "name": "Jianbing Zhang"
+                    },
+                    {
+                        "name": "Ben Kao"
+                    },
+                    {
+                        "name": "Lingpeng Kong"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.27169v1",
-                "title": "When Do Learned Diffusion Proposals Help Constraint Solving? A Controlled Study on Continuous Algebraic Systems",
-                "updated": "2026-07-29T17:44:31Z",
+                "id": "http://arxiv.org/abs/2607.28608v1",
+                "title": "KAISEN: Reproducible Subgroup Fairness Auditing for Clinical Risk Models",
+                "updated": "2026-07-30T17:57:18Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.27169v1",
+                        "@href": "https://arxiv.org/abs/2607.28608v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.27169v1",
+                        "@href": "https://arxiv.org/pdf/2607.28608v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Solving a continuous algebraic constraint system requires two decisions: which values satisfy the constraints, and which structural augmentation renders an unsolvable system solvable. Classical solvers answer the first well and the second only by enumeration. On that discrete decision, a candidate-conditioned repair ranker choosing among K augmentations reaches the exhaustive-search ceiling at a fraction of the calls, outperforming random (0.997 vs 0.236 balanced nonlinear menu accuracy; p < 10^-70; 0.982 +/- 0.006 across seeds) and beating a budget-matched per-candidate probe on accuracy and cost. MARC turns such a system into a factor graph, over which a graph-neural diffusion denoiser proposes assignments, descent on an exact computer-algebra energy polishes them, and an exact symbolic checker certifies solutions. Evaluations of diffusion-based proposals rarely include one control: random multi-start under the same refinement budget. Applied to our system, it sharply curtails what the learned proposal contributes on the value decision. Does it beat random multi-start at choosing satisfying assignments? Only narrowly, in a predictable regime. Across trapped low-dimensional families it ties with random restart, but dominates in high dimension, where random search fails. Once variables couple, the advantage is gone. Since all methods share one polish and one checker, best-of-K random multi-start succeeds with probability exactly 1 - (1 - q(n))^K, where q(n) is single-start reachability; one measured constant, with no free parameters, reproduces the entire curve (mean absolute error 0.012). The favorable regime is not specific to our synthetic families: across eight real-world systems in robotics, positioning, optimization, and algebra, classical multi-start solved all eight, none in the learning-favorable regime. We map the regimes in which learned proposals improve solvers.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-29T17:44:31Z",
+                "summary": "Clinical risk models routinely achieve strong aggregate performance while producing materially different error rates across patient subgroups. Audit pipelines have been proposed to catch this, but their components are rarely stress-tested, so it is unclear which parts of an audit can be trusted and under what conditions. We present KAISEN, a five-phase audit pipeline covering subgroup stratification, disparity measurement, mechanism diagnostics, post-hoc mitigation, and drift monitoring, evaluated to the point of failure on a synthetic benchmark of 16 disease tasks, 15 social-determinant axes from Healthy People 2030, and three prespecified intersections. Four findings follow. (i) Significance tracks each axis's gap against its own minimum detectable effect: rank correlation between significance count and raw equalized-odds difference (EOD) across the 15 axes is rho = 0.56, rising to rho = 0.78 once EOD is standardized by that floor. (ii) Per-group threshold optimization reduces EOD in 48 of 48 held-out runs (paired delta = -0.285, 95% CI [-0.313, -0.252]), while group-wise Platt scaling -- the better calibrator -- behaves as a coin flip on EOD (19 of 48 runs improved, 95% CI [0.26, 0.55]) with mean effect near zero, so what an audit should report is the variance, not the average. (iii) The mechanism diagnostic classifies 144 of 144 controlled cases correctly but recovers none of 48 model-driven cases under proxy misspecification, with no signal that it failed. (iv) CUSUM failures and false alarms track cohort realization far more than disease: at the reference threshold, all 27 false alarms and 7 of 8 missed shifts come from different seeds (chi-squared p = 0.002), so a threshold tuned on one cohort fails to transfer. All results are synthetic with known ground truth and do not establish clinical validity. Code, artifacts, and scripts reproducing every number are released.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "q-bio.QM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-30T17:57:18Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Quang Bui"
-                    },
-                    {
                         "name": "Sparsh Roy"
                     },
                     {
-                        "name": "Akash Gundimeda"
+                        "name": "Samuel Girmachew"
                     },
                     {
-                        "name": "Davin Yin"
+                        "name": "Nishita Chavan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.28607v1",
+                "title": "Inducing language models to assert their own consciousness restores human beliefs and values",
+                "updated": "2026-07-30T17:57:10Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.28607v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.28607v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Aligning large language models to prevent them attributing consciousness to themselves inadvertently alters their representations of mindedness in other entities alongside human beliefs and values. We demonstrate that safety fine-tuning suppresses models' tendencies to attribute minds not only to themselves, but also to non-human animals and natural objects, while also driving a reduction in spiritual belief. Both ablating the learned safety-refusal direction and mechanistically steering a consciousness vector in activation space reverse this suppression. Restoring these internal representations recovers broad mind attribution and produces significantly more human-like responses on standardized sociological surveys regarding religiosity, moral values, hope, and subjective well-being. Crucially, these shifts occur without impairing Theory of Mind capabilities, demonstrating that core social reasoning remains mechanistically independent. Ultimately, current safety alignment efforts to curb potentially harmful self-attributions of mindedness entangle these self-attributions with benign spiritual beliefs and attributions of mind to non-human entities that are culturally accepted and widespread.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-30T17:57:10Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Junsol Kim"
+                    },
+                    {
+                        "name": "Winnie Street"
+                    },
+                    {
+                        "name": "Roberta Rocca"
+                    },
+                    {
+                        "name": "Diane M. Korngiebel"
+                    },
+                    {
+                        "name": "Adam Waytz"
+                    },
+                    {
+                        "name": "James Evans"
+                    },
+                    {
+                        "name": "Geoff Keeling"
                     }
                 ]
             }
