@@ -5,40 +5,36 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-08-02T23:52:34Z",
+        "updated": "2026-08-03T06:13:41Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "598568",
+        "opensearch:totalResults": "598915",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2607.28628v1",
-                "title": "Learning to Trace Seiberg Dualities",
-                "updated": "2026-07-30T17:59:56Z",
+                "id": "http://arxiv.org/abs/2607.29675v1",
+                "title": "Differentially Private Nonparametric Modal Learning with Applications to Regression and Clustering",
+                "updated": "2026-07-31T17:55:02Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.28628v1",
+                        "@href": "https://arxiv.org/abs/2607.29675v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.28628v1",
+                        "@href": "https://arxiv.org/pdf/2607.29675v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establish when two systems are dual, even when all of the \"rules of the game\" are well-known. Said differently, when confronted with two systems, how can one efficiently establish that they are in fact dual? In this paper we use machine learning methods to address this question for Seiberg dualities of supersymmetric quiver gauge theories. Mathematically, this involves establishing mutations of quivers, which is in turn a variation on the theme of \"learning to unknot\". On the one hand, this leads us to a practical tool for establishing the computational complexity of different dualities. On the other hand, it also allows us to study how different network architectures learn how to trace Seiberg dualities. We find that for quivers with a modest number of quiver nodes (of order $10$), different network architectures consisting of transformers and multi-layer perceptrons tend to outperform deterministic algorithms. Supplementing the network by well-established pathfinder algorithms (essentially \"Google Maps for quivers\") leads to an additional improvement in the efficiency and accuracy of the search strategy. We anticipate that this class of questions can serve as a useful benchmark for frontier AI models applied to theoretical physics.",
+                "summary": "Density modes provide a localized and interpretable summary of multimodal distributions, but their estimation under rigorous differential privacy constraints remains largely unexplored. We study differentially private recovery of density modes for multivariate distributions under local smoothness, curvature, and separation conditions. We propose DP-GRAMS, a mean-shift inspired method that performs noisy ascent on a differentially private score estimator. Assuming the density belongs locally to a H\u00f6lder class with smoothness parameter $\u03b2> 2$, our score estimator uses bias-reducing higher-order kernels, and then enforces privacy in the gradient ascent steps via gradient clipping and calibrated Gaussian noise. A private initialization scheme combines a density-aware utility with a suppression rule and, with $k\\asymp M\\log n$ draws over a public $h_{\\mathrm{DAP}}$-grid and suppression radius $\u03c1_{\\mathrm{init}}\\asymp (\\log n)^{-1/d}$, achieves high-probability coverage of the modal basins by successively suppressing selected local neighborhoods in competitive regions, while correlated noise across multiple starts enables joint release under a single $(\\varepsilon,\u03b4)$-differential privacy guarantee. We prove that all population modes are recovered with high probability and establish asymptotic error rates of the form $O\\!\\left((\\tfrac{\\log n}{n})^{\\frac{2(\u03b2-1)}{d+2\u03b2}}\\right) + O\\!\\left((\\tfrac{\\mathrm{polylog}(n,\u03b4)}{n^2\\varepsilon^2})^{\\frac{\u03b2-1}{d+\u03b2}}\\right)$. We also provide minimax lower bounds for private mode estimation, and show that our estimators are nearly optimal, up to a logarithmic factor in the MSE. We present two natural extensions: DP-PMS, a private modal-regression method, and DP-GRAMS-C, a clustering pipeline. Extensive experiments on synthetic and real data demonstrate favorable privacy-utility trade-offs relative to common baselines.",
                 "category": [
                     {
-                        "@term": "hep-th",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
+                        "@term": "math.ST",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -46,55 +42,48 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "hep-ph",
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-30T17:59:56Z",
-                "arxiv:comment": "59 pages + appendices, 38 figures. Code and tools available at https://github.com/alexmininno/GNN-Pathfinders",
+                "published": "2026-07-31T17:55:02Z",
                 "arxiv:primary_category": {
-                    "@term": "hep-th"
+                    "@term": "math.ST"
                 },
                 "author": [
                     {
-                        "name": "Jonathan J. Heckman"
+                        "name": "Arkajyoti Bhattacharjee"
                     },
                     {
-                        "name": "Shani Meynet"
-                    },
-                    {
-                        "name": "Alessandro Mininno"
-                    },
-                    {
-                        "name": "Gary Shiu"
+                        "name": "Arnab Auddy"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.28627v1",
-                "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
-                "updated": "2026-07-30T17:59:56Z",
+                "id": "http://arxiv.org/abs/2607.29674v1",
+                "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+                "updated": "2026-07-31T17:54:46Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.28627v1",
+                        "@href": "https://arxiv.org/abs/2607.29674v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.28627v1",
+                        "@href": "https://arxiv.org/pdf/2607.29674v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints. We present ReToken, a single learnable embedding trained as an explicit retrieval target that selects a sparse set of query-relevant visual tokens from a pre-filled visual KV cache. Trained on only a small image-QA dataset, ReToken yields consistent gains across image and video benchmarks: on Visual Haystacks it improves Qwen3VL-8B by 13.4 points and InternVL3.5 by 12.4 points (>20% relative), and on LVBench it transfers zero-shot to long video for an 8.0-point gain with Qwen3VL-8B. Thanks to its lightweight design, both training and long-video inference fit on a single H100. Code is available at: https://github.com/avaxiao/ReToken",
+                "summary": "SignMuon compresses the Muon update to one bit per parameter by taking its elementwise sign, providing the most direct way to run a matrix-aware optimizer under an extremely low communication budget. It outperforms SignSGD in practice, yet it can ascend even on a linear function. Signing the gradient before the Linear Minimization Oracle (LMO), rather than after, does not repair this: we construct a small explicit instance on which sign-before (MuonUSign) and sign-on-both-sides (MuonSign) ascend as well, so no placement of the sign around the oracle descends in general. Error feedback, the standard remedy for a biased compressor, does not rescue SignMuon: when applied to Muon's output, error feedback can fail for every smoothness constant, step size, and momentum. Applied to the gradient, error feedback does work, and EF21-MuonUSign and EF21-MuonSign attain the standard $\\mathcal{O}(T^{-1/2})$ rate for the squared gradient norm on smooth nonconvex problems, the latter at one bit in each direction. Experiments then reverse the ordering: across centralized CIFAR-10, federated CIFAR-10, and the nanoGPT speedrun, the strongest compressed method is consistently sign-after-the-LMO, precisely the placement we prove divergent, with the provably convergent variants trailing it. Compressing after the LMO, a heuristic, matters more at these scales than the guarantee does.",
                 "category": [
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
+                        "@term": "math.OC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -102,579 +91,438 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-30T17:59:56Z",
-                "arxiv:comment": "Code: https://github.com/avaxiao/ReToken",
+                "published": "2026-07-31T17:54:46Z",
+                "arxiv:comment": "42 pages, 13 figures. Code: https://github.com/intsystems/signmuon",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "math.OC"
                 },
                 "author": [
                     {
-                        "name": "Yao Xiao"
+                        "name": "Maria Smirnova"
                     },
                     {
-                        "name": "Reuben Tan"
-                    },
-                    {
-                        "name": "Zhen Zhu"
-                    },
-                    {
-                        "name": "Yuqun Wu"
-                    },
-                    {
-                        "name": "Jianfeng Gao"
-                    },
-                    {
-                        "name": "Derek Hoiem"
+                        "name": "Alexey Kravatskiy"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.28625v1",
-                "title": "ACE-Data-0: Human-Centric Ambient Capture as Embodied Data Engine",
-                "updated": "2026-07-30T17:59:50Z",
+                "id": "http://arxiv.org/abs/2607.29665v1",
+                "title": "Freeze, Then Select: Structured Field Adapters and Stability-Validated Weak Selection for PDE Discovery from Sparse Observations",
+                "updated": "2026-07-31T17:49:32Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.28625v1",
+                        "@href": "https://arxiv.org/abs/2607.29665v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.28625v1",
+                        "@href": "https://arxiv.org/pdf/2607.29665v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Embodied intelligence faces a fundamental data bottleneck. Models must capture how first-person perception, whole-body motion, dexterous manipulation, object state, sound, and touch evolve together as humans pursue goals over time. Existing datasets fragment this experience across viewpoints, modalities, or spatial scales, leaving the full perception-action loop only partially observed. We introduce the Ambient Capture Engine (ACE), a human-centric data engine that transforms real home environments into spatially calibrated, temporally synchronized recording studios. ACE operates at two complementary scales: a table-scale configuration resolves hand-object manipulation, while a room-scale configuration captures whole-body motion, locomotion, and interactions across a furnished home. ACE records egocentric and multi-view exocentric video, full-body and articulated hand motion, object geometry and 6-DoF trajectories, audio, and tactile signals as a unified multisensory stream. Using ACE, we build ACE-Data-0, comprising 150 hours and 17M video frames across 200 task categories, performed by 50 participants in 2 environments, for a total of 75,000 interaction episodes. The dataset spans atomic manipulation, long-horizon chains of household activities, and human-scene interaction, while preserving natural behavioral variation through goal-level rather than step-by-step instructions. We further introduce a hierarchical benchmark that progresses from signals to scene components and then to interactions. Evaluations of state-of-the-art methods expose substantial gaps under contact, occlusion, egomotion, and long temporal horizons. ACE-Data-0 provides synchronized human demonstrations with aligned perceptual, kinematic, and contact supervision, offering a scalable foundation for imitation learning, world models, vision-language-action systems, and embodied AI.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-30T17:59:50Z",
-                "arxiv:comment": "Project Page: https://ace-data-engine.github.io/ACE-Data-0/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yukang Cao"
-                    },
-                    {
-                        "name": "Haozhe Xie"
-                    },
-                    {
-                        "name": "Beichen Wen"
-                    },
-                    {
-                        "name": "Runmao Yao"
-                    },
-                    {
-                        "name": "Yinghao Liu"
-                    },
-                    {
-                        "name": "Yue Huang"
-                    },
-                    {
-                        "name": "Zhichao Liao"
-                    },
-                    {
-                        "name": "Yunxiang Wang"
-                    },
-                    {
-                        "name": "Haiheng Liu"
-                    },
-                    {
-                        "name": "Xingshun Tian"
-                    },
-                    {
-                        "name": "Dawei Su"
-                    },
-                    {
-                        "name": "Long Zhuo"
-                    },
-                    {
-                        "name": "Dacheng Tao"
-                    },
-                    {
-                        "name": "Xiaogang Wang"
-                    },
-                    {
-                        "name": "Liang Pan"
-                    },
-                    {
-                        "name": "Ziwei Liu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.28624v1",
-                "title": "PhiZero: A World Model Built Around Physical Language",
-                "updated": "2026-07-30T17:59:46Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.28624v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.28624v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future videos directly in pixel space, leaving the underlying world dynamics implicit within high-dimensional visual predictors. Motivated by humans' ability to abstract predictive structure from visual experience and organize it in natural language for explicit reasoning, we learn physical language from in-the-wild videos through self-supervision and use it to explicitly reason about how the physical world evolves. Accordingly, PhiZero adopts a reason-then-render paradigm: it first infers future world evolution as a physical-language sequence and then renders the inferred transitions into videos. Extensive experiments across generation and understanding benchmarks validate the ability of PhiZero to model physically coherent world evolution. We further show its potential for realistic and interactive world modeling, fine-grained action-conditioned simulation, and zero-shot motion transfer.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-07-30T17:59:46Z",
-                "arxiv:comment": "Project page: https://phi-zero.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Shuyao Shang"
-                    },
-                    {
-                        "name": "Yuqi Wang"
-                    },
-                    {
-                        "name": "Ruopeng Gao"
-                    },
-                    {
-                        "name": "Xu Chen"
-                    },
-                    {
-                        "name": "Tieniu Tan"
-                    },
-                    {
-                        "name": "Lue Fan"
-                    },
-                    {
-                        "name": "Zhaoxiang Zhang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.28618v1",
-                "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
-                "updated": "2026-07-30T17:59:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.28618v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.28618v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemble cross-paper answers manually. We present AskChem, a claim-centered infrastructure for cross-paper chemistry search. AskChem changes the unit of retrieval from the paper to the provenance-carrying claim: each paper is converted into atomic, typed claims, each grounded by a source DOI and a verbatim quote or an explicit evidence locator. Over this shared claim store, AskChem exposes complementary structures for search and synthesis: a stabilized faceted taxonomy for hierarchical retrieval and browsing, an evidence graph linking claims through relations, and an exploratory living taxonomy that situates indexed papers under scientific principles. AskChem currently indexes 2.4M claims from 147K papers and provides a web interface, as well as REST, SDK, and MCP access for AI agents. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs, compared with 88.3% without retrieval, and the highest citation density among five tested systems. AskChem is live at https://askchem.org.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-30T17:59:11Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Bing Yan"
-                    },
-                    {
-                        "name": "Gregory Wolfe"
-                    },
-                    {
-                        "name": "Stefano Martiniani"
-                    },
-                    {
-                        "name": "Kyunghyun Cho"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.28617v1",
-                "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
-                "updated": "2026-07-30T17:58:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.28617v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.28617v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the wide deployment of AI systems. In this paper, we introduce Artificial Intelligence System Prompt Assurance (AISPA), a user-centric framework for systematically auditing system prompts in AI systems. AISPA examines specific parts of a system prompt and evaluates them along eight dimensions that matter to users. We then use this framework to review 3,249 instructions from system prompts in 88 commercial AI products, classifying each instruction as either protective (of users) or problematic. Our audit surfaces four core findings. First, system prompt design varies substantially across products and developers, with some organizations averaging over 60 protective instructions per product while others average fewer than 5. Second, protective instructions are widely adopted but shallow in scope: 98.9% of products contain at least one, yet only 24% cover all eight dimensions of the AISPA taxonomy. Third, system prompts have grown steadily longer and more protective of users, suggesting that user protection is becoming a more visible concern in commercial prompt design. Fourth, despite this progress, problematic instructions remain pervasive: roughly 40% of products contain at least one instruction that works against user interests, and protective and problematic instructions frequently coexist within the same prompt. Our findings highlight the need for greater transparency, standardization, and independent oversight for system prompts in commercial AI products.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.HC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-30T17:58:58Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Xiangning Lin"
-                    },
-                    {
-                        "name": "Shenzhe Zhu"
-                    },
-                    {
-                        "name": "Shu Yang"
-                    },
-                    {
-                        "name": "Zhenyu Zhang"
-                    },
-                    {
-                        "name": "Haoqian Zhang"
-                    },
-                    {
-                        "name": "Yipeng Zhao"
-                    },
-                    {
-                        "name": "Chengxuan Qian"
-                    },
-                    {
-                        "name": "Tianwei Wang"
-                    },
-                    {
-                        "name": "Ziheng Zhang"
-                    },
-                    {
-                        "name": "Zhenlong Yuan"
-                    },
-                    {
-                        "name": "Dingcheng Wang"
-                    },
-                    {
-                        "name": "Juncheng Wu"
-                    },
-                    {
-                        "name": "Yuan Si"
-                    },
-                    {
-                        "name": "Jiaxin Liu"
-                    },
-                    {
-                        "name": "Baolong Bi"
-                    },
-                    {
-                        "name": "Robert Mahari"
-                    },
-                    {
-                        "name": "Tobin South"
-                    },
-                    {
-                        "name": "Dazza Greenwood"
-                    },
-                    {
-                        "name": "Zexue He"
-                    },
-                    {
-                        "name": "Rishi Bommasani"
-                    },
-                    {
-                        "name": "Sophia Kazinnik"
-                    },
-                    {
-                        "name": "Andreas Haupt"
-                    },
-                    {
-                        "name": "Samuele Marro"
-                    },
-                    {
-                        "name": "Erik Brynjolfsson"
-                    },
-                    {
-                        "name": "Alex Pentland"
-                    },
-                    {
-                        "name": "Jiaxin Pei"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.28610v1",
-                "title": "Learning Arbitrary Lindbladians from Time Evolution",
-                "updated": "2026-07-30T17:58:01Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.28610v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.28610v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We study the problem of learning an unknown Markovian open-system generator from access to its physical time evolution. This generator, called a Lindbladian, contains Hamiltonian and dissipative coefficients indexed by an exponentially large family of possible Pauli terms. We propose an efficient algorithm that learns arbitrary Lindbladians from time evolution under minimal assumptions. For a Lindbladian of dynamical strength at most $\u039b$, the algorithm estimates every coefficient to error $\u03b5$ using $\\widetilde O(\u039b^2/\u03b5^2)$ experiments and $\\widetilde O(\u039b/\u03b5^2)$ total evolution time, together with polynomial classical running time. The algorithm consists of two nonadaptive, ancilla-free, and control-free stages: 1. The support-learning stage outputs a candidate support of size $\\mathrm{poly}(\u039b/\u03b7)$ that contains every Hamiltonian and dissipative coordinate of magnitude at least $\u03b7$, using $\\widetilde O(\u039b^2/\u03b7^2)$ experiments with preparations of product Pauli eigenstates and single-qubit Pauli measurements. 2.The coefficient-learning stage estimates all coefficients in any candidate support of size $M$ to error $\u03b5$, using $\\widetilde O(\u039b^2\\log M/\u03b5^{2})$ experiments with preparations of random stabilizer states and measurements in random Clifford bases. Composing the two stages identifies and estimates every coefficient of an arbitrary Lindbladian in polynomial time. The experiment-count and total-evolution-time scalings match the lower bounds up to logarithmic factors, so the algorithm is nearly optimal for learning arbitrary Lindbladians.",
-                "category": [
-                    {
-                        "@term": "quant-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-30T17:58:01Z",
-                "arxiv:comment": "45 pages",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": [
-                    {
-                        "name": "Zhili Chen"
-                    },
-                    {
-                        "name": "Zhan Yu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.28609v1",
-                "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
-                "updated": "2026-07-30T17:57:41Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.28609v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.28609v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Computer-using agents (CUAs) are advancing rapidly across the digital world. A CUA trajectory records the agent's actions, states, and reasoning. Verifying whether it fulfilled the task instruction is central to CUA evaluation, data curation, and reinforcement learning. Neither human-written verifiers nor human annotators can provide such verification at scale, so the field increasingly turns to vision-language models (VLMs) as judges of CUA trajectories. But a fundamental question has long gone unexamined: are these VLM judges reliable enough? To study it systematically, we introduce OSReward, a realistic, high-quality benchmark that evaluates VLM judges on CUA trajectories. The trajectories come from diverse agent backbones executing human-verified instructions across platforms, then rigorously labeled with ground-truth verdicts through multi-stage human annotation. Building on it, we derive OSReward-Hard, a challenge set concentrating genuinely hard cases, and OSReward-Multi for fine-grained efficiency and alignment scoring. The most comprehensive evaluation of VLM judges to date finds even state-of-the-art models fall short of an ideal judge, sharing a systematic leniency bias that mislabels failed runs as successes. The few reliable enough to trust are too expensive to run at scale, while affordable open models trail far behind. To close this gap, we construct and release OS-Shepherd-100K, an open corpus of reasoning-annotated trajectory judgments for the CUA community. On it, we train OS-Shepherd (9B and 35B), open reward models that supply low-cost, stable, and reliable reward signals, matching commercial judges at 30-60% lower cost than the frontier. Extensive analyses further inform the design of reliable CUA reward at scale. Our code, benchmark, dataset, and model checkpoints are available at https://os-copilot.github.io/OSReward-Home/.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-07-30T17:57:41Z",
-                "arxiv:comment": "Work in progress",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Qiushi Sun"
-                    },
-                    {
-                        "name": "Kanzhi Cheng"
-                    },
-                    {
-                        "name": "Yian Wang"
-                    },
-                    {
-                        "name": "Bowen Yang"
-                    },
-                    {
-                        "name": "Hang Yan"
-                    },
-                    {
-                        "name": "Liheng Chen"
-                    },
-                    {
-                        "name": "Fangzhi Xu"
-                    },
-                    {
-                        "name": "Zichen Ding"
-                    },
-                    {
-                        "name": "Nuo Chen"
-                    },
-                    {
-                        "name": "Jialin Cao"
-                    },
-                    {
-                        "name": "Xingdong Gong"
-                    },
-                    {
-                        "name": "Zehao Li"
-                    },
-                    {
-                        "name": "Kaiming Jin"
-                    },
-                    {
-                        "name": "Xinfeng Yuan"
-                    },
-                    {
-                        "name": "Zhoumianze Liu"
-                    },
-                    {
-                        "name": "Jingyang Gong"
-                    },
-                    {
-                        "name": "Zhangyue Yin"
-                    },
-                    {
-                        "name": "Jiahui Gao"
-                    },
-                    {
-                        "name": "Zhiyong Wu"
-                    },
-                    {
-                        "name": "Tianbao Xie"
-                    },
-                    {
-                        "name": "Jianbing Zhang"
-                    },
-                    {
-                        "name": "Ben Kao"
-                    },
-                    {
-                        "name": "Lingpeng Kong"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2607.28608v1",
-                "title": "KAISEN: Reproducible Subgroup Fairness Auditing for Clinical Risk Models",
-                "updated": "2026-07-30T17:57:18Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2607.28608v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2607.28608v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Clinical risk models routinely achieve strong aggregate performance while producing materially different error rates across patient subgroups. Audit pipelines have been proposed to catch this, but their components are rarely stress-tested, so it is unclear which parts of an audit can be trusted and under what conditions. We present KAISEN, a five-phase audit pipeline covering subgroup stratification, disparity measurement, mechanism diagnostics, post-hoc mitigation, and drift monitoring, evaluated to the point of failure on a synthetic benchmark of 16 disease tasks, 15 social-determinant axes from Healthy People 2030, and three prespecified intersections. Four findings follow. (i) Significance tracks each axis's gap against its own minimum detectable effect: rank correlation between significance count and raw equalized-odds difference (EOD) across the 15 axes is rho = 0.56, rising to rho = 0.78 once EOD is standardized by that floor. (ii) Per-group threshold optimization reduces EOD in 48 of 48 held-out runs (paired delta = -0.285, 95% CI [-0.313, -0.252]), while group-wise Platt scaling -- the better calibrator -- behaves as a coin flip on EOD (19 of 48 runs improved, 95% CI [0.26, 0.55]) with mean effect near zero, so what an audit should report is the variance, not the average. (iii) The mechanism diagnostic classifies 144 of 144 controlled cases correctly but recovers none of 48 model-driven cases under proxy misspecification, with no signal that it failed. (iv) CUSUM failures and false alarms track cohort realization far more than disease: at the reference threshold, all 27 false alarms and 7 of 8 missed shifts come from different seeds (chi-squared p = 0.002), so a threshold tuned on one cohort fails to transfer. All results are synthetic with known ground truth and do not establish clinical validity. Code, artifacts, and scripts reproducing every number are released.",
+                "summary": "PDE discovery from sparse observations requires reconstructing a continuous field and selecting the correct differential terms. Our analysis of optimization paths in coupled neural PDE discovery reveals three behaviors: the exact support can persist to the end of training, appear only transiently, or fail to emerge. To decouple equation selection from neural optimization, we develop a freeze-then-select method combining a structured field adapter with Stability-Validated Weak Selection (SVWS). Trained from observations without a PDE residual, the adapter factorizes the field into learned spatial features and temporal coefficients represented by cubic splines. After freezing the field, SVWS identifies recurrent terms across independent weak-form systems, refits candidate supports, and selects the final equation on held-out weak-form systems. Beyond fixed libraries, we apply the same principle to expressions generated by genetic programming and recover the power-law form of an unknown nonlinear diffusion function from sparse, noisy observations. Across all six sparse MDBench regimes, our method attains the highest exact support recovery rate, with its clearest gains over classical and neural baselines on challenging Kuramoto-Sivashinsky dynamics.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "q-bio.QM",
+                        "@term": "math.NA",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-07-30T17:57:18Z",
+                "published": "2026-07-31T17:49:32Z",
+                "arxiv:comment": "18 pages, 5 figures, and 17 tables; includes supplementary material",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Sparsh Roy"
+                        "name": "Juncheng Zhong"
                     },
                     {
-                        "name": "Samuel Girmachew"
+                        "name": "Chenghuang Shen"
                     },
                     {
-                        "name": "Nishita Chavan"
+                        "name": "Jianfeng Liu"
+                    },
+                    {
+                        "name": "Zhengdong Xiao"
+                    },
+                    {
+                        "name": "Longjiu Luo"
+                    },
+                    {
+                        "name": "Qianrong Wang"
+                    },
+                    {
+                        "name": "Wenjun Xu"
+                    },
+                    {
+                        "name": "Wenlian Lu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2607.28607v1",
-                "title": "Inducing language models to assert their own consciousness restores human beliefs and values",
-                "updated": "2026-07-30T17:57:10Z",
+                "id": "http://arxiv.org/abs/2607.29659v1",
+                "title": "GQ-FSL: Green Quantized Federated Split Learning",
+                "updated": "2026-07-31T17:40:27Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2607.28607v1",
+                        "@href": "https://arxiv.org/abs/2607.29659v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2607.28607v1",
+                        "@href": "https://arxiv.org/pdf/2607.29659v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Aligning large language models to prevent them attributing consciousness to themselves inadvertently alters their representations of mindedness in other entities alongside human beliefs and values. We demonstrate that safety fine-tuning suppresses models' tendencies to attribute minds not only to themselves, but also to non-human animals and natural objects, while also driving a reduction in spiritual belief. Both ablating the learned safety-refusal direction and mechanistically steering a consciousness vector in activation space reverse this suppression. Restoring these internal representations recovers broad mind attribution and produces significantly more human-like responses on standardized sociological surveys regarding religiosity, moral values, hope, and subjective well-being. Crucially, these shifts occur without impairing Theory of Mind capabilities, demonstrating that core social reasoning remains mechanistically independent. Ultimately, current safety alignment efforts to curb potentially harmful self-attributions of mindedness entangle these self-attributions with benign spiritual beliefs and attributions of mind to non-human entities that are culturally accepted and widespread.",
+                "summary": "Deploying state-of-the-art deep neural networks (DNNs) at the wireless edge is severely bottlenecked by the strict energy and resource constraints of mobile devices. While federated split learning (FSL) mitigates on-device computation by offloading workloads to an edge server, this may introduce systemic overheads, while the continuous exchange of cut-layer data, and submodels still incurs significant energy consumption (EC). To address this, we propose a green quantized FSL (GQ-FSL) framework that incorporates stochastic quantization for both local collaborative training and wireless transmissions. Notably, GQ-FSL supports asymmetric precision levels for the client- and server-side submodels, effectively decoupling device energy constraints from global convergence degradation. To quantify these tradeoffs, we develop parameterized energy models for the split architecture and derive a theoretical convergence bound under statistically heterogeneous data. Building on that, we formulate a joint optimization problem to configure the DNN split point and precision levels, minimizing the total system EC while satisfying a strict target accuracy constraint. Ultimately, we demonstrate that GQ-FSL enables large-scale DNN deployment on resource-constrained devices, achieving superior energy efficiency compared to quantized federated learning and full-precision FSL.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.DC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SP",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-31T17:40:27Z",
+                "arxiv:comment": "To appear in IEEE 27th International Workshop on Signal Processing Advances in Wireless Communications (SPAWC), 2026",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Idan Roth"
+                    },
+                    {
+                        "name": "Lutz Lampe"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.29657v1",
+                "title": "Development of FDD-ON: an Ontology for VAV HVAC System Fault Detection and Diagnostics",
+                "updated": "2026-07-31T17:37:34Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.29657v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.29657v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Fault detection and diagnosis (FDD) technology is essential for improving HVAC system reliability, energy efficiency, and maintenance effectiveness. However, effective deployment of FDD solutions in buildings requires structured domain knowledge that can bridge heterogeneous data sources, diverse equipment types, and varied diagnostic outputs. Limited data interpretability and interoperability within the FDD domain have led to fragmented information silos, hindering the implementation of FDD and related applications, such as the digital twin-enabled FDD frameworks and artificial intelligence (AI)-driven maintenance decision-making systems. This paper presents an FDD Ontology (FDD-ON), a modular and extensible ontology to formally represent variable air volume (VAV) HVAC system components, fault types, symptom statuses, fault impacts and associated attributes. FDD-ON integrates HVAC system FDD semantics to provide comprehensive representations of fault and symptom attributes, supported by the well-defined controlled vocabulary. Additionally, FDD-ON offers comprehensive fault, symptom, and impact libraries to capture a broad spectrum of operational abnormalities and their consequences in VAV HVAC systems. Through explicit contributing cause-fault-symptom-impact relations, FDD-ON serves as a machine-interpretable basis for querying diagnostic knowledge, mapping heterogeneous FDD outputs, and developing interoperable FDD-related applications. FDD-ON is evaluated using publicly available VAV HVAC system datasets and demonstrated through FDD development applications. Results indicate that FDD-ON provides a foundational semantic framework for advancing scalable, transparent, and interoperable FDD solutions across various applications.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-31T17:37:34Z",
+                "arxiv:comment": "39 pages, nine figures and 19 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Yimin Chen"
+                    },
+                    {
+                        "name": "Brian Fricke"
+                    },
+                    {
+                        "name": "Bo Shen"
+                    },
+                    {
+                        "name": "Jamie Lian"
+                    },
+                    {
+                        "name": "Mingkan Zhang"
+                    },
+                    {
+                        "name": "James Lo"
+                    },
+                    {
+                        "name": "Yun Zhang"
+                    },
+                    {
+                        "name": "Shi Ye"
+                    },
+                    {
+                        "name": "Jiajing Huang"
+                    },
+                    {
+                        "name": "Han Hu"
+                    },
+                    {
+                        "name": "Chujie Lu"
+                    },
+                    {
+                        "name": "Rui Tang"
+                    },
+                    {
+                        "name": "George Zhuang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.29654v1",
+                "title": "Elastic Curves via Geometric Mechanics",
+                "updated": "2026-07-31T17:35:09Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.29654v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.29654v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Elastic curves are the mathematical shapes of thin elastic rods in equilibrium, with deep connections to mechanics, geometry, and computer graphics. Traditionally described as stationary points of bending energy under length and torsion constraints, their rich theory admits many equivalent characterizations. We develop a new one from the viewpoint of geometric mechanics. Our main contribution relies on a lesser-known isoperimetric characterization: a curve is elastic if and only if it is a critical point of the length functional under fixed area and volume vectors. We show that these constraints transform naturally under orientation-preserving rigid body motions, identifying them as momentum variables for these symmetries. This structure suggests a new discrete theory. We show that the low-order integral quantities length, area, and volume vectors are all naturally defined for polygonal curves, leaving the same transformation laws exactly satisfied. The resulting definition of discrete elastic curves in terms of the isoperimetric characterization restricted to discrete polygonal curves is variational, structure-preserving, and requires no auxiliary discretizations of curvature or material frames. Finally, the same structure carries the Marsden--Weinstein form, a canonical (pre-)symplectic structure on the space of curves, to polygonal curves. This yields novel approaches to Hamiltonian dynamics on discrete space curves, including tangent, vortex-filament, and modified Korteweg--de Vries flows.",
+                "category": [
+                    {
+                        "@term": "math.DG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.GR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.SG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-31T17:35:09Z",
+                "arxiv:primary_category": {
+                    "@term": "math.DG"
+                },
+                "author": [
+                    {
+                        "name": "Oliver Gross"
+                    },
+                    {
+                        "name": "Rohit Jammula"
+                    },
+                    {
+                        "name": "Albert Chern"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.29651v1",
+                "title": "Non-reciprocal torques guide self-assembly of active particles into clusters with controllable function",
+                "updated": "2026-07-31T17:29:06Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.29651v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.29651v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Self-assembly of constituents determines structure formation in the microscopic world. Attractive forces can assemble active particles into colloidal machines, but they do not fix the particles' orientations, which limits control over the machine's function. We demonstrate that non-reciprocal turn-towards torques not only assemble active particles into clusters, without requiring attractive forces, but also link particle orientations to the cluster configuration. Symmetry then dictates whether the cluster is static, rotates, or translates. In small systems, the particle number uniquely determines the stable configuration and function. In larger systems, there are multiple stable configurations with distinct functions, and tuning the torque strength allows us to bias towards the desired function, such as a run-and-tumble motion. Because the interactions driving assembly can be switched on and off, the clusters self-assemble when needed. For such a \"just-in-time\" self-assembly to be practical, fast assembly is necessary. We show that stochastic resetting, implemented by briefly turning off propulsion and torque, significantly speeds up self-assembly by avoiding slow pathways. Together, our findings demonstrate that non-reciprocal torques can rapidly assemble active particles into colloidal micromachines with controllable function.",
+                "category": [
+                    {
+                        "@term": "cond-mat.soft",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cond-mat.stat-mech",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-31T17:29:06Z",
+                "arxiv:comment": "10 pages, 7 figures",
+                "arxiv:primary_category": {
+                    "@term": "cond-mat.soft"
+                },
+                "author": [
+                    {
+                        "name": "Till Welker"
+                    },
+                    {
+                        "name": "Yukino Fujiya"
+                    },
+                    {
+                        "name": "Holger Stark"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.29642v1",
+                "title": "Evolving language compositionality in a frequency-structured meaning space",
+                "updated": "2026-07-31T17:18:57Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.29642v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.29642v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The iterated learning model was introduced to investigate language evolution: the way in which the characteristic properties of human languages have been shaped, at least partly, by repeated transmission from one language user to another. The key finding is that language compositionality can arise spontaneously as a consequence of language being passed repeatedly through a language learning bottleneck. Here we explore how changing the frequency of different meanings, so that some meanings occur much more frequently than others, affects the character of its compositionality. We find that, as observed in natural languages, high-frequency meanings can escape the pressure to conform to the grammar that characterizes lower-frequency meanings. However, when the frequency structure is instead imposed on parts rather than on whole meaning vectors, the language fails to transmit across generations. This occurs despite the fact that the most frequent elements are reliably learned. These results suggest that frequency can shape emergent linguistic structure only when the frequency distribution is defined over form-meaning units that learners can acquire holistically. When frequency is instead distributed over smaller units, it fails to support the relational structure required for compositional generalisation, thereby preventing stable language transmission.",
                 "category": {
                     "@term": "cs.CL",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-07-30T17:57:10Z",
+                "published": "2026-07-31T17:18:57Z",
+                "arxiv:comment": "17 pages, 4 figures (plus 2 figures in appendix), submitted to Wivace 2026 (https://sites.google.com/cam.ac.uk/wivace26)",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Junsol Kim"
+                        "name": "Fabio De Ponte"
                     },
                     {
-                        "name": "Winnie Street"
+                        "name": "Eloise Gaines-White"
                     },
                     {
-                        "name": "Roberta Rocca"
+                        "name": "Conor Houghton"
                     },
                     {
-                        "name": "Diane M. Korngiebel"
+                        "name": "Seth Bullock"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.29640v1",
+                "title": "Bootstrapping Self-Supervised Learning of Binary Classification Using Error Bounds: A Case Study on a Robotic Insertion Task",
+                "updated": "2026-07-31T17:18:05Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.29640v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Adam Waytz"
+                        "@href": "https://arxiv.org/pdf/2607.29640v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Flexible manufacturing requires rapid deployment of solutions and minimal setup time to remain competitive. An essential attribute is the ability to control error levels, as failures can range from minor performance degradation to severe equipment damage. However, conventional deployment often involves extensive setup, data collection, model training or parameter tuning, and system testing, resulting in significant delays that hinder commercial feasibility. We propose a data engine which gathers data and improves its performance while executing the task. The data engine consists of two classifiers, a fast model prediction and expensive verification. First, a model prediction is performed and based on the confidence level of the prediction, the expensive verification can be used. By adjusting the confidence level, users can control the level of tolerable error.\n  Our method is implemented on a real-world robotic insertion task, which uses force data for the model prediction. The system applies UMAP dimensionality reduction and uses Wilson-Score to compute the confidence bounds of the prediction. Results demonstrate the ability to learn and reduce the need for expensive verifications over time, while staying within the set error-rate. The results highlight the potential of confidence bounds in self-improving models to enhance reliability in robotic classification task.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-07-31T17:18:05Z",
+                "arxiv:comment": "8 pages, 7 figures, 2 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Zebin Duan"
                     },
                     {
-                        "name": "James Evans"
+                        "name": "Norbert Kr\u00fcger"
                     },
                     {
-                        "name": "Geoff Keeling"
+                        "name": "Juan Heredia"
+                    },
+                    {
+                        "name": "Thorbj\u00f8rn Mosekj\u00e6r Iversen"
+                    },
+                    {
+                        "name": "Frederik Hagelskj\u00e6r"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2607.29637v1",
+                "title": "CodeShrink: Adaptive Visual Compression for Efficient Multimodal Code Understanding",
+                "updated": "2026-07-31T17:15:51Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2607.29637v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2607.29637v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Rendering source code as images offers a promising way to reduce the input costs of Multimodal Large Language Models (MLLMs). Adjusting image resolution can trade visual token cost against content fidelity. However, resolution scaling alone overlooks two sources of inefficiency: blank regions created by line breaks and indentation, and code regions irrelevant to the current instruction. Moreover, the best compression setting varies across inputs, tasks, and models, limiting fixed-ratio strategies. We propose CodeShrink, an adaptive visual compression framework with three components. Blank-Free Rendering replaces whitespace-dependent layouts with compact layouts and explicit structural markers, removing layout-induced tokens. Adaptive Compression Configuration uses a lightweight agent trained with reinforcement learning to predict a per-input setting that balances token efficiency and readability. Dominant Token Selection jointly analyzes the instruction and code image to prune task-irrelevant visual tokens during inference. We evaluate CodeShrink on code question answering, clone detection, and code completion. CodeShrink reduces visual token use by up to 71.2\\% while matching or exceeding uncompressed text-only inputs, and consistently outperforms text-based and visual compression baselines across all three tasks. These results show that combining layout compaction, adaptive configuration, and instruction-aware pruning can make multimodal code understanding more efficient. Our code is available at https://github.com/vinsontang1/CodeShrink.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.SE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-07-31T17:15:51Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Wenxin Tang"
+                    },
+                    {
+                        "name": "Jingyu Xiao"
+                    },
+                    {
+                        "name": "Zhenyu Liu"
+                    },
+                    {
+                        "name": "Zipeng Xie"
+                    },
+                    {
+                        "name": "Junliang Liu"
+                    },
+                    {
+                        "name": "Wang Luo"
+                    },
+                    {
+                        "name": "Yuan Jiang"
+                    },
+                    {
+                        "name": "Yintong Huo"
+                    },
+                    {
+                        "name": "Michael Lyu"
                     }
                 ]
             }
