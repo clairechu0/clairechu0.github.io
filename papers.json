@@ -5,236 +5,486 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-08-05T23:53:51Z",
+        "updated": "2026-08-06T05:16:26Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "600264",
+        "opensearch:totalResults": "600617",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2608.04007v1",
-                "title": "TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning",
-                "updated": "2026-08-04T17:59:21Z",
+                "id": "http://arxiv.org/abs/2608.05146v1",
+                "title": "Machine-Learning Search for Lax Connections",
+                "updated": "2026-08-05T17:59:26Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.04007v1",
+                        "@href": "https://arxiv.org/abs/2608.05146v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.04007v1",
+                        "@href": "https://arxiv.org/pdf/2608.05146v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, limiting fine-grained credit assignment in long-horizon TIR scenarios. On-policy self-distillation offers denser signals through teacher branches with privileged context, but existing approaches typically derive such context from ground-truth answers or retrieved skills, which may not reflect the states actually visited by the agent. Moreover, token-level supervision fails to capture the turn-level structure of tool interactions. To address this, we propose TurnSight, a turn-level hindsight self-distillation framework that derives supervision directly from execution-conditioned hindsight. It then constructs multiple hindsight views with different lookahead horizons and selects reliable supervision through cross-horizon directional agreement. Finally, the selected hindsight signal is normalized across sibling rollouts and used to adaptively modulate RL advantages while preserving their original optimization direction. Extensive experiments on three benchmarks demonstrate the effectiveness of TurnSight. Our codes are available at https://github.com/quchangle1/TurnSight.",
+                "summary": "We apply a machine learning framework to search for Lax connections in two-dimensional non-linear sigma models using local current data. For the $SU(2)$ principal chiral model and the symmetric coset $S^2 = SU(2)/U(1)$, the method successfully recovers the full spectral-parameter families without using the known spectral curves as training targets. For the non-symmetric coset $T^{1,1}$, the optimization converges to reproducible low-loss maps that distill into a compact block-diagonal ansatz. However, analytic verification shows that this candidate is a ``fake Lax'' connection which satisfies on-shell flatness but fails to encode the two-dimensional equations of motion, whereas its point-particle reduction yields a genuine mechanical Lax pair. These results demonstrate that machine learning can effectively propose candidate ans\u00e4tze and identify spectral structures, but low flatness loss alone does not certify genuine integrability, underscoring the necessity of analytic validation.",
+                "category": [
+                    {
+                        "@term": "hep-th",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "nlin.SI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-05T17:59:26Z",
+                "arxiv:comment": "45 pages, 9 figures",
+                "arxiv:primary_category": {
+                    "@term": "hep-th"
+                },
+                "author": [
+                    {
+                        "name": "Osamu Fukushima"
+                    },
+                    {
+                        "name": "Tomohiro Shigemura"
+                    },
+                    {
+                        "name": "Ryosuke Suda"
+                    },
+                    {
+                        "name": "Norihiro Tanahashi"
+                    },
+                    {
+                        "name": "Kentaroh Yoshida"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.05144v1",
+                "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
+                "updated": "2026-08-05T17:58:58Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.05144v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.05144v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified objective. We present Argus, a persistent, self-evolving runtime in which Manager, Planner, Engineer, and Reviewer execute bounded missions over durable project state. Argus separates stable user intent from operational objectives, constraints, and verification criteria, and admits memories, skills, procedures, verifiers, routing decisions, and rejected routes only after role-owned review and, when available, task-native verification. Model weights remain fixed; self-evolution occurs through persistent runtime state and control policy, with autonomous execution between operator-owned escalation points. Across seven GPT-5.5 benchmark arenas, Argus achieves about 78% on SWE-Bench Pro versus 59% for Direct Copilot while using 1.41 times the aggregate tokens. After verification-gated self-evolution, mature SWE-Bench waves use 21% fewer solve-input tokens and 15% less active workflow time per task than startup waves, while recording 34 verifier recoveries and 22 strict review-loop rescues. Argus also reaches 76.8% on AARRI-Bench and a 28.0-point gap on mathematical data synthesis, with competitive GPU-kernel and language-model-training results. Beyond benchmarks, an optimized RWKV6 kernel was merged upstream; a multi-day mathematics campaign retained falsified routes and proof-backed frontier updates; and six paper pipelines completed 254 missions with 16 stage rollbacks. These results show that a fixed-weight, self-evolving harness can revise, recover, and accumulate verified approaches while producing structured trajectories for future supervised and reinforcement learning.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-05T17:58:58Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Boxiu Li"
+                    },
+                    {
+                        "name": "Zimo Wen"
+                    },
+                    {
+                        "name": "Yijia Fan"
+                    },
+                    {
+                        "name": "Junxiang Lei"
+                    },
+                    {
+                        "name": "Sufeng Guo"
+                    },
+                    {
+                        "name": "Jiaao Wu"
+                    },
+                    {
+                        "name": "Ruize Tang"
+                    },
+                    {
+                        "name": "Mukai Li"
+                    },
+                    {
+                        "name": "Yifei Shen"
+                    },
+                    {
+                        "name": "Xiaoyu Chen"
+                    },
+                    {
+                        "name": "Wanbo Zhang"
+                    },
+                    {
+                        "name": "Runjing Gu"
+                    },
+                    {
+                        "name": "Yifei Gao"
+                    },
+                    {
+                        "name": "Yuheng Wu"
+                    },
+                    {
+                        "name": "Xuyao Huang"
+                    },
+                    {
+                        "name": "Zelong Zhao"
+                    },
+                    {
+                        "name": "Jiachen Zhang"
+                    },
+                    {
+                        "name": "Shibo Hu"
+                    },
+                    {
+                        "name": "Hangxi Guo"
+                    },
+                    {
+                        "name": "Yilin Chen"
+                    },
+                    {
+                        "name": "Yuzhe Zhang"
+                    },
+                    {
+                        "name": "Fan Yang"
+                    },
+                    {
+                        "name": "Chuan Wen"
+                    },
+                    {
+                        "name": "Xian Zhang"
+                    },
+                    {
+                        "name": "Xuanhe Zhou"
+                    },
+                    {
+                        "name": "Zhijie Deng"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.05141v1",
+                "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
+                "updated": "2026-08-05T17:58:15Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.05141v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.05141v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora, however, are dominated by books, academic articles, and code repositories, which are finite resources and often scarce in long-distance dependencies. In this work, we introduce OctoLong, a context engineering pipeline that instruments an AST parser, a language server backend, and a package manager to facilitate the recursive retrieval of code references, enabling the curation of dependency-rich code contexts of millions of tokens in length. We then train OctoLong-Instruct, a suite of capable long-context open LMs, derived from base models ranging in size from 600M to 14B parameters, via context-extension mid-training on a ~50B-token mixture containing ~6.2B tokens of OctoLong code contexts, followed by ~10B tokens of instruction tuning. Our training ablations and experimental evaluations against 18 state-of-the-art open-weight long-context LMs show that supplanting just 12% of traditional context-extension corpora with OctoLong data yields substantial gains in long-range retrieval, long-term state tracking, repository-level code understanding, and downstream agentic tasks, while also enhancing API usage in short-context coding scenarios.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.SE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-05T17:58:15Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Indraneil Paul"
+                    },
+                    {
+                        "name": "Falko Helm"
+                    },
+                    {
+                        "name": "Goran Glava\u0161"
+                    },
+                    {
+                        "name": "Iryna Gurevych"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.05139v1",
+                "title": "Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning",
+                "updated": "2026-08-05T17:57:16Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.05139v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.05139v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Long-horizon reasoning in recent LLMs demands that the model switch between distinct skills inside a reasoning chain, such as first doing a math derivation, then using the result to plan a schedule. We call such problems cross-skill long-horizon tasks: multi-step tasks whose steps require different reasoning skills and depend on earlier outputs. Existing benchmarks often evaluate individual skills, lacking a principled way to measure how well a model switches between skills. We address this gap from both the evaluation and training sides. We introduce Skill Entropy, a measure of the difficulty of switching from one skill to another. We then propose Skill^2-Bench, a benchmark of cross-skill long-horizon tasks built over 558 skills across 9 verifiable and open-ended domains. Each task is assigned a task-level skill-entropy score and grouped into three difficulty levels. Evaluating 8 frontier and 4 open-source models on Skill^2-Bench reveals a skill-switching gap: accuracy decreases on higher-entropy tasks. We then turn skill entropy from a benchmark scale into a training signal. We propose Skill-Entropy RL, an RL framework where the model predicts not only the answer at each step but also the skill used to produce it. The reward combines step-level correctness with a skill-entropy reward that measures the alignment between the model-predicted skill sequence and the gold skill sequence. On Qwen3-4B-Instruct and Qwen3-1.7B, Skill-Entropy RL improves the Skill^2-Bench score from 34.4% to 68.4% and from 14.6% to 40.1%, respectively, outperforming competitive baselines. The same pipeline can be applied to off-the-shelf training data such as OpenR1-Math, indicating that skill entropy is a reusable training signal. Code available at: https://github.com/Gen-Verse/Skill-Entropy-RL",
                 "category": [
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-04T17:59:21Z",
+                "published": "2026-08-05T17:57:16Z",
+                "arxiv:comment": "https://github.com/Gen-Verse/Skill-Entropy-RL",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Changle Qu"
+                        "name": "Yinghui He"
                     },
                     {
-                        "name": "Sunhao Dai"
+                        "name": "Ling Yang"
                     },
                     {
-                        "name": "Hengyi Cai"
+                        "name": "Jiarui Liu"
                     },
                     {
-                        "name": "Yuqi Zhou"
+                        "name": "Yongjin Yang"
                     },
                     {
-                        "name": "Xinran Chen"
-                    },
-                    {
-                        "name": "Simon"
-                    },
-                    {
-                        "name": "Jun Xu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.04006v1",
-                "title": "Calibrating Trustworthiness: Co-Designing Metrics and Visualizations for Evaluating LLMs in Education",
-                "updated": "2026-08-04T17:59:20Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.04006v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.04006v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "LLMs are reshaping educational technology, yet evaluating their responses for pedagogical alignment remains underexplored, relying heavily on the expertise of learning engineers building the technology. To bridge this gap, we explore trustworthiness as a structured lens for evaluation, leveraging existing measures of LLM trustworthiness to systematically identify potential pedagogical disruptions. Through a longitudinal co-design process with learning engineers developing an LLM-powered digital textbook, we: (1) co-constructed five trustworthiness metrics comprising 20 measures tailored to pedagogical use; (2) designed visualizations that map trustworthiness violations onto LLM responses; and (3) evaluated how these tools help learning engineers make A/B comparisons of LLM responses. Making trustworthiness explicit increased inter-rater reliability while helping learning engineers resolve conflicting objectives and produce more consistent judgments. We discuss the emergent benefits of trustworthiness as a lens for evaluating LLMs in education and propose new design guidelines for future evaluation tools that enable pedagogically-aligned, LLM-powered learning tools.",
-                "category": {
-                    "@term": "cs.HC",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-04T17:59:20Z",
-                "arxiv:comment": "Under review. 48 pages, 22 figures, 2 tables",
-                "arxiv:primary_category": {
-                    "@term": "cs.HC"
-                },
-                "author": [
-                    {
-                        "name": "Adam Coscia"
-                    },
-                    {
-                        "name": "Sujata Duwal"
-                    },
-                    {
-                        "name": "Langdon Holmes"
-                    },
-                    {
-                        "name": "Scott Crossley"
-                    },
-                    {
-                        "name": "Alex Endert"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.04002v1",
-                "title": "Semantic Bundling: Interactive Node and Edge Bundling to Simplify Knowledge Graphs using Large Language Models",
-                "updated": "2026-08-04T17:58:05Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.04002v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.04002v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present Semantic Bundling, a visual analytics technique for making sense of text documents represented as knowledge graphs (KGs). Representing a document corpus as a KG makes relationships between entities explicit, making KGs useful both to analyze directly and in computational workflows including ML pipelines and generative AI backends. However, as KGs grow they become difficult to interpret and visualize for specific tasks (e.g., the ``hairball problem''), with the meaning of each relationship often buried in dense source text. Semantic Bundling uses large language models (LLMs) to support user-driven bundling of nodes and edges in a KG into higher-level graph structures: super nodes, which collapse and summarize a region of the graph, and super edges, which summarize the connection between two entities. Results are linked to underlying triples and source documents, grounding summaries in evidence. We implement Semantic Bundling in AgentK, an open-source system that builds a KG from text documents and maps graph interactions to bundling operations. Through use cases on movie reviews and an intelligence analysis scenario, we show how Semantic Bundling reveals new insights in document collections, and synthesize our findings into a discussion of emerging challenges and opportunities in knowledge graph sensemaking.",
-                "category": {
-                    "@term": "cs.HC",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-04T17:58:05Z",
-                "arxiv:comment": "Under review. 12 pages, 13 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.HC"
-                },
-                "author": [
-                    {
-                        "name": "Adam Coscia"
-                    },
-                    {
-                        "name": "Zeyu Hua"
-                    },
-                    {
-                        "name": "Eric Krokos"
-                    },
-                    {
-                        "name": "Timothy Lin"
-                    },
-                    {
-                        "name": "Alex Endert"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.04003v1",
-                "title": "PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents",
-                "updated": "2026-08-04T17:58:05Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.04003v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.04003v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recursive self-improvement requires agents to turn accumulated experience into better future behavior. Personal AI agents offer a concrete setting for studying this capability because they retain preferences, task histories, tool routines, and learned skills across sessions. Yet whether retained experience actually improves them over time has not been systematically tested. We introduce PAST-Bench, a benchmark designed to isolate this question. Each agent runs through ordered sequences of fresh-session tasks under matched conditions that turn retained experience on and off. It spans 26 scenarios and 204 episodes across memory, procedural reuse, information gathering, and update. We report both later-task gains and whether those gains follow the intended save, retrieve, and update pathway. Across seven base models and four agent frameworks, improvement is real but uneven across capabilities. Agents with the same headline gain can differ markedly in whether that gain is supported by evidence of the intended pathway. Guided by these findings, we develop Hermes+, which extends Hermes with five targeted interventions across stages of the agent loop. Hermes+ raises the average gain from retained experience and provides clearer pathway evidence, with its strongest improvement on tasks requiring outdated state to be replaced, although the effect remains capability- and model-dependent. Together, PAST-Bench and Hermes+ provide an evaluation and diagnostic foundation for studying how persistent agents can progress from retaining experience to systematically improving through it. Code: https://github.com/Gen-Verse/PAST-Bench",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-04T17:58:05Z",
-                "arxiv:comment": "Code: https://github.com/Gen-Verse/PAST-Bench",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Shuhan Xue"
-                    },
-                    {
-                        "name": "Zixin Ding"
-                    },
-                    {
-                        "name": "Yichen Shen"
-                    },
-                    {
-                        "name": "Yinjie Wang"
-                    },
-                    {
-                        "name": "Zhenfei Yin"
+                        "name": "Lechen Zhang"
                     },
                     {
                         "name": "Yingcheng Wu"
                     },
                     {
-                        "name": "Yuxin Chen"
+                        "name": "Zhenfei Yin"
                     },
                     {
                         "name": "Mengdi Wang"
                     },
                     {
-                        "name": "Ling Yang"
+                        "name": "Sanjeev Arora"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.04001v1",
-                "title": "Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility",
-                "updated": "2026-08-04T17:57:20Z",
+                "id": "http://arxiv.org/abs/2608.05138v1",
+                "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
+                "updated": "2026-08-05T17:56:40Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.04001v1",
+                        "@href": "https://arxiv.org/abs/2608.05138v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.04001v1",
+                        "@href": "https://arxiv.org/pdf/2608.05138v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large language models can solve substantially harder reasoning problems with more inference-time compute. The term \"test-time scaling,\" however, now covers diverse inference algorithms that extend deliberation along a single trajectory, sample completed candidates and aggregate them through voting or verification, or search over unfinished partial states. These algorithms differ in their statistical structure, compute accounting, and failure modes. Treating these procedures as interchangeable under a single scalar \"budget,\" or reporting accuracy without the inference protocol that produced it, makes results difficult to compare across studies. We develop a systematic account of test-time scaling along three axes. First, we formalize test-time scaling as budgeted inference over the implicit prefix tree of an autoregressive model and distinguish three structural regimes: single-trajectory sequential scaling, leaf-level scaling with terminal reduction, and prefix-level scaling. Second, we treat the evaluated object as the entire inference system and develop evaluation principles that separate end-to-end system performance from candidate-bank diagnostics. We introduce an evaluation profile whose coordinates and simple functionals recover or bound common repeated-sampling metrics, and prescribe protocol-matched reporting of compute and uncertainty. Third, we specify reproducibility requirements for inference protocols, distinguishing exact replay from distributional reproducibility and identifying the artifacts needed to support each. We also organize the open-weight reasoning ecosystem by model-side and interface mechanisms, apply these principles to broad-knowledge, symbolic-reasoning, and competition-mathematics benchmarks, and assemble over 2 billion full reasoning traces for release with progressively richer verifier and token-level signals.",
+                "summary": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, financial, and medical applications. We present an end-to-end adaptation of the Nemotron retrieval stack for Modern Greek, including corpus mining, synthetic supervision, retrieval model training, reranker adaptation, reader fine-tuning, and a new benchmark called HERA. Our study shows that a parameter-free BM25 baseline outperforms several off-the-shelf multilingual dense retrieval models on specialist Greek corpora. After fine-tuning on 65,773 Greek retrieval pairs, a Nemotron 1B embedder improves nDCG@10 from 0.362 to 0.835 and substantially outperforms its unadapted counterpart. The learned language competence transfers to general-domain Greek, although the advantage over BM25 remains domain-dependent. We further adapt a cross-encoder reranker and demonstrate consistent improvements across specialist domains. Finally, we LoRA-tune a Nemotron 30B-A3B mixture-of-experts reader for grounded generation, increasing judged answer correctness from 29.4% to 66.9% while significantly improving faithfulness and citation quality. We also introduce HERA, the first large-scale Greek benchmark for retrieval-augmented generation, and release our adapted models and benchmark to support future research on Greek-language RAG systems.",
+                "category": [
+                    {
+                        "@term": "eess.AS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-05T17:56:40Z",
+                "arxiv:comment": "15 pages, 10 figures, 7 tables. Includes release of the HERA benchmark and Sophea Nemo RAG models",
+                "arxiv:primary_category": {
+                    "@term": "eess.AS"
+                },
+                "author": [
+                    {
+                        "name": "Ayoub Kirouane"
+                    },
+                    {
+                        "name": "Christos Petrocheilos"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.05136v1",
+                "title": "The Loss Does Not See the Basis, but Adam Does",
+                "updated": "2026-08-05T17:56:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.05136v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.05136v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Gradient descent on a factored model $W = UV^\\top$ is implicitly biased toward low-rank solutions, while Adam, starting from the same small initialization, is not. We trace the difference to the gauge symmetry of the loss, its invariance under $(U, V) \\mapsto (UQ, VQ)$. Gradient flow's low-rank mechanism is available to an optimizer only if that optimizer is gauge-equivariant, a condition necessary for the transfer but not sufficient for low-rank recovery. Gradient descent, momentum, \"shared-scalar\" Adam, Muon, and Shampoo satisfy it. Adam, RMSProp, and the other coordinate-wise methods do not. A structure theorem characterizes the memoryless equivariant rules as exactly the Gram-determined left preconditioners, and a transfer theorem carries gradient flow's pathwise properties to common-scalar flows. We then sort nine update rules on underdetermined matrix sensing by recovery error against the planted ground truth. A one-parameter family from coordinate-wise to shared-scalar preconditioning restores the bias monotonically, isolating anisotropy as the cause. A \"spectral schedule\" reconciles two opposing reports about Muon: equal-rate updates recover exactly low-rank targets but lose their edge as the spectral tail grows. In transformers, Adam separates two gauge-equivalent initializations at the first step, where the equivariant optimizers stay at float precision, and ends with the per-head invariants $W_Q^\\top W_K$ 56% apart in relative Frobenius distance, a gap no per-head rotation can close. On two hyperspectral datasets at matched training loss, gradient descent cuts held-out error by 43-44% at the lowest sampling density, and at lower effective rank. Basis choice is therefore not a tuning detail but a decision about which interpolant the optimizer selects.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-05T17:56:26Z",
+                "arxiv:comment": "22 pages main text + appendices, 5 figures. Code, seeds, and raw run records: https://github.com/idevender/loss-basis-adam",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Devender Singh"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.05132v1",
+                "title": "Predicting Brain Morphometry with MT-GNN: Mesh Evolution in Continuous Time with Graph-Based Metric Tensor Embeddings",
+                "updated": "2026-08-05T17:53:33Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.05132v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.05132v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Predicting how a subcortical structure's shape will evolve from a few prior scans could support prognosis and clinical-trial enrichment. Existing longitudinal mesh predictors either extrapolate shape trajectories via high-dimensional embeddings or regress vertex deformations directly. We instead predict the surface's intrinsic geometry in continuous time: a single per-structure graph network predicts the future per-vertex first fundamental form (metric tensor) for an arbitrary causal multiple-visit history and an arbitrary prediction horizon, conditioned on a Fourier encoding of the lead time. The predicted metric is decoded into a surface by a differentiable As-Rigid-As-Possible solver, and the model is trained end-to-end on the rigid-aligned vertex error. Training through the reconstruction keeps the decoded prediction a valid surface and consistently improves it. On 14 subcortical structures from the ADNI dataset, the proposed mesh evolution model (MT-GNN) predicts best among the evaluated methods at every horizon ($-2.29\\%$ mean vertex error vs. the temporal mean, $p{=}6.1{\\times}10^{-5}$, beating it on 14/14 structures), ahead of geodesic shape regression (DCM, $-0.19\\%$) and a mesh transformer (TransforMesh, $-0.45\\%$; $p{=}1.2{\\times}10^{-4}$), with the lead widening as the horizon grows.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-05T17:53:33Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Hao Ding"
+                    },
+                    {
+                        "name": "Daniel Semchin"
+                    },
+                    {
+                        "name": "Paul M. Thompson"
+                    },
+                    {
+                        "name": "Boris Gutman"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.05129v1",
+                "title": "A waveguide spectrometer for high-resolution millimeter-wave imaging",
+                "updated": "2026-08-05T17:51:39Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.05129v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.05129v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present the design and development of a novel, compact integrated on-chip spectrometer operating at millimeter (mm) and submillimeter (sub-mm) wavelengths. The Superconducting Waveguide Integrated Submillimeter Spectrometer (SWISS) promises significant improvements in spectral resolution, optical efficiency, and frequency coverage over current mm-wave spectrometers by using a free-space rectangular waveguide architecture. Light is coupled in through the antenna front end, which separates the two polarizations and passes them to the waveguide spectrometer through a contactless metamaterial transition. Each waveguide spectrometer consists of a feedline coupled to a series of filters based on single-pole cavity resonators with varying resonant frequencies. To maximize packing density, the filter banks are oriented out of the focal plane, and an E-plane bend in the output from the cavity filters enables a planar and scalable construction. The output of each filter is coupled to a kinetic inductance detector (KID) to enable high multiplexing factors. The spectrometer is fabricated using stacks of silicon wafers etched with a deep reactive-ion etch (DRIE) and metallized. In these proceedings, we discuss current development on a SWISS prototype including measurements on a prototype antenna front end contactless transition and fabrication a prototype waveguide spectrometer.",
+                "category": {
+                    "@term": "astro-ph.IM",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-05T17:51:39Z",
+                "arxiv:comment": "10 pages, 8 figures, to be published to Proceedings of SPIE Astronomical Telescopes and Instrumentation 2026, \"Millimeter, Submillimeter, and Far-Infrared Detectors and Instrumentation for Astronomy XIII\". Paper number 14156-96",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.IM"
+                },
+                "author": [
+                    {
+                        "name": "Annie Tan"
+                    },
+                    {
+                        "name": "Patrick Ashworth"
+                    },
+                    {
+                        "name": "Peter S. Barry"
+                    },
+                    {
+                        "name": "Chris S. Benson"
+                    },
+                    {
+                        "name": "Karia Dibert"
+                    },
+                    {
+                        "name": "Harry Gordon-Moys"
+                    },
+                    {
+                        "name": "Peter Hunyor"
+                    },
+                    {
+                        "name": "Kirit S. Karkare"
+                    },
+                    {
+                        "name": "Izaak Morris"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.05127v1",
+                "title": "SSTQ:Privacy-Preserving Vector Quantization via Subsampled Stochastic TurboQuant",
+                "updated": "2026-08-05T17:51:25Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.05127v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.05127v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Achieving local differential privacy in distributed optimization while maintaining low communication cost remains challenging. Existing vector quantization methods, such as vqSGD, use high-dimensional geometric constructions but incur unfavorable dimension-dependent variance. In this work, we propose Subsampled Stochastic TurboQuant (SSTQ), a framework that combines overcomplete equal-norm tight frames, coordinate subsampling, and privacy-aware one-dimensional quantization. SSTQ includes two variants: a Flat Randomized Response version and a Metric-Aware Laplace version, the latter being better suited to higher codebook bit-width regimes. We show that SSTQ achieves optimal mean squared error scaling while using only $\\lceil \\log_2 N \\rceil + b$ bits per client, where $N = \u0398(d)$ is the frame size. We also derive a surrogate privacy-aware codebook objective that reduces the codebook-dependent MSE scaling from $O(4^b)$ to $O(2^b)$. Finally, we empirically evaluate SSTQ against established baselines on federated learning tasks using CIFAR-10 and Fashion-MNIST, demonstrating favorable utility and communication efficiency.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -243,261 +493,80 @@
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-04T17:57:20Z",
+                "published": "2026-08-05T17:51:25Z",
+                "arxiv:comment": "42 pages, 4 figures, 2 tables",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Mohsen Hariri"
+                        "name": "Adel Javanmard"
                     },
                     {
-                        "name": "Weicong Chen"
+                        "name": "David P. Woodruff"
                     },
                     {
-                        "name": "Nahal Shahini"
-                    },
-                    {
-                        "name": "Vikash Singh"
-                    },
-                    {
-                        "name": "Kai Ye"
-                    },
-                    {
-                        "name": "Amirhossein Samandar"
-                    },
-                    {
-                        "name": "Debargha Ganguly"
-                    },
-                    {
-                        "name": "Sreehari Sankar"
-                    },
-                    {
-                        "name": "Yanyan Zhang"
-                    },
-                    {
-                        "name": "Shouren Wang"
-                    },
-                    {
-                        "name": "Jerry Peng"
-                    },
-                    {
-                        "name": "Biyao Zhang"
-                    },
-                    {
-                        "name": "Michael Hinczewski"
-                    },
-                    {
-                        "name": "Vipin Chaudhary"
+                        "name": "Vahab Mirrokni"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.03991v1",
-                "title": "Perceptual Anchoring: Prototype-Guided Text Calibration for Training-free Open-Vocabulary Semantic Segmentation",
-                "updated": "2026-08-04T17:52:13Z",
+                "id": "http://arxiv.org/abs/2608.05126v1",
+                "title": "Spoken Function Calling: A New Perspective on Spoken Language Understanding for Large Audio Language Models",
+                "updated": "2026-08-05T17:50:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.03991v1",
+                        "@href": "https://arxiv.org/abs/2608.05126v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.03991v1",
+                        "@href": "https://arxiv.org/pdf/2608.05126v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Training-free open-vocabulary semantic segmentation (OVSS) partitions an image into semantically distinct regions based on arbitrary text descriptions, without learning any additional parameters. However, existing methods typically focus on improving visual representations while treating text embeddings that encode only generic category concepts as fixed classification references. The resulting semantic gap between these generic concepts and the visual representations that capture the specific appearances of target instances often causes incomplete masks and erroneous predictions in non-target regions. Inspired by the symbol-percept correspondence underlying perceptual anchoring, we propose Prototype-Guided Text Calibration (PTC) for training-free OVSS. In the Perceiving stage, PTC selects reliable visual evidence based on initial matching scores to construct category-specific visual prototypes. In the Anchoring stage, PTC uses these prototypes to calibrate their corresponding text embeddings, with the calibration strength adaptively adjusted based on the amount of visual evidence. Consequently, the calibrated text embeddings align more accurately with instance-specific visual representations while preserving generic category semantics and open-vocabulary generalization. Moreover, PTC requires neither additional training nor external models and can serve as a plug-and-play module for existing methods. Extensive experiments across eight benchmarks show that PTC significantly enhances the performance of six representative methods and yields more complete and accurate segmentation results. These results validate PTC as a simple and effective approach to improving visual-text alignment.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-04T17:52:13Z",
-                "arxiv:comment": "17 pages, 5 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
+                "summary": "Spoken Language Understanding (SLU) is the core component of task-oriented dialogue systems and a pivotal link in achieving seamless human-agent interaction. While traditional SLU can effectively extract user semantics for closed-set tasks after in-domain supervised fine-tuning, it faces significant challenges in leveraging in-context learning for open-domain tasks due to its ambiguous rule definitions. This work proposes Spoken Function Calling (SFC), a novel semantic understanding perspective that optimizes semantic understanding with structured rule definitions, to evolve beyond traditional closed-set SLU. Specifically, we curate and extend a suite of spoken functions based on traditional SLU datasets, construct a multi-agent system to synthesize the SFC-Bench dataset, evaluate the performance of Large Language Models (LLMs) and Large Audio Language Models (LALMs), and enhance the SFC capabilities of LALMs through post-training. Experiments demonstrate that SFC outperforms traditional SLU, substantially enhancing the semantic extraction accuracy for LLMs and LALMs.",
+                "category": [
                     {
-                        "name": "Wanli Ma"
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Jiangwen Lu"
-                    },
-                    {
-                        "name": "Qinmu Peng"
-                    },
-                    {
-                        "name": "Xinge You"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.03990v1",
-                "title": "Assessment of Conditional Diffusion Model for Synthetic Histopathology Image Generation",
-                "updated": "2026-08-04T17:51:40Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.03990v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.03990v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
+                        "@term": "cs.MM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "summary": "Synthetic histopathology image generation has emerged as an approach that may address data scarcity in computational pathology, yet current evaluation methodologies may not fully assess synthetic data quality for medical applications. This work investigates and addresses limitations in existing evaluation metrics, investigating an approach for assessing synthetic histopathology image quality through domain-specific metrics and downstream task validation. We show that conventional synthetic data evaluation metrics such as Frechet Inception Distance (FID) and Inception Score (IS) may have limitations when applied to histopathology images due to their reliance on ImageNet-pretrained feature extractors. To address these limitations, we propose for consideration modified FID and IS approaches utilizing foundation models pretrained on digital pathology datasets, supplemented by precision-recall based metrics as part of an additional quality assessment. Using conditional denoising diffusion models trained on four benchmark datasets, with a two-step training approach, we generated synthetic datasets with systematically varied quality characteristics. We also measured the correlation between the synthetic data quality metrics with downstream nuclei segmentation performance using common metrics including the aggregated Jaccard index (AJI+) and the Dice coefficient. The study results suggest that pathology-specific metrics may provide improved discriminative power. Specifically, the modified Inception Score indicates higher correlation with downstream task performance (r=0.6096 with AJI+, p=0.0122), compared to the original IS (r=0.0708, p=0.7944). Our observations indicate that increasing the variety of generated training data has a higher positive correlation with segmentation model performance than improving the visual fidelity of individual generated images.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-04T17:51:40Z",
-                "arxiv:comment": "11 pages, 3 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Seyed Kahaki"
-                    },
-                    {
-                        "name": "Shijie Li"
-                    },
-                    {
-                        "name": "Weijie Chen"
-                    },
-                    {
-                        "name": "Nicholas Petrick"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.03989v1",
-                "title": "A Stackelberg-Bayesian Capacity-Market Game of Carbon Regulation and Second-Life Battery Investment under AI Data-Center Load Growth",
-                "updated": "2026-08-04T17:51:14Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.03989v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.03989v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Artificial intelligence (AI) data centers are driving rapid electricity load growth across all U.S. ISO/RTO regions, raising both system costs and carbon exposure. This study develops a three-level Stackelberg--Bayesian game in which a regulator (leader) sets carbon penalties and subsidies, a single ISO capacity market clears against an energy balance modeled as a classical generation-expansion problem, and technology-specific investors (followers) decide capacity and operation under incomplete information, yielding a Bayesian Nash equilibrium. The AI impact is captured parsimoniously as an additional load-growth factor on a greenfield-incremental expansion, isolating how much new capacity the growth pulls in and which technology fills it. Within this framework, we consider second-life battery (SLB) storage competing against new/first-life storage for capacity-market revenue. We quantify how a carbon tax, a renewable subsidy, and an SLB subsidy reshape the equilibrium investment mix, carbon emissions, and profit. Different scenarios are compared at the end based on cost-effectiveness and reduced carbon emissions.",
-                "category": {
-                    "@term": "eess.SY",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-04T17:51:14Z",
-                "arxiv:comment": "6 pages, 2 figures, Accepted, 2026 North American Power Symposium (NAPS 2026), MI, USA",
-                "arxiv:primary_category": {
-                    "@term": "eess.SY"
-                },
-                "author": [
-                    {
-                        "name": "Rouzbeh Haghighi"
-                    },
-                    {
-                        "name": "Ali Hassan"
-                    },
-                    {
-                        "name": "Sina Mohammadi"
-                    },
-                    {
-                        "name": "Marcus Chen I Wada"
-                    },
-                    {
-                        "name": "Wencong Su"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.03984v1",
-                "title": "string2string Studio: An Interactive, In-Browser Platform for String-to-String Algorithms",
-                "updated": "2026-08-04T17:48:15Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.03984v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.03984v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present string2string Studio, an interactive in-browser platform for string-to-string analysis across natural language processing, computational biology, and the digital humanities. The system integrates six main modules (alignment, distance, similarity, search, generation metrics, and BLAST homology search), operating at character, word, token, line, and residue levels. Its C++-based algorithms compile to WebAssembly, so core operations run locally by default without any installation or data upload. The interface reports scores with their \"evidence\" (alignments, edit paths, metric matches, search hits, and homology traces), making methods inspectable, debuggable, and comparable on shared inputs. Internal benchmarks show speedups of up to 2,500x over the Python predecessor, faster global/local alignment than a general-purpose native C aligner, and exact agreement with independent references under declared settings. For homology search, the scoped client-side blastn path closely matches NCBI BLAST+ rankings and statistics under matched parameters. A curated showcase and Learn mode present canonical algorithms and metrics as reusable demonstrations. string2string Studio is open-source and freely available at string2string.org.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-04T17:48:15Z",
-                "arxiv:comment": "https://string2string.org/",
+                "published": "2026-08-05T17:50:31Z",
+                "arxiv:comment": "ACM Multimedia 2026",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Mirac Suzgun"
+                        "name": "Yuezhang Peng"
                     },
                     {
-                        "name": "James Zou"
+                        "name": "Yuxin Liu"
                     },
                     {
-                        "name": "Stuart M. Shieber"
+                        "name": "Changfeng Gao"
                     },
                     {
-                        "name": "Dan Jurafsky"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.03980v1",
-                "title": "Helium-poor winds do not require helium-poor planets",
-                "updated": "2026-08-04T17:45:33Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.03980v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Zhifu Gao"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.03980v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Observations of the metastable He,{\\sc i},10830,\u00c5 triplet have revealed escaping exoplanet atmospheres whose inferred helium abundances range from nearly nebular compositions to strongly helium-depleted winds. Such depletion is commonly interpreted as evidence for atmospheric evolution, preferential escape, or departures from primordial composition. We present a closed-form analytic transport-retention theory for the atmospheric transition region between the homopause and the base of the planetary wind. The theory quantifies the competition between upward transport and molecular separation, demonstrating that transport physics alone can substantially deplete the helium abundance supplied to the escaping flow. Our solution yields a retention factor, $\u03c7_{\\rm He}$, that measures the fraction of helium supplied to the base of the hydrodynamic wind relative to the deep atmospheric abundance. Combining the analytic framework with numerical forward models of the He,{\\sc i},10830,\u00c5 absorption and a sample of twelve helium-observed sub-Neptunes and mini-Neptunes, we find that observed systems span the full range of predicted retention states, from nearly complete retention to strong helium depletion. These forward models use the helium abundance supplied by the analytic framework as the lower-boundary condition to predict the corresponding He,{\\sc i},10830,\u00c5 absorption. We further show that increasing helium retention systematically strengthens the expected absorption signal by increasing the helium reservoir available to the upper atmosphere. These results suggest that helium depletion does not necessarily imply intrinsically helium-poor atmospheres or evolutionary transitions toward secondary compositions, but may instead be a natural consequence of transport physics in escaping atmospheres.",
-                "category": {
-                    "@term": "astro-ph.EP",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-04T17:45:33Z",
-                "arxiv:comment": "Accepted for publication in The Astrophysical Journal",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.EP"
-                },
-                "author": [
-                    {
-                        "name": "Leonardos Gkouvelis"
+                        "name": "Xiangang Li"
                     },
                     {
-                        "name": "Francisco J. Pozuelos"
+                        "name": "Xie Chen"
                     }
                 ]
             }
