@@ -5,192 +5,38 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-08-07T00:36:57Z",
+        "updated": "2026-08-07T03:44:34Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "600617",
+        "opensearch:totalResults": "601041",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2608.05146v1",
-                "title": "Machine-Learning Search for Lax Connections",
-                "updated": "2026-08-05T17:59:26Z",
+                "id": "http://arxiv.org/abs/2608.06377v1",
+                "title": "Learning When to Trust via Selective Context Preference Optimization",
+                "updated": "2026-08-06T17:59:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.05146v1",
+                        "@href": "https://arxiv.org/abs/2608.06377v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.05146v1",
+                        "@href": "https://arxiv.org/pdf/2608.06377v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We apply a machine learning framework to search for Lax connections in two-dimensional non-linear sigma models using local current data. For the $SU(2)$ principal chiral model and the symmetric coset $S^2 = SU(2)/U(1)$, the method successfully recovers the full spectral-parameter families without using the known spectral curves as training targets. For the non-symmetric coset $T^{1,1}$, the optimization converges to reproducible low-loss maps that distill into a compact block-diagonal ansatz. However, analytic verification shows that this candidate is a ``fake Lax'' connection which satisfies on-shell flatness but fails to encode the two-dimensional equations of motion, whereas its point-particle reduction yields a genuine mechanical Lax pair. These results demonstrate that machine learning can effectively propose candidate ans\u00e4tze and identify spectral structures, but low flatness loss alone does not certify genuine integrability, underscoring the necessity of analytic validation.",
+                "summary": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is worth trusting. We recast the problem as selective trust and introduce MIST, a human-annotated benchmark that renders each reasoning item under four matched conditions (clean, misleading, correct-context, and irrelevant-context), together with SC2W, a paired metric counting how often a misleading signal flips a clean-correct answer to wrong. Across a comprehensive benchmark study, we observe that such a susceptibility is universal. We then propose SCOPE, which mines clean-correct/misleading-wrong failures and optimizes a standard Direct Preference Optimization (DPO) objective over matched preference pairs balanced equally across all four conditions, rather than over misleading items alone. Our approach substantially reduces SC2W on popular open-sourced models while preserving accuracy when the added context is clean, correct, or irrelevant. With this work, we argue that models should be judged on selective trust, not on resistance alone.",
                 "category": [
                     {
-                        "@term": "hep-th",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
-                    {
-                        "@term": "nlin.SI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-05T17:59:26Z",
-                "arxiv:comment": "45 pages, 9 figures",
-                "arxiv:primary_category": {
-                    "@term": "hep-th"
-                },
-                "author": [
-                    {
-                        "name": "Osamu Fukushima"
-                    },
-                    {
-                        "name": "Tomohiro Shigemura"
-                    },
-                    {
-                        "name": "Ryosuke Suda"
-                    },
-                    {
-                        "name": "Norihiro Tanahashi"
-                    },
-                    {
-                        "name": "Kentaroh Yoshida"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.05144v1",
-                "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
-                "updated": "2026-08-05T17:58:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.05144v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.05144v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified objective. We present Argus, a persistent, self-evolving runtime in which Manager, Planner, Engineer, and Reviewer execute bounded missions over durable project state. Argus separates stable user intent from operational objectives, constraints, and verification criteria, and admits memories, skills, procedures, verifiers, routing decisions, and rejected routes only after role-owned review and, when available, task-native verification. Model weights remain fixed; self-evolution occurs through persistent runtime state and control policy, with autonomous execution between operator-owned escalation points. Across seven GPT-5.5 benchmark arenas, Argus achieves about 78% on SWE-Bench Pro versus 59% for Direct Copilot while using 1.41 times the aggregate tokens. After verification-gated self-evolution, mature SWE-Bench waves use 21% fewer solve-input tokens and 15% less active workflow time per task than startup waves, while recording 34 verifier recoveries and 22 strict review-loop rescues. Argus also reaches 76.8% on AARRI-Bench and a 28.0-point gap on mathematical data synthesis, with competitive GPU-kernel and language-model-training results. Beyond benchmarks, an optimized RWKV6 kernel was merged upstream; a multi-day mathematics campaign retained falsified routes and proof-backed frontier updates; and six paper pipelines completed 254 missions with 16 stage rollbacks. These results show that a fixed-weight, self-evolving harness can revise, recover, and accumulate verified approaches while producing structured trajectories for future supervised and reinforcement learning.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-05T17:58:58Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Boxiu Li"
-                    },
-                    {
-                        "name": "Zimo Wen"
-                    },
-                    {
-                        "name": "Yijia Fan"
-                    },
-                    {
-                        "name": "Junxiang Lei"
-                    },
-                    {
-                        "name": "Sufeng Guo"
-                    },
-                    {
-                        "name": "Jiaao Wu"
-                    },
-                    {
-                        "name": "Ruize Tang"
-                    },
-                    {
-                        "name": "Mukai Li"
-                    },
-                    {
-                        "name": "Yifei Shen"
-                    },
-                    {
-                        "name": "Xiaoyu Chen"
-                    },
-                    {
-                        "name": "Wanbo Zhang"
-                    },
-                    {
-                        "name": "Runjing Gu"
-                    },
-                    {
-                        "name": "Yifei Gao"
-                    },
-                    {
-                        "name": "Yuheng Wu"
-                    },
-                    {
-                        "name": "Xuyao Huang"
-                    },
-                    {
-                        "name": "Zelong Zhao"
-                    },
-                    {
-                        "name": "Jiachen Zhang"
-                    },
-                    {
-                        "name": "Shibo Hu"
-                    },
-                    {
-                        "name": "Hangxi Guo"
-                    },
-                    {
-                        "name": "Yilin Chen"
-                    },
-                    {
-                        "name": "Yuzhe Zhang"
-                    },
-                    {
-                        "name": "Fan Yang"
-                    },
-                    {
-                        "name": "Chuan Wen"
-                    },
-                    {
-                        "name": "Xian Zhang"
-                    },
-                    {
-                        "name": "Xuanhe Zhou"
-                    },
-                    {
-                        "name": "Zhijie Deng"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.05141v1",
-                "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
-                "updated": "2026-08-05T17:58:15Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.05141v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.05141v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora, however, are dominated by books, academic articles, and code repositories, which are finite resources and often scarce in long-distance dependencies. In this work, we introduce OctoLong, a context engineering pipeline that instruments an AST parser, a language server backend, and a package manager to facilitate the recursive retrieval of code references, enabling the curation of dependency-rich code contexts of millions of tokens in length. We then train OctoLong-Instruct, a suite of capable long-context open LMs, derived from base models ranging in size from 600M to 14B parameters, via context-extension mid-training on a ~50B-token mixture containing ~6.2B tokens of OctoLong code contexts, followed by ~10B tokens of instruction tuning. Our training ablations and experimental evaluations against 18 state-of-the-art open-weight long-context LMs show that supplanting just 12% of traditional context-extension corpora with OctoLong data yields substantial gains in long-range retrieval, long-term state tracking, repository-level code understanding, and downstream agentic tasks, while also enhancing API usage in short-context coding scenarios.",
-                "category": [
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
@@ -198,115 +44,363 @@
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-05T17:58:15Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Indraneil Paul"
-                    },
-                    {
-                        "name": "Falko Helm"
-                    },
-                    {
-                        "name": "Goran Glava\u0161"
-                    },
-                    {
-                        "name": "Iryna Gurevych"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.05139v1",
-                "title": "Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning",
-                "updated": "2026-08-05T17:57:16Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.05139v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.05139v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Long-horizon reasoning in recent LLMs demands that the model switch between distinct skills inside a reasoning chain, such as first doing a math derivation, then using the result to plan a schedule. We call such problems cross-skill long-horizon tasks: multi-step tasks whose steps require different reasoning skills and depend on earlier outputs. Existing benchmarks often evaluate individual skills, lacking a principled way to measure how well a model switches between skills. We address this gap from both the evaluation and training sides. We introduce Skill Entropy, a measure of the difficulty of switching from one skill to another. We then propose Skill^2-Bench, a benchmark of cross-skill long-horizon tasks built over 558 skills across 9 verifiable and open-ended domains. Each task is assigned a task-level skill-entropy score and grouped into three difficulty levels. Evaluating 8 frontier and 4 open-source models on Skill^2-Bench reveals a skill-switching gap: accuracy decreases on higher-entropy tasks. We then turn skill entropy from a benchmark scale into a training signal. We propose Skill-Entropy RL, an RL framework where the model predicts not only the answer at each step but also the skill used to produce it. The reward combines step-level correctness with a skill-entropy reward that measures the alignment between the model-predicted skill sequence and the gold skill sequence. On Qwen3-4B-Instruct and Qwen3-1.7B, Skill-Entropy RL improves the Skill^2-Bench score from 34.4% to 68.4% and from 14.6% to 40.1%, respectively, outperforming competitive baselines. The same pipeline can be applied to off-the-shelf training data such as OpenR1-Math, indicating that skill entropy is a reusable training signal. Code available at: https://github.com/Gen-Verse/Skill-Entropy-RL",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-05T17:57:16Z",
-                "arxiv:comment": "https://github.com/Gen-Verse/Skill-Entropy-RL",
+                "published": "2026-08-06T17:59:58Z",
+                "arxiv:comment": "Project Page at https://worldbench.github.io/scope GitHub Repo at https://github.com/worldbench/SCOPE HF Dataset at https://huggingface.co/datasets/worldbench/MIST-Bench",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Yinghui He"
+                        "name": "Xian Sun"
                     },
                     {
-                        "name": "Ling Yang"
+                        "name": "Wei Chow"
                     },
                     {
-                        "name": "Jiarui Liu"
+                        "name": "Yingshuo Wang"
                     },
                     {
-                        "name": "Yongjin Yang"
+                        "name": "Junhao Liu"
                     },
                     {
-                        "name": "Lechen Zhang"
+                        "name": "Wei Gao"
                     },
                     {
-                        "name": "Yingcheng Wu"
+                        "name": "Qing Wu"
                     },
                     {
-                        "name": "Zhenfei Yin"
-                    },
-                    {
-                        "name": "Mengdi Wang"
-                    },
-                    {
-                        "name": "Sanjeev Arora"
+                        "name": "Lingdong Kong"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.05138v1",
-                "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
-                "updated": "2026-08-05T17:56:40Z",
+                "id": "http://arxiv.org/abs/2608.06375v1",
+                "title": "$\u03c9$-0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation",
+                "updated": "2026-08-06T17:59:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.05138v1",
+                        "@href": "https://arxiv.org/abs/2608.06375v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.05138v1",
+                        "@href": "https://arxiv.org/pdf/2608.06375v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, financial, and medical applications. We present an end-to-end adaptation of the Nemotron retrieval stack for Modern Greek, including corpus mining, synthetic supervision, retrieval model training, reranker adaptation, reader fine-tuning, and a new benchmark called HERA. Our study shows that a parameter-free BM25 baseline outperforms several off-the-shelf multilingual dense retrieval models on specialist Greek corpora. After fine-tuning on 65,773 Greek retrieval pairs, a Nemotron 1B embedder improves nDCG@10 from 0.362 to 0.835 and substantially outperforms its unadapted counterpart. The learned language competence transfers to general-domain Greek, although the advantage over BM25 remains domain-dependent. We further adapt a cross-encoder reranker and demonstrate consistent improvements across specialist domains. Finally, we LoRA-tune a Nemotron 30B-A3B mixture-of-experts reader for grounded generation, increasing judged answer correctness from 29.4% to 66.9% while significantly improving faithfulness and citation quality. We also introduce HERA, the first large-scale Greek benchmark for retrieval-augmented generation, and release our adapted models and benchmark to support future research on Greek-language RAG systems.",
+                "summary": "Humanoid household tasks often require concurrent loco-manipulation, where the robot must move, adjust posture, maintain balance, and manipulate objects as a single coordinated behavior. Yet existing humanoid policies typically decompose locomotion and manipulation, while recent world-action models remain either arm-centric or video-centered. We present $\u03c9$-0, a latent predictive whole-body world-action model for real-world humanoid concurrent loco-manipulation. Given a language instruction, current visual observation, and robot proprioceptive state, $\u03c9$-0 directly predicts controller-compatible whole-body action latents for real-robot execution. Rather than reconstructing future videos, $\u03c9$-0 learns compact future observation embeddings as a lightweight predictive objective, coupling latent visual foresight with diffusion-based whole-body action generation. The model supports egocentric RGB, exocentric RGB, and exocentric depth inputs, and leverages controller-based simulation replay to ground human/public visual-motion priors into robot-executable action latents. We further collect $\u03c9$-HOME, a 40+ hour real-world household humanoid dataset with synchronized multi-view observations, whole-body SMPL motions, robot states, and action latents. Real-world experiments on 11 household tasks demonstrate that a single $\u03c9$-0 model can produce smooth manipulate-while-moving behaviors and consistently outperform representative imitation learning, VLA, humanoid, and WAM baselines.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-06T17:59:31Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Zhe Li"
+                    },
+                    {
+                        "name": "Zhenzhe Zhang"
+                    },
+                    {
+                        "name": "Yangyang Wei"
+                    },
+                    {
+                        "name": "Wenjie Zhang"
+                    },
+                    {
+                        "name": "Xichen Yuan"
+                    },
+                    {
+                        "name": "Peiyuan Zhi"
+                    },
+                    {
+                        "name": "Gen Li"
+                    },
+                    {
+                        "name": "Xinying Guo"
+                    },
+                    {
+                        "name": "Fengjie Gao"
+                    },
+                    {
+                        "name": "Jianfei Yang"
+                    },
+                    {
+                        "name": "Shanghang Zhang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.06374v1",
+                "title": "DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation",
+                "updated": "2026-08-06T17:59:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.06374v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.06374v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two main limitations. First, they underuse dynamics priors shared across diverse visual and interaction data, limiting cross-embodiment transfer. Second, they require extensive manual preprocessing to convert embodiment-specific actions into a common format. To overcome these limitations, we propose DyPES-VLA, a cross-embodiment VLA that learns shared Dynamics Priors and Embodiment-Specific control. First, we learn shared dynamics priors by training the vision-language model (VLM) with a future-prediction objective on cross-embodiment data, driving the shared query representation to capture object motion, contact, and interaction-induced scene changes. Second, an embodiment-specific Mixture-of-Experts (MoE) action head translates these shared dynamics priors into executable controls directly in each embodiment's native action space, without manually pre-aligning heterogeneous actions into a common format. This head shares attention layers to capture common temporal action structures, while its embodiment-specific feed-forward experts resolve the unique kinematic constraints and control semantics of distinct embodiments. As a generalist policy, our \\ourmethod achieves state-of-the-art performance across simulation and real-world evaluations, reaching 98.0% success on LIBERO, 59.25% on RoboCasa-GR1, and 89.02% on RoboTwin~2.0.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-06T17:59:20Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Junfeng Li"
+                    },
+                    {
+                        "name": "Junjie He"
+                    },
+                    {
+                        "name": "Zhide Zhong"
+                    },
+                    {
+                        "name": "Yangyang Zheng"
+                    },
+                    {
+                        "name": "Pingyue Sheng"
+                    },
+                    {
+                        "name": "Jiayu Dong"
+                    },
+                    {
+                        "name": "Ruixin Li"
+                    },
+                    {
+                        "name": "Haodong Yan"
+                    },
+                    {
+                        "name": "Jiaguan Zhu"
+                    },
+                    {
+                        "name": "Tianran Zhang"
+                    },
+                    {
+                        "name": "Runze Yu"
+                    },
+                    {
+                        "name": "Wen Chen"
+                    },
+                    {
+                        "name": "Liuqing Yang"
+                    },
+                    {
+                        "name": "Yuxiang Gao"
+                    },
+                    {
+                        "name": "Haoang Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.06366v1",
+                "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
+                "updated": "2026-08-06T17:57:37Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.06366v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.06366v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data with disease-specific, guideline-based clinical reasoning. Existing rule-based and large language model (LLM)-based approaches offer only partial automation with limited maintainability and evidence traceability. We developed the Nimblemind Multi-Agent System (nMAS), an evidence-linked, rubric-grounded pipeline for automated heart-failure feature engineering, and evaluated it on 500 dummy patient records from nine EHR source tables. nMAS generated 132 structured and 70 rubric-scored aggregated features, verified for structural integrity, rubric compliance, and provenance, and audited by a restricted LLM. Adding the aggregated features improved held-out AUROC from 0.895 to 0.963 for HFrEF and 0.870 to 0.910 for HFpEF phenotyping, and an independent LLM-based rubric assessment of evidence support and methodological soundness scored the features at 81.5% of maximum points. These results demonstrate the feasibility of automated, auditable feature engineering for complex cardiovascular EHR data, though evaluation was limited to a single-institution cohort and external validation is needed.",
                 "category": [
                     {
-                        "@term": "eess.AS",
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-06T17:57:37Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Soorya Ram Shimgekar"
+                    },
+                    {
+                        "name": "Michelle Hu"
+                    },
+                    {
+                        "name": "Dorisa Shehi"
+                    },
+                    {
+                        "name": "Daniel Kang"
+                    },
+                    {
+                        "name": "Roy Ka-Wei Lee"
+                    },
+                    {
+                        "name": "Koustuv Saha"
+                    },
+                    {
+                        "name": "Christian Poellabauer"
+                    },
+                    {
+                        "name": "Christopher Lee"
+                    },
+                    {
+                        "name": "Sajeev Singh"
+                    },
+                    {
+                        "name": "Piyum Zonooz"
+                    },
+                    {
+                        "name": "Navin Kumar"
+                    },
+                    {
+                        "name": "Zeeshan Ahmed"
+                    },
+                    {
+                        "name": "Priyadarshini Kachroo"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.06364v1",
+                "title": "Investigating Artificial Intelligence Digital Sovereignty in Mobile Shopping Apps: A Case Study of Nigeria",
+                "updated": "2026-08-06T17:57:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.06364v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.06364v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The use of e-commerce mobile applications is expanding in Nigeria, creating both opportunities and risks, including fraud and reduced user control over digital technologies, raising concerns about digital sovereignty. This research examines how Artificial Intelligence (AI) in Nigerian mobile applications affects digital sovereignty, examined through platform transparency as a key indicator of user awareness and control. Using an interpretive approach, the research combines the forensic analysis of selected Android applications with contextual document analysis to identify AI features and evaluate disclosure practices. The findings show that AI is widely implemented in the applications, yet transparency about its use remains limited. A socio-economic analysis of Nigeria further shows an increasing dependence on consumer digital platforms, moderate AI awareness, and uneven patterns of interaction. By providing empirical evidence on AI transparency and platform practices, this study advances understanding of individual digital sovereignty and highlights challenges for protecting user control in AI-driven digital environments.",
+                "category": [
+                    {
+                        "@term": "cs.CY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-06T17:57:28Z",
+                "arxiv:comment": "Paper presented at Thirty-second Americas Conference on Information Systems, Reno, USA",
+                "arxiv:primary_category": {
+                    "@term": "cs.CY"
+                },
+                "author": [
+                    {
+                        "name": "George Grispos"
+                    },
+                    {
+                        "name": "Sajda Qureshi"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.06363v1",
+                "title": "An Optimal Agnostic PAC Algorithm",
+                "updated": "2026-08-06T17:57:25Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.06363v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.06363v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Let $H\\subseteq\\{-1,+1\\}^X$ be a class of finite VC dimension $d\\ge1$. Writing $L$ for the binary risk and $L^*=\\min_{h\\in H}L(h)$, we construct a learner achieving the statistically optimal risk bound: from an i.i.d.\\ sample of size $n$, for every $0<\u03b4\\le 1/2$, with probability at least $1-\u03b4$, \\[\n  L(\\widehat h)\n  \\le L^*+ 7\\cdot10^8\\left(\n  \\sqrt{\\frac{L^*(d+\\log(1/\u03b4))}{n}}\n  +\\frac{d+\\log(1/\u03b4)}{n}\n  \\right). \\] This settles the sample complexity of agnostic PAC learning up to universal constants at every fixed $L^*$, matching the lower bounds of Devroye, Gy\u00f6rfi, and Lugosi [A Probabilistic Theory of Pattern Recognition, Springer, 1996].",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.DS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-06T17:57:25Z",
+                "arxiv:comment": "18 pages",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Markus Engelund Mathiasen"
+                    },
+                    {
+                        "name": "Jian Qian"
+                    },
+                    {
+                        "name": "Nikita Zhivotovskiy"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.06362v1",
+                "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
+                "updated": "2026-08-06T17:57:11Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.06362v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.06362v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be told apart, while naive optional stopping with an ordinary confidence interval invalidates the stated level. We make such an evaluation stop as soon as its evidence suffices, with the guarantee intact. The Action-Informed Value Assessment Tool (AIVAT) reduces variance in imperfect-information games through conditional mean-zero corrections, by a median $54\\times$ across 15 LLM agent configurations spanning 71,439 paired Heads-Up No-Limit Hold'em (HUNL) hands, but does not say when to stop. We combine AIVAT with continuously monitored Confidence Sequences (CSs) into anytime-valid AIVAT (AV-AIVAT), whose online value model learns only from past games so that no game scores its own correction. At the nominal 95\\% level and a target precision of $\\pm1$ Big Blind, raw outcomes need a median $74\\times$ as many hands as AIVAT-corrected outcomes to stop under the Asymptotic CS (AsympCS). Exact finite-sample certification uses the Empirical-Bernstein CS (EB-CS), which needs an independently justified bound on corrected payoffs. We establish such a bound structurally for Leduc hold'em and characterize a width floor set by the CS's bet cap and that bound, which governs how much of a variance gain becomes earlier stopping; the descriptive HUNL EB-CS runs show a median $1.37\\times$ stopping-time ratio. AV-AIVAT turns variance reduction into efficient, auditable early stopping while separating asymptotic screening from exact certification, so an evaluation can stop the moment its evidence suffices and hand a third party everything needed to recheck the verdict at that very stopping time.",
+                "category": [
+                    {
+                        "@term": "cs.GT",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -316,178 +410,99 @@
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-05T17:56:40Z",
-                "arxiv:comment": "15 pages, 10 figures, 7 tables. Includes release of the HERA benchmark and Sophea Nemo RAG models",
-                "arxiv:primary_category": {
-                    "@term": "eess.AS"
-                },
-                "author": [
-                    {
-                        "name": "Ayoub Kirouane"
-                    },
-                    {
-                        "name": "Christos Petrocheilos"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.05136v1",
-                "title": "The Loss Does Not See the Basis, but Adam Does",
-                "updated": "2026-08-05T17:56:26Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.05136v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.05136v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Gradient descent on a factored model $W = UV^\\top$ is implicitly biased toward low-rank solutions, while Adam, starting from the same small initialization, is not. We trace the difference to the gauge symmetry of the loss, its invariance under $(U, V) \\mapsto (UQ, VQ)$. Gradient flow's low-rank mechanism is available to an optimizer only if that optimizer is gauge-equivariant, a condition necessary for the transfer but not sufficient for low-rank recovery. Gradient descent, momentum, \"shared-scalar\" Adam, Muon, and Shampoo satisfy it. Adam, RMSProp, and the other coordinate-wise methods do not. A structure theorem characterizes the memoryless equivariant rules as exactly the Gram-determined left preconditioners, and a transfer theorem carries gradient flow's pathwise properties to common-scalar flows. We then sort nine update rules on underdetermined matrix sensing by recovery error against the planted ground truth. A one-parameter family from coordinate-wise to shared-scalar preconditioning restores the bias monotonically, isolating anisotropy as the cause. A \"spectral schedule\" reconciles two opposing reports about Muon: equal-rate updates recover exactly low-rank targets but lose their edge as the spectral tail grows. In transformers, Adam separates two gauge-equivalent initializations at the first step, where the equivariant optimizers stay at float precision, and ends with the per-head invariants $W_Q^\\top W_K$ 56% apart in relative Frobenius distance, a gap no per-head rotation can close. On two hyperspectral datasets at matched training loss, gradient descent cuts held-out error by 43-44% at the lowest sampling density, and at lower effective rank. Basis choice is therefore not a tuning detail but a decision about which interpolant the optimizer selects.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-05T17:56:26Z",
-                "arxiv:comment": "22 pages main text + appendices, 5 figures. Code, seeds, and raw run records: https://github.com/idevender/loss-basis-adam",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": {
-                    "name": "Devender Singh"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.05132v1",
-                "title": "Predicting Brain Morphometry with MT-GNN: Mesh Evolution in Continuous Time with Graph-Based Metric Tensor Embeddings",
-                "updated": "2026-08-05T17:53:33Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.05132v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.05132v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Predicting how a subcortical structure's shape will evolve from a few prior scans could support prognosis and clinical-trial enrichment. Existing longitudinal mesh predictors either extrapolate shape trajectories via high-dimensional embeddings or regress vertex deformations directly. We instead predict the surface's intrinsic geometry in continuous time: a single per-structure graph network predicts the future per-vertex first fundamental form (metric tensor) for an arbitrary causal multiple-visit history and an arbitrary prediction horizon, conditioned on a Fourier encoding of the lead time. The predicted metric is decoded into a surface by a differentiable As-Rigid-As-Possible solver, and the model is trained end-to-end on the rigid-aligned vertex error. Training through the reconstruction keeps the decoded prediction a valid surface and consistently improves it. On 14 subcortical structures from the ADNI dataset, the proposed mesh evolution model (MT-GNN) predicts best among the evaluated methods at every horizon ($-2.29\\%$ mean vertex error vs. the temporal mean, $p{=}6.1{\\times}10^{-5}$, beating it on 14/14 structures), ahead of geodesic shape regression (DCM, $-0.19\\%$) and a mesh transformer (TransforMesh, $-0.45\\%$; $p{=}1.2{\\times}10^{-4}$), with the lead widening as the horizon grows.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.MA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-05T17:53:33Z",
+                "published": "2026-08-06T17:57:11Z",
+                "arxiv:comment": "34 pages, 5 figures",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.GT"
                 },
                 "author": [
                     {
-                        "name": "Hao Ding"
+                        "name": "Boning Li"
                     },
                     {
-                        "name": "Daniel Semchin"
+                        "name": "Yu Chen"
                     },
                     {
-                        "name": "Paul M. Thompson"
-                    },
-                    {
-                        "name": "Boris Gutman"
+                        "name": "Longbo Huang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.05129v1",
-                "title": "A waveguide spectrometer for high-resolution millimeter-wave imaging",
-                "updated": "2026-08-05T17:51:39Z",
+                "id": "http://arxiv.org/abs/2608.06358v1",
+                "title": "Universality in random graphs via optimal linking systems: trees and beyond",
+                "updated": "2026-08-06T17:55:25Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.05129v1",
+                        "@href": "https://arxiv.org/abs/2608.06358v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.05129v1",
+                        "@href": "https://arxiv.org/pdf/2608.06358v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present the design and development of a novel, compact integrated on-chip spectrometer operating at millimeter (mm) and submillimeter (sub-mm) wavelengths. The Superconducting Waveguide Integrated Submillimeter Spectrometer (SWISS) promises significant improvements in spectral resolution, optical efficiency, and frequency coverage over current mm-wave spectrometers by using a free-space rectangular waveguide architecture. Light is coupled in through the antenna front end, which separates the two polarizations and passes them to the waveguide spectrometer through a contactless metamaterial transition. Each waveguide spectrometer consists of a feedline coupled to a series of filters based on single-pole cavity resonators with varying resonant frequencies. To maximize packing density, the filter banks are oriented out of the focal plane, and an E-plane bend in the output from the cavity filters enables a planar and scalable construction. The output of each filter is coupled to a kinetic inductance detector (KID) to enable high multiplexing factors. The spectrometer is fabricated using stacks of silicon wafers etched with a deep reactive-ion etch (DRIE) and metallized. In these proceedings, we discuss current development on a SWISS prototype including measurements on a prototype antenna front end contactless transition and fabrication a prototype waveguide spectrometer.",
-                "category": {
-                    "@term": "astro-ph.IM",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-05T17:51:39Z",
-                "arxiv:comment": "10 pages, 8 figures, to be published to Proceedings of SPIE Astronomical Telescopes and Instrumentation 2026, \"Millimeter, Submillimeter, and Far-Infrared Detectors and Instrumentation for Astronomy XIII\". Paper number 14156-96",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.IM"
-                },
-                "author": [
-                    {
-                        "name": "Annie Tan"
-                    },
-                    {
-                        "name": "Patrick Ashworth"
-                    },
-                    {
-                        "name": "Peter S. Barry"
-                    },
-                    {
-                        "name": "Chris S. Benson"
-                    },
-                    {
-                        "name": "Karia Dibert"
-                    },
-                    {
-                        "name": "Harry Gordon-Moys"
-                    },
-                    {
-                        "name": "Peter Hunyor"
-                    },
-                    {
-                        "name": "Kirit S. Karkare"
-                    },
-                    {
-                        "name": "Izaak Morris"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.05127v1",
-                "title": "SSTQ:Privacy-Preserving Vector Quantization via Subsampled Stochastic TurboQuant",
-                "updated": "2026-08-05T17:51:25Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.05127v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.05127v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Achieving local differential privacy in distributed optimization while maintaining low communication cost remains challenging. Existing vector quantization methods, such as vqSGD, use high-dimensional geometric constructions but incur unfavorable dimension-dependent variance. In this work, we propose Subsampled Stochastic TurboQuant (SSTQ), a framework that combines overcomplete equal-norm tight frames, coordinate subsampling, and privacy-aware one-dimensional quantization. SSTQ includes two variants: a Flat Randomized Response version and a Metric-Aware Laplace version, the latter being better suited to higher codebook bit-width regimes. We show that SSTQ achieves optimal mean squared error scaling while using only $\\lceil \\log_2 N \\rceil + b$ bits per client, where $N = \u0398(d)$ is the frame size. We also derive a surrogate privacy-aware codebook objective that reduces the codebook-dependent MSE scaling from $O(4^b)$ to $O(2^b)$. Finally, we empirically evaluate SSTQ against established baselines on federated learning tasks using CIFAR-10 and Fashion-MNIST, demonstrating favorable utility and communication efficiency.",
+                "summary": "We develop a framework for proving universality results in sparse random graphs. As a first application, we show that there exists an absolute constant $C>1$ such that, with high probability, for every fixed constant $\u0394$, the binomial random graph $G(n,C\\ln n/n)$ contains every $n$-vertex tree with maximum degree at most $\u0394$. This answers a question of Montgomery (Advances in Mathematics, 2019). We also determine, for every $p$ satisfying $C\\ln n/n\\leq p=n^{-1+o(1)}$, the minimum girth $\\ell$ (up to an absolute multiplicative constant) for which with high probability $G(n,p)$ contains all cycle factors of girth at least $\u03a9(\\ell)$. In particular, with high probability $G(n,C\\ln n/n)$ contains all cycle factors of girth at least $100\\ln n/\\ln\\ln n$, which is optimal up to a constant factor. This extends an earlier result of Ferber, Kronenberg, and Luh (Transaction of the American Mathematical Society, 2019) and significantly improves a corollary of a deep result of Kahn, Lubetzky, and Wormald (Communications on Pure and Applied Mathematics, 2017). One of the key ingredients in the proofs is establishing the optimal depth of linking systems in sparse random graphs.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "math.CO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.PR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-06T17:55:25Z",
+                "arxiv:comment": "44 pages, 2 figures, comments are welcome!",
+                "arxiv:primary_category": {
+                    "@term": "math.CO"
+                },
+                "author": [
+                    {
+                        "name": "Asaf Cohen Antonir"
+                    },
+                    {
+                        "name": "Lyuben Lichev"
+                    },
+                    {
+                        "name": "Maksim Zhukovskii"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.06353v1",
+                "title": "Resourced Authority A Mechanism-Design Model for Participatory Governance of Deployed AI Agents",
+                "updated": "2026-08-06T17:53:24Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.06353v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.06353v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We give a formal mechanism design model for the continuous participatory governance of a deployed AI agent. The mechanism is built on the principle that governance should control an AI agent through resource allocation so as to make authorization self enforcing via compute budgets. The mechanism seeks to establish the Safe AI paradigm that compute is an effective governance lever. We situate our work as a compliance or commons overlay on a deployer. One governance period is an extensive form game in which verified human stakeholders arrive sequentially and contribute, on a provision or a rejection market, in a governance currency that is deliberately distinct from the agents compute. A funding aggregator turns raw contributions into breadth weighted effective supports - a two threshold gate with hysteresis converts net support into a binary authorization that, through a coupling map bounded by an exogenously certified safety ceiling, releases a metered compute budget - realized in hardware as a signed compute license so that the decision is self-enforcing. We characterize the class of agents the mechanism can govern and isolate manipulation of the governing electorate by the governed agent as the central open problem. We also introduce several challenges addressing manipulation of governing electorate by the governed agents.",
+                "category": [
+                    {
+                        "@term": "cs.GT",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -495,78 +510,87 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "stat.ML",
+                        "@term": "cs.MA",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-05T17:51:25Z",
-                "arxiv:comment": "42 pages, 4 figures, 2 tables",
+                "published": "2026-08-06T17:53:24Z",
+                "arxiv:comment": "22 pages, 9 Figures",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.GT"
                 },
                 "author": [
                     {
-                        "name": "Adel Javanmard"
+                        "name": "Praphul Chandra"
                     },
                     {
-                        "name": "David P. Woodruff"
+                        "name": "Sujit Gujar"
                     },
                     {
-                        "name": "Vahab Mirrokni"
+                        "name": "Ganesh Ghalme"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.05126v1",
-                "title": "Spoken Function Calling: A New Perspective on Spoken Language Understanding for Large Audio Language Models",
-                "updated": "2026-08-05T17:50:31Z",
+                "id": "http://arxiv.org/abs/2608.06352v1",
+                "title": "CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks",
+                "updated": "2026-08-06T17:53:18Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.05126v1",
+                        "@href": "https://arxiv.org/abs/2608.06352v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.05126v1",
+                        "@href": "https://arxiv.org/pdf/2608.06352v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Spoken Language Understanding (SLU) is the core component of task-oriented dialogue systems and a pivotal link in achieving seamless human-agent interaction. While traditional SLU can effectively extract user semantics for closed-set tasks after in-domain supervised fine-tuning, it faces significant challenges in leveraging in-context learning for open-domain tasks due to its ambiguous rule definitions. This work proposes Spoken Function Calling (SFC), a novel semantic understanding perspective that optimizes semantic understanding with structured rule definitions, to evolve beyond traditional closed-set SLU. Specifically, we curate and extend a suite of spoken functions based on traditional SLU datasets, construct a multi-agent system to synthesize the SFC-Bench dataset, evaluate the performance of Large Language Models (LLMs) and Large Audio Language Models (LALMs), and enhance the SFC capabilities of LALMs through post-training. Experiments demonstrate that SFC outperforms traditional SLU, substantially enhancing the semantic extraction accuracy for LLMs and LALMs.",
+                "summary": "Training terminal agents requires executable and verifiable tasks that are not merely solvable, but appropriately challenging for learning. Executable validation establishes feasibility, yet does not reveal how a task behaves relative to a given solver setting. In this paper, we present CalibForge, an autonomous terminal-task synthesis system that uses verified solver behavior to revise candidate tasks through adversarial solver calibration. Multi-solver calibration targets disagreement within a heterogeneous solver pool, whereas contrastive solver calibration targets a designated strong-pass/weak-fail relation; both operationalize a solver-relative learnable zone anchored in demonstrated solvability. Using CalibForge, we construct 5,431 calibrated terminal tasks. Our ablations show that both strategies yield more effective supervision than authoring and validation alone or ordinary single-solver feedback. Models trained on the full collection achieve 32.58% and 47.57% on Terminal-Bench 2.0. The largest improvements over the corresponding base model reach 24.71 percentage points on Terminal-Bench 2.0, 27.68 points on SWE-bench Pro, and 30.04 points on Doc2Repo. Together, these results support solver-relative learnability as a practical target for constructing effective and transferable agent training data.",
                 "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-05T17:50:31Z",
-                "arxiv:comment": "ACM Multimedia 2026",
+                "published": "2026-08-06T17:53:18Z",
+                "arxiv:comment": "Dataset: https://huggingface.co/datasets/AweAI-Team/CalibForge. Repository: https://github.com/AweAI-Team/CalibForge",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Yuezhang Peng"
+                        "name": "Fanzhe Meng"
                     },
                     {
-                        "name": "Yuxin Liu"
+                        "name": "Guoxin Chen"
                     },
                     {
-                        "name": "Changfeng Gao"
+                        "name": "Jiale Zhao"
                     },
                     {
-                        "name": "Zhifu Gao"
+                        "name": "Shuang Sun"
                     },
                     {
-                        "name": "Xiangang Li"
+                        "name": "Zhiyu Lin"
                     },
                     {
-                        "name": "Xie Chen"
+                        "name": "Wayne Xin Zhao"
+                    },
+                    {
+                        "name": "Ruihua Song"
+                    },
+                    {
+                        "name": "Ji-Rong Wen"
+                    },
+                    {
+                        "name": "Kai Jia"
                     }
                 ]
             }
