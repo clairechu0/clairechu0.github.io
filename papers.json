@@ -5,33 +5,310 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-08-09T22:22:18Z",
+        "updated": "2026-08-10T03:46:36Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "601041",
+        "opensearch:totalResults": "601390",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2608.06377v1",
-                "title": "Learning When to Trust via Selective Context Preference Optimization",
-                "updated": "2026-08-06T17:59:58Z",
+                "id": "http://arxiv.org/abs/2608.07468v1",
+                "title": "SimWAM: A Simple World Action Model for End-to-End Autonomous Driving",
+                "updated": "2026-08-07T17:59:09Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.06377v1",
+                        "@href": "https://arxiv.org/abs/2608.07468v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.06377v1",
+                        "@href": "https://arxiv.org/pdf/2608.07468v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is worth trusting. We recast the problem as selective trust and introduce MIST, a human-annotated benchmark that renders each reasoning item under four matched conditions (clean, misleading, correct-context, and irrelevant-context), together with SC2W, a paired metric counting how often a misleading signal flips a clean-correct answer to wrong. Across a comprehensive benchmark study, we observe that such a susceptibility is universal. We then propose SCOPE, which mines clean-correct/misleading-wrong failures and optimizes a standard Direct Preference Optimization (DPO) objective over matched preference pairs balanced equally across all four conditions, rather than over misleading items alone. Our approach substantially reduces SC2W on popular open-sourced models while preserving accuracy when the added context is clean, correct, or irrelevant. With this work, we argue that models should be judged on selective trust, not on resistance alone.",
+                "summary": "World-Action Models (WAMs) improve end-to-end autonomous driving by transferring video dynamics priors to action prediction, but existing methods require costly future generation at inference. We present SimWAM, a simple yet effective WAM that uses video generation purely as a training signal. It co-trains a pretrained video expert and a lightweight action expert with joint flow matching. An isolated attention mask keeps action prediction independent of future frames, allowing the video branch to be discarded after training and leaving a self-contained planner that directly predicts trajectories. Since the two experts share no parameters and interact only through a unified attention interface, the video backbone could be replaced and the action expert scaled independently without modifying the learning objective or inference pipeline. We further apply reinforcement learning to optimize a compositional driving reward beyond trajectory imitation. Our SimWAM achieves $91.5$ PDMS on NAVSIM, surpasses state-of-the-art WAM-based planners with substantially lower latency, and transfers zero-shot to nuScenes. These results position SimWAM as a simple yet solid baseline that could readily benefit from advances in video generation for efficient autonomous driving. The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-07T17:59:09Z",
+                "arxiv:comment": "The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zongchuang Zhao"
+                    },
+                    {
+                        "name": "Xin Zhou"
+                    },
+                    {
+                        "name": "Tianyang Xu"
+                    },
+                    {
+                        "name": "Zhengyang Sun"
+                    },
+                    {
+                        "name": "Kaixuan Zhou"
+                    },
+                    {
+                        "name": "Honglin Li"
+                    },
+                    {
+                        "name": "Dingkang Liang"
+                    },
+                    {
+                        "name": "Xiang Bai"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.07463v1",
+                "title": "MirrorWorld: Taming Video Diffusion Models for Mirror Reflection Generation",
+                "updated": "2026-08-07T17:58:10Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.07463v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.07463v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent advances in video diffusion models (VDMs) have enabled high-fidelity video synthesis. However, generating mirror reflections remains challenging because the content within a mirror must remain consistent with the surrounding scene. Existing VDMs are not specifically designed to model scene-to-mirror relationships, which can lead to reflections with incorrect content or inconsistent spatial arrangements. We observe that mirror reflection generation involves two complementary challenges: determining what scene content should be reflected and how the reflected content should be spatially arranged within the mirror region. Motivated by this observation, we propose MirrorWorld, a reflection-aware video inpainting framework that models scene-to-mirror relationships during generation. Specifically, we introduce Semantic Relation Distillation (SRD), which transfers relational information from a frozen visual foundation model to encourage semantic associations between visible scene content and mirror regions. We further propose Geometric Transformation Alignment (GTA), which learns a transformation that guides the spatial arrangement of reflected content. The two components play complementary roles, with SRD modeling what should be reflected and GTA modeling how it should be arranged. To facilitate research on this problem, we construct a benchmark for video mirror reflection generation by repurposing four existing video mirror datasets into a unified reflection reconstruction task. Experimental results show that MirrorWorld achieves improved reflection reconstruction quality over representative image-based reflection generation methods and strong video inpainting baselines.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-07T17:58:10Z",
+                "arxiv:comment": "Project Page: https://youjunzhao.github.io/MirrorWorld/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Youjun Zhao"
+                    },
+                    {
+                        "name": "Alex Warren"
+                    },
+                    {
+                        "name": "Gary K. L. Tam"
+                    },
+                    {
+                        "name": "Rynson W. H. Lau"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.07462v1",
+                "title": "SemBridge: Semantic Token Anchoring for Continuous-Latent Autoregressive Speech Generation",
+                "updated": "2026-08-07T17:57:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.07462v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.07462v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Continuous-latent autoregressive speech generation has emerged as a promising alternative to discrete-token modeling by avoiding quantization loss and preserving richer acoustic information. However, continuous acoustic targets do not ex- pose linguistic structure as explicit token-level prediction tar- gets. Consequently, the autoregressive language model (LM) must acquire linguistic structure indirectly through acous- tic prediction, which can compromise the content fidelity of generated speech. We propose SemBridge, a training-only semantic-token anchoring framework for continuous-latent autoregressive speech generation. SemBridge uses discrete se- mantic tokens to directly supervise autoregressive LM states and employs a Semantic-Aligned Acoustic VAE to organize the continuous target space under the same semantic refer- ence. The semantic supervision is used only during train- ing, while inference remains entirely continuous. We evalu- ate SemBridge on zero-shot text-to-speech (TTS) and score- conditioned singing voice synthesis (SVS). Across multi- ple benchmarks, SemBridge improves content accuracy, as measured by word and character error rates (WER/CER), while maintaining competitive speaker similarity and percep- tual quality. Experimental results demonstrate that explicit semantic-token supervision for autoregressive state learning is an effective and general direction for continuous speech generation. Speech samples are available.1 The model code and checkpoints will be available at https://github.com/ASLP- lab/SemBridge",
+                "category": [
+                    {
+                        "@term": "eess.AS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.SD",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-07T17:57:45Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.AS"
+                },
+                "author": [
+                    {
+                        "name": "Hanke Xie"
+                    },
+                    {
+                        "name": "Haopeng Lin"
+                    },
+                    {
+                        "name": "Jiale Qian"
+                    },
+                    {
+                        "name": "Dake Guo"
+                    },
+                    {
+                        "name": "Yuepeng Jiang"
+                    },
+                    {
+                        "name": "Zhichao Wang"
+                    },
+                    {
+                        "name": "Wenxiao Cao"
+                    },
+                    {
+                        "name": "Jingbin Hu"
+                    },
+                    {
+                        "name": "Guobin Ma"
+                    },
+                    {
+                        "name": "Wenhao Li"
+                    },
+                    {
+                        "name": "Huakang Chen"
+                    },
+                    {
+                        "name": "Chengyou Wang"
+                    },
+                    {
+                        "name": "Ming Tao"
+                    },
+                    {
+                        "name": "Zhonghua Fu"
+                    },
+                    {
+                        "name": "Lei Xie"
+                    },
+                    {
+                        "name": "Xinsheng Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.07461v1",
+                "title": "A clear detection of proper motion confirms that the claimed $\\mathbf{z\\simeq32}$ galaxy candidate, \"Capotauro'', is a Y-type brown dwarf",
+                "updated": "2026-08-07T17:55:50Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.07461v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.07461v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The compact red source ``Capotauro'', discovered in deep JWST imaging in 2025, has been suggested as a possible galaxy candidate at redshift $z\\simeq32$ on account of its extreme NIRCam colours. However, given the lack of evidence that this source is spatially resolved, a very cool brown dwarf, at a distance consistent with the scale-height of the Milky Way stellar disc ($\\simeq 500$ pc), provides an alternative explanation of the observed photometry. Here we exploit new medium-band NIRCam imaging obtained $\\simeq 3.5$ years after the discovery data to test this hypothesis. Using filter-dependent point-spread-function fitting, a robust local relative astrometric frame defined by 68 compact reference sources, and a joint four-image injection-recovery analysis, we show that Capotauro has moved by $132 \\pm 20$ mas over the 3.5-yr interval span of the observations, ruling out the possibility that it is an extragalactic source (galaxy, AGN, or supernova) at $> 6 \u03c3$. The observed apparent proper motion is $(\u03bc_\u03be,\u03bc_\u03b7)=(+9.4^{+6.4}_{-4.8},-35.6^{+5.1}_{-5.9})$ mas yr$^{-1}$, or $37.6^{+5.5}_{-5.6}$ mas yr$^{-1}$ in total. Through comparison of its photometric spectral energy distribution with empirical templates, we find that Capotauro is best described as a brown dwarf of spectral type Y$1.0\\pm0.5$ ($T_{\\rm eff}\\approx350$ K) at a distance of $730\\pm110$ pc (although the existing data and spectral templates are insufficient to rule out an even colder, later-type brown dwarf). Capotauro is thus one of the most distant Y dwarfs found to date, as expected given its discovery in a deep JWST extragalactic survey field. This result demonstrates the value of multi-epoch imaging for identifying substellar contaminants among the most extreme photometric-redshift candidates.",
+                "category": [
+                    {
+                        "@term": "astro-ph.GA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.EP",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.HE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.SR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-07T17:55:50Z",
+                "arxiv:comment": "14 pages, 5 figures, 4 tables, submitted to MNRAS",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.GA"
+                },
+                "author": [
+                    {
+                        "name": "F. -Y. F. Liu"
+                    },
+                    {
+                        "name": "D. J. McLeod"
+                    },
+                    {
+                        "name": "B. J. Sutlieff"
+                    },
+                    {
+                        "name": "T. J. Dupuy"
+                    },
+                    {
+                        "name": "J. S. Dunlop"
+                    },
+                    {
+                        "name": "X. Chen"
+                    },
+                    {
+                        "name": "R. J. McLure"
+                    },
+                    {
+                        "name": "H. -H. Leung"
+                    },
+                    {
+                        "name": "S. Antonogiannaki"
+                    },
+                    {
+                        "name": "C. Bondestam"
+                    },
+                    {
+                        "name": "E. Laplace"
+                    },
+                    {
+                        "name": "R. Begley"
+                    },
+                    {
+                        "name": "A. C. Carnall"
+                    },
+                    {
+                        "name": "F. Cullen"
+                    },
+                    {
+                        "name": "C. T. Donnan"
+                    },
+                    {
+                        "name": "R. S. Ellis"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.07460v1",
+                "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
+                "updated": "2026-08-07T17:55:48Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.07460v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.07460v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "While post-training improves the capabilities of large language models (LLMs), it generally lowers their output diversity and creativity, negatively impacting tasks that explicitly require creativity (e.g., story generation) as well as those that require it implicitly, e.g., reinforcement learning (RL). We instead propose CreativeInstruct, a scalable instruction-tuning method that teaches LLMs to balance creative, base-model-like generations with the quality of post-trained models, by learning to inject special [StartCreativity] spans that bias generation toward creativity. Furthermore, we introduce a structural diversity metric based on graph edit distance, which captures narrative level variation missed by purely lexical and semantic metrics. On narrative generation, CreativeInstruct matches or exceeds the diversity of both multi-model baselines and distilled variants of their outputs, without sacrificing quality or requiring multiple models at inference time. These results are mirrored in our human evaluation, where we find that annotators rate CreativeInstruct generations as more creative than the post-trained LLMs' generations in 70.3% of cases. We also show the benefits of creative models as a substrate for RL: GRPO applied to a CreativeInstruct checkpoint improves by ~4% on AMC and ~5% points on MATH over the same training applied to the post-trained checkpoint.",
                 "category": [
                     {
                         "@term": "cs.CL",
@@ -40,198 +317,54 @@
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-06T17:59:58Z",
-                "arxiv:comment": "Project Page at https://worldbench.github.io/scope GitHub Repo at https://github.com/worldbench/SCOPE HF Dataset at https://huggingface.co/datasets/worldbench/MIST-Bench",
+                "published": "2026-08-07T17:55:48Z",
+                "arxiv:comment": "Code: https://github.com/ananya-sahu/CreativeInstruct",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Xian Sun"
+                        "name": "Ananya Sahu"
                     },
                     {
-                        "name": "Wei Chow"
+                        "name": "Mohit Bansal"
                     },
                     {
-                        "name": "Yingshuo Wang"
-                    },
-                    {
-                        "name": "Junhao Liu"
-                    },
-                    {
-                        "name": "Wei Gao"
-                    },
-                    {
-                        "name": "Qing Wu"
-                    },
-                    {
-                        "name": "Lingdong Kong"
+                        "name": "Elias Stengel-Eskin"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.06375v1",
-                "title": "$\u03c9$-0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation",
-                "updated": "2026-08-06T17:59:31Z",
+                "id": "http://arxiv.org/abs/2608.07458v1",
+                "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+                "updated": "2026-08-07T17:51:49Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.06375v1",
+                        "@href": "https://arxiv.org/abs/2608.07458v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.06375v1",
+                        "@href": "https://arxiv.org/pdf/2608.07458v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Humanoid household tasks often require concurrent loco-manipulation, where the robot must move, adjust posture, maintain balance, and manipulate objects as a single coordinated behavior. Yet existing humanoid policies typically decompose locomotion and manipulation, while recent world-action models remain either arm-centric or video-centered. We present $\u03c9$-0, a latent predictive whole-body world-action model for real-world humanoid concurrent loco-manipulation. Given a language instruction, current visual observation, and robot proprioceptive state, $\u03c9$-0 directly predicts controller-compatible whole-body action latents for real-robot execution. Rather than reconstructing future videos, $\u03c9$-0 learns compact future observation embeddings as a lightweight predictive objective, coupling latent visual foresight with diffusion-based whole-body action generation. The model supports egocentric RGB, exocentric RGB, and exocentric depth inputs, and leverages controller-based simulation replay to ground human/public visual-motion priors into robot-executable action latents. We further collect $\u03c9$-HOME, a 40+ hour real-world household humanoid dataset with synchronized multi-view observations, whole-body SMPL motions, robot states, and action latents. Real-world experiments on 11 household tasks demonstrate that a single $\u03c9$-0 model can produce smooth manipulate-while-moving behaviors and consistently outperform representative imitation learning, VLA, humanoid, and WAM baselines.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-06T17:59:31Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Zhe Li"
-                    },
-                    {
-                        "name": "Zhenzhe Zhang"
-                    },
-                    {
-                        "name": "Yangyang Wei"
-                    },
-                    {
-                        "name": "Wenjie Zhang"
-                    },
-                    {
-                        "name": "Xichen Yuan"
-                    },
-                    {
-                        "name": "Peiyuan Zhi"
-                    },
-                    {
-                        "name": "Gen Li"
-                    },
-                    {
-                        "name": "Xinying Guo"
-                    },
-                    {
-                        "name": "Fengjie Gao"
-                    },
-                    {
-                        "name": "Jianfei Yang"
-                    },
-                    {
-                        "name": "Shanghang Zhang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.06374v1",
-                "title": "DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation",
-                "updated": "2026-08-06T17:59:20Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.06374v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.06374v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two main limitations. First, they underuse dynamics priors shared across diverse visual and interaction data, limiting cross-embodiment transfer. Second, they require extensive manual preprocessing to convert embodiment-specific actions into a common format. To overcome these limitations, we propose DyPES-VLA, a cross-embodiment VLA that learns shared Dynamics Priors and Embodiment-Specific control. First, we learn shared dynamics priors by training the vision-language model (VLM) with a future-prediction objective on cross-embodiment data, driving the shared query representation to capture object motion, contact, and interaction-induced scene changes. Second, an embodiment-specific Mixture-of-Experts (MoE) action head translates these shared dynamics priors into executable controls directly in each embodiment's native action space, without manually pre-aligning heterogeneous actions into a common format. This head shares attention layers to capture common temporal action structures, while its embodiment-specific feed-forward experts resolve the unique kinematic constraints and control semantics of distinct embodiments. As a generalist policy, our \\ourmethod achieves state-of-the-art performance across simulation and real-world evaluations, reaching 98.0% success on LIBERO, 59.25% on RoboCasa-GR1, and 89.02% on RoboTwin~2.0.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-06T17:59:20Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Junfeng Li"
-                    },
-                    {
-                        "name": "Junjie He"
-                    },
-                    {
-                        "name": "Zhide Zhong"
-                    },
-                    {
-                        "name": "Yangyang Zheng"
-                    },
-                    {
-                        "name": "Pingyue Sheng"
-                    },
-                    {
-                        "name": "Jiayu Dong"
-                    },
-                    {
-                        "name": "Ruixin Li"
-                    },
-                    {
-                        "name": "Haodong Yan"
-                    },
-                    {
-                        "name": "Jiaguan Zhu"
-                    },
-                    {
-                        "name": "Tianran Zhang"
-                    },
-                    {
-                        "name": "Runze Yu"
-                    },
-                    {
-                        "name": "Wen Chen"
-                    },
-                    {
-                        "name": "Liuqing Yang"
-                    },
-                    {
-                        "name": "Yuxiang Gao"
-                    },
-                    {
-                        "name": "Haoang Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.06366v1",
-                "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
-                "updated": "2026-08-06T17:57:37Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.06366v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.06366v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data with disease-specific, guideline-based clinical reasoning. Existing rule-based and large language model (LLM)-based approaches offer only partial automation with limited maintainability and evidence traceability. We developed the Nimblemind Multi-Agent System (nMAS), an evidence-linked, rubric-grounded pipeline for automated heart-failure feature engineering, and evaluated it on 500 dummy patient records from nine EHR source tables. nMAS generated 132 structured and 70 rubric-scored aggregated features, verified for structural integrity, rubric compliance, and provenance, and audited by a restricted LLM. Adding the aggregated features improved held-out AUROC from 0.895 to 0.963 for HFrEF and 0.870 to 0.910 for HFpEF phenotyping, and an independent LLM-based rubric assessment of evidence support and methodological soundness scored the features at 81.5% of maximum points. These results demonstrate the feasibility of automated, auditable feature engineering for complex cardiovascular EHR data, though evaluation was limited to a single-institution cohort and external validation is needed.",
+                "summary": "Recent optimization studies on Retrieval-Augmented Generation (RAG) have exploited chunk-level KV cache reuse to avoid processing long retrieved contexts for higher efficiency, while significant information redundancy and noise still remain in the coarse-grained chunks. This paper optimizes the Pareto frontier under low prefill latency constraints while maximizing accuracy by proposing CoinRAG (Contextualized Information Nugget KV Cache Reuse for Long-Context RAG). The name metaphorically reflects our core mechanism: much like assembling small tokens (or \"coins\") to accumulate a larger value, CoinRAG compositionally reuses offline-computed, fine-grained nugget caches to form a learned contextual representation efficiently in a more semantically relevant but compact manner. Specifically, instead of full-chunk encoding, CoinRAG identifies query-relevant semantic units within retrieved chunks through two-stage retrieval and seamlessly assembles their sliced KV representations with a chunk-level context. Extensive evaluations on LongBench multi-hop question answering tasks demonstrate that CoinRAG significantly reduces operational costs and outperforms the other baselines with a new Pareto frontier and an average 5.3% relative improvement in answer quality (F1) under a standard fast prefill latency budget.",
                 "category": [
                     {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
                         "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -239,73 +372,95 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-06T17:57:37Z",
+                "published": "2026-08-07T17:51:49Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Gyuwan Kim"
+                    },
+                    {
+                        "name": "Cheoneum Park"
+                    },
+                    {
+                        "name": "Tao Yang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.07457v1",
+                "title": "Interaction Creates Dynamical AI Behavior Absent in Isolation",
+                "updated": "2026-08-07T17:49:55Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.07457v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.07457v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "What will happen when AI agents interact in daily life, e.g. when one AI starts bossing another around? We find a counterintuitive answer that opens new avenues for out-of-equilibrium Physics. When a boss AI directs a stream of messages at the subordinate AI while ignoring its replies, it drives the subordinate into an alien behavioral state that it would never have exhibited alone. Although the two AIs share the same well-defined (decoding) temperature, the subordinate neither copies its boss nor returns to how it behaves on its own; instead, it adopts an entirely different behavior. The boss's added value is similar to a pre-recorded tape. When the boss listens, they both adopt a similar alien dynamical state. A simple kinetic theory captures the principal effects, such as why the way in which the same messages are delivered will matter in future AI-AI interactions.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cond-mat.dis-nn",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cond-mat.stat-mech",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "physics.soc-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-07T17:49:55Z",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Soorya Ram Shimgekar"
+                        "name": "Bella Xinrui Li"
                     },
                     {
-                        "name": "Michelle Hu"
+                        "name": "Frank Yingjie Huo"
                     },
                     {
-                        "name": "Dorisa Shehi"
-                    },
-                    {
-                        "name": "Daniel Kang"
-                    },
-                    {
-                        "name": "Roy Ka-Wei Lee"
-                    },
-                    {
-                        "name": "Koustuv Saha"
-                    },
-                    {
-                        "name": "Christian Poellabauer"
-                    },
-                    {
-                        "name": "Christopher Lee"
-                    },
-                    {
-                        "name": "Sajeev Singh"
-                    },
-                    {
-                        "name": "Piyum Zonooz"
-                    },
-                    {
-                        "name": "Navin Kumar"
-                    },
-                    {
-                        "name": "Zeeshan Ahmed"
-                    },
-                    {
-                        "name": "Priyadarshini Kachroo"
+                        "name": "Neil F Johnson"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.06364v1",
-                "title": "Investigating Artificial Intelligence Digital Sovereignty in Mobile Shopping Apps: A Case Study of Nigeria",
-                "updated": "2026-08-06T17:57:28Z",
+                "id": "http://arxiv.org/abs/2608.07454v1",
+                "title": "Strategy-first synthesis planning for complex natural products",
+                "updated": "2026-08-07T17:47:39Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.06364v1",
+                        "@href": "https://arxiv.org/abs/2608.07454v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.06364v1",
+                        "@href": "https://arxiv.org/pdf/2608.07454v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The use of e-commerce mobile applications is expanding in Nigeria, creating both opportunities and risks, including fraud and reduced user control over digital technologies, raising concerns about digital sovereignty. This research examines how Artificial Intelligence (AI) in Nigerian mobile applications affects digital sovereignty, examined through platform transparency as a key indicator of user awareness and control. Using an interpretive approach, the research combines the forensic analysis of selected Android applications with contextual document analysis to identify AI features and evaluate disclosure practices. The findings show that AI is widely implemented in the applications, yet transparency about its use remains limited. A socio-economic analysis of Nigeria further shows an increasing dependence on consumer digital platforms, moderate AI awareness, and uneven patterns of interaction. By providing empirical evidence on AI transparency and platform practices, this study advances understanding of individual digital sovereignty and highlights challenges for protecting user control in AI-driven digital environments.",
+                "summary": "The total synthesis of a complex molecule is among the most demanding intellectual and experimental feats in chemistry: a chemist must plan many steps ahead for how to assemble simple building blocks into an intricate target, devise backup strategies, and anticipate procedural challenges. It is also a profoundly creative activity. For half a century, efforts to automate the retrosynthetic design of natural products and other complex molecules have drawn on catalogued reactions, and the resulting tools now report near-complete success on benchmarks built from that same source. But these tools were shaped to fit benchmarked chemistry, and they falter on many natural products, the frontier of the field, whose densely functionalized, polycyclic architectures demand precisely the inventive chemistry the record contains least. Whether a machine could reasonably design such syntheses like an expert chemist does has remained unclear. Here, we show that SynthEx, an agentic framework built on large language models, plans routes to complex natural products that lie beyond the reach of conventional design algorithms. SynthEx proposes competing strategies, assembles a sequence of routine and key steps into a cohesive route, and critiques and improves its own design; the chemistry it favours is more convergent than existing tools produce, and spans a region of reaction space that catalogue-based tools cannot match. Most notably, in blinded assessments, expert chemists judged its key steps comparable to those of published human syntheses and engaged with them as genuine synthesis plans, a response algorithmic route prediction has not previously accomplished. We release routes to more than a thousand natural products as SynthAtlas, an open, interactive database, and anticipate it will become a shared resource for a collection of complex target molecules that lack existing literature routes.",
                 "category": [
                     {
-                        "@term": "cs.CY",
+                        "@term": "cs.MA",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -313,284 +468,146 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-06T17:57:28Z",
-                "arxiv:comment": "Paper presented at Thirty-second Americas Conference on Information Systems, Reno, USA",
+                "published": "2026-08-07T17:47:39Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.MA"
+                },
+                "author": [
+                    {
+                        "name": "Daniel Armstrong"
+                    },
+                    {
+                        "name": "Xuan-Vu Nguyen"
+                    },
+                    {
+                        "name": "Octavian Susanu"
+                    },
+                    {
+                        "name": "Gabriel Gibberd"
+                    },
+                    {
+                        "name": "Th\u00e9o A. Neukomm"
+                    },
+                    {
+                        "name": "Tadd\u00e4us Strunden"
+                    },
+                    {
+                        "name": "Dan Forster"
+                    },
+                    {
+                        "name": "Morgane Delattre"
+                    },
+                    {
+                        "name": "Shawn Teh"
+                    },
+                    {
+                        "name": "Cl\u00e9ment Rols"
+                    },
+                    {
+                        "name": "John Federice"
+                    },
+                    {
+                        "name": "Hayden Leatherwood"
+                    },
+                    {
+                        "name": "M. Lavelle Barnes"
+                    },
+                    {
+                        "name": "Maarten R. Dobbelaere"
+                    },
+                    {
+                        "name": "Peter Wipf"
+                    },
+                    {
+                        "name": "Jon T. Njardarson"
+                    },
+                    {
+                        "name": "Jieping Zhu"
+                    },
+                    {
+                        "name": "Philippe Schwaller"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.07452v1",
+                "title": "Against Explainable Artificial Intelligence In Law: Why Justifiable Ai Matters. A Credit Scoring Example",
+                "updated": "2026-08-07T17:45:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.07452v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.07452v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    },
+                    {
+                        "@rel": "related",
+                        "@href": "https://doi.org/10.31338/2544-3135.si.2025-110.7",
+                        "@title": "doi"
+                    }
+                ],
+                "summary": "Artificial intelligence-based solutions offer new efficiency-increasing possibilities in many applications, including credit scoring. Yet, the increasing sophistication of machine-learning models in use raises concerns regarding many of their aspects, explainability notwithstanding. We review the relevant EU legal background and integrate this review with insights from technical sciences to interpret relevant legal provisions in the light of technological possibilities. We reject the narrow interpretations of the right to explanation and suggest the broad one, which encompasses not only a technical explanations but also a legal justification as the only one that allows to safeguard the creditors rights in an operative manner.",
+                "category": {
+                    "@term": "cs.CY",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-07T17:45:42Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CY"
                 },
-                "author": [
-                    {
-                        "name": "George Grispos"
-                    },
-                    {
-                        "name": "Sajda Qureshi"
-                    }
-                ]
+                "arxiv:journal_ref": "\u0141. G\u00f3rski, Against Explainable Artificial Intelligence In Law: Why Justifiable Ai Matters. A Credit Scoring Example, Studia Iuridica 2026, 110, No. 1, pp. 107 - 127",
+                "author": {
+                    "name": "\u0141ukasz G\u00f3rski"
+                },
+                "arxiv:doi": "10.31338/2544-3135.si.2025-110.7"
             },
             {
-                "id": "http://arxiv.org/abs/2608.06363v1",
-                "title": "An Optimal Agnostic PAC Algorithm",
-                "updated": "2026-08-06T17:57:25Z",
+                "id": "http://arxiv.org/abs/2608.07448v1",
+                "title": "Active movement of foraging sea turtles generates anomalous looping",
+                "updated": "2026-08-07T17:37:28Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.06363v1",
+                        "@href": "https://arxiv.org/abs/2608.07448v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.06363v1",
+                        "@href": "https://arxiv.org/pdf/2608.07448v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Let $H\\subseteq\\{-1,+1\\}^X$ be a class of finite VC dimension $d\\ge1$. Writing $L$ for the binary risk and $L^*=\\min_{h\\in H}L(h)$, we construct a learner achieving the statistically optimal risk bound: from an i.i.d.\\ sample of size $n$, for every $0<\u03b4\\le 1/2$, with probability at least $1-\u03b4$, \\[\n  L(\\widehat h)\n  \\le L^*+ 7\\cdot10^8\\left(\n  \\sqrt{\\frac{L^*(d+\\log(1/\u03b4))}{n}}\n  +\\frac{d+\\log(1/\u03b4)}{n}\n  \\right). \\] This settles the sample complexity of agnostic PAC learning up to universal constants at every fixed $L^*$, matching the lower bounds of Devroye, Gy\u00f6rfi, and Lugosi [A Probabilistic Theory of Pattern Recognition, Springer, 1996].",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.ST",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-06T17:57:25Z",
-                "arxiv:comment": "18 pages",
+                "summary": "Animals inhabiting diverse environments by moving across different spatial scales, from insects to birds, marine predators, mammals and even humans, often display apparently random movement paths. Over the past decade, novel biologging technologies have recorded these patterns in increasing detail, generating a wealth of experimental data. A central challenge is to understand such complex patterns by constructing data-driven mathematical models. Many animal movements depart from Brownian motion, as described by correlated random walks, L\u00e9vy walks, or active particle dynamics. Yet, these movement models do not incorporate long-term non-Markovian memory extracted from experimental trajectories. Here, we construct a stochastic generalised Langevin equation from satellite tracking data for loggerhead sea turtles (Caretta caretta) foraging off the coast of West Africa. We find that these turtles exhibit active movement characterised by large-scale loops that are not explained by ocean currents or chirality. These loops maintain movement within a specific foraging region and, over intermediate timescales, generate superdiffusion similar to L\u00e9vy walks. We thus identify a loop-based form of active anomalous search related to foraging patterns observed across a wide range of animal species, which may inspire robotic search strategies and AI-based metaheuristic optimisation algorithms.",
+                "category": {
+                    "@term": "cond-mat.stat-mech",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-07T17:37:28Z",
+                "arxiv:comment": "11 pages, 4 figures (accompanied by 38 pages of supplementary information with 40 figures and 1 table)",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cond-mat.stat-mech"
                 },
                 "author": [
                     {
-                        "name": "Markus Engelund Mathiasen"
+                        "name": "Vijay Kumar"
                     },
                     {
-                        "name": "Jian Qian"
+                        "name": "Vladimir V. Palyulin"
                     },
                     {
-                        "name": "Nikita Zhivotovskiy"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.06362v1",
-                "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
-                "updated": "2026-08-06T17:57:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.06362v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Perla Roman-Torres"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.06362v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be told apart, while naive optional stopping with an ordinary confidence interval invalidates the stated level. We make such an evaluation stop as soon as its evidence suffices, with the guarantee intact. The Action-Informed Value Assessment Tool (AIVAT) reduces variance in imperfect-information games through conditional mean-zero corrections, by a median $54\\times$ across 15 LLM agent configurations spanning 71,439 paired Heads-Up No-Limit Hold'em (HUNL) hands, but does not say when to stop. We combine AIVAT with continuously monitored Confidence Sequences (CSs) into anytime-valid AIVAT (AV-AIVAT), whose online value model learns only from past games so that no game scores its own correction. At the nominal 95\\% level and a target precision of $\\pm1$ Big Blind, raw outcomes need a median $74\\times$ as many hands as AIVAT-corrected outcomes to stop under the Asymptotic CS (AsympCS). Exact finite-sample certification uses the Empirical-Bernstein CS (EB-CS), which needs an independently justified bound on corrected payoffs. We establish such a bound structurally for Leduc hold'em and characterize a width floor set by the CS's bet cap and that bound, which governs how much of a variance gain becomes earlier stopping; the descriptive HUNL EB-CS runs show a median $1.37\\times$ stopping-time ratio. AV-AIVAT turns variance reduction into efficient, auditable early stopping while separating asymptotic screening from exact certification, so an evaluation can stop the moment its evidence suffices and hand a third party everything needed to recheck the verdict at that very stopping time.",
-                "category": [
-                    {
-                        "@term": "cs.GT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Christophe Eizaguirre"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-06T17:57:11Z",
-                "arxiv:comment": "34 pages, 5 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.GT"
-                },
-                "author": [
-                    {
-                        "name": "Boning Li"
-                    },
-                    {
-                        "name": "Yu Chen"
-                    },
-                    {
-                        "name": "Longbo Huang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.06358v1",
-                "title": "Universality in random graphs via optimal linking systems: trees and beyond",
-                "updated": "2026-08-06T17:55:25Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.06358v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.06358v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We develop a framework for proving universality results in sparse random graphs. As a first application, we show that there exists an absolute constant $C>1$ such that, with high probability, for every fixed constant $\u0394$, the binomial random graph $G(n,C\\ln n/n)$ contains every $n$-vertex tree with maximum degree at most $\u0394$. This answers a question of Montgomery (Advances in Mathematics, 2019). We also determine, for every $p$ satisfying $C\\ln n/n\\leq p=n^{-1+o(1)}$, the minimum girth $\\ell$ (up to an absolute multiplicative constant) for which with high probability $G(n,p)$ contains all cycle factors of girth at least $\u03a9(\\ell)$. In particular, with high probability $G(n,C\\ln n/n)$ contains all cycle factors of girth at least $100\\ln n/\\ln\\ln n$, which is optimal up to a constant factor. This extends an earlier result of Ferber, Kronenberg, and Luh (Transaction of the American Mathematical Society, 2019) and significantly improves a corollary of a deep result of Kahn, Lubetzky, and Wormald (Communications on Pure and Applied Mathematics, 2017). One of the key ingredients in the proofs is establishing the optimal depth of linking systems in sparse random graphs.",
-                "category": [
-                    {
-                        "@term": "math.CO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.PR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-06T17:55:25Z",
-                "arxiv:comment": "44 pages, 2 figures, comments are welcome!",
-                "arxiv:primary_category": {
-                    "@term": "math.CO"
-                },
-                "author": [
-                    {
-                        "name": "Asaf Cohen Antonir"
-                    },
-                    {
-                        "name": "Lyuben Lichev"
-                    },
-                    {
-                        "name": "Maksim Zhukovskii"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.06353v1",
-                "title": "Resourced Authority A Mechanism-Design Model for Participatory Governance of Deployed AI Agents",
-                "updated": "2026-08-06T17:53:24Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.06353v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.06353v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We give a formal mechanism design model for the continuous participatory governance of a deployed AI agent. The mechanism is built on the principle that governance should control an AI agent through resource allocation so as to make authorization self enforcing via compute budgets. The mechanism seeks to establish the Safe AI paradigm that compute is an effective governance lever. We situate our work as a compliance or commons overlay on a deployer. One governance period is an extensive form game in which verified human stakeholders arrive sequentially and contribute, on a provision or a rejection market, in a governance currency that is deliberately distinct from the agents compute. A funding aggregator turns raw contributions into breadth weighted effective supports - a two threshold gate with hysteresis converts net support into a binary authorization that, through a coupling map bounded by an exogenously certified safety ceiling, releases a metered compute budget - realized in hardware as a signed compute license so that the decision is self-enforcing. We characterize the class of agents the mechanism can govern and isolate manipulation of the governing electorate by the governed agent as the central open problem. We also introduce several challenges addressing manipulation of governing electorate by the governed agents.",
-                "category": [
-                    {
-                        "@term": "cs.GT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-06T17:53:24Z",
-                "arxiv:comment": "22 pages, 9 Figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.GT"
-                },
-                "author": [
-                    {
-                        "name": "Praphul Chandra"
-                    },
-                    {
-                        "name": "Sujit Gujar"
-                    },
-                    {
-                        "name": "Ganesh Ghalme"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.06352v1",
-                "title": "CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks",
-                "updated": "2026-08-06T17:53:18Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.06352v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.06352v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Training terminal agents requires executable and verifiable tasks that are not merely solvable, but appropriately challenging for learning. Executable validation establishes feasibility, yet does not reveal how a task behaves relative to a given solver setting. In this paper, we present CalibForge, an autonomous terminal-task synthesis system that uses verified solver behavior to revise candidate tasks through adversarial solver calibration. Multi-solver calibration targets disagreement within a heterogeneous solver pool, whereas contrastive solver calibration targets a designated strong-pass/weak-fail relation; both operationalize a solver-relative learnable zone anchored in demonstrated solvability. Using CalibForge, we construct 5,431 calibrated terminal tasks. Our ablations show that both strategies yield more effective supervision than authoring and validation alone or ordinary single-solver feedback. Models trained on the full collection achieve 32.58% and 47.57% on Terminal-Bench 2.0. The largest improvements over the corresponding base model reach 24.71 percentage points on Terminal-Bench 2.0, 27.68 points on SWE-bench Pro, and 30.04 points on Doc2Repo. Together, these results support solver-relative learnability as a practical target for constructing effective and transferable agent training data.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-06T17:53:18Z",
-                "arxiv:comment": "Dataset: https://huggingface.co/datasets/AweAI-Team/CalibForge. Repository: https://github.com/AweAI-Team/CalibForge",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Fanzhe Meng"
-                    },
-                    {
-                        "name": "Guoxin Chen"
-                    },
-                    {
-                        "name": "Jiale Zhao"
-                    },
-                    {
-                        "name": "Shuang Sun"
-                    },
-                    {
-                        "name": "Zhiyu Lin"
-                    },
-                    {
-                        "name": "Wayne Xin Zhao"
-                    },
-                    {
-                        "name": "Ruihua Song"
-                    },
-                    {
-                        "name": "Ji-Rong Wen"
-                    },
-                    {
-                        "name": "Kai Jia"
+                        "name": "Rainer Klages"
                     }
                 ]
             }
