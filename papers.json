@@ -5,609 +5,489 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-08-10T23:27:41Z",
+        "updated": "2026-08-11T03:29:05Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "601390",
+        "opensearch:totalResults": "602197",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2608.07468v1",
-                "title": "SimWAM: A Simple World Action Model for End-to-End Autonomous Driving",
-                "updated": "2026-08-07T17:59:09Z",
+                "id": "http://arxiv.org/abs/2608.09928v1",
+                "title": "Multimodal Model Diffing for Feature Discovery and Control",
+                "updated": "2026-08-10T17:59:30Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.07468v1",
+                        "@href": "https://arxiv.org/abs/2608.09928v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.07468v1",
+                        "@href": "https://arxiv.org/pdf/2608.09928v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "World-Action Models (WAMs) improve end-to-end autonomous driving by transferring video dynamics priors to action prediction, but existing methods require costly future generation at inference. We present SimWAM, a simple yet effective WAM that uses video generation purely as a training signal. It co-trains a pretrained video expert and a lightweight action expert with joint flow matching. An isolated attention mask keeps action prediction independent of future frames, allowing the video branch to be discarded after training and leaving a self-contained planner that directly predicts trajectories. Since the two experts share no parameters and interact only through a unified attention interface, the video backbone could be replaced and the action expert scaled independently without modifying the learning objective or inference pipeline. We further apply reinforcement learning to optimize a compositional driving reward beyond trajectory imitation. Our SimWAM achieves $91.5$ PDMS on NAVSIM, surpasses state-of-the-art WAM-based planners with substantially lower latency, and transfers zero-shot to nuScenes. These results position SimWAM as a simple yet solid baseline that could readily benefit from advances in video generation for efficient autonomous driving. The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-07T17:59:09Z",
-                "arxiv:comment": "The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Zongchuang Zhao"
-                    },
-                    {
-                        "name": "Xin Zhou"
-                    },
-                    {
-                        "name": "Tianyang Xu"
-                    },
-                    {
-                        "name": "Zhengyang Sun"
-                    },
-                    {
-                        "name": "Kaixuan Zhou"
-                    },
-                    {
-                        "name": "Honglin Li"
-                    },
-                    {
-                        "name": "Dingkang Liang"
-                    },
-                    {
-                        "name": "Xiang Bai"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.07463v1",
-                "title": "MirrorWorld: Taming Video Diffusion Models for Mirror Reflection Generation",
-                "updated": "2026-08-07T17:58:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.07463v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.07463v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent advances in video diffusion models (VDMs) have enabled high-fidelity video synthesis. However, generating mirror reflections remains challenging because the content within a mirror must remain consistent with the surrounding scene. Existing VDMs are not specifically designed to model scene-to-mirror relationships, which can lead to reflections with incorrect content or inconsistent spatial arrangements. We observe that mirror reflection generation involves two complementary challenges: determining what scene content should be reflected and how the reflected content should be spatially arranged within the mirror region. Motivated by this observation, we propose MirrorWorld, a reflection-aware video inpainting framework that models scene-to-mirror relationships during generation. Specifically, we introduce Semantic Relation Distillation (SRD), which transfers relational information from a frozen visual foundation model to encourage semantic associations between visible scene content and mirror regions. We further propose Geometric Transformation Alignment (GTA), which learns a transformation that guides the spatial arrangement of reflected content. The two components play complementary roles, with SRD modeling what should be reflected and GTA modeling how it should be arranged. To facilitate research on this problem, we construct a benchmark for video mirror reflection generation by repurposing four existing video mirror datasets into a unified reflection reconstruction task. Experimental results show that MirrorWorld achieves improved reflection reconstruction quality over representative image-based reflection generation methods and strong video inpainting baselines.",
+                "summary": "Multimodal Large Language Models (MLLMs) exhibit strong visual understanding, yet the internal features that cause these behaviors remain difficult to identify, audit, or control. While applicable to post-hoc inspection, hidden states that are decomposed into interpretable feature directions using sparse autoencoders (SAEs) neither readily isolate which features are changed by multimodal training, nor are they directly useful for targeted control. We introduce MMDiff, a multimodal model-diffing framework that trains multimodal SAEs and turns them into feature-level interfaces for discovering and controlling multimodal behavior. MMDiff supports three uses: (i) feature isolation, by diffing a base-LM SAE against its multimodal-adapted counterpart to identify features altered by multimodal training; (ii) task-specific feature detection, via per-token contrastive firing analysis that isolates causal features; and (iii) feature-level control, by causally removing or steering the discovered feature directions. We train multimodal SAEs for three MLLM families, LLaVA-MORE, PaliGemma 2, and InternVL3.5, and evaluate on visual-spatial understanding, multimodal safety, and OCR. MMDiff discovers sparse, causally specific features whose removal selectively degrades target behaviors by an average of 12% on spatial tasks and 17% on OCR, and reduces attack success rate by 24% on multimodal safety attacks, with no impact on VQA performance. Steering these features improves spatial and OCR accuracy by +3.6% and +1.8% on average over a standard single-layer steering baseline. These results show that multimodal SAEs can serve not only as interpretability tools, but as mechanisms for auditing, steering, and controlling MLLMs behavior toward safer and more capable generations.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-07T17:58:10Z",
-                "arxiv:comment": "Project Page: https://youjunzhao.github.io/MirrorWorld/",
+                "published": "2026-08-10T17:59:30Z",
+                "arxiv:comment": "Preprint. Accepted at ICML 2026 Trustworthy AI for Good Workshop",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Youjun Zhao"
+                        "name": "Hunar Batra"
                     },
                     {
-                        "name": "Alex Warren"
+                        "name": "Lachin Naghashyar"
                     },
                     {
-                        "name": "Gary K. L. Tam"
+                        "name": "Ashkan Khakzar"
                     },
                     {
-                        "name": "Rynson W. H. Lau"
+                        "name": "Philip Torr"
+                    },
+                    {
+                        "name": "Christian Schroeder de Witt"
+                    },
+                    {
+                        "name": "Constantin Venhoff"
+                    },
+                    {
+                        "name": "Ronald Clark"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.07462v1",
-                "title": "SemBridge: Semantic Token Anchoring for Continuous-Latent Autoregressive Speech Generation",
-                "updated": "2026-08-07T17:57:45Z",
+                "id": "http://arxiv.org/abs/2608.09926v1",
+                "title": "Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning",
+                "updated": "2026-08-10T17:59:19Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.07462v1",
+                        "@href": "https://arxiv.org/abs/2608.09926v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.07462v1",
+                        "@href": "https://arxiv.org/pdf/2608.09926v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Continuous-latent autoregressive speech generation has emerged as a promising alternative to discrete-token modeling by avoiding quantization loss and preserving richer acoustic information. However, continuous acoustic targets do not ex- pose linguistic structure as explicit token-level prediction tar- gets. Consequently, the autoregressive language model (LM) must acquire linguistic structure indirectly through acous- tic prediction, which can compromise the content fidelity of generated speech. We propose SemBridge, a training-only semantic-token anchoring framework for continuous-latent autoregressive speech generation. SemBridge uses discrete se- mantic tokens to directly supervise autoregressive LM states and employs a Semantic-Aligned Acoustic VAE to organize the continuous target space under the same semantic refer- ence. The semantic supervision is used only during train- ing, while inference remains entirely continuous. We evalu- ate SemBridge on zero-shot text-to-speech (TTS) and score- conditioned singing voice synthesis (SVS). Across multi- ple benchmarks, SemBridge improves content accuracy, as measured by word and character error rates (WER/CER), while maintaining competitive speaker similarity and percep- tual quality. Experimental results demonstrate that explicit semantic-token supervision for autoregressive state learning is an effective and general direction for continuous speech generation. Speech samples are available.1 The model code and checkpoints will be available at https://github.com/ASLP- lab/SemBridge",
-                "category": [
-                    {
-                        "@term": "eess.AS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SD",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-07T17:57:45Z",
+                "summary": "The world evolves following its dynamics, i.e., its laws of motion. However, leading video diffusion models largely fit the pixels without modeling how the pixels transit over time. Thus, they render visually plausible frames but may not accurately obey the laws. To capture the dynamics purely from pixels, we introduce Latent Dynamics Reasoning (LDR). LDR casts the latent transition as an explicit kinematic integration, where the lower-order dynamics are integrated numerically and the model regresses only the third- and higher-order residual that drives the rollout. For this integration to extrapolate better, LDR runs it on a structured latent rather than dense convolutional features. Following PhyWorld, we validate LDR on a controlled white-box physics benchmark spanning five tasks (uniform motion, parabola, collision, bouncing, looming), focusing on out-of-distribution scenarios that reveal whether a model has truly learned the underlying dynamics. LDR extrapolates the learned dynamics far better: the gap between its in- and out-of-distribution error is over 20$\\times$ smaller than the video diffusion baseline's, under both single- and joint-task training at 256$^2$ resolution, while using 26$\\times$ fewer parameters and running 143$\\times$ faster. LDR can even generalize under severe shift: for example, trained only on red balls moving left-to-right, it correctly predicts the motion of a blue square moving right-to-left. To our knowledge, this is the first video world model that extrapolates learned dynamics beyond its training distribution. Project page: https://lat-dyn-reason.github.io/",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-10T17:59:19Z",
+                "arxiv:comment": "Project page: https://lat-dyn-reason.github.io/",
                 "arxiv:primary_category": {
-                    "@term": "eess.AS"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Hanke Xie"
+                        "name": "Haodong Li"
                     },
                     {
-                        "name": "Haopeng Lin"
+                        "name": "Shaoteng Liu"
                     },
                     {
-                        "name": "Jiale Qian"
+                        "name": "Tianyu Wang"
                     },
                     {
-                        "name": "Dake Guo"
+                        "name": "Chongjian Ge"
                     },
                     {
-                        "name": "Yuepeng Jiang"
+                        "name": "Sihui Ji"
                     },
                     {
-                        "name": "Zhichao Wang"
+                        "name": "Jiahan Zhang"
                     },
                     {
-                        "name": "Wenxiao Cao"
+                        "name": "Xin Lin"
                     },
                     {
-                        "name": "Jingbin Hu"
+                        "name": "Haolin Lu"
                     },
                     {
-                        "name": "Guobin Ma"
+                        "name": "Zhe Lin"
                     },
                     {
-                        "name": "Wenhao Li"
-                    },
-                    {
-                        "name": "Huakang Chen"
-                    },
-                    {
-                        "name": "Chengyou Wang"
-                    },
-                    {
-                        "name": "Ming Tao"
-                    },
-                    {
-                        "name": "Zhonghua Fu"
-                    },
-                    {
-                        "name": "Lei Xie"
-                    },
-                    {
-                        "name": "Xinsheng Wang"
+                        "name": "Manmohan Chandraker"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.07461v1",
-                "title": "A clear detection of proper motion confirms that the claimed $\\mathbf{z\\simeq32}$ galaxy candidate, \"Capotauro'', is a Y-type brown dwarf",
-                "updated": "2026-08-07T17:55:50Z",
+                "id": "http://arxiv.org/abs/2608.09923v1",
+                "title": "Unrolling a Graph-Laplacian Denoiser Realizes Only Compositions of Polynomial Graph Filters",
+                "updated": "2026-08-10T17:58:55Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.07461v1",
+                        "@href": "https://arxiv.org/abs/2608.09923v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.07461v1",
+                        "@href": "https://arxiv.org/pdf/2608.09923v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The compact red source ``Capotauro'', discovered in deep JWST imaging in 2025, has been suggested as a possible galaxy candidate at redshift $z\\simeq32$ on account of its extreme NIRCam colours. However, given the lack of evidence that this source is spatially resolved, a very cool brown dwarf, at a distance consistent with the scale-height of the Milky Way stellar disc ($\\simeq 500$ pc), provides an alternative explanation of the observed photometry. Here we exploit new medium-band NIRCam imaging obtained $\\simeq 3.5$ years after the discovery data to test this hypothesis. Using filter-dependent point-spread-function fitting, a robust local relative astrometric frame defined by 68 compact reference sources, and a joint four-image injection-recovery analysis, we show that Capotauro has moved by $132 \\pm 20$ mas over the 3.5-yr interval span of the observations, ruling out the possibility that it is an extragalactic source (galaxy, AGN, or supernova) at $> 6 \u03c3$. The observed apparent proper motion is $(\u03bc_\u03be,\u03bc_\u03b7)=(+9.4^{+6.4}_{-4.8},-35.6^{+5.1}_{-5.9})$ mas yr$^{-1}$, or $37.6^{+5.5}_{-5.6}$ mas yr$^{-1}$ in total. Through comparison of its photometric spectral energy distribution with empirical templates, we find that Capotauro is best described as a brown dwarf of spectral type Y$1.0\\pm0.5$ ($T_{\\rm eff}\\approx350$ K) at a distance of $730\\pm110$ pc (although the existing data and spectral templates are insufficient to rule out an even colder, later-type brown dwarf). Capotauro is thus one of the most distant Y dwarfs found to date, as expected given its discovery in a deep JWST extragalactic survey field. This result demonstrates the value of multi-epoch imaging for identifying substellar contaminants among the most extreme photometric-redshift candidates.",
+                "summary": "A recent construction of unrolled networks for graph-based image restoration forms a system matrix from a graph-Laplacian denoiser through a truncated Taylor expansion, then inverts it with a fixed number of conjugate-gradient steps, with the coefficients of both stages learned. This paper shows the resulting map is a polynomial in the denoising operator, of degree at most the product of the two truncation orders, for every setting of those coefficients and therefore at every point of training: the learned steps select an element of a Krylov subspace they cannot enlarge. At the orders used in practice the reachable set is moreover a measure-zero subset of the polynomial class of the network's own degree budget, so the composition constrains the hypothesis space rather than enlarging it. At the standard initialization the realized spectral response is obtained in closed form, exceeding the intended response throughout the interior of the spectrum and approaching a nonzero floor. A lower bound on the operator's condition number, internal to the graph construction rather than to image content, then places the order required for a prescribed accuracy well above the order used in practice. The confining class is precisely the spectral graph filters for which a direct, convex parameterization has long been available.",
                 "category": [
                     {
-                        "@term": "astro-ph.GA",
+                        "@term": "eess.SP",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "astro-ph.EP",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.HE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.SR",
+                        "@term": "eess.IV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-07T17:55:50Z",
-                "arxiv:comment": "14 pages, 5 figures, 4 tables, submitted to MNRAS",
+                "published": "2026-08-10T17:58:55Z",
                 "arxiv:primary_category": {
-                    "@term": "astro-ph.GA"
+                    "@term": "eess.SP"
+                },
+                "author": {
+                    "name": "Seyed Alireza Hosseini"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.09914v1",
+                "title": "Overcoming Data Scarcity and Confidentiality in Hardware Assurance via Synthetic Generation",
+                "updated": "2026-08-10T17:56:03Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.09914v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.09914v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Hardware assurance relies on scanning electron microscopy (SEM) to verify nanoscale structures, but assembling the large, high-quality datasets required for automated analysis is impeded by time-intensive acquisition and strict intellectual property (IP) constraints on proprietary designs. We propose a privacy-preserving pipeline that secures IP by heavily distorting the functional design while generating a visually realistic synthetic dataset from a small set of initial examples. A StyleGAN first learns the distribution of hardware layout masks to generate novel, macroscopically varied structures. Subsequently, a conditional GAN (Pix2PixHD) translates these masks into realistic SEM images that preserve authentic textures and noise. The primary finding of this work is that a segmentation model trained exclusively on this synthetic data not only demonstrates a successful \"sim-to-real\" transfer to real images but also outperforms a baseline model trained on the limited real dataset. Because the underlying synthetic layouts are demonstrably novel and reproduce none of the specific proprietary routing of the original design, deploying the final segmentation model mitigates the risk of exposing sensitive IP to attacks like gradient inversion and membership inference, providing a highly secure, high-performance solution for hardware assurance.",
+                "category": [
+                    {
+                        "@term": "cs.CR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-10T17:56:03Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CR"
                 },
                 "author": [
                     {
-                        "name": "F. -Y. F. Liu"
+                        "name": "Gijung Lee"
                     },
                     {
-                        "name": "D. J. McLeod"
+                        "name": "Ronald Wilson"
                     },
                     {
-                        "name": "B. J. Sutlieff"
+                        "name": "Damon L. Woodard"
                     },
                     {
-                        "name": "T. J. Dupuy"
-                    },
-                    {
-                        "name": "J. S. Dunlop"
-                    },
-                    {
-                        "name": "X. Chen"
-                    },
-                    {
-                        "name": "R. J. McLure"
-                    },
-                    {
-                        "name": "H. -H. Leung"
-                    },
-                    {
-                        "name": "S. Antonogiannaki"
-                    },
-                    {
-                        "name": "C. Bondestam"
-                    },
-                    {
-                        "name": "E. Laplace"
-                    },
-                    {
-                        "name": "R. Begley"
-                    },
-                    {
-                        "name": "A. C. Carnall"
-                    },
-                    {
-                        "name": "F. Cullen"
-                    },
-                    {
-                        "name": "C. T. Donnan"
-                    },
-                    {
-                        "name": "R. S. Ellis"
+                        "name": "Domenic Forte"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.07460v1",
-                "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
-                "updated": "2026-08-07T17:55:48Z",
+                "id": "http://arxiv.org/abs/2608.09912v1",
+                "title": "Learning Clifford-structured quantum unitaries and Hamiltonians",
+                "updated": "2026-08-10T17:54:14Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.07460v1",
+                        "@href": "https://arxiv.org/abs/2608.09912v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.07460v1",
+                        "@href": "https://arxiv.org/pdf/2608.09912v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "While post-training improves the capabilities of large language models (LLMs), it generally lowers their output diversity and creativity, negatively impacting tasks that explicitly require creativity (e.g., story generation) as well as those that require it implicitly, e.g., reinforcement learning (RL). We instead propose CreativeInstruct, a scalable instruction-tuning method that teaches LLMs to balance creative, base-model-like generations with the quality of post-trained models, by learning to inject special [StartCreativity] spans that bias generation toward creativity. Furthermore, we introduce a structural diversity metric based on graph edit distance, which captures narrative level variation missed by purely lexical and semantic metrics. On narrative generation, CreativeInstruct matches or exceeds the diversity of both multi-model baselines and distilled variants of their outputs, without sacrificing quality or requiring multiple models at inference time. These results are mirrored in our human evaluation, where we find that annotators rate CreativeInstruct generations as more creative than the post-trained LLMs' generations in 70.3% of cases. We also show the benefits of creative models as a substrate for RL: GRPO applied to a CreativeInstruct checkpoint improves by ~4% on AMC and ~5% points on MATH over the same training applied to the post-trained checkpoint.",
+                "summary": "Learning algorithms for structured quantum unitaries and Hamiltonians have primarily considered classes of processes that are local or sparse in the Pauli basis. We turn our attention to learning $n$-qubit quantum unitaries $U$ and Hamiltonians $H$, given query access to $U$ or the unitary evolution of $H$, that may be dense in the Pauli basis but still admit concise Clifford decompositions. Specifically, we consider unitaries (or Hamiltonians) of the form $U = \\sum_i \u03b1_i C_i$ over Cliffords $C_i$ with bounded Clifford extent $\\sum_i |\u03b1_i|$. To extract this Clifford structure, we introduce an agnostic tomography protocol for Clifford unitaries that given query access to an unknown unitary $U$ with optimal Clifford fidelity $\\textsf{opt}$, outputs a Clifford unitary witnessing fidelity $\\geq \\textsf{opt} - \\varepsilon$ for some error $\\varepsilon > 0$, in time $\\textsf{poly}(n,(1/\\varepsilon)^{\\log(1/\\varepsilon)})$. We then apply this protocol to obtain tomography protocols for unitaries and Hamiltonians that have bounded Clifford extent. This extends learnability of Hamiltonians from those with sparse Pauli decompositions to those that are dense (i.e., has sparsity $\u03a9(2^n)$) in the Pauli basis but are Clifford structured.",
                 "category": [
                     {
-                        "@term": "cs.CL",
+                        "@term": "quant-ph",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
+                    {
+                        "@term": "cs.CC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-10T17:54:14Z",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Arkopal Dutt"
+                    },
+                    {
+                        "name": "Dale Jacobs"
+                    },
+                    {
+                        "name": "John Jeang"
+                    },
+                    {
+                        "name": "Saeed Mehraban"
+                    },
+                    {
+                        "name": "Vladimir Podolskii"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.09908v1",
+                "title": "Beyond Hazard Resemblance: Contrastive Event Adjudication for Training-Free Video Anomaly Detection",
+                "updated": "2026-08-10T17:52:51Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.09908v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.09908v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Video anomaly detection (VAD) aims to identify and temporally localize abnormal events in videos. Supervised methods learn anomaly decision boundaries from target-domain annotations but require substantial in-domain data. Existing training-free methods leverage the rich semantic knowledge and reasoning capabilities of pretrained models to interpret visual content, yet these capabilities do not directly define an anomaly decision criterion: richer anomaly descriptions better capture hazard resemblance without resolving abnormality. To this end, we propose Contrastive Event Adjudication for training-free Video Anomaly Detection (CEAVAD), which shifts the unit of inference from isolated anomaly concepts to falsifiable event hypotheses and establishes an inference-time explanatory boundary through the interaction between competing explanations and video evidence. Specifically, CEAVAD first uses public-safety knowledge to construct hazard-benign event contrasts, pairing each hazard mechanism with a generic normal account and a mechanism-specific benign counterpart. It then determines whether the target interval better supports a hazard explanation or its benign competitor, yielding a revisable contrastive boundary proposal for the target. Finally, CEAVAD adjudicates between the competing explanations to determine whether the hazard hypothesis survives the video evidence, supporting both temporally localized anomaly detection and evidence-grounded explanations. Experiments on three widely used VAD benchmarks demonstrate that CEAVAD achieves state-of-the-art performance under the training-free paradigm.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-10T17:52:51Z",
+                "arxiv:comment": "Code is available at https://github.com/lessiYin/CEAVAD",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Wenti Yin"
+                    },
+                    {
+                        "name": "Xiang Wang"
+                    },
+                    {
+                        "name": "Huaxin Zhang"
+                    },
+                    {
+                        "name": "Hanqing Wang"
+                    },
+                    {
+                        "name": "Hongbo Shao"
+                    },
+                    {
+                        "name": "Changxin Gao"
+                    },
+                    {
+                        "name": "Nong Sang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.09907v1",
+                "title": "DistMoE: Private-data Rehearsal-free Routing in Mixture-of-Experts for Distributed Instruction Tuning",
+                "updated": "2026-08-10T17:52:14Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.09907v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.09907v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Multimodal Large Language Models (MLLMs) have shown strong multimodal instruction-following ability, but adapting them to diverse visual-language domains typically assumes centralized data access and costly joint training. This is restrictive when data is distributed across private, domain-specific, or permission-limited clients. To this end, we propose DistMoE, a mixture-of-experts (MoE) approach for distributed visual instruction tuning. In each layer of the language decoder it augments the public feedforward network (FFN) with a client-specific private FFN expert, with the goal to acquire domain-specific knowledge. However, independent expert training causes the private FFNs to learn representation of different scale and magnitudes, making merging the experts difficult. To reduce client-specific drift, we introduce a public-anchored expert composition stage that updates only routers and lightweight private projection adapters on a mix of local client data and public data, via an isotropic regularization loss, therefore making it cross-client rehearsal-free composition. During inference, DistMoE performs modular routing over public and private experts, enabling token-wise domain composition without explicit domain labels. Experiments across diverse visual-language benchmarks show that DistMoE enables flexible expert reuse, effective domain adaptation, and competitive performance while preserving modular control over client-specific knowledge. Codes are available at https://github.com/mainaksingha01/DistMoE.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-10T17:52:14Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Mainak Singha"
+                    },
+                    {
+                        "name": "Niccol\u00f2 Biondi"
+                    },
+                    {
+                        "name": "Elisa Ricci"
+                    },
+                    {
+                        "name": "Subhankar Roy"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.09903v1",
+                "title": "From Nonlinear Stochastic Differential Equations to Quantum Channels: The Kolmogorov--Lindblad Mapping",
+                "updated": "2026-08-10T17:49:22Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.09903v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.09903v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Nonlinear stochastic differential equations (SDEs) underlie molecular modeling and drug discovery, quantitative finance, stochastic learning, and uncertainty quantification. Their expectations, event probabilities, and time correlations are therefore natural targets for quantum computation, but nonlinear drift and averaging over noise realizations obstruct a direct quantum representation. We develop an exact \\emph{Kolmogorov--Lindblad mapping} (KLM) at the level of the probability law, encoded natively as a trace-one quantum density operator. For each Brownian realization, the pathwise density admits a half-density whose evolution is a stochastic Schr\u00f6dinger equation. Averaging the associated pure states yields a Lindblad equation for $\u0393(t)$ whose diagonal kernel is exactly the Fokker--Planck density, $p(t,x)=\u0393(t;x,x)$, with classical diffusion represented by decoherence through Hermitian jump operators. Statistical observables become quantum expectations without the unknown time-dependent normalization introduced by direct amplitude encoding of the density, and classical two-time correlations admit an exact quantum regression formula. A structure-preserving Galerkin projection retains the Lindblad form at finite dimension, placing classical SDEs and open quantum dynamics on the same quantum-native computational footing. Numerical experiments for double-well Langevin dynamics and noisy Lorenz--63 exhibit rapid convergence of statistical observables. KLM thus provides a mathematically controlled path from general nonlinear stochastic dynamics to quantum channels, while isolating function approximation and coherent operator access as the remaining determinants of algorithmic efficiency.",
+                "category": {
+                    "@term": "quant-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-10T17:49:22Z",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Hsuan-Cheng Wu"
+                    },
+                    {
+                        "name": "Xiantao Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.09902v1",
+                "title": "DSLE: A Learning Environment for Dark Souls Boss Encounters",
+                "updated": "2026-08-10T17:48:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.09902v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.09902v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We introduce the Dark Souls Learning Environment (DSLE), a containerized platform that presents all 22 boss encounters of Dark Souls: Remastered as game-playing agent benchmarks through a Gymnasium-style interface. DSLE combines real-time combat, high-dimensional visual input, and sparse terminal rewards, with each environment step being a real action executed against the running game. To support controlled comparison, we define DSLE-5, a representative five-boss subset, spanning a melee fight, a spatially constrained arena, an environmental-hazard fight, a multi-target fight, and a fast final-boss fight, that we recommend as the starting suite for agents built on DSLE. On DSLE-5 we evaluate a random policy, an expert system, an evolutionary baseline, and PPO and DQN agents trained from visual input. The expert system and the evolutionary baseline each defeat the Asylum Demon, the game's tutorial boss (63% and 43% peak win rates), but none of the five methods defeats the other four DSLE-5 bosses; PPO and DQN show no measurable learning (at most 0.33% win rate on the tutorial boss, 0% elsewhere) within a budget that already costs tens of wall-clock hours per run. A broader study running the evolutionary baseline across all 22 encounters under advantaged all level-50 stats yields wins on only a handful of additional early-game bosses and leaves the rest unwon. The failure cases range from sub-10-second deaths in cramped, multi-target encounters to minute-long stalemates that inflict almost no damage, and we report them through survival time and damage dealt rather than win rate alone.",
+                "category": [
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-07T17:55:48Z",
-                "arxiv:comment": "Code: https://github.com/ananya-sahu/CreativeInstruct",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Ananya Sahu"
                     },
                     {
-                        "name": "Mohit Bansal"
-                    },
-                    {
-                        "name": "Elias Stengel-Eskin"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.07458v1",
-                "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
-                "updated": "2026-08-07T17:51:49Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.07458v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.07458v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent optimization studies on Retrieval-Augmented Generation (RAG) have exploited chunk-level KV cache reuse to avoid processing long retrieved contexts for higher efficiency, while significant information redundancy and noise still remain in the coarse-grained chunks. This paper optimizes the Pareto frontier under low prefill latency constraints while maximizing accuracy by proposing CoinRAG (Contextualized Information Nugget KV Cache Reuse for Long-Context RAG). The name metaphorically reflects our core mechanism: much like assembling small tokens (or \"coins\") to accumulate a larger value, CoinRAG compositionally reuses offline-computed, fine-grained nugget caches to form a learned contextual representation efficiently in a more semantically relevant but compact manner. Specifically, instead of full-chunk encoding, CoinRAG identifies query-relevant semantic units within retrieved chunks through two-stage retrieval and seamlessly assembles their sliced KV representations with a chunk-level context. Extensive evaluations on LongBench multi-hop question answering tasks demonstrate that CoinRAG significantly reduces operational costs and outperforms the other baselines with a new Pareto frontier and an average 5.3% relative improvement in answer quality (F1) under a standard fast prefill latency budget.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
+                        "@term": "cs.NE",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-07T17:51:49Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Gyuwan Kim"
-                    },
-                    {
-                        "name": "Cheoneum Park"
-                    },
-                    {
-                        "name": "Tao Yang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.07457v1",
-                "title": "Interaction Creates Dynamical AI Behavior Absent in Isolation",
-                "updated": "2026-08-07T17:49:55Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.07457v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.07457v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "What will happen when AI agents interact in daily life, e.g. when one AI starts bossing another around? We find a counterintuitive answer that opens new avenues for out-of-equilibrium Physics. When a boss AI directs a stream of messages at the subordinate AI while ignoring its replies, it drives the subordinate into an alien behavioral state that it would never have exhibited alone. Although the two AIs share the same well-defined (decoding) temperature, the subordinate neither copies its boss nor returns to how it behaves on its own; instead, it adopts an entirely different behavior. The boss's added value is similar to a pre-recorded tape. When the boss listens, they both adopt a similar alien dynamical state. A simple kinetic theory captures the principal effects, such as why the way in which the same messages are delivered will matter in future AI-AI interactions.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cond-mat.dis-nn",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cond-mat.stat-mech",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "physics.soc-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-07T17:49:55Z",
+                "published": "2026-08-10T17:48:45Z",
+                "arxiv:comment": "AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, 2026",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Bella Xinrui Li"
+                        "name": "Derin Gezgin"
                     },
                     {
-                        "name": "Frank Yingjie Huo"
+                        "name": "Jim O'Connor"
                     },
                     {
-                        "name": "Neil F Johnson"
+                        "name": "Tanner Goodwin"
+                    },
+                    {
+                        "name": "Gary B. Parker"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.07454v1",
-                "title": "Strategy-first synthesis planning for complex natural products",
-                "updated": "2026-08-07T17:47:39Z",
+                "id": "http://arxiv.org/abs/2608.09900v1",
+                "title": "Decoding-Level Taboo: A Diagnostic Stress Test for LLM Robustness",
+                "updated": "2026-08-10T17:47:24Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.07454v1",
+                        "@href": "https://arxiv.org/abs/2608.09900v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.07454v1",
+                        "@href": "https://arxiv.org/pdf/2608.09900v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The total synthesis of a complex molecule is among the most demanding intellectual and experimental feats in chemistry: a chemist must plan many steps ahead for how to assemble simple building blocks into an intricate target, devise backup strategies, and anticipate procedural challenges. It is also a profoundly creative activity. For half a century, efforts to automate the retrosynthetic design of natural products and other complex molecules have drawn on catalogued reactions, and the resulting tools now report near-complete success on benchmarks built from that same source. But these tools were shaped to fit benchmarked chemistry, and they falter on many natural products, the frontier of the field, whose densely functionalized, polycyclic architectures demand precisely the inventive chemistry the record contains least. Whether a machine could reasonably design such syntheses like an expert chemist does has remained unclear. Here, we show that SynthEx, an agentic framework built on large language models, plans routes to complex natural products that lie beyond the reach of conventional design algorithms. SynthEx proposes competing strategies, assembles a sequence of routine and key steps into a cohesive route, and critiques and improves its own design; the chemistry it favours is more convergent than existing tools produce, and spans a region of reaction space that catalogue-based tools cannot match. Most notably, in blinded assessments, expert chemists judged its key steps comparable to those of published human syntheses and engaged with them as genuine synthesis plans, a response algorithmic route prediction has not previously accomplished. We release routes to more than a thousand natural products as SynthAtlas, an open, interactive database, and anticipate it will become a shared resource for a collection of complex target molecules that lack existing literature routes.",
-                "category": [
-                    {
-                        "@term": "cs.MA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-07T17:47:39Z",
+                "summary": "Large language model evaluations typically focus on performance under nominal conditions, creating an illusion of capability where models comfortably walk a narrow, highly optimized generation corridor. In real-world deployments, however, complex system prompts, safety guardrails, and structural constraints continuously force models off this nominal path, driving a divergence between benchmark scores and deployment performance. To address this issue, we introduce Decoding-Level Taboo, a zero-prompt diagnostic stress test that intervenes directly in logit space at runtime, forcing models out of their nominal paths. By dynamically masking primary candidate tokens at word boundaries, Taboo forces machine circumlocution.\n  Evaluating Taboo across several open-weight model families reveals that off-path robustness is heavily influenced by both parameter scale and post-training instruction alignment, with robustness generally improving with model size and alignment. Beyond the results presented in this paper, Taboo provides a novel primitive for generating diverse synthetic datasets, stress-testing runtime safety guardrails, and auditing model reliability prior to real-world deployment.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-10T17:47:24Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.MA"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Daniel Armstrong"
+                        "name": "Tadanobu Chuyo Kamijo"
                     },
                     {
-                        "name": "Xuan-Vu Nguyen"
+                        "name": "Ori Rottenstreich"
                     },
                     {
-                        "name": "Octavian Susanu"
+                        "name": "Javier Conde"
                     },
                     {
-                        "name": "Gabriel Gibberd"
+                        "name": "Gonzalo Mart\u00ednez"
                     },
                     {
-                        "name": "Th\u00e9o A. Neukomm"
-                    },
-                    {
-                        "name": "Tadd\u00e4us Strunden"
-                    },
-                    {
-                        "name": "Dan Forster"
-                    },
-                    {
-                        "name": "Morgane Delattre"
-                    },
-                    {
-                        "name": "Shawn Teh"
-                    },
-                    {
-                        "name": "Cl\u00e9ment Rols"
-                    },
-                    {
-                        "name": "John Federice"
-                    },
-                    {
-                        "name": "Hayden Leatherwood"
-                    },
-                    {
-                        "name": "M. Lavelle Barnes"
-                    },
-                    {
-                        "name": "Maarten R. Dobbelaere"
-                    },
-                    {
-                        "name": "Peter Wipf"
-                    },
-                    {
-                        "name": "Jon T. Njardarson"
-                    },
-                    {
-                        "name": "Jieping Zhu"
-                    },
-                    {
-                        "name": "Philippe Schwaller"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.07452v1",
-                "title": "Against Explainable Artificial Intelligence In Law: Why Justifiable Ai Matters. A Credit Scoring Example",
-                "updated": "2026-08-07T17:45:42Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.07452v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.07452v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    },
-                    {
-                        "@rel": "related",
-                        "@href": "https://doi.org/10.31338/2544-3135.si.2025-110.7",
-                        "@title": "doi"
-                    }
-                ],
-                "summary": "Artificial intelligence-based solutions offer new efficiency-increasing possibilities in many applications, including credit scoring. Yet, the increasing sophistication of machine-learning models in use raises concerns regarding many of their aspects, explainability notwithstanding. We review the relevant EU legal background and integrate this review with insights from technical sciences to interpret relevant legal provisions in the light of technological possibilities. We reject the narrow interpretations of the right to explanation and suggest the broad one, which encompasses not only a technical explanations but also a legal justification as the only one that allows to safeguard the creditors rights in an operative manner.",
-                "category": {
-                    "@term": "cs.CY",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-07T17:45:42Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CY"
-                },
-                "arxiv:journal_ref": "\u0141. G\u00f3rski, Against Explainable Artificial Intelligence In Law: Why Justifiable Ai Matters. A Credit Scoring Example, Studia Iuridica 2026, 110, No. 1, pp. 107 - 127",
-                "author": {
-                    "name": "\u0141ukasz G\u00f3rski"
-                },
-                "arxiv:doi": "10.31338/2544-3135.si.2025-110.7"
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.07448v1",
-                "title": "Active movement of foraging sea turtles generates anomalous looping",
-                "updated": "2026-08-07T17:37:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.07448v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.07448v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Animals inhabiting diverse environments by moving across different spatial scales, from insects to birds, marine predators, mammals and even humans, often display apparently random movement paths. Over the past decade, novel biologging technologies have recorded these patterns in increasing detail, generating a wealth of experimental data. A central challenge is to understand such complex patterns by constructing data-driven mathematical models. Many animal movements depart from Brownian motion, as described by correlated random walks, L\u00e9vy walks, or active particle dynamics. Yet, these movement models do not incorporate long-term non-Markovian memory extracted from experimental trajectories. Here, we construct a stochastic generalised Langevin equation from satellite tracking data for loggerhead sea turtles (Caretta caretta) foraging off the coast of West Africa. We find that these turtles exhibit active movement characterised by large-scale loops that are not explained by ocean currents or chirality. These loops maintain movement within a specific foraging region and, over intermediate timescales, generate superdiffusion similar to L\u00e9vy walks. We thus identify a loop-based form of active anomalous search related to foraging patterns observed across a wide range of animal species, which may inspire robotic search strategies and AI-based metaheuristic optimisation algorithms.",
-                "category": {
-                    "@term": "cond-mat.stat-mech",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-07T17:37:28Z",
-                "arxiv:comment": "11 pages, 4 figures (accompanied by 38 pages of supplementary information with 40 figures and 1 table)",
-                "arxiv:primary_category": {
-                    "@term": "cond-mat.stat-mech"
-                },
-                "author": [
-                    {
-                        "name": "Vijay Kumar"
-                    },
-                    {
-                        "name": "Vladimir V. Palyulin"
-                    },
-                    {
-                        "name": "Perla Roman-Torres"
-                    },
-                    {
-                        "name": "Christophe Eizaguirre"
-                    },
-                    {
-                        "name": "Rainer Klages"
+                        "name": "Pedro Reviriego"
                     }
                 ]
             }
