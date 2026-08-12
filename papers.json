@@ -5,33 +5,407 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-08-11T23:32:39Z",
+        "updated": "2026-08-12T05:41:18Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "602197",
+        "opensearch:totalResults": "602598",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2608.09928v1",
-                "title": "Multimodal Model Diffing for Feature Discovery and Control",
-                "updated": "2026-08-10T17:59:30Z",
+                "id": "http://arxiv.org/abs/2608.11205v1",
+                "title": "AdvFD: Boosting Visual Generation via Adversarial Fr'echet Distance Loss",
+                "updated": "2026-08-11T17:59:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.09928v1",
+                        "@href": "https://arxiv.org/abs/2608.11205v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.09928v1",
+                        "@href": "https://arxiv.org/pdf/2608.11205v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Multimodal Large Language Models (MLLMs) exhibit strong visual understanding, yet the internal features that cause these behaviors remain difficult to identify, audit, or control. While applicable to post-hoc inspection, hidden states that are decomposed into interpretable feature directions using sparse autoencoders (SAEs) neither readily isolate which features are changed by multimodal training, nor are they directly useful for targeted control. We introduce MMDiff, a multimodal model-diffing framework that trains multimodal SAEs and turns them into feature-level interfaces for discovering and controlling multimodal behavior. MMDiff supports three uses: (i) feature isolation, by diffing a base-LM SAE against its multimodal-adapted counterpart to identify features altered by multimodal training; (ii) task-specific feature detection, via per-token contrastive firing analysis that isolates causal features; and (iii) feature-level control, by causally removing or steering the discovered feature directions. We train multimodal SAEs for three MLLM families, LLaVA-MORE, PaliGemma 2, and InternVL3.5, and evaluate on visual-spatial understanding, multimodal safety, and OCR. MMDiff discovers sparse, causally specific features whose removal selectively degrades target behaviors by an average of 12% on spatial tasks and 17% on OCR, and reduces attack success rate by 24% on multimodal safety attacks, with no impact on VQA performance. Steering these features improves spatial and OCR accuracy by +3.6% and +1.8% on average over a standard single-layer steering baseline. These results show that multimodal SAEs can serve not only as interpretability tools, but as mechanisms for auditing, steering, and controlling MLLMs behavior toward safer and more capable generations.",
+                "summary": "Fr\u00e9chet distance has recently emerged as an effective distribution-level objective for generator post-training, complementing the conventional sample-level diffusion and flow-matching losses. However, directly optimizing Fr\u00e9chet objectives can cause Fr\u00e9chet hacking. The target metrics keep improving, but visual quality and Fr\u00e9chet alignment in other feature spaces may stagnate or deteriorate. We attribute this failure to the static pretrained feature spaces used by existing Fr\u00e9chet losses. These feature spaces provide incomplete and fixed views of the differences between real and generated distributions. To address this limitation, we propose Adversarial Fr\u00e9chet Distance (AdvFD), which complements the static representation targets in FD-Loss with a calibrated adversarially learned representation. AdvFD augments the original static Fr\u00e9chet objective with a learnable representation that adversarially maximizes the Fr\u00e9chet discrepancy between real and generated samples, while the generator minimizes the same discrepancy in the resulting adaptive feature space. To prevent the adversarial representation from trivially increasing the objective through feature amplification, we further introduce real-feature whitening, which normalizes its scale and covariance geometry and stabilizes the min--max optimization. Extensive experiments show that AdvFD consistently improves one-step generator post-training across both JiT and pMF backbones and across different model scales.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-11T17:59:56Z",
+                "arxiv:comment": "Project Page: https://gasaiyu.github.io/AdvFD-page/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Mingju Gao"
+                    },
+                    {
+                        "name": "Jingkai Zhou"
+                    },
+                    {
+                        "name": "Kun Gai"
+                    },
+                    {
+                        "name": "Changqian Yu"
+                    },
+                    {
+                        "name": "Hao Tang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.11204v1",
+                "title": "Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning",
+                "updated": "2026-08-11T17:59:13Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.11204v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.11204v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Learning reliable surgical manipulation policies is bottlenecked by the scarcity of action-labeled demonstrations: teleoperated surgical robot (e.g., dVRK) trajectories with synchronized kinematics are costly to collect, while surgical tasks demand precise contact handling, long-horizon reasoning, and bimanual coordination. Endoscopic video is comparatively inexpensive and abundant relative to synchronized video--kinematics trajectories, and a natural way to exploit it is to learn world models of surgical scenes. However, existing surgical world models use video primarily for simulation or policy evaluation, and rarely translate the learned dynamics into closed-loop control. This gap raises our central question: under a fixed budget of action-labeled demonstrations, does action-free video pretraining improve closed-loop surgical manipulation? To answer it, we introduce the Surgical World-Action Model (Surgical WAM), a unified generative model built on Cosmos Policy that jointly predicts future endoscopic observations and executable surgical robot action chunks. Surgical WAM first learns surgical visual dynamics from action-free video and is then fine-tuned on the fixed action-labeled budget; at deployment, it acts as a closed-loop, receding-horizon controller that executes a short prefix of each predicted action chunk and replans from the resulting observation. On a suite of four simulated surgical manipulation tasks, video pretraining improves the average success rate from 63.5% to 77.8%, including an absolute gain of 20 percentage points on PegTransfer, with the largest improvements on contact-rich and bimanual tasks. These results demonstrate that action-free video provides transferable visual dynamics priors for learning surgical robot control with limited action supervision, positioning data-efficient video pretraining as a practical path toward scaling up surgical robot learning.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-11T17:59:13Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Wenrui Bao"
+                    },
+                    {
+                        "name": "Tianyun Jiang"
+                    },
+                    {
+                        "name": "Zhiben Chen"
+                    },
+                    {
+                        "name": "Ser-Nam Lim"
+                    },
+                    {
+                        "name": "Peter D. Peng"
+                    },
+                    {
+                        "name": "Yuzhang Shang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.11203v1",
+                "title": "Capturing Uncertainty in Human Motion for Representation Learning in Soccer",
+                "updated": "2026-08-11T17:59:10Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.11203v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.11203v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This paper presents a self-supervised representation learning framework for understanding 3D skeleton-based human motion in soccer, using future motion prediction as the learning objective. Since human motion is inherently uncertain, accounting for multiple plausible futures is essential for capturing the underlying motion dynamics and learning effective representations. To this end, we introduce a conditioning module for motion prediction that models a probabilistic distribution over discretized future motions in 3D Euclidean space, learning multimodality with explicit supervision from future trajectories. Experiments on large-scale soccer player tracking data show that our approach substantially improves motion prediction accuracy. Moreover, the learned representations effectively transfer to multiple soccer downstream applications, demonstrating strong cross-task generalization.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-11T17:59:10Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yizhou Xu"
+                    },
+                    {
+                        "name": "Lars Bretzner"
+                    },
+                    {
+                        "name": "Tiesheng Wang"
+                    },
+                    {
+                        "name": "Atsuto Maki"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.11201v1",
+                "title": "VidForensics-M1: Meta-Detection Reinforcement Learning with Verifiable Temporal Grounding for AI-Generated Video Forensics",
+                "updated": "2026-08-11T17:58:10Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.11201v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.11201v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent advances in video generation models have significantly improved the realism of synthetic videos, blurring the boundary between generated and authentic content and raising concerns about misinformation. Existing MLLM-based detectors mainly rely on supervised fine-tuning or label-level reinforcement learning, where coarse supervision limits generalization to unseen scenarios and emerging video generators. To overcome these limitations, we are the first to introduce \\textbf{meta-detection} into AI-generated video detection, enabling reliable forgery detection by jointly optimizing predicted labels and supporting evidence within reinforcement learning. This paradigm requires reliable evidence signals and effective mechanisms to integrate them into label-level optimization. Textual rationales provide semantic descriptions of forgery artifacts, but their generation and verification depend on external models, making supervision vulnerable to hallucinations and semantic biases. In contrast, temporal grounding provides more objective and verifiable evidence, as manipulated intervals can be precisely controlled during forgery construction. Based on this insight, we propose an automated data construction pipeline that generates paired real-fake videos by replacing temporal segments with boundary-frame-conditioned video generation models. Furthermore, we introduce \\textbf{Evidence-Guided Reward Redistribution}, which performs evidence-aware credit assignment by redistributing rewards among label-correct responses according to evidence quality. This preserves reliable label supervision while encouraging detectors to acquire fine-grained and verifiable forgery localization capabilities. Extensive experiments demonstrate that \\textbf{VidForensics-M1} effectively leverages verifiable temporal evidence to achieve robust and generalizable AI-generated video detection.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-11T17:58:10Z",
+                "arxiv:comment": "27 pages, 15 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Bowei Liu"
+                    },
+                    {
+                        "name": "Zheng Lu"
+                    },
+                    {
+                        "name": "Yuhan Bian"
+                    },
+                    {
+                        "name": "Xinchen Zhang"
+                    },
+                    {
+                        "name": "Xingming Shui"
+                    },
+                    {
+                        "name": "Yuesheng Huang"
+                    },
+                    {
+                        "name": "Xuhuan Li"
+                    },
+                    {
+                        "name": "Zihao Liu"
+                    },
+                    {
+                        "name": "Yifan Yang"
+                    },
+                    {
+                        "name": "Jun Zhou"
+                    },
+                    {
+                        "name": "Xiu Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.11200v1",
+                "title": "ConVAWG: A Retrieval-Grounded Framework for Controlled Synthetic Dialogue Generation in Violence Against Women and Girls",
+                "updated": "2026-08-11T17:57:34Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.11200v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.11200v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Synthetic dialogue generation offers a way to study conversational dynamics in sensitive domains where real data are difficult to access, release, or annotate. The underlying abuse may occur online or offline: threats and coercion can appear directly in messages, while behaviours such as surveillance, isolation, stalking, and physical violence may be planned, disclosed, or referred to conversationally. Privacy and legal constraints make it difficult the release of large-scale real conversation datasets; existing work has mostly focused on sentence-level toxicity of online abuses, leaving a gap in modelling abuse as a relational and temporally unfolding phenomenon. In this work, we focus on modelling Violence Against Women and Girls (VAWG) scenarios as multi-turn dialogues. We introduce ConVAWG, a retrieval-grounded framework for generating CPS-aligned synthetic VAWG chat dialogues. ConVAWG builds scenarios from persona seeds, demographic patterns reported by the UK Office for National Statistics, official crime definitions, and retrieved Domestic Homicide Review cases; converts them into hierarchical event timelines; generates multi-scene role-play dialogues; and applies targeted activation-steered toxicity control to appropriate utterances. We release over 6,000 multi-turn dialogue events across 200 scenarios with rich scenario-, event-, and turn-level metadata. Extensive human evaluation, LLM-as-Judge assessment, ablations, and downstream tasks show strong dialogue quality and domain fidelity.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-11T17:57:34Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Chen Lyu"
+                    },
+                    {
+                        "name": "Xingwei Tan"
+                    },
+                    {
+                        "name": "Simon Cullen"
+                    },
+                    {
+                        "name": "Shelley Wilson"
+                    },
+                    {
+                        "name": "Lois Arthurs"
+                    },
+                    {
+                        "name": "Arshad Jhumka"
+                    },
+                    {
+                        "name": "Gabriele Pergola"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.11197v1",
+                "title": "Beyond a Bag of Features: Set-Level Instability in Sparse Autoencoders",
+                "updated": "2026-08-11T17:55:59Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.11197v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.11197v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Shani et al. (2026) show that LLM representations broadly recover human category boundaries, while failing to reflect fine-grained typicality structure. Their analysis uses cosine similarity over dense model representations. We revisit their approach using overlap over active sparse autoencoder (SAE) latent sets as a more interpretable similarity measure. We first verify that this set-level measure is meaningful: SAE latent sets can recover union-like compositional structure in controlled toy models and induce semantically coherent neighborhoods in natural text. Extending the human-concepts analysis to SAE set similarities, we find that SAE activation sets do not recover human category boundaries or within-category typicality more faithfully than dense embeddings or residual-stream states, but instead track model-internal similarity structure. To probe this gap further, we study active latent sets under well-controlled semantic modifications, revealing a substantial mismatch between human judgements of conceptual change and change in the SAE active set. We interpret this as evidence that, outside idealised settings, SAE features do not compose via simple bag-of-features semantics.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-11T17:55:59Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Nikolai Bolik"
+                    },
+                    {
+                        "name": "Lennart St\u00f6pler"
+                    },
+                    {
+                        "name": "Artur Andrzejak"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.11195v1",
+                "title": "Long-Horizon AI Research for Grothendieck Constant: A Case Study in Human-AI Mathematical Collaboration",
+                "updated": "2026-08-11T17:53:48Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.11195v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.11195v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "AI agents are increasingly used in mathematics research, but it is often unclear how to use them effectively. Towards this, we present an extensive case study of how AI was used to improve bounds on the Grothendieck constant $K_G$, which captures the hardness between combinatorial problems and their continuous relaxations. Specifically, while the precise value of $K_G$ is not known, we recently tightened the best known bounds to \\[\n  \\frac{6\u03c0}{11}\n  \\;\\le\\;\n  K_G\n  \\;\\le\\;\n  \\frac\u03c0{2\\log(1+\\sqrt2)} - 10^{-4}. \\] Crucially, these improvements were achieved using an AI research system that could arrive at insights deemed novel by domain experts. We give a detailed discussion of our experience using AI for mathematics research, particularly touching upon its strengths and weaknesses, as well as our experience with creating ideal conditions for AI to arrive at breakthrough insights.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.HC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.FA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-11T17:53:48Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Alan Li"
+                    },
+                    {
+                        "name": "Rahul Saha"
+                    },
+                    {
+                        "name": "Anton Xue"
+                    },
+                    {
+                        "name": "Swarat Chaudhuri"
+                    },
+                    {
+                        "name": "Adam Klivans"
+                    },
+                    {
+                        "name": "Pravesh K Kothari"
+                    },
+                    {
+                        "name": "Raghu Meka"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.11191v1",
+                "title": "Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation",
+                "updated": "2026-08-11T17:50:25Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.11191v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.11191v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "GUI Visual Grounding is a fundamental capability for GUI agents. Existing models typically freeze their parameters after deployment, limiting their ability to adapt to unseen interfaces. Although recent methods attempt to adapt models via test-time reinforcement learning, they cannot reflect upon failed exploration. To overcome this, we propose a Test-Time Self-Evolving framework that enables models to improve after deployment without human-annotated ground truth. It constructs a closed-loop of Exploration, Evaluation, Reflection, and Internalization. Specifically, the agent first explores unseen interfaces by predicting grounding coordinates for given instructions. To evaluate these explorations, we introduce an MLLM-based Reflector to assess the generated results and provide the corresponding reasoning reflections. To internalize reflection knowledge into the model weights, we propose Reflection-Guided On-Policy Self-Distillation, which translates high-level reasoning into dense token-level supervision via a conditioned self-teacher. Furthermore, we design a Contrastive Calibration method to prevent incorrect auto-regressive prefixes from corrupting the supervisory signals during failed explorations. Extensive experiments across six benchmarks demonstrate our framework's effectiveness, achieving an average accuracy improvement of 7.4% over the base model. To the best of our knowledge, this is the first work to successfully exploit on-policy self-distillation for test-time adaptation in GUI visual grounding. By filling the gap in post-deployment adaptation, our framework completes the self-evolving capability of GUI agents. The code will be released.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -44,450 +418,114 @@
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-11T17:50:25Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Shiyu Xuan"
+                    },
+                    {
+                        "name": "Zechao Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.11181v1",
+                "title": "How to Verify Consistency of Probabilistic Claims",
+                "updated": "2026-08-11T17:41:39Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.11181v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.11181v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "When a probabilistic predictor answers many conditional-probability queries, are its answers self-consistent, and can this be verified in polynomial time? This problem is of interest for AI safety, where safety is derived from honesty about probabilistic predictions of unwanted outcomes potentially caused by an AI action. We construct an interactive PCP as follows. Let a predictive model be specified by a probability circuit P and a circuit Q which outputs confidence in predictions. Together, P and Q implicitly specify exponentially many probabilistic claims. We show a protocol in which a polynomial-time verifier can verify the approximate consistency of (P,Q). The verifier is given the pair of circuits (P,Q), which it evaluates at only a few points; alongside them it is given a proof oracle, an encoding of a witnessing probability distribution allegedly consistent with the predictions of (P,Q), which it reads at a few locations while interacting with a single untrusted prover. En route, we must ensure the existence of a sparse witnessing distribution consistent with the model's predictions. To do so, we first consider witness distributions for the consistency of explicit probabilistic claims, rather than claims specified by a predictor: say m claims, each of the form Pr[Y = 1 | X = x] = p, over n Boolean variables. Building on work initiated by Nilsson (Artif. Intell., 1986), we place l_2-approximate probabilistic consistency of explicit claims in NP, with certificates of length O(mn + log B) in the input bit-precision B; we further show how a small additive completeness-soundness gap removes the dependence on B. Together these results provide a complexity-theoretic foundation for certifying the self-consistency of probabilistic predictors. We view our interactive PCP as a first step toward training predictive models to prove their own consistency.",
+                "category": [
+                    {
+                        "@term": "cs.CC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-10T17:59:30Z",
-                "arxiv:comment": "Preprint. Accepted at ICML 2026 Trustworthy AI for Good Workshop",
+                "published": "2026-08-11T17:41:39Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.CC"
                 },
                 "author": [
                     {
-                        "name": "Hunar Batra"
+                        "name": "Orr Paradise"
                     },
                     {
-                        "name": "Lachin Naghashyar"
+                        "name": "Oliver Richardson"
                     },
                     {
-                        "name": "Ashkan Khakzar"
+                        "name": "Yoshua Bengio"
                     },
                     {
-                        "name": "Philip Torr"
-                    },
-                    {
-                        "name": "Christian Schroeder de Witt"
-                    },
-                    {
-                        "name": "Constantin Venhoff"
-                    },
-                    {
-                        "name": "Ronald Clark"
+                        "name": "Shafi Goldwasser"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.09926v1",
-                "title": "Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning",
-                "updated": "2026-08-10T17:59:19Z",
+                "id": "http://arxiv.org/abs/2608.11175v1",
+                "title": "Risk-Aware Kinodynamic Motion Planning Under Uncertainty For Safe Navigation on Planetary Environments",
+                "updated": "2026-08-11T17:34:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.09926v1",
+                        "@href": "https://arxiv.org/abs/2608.11175v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.09926v1",
+                        "@href": "https://arxiv.org/pdf/2608.11175v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The world evolves following its dynamics, i.e., its laws of motion. However, leading video diffusion models largely fit the pixels without modeling how the pixels transit over time. Thus, they render visually plausible frames but may not accurately obey the laws. To capture the dynamics purely from pixels, we introduce Latent Dynamics Reasoning (LDR). LDR casts the latent transition as an explicit kinematic integration, where the lower-order dynamics are integrated numerically and the model regresses only the third- and higher-order residual that drives the rollout. For this integration to extrapolate better, LDR runs it on a structured latent rather than dense convolutional features. Following PhyWorld, we validate LDR on a controlled white-box physics benchmark spanning five tasks (uniform motion, parabola, collision, bouncing, looming), focusing on out-of-distribution scenarios that reveal whether a model has truly learned the underlying dynamics. LDR extrapolates the learned dynamics far better: the gap between its in- and out-of-distribution error is over 20$\\times$ smaller than the video diffusion baseline's, under both single- and joint-task training at 256$^2$ resolution, while using 26$\\times$ fewer parameters and running 143$\\times$ faster. LDR can even generalize under severe shift: for example, trained only on red balls moving left-to-right, it correctly predicts the motion of a blue square moving right-to-left. To our knowledge, this is the first video world model that extrapolates learned dynamics beyond its training distribution. Project page: https://lat-dyn-reason.github.io/",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-10T17:59:19Z",
-                "arxiv:comment": "Project page: https://lat-dyn-reason.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Haodong Li"
-                    },
-                    {
-                        "name": "Shaoteng Liu"
-                    },
-                    {
-                        "name": "Tianyu Wang"
-                    },
-                    {
-                        "name": "Chongjian Ge"
-                    },
-                    {
-                        "name": "Sihui Ji"
-                    },
-                    {
-                        "name": "Jiahan Zhang"
-                    },
-                    {
-                        "name": "Xin Lin"
-                    },
-                    {
-                        "name": "Haolin Lu"
-                    },
-                    {
-                        "name": "Zhe Lin"
-                    },
-                    {
-                        "name": "Manmohan Chandraker"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.09923v1",
-                "title": "Unrolling a Graph-Laplacian Denoiser Realizes Only Compositions of Polynomial Graph Filters",
-                "updated": "2026-08-10T17:58:55Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.09923v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.09923v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "A recent construction of unrolled networks for graph-based image restoration forms a system matrix from a graph-Laplacian denoiser through a truncated Taylor expansion, then inverts it with a fixed number of conjugate-gradient steps, with the coefficients of both stages learned. This paper shows the resulting map is a polynomial in the denoising operator, of degree at most the product of the two truncation orders, for every setting of those coefficients and therefore at every point of training: the learned steps select an element of a Krylov subspace they cannot enlarge. At the orders used in practice the reachable set is moreover a measure-zero subset of the polynomial class of the network's own degree budget, so the composition constrains the hypothesis space rather than enlarging it. At the standard initialization the realized spectral response is obtained in closed form, exceeding the intended response throughout the interior of the spectrum and approaching a nonzero floor. A lower bound on the operator's condition number, internal to the graph construction rather than to image content, then places the order required for a prescribed accuracy well above the order used in practice. The confining class is precisely the spectral graph filters for which a direct, convex parameterization has long been available.",
+                "summary": "For autonomous space exploration, robotic agents need to perform motion planning in which environmental interactions may be unknown. Learning these interactions, such as terrain mechanics for wheeled robots, can introduce uncertainties that lead to risky motion plans and potentially hazardous operations or mission failures. Moreover, uncertainties induced by perception-based systems can exacerbate the problem of safe motion planning. In this letter, we address the problem of performing cost-optimal kinodynamic motion planning with risk awareness. We approach this in two steps. First, a sampling-based planner (AO-RRT) generates a dynamically feasible, risk-aware, and asymptotically cost-optimal trajectory. Second, we formulate motion planning as a nonlinear optimization problem and solve it using sequential convex programming (SCP), using the AO-RRT trajectory as an initial solution. By quantifying risk using conditional value-at-risk (CVaR), we demonstrate a reduction in risk by over $\\sim$97\\% across trajectories in simulation and hardware experiments.",
                 "category": [
                     {
-                        "@term": "eess.SP",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "eess.IV",
+                        "@term": "eess.SY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-10T17:58:55Z",
+                "published": "2026-08-11T17:34:56Z",
+                "arxiv:comment": "3 pages, 4 figures",
                 "arxiv:primary_category": {
-                    "@term": "eess.SP"
-                },
-                "author": {
-                    "name": "Seyed Alireza Hosseini"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.09914v1",
-                "title": "Overcoming Data Scarcity and Confidentiality in Hardware Assurance via Synthetic Generation",
-                "updated": "2026-08-10T17:56:03Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.09914v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.09914v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Hardware assurance relies on scanning electron microscopy (SEM) to verify nanoscale structures, but assembling the large, high-quality datasets required for automated analysis is impeded by time-intensive acquisition and strict intellectual property (IP) constraints on proprietary designs. We propose a privacy-preserving pipeline that secures IP by heavily distorting the functional design while generating a visually realistic synthetic dataset from a small set of initial examples. A StyleGAN first learns the distribution of hardware layout masks to generate novel, macroscopically varied structures. Subsequently, a conditional GAN (Pix2PixHD) translates these masks into realistic SEM images that preserve authentic textures and noise. The primary finding of this work is that a segmentation model trained exclusively on this synthetic data not only demonstrates a successful \"sim-to-real\" transfer to real images but also outperforms a baseline model trained on the limited real dataset. Because the underlying synthetic layouts are demonstrably novel and reproduce none of the specific proprietary routing of the original design, deploying the final segmentation model mitigates the risk of exposing sensitive IP to attacks like gradient inversion and membership inference, providing a highly secure, high-performance solution for hardware assurance.",
-                "category": [
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-10T17:56:03Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CR"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Gijung Lee"
+                        "name": "Sachin Sunil Kelkar"
                     },
                     {
-                        "name": "Ronald Wilson"
+                        "name": "Tanmay Dokania"
                     },
                     {
-                        "name": "Damon L. Woodard"
-                    },
-                    {
-                        "name": "Domenic Forte"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.09912v1",
-                "title": "Learning Clifford-structured quantum unitaries and Hamiltonians",
-                "updated": "2026-08-10T17:54:14Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.09912v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.09912v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Learning algorithms for structured quantum unitaries and Hamiltonians have primarily considered classes of processes that are local or sparse in the Pauli basis. We turn our attention to learning $n$-qubit quantum unitaries $U$ and Hamiltonians $H$, given query access to $U$ or the unitary evolution of $H$, that may be dense in the Pauli basis but still admit concise Clifford decompositions. Specifically, we consider unitaries (or Hamiltonians) of the form $U = \\sum_i \u03b1_i C_i$ over Cliffords $C_i$ with bounded Clifford extent $\\sum_i |\u03b1_i|$. To extract this Clifford structure, we introduce an agnostic tomography protocol for Clifford unitaries that given query access to an unknown unitary $U$ with optimal Clifford fidelity $\\textsf{opt}$, outputs a Clifford unitary witnessing fidelity $\\geq \\textsf{opt} - \\varepsilon$ for some error $\\varepsilon > 0$, in time $\\textsf{poly}(n,(1/\\varepsilon)^{\\log(1/\\varepsilon)})$. We then apply this protocol to obtain tomography protocols for unitaries and Hamiltonians that have bounded Clifford extent. This extends learnability of Hamiltonians from those with sparse Pauli decompositions to those that are dense (i.e., has sparsity $\u03a9(2^n)$) in the Pauli basis but are Clifford structured.",
-                "category": [
-                    {
-                        "@term": "quant-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-10T17:54:14Z",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": [
-                    {
-                        "name": "Arkopal Dutt"
-                    },
-                    {
-                        "name": "Dale Jacobs"
-                    },
-                    {
-                        "name": "John Jeang"
-                    },
-                    {
-                        "name": "Saeed Mehraban"
-                    },
-                    {
-                        "name": "Vladimir Podolskii"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.09908v1",
-                "title": "Beyond Hazard Resemblance: Contrastive Event Adjudication for Training-Free Video Anomaly Detection",
-                "updated": "2026-08-10T17:52:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.09908v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.09908v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Video anomaly detection (VAD) aims to identify and temporally localize abnormal events in videos. Supervised methods learn anomaly decision boundaries from target-domain annotations but require substantial in-domain data. Existing training-free methods leverage the rich semantic knowledge and reasoning capabilities of pretrained models to interpret visual content, yet these capabilities do not directly define an anomaly decision criterion: richer anomaly descriptions better capture hazard resemblance without resolving abnormality. To this end, we propose Contrastive Event Adjudication for training-free Video Anomaly Detection (CEAVAD), which shifts the unit of inference from isolated anomaly concepts to falsifiable event hypotheses and establishes an inference-time explanatory boundary through the interaction between competing explanations and video evidence. Specifically, CEAVAD first uses public-safety knowledge to construct hazard-benign event contrasts, pairing each hazard mechanism with a generic normal account and a mechanism-specific benign counterpart. It then determines whether the target interval better supports a hazard explanation or its benign competitor, yielding a revisable contrastive boundary proposal for the target. Finally, CEAVAD adjudicates between the competing explanations to determine whether the hazard hypothesis survives the video evidence, supporting both temporally localized anomaly detection and evidence-grounded explanations. Experiments on three widely used VAD benchmarks demonstrate that CEAVAD achieves state-of-the-art performance under the training-free paradigm.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-10T17:52:51Z",
-                "arxiv:comment": "Code is available at https://github.com/lessiYin/CEAVAD",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Wenti Yin"
-                    },
-                    {
-                        "name": "Xiang Wang"
-                    },
-                    {
-                        "name": "Huaxin Zhang"
-                    },
-                    {
-                        "name": "Hanqing Wang"
-                    },
-                    {
-                        "name": "Hongbo Shao"
-                    },
-                    {
-                        "name": "Changxin Gao"
-                    },
-                    {
-                        "name": "Nong Sang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.09907v1",
-                "title": "DistMoE: Private-data Rehearsal-free Routing in Mixture-of-Experts for Distributed Instruction Tuning",
-                "updated": "2026-08-10T17:52:14Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.09907v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.09907v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Multimodal Large Language Models (MLLMs) have shown strong multimodal instruction-following ability, but adapting them to diverse visual-language domains typically assumes centralized data access and costly joint training. This is restrictive when data is distributed across private, domain-specific, or permission-limited clients. To this end, we propose DistMoE, a mixture-of-experts (MoE) approach for distributed visual instruction tuning. In each layer of the language decoder it augments the public feedforward network (FFN) with a client-specific private FFN expert, with the goal to acquire domain-specific knowledge. However, independent expert training causes the private FFNs to learn representation of different scale and magnitudes, making merging the experts difficult. To reduce client-specific drift, we introduce a public-anchored expert composition stage that updates only routers and lightweight private projection adapters on a mix of local client data and public data, via an isotropic regularization loss, therefore making it cross-client rehearsal-free composition. During inference, DistMoE performs modular routing over public and private experts, enabling token-wise domain composition without explicit domain labels. Experiments across diverse visual-language benchmarks show that DistMoE enables flexible expert reuse, effective domain adaptation, and competitive performance while preserving modular control over client-specific knowledge. Codes are available at https://github.com/mainaksingha01/DistMoE.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-10T17:52:14Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Mainak Singha"
-                    },
-                    {
-                        "name": "Niccol\u00f2 Biondi"
-                    },
-                    {
-                        "name": "Elisa Ricci"
-                    },
-                    {
-                        "name": "Subhankar Roy"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.09903v1",
-                "title": "From Nonlinear Stochastic Differential Equations to Quantum Channels: The Kolmogorov--Lindblad Mapping",
-                "updated": "2026-08-10T17:49:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.09903v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.09903v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Nonlinear stochastic differential equations (SDEs) underlie molecular modeling and drug discovery, quantitative finance, stochastic learning, and uncertainty quantification. Their expectations, event probabilities, and time correlations are therefore natural targets for quantum computation, but nonlinear drift and averaging over noise realizations obstruct a direct quantum representation. We develop an exact \\emph{Kolmogorov--Lindblad mapping} (KLM) at the level of the probability law, encoded natively as a trace-one quantum density operator. For each Brownian realization, the pathwise density admits a half-density whose evolution is a stochastic Schr\u00f6dinger equation. Averaging the associated pure states yields a Lindblad equation for $\u0393(t)$ whose diagonal kernel is exactly the Fokker--Planck density, $p(t,x)=\u0393(t;x,x)$, with classical diffusion represented by decoherence through Hermitian jump operators. Statistical observables become quantum expectations without the unknown time-dependent normalization introduced by direct amplitude encoding of the density, and classical two-time correlations admit an exact quantum regression formula. A structure-preserving Galerkin projection retains the Lindblad form at finite dimension, placing classical SDEs and open quantum dynamics on the same quantum-native computational footing. Numerical experiments for double-well Langevin dynamics and noisy Lorenz--63 exhibit rapid convergence of statistical observables. KLM thus provides a mathematically controlled path from general nonlinear stochastic dynamics to quantum channels, while isolating function approximation and coherent operator access as the remaining determinants of algorithmic efficiency.",
-                "category": {
-                    "@term": "quant-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-10T17:49:22Z",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": [
-                    {
-                        "name": "Hsuan-Cheng Wu"
-                    },
-                    {
-                        "name": "Xiantao Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.09902v1",
-                "title": "DSLE: A Learning Environment for Dark Souls Boss Encounters",
-                "updated": "2026-08-10T17:48:45Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.09902v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.09902v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We introduce the Dark Souls Learning Environment (DSLE), a containerized platform that presents all 22 boss encounters of Dark Souls: Remastered as game-playing agent benchmarks through a Gymnasium-style interface. DSLE combines real-time combat, high-dimensional visual input, and sparse terminal rewards, with each environment step being a real action executed against the running game. To support controlled comparison, we define DSLE-5, a representative five-boss subset, spanning a melee fight, a spatially constrained arena, an environmental-hazard fight, a multi-target fight, and a fast final-boss fight, that we recommend as the starting suite for agents built on DSLE. On DSLE-5 we evaluate a random policy, an expert system, an evolutionary baseline, and PPO and DQN agents trained from visual input. The expert system and the evolutionary baseline each defeat the Asylum Demon, the game's tutorial boss (63% and 43% peak win rates), but none of the five methods defeats the other four DSLE-5 bosses; PPO and DQN show no measurable learning (at most 0.33% win rate on the tutorial boss, 0% elsewhere) within a budget that already costs tens of wall-clock hours per run. A broader study running the evolutionary baseline across all 22 encounters under advantaged all level-50 stats yields wins on only a handful of additional early-game bosses and leaves the rest unwon. The failure cases range from sub-10-second deaths in cramped, multi-target encounters to minute-long stalemates that inflict almost no damage, and we report them through survival time and damage dealt rather than win rate alone.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.NE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-10T17:48:45Z",
-                "arxiv:comment": "AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Derin Gezgin"
-                    },
-                    {
-                        "name": "Jim O'Connor"
-                    },
-                    {
-                        "name": "Tanner Goodwin"
-                    },
-                    {
-                        "name": "Gary B. Parker"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.09900v1",
-                "title": "Decoding-Level Taboo: A Diagnostic Stress Test for LLM Robustness",
-                "updated": "2026-08-10T17:47:24Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.09900v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.09900v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large language model evaluations typically focus on performance under nominal conditions, creating an illusion of capability where models comfortably walk a narrow, highly optimized generation corridor. In real-world deployments, however, complex system prompts, safety guardrails, and structural constraints continuously force models off this nominal path, driving a divergence between benchmark scores and deployment performance. To address this issue, we introduce Decoding-Level Taboo, a zero-prompt diagnostic stress test that intervenes directly in logit space at runtime, forcing models out of their nominal paths. By dynamically masking primary candidate tokens at word boundaries, Taboo forces machine circumlocution.\n  Evaluating Taboo across several open-weight model families reveals that off-path robustness is heavily influenced by both parameter scale and post-training instruction alignment, with robustness generally improving with model size and alignment. Beyond the results presented in this paper, Taboo provides a novel primitive for generating diverse synthetic datasets, stress-testing runtime safety guardrails, and auditing model reliability prior to real-world deployment.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-10T17:47:24Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Tadanobu Chuyo Kamijo"
-                    },
-                    {
-                        "name": "Ori Rottenstreich"
-                    },
-                    {
-                        "name": "Javier Conde"
-                    },
-                    {
-                        "name": "Gonzalo Mart\u00ednez"
-                    },
-                    {
-                        "name": "Pedro Reviriego"
+                        "name": "Yashwanth Kumar Nakka"
                     }
                 ]
             }
