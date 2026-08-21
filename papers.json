@@ -5,383 +5,330 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-08-21T00:55:06Z",
+        "updated": "2026-08-21T02:20:09Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "605305",
+        "opensearch:totalResults": "605625",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2608.19197v1",
-                "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
-                "updated": "2026-08-19T17:58:56Z",
+                "id": "http://arxiv.org/abs/2608.20337v1",
+                "title": "Information on trajectories: martingales and random times",
+                "updated": "2026-08-20T17:59:57Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.19197v1",
+                        "@href": "https://arxiv.org/abs/2608.20337v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.19197v1",
+                        "@href": "https://arxiv.org/pdf/2608.20337v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, or frozen-verifier) keep the goal distribution fixed as the learner scales. We introduce SPADE (Self-Play in Adaptive Synthetic Executable Environments), a self-play RL framework in which a single LLM plays two roles: an Environment Designer that writes complete, long-horizon training environments as executable code with an OpenAI Gym-style reset()/step() interface, and a Reasoning Agent that learns to act in them. Each is a stateful, multi-turn environment (state transitions, reward functions, and verification code), so one interface spans reasoning problems and multi-step agentic tool use. The Reasoning Agent's regret is estimated using the gap between its reward with and without privileged hints; in optimizing this regret signal the Environment Designer learns to target environments at the edge of the agent's capabilities while keeping them feasible. Through extensive experimentation, we find several components critical to success: grounding the Environment Designer on documents sampled from a large pretraining corpus, and giving it an accumulated environment memory. Scaling to 30B-parameter models, SPADE improves over the strongest fixed-environment baseline by +5.3 on average across eight held-out math, science, code, and reasoning benchmarks, and lifts the tool-use setting by +5.7 on BFCL-v4 multi-turn and +13.9 on ACEBench-Agent; on the games setting, the margin over the strongest baseline grows with model scale. By making environment design itself a learnable component, SPADE takes a concrete step toward open-ended self-improvement.",
+                "summary": "Accounting for information flow on the path space of trajectories of a nonnegative martingale yields exact variational identities for it, even at arbitrary random times. This recovers the widely used classical concentration inequalities, from Ville to PAC-Bayes, and measures what each one discards. The tail a bound controls is itself a relative entropy, resolved by the chain rule into per-step conditional divergences. The discarded slack has an exact form in each of three geometries: a Gibbs tilt for the Azuma-Hoeffding and PAC-Bayes bounds, the crossing itself for Ville's and for pooled tests, and a dominating certificate for the $L^p$ maximal bound. That certificate's optional-stopping deficit resolves per step into Bregman divergences of the running maximum. On a path-time space, the same identity gains one factor that prices anticipation: an arbitrary random time carries an e-process ``peeking penalty.'' The partition function can be read as a coalescent--a prefix-sharing probability of independent copies--and geometric mixtures of test martingales gain a pooling benefit for multi-model safe testing.",
                 "category": [
                     {
-                        "@term": "cs.CL",
+                        "@term": "math.PR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-19T17:58:56Z",
-                "arxiv:comment": "Work in progress. Project page: https://spade-rl.github.io ; Code: https://github.com/spade-rl/spade",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Bo Liu"
-                    },
-                    {
-                        "name": "Simon Yu"
-                    },
-                    {
-                        "name": "Yiding Jiang"
-                    },
-                    {
-                        "name": "Ao Qu"
-                    },
-                    {
-                        "name": "Andrew Zhao"
-                    },
-                    {
-                        "name": "Zichen Liu"
-                    },
-                    {
-                        "name": "Junsu Kim"
-                    },
-                    {
-                        "name": "Zijian Zhou"
-                    },
-                    {
-                        "name": "Seungone Kim"
-                    },
-                    {
-                        "name": "Tongzheng Ren"
-                    },
-                    {
-                        "name": "Mickel Liu"
-                    },
-                    {
-                        "name": "Hanfei Yu"
-                    },
-                    {
-                        "name": "Zhaorun Chen"
-                    },
-                    {
-                        "name": "Weiyan Shi"
-                    },
-                    {
-                        "name": "Paul Pu Liang"
-                    },
-                    {
-                        "name": "Luke Zettlemoyer"
-                    },
-                    {
-                        "name": "Yejin Choi"
-                    },
-                    {
-                        "name": "Natasha Jaques"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.19194v1",
-                "title": "Qualified Cross-References as a Verification Method: The Normative Environment of the EU AI Act",
-                "updated": "2026-08-19T17:58:05Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.19194v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.19194v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Legal cross-references are commonly represented as links between instruments or provisions. For a curated legal knowledge base, the existence of a link is only the beginning of the claim: it must also state the legal character of the interaction, identify the provisions supporting it, preserve its conditions, and remain consistent when reached from either instrument. This paper presents a provision-level model and a construction protocol for qualified cross-references, developed through a bilingual corpus of fourteen instruments surrounding Regulation (EU) 2024/1689 (the AI Act). The model distinguishes direct textual reference, bounded presumption of conformity, substantive interaction without textual reference, mediated intersection, and institutional analogy, and treats applicative interaction and definitional overlap as independent dimensions. The methodological contribution is bidirectional inversion: a relationship documented from act A towards act B is reconstructed from B's perspective against the provisions of both. Inversion is not a duplicate table but a verification operation that tests provisions, qualification, direction, and conditions before deciding how the relationship should be rendered from either side. Applied during construction, the protocol surfaced six incorrect article references, three inaccurate legal qualifications, and one divergence between two published descriptions of the same interaction. The corpus also shows why qualification matters: one reference to Regulation (EU) 2019/881 carries the AI Act's bounded cybersecurity presumption for high-risk systems, while related product legislation uses the same certification framework through legally distinct mechanisms. The contribution is thus a map of one regulatory environment and a reproducible method for making curated cross-reference knowledge bases inspectable and internally testable.",
-                "category": [
-                    {
-                        "@term": "cs.CY",
+                        "@term": "cs.IT",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
-                    {
-                        "@term": "cs.DL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-19T17:58:05Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CY"
-                },
-                "author": {
-                    "name": "Nicola Fabiano"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.19190v1",
-                "title": "SiNMULI: Novel Signed Network Approach for Malicious URL Identification",
-                "updated": "2026-08-19T17:57:05Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.19190v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.19190v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In today's era of rapid advancements in artificial intelligence, computer security and online safeguarding measures have undergone significant improvements. However, malicious websites continue to facilitate the spread of phishing schemes, fraudulent activities and unsolicited communications. Conventional methodologies in machine learning, deep learning and counterfeit website detection predominantly depend on static data analysis, which frequently proves ineffective against the evolving nature of malicious online entities. In response to these challenges, in this work, we propose a signed network-based approach for malicious URL identification, SiNMULI. We introduce an innovative framework that conceptualises the identification of harmful URLs as a signed network-based binary classification problem strongly rooted in the fundamental principles of social network analysis and social balance theory. In this approach, a signed network is constructed based on the backlinks, i.e., external hyperlinks of URLs, wherein each node symbolises a URL and the hyperlinks function as signed edges. Utilising a balance-theoretic inference mechanism, our methodology propagates edge signs and classifies unlabeled domains by employing a 51% majority rule across incoming links. Experimental results on this real-world dataset demonstrate that SiNMULI achieves 99.89% accuracy, 99.62% precision, and 99.80% F1-score, outperforming traditional ML and deep learning baseline models. Beyond high accuracy, SiNMULI offers interpretability, resilience against adversarial obfuscation, and independence from training data, making it a lightweight and scalable solution for real-world cyber defence.",
-                "category": [
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.NI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-19T17:57:05Z",
-                "arxiv:comment": "31 Pages , 13 Figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.CR"
-                },
-                "author": [
-                    {
-                        "name": "Avijit Gayen"
-                    },
-                    {
-                        "name": "Sayan Mondal"
-                    },
-                    {
-                        "name": "Angshuman Jana"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.19188v1",
-                "title": "PartialBiGrasp: Inferring Hidden Local Geometry for Bimanual Grasping from Partial Views",
-                "updated": "2026-08-19T17:56:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.19188v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.19188v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Dual-arm robotic grasping is essential for manipulating large, heavy, and geometrically complex objects that cannot be reliably handled using a single manipulator. These large objects often contain only sparse graspable regions determined by local geometric properties such as thickness, edge structure, and gripper clearance. Prior bimanual grasping methods assume access to a full point cloud of the object which inherently contains this geometric information, but may not be accessible in real scenarios. This work proposes PartialBiGrasp, a dual-arm grasp generation framework that operates directly on partial point cloud observations. Our model learns geometric features implicitly through convolutional occupancy networks, enabling local reasoning about graspability, collision-free contact regions, and object thickness. We leverage this understanding to generate force-closure compliant grasp pairs, which are further refined using a sampling-based optimization to correct for ambiguity caused by incomplete geometry. We evaluate our approach using analytical force-closure metrics, large-scale simulation experiments, and real-world robot evaluations on noisy partial point clouds of novel objects, demonstrating robust and physically stable dual-arm grasp generation.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-19T17:56:11Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Ayush Kaura"
-                    },
-                    {
-                        "name": "Vignesh Vembar"
-                    },
-                    {
-                        "name": "Md Faizal Karim"
-                    },
-                    {
-                        "name": "Keshab Patra"
-                    },
-                    {
-                        "name": "K Madhava Krishna"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.19186v1",
-                "title": "Diffuse HI emission in the circumgalactic medium of NGC891 and NGC4565 - III: azimuthal profiles",
-                "updated": "2026-08-19T17:55:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.19186v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.19186v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Diffuse HI emission in the circumgalactic medium (CGM) of NGC891 and NGC4565 has been previously shown to trace an inflow along minor axes pointings and to co-rotate with the HI disk along major axes pointings out to ~100 kpc (Das2020b,Das2024a). To obtain a 360$^\\circ$ view of the inner neutral CGM ($\\rm < 25 kpc$ for NGC891, $\\rm < 30 kpc$ for NGC4565), we perform deep stare observations with the Green Bank Telescope (GBT) along the off-axes, 45$^\\circ$ between principal axes, achieving a 5$\u03c3$ column density sensitivity of $1.1-1.2 x 10^{17} \\rm cm^{-2}$ over a 20 kms$^{-1}$ velocity width. While detecting HI emission in the inner CGM with single-dish telescopes is common, separating the true CGM emission from disk contamination is extremely challenging and has so far been largely unsuccessful. To achieve that, we compare our single-dish detections to deep interferometric maps from the Westerbork Synthesis Radio Telescope (WSRT) HALOGAS survey, and improve upon our previous methods by incorporating velocity offset corrections and channel-wise brightness-temperature scaling. We find that $30-38$ % and $18-28$ % of the emission detected by the GBT cannot be explained by WSRT in NGC891 and NGC4565, respectively, implying a true CGM detection. There is $4-6$ ($3-7$) times more HI along the off-axes than major (minor) axes, nullifying the common assumption of azimuthal symmetry of the neutral CGM. The velocity profile of the diffuse inner CGM suggests a lagged co-rotation with the HI disk in both galaxies. This exercise illustrates the power of deep observation and careful cross-instrument comparisons to characterize the diffuse HI in the CGM.",
-                "category": {
-                    "@term": "astro-ph.GA",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-19T17:55:51Z",
-                "arxiv:comment": "Accepted to ApJ. 18 pages and 9 figures",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.GA"
-                },
-                "author": [
-                    {
-                        "name": "Mary Rickel"
-                    },
-                    {
-                        "name": "Sanskriti Das"
-                    },
-                    {
-                        "name": "Nickolas M. Pingel"
-                    },
-                    {
-                        "name": "D. J. Pisano"
-                    },
-                    {
-                        "name": "Adam Leroy"
-                    },
-                    {
-                        "name": "Smita Mathur"
-                    },
-                    {
-                        "name": "George Heald"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.19182v1",
-                "title": "ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning",
-                "updated": "2026-08-19T17:55:06Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.19182v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.19182v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We introduce Accelerating Dexterity via Pre-Training (ADEPT), a large-scale reinforcement learning (RL) framework for learning sim-to-real transferable dexterity across high degree-of-freedom (DoF) robot embodiments that can solve long-horizon tasks directly from raw visuo-tactile perception. ADEPT pretrains a dexterous policy on a generic object reposing task, then post-trains downstream policies with this pretrained behavior as a prior. ADEPT enables learning new behaviors that are otherwise difficult to discover from scratch on multi-fingered robots and avoids learning the same set of skills over again for every new downstream task. The pretrained policy zero-shots the reposing phase of downstream tasks, but na\u00efve RL fine-tuning rapidly degrades this capability during transfer. We address this with a stable post-training recipe combining behavior-cloning distillation, critic warm-up, and conservative on-policy updates. To safely exploit the full kinematic dexterity, we introduce a joint-space Geometric Fabric that mediates between the RL policy and the robot. We distill post-trained teachers into perceptive students that zero-shot sim-to-real transfer on two embodiments: a 23 DoF Kuka-Allegro with two RGB cameras, and a 29 DoF Flexiv-Sharpa with two RGB cameras and five vision-based tactile sensors, and can solve long-horizon tasks from challenging initial states with dexterity at human-level speed.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-19T17:55:06Z",
-                "arxiv:comment": "Project page: https://adept-dexterity.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Jayjun Lee"
-                    },
-                    {
-                        "name": "Jessica Yin"
-                    },
-                    {
-                        "name": "Asif Rana"
-                    },
-                    {
-                        "name": "Nicholas Blauch"
-                    },
-                    {
-                        "name": "Sam Mady"
-                    },
-                    {
-                        "name": "Mohak Bhardwaj"
-                    },
-                    {
-                        "name": "Nima Fazeli"
-                    },
-                    {
-                        "name": "Nathan Ratliff"
-                    },
-                    {
-                        "name": "Karl Van Wyk"
-                    },
-                    {
-                        "name": "Ankur Handa"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.19181v1",
-                "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning",
-                "updated": "2026-08-19T17:54:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.19181v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.19181v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "On-policy distillation (OPD) trains a student on its own responses using dense token-level guidance from a stronger teacher. In long-context tasks, however, token-level teacher support can favor locally plausible responses that omit evidence distributed across the input or violate global task constraints. Task-specific verifiers, in contrast, evaluate task completion at the response level and may return graded rewards that reflect partial success. We diagnose this mismatch on fixed responses from two representative long-context evidence-aggregation tasks. Across longer input ranges, trajectory-level OPD scores become progressively less aligned with verifier rewards, indicating teacher-verifier disagreement. Motivated by this observation, we introduce Group-Calibrated On-Policy Distillation (GC-OPD). GC-OPD separately normalizes verifier rewards and trajectory-level OPD scores within each rollout group and uses their difference as a signed teacher-verifier disagreement residual. Relative-advantage-based credit assignment (RACA) distributes this trajectory-level residual across tokens according to their relative OPD advantages while preserving the original OPD signal. Across five long-context benchmarks, post-training with GC-OPD raises the five-benchmark averages of the official Qwen3-4B and Qwen3-8B checkpoints from 29.08 to 40.47 and from 35.12 to 44.65, respectively. Vanilla OPD reaches 39.31 and 43.56 under the same setup. Controlled ablations show that the signed residual is more effective than either an additional OPD-derived term or direct group-normalized verifier reward addition, while RACA further improves over uniform token allocation. Together, these results demonstrate that group-relative residual calibration can incorporate verifier outcomes without discarding dense token-level guidance. Code is available at https://github.com/SolereZhang/GC-OPD.",
-                "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-20T17:59:57Z",
+                "arxiv:primary_category": {
+                    "@term": "math.PR"
+                },
+                "author": {
+                    "name": "Akshay Balsubramani"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.20334v1",
+                "title": "Swift-Image: Exploring the Performance Frontier of Compact Unified Image Generation Models",
+                "updated": "2026-08-20T17:59:52Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.20334v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.20334v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present Swift-Image, a compact unified model for text-to-image generation, single-image editing, and multi-image editing. Our goal is to explore how far a relatively small visual generator can be pushed through systematic training engineering under a constrained computational budget. Swift-Image adopts an efficient 6B single-stream DiT and a progressive training pipeline that evolves from broad semantic coverage to higher resolution, stronger visual quality, and unified generation-editing supervision. For post-training, we employ parallel expert reinforcement learning followed by multi-teacher on-policy distillation to alleviate interference among heterogeneous objectives. We further decouple high-level reasoning from pixel-level rendering with a Prompt Enhancer that translates user requests into generator-aligned visual specifications. For efficient deployment, structural pruning and few-step distillation produce 3B and accelerated variants. Swift-Image achieves leading aggregate performance among evaluated open-source models with only 6B parameters and 243K GPU training hours; the compressed 3B model incurs nearly no loss, while few-step distillation further improves aggregate editing performance with substantially fewer sampling steps. Our study also summarizes practical lessons for architecture, data curriculum, post-training, prompt enhancement, and model compression.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-20T17:59:52Z",
+                "arxiv:comment": "28 pages, 11 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Taihang Hu"
+                    },
+                    {
+                        "name": "Zhao Wang"
+                    },
+                    {
+                        "name": "Zuan Gao"
+                    },
+                    {
+                        "name": "Tao Liu"
+                    },
+                    {
+                        "name": "Hao Yan"
+                    },
+                    {
+                        "name": "Zhengze Xu"
+                    },
+                    {
+                        "name": "Yuhang Yu"
+                    },
+                    {
+                        "name": "Yongchao Du"
+                    },
+                    {
+                        "name": "Xingjian Wang"
+                    },
+                    {
+                        "name": "Jun Zheng"
+                    },
+                    {
+                        "name": "Qinye Zhou"
+                    },
+                    {
+                        "name": "Zhengrui Chen"
+                    },
+                    {
+                        "name": "Chao Lin"
+                    },
+                    {
+                        "name": "Yefeng Shen"
+                    },
+                    {
+                        "name": "Zhengtao Wu"
+                    },
+                    {
+                        "name": "Ge Wu"
+                    },
+                    {
+                        "name": "Xiaoli Xu"
+                    },
+                    {
+                        "name": "Denghui Yang"
+                    },
+                    {
+                        "name": "Huayu Zhang"
+                    },
+                    {
+                        "name": "Mingzhou Zhang"
+                    },
+                    {
+                        "name": "Mengting Chen"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.20331v1",
+                "title": "G-CARL: Grounded Checklist-Aligned Reward Learning for Patient-Oriented Medical Report Interpretation",
+                "updated": "2026-08-20T17:59:46Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.20331v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.20331v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Personalized interpretation of medical reports has emerged as an increasingly important need among patients. Addressing this need requires both evidence-grounded medical factuality and context-dependent patient communication, yet existing medical vision-language tasks do not adequately capture these dual requirements. To bridge this gap, we introduce Patient-oriented Medical Report Interpretation (PMRI), a novel open-ended multimodal generation task that requires models to explain medical reports in accurate and accessible language based on a user's query and dialogue history. These two objectives differ fundamentally in their verifiability, yet remain tightly coupled, making them difficult to optimize jointly under conventional supervised fine-tuning and holistic reinforcement learning paradigms. To address this challenge, we propose G-CARL, a grounded, checklist-aligned reinforcement learning framework that combines multi-source retrieval for atomic claim verification with context-aware, instance-specific weighted checklists for response coverage, providing structured supervision for factuality, user-demand satisfaction, and expression quality without constraining response diversity. We further construct MMedReport, a real-world PMRI benchmark, along with a clinician-designed three-dimensional evaluation protocol. Extensive experiments demonstrate that G-CARL consistently outperforms existing post-training baselines in overall quality, claim-level precision, and checklist recall. Pairwise preference evaluation by clinicians further confirms that G-CARL produces interpretations that are more accurate and better aligned with patient needs.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-20T17:59:46Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Shiao Xie"
+                    },
+                    {
+                        "name": "Siyu Chen"
+                    },
+                    {
+                        "name": "Jianwei Lv"
+                    },
+                    {
+                        "name": "Bo Yuan"
+                    },
+                    {
+                        "name": "Yujin Wang"
+                    },
+                    {
+                        "name": "Xiandong Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.20326v1",
+                "title": "$TCP_\u03b1$: Margin-Controlled Confidence estimation for reliable Music Information Retrieval",
+                "updated": "2026-08-20T17:58:50Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.20326v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.20326v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Deep neural networks are often overconfident, assigning high confidence even to incorrect predictions. Consequently, users lack a reliable signal for deciding when a prediction can be trusted. Post-hoc confidence estimation addresses this by training a lightweight auxiliary head over a frozen classifier. Existing targets, however, suffer from inherent ambiguity: they assign overlapping confidence values to correct and incorrect predictions, while errors near the decision boundary receive confidence scores indistinguishable from correct predictions. In this work, we propose $TCP_\u03b1$, a novel confidence target that resolves these limitations by introducing a margin-controlled penalty for misclassified samples. We prove that $TCP_\u03b1$ guarantees complete separation between the target values of correct and incorrect predictions, with a separation margin that is independent of the number of classes and increases monotonically with the penalty parameter. Since accurate classifiers naturally produce very few errors, learning these targets results in a severely imbalanced regression problem. We therefore present a systematic study of training strategies for learning under this imbalance and identify an effective training configuration through extensive ablation studies. We evaluate the proposed approach on r\u0101ga identification, investigate its robustness under domain shift, and further validate it on frame-wise ornamentation detection without modifying the selected configuration. Across all settings, $TCP_\u03b1$ consistently outperforms existing confidence targets for failure prediction. Rejecting only the least-confident 8\\% of predictions improves the base model's macro-F1 from 0.89 to 0.98, while fine-tuning the confidence head with only 5\\% labeled samples from a new corpus effectively restores performance under domain shift.",
+                "category": [
+                    {
+                        "@term": "eess.AS",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-20T17:58:50Z",
+                "arxiv:primary_category": {
+                    "@term": "eess.AS"
+                },
+                "author": [
+                    {
+                        "name": "Parampreet Singh"
+                    },
+                    {
+                        "name": "Anushka Singh"
+                    },
+                    {
+                        "name": "Sumit Kumar"
+                    },
+                    {
+                        "name": "Vipul Arora"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.20322v1",
+                "title": "A comparison between ceiling-mounted FMCW, IR-UWB and Wi-Fi radar for in-bedroom human activity monitoring and sleep interruption detection",
+                "updated": "2026-08-20T17:58:22Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.20322v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.20322v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Despite their growing importance for contact-free radio frequency (RF) based healthcare monitoring, different radio technologies such as frequency-modulated continuous wave (FMCW) radar, impulse radio ultra-wideband (IR-UWB), and Wi-Fi sensing are rarely compared under identical deployment conditions, as existing studies typically differ in hardware, datasets, and evaluation methodologies. In addition, the performance of ceiling-mounted radars, despite their practical deployment and cost advantages in healthcare environments, remain underexplored. Therefore, this paper presents a controlled comparison and analysis of ceiling-mounted FMCW, IR-UWB, and Wi-Fi sensing using synchronized recordings from 20 participants across six room layouts. All technologies are evaluated with the same convolutional neural network (CNN) on both a fine-grained 10-class human activity recognition (HAR) task and a coarse 4-class sleep monitoring task. IR-UWB achieves the highest cross-subject activity recognition performance (89.0% macro F1), while FMCW generalizes best to unseen room layouts (83.8% macro F1). For sleep monitoring, all technologies exceed 92% macro F1 in unseen environments. The results reveal a fundamental trade-off between recognition performance and environmental robustness, which can be explained through differences in range resolution, antenna diversity, Doppler resolution, and spatial information retention. These findings provide practical guidelines for the design of healthcare-oriented RF sensing systems.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-20T17:58:22Z",
+                "arxiv:comment": "This paper has been submitted to IEEE Access Journal and is currently undergoing review",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Anton Lambrecht"
+                    },
+                    {
+                        "name": "Reda El Hail"
+                    },
+                    {
+                        "name": "Xianjun Jiao"
+                    },
+                    {
+                        "name": "Pieter Crombez"
+                    },
+                    {
+                        "name": "Dominique Schreurs"
+                    },
+                    {
+                        "name": "Peter Karsmakers"
+                    },
+                    {
+                        "name": "Adnan Shahid"
+                    },
+                    {
+                        "name": "Eli De Poorter"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.20320v1",
+                "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+                "updated": "2026-08-20T17:57:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.20320v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.20320v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workflow integrating conversational data collection, structured data processing, and behavioral prediction. A chatbot-administered, image-augmented stated-preference survey collected mode choices from student commuters across five predefined weather scenarios, yielding 454 respondent-scenario observations. Weather-related associations were analyzed using a multinomial logit model, while logistic regression and random forest provided machine-learning benchmarks. Nine locally deployed large language models (LLMs), ranging from 2 to 35 billion parameters, were evaluated across four zero-shot prompt-and-context conditions and extended through persona, few-shot, and vision-based configurations. Random forest achieved 69.6% five-class accuracy, while the best text-only zero-shot LLM reached 69.9% without task-specific fitting. Habitual travel information produced the most consistent gains, Expert framing generally outperformed Role-Play, and persona information was most useful when habitual travel information was unavailable. Few-shot prompting improved prediction for several models, with gains stabilizing after a small number of examples. Using the same weather images shown to respondents, the best vision-based configuration reached 71.5% five-class accuracy, indicating that visual context may provide additional predictive information for selected models. Overall, the study shows how conversational surveys, structured data processing, conventional behavioral modeling, machine learning, and multimodal LLM prediction can be coordinated within an auditable multi-agent workflow.",
+                "category": [
+                    {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
@@ -390,180 +337,250 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-19T17:54:58Z",
-                "arxiv:comment": "20 pages, 5 figures",
+                "published": "2026-08-20T17:57:42Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Zhu Zhang"
+                        "name": "Narges Ahmadi",
+                        "arxiv:affiliation": "McGill University"
                     },
                     {
-                        "name": "Jixun Wang"
+                        "name": "Yubo Jiao",
+                        "arxiv:affiliation": "McGill University"
                     },
                     {
-                        "name": "Xiaoang Xu"
+                        "name": "J\u00f4natas Augusto Manzolli",
+                        "arxiv:affiliation": "McGill University"
                     },
                     {
-                        "name": "Xiaorong Wang"
+                        "name": "Jiangbo Yu",
+                        "arxiv:affiliation": "McGill University"
                     },
                     {
-                        "name": "Zihan Zhou"
-                    },
-                    {
-                        "name": "Zhiyuan Wang"
-                    },
-                    {
-                        "name": "Shuo Wang"
-                    },
-                    {
-                        "name": "Chaojun Xiao"
-                    },
-                    {
-                        "name": "Yuezhi Zhou"
+                        "name": "Luis Miranda-Moreno",
+                        "arxiv:affiliation": "McGill University"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.19177v1",
-                "title": "Image-Guided Pavement Defect Recognition in GPR Data with novel 3D Deep Learning Architecture",
-                "updated": "2026-08-19T17:53:54Z",
+                "id": "http://arxiv.org/abs/2608.20319v1",
+                "title": "Inducing Task Models from Computer-Use Traces",
+                "updated": "2026-08-20T17:57:00Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.19177v1",
+                        "@href": "https://arxiv.org/abs/2608.20319v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.19177v1",
+                        "@href": "https://arxiv.org/pdf/2608.20319v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Ground Penetrating Radar (GPR) is a widely adopted non-destructive sensing technology for subsurface inspection in civil and transportation engineering. Despite its potential for pavement condition assessment, the large-scale application of GPR in automated inspection has two key challenges: the scarcity of annotated real-world datasets and the lack of deep learning models designed for the unique characteristics of 3-Dimensional (3D) GPR data. This study addresses these limitations by firstly introducing a cost-effective data preparation pipeline that integrates orthomosaic Red Green Blue (RGB) imagery with 3D GPR scans to generate annotated 3D GPR datasets. The proposed method uses the aligned segments of RGB and GPR data, using pavement surface images as a reference to transfer labels of surface-visible defects to corresponding GPR segments, enabling efficient large-scale annotation in a real-world dataset collected on a highway section under operation. In addition to the dataset contribution, we propose a specialised 3D Convolutional Neural Network (CNN) architecture incorporating residual connections, mixed convolutional kernel sizes, and both depthwise and channelwise attention mechanisms to enhance feature representation and defect classification. The model is evaluated on binary classification tasks for detecting patch and crack defects in pavement structures. Experimental results demonstrate that the proposed network outperforms baseline architectures across multiple evaluation metrics. Ablation studies further confirm the effectiveness of the designed architectural components. This work contributes a scalable and practical method for real-world dataset generation, along with a novel deep learning framework.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-19T17:53:54Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yuandong Pan"
-                    },
-                    {
-                        "name": "Linjun Lu"
-                    },
-                    {
-                        "name": "Mudan Wang"
-                    },
-                    {
-                        "name": "Florian Noichl"
-                    },
-                    {
-                        "name": "Fan Xue"
-                    },
-                    {
-                        "name": "Brian Sheil"
-                    },
-                    {
-                        "name": "Lavindra de Silva"
-                    },
-                    {
-                        "name": "Andr\u00e9 Borrmann"
-                    },
-                    {
-                        "name": "Ioannis Brilakis"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.19175v1",
-                "title": "State--Generator Geometry of Open Quantum Systems: Compatibility and Covariant Transport",
-                "updated": "2026-08-19T17:52:08Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.19175v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.19175v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We develop a geometry for transporting stationary-state response across the control space of an open quantum system. A physical model is represented by the ordered pair of its stationary state and dynamical generator. Embedding these pairs in a common ambient space induces a metric, a response one-form, and a closed two-form on the control manifold. The ambient space admits a canonical complex structure that exchanges state and generator directions, but the Liouvillian null-state condition restricts physical models to a submanifold that need not preserve this structure. For an amplitude-damped optical Bloch model, the metric and response two-form are compatible at the single point $\u03c9=0$ and $g/\u0393=1/\\sqrt{2}$; the physical manifold is non-K\u00e4hler elsewhere. The induced metric defines the Levi--Civita connection, geodesics, and parallel transport without requiring K\u00e4hler compatibility. We compute the connection by automatic differentiation through the stationary Liouvillian solve and recover the symbolic result to machine precision. A two-point calculation then shows that the resulting geodesic differs from linear interpolation in control space and follows a shorter path through the family of state--generator models. This geometry supplies the intrinsic derivative and transport structure needed to carry observable response, including multidimensional spectra, between admissible stationary models.",
-                "category": {
-                    "@term": "quant-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-19T17:52:08Z",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": [
-                    {
-                        "name": "Eric R. Bittner"
-                    },
-                    {
-                        "name": "Carlos Silva-Acuna"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.19174v1",
-                "title": "Finetuning Strategies for Querying Sounds by Vocal Imitation",
-                "updated": "2026-08-19T17:51:50Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.19174v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.19174v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "This technical report describes our winning submission to the AES AIMLA 2025 Challenge on querying sound effects by vocal imitation. We investigate two complementary fine-tuning strategies: contrastive learning with a frozen, pretrained CED encoder, and joint contrastive-triplet learning with semi-hard negatives using a MobileNetV3 encoder. This report has been updated for posterity to include details released after the challenge.",
+                "summary": "Naturalistic computer-use traces, passively recorded screenshots and mouse or keyboard actions, are a valuable resource for deriving symbolic, auditable, and reusable models of how everyday work is done. Such models matter as computer-use agents enter real work, where agents need to learn how tasks are actually performed, and organizations need to audit and reuse that knowledge. However, inducing such task models is challenging, as activity is observed only as low-level events and real-world work is multi-threaded with interleaved goals. Existing methods assume a given task or a single workflow, and produce step-level summaries rather than structured task models. We introduce Task Model Induction (TMI), which (i) discovers the latent tasks in an unconstrained trace, disentangling concurrent activity, and (ii) for each latent task, induces a task model pairing a hierarchical objective model of recursive goal decomposition with a procedure model of the control flow that organized the execution. Intrinsically, on controlled human and agent trajectories, TMI recovers interleaved tasks with 0.974 agreement against ground-truth groupings and reconstructs 74.9% of the observed execution steps, far more than the strongest workflow induction baseline. Extrinsically, skills derived from TMI's task models improve held-out task accuracy by 30.0% over the strongest baseline.",
                 "category": [
                     {
-                        "@term": "cs.SD",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-19T17:51:50Z",
+                "published": "2026-08-20T17:57:00Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.SD"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Aditya Bhattacharjee"
+                        "name": "Yucheng Jiang"
                     },
                     {
-                        "name": "Christos Plachouras"
+                        "name": "Zora Zhiruo Wang"
                     },
                     {
-                        "name": "Sungkyun Chang"
+                        "name": "Ruishi Chen"
                     },
                     {
-                        "name": "Emmanouil Benetos"
+                        "name": "Diyi Yang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.20318v1",
+                "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+                "updated": "2026-08-20T17:56:59Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.20318v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.20318v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a better objective or update rule improves the compute\\mbox{-}capability exchange rate for every subsequent run, including the one that produces the next agent. Whether RSI is feasible therefore turns on whether an agent can design training algorithms. No benchmark isolates that ability: existing suites are won by collecting data or by tuning hyperparameters, and none tells a change to how a run is executed apart from a change to how the model learns. We present AI4AI\\mbox{-}Bench, 10 frozen research repositories spanning 10 training algorithm families. In each task, an agent has 4 hours on one B300 to rewrite the training algorithm; its code is then rerun from scratch for up to 12 hours and scored by a fixed evaluator hidden from the agent, against the repository's original algorithm under the same procedure. Because the 10 metrics are incommensurable, every task is mapped onto one scale on which $0$ is an uninformative model, $0.1$ is the algorithm the repository ships, and $1.0$ is the task optimum. Across 29 configurations of 6 systems on all 10 tasks the mean score is $0.166$, and the best system reaches $0.250$: even the strongest closes under a fifth of the distance between the algorithm that was already there and the optimum. The submissions show where that distance went: most never change how the model learns at all, and the minority that do average $0.226$ against $0.126$ for the rest. More reasoning effort mostly buys the willingness to go there, taking that minority from $8\\%$ of submissions to $64\\%$ and the mean score from $0.094$ to $0.196$. We release the task suite, the evaluators and every scored submission, so that the measurement can be repeated as these systems change.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-20T17:56:59Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Yizhe Chi"
+                    },
+                    {
+                        "name": "Wenyi Li"
+                    },
+                    {
+                        "name": "Deyao Hong"
+                    },
+                    {
+                        "name": "Xiaoqiu Wang"
+                    },
+                    {
+                        "name": "Mingju Gao"
+                    },
+                    {
+                        "name": "Kaisen Yang"
+                    },
+                    {
+                        "name": "Bingxiang He"
+                    },
+                    {
+                        "name": "Youjie Zheng"
+                    },
+                    {
+                        "name": "Calvin Xiao"
+                    },
+                    {
+                        "name": "Qinhuai Na"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.20316v1",
+                "title": "Pandora's AI Model Routing Box: Efficient Allocation with Costly Value Estimation",
+                "updated": "2026-08-20T17:54:37Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.20316v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.20316v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Heterogeneous AI systems composed of multiple models, architectures, harnesses, or inference-time settings can improve quality and efficiency by routing queries to the specialist who can answer most effectively at the lowest cost. Routing requires estimating each specialist's expected return, but this value estimation has a cost. Cheap estimators (e.g., embedding-based predictors) are fast but noisy, while accurate estimators (e.g., fine-tuned models with access to retrieval results or partial reasoning traces) are expensive. We formalize this tradeoff as an instance of Pandora's Box, the classical problem of optimal search with costly inspection. Under a Gaussian signal model, the resulting policies have closed-form value-of-information expressions that determine, for each specialist and input, whether refining the value estimate is worth its cost. We call the centralized policy Pandora's Router. We extend this to a decentralized setting, Pandora's Bidder, where specialists independently decide whether to invest in self-assessment before accepting an offered price to claim a query. Experiments across three domains---a standard multi-LLM benchmark, retrieval-augmented specialists, and LLMs with variable inference-time reasoning---show that Pandora's Router matches the routing quality of exhaustive estimation, while querying the expensive estimator far less often. In the decentralized setting, value-of-information reasoning improves allocative efficiency when competing estimates are accurate; when competing estimates are noisy, however, it can increase the strategic specialist's utility at the expense of others.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-20T17:54:37Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Adam Fisch"
+                    },
+                    {
+                        "name": "Shubhendu Trivedi"
+                    },
+                    {
+                        "name": "Fantine Huot"
+                    },
+                    {
+                        "name": "William W. Cohen"
+                    },
+                    {
+                        "name": "Michael Kaisers"
+                    },
+                    {
+                        "name": "Mirella Lapata"
+                    },
+                    {
+                        "name": "Kate Larson"
+                    },
+                    {
+                        "name": "Jacob Eisenstein"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.20315v1",
+                "title": "Explainable Transformer Models for Clinical Prediction Tasks on Structured Electronic Health Records",
+                "updated": "2026-08-20T17:54:17Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.20315v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.20315v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Predictive models over structured electronic health records (EHRs) remain central to machine learning for healthcare, but few have jointly emphasized quantitative laboratory information and interpretability with respect to input medical events. We present BERT-LER, a BERT-style model for coded EHR timelines pretrained and fine-tuned from a de-identified EHR dataset of 75 million patients, that encodes laboratory test results as discrete tokens while retaining graded information through percentile-based binning, paired with Integrated Gradients for token-level attributions grounded in the input EHR sequence. We benchmark our approach on the public EHRShot benchmark suite and on an asthma severity progression study based on real-world data. This addresses a methodological gap in EHR foundation-style modeling by unifying laboratory value representation and explainability in a single framework, while assessing whether both predictive performance and explanations generalize beyond standard clinical prediction tasks. Across EHRShot and asthma tasks, BERT-LER achieves predictive performance that is competitive with, and on laboratory-related tasks often exceeds, publicly available benchmark models, and provides attributions that align with clinically known risk factors. Our architecture and explainability approach can be applied to many therapeutic areas and prediction tasks using language models trained on structured EHRs.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-20T17:54:17Z",
+                "arxiv:comment": "Accepted at MLHC 2026; to appear in Proceedings of Machine Learning Research (PMLR)",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Jun Ni Du"
+                    },
+                    {
+                        "name": "Lukas Adamek"
+                    },
+                    {
+                        "name": "Maxim Kryukov"
+                    },
+                    {
+                        "name": "Flavio Dormont"
+                    },
+                    {
+                        "name": "Ziv Bar-Joseph"
+                    },
+                    {
+                        "name": "Sven Jager"
+                    },
+                    {
+                        "name": "Brandon Rufino"
                     }
                 ]
             }
