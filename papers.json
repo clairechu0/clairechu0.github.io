@@ -5,475 +5,363 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-08-26T00:54:16Z",
+        "updated": "2026-08-26T02:21:25Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "606631",
+        "opensearch:totalResults": "607047",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2608.23566v1",
-                "title": "How to Train a Critic Stably and Efficiently",
-                "updated": "2026-08-24T17:59:39Z",
+                "id": "http://arxiv.org/abs/2608.24885v1",
+                "title": "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning",
+                "updated": "2026-08-25T17:59:49Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.23566v1",
+                        "@href": "https://arxiv.org/abs/2608.24885v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.23566v1",
+                        "@href": "https://arxiv.org/pdf/2608.24885v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token-level advantages from one response, but standard critic-based training recipes are often unstable. We study this instability and develop \\textbf{Best-Practice Critic Optimization (BPCO)}, a recipe that combines DPPO, value predictions bounded to the reward range, Monte Carlo value targets, unnormalized policy advantages, and length-adaptive generalized advantage estimation. Because the critic is used only during training, BPCO can also condition it on reward-defining information, such as a reference answer or grading rubric, that is hidden from the policy. Controlled experiments isolate the effect of each design choice. Across mathematical reasoning tasks with models ranging from 1.5B parameters to 30B-A3B mixtures of experts, BPCO improves a strong critic-based baseline consistently, and matches or exceeds a group-based baseline while sampling one response per prompt. The same recipe also improves learning with rubric-based rewards. These results show that a carefully designed critic provides a reliable alternative to group-relative advantage estimation. Code is available at https://github.com/QPHutu/golden_critic",
+                "summary": "Action-conditioned world models are increasingly used as learned simulators for policy evaluation and improvement, yet their effectiveness rests on an unverified assumption: generated futures faithfully reflect arbitrary valid actions. Existing benchmarks are typically confined to expert demonstrations, leaving off-expert action following inadequately evaluated. To address this gap, we introduce WorldEcho, which probes action following over a broader action distribution using visual integrity and SE(3) trajectory alignment. Our diagnosis shows that current world models reasonably execute expert actions but struggle with diverse off-expert trajectories, either ignoring the commanded actions or producing visually invalid rollouts. We further propose WorldSync, which strengthens action following along three complementary axes: distributional coverage, representational grounding, and intervention-effect alignment. It broadens the training distribution over action consequences, grounds intermediate video representations in action-induced robot dynamics through an Action-Forcing Expert, and aligns predicted changes under action interventions with the corresponding changes in ground-truth futures. Experiments on RoboTwin benchmarks and real-robot tasks show that WorldSync improves WorldEcho metrics and serves as a more reliable simulator for iterative policy improvement, enabling policies to achieve higher success rates.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-24T17:59:39Z",
+                "published": "2026-08-25T17:59:49Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Penghui Qi"
+                        "name": "Sixiang Chen"
                     },
                     {
-                        "name": "Xiangxin Zhou"
+                        "name": "Jiaming Liu"
                     },
                     {
-                        "name": "Wee Sun Lee"
+                        "name": "Jixian Wu"
+                    },
+                    {
+                        "name": "Yichen Guo"
+                    },
+                    {
+                        "name": "Tinghao Wang"
+                    },
+                    {
+                        "name": "Siyuan Qian"
+                    },
+                    {
+                        "name": "Hao Chen"
+                    },
+                    {
+                        "name": "Jiajun Cao"
+                    },
+                    {
+                        "name": "Jian Tang"
+                    },
+                    {
+                        "name": "Shanghang Zhang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.23562v1",
-                "title": "Physics-Constrained Deep Learning Model for Contactless Blood Pressure Monitoring from Triaxial Bodyseismography",
-                "updated": "2026-08-24T17:58:35Z",
+                "id": "http://arxiv.org/abs/2608.24881v1",
+                "title": "What FID Hides: Detecting, Ranking, and Diagnosing Deviations in Generative Evaluation",
+                "updated": "2026-08-25T17:58:46Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.23562v1",
+                        "@href": "https://arxiv.org/abs/2608.24881v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.23562v1",
+                        "@href": "https://arxiv.org/pdf/2608.24881v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Ballistocardiography (BCG) is promising for unobtrusive long-term blood pressure (BP) monitoring in laboratory settings, but traditional BCG signals are vulnerable to the variations in body-bed interaction with shifted fiducial points in temporal or amplitude axis, and BP varies with personal hemodynamic changes, causing misaligned representations that affect model generalizability and robustness. In this work, we propose a non-invasive BP estimation framework, Phy-BP, based on triaxial bodyseismography (BSG) as an extension of BCG. Firstly, an adaptive quality-control algorithm is designed to select BSG segments enriched with cardiogenic components by jointly considering neighboring beat patterns and universal cardiogenic templates. Furthermore, a physical model is established to describe 3D wave propagation in the body-bed system and is subsequently embedded into the deep learning model to characterize the intrinsic coupling among triaxial BSG signals driven by a single cardiogenic excitation. Thus, multi-axis features are aligned during model training, improving robustness against distortions in real scenarios. Experiments on a 162-hour hospital dataset collected from 21 subjects reveal that the proposed Phy-BP can dynamically filter out low-quality measurements, and the deep learning model training is constrained by physical consistency across different axes to provide faithful BP monitoring, especially when training samples are limited.",
+                "summary": "Generative models are commonly ranked by Fr\u00e9chet Inception Distance (FID) and Kernel Inception Distance (KID), yet FID's first-two-moment summary can miss distributional differences, and a reported scalar gap alone is not a calibrated test against sampling variation. FID's moment restriction has concrete consequences: on ImageNet, visually unrecognizable images optimized only to match the reference Inception mean and covariance obtain FID $24.7$ versus $58.6$ for held-out real images (lower is better). Moreover, FID and KID are scalar discrepancies that are unchanged when the two samples are exchanged and therefore do not encode the direction of a dispersion change: under-dispersion, as can occur in mode collapse, versus over-dispersion. We introduce \\textbf{ZID} (\\emph{Z-resolved Integrated Diagnostic}), which combines six standardized location- and dispersion-sensitive arms from a rank graph (RISE) and Gaussian kernels (GPK at two bandwidths). Rather than asking one scalar to serve incompatible roles, ZID reports three linked outputs: an index for ranking departure magnitude, a permutation $p$-value for testing distributional equality, and a signed dispersion readout for diagnosis. In controlled experiments, ZID detects a broad range of departures, and its score tracks increasing severity along the corresponding sweeps, including cases in which FID is flat or reversed. On DiT-XL/2 and SiT-XL/2 guidance sweeps, ZID detects departure from real data, and its signed readout labels the high-guidance diversity collapse as under-dispersion.",
                 "category": [
-                    {
-                        "@term": "eess.SP",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "physics.bio-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-24T17:58:35Z",
-                "arxiv:primary_category": {
-                    "@term": "eess.SP"
-                },
-                "author": [
-                    {
-                        "name": "Yuanyuan Zhang"
-                    },
-                    {
-                        "name": "Yida Zhang"
-                    },
-                    {
-                        "name": "Jiahui Li"
-                    },
-                    {
-                        "name": "Yuyan Wu"
-                    },
-                    {
-                        "name": "Fei Dou"
-                    },
-                    {
-                        "name": "Xiao Yin"
-                    },
-                    {
-                        "name": "Zhenlin An"
-                    },
-                    {
-                        "name": "Hae Young Noh"
-                    },
-                    {
-                        "name": "Wenzhan Song"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.23554v1",
-                "title": "Provably adaptive sampling with uniform and remasking discrete diffusion models",
-                "updated": "2026-08-24T17:54:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.23554v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.23554v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Discrete diffusion models offer a promising alternative to autoregressive generation by enabling parallel updates, but their sampling efficiency can depend strongly on the choice of the forward process and the sampler. For the uniform forward process, existing lower bounds for the standard $\u03c4$-leaping sampler scale linearly with the ambient dimension $d$, raising the question of whether this dependence is intrinsic to the forward process. We answer this question in the negative. We consider a first-order sampler based on the leave-one-out denoiser for uniform and remasking processes whose coordinate updates can be performed in parallel. In both cases, the sampler can correct denoising mistakes during the sampling process, which becomes necessary when many coordinates are updated together. Our main result establishes an adaptive sampling guarantee: up to logarithmic factors, $N = O(\\mathrm{DTC}(X_0) / \\varepsilon)$ discretization steps suffice to achieve sampling error $O(\\varepsilon_{\\mathrm{score}}+\\varepsilon)$, where $\\varepsilon_{\\mathrm{score}}$ is the error in score estimation. Thus, the sampling complexity is governed by the intrinsic dependence structure of the target distribution, as measured by its dual total correlation $\\mathrm{DTC}(X_0)$, rather than directly by the ambient dimension $d$. Our analysis proceeds through a Bayes-optimal auxiliary sampler that separates discretization error from score-estimation error. We also derive an exact information-theoretic representation of the discretization error in terms of the mutual information between different coordinates of the forward process at different times. This representation applies to general forward processes and, in the uniform and remasking cases, can be controlled by $\\mathrm{DTC}(X_0)$. Numerical experiments on structured synthetic distributions illustrate the predicted dimension-adaptive behavior.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.ST",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-24T17:54:51Z",
-                "arxiv:comment": "37 pages, 4 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Daniil Dmitriev"
-                    },
-                    {
-                        "name": "Zhihan Huang"
-                    },
-                    {
-                        "name": "Yuting Wei"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.23552v1",
-                "title": "Prime Agent: A Self-Improving RLM Harness",
-                "updated": "2026-08-24T17:54:19Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.23552v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.23552v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Language models are sequential processors, but long-horizon agency requires external information and computation beyond model weights and active context. Prime Agent is an open-source harness for long-horizon evaluation and coding-agent workflows. A persistent IPython REPL follows the Recursive Language Model abstraction for programmatic context processing and test-time compute, while Continual Harness preserves histories, memories, skills, prompts, and subagent specifications across trajectories. Recursive subagents coordinate through direct agent-to-agent communication, and the Agents View lets humans inspect and manage daemon-backed sessions. Prime Agent standardizes execution, recovery, verification, and resource accounting while leaving strategy construction to the model. This low-friction, expressive membrane prevents harness failures from becoming model failures and pushes measurement toward the model's true maximal underlying capability. Prime Agent raises ARC-AGI-3 RHAE Best@1 from 30% to 95.5% and matches or exceeds native and popular harnesses across long-context coding, GPU-kernel generation, emulator construction, and autonomous nanoGPT speedruns. On Factorio, we find refinement allows for continuous technology progression and dedicated subagents enable parallelized work. Code is available at https://github.com/PrimeIntellect-ai/prime-agent.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-24T17:54:19Z",
-                "arxiv:comment": "16 pages, 10 figures. Technical report. Code: https://github.com/PrimeIntellect-ai/prime-agent",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Seth Karten"
-                    },
-                    {
-                        "name": "Alex L. Zhang"
-                    },
-                    {
-                        "name": "Kevin Thomas"
-                    },
-                    {
-                        "name": "Sebastian M\u00fcller"
-                    },
-                    {
-                        "name": "Elie Bakouch"
-                    },
-                    {
-                        "name": "Daniel Auras"
-                    },
-                    {
-                        "name": "Mika Senghaas"
-                    },
-                    {
-                        "name": "Fares Obeid"
-                    },
-                    {
-                        "name": "Konstantin Dunas"
-                    },
-                    {
-                        "name": "Johannes Hagemann"
-                    },
-                    {
-                        "name": "Sami Jaghouar"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.23551v1",
-                "title": "ConvergeFlow: Language Flow with Provable Convergence to Token Embeddings",
-                "updated": "2026-08-24T17:54:14Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.23551v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.23551v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent advances in continuous diffusion and flow-based language models (LMs) have achieved performance competitive with discrete LMs. However, existing continuous frameworks still rely on decoders supervised with cross entropy (CE) because the flow trajectories are not guaranteed to terminate at valid token embeddings. Motivated by this limitation, we introduce \\textbf{ConvergeFlow}, an embedding-space flow-based LM, which constrains the data predictor to the convex hull of token embeddings and trains it solely with the mean squared error objective induced by flow matching. Under suitable regularity conditions, we prove that the resulting flow converges to valid token embeddings despite errors in the data predictor, enabling direct token prediction without a CE-supervised decoder. We further develop three sampling mechanisms for controlling the trade-off between the generative perplexity and entropy. Experiments on OpenWebText demonstrate that ConvergeFlow achieves performance competitive with existing continuous and discrete diffusion LMs. These findings demonstrate the potential of the flow-based paradigm for language modeling. Our code is available at https://github.com/Na-Li66/ConvergeFlow.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-24T17:54:14Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Na Li"
-                    },
-                    {
-                        "name": "Yuchen Jiao"
-                    },
-                    {
-                        "name": "Changxiao Cai"
-                    },
-                    {
-                        "name": "Gen Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.23547v1",
-                "title": "Robustness of Anomaly Detection Models for Industrial Control Systems under Training-Time Data Contamination",
-                "updated": "2026-08-24T17:49:36Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.23547v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.23547v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Machine-learning-based anomaly detection is increasingly used in industrial control systems (ICS), yet most studies assume that detector training data is trustworthy. In practice, training data may be corrupted through compromised logs, labeling errors, manipulated historian records, or unsafe retraining processes. This paper evaluates the robustness of offline ICS anomaly-detection pipelines on the Secure Water Treatment (SWaT) benchmark under training-time contamination. We assess 11 heterogeneous anomaly detectors under three contamination strategies: random injection, similarity-targeted injection, and feature-noise injection. The first two insert attack samples into the nominal training pool, while the third adds bounded Gaussian noise to selected normal training samples. These attacks are contamination-based rather than gradient-driven poisoning methods. Contamination budgets from 1% to 10% are evaluated using clean validation and test sets under a unified offline protocol. The results show that robustness is strongly model-dependent and cannot be predicted from clean-data performance alone. Injection-based contamination causes the greatest degradation, particularly for local-density and distance-based detectors, whereas feature-noise contamination has a comparatively limited effect. PCA, SVM, HBOS, and IForest remain relatively stable, while the tuned neural detectors demonstrate intermediate robustness. Overall, the findings highlight the importance of training-data integrity in ML-enabled ICS monitoring, subject to the evaluated dataset, models, and threat assumptions.",
-                "category": [
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-24T17:49:36Z",
-                "arxiv:comment": "Accepted and to appear in IEEE CASCON 2026. Code is available at: https://github.com/ANTS-OntarioTechU/Robustness-Anomaly-Detection-ICS-Data-Contamination",
+                "published": "2026-08-25T17:58:46Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CR"
+                    "@term": "stat.ML"
                 },
-                "author": [
-                    {
-                        "name": "Mustafa Umut Ozbek"
-                    },
-                    {
-                        "name": "Taiwo Ojo"
-                    },
-                    {
-                        "name": "Pooria Madani"
-                    },
-                    {
-                        "name": "Khalil El-Khatib"
-                    },
-                    {
-                        "name": "Li Yang"
-                    }
-                ]
+                "author": {
+                    "name": "Hao Chen"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2608.23546v1",
-                "title": "Inertial Manifold Neural Operator for Dissipative Time-Dependent Partial Differential Equations",
-                "updated": "2026-08-24T17:49:30Z",
+                "id": "http://arxiv.org/abs/2608.24873v1",
+                "title": "Magnesium silicate condensation in sub-Neptune envelopes: the fundamental link between chemistry, structure, and observables",
+                "updated": "2026-08-25T17:54:18Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.23546v1",
+                        "@href": "https://arxiv.org/abs/2608.24873v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.23546v1",
+                        "@href": "https://arxiv.org/pdf/2608.24873v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "In this paper, we introduce the Inertial Manifold Neural Operator (IMNO) for solving dissipative time-dependent partial differential equations (PDEs). The long-time dynamics of such systems often exhibit an effective low-dimensional structure due to dissipation. Unlike standard neural operator architectures such as the Fourier Neural Operator (FNO), IMNO explicitly leverages the low-dimensional structure to achieve better physical interpretability, accuracy, and stability in long-horizon autoregressive training and prediction for nonlinear dissipative PDEs. For shift-equivariant PDEs, we further introduce a shift-equivariant variant (IMNO-SE) of the proposed neural operator, ensuring that a spatial shift in the input induces the same spatial shift in the output. This symmetry-preserving inductive bias substantially improves its performance in shift-equivariant PDEs. Extensive benchmark experiments are presented to evaluate IMNO's performance numerically.",
-                "category": [
-                    {
-                        "@term": "math.NA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-24T17:49:30Z",
-                "arxiv:comment": "5 pages, 11 figures, 6 tables",
+                "summary": "Chemical interactions between the hydrogen-dominated envelopes and silicate-rich interiors of sub-Neptunes likely play a key role in shaping their atmospheric structure, mass-radius relations, and upper atmosphere composition. While atmospheric abundances and structure deeply influence each other, many existing models have either considered the effects of chemical interactions without the structural implications or have modeled the envelope structure using oversimplified chemical networks. In this work, we introduce Rocky Raccoon, a coupled chemical equilibrium-atmospheric structure model. This model incorporates Mg, Si, O, C, and H species and produces self-consistent atmospheric chemical and thermal profiles for sub-Neptune envelopes, treating multi-species condensation for the first time. We find that the condensation sequence of magnesium silicates above a magma ocean is determined by the basal magma composition. We show that these condensation sequences drive the upper atmospheric composition to two endmembers: high oxygen abundances in the underlying melt produce compositions rich in oxygen-bearing volatiles (sub-solar C/O) and higher mean molecular weight atmospheres with $\u03bc\\sim 4$ amu, while oxygen-poor melts produce lower mean molecular weight atmospheres dominated by methane and silane (super-solar C/O). The transition between the two regimes is abrupt and depends on melt properties like Mg/Si ratios and oxygen abundances. The different condensation sequences also lead to different thermal profiles, as deep convection is inhibited over different regions due to varying molecular weight gradients. Further experiments and simulations are key to resolving critical uncertainties in the condensation sequences and the corresponding significant impacts on sub-Neptune composition and thermal structure.",
+                "category": {
+                    "@term": "astro-ph.EP",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-25T17:54:18Z",
+                "arxiv:comment": "26 pages, 10 figures, submitted to ApJ",
                 "arxiv:primary_category": {
-                    "@term": "math.NA"
+                    "@term": "astro-ph.EP"
                 },
                 "author": [
                     {
-                        "name": "Xiaoyang Xie"
+                        "name": "William Misener"
                     },
                     {
-                        "name": "Clarence W. Rowley"
+                        "name": "Peter Gao"
+                    },
+                    {
+                        "name": "Nicole L. Wallack"
+                    },
+                    {
+                        "name": "Maggie A. Thompson"
+                    },
+                    {
+                        "name": "Anat Shahar"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.23543v1",
-                "title": "How AI Assistance Affects Human Skill Development: A Study of Learning with Logic Puzzles",
-                "updated": "2026-08-24T17:46:11Z",
+                "id": "http://arxiv.org/abs/2608.24871v1",
+                "title": "NatPar: Natural Parametric Modeling",
+                "updated": "2026-08-25T17:52:26Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.23543v1",
+                        "@href": "https://arxiv.org/abs/2608.24871v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.23543v1",
+                        "@href": "https://arxiv.org/pdf/2608.24871v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "While AI assistance can improve human task performance in the short term, it may also undermine the development of skills in the longer term. We examine this tension in a controlled logic-puzzle experiment involving on-demand AI assistance, where participants complete tasks before, during, and after AI is available. By experimentally varying AI request costs, we find that lower-cost assistance induces more frequent AI use. We also find that participants who request AI assistance during the AI-access phase perform worse at the task after assistance is removed, and their subsequent unassisted performance is overestimated when predicted from earlier AI-assisted performance. We use a Bayesian latent ability model to separate initial ability, post-AI ability, and participant-specific skill change, while estimating how independent reasoning during the AI-access phase relates to skill development. The results show that greater independent problem-solving effort is associated with larger gains in latent ability, consistent with the interpretation that skill development is weaker when AI assistance substitutes for independent reasoning.",
+                "summary": "We develop natural parametric (NatPar) insurance as the natural next step from natural-catastrophe (NatCat) modelling: the same hazard-exposure-vulnerability-finance machinery, with a parametric index made contractual in place of indemnity loss adjustment. Our aim is practical - a standard approach inspired by how the catastrophe-insurance industry already operates, not another optimal-contract criterion. This delivers two payoffs. First, it fixes how reporting is formulated: NatPar contracts are reported in the native NatCat language (annual average loss, EP/AEP/OEP curves, return-period levels), complemented with two-sided basis-exceedance diagnostics (BEP+/-) elevated to the central status the EP curve holds for losses - the canonical distributional view of basis risk, not a supplementary number. Second, the same standard shows how the tail is reallocated between insuree and insurer.\n  A frost case study yields the central result: it is about time, not average. Holding a contract AAL-neutral, the bounded payout cannot follow the unbounded exposure tail, so equalising the mean separates over- and under-payment across return periods: the insuree gains at short horizons while the insurer sheds the deep tail past a crossover of several decades. This reverses under tail dependence - when regions reach extremes jointly, bounded payouts stack and the insurer reabsorbs the deep tail.",
+                "category": {
+                    "@term": "q-fin.RM",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-25T17:52:26Z",
+                "arxiv:primary_category": {
+                    "@term": "q-fin.RM"
+                },
+                "author": {
+                    "name": "Hirbod Assa"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.24870v1",
+                "title": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL",
+                "updated": "2026-08-25T17:52:19Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.24870v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.24870v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Group-relative reinforcement learning waits for sibling rollouts of the same prompt, which is costly for long and variable tool-use trajectories. Single-stream Policy Optimization (SPO) removes this dependency with a persistent prompt-level value estimate, but its recipe whitens one advantage per trajectory before optimizing a token-mean actor loss. We show that trajectory centering generally does not center the token-weighted quantity consumed by the actor, and fix the mismatch by standardizing terminal-outcome advantages under the action-token measure. We additionally organize prompt evidence by the policy event that generated it rather than learner receipt order. Across matched runs on ALFWorld at two model scales and on Math-TIR, SPO++ improves online learning efficiency over SPO. A paired ablation identifies action-token-measure normalization as the strongest tested component.",
                 "category": {
                     "@term": "cs.AI",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-08-24T17:46:11Z",
-                "arxiv:comment": "Accepted at Human-AI Complementarity and Alignment (HCOMP) 2026",
+                "published": "2026-08-25T17:52:19Z",
+                "arxiv:comment": "9 pages, 2 figures, 3 tables",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Shang Wu"
+                        "name": "Kai Ruan"
                     },
                     {
-                        "name": "Catarina G Belem"
+                        "name": "Jinghao Lin"
                     },
                     {
-                        "name": "Shuyuan Fu"
+                        "name": "Qianshan Wei"
                     },
                     {
-                        "name": "Mark Steyvers"
+                        "name": "Ziqi Zhou"
                     },
                     {
-                        "name": "Padhraic Smyth"
+                        "name": "Zihe Huang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.23538v1",
-                "title": "Interpretable AI with Local Distillation",
-                "updated": "2026-08-24T17:43:07Z",
+                "id": "http://arxiv.org/abs/2608.24865v1",
+                "title": "Parameterized Complexity of $L_p$-Lipschitz Constants for Input Convex Neural Networks and $L_p$-Norm Maximization over Zonotopes",
+                "updated": "2026-08-25T17:47:37Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.23538v1",
+                        "@href": "https://arxiv.org/abs/2608.24865v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.23538v1",
+                        "@href": "https://arxiv.org/pdf/2608.24865v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Modern AI models such as tabular foundation models and gradient-boosted ensembles can outpredict classical methods, but provide little basis for reasoning about their predictions. High-stakes decisions call for models that are both accurate and interpretable as built. Local linear modeling offers a path forward: a smooth regression function is locally well approximated by a linear one, allowing a linear fit near each query point to achieve high accuracy without sacrificing transparency. The challenges lie in learning what is \"local\" and developing statistical tools for interpretation.\n  Here, we propose local distillation, in which a black-box \"teacher\" guides a regularized linear \"student\" model at each query point. The teacher (1) defines locality by upweighting training observations with similar predicted outcomes, and (2) anchors the fit with its prediction at the query point, included as a pseudo-observation whose weight is estimated from the data. For interpretation, we add a small amount of Gaussian randomization to the local objective and use refits to assess stability: selection frequencies identify reliable features at a query point, and clustering the randomized fits identifies stable subgroups across the data. Under the lasso penalty, we prove that this randomization yields feature-selection probabilities that are stable under small perturbations of the training responses.\n  Across 17 benchmark datasets, local distillation nearly matches its AI teacher's accuracy while producing a sparse linear model at each test point. In a high-dimensional cancer gene expression example, the framework identifies patient subgroups whose local models use different genes; this heterogeneity is invisible to a global linear model, and difficult to surface in a black-box model.",
+                "summary": "Lipschitz constants are a standard way to quantify the sensitivity of neural networks to small input perturbations, but computing them is difficult even for shallow ReLU networks. We study this problem for two-layer input-convex neural networks (ICNNs), a restricted architecture where nonnegative output weights enforce convexity. Computing the $L_p$-Lipschitz constant for these networks is equivalent to maximizing the dual norm over a zonotope. While $L_1$- and $L_\\infty$-norm maximization on zonotopes admit fixed-parameter and polynomial-time algorithms, respectively, the parameterized complexity of the remaining $L_p$-norms was open. We prove that, for every fixed $p\\in (1,\\infty)\\cap \\mathbb{Q}$, maximizing the $L_p$-norm over a zonotope in $\\mathbb{R}^d$ is W[1]-hard with respect to the dimension $d$. Moreover, our hardness results imply that brute-force enumeration algorithms are essentially optimal for this problem under the Exponential Time Hypothesis. By duality, the same hardness results hold for computing the $L_p$-Lipschitz constant of two-layer ReLU ICNNs. Our proof first establishes the result for the $L_2$-norm and then transfers the construction to arbitrary fixed $p\\in (1,\\infty)\\cap\\mathbb{Q}$ using a suitable Taylor approximation. These results resolve the corresponding questions regarding the parameterized complexity status for zonotope norm maximization and two-layer ICNN Lipschitz constants.\n  Our paper resolves an open problem posted at COLT'25. There are several independent concurrent papers resolving the same problem. Our paper prioritizes a clear exposition of the underlying mathematics and conceptual intuitions behind the proof. Additionally, we explicitly describe our research process including the use of LLMs.",
                 "category": [
                     {
-                        "@term": "stat.ME",
+                        "@term": "cs.CC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
+                    {
+                        "@term": "cs.DM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.NE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-25T17:47:37Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CC"
+                },
+                "author": [
+                    {
+                        "name": "Aritra Das"
+                    },
+                    {
+                        "name": "Vincent Froese"
+                    },
+                    {
+                        "name": "Moritz Grillo"
+                    },
+                    {
+                        "name": "Debayan Gupta"
+                    },
+                    {
+                        "name": "Christoph Hertrich"
+                    },
+                    {
+                        "name": "Tharrshann Jayan Logarajah"
+                    },
+                    {
+                        "name": "Georg Loho"
+                    },
+                    {
+                        "name": "Mihir More"
+                    },
+                    {
+                        "name": "Moritz Stargalla"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.24859v1",
+                "title": "Improving Cross-Problem Vehicle Routing with Locally Augmented Preferences and Representation Disentanglement",
+                "updated": "2026-08-25T17:44:23Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.24859v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.24859v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Multi-task vehicle routing problem (VRP) solvers seek to handle multiple VRP variants within a single unified model, avoiding the need to train a separate model for every variant. In spite of recent progress, current approaches remain limited on two fronts. On the training side, reinforcement learning suffers from reward-scale disparities and shrinking advantage signals as policies improve, whereas preference optimization stagnates once sampled tours become near-identical and thus fundamentally limited by the quality of the policy's own generated solutions, leaving both paradigms with weak supervision as training progresses. On the architecture side, existing fully shared encoders entangle constraint-dependent representations across heterogeneous variants, which limits generalization. We address these gaps with two model-agnostic contributions. First, we propose Preference Optimization with Locally Augmented Refinement (POLAR), a novel training algorithm that applies a local search refinement pass to the best decoded tour before forming preference pairs, yielding much more informative pairwise margins. Second, a Progressive Layered Extraction (PLE) encoder routes each encoder layer through one shared expert and a set of task-specific experts via a gating mechanism, progressively separating common routing structure from constraint-specific encodings. Through extensive experiments on various VRP variants, we show that POLAR and PLE together elevate the current state-of-the-art among neural multi-task solvers. We reduce the average gap to reference solutions by 21.3% relative to the strongest published baseline on 16 in-distribution variants, and outperform prior neural methods on 27 out of 32 unseen variants. Ablation studies confirm the efficacy of each contribution, showing that both improve cross-problem generalization across multiple backbone model architectures.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-25T17:44:23Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Arthur Corr\u00eaa"
+                    },
+                    {
+                        "name": "Paulo Nascimento"
+                    },
+                    {
+                        "name": "Samuel Moniz"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.24858v1",
+                "title": "Bellman Calibration for Marginalized Importance Weighting in Offline Reinforcement Learning",
+                "updated": "2026-08-25T17:44:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.24858v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.24858v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Marginalized importance weighting evaluates a target policy by reweighting offline state-action samples with its discounted occupancy ratio, characterized by an adjoint Bellman equation. Existing minimax, primal-dual, and fitted fixed-point estimators can leave residual occupancy-balance violations because of function-class approximation, regularization, or incomplete optimization. These violations are difficult to diagnose and reduce because the objectives generally lack a direct supervised validation loss for hyperparameter tuning, model selection, and early stopping. We introduce isotonic Bellman calibration, a one-dimensional, model-agnostic post-processing method that reduces these violations while preserving the ranking information in any initial occupancy-ratio estimate. The method corrects the estimate's scale and shape by applying fitted occupancy-ratio evaluation (FORE) over a one-dimensional class of nondecreasing transformations. We characterize Bellman calibration as a conditional fixed-point property equivalent to occupancy-balance against every test function of the calibrated ratio. More generally, we derive a calibration-refinement bound showing that any fitted ratio with small calibration error performs nearly as well as the best post-processing based on its fitted values. For isotonic Bellman calibration, we establish finite-sample calibration guarantees and a KL oracle inequality relative to the best monotone transformation of the initial estimate. Consequently, isotonic Bellman calibration achieves small calibration error and KL risk within statistical error of the best monotone correction, with guarantees for downstream target-occupancy functionals, including policy-value estimation.",
+                "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
@@ -483,66 +371,99 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-24T17:43:07Z",
+                "published": "2026-08-25T17:44:02Z",
+                "arxiv:comment": "43 pages, 1 figure, 4 tables",
                 "arxiv:primary_category": {
-                    "@term": "stat.ME"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Erin Craig"
+                        "name": "Lars van der Laan"
                     },
                     {
-                        "name": "Yiling Huang"
-                    },
-                    {
-                        "name": "Snigdha Panigrahi"
+                        "name": "Nathan Kallus"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.23536v1",
-                "title": "Adapter-Based Few-Shot Continual Learning for Malicious Packet Recognition",
-                "updated": "2026-08-24T17:41:15Z",
+                "id": "http://arxiv.org/abs/2608.24855v1",
+                "title": "LeFlow: Generative Latent Flow Planning for World Models",
+                "updated": "2026-08-25T17:42:30Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.23536v1",
+                        "@href": "https://arxiv.org/abs/2608.24855v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.23536v1",
+                        "@href": "https://arxiv.org/pdf/2608.24855v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The continual evolution of malware variants necessitates detection systems that can adapt to new threats without retraining from scratch. However, continually updating models on new data often leads to catastrophic forgetting, where previously learned knowledge is overwritten. While continual learning has been increasingly explored for malware detection, the specific setting of Few-Shot Class-Incremental Learning (FSCIL), where new malware classes must be learned from only a small number of labeled examples, remains comparatively underexplored. Therefore, this work investigates the FSCIL setting for malware classification. To address the stability-plasticity dilemma, we propose a hybrid framework that leverages a Self-Supervised Learning (SSL) backbone initialized through domain-specific pre-training on malware packets. Our method incorporates Low-Rank Adaptation (LoRA) to efficiently adapt the model during the base session while freezing the core backbone to preserve previously learned representations, alongside a prototype-based classification head for incremental sessions to establish robust decision boundaries from limited samples. Extensive experiments across several datasets demonstrate that our approach consistently outperforms prior malware FSCIL baselines and achieves state-of-the-art performance.",
-                "category": [
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-24T17:41:15Z",
+                "summary": "Latent world models are inherently strong encoders that transform image pixel to latent embedding, yet existing world models still rely on online trajectory optimization for action planning: for every state-goal pair, an iterative optimizer is run from scratch to search for optimal action sequences, treating the world model as a black-box simulator. This approach pays the full iterative optimization cost anew at every replanning step and reuses no planning experience across queries. In this work, we ask whether planning itself can be amortized once a latent world model has been learned. We present LeFlow, which learns a reusable latent trajectory prior operating directly in the latent dynamics space from the world model. LeFlow recasts planning as conditional latent trajectory generation: a rectified-flow model imagines a future latent path between the current and goal embeddings, an inverse dynamics decoder turns latent transitions into action chunks, and the frozen world model verifies each candidate by autoregressive rollout. Across four major goal-conditioned pixel-control benchmarks, LeFlow replaces iterative action-space optimization with amortized latent planning and fixed-budget rollout selection, achieving consistent success-rate gains with an order-of-magnitude reduction in planning time. Our results argue that latent world models should support not only prediction but reusable planning priors. Our code is available at https://github.com/hsiangwei0903/LeFlow.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-25T17:42:30Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CR"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Kyle Stein"
+                        "name": "Hsiang-Wei Huang"
                     },
                     {
-                        "name": "Guillermo Francia"
+                        "name": "Jianxu Shangguan"
                     },
                     {
-                        "name": "III Eman El-Sheikh"
+                        "name": "Junbin Lu"
                     },
                     {
-                        "name": "Andrew Arash Mahyari"
+                        "name": "Jenq-Neng Hwang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.24851v1",
+                "title": "Learning Whom to Trust : Decision-Generated Credibility in Social Learning",
+                "updated": "2026-08-25T17:39:32Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.24851v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.24851v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Social interaction can improve collective learning but also amplify early mistakes. We study this tension when the credibility of social information is generated by the sender's own decision process rather than fixed ex ante. Reinforcement-learning agents make binary choices through a drift--diffusion process that jointly determines choice, decision time, and confidence; decision confidence then becomes social credibility by weighting anticipatory influence and retrospective social learning. Under balanced community exposure, the anticipatory field admits an exact quotient representation. Its local Jacobian is a scalar decision-sensitivity term multiplying the community-coupling matrix, which yields a common-mode amplification threshold and an analytical role for cross-community permeability in damping relative community differences. Monte Carlo experiments show the corresponding non-monotone performance pattern: moderate transmission accelerates correction, whereas strong transmission can lock populations into wrong consensus; low permeability instead sustains disagreement. Ablations reveal a dual role for confidence: credibility-sensitive transmission amplifies social error, while confidence-dependent private learning stabilises it. The model yields testable predictions linking sender confidence to receiver behaviour conditional on accuracy.",
+                "category": [
+                    {
+                        "@term": "cs.NE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "econ.GN",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-25T17:39:32Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.NE"
+                },
+                "author": [
+                    {
+                        "name": "Gabriel Bontemps"
+                    },
+                    {
+                        "name": "Abhishek Banerjee"
                     }
                 ]
             }
