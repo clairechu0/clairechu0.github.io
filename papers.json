@@ -5,516 +5,468 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-08-30T21:47:40Z",
+        "updated": "2026-08-31T06:31:36Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "607872",
+        "opensearch:totalResults": "608201",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2608.27458v1",
-                "title": "The Atacama Cosmology Telescope: Constraints on the anisotropic screening and birefringence effects with DR6",
-                "updated": "2026-08-27T17:59:59Z",
+                "id": "http://arxiv.org/abs/2608.28589v1",
+                "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs",
+                "updated": "2026-08-28T17:59:47Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.27458v1",
+                        "@href": "https://arxiv.org/abs/2608.28589v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.27458v1",
+                        "@href": "https://arxiv.org/pdf/2608.28589v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "While we have learned much from recent surveys of the mm-wave sky, many secondary anisotropies of the CMB remain under-explored. We consider two of these here: the anisotropic screening induced by Thomson scattering of CMB photons off free electrons, and cosmic birefringence, the rotation of CMB polarization due to parity-violating physics beyond the standard model. To measure these effects, we apply state-of-the-art estimators for statistical anisotropy to the ACT Data Release 6 CMB data and construct noisy maps and power spectra of both effects. For anisotropic screening, we find no significant detection with the baseline data, and place an upper limit on its power spectrum that is two orders of magnitude above predictions from current reionization models. We obtain evidence for some foreground contamination at one of our frequencies that is consistent with expectations from extragalactic simulations. For our anisotropic birefringence analysis, we also find no detection and place an upper limit on the signal that is consistent with previous analyses. We report a corresponding upper limit on the Chern-Simons coupling term $g_{a \u03b3} < 4.9 \\times 10^{-2} / H_\\mathrm{I}$, with $H_\\mathrm{I}$ the inflationary Hubble scale. These analyses pave the way toward obtaining improved constraints with the next generation of ground-based CMB surveys.",
-                "category": {
-                    "@term": "astro-ph.CO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-27T17:59:59Z",
-                "arxiv:comment": "31 pages, 24 figures. To be submitted to ApJ",
+                "summary": "We propose QGPINNs, a physics-informed neural network framework developed in PyTorch for the numerical solution of nonlocal differential equations on quantum graphs. The framework is designed as a general computational implementation in which the solution on each edge of the graph is approximated by a neural network, while a unified graph-based loss function enforces the governing equations together with initial, boundary, and vertex transmission conditions. In particular, the formulation incorporates standard continuity and Kirchhoff-Neumann vertex conditions and Dirichlet boundary conditions into the learning process to couple the local edge-wise neural approximations into a global solution on the graph. The framework is developed for two representative classes of nonlinear models: multi-order fractional elliptic problems and time-fractional evolution equations on quantum graphs. To improve accuracy and training stability, QGPINNs integrates several graph-adapted learning strategies, including soft and hard constraint enforcement, dynamic loss balancing, Fourier feature embeddings, and a learnable singularity-capturing feature for weakly singular solutions arising in the considered problems. The framework also extends naturally to inverse problems, including the identification of the orders of fractional operators and physical parameters from noisy observational data. We validate the accuracy, computational efficiency, and physical consistency of the proposed framework through numerical experiments on benchmark graph structures and real-world networks, including the IEEE 14-bus system and an open-channel agricultural drainage network.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.NA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-28T17:59:47Z",
                 "arxiv:primary_category": {
-                    "@term": "astro-ph.CO"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Darby M. Kramer"
+                        "name": "Vaibhav Mehandiratta"
                     },
                     {
-                        "name": "Alexander van Engelen"
-                    },
-                    {
-                        "name": "Frank J. Qu"
-                    },
-                    {
-                        "name": "Christopher Cain"
-                    },
-                    {
-                        "name": "Irene Abril-Cabezas"
-                    },
-                    {
-                        "name": "J. Richard Bond"
-                    },
-                    {
-                        "name": "Vera Gluscevic"
-                    },
-                    {
-                        "name": "Carlos Herv\u00edas-Caimapo"
-                    },
-                    {
-                        "name": "Niall MacCrann"
-                    },
-                    {
-                        "name": "Mathew S. Madhavacheril"
-                    },
-                    {
-                        "name": "Jeff McMahon"
-                    },
-                    {
-                        "name": "Toshiya Namikawa"
-                    },
-                    {
-                        "name": "Bruce Partridge"
-                    },
-                    {
-                        "name": "Emmanuel Schaan"
-                    },
-                    {
-                        "name": "Neelima Sehgal"
-                    },
-                    {
-                        "name": "Crist\u00f3bal Sif\u00f3n"
-                    },
-                    {
-                        "name": "Ed Wollack"
+                        "name": "Saket Ramchandra"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.27457v1",
-                "title": "Spectral Fingerprints of Gauge Theories on a Quantum Computer",
-                "updated": "2026-08-27T17:59:51Z",
+                "id": "http://arxiv.org/abs/2608.28581v1",
+                "title": "Renormalization-guided cascade upscaling for lattice field generation",
+                "updated": "2026-08-28T17:55:59Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.27457v1",
+                        "@href": "https://arxiv.org/abs/2608.28581v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.27457v1",
+                        "@href": "https://arxiv.org/pdf/2608.28581v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Maximally mixed state spectral sampling is an unbiased quantum algorithm that allows for extraction of a finite-resolution spectral distribution from a Hamiltonian over potentially the entire allowed range of energies. We show how it may be focused on any desired area of the spectrum in order to learn about the full \\textit{fingerprint} of the model of interest: from its ground state phenomena such as quantum criticality, obtained from the lowest lying energies, to its thermalization behavior, obtained from the mid-spectrum. We demonstrate this technique specifically on a $(1+1)d$ non-Abelian $SO(3)$ gauge theory, providing a comprehensive analysis of the steps necessary for performing this algorithm, as well as what is possible in the near-term with superconducting quantum hardware, performing simulations with circuits that are $78$ two-qubit gates deep. We show how this algorithm is able to take advantage of emerging dynamical circuit capabilities in near-term hardware to roughly halve the number required qubits, as well as how quantum readout error mitigation is trivial for this method. Along the way, we propose a novel strategy for compiling the controlled-time evolutions needed for spectral sampling by means of Pauli-frame optimizations. We illustrate two physical applications of quantum spectral sampling -- disordered many-body transitions, and mid-spectrum densities of states -- and what postprocessing steps they require beyond the Fourier outputs of the algorithm.",
+                "summary": "We introduce a renormalization-group (RG) guided machine-learning algorithm for lattice field generation based on approximate inversion of an RG transformation. A ``perfect blocking'' construction supplies equilibrated long-distance modes, while a conditional normalizing flow reconstructs short-distance details and brief rethermalization removes residual errors. In 2D $\u03c6^4$ theory at criticality, a flow trained at $L\\le32$ is reused recursively in cascades reaching $L=2048$ with correct long-distance physics.",
+                "category": {
+                    "@term": "hep-lat",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-28T17:55:59Z",
+                "arxiv:comment": "7 pages, 4 figures. Submitted to Phys. Rev. Lett",
+                "arxiv:primary_category": {
+                    "@term": "hep-lat"
+                },
+                "author": [
+                    {
+                        "name": "Anna Hasenfratz"
+                    },
+                    {
+                        "name": "Ethan T. Neil"
+                    },
+                    {
+                        "name": "Letizia Parato"
+                    },
+                    {
+                        "name": "Noah Schwartz"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.28580v1",
+                "title": "Renormalization-guided inverse blocking for lattice field generation: construction and validation",
+                "updated": "2026-08-28T17:55:55Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.28580v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.28580v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We propose an algorithm for generating lattice field configurations based on the approximate inversion of a renormalization-group blocking transformation. We optimize the blocking transformation using a ``perfect blocking'' condition so that the blocked lattice distribution is well approximated by a simple coarse action. The blocking is separated into an invertible smoothing transformation followed by decimation. Machine learning, in the form of a conditional normalizing flow, is used to reconstruct the short-distance degrees of freedom removed by the decimation. A short fine-action rethermalization then removes the residual mismatch. Because the coarse ensemble supplies the long-distance modes, the same blocking transformation and conditional flow can be reused recursively on larger lattices, producing a cascade of configurations from an initial small-volume ensemble. We test the method in two-dimensional $\u03c6^4$ theory with $\u03bb=1$ at criticality and demonstrate stable cascade upscaling from $16^2$ to $2048^2$ lattices on local computational resources. Controlled rethermalization tests show that short-distance mismatches relax rapidly, whereas a deliberately introduced mismatch in the relevant thermal direction relaxes much more slowly. The construction uses ingredients that admit natural extensions to higher-dimensional systems and, ultimately, to gauge and fermionic degrees of freedom.",
+                "category": {
+                    "@term": "hep-lat",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-28T17:55:55Z",
+                "arxiv:comment": "24 pages, 15 figures. Submitted to Phys. Rev. D",
+                "arxiv:primary_category": {
+                    "@term": "hep-lat"
+                },
+                "author": [
+                    {
+                        "name": "Anna Hasenfratz"
+                    },
+                    {
+                        "name": "Ethan T. Neil"
+                    },
+                    {
+                        "name": "Letizia Parato"
+                    },
+                    {
+                        "name": "Noah Schwartz"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.28578v1",
+                "title": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
+                "updated": "2026-08-28T17:53:48Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.28578v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.28578v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the requirement that a motor fit inside the joint it drives, so smaller and cheaper motors suffice, and one motor can drive several joints through a single cable, so fewer motors are needed. They are also harder to learn on than a direct-drive hand. The underactuated transmission that produces the saving is itself difficult to represent in a simulator, and the joints one cable drives are not independently commandable. We present Aero Hand Open, a tendon-driven anthropomorphic hand that is released simulation-ready. Three things ship with it. A simulation model reproduces the cable transmission itself. An identified actuation map connects that model to the motor commands in both directions, including the three-way coupling of the thumb. A reinforcement learning package trains policies for the hand. Together they let a policy be trained entirely in simulation and run on the hand with no fine-tuning and no state estimation. We release the mechanical design, the simulation model, the identified mapping, the training environment and the deployment stack.",
                 "category": [
                     {
-                        "@term": "quant-ph",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cond-mat.str-el",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "hep-lat",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "hep-th",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-27T17:59:51Z",
-                "arxiv:comment": "25 pages, 15 figures",
+                "published": "2026-08-28T17:53:48Z",
+                "arxiv:comment": "20 pages, 9 figures. Project page: https://tetheria.github.io/aero-hand-open/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Nan Wang"
+                    },
+                    {
+                        "name": "Mohit Yadav"
+                    },
+                    {
+                        "name": "Jonathan Wulff"
+                    },
+                    {
+                        "name": "Aidan Rosenbaum"
+                    },
+                    {
+                        "name": "Kezhou Chen"
+                    },
+                    {
+                        "name": "Yuvan Sharma"
+                    },
+                    {
+                        "name": "Xu Dong"
+                    },
+                    {
+                        "name": "Yiwei Tao"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.28576v1",
+                "title": "Learning a Size-Weight Frontier for Synthetic-Augmented Inference",
+                "updated": "2026-08-28T17:52:33Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.28576v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.28576v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Synthetic data can improve statistical inference when real data are scarce, but naively treating synthetic samples as real data can introduce bias and lead to unreliable inference. We develop a general framework for synthetic-augmented inference across a population of related tasks. It characterizes synthetic augmentation by the number of synthetic observations and their weight. Central to our framework is a size-weight frontier that specifies, for each weight, the largest synthetic sample size for which all smaller sizes attain the target task-marginal coverage. We estimate this frontier from historical tasks, and establish a finite-sample coverage guarantee simultaneously for all size-weight configurations on or below the estimated frontier. In experiments using large language model responses to augment opinion survey data, our procedure achieves target coverage and substantially narrows confidence intervals.",
+                "category": [
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-08-28T17:52:33Z",
+                "arxiv:comment": "19 pages, 5 figures",
+                "arxiv:primary_category": {
+                    "@term": "stat.ME"
+                },
+                "author": [
+                    {
+                        "name": "Chengpiao Huang"
+                    },
+                    {
+                        "name": "Kaizheng Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2608.28571v1",
+                "title": "Learning to Decode Concatenated Quantum Codes with Hierarchical Message Passing",
+                "updated": "2026-08-28T17:48:04Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2608.28571v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2608.28571v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We introduce a neural message-passing framework for decoding general concatenated stabilizer codes. Soft beliefs propagate bidirectionally across concatenation levels, and lightweight neural networks learn only to aggregate incoming messages. For the concatenated $[[15,7,3]]$ quantum Hamming code, the resulting decoder achieves substantially higher thresholds than the state-of-the-art bidirectional hard-decision decoder under both bit-flip and depolarizing noise. In particular, the depolarizing pseudo-threshold nearly doubles, from $6.5\\%$ to $12.3\\%$. For many-hypercube codes, a decoder fine-tuned on circuit-level errors in Knill's teleportation-based error correction can achieve lower logical-CNOT failure rates than their dedicated decoder, using a fixed number of message-passing iterations instead of extensive combinatorial search. Our framework provides a generic decoding tool for exploring the design space of concatenated codes, including non-CSS constructions, toward low-overhead fault tolerance.",
+                "category": {
+                    "@term": "quant-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-08-28T17:48:04Z",
                 "arxiv:primary_category": {
                     "@term": "quant-ph"
                 },
                 "author": [
                     {
-                        "name": "Graham Van Goffrier"
+                        "name": "Jiahui Wu"
                     },
                     {
-                        "name": "Debasish Banerjee"
+                        "name": "Chao Zhang"
                     },
                     {
-                        "name": "Bipasha Chakraborty"
+                        "name": "Zipeng Wu"
                     },
                     {
-                        "name": "Emilie Huffman"
+                        "name": "Shilin Huang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.27455v1",
-                "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
-                "updated": "2026-08-27T17:59:30Z",
+                "id": "http://arxiv.org/abs/2608.28570v1",
+                "title": "ChainSplat: A Physics-Inspired Screw-Theoretic Model for Learning Deformable Linear Object Dynamics from Multi-View RGB Videos",
+                "updated": "2026-08-28T17:46:38Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.27455v1",
+                        "@href": "https://arxiv.org/abs/2608.28570v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.27455v1",
+                        "@href": "https://arxiv.org/pdf/2608.28570v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent advances in inference-time scaling have significantly improved the reasoning performance of large language models (LLMs). However, these methods typically rely on repeated generation or external verification. To address this limitation, we introduce CritICL, a novel inference-time framework that improves reasoning while maintaining high efficiency. Our key insight is that LLM failure modes exhibit structured patterns across model scales within the same family. Instead of treating failures as undesirable outputs, CritICL leverages them as a source of guidance. Specifically, we utilize failure modes derived from weaker models and incorporate them into inference through critique-based in-context examples. We propose two variants: CritICL-dynamic, which adaptively predicts input-specific failure modes and retrieves critiques, and CritICL-static, which uses a global failure mode profile to provide stable guidance. Experimental results show that CritICL consistently outperforms standard in-context learning and achieves performance competitive with or superior to test-time scaling methods, while requiring significantly fewer generations and lower token cost. Code available at: https://github.com/umwyf/CRITICL",
+                "summary": "Identifying the underlying dynamics and 3D geometry of deformable linear objects (DLOs), such as cables, ropes, and hoses, is essential for accurate robotic manipulation, but remains challenging due to their high-dimensional configuration spaces and diverse behaviors arising from varying material properties. Existing methods often rely on multi-stage pipelines and auxiliary depth inputs, which are prone to errors under dynamic interactions, while their high-dimensional state representations make model-based control computationally expensive. In this paper, we introduce ChainSplat, a physics-inspired framework that jointly learns the 3D geometry, appearance, kinematics, and dynamics of DLOs solely from multi-view RGB videos. ChainSplat represents a DLO as an open-chain structure of rigid links connected by revolute joints, yielding an analytic, screw-theoretic model with a compact state representation parameterized by joint configurations. By integrating this formulation with Gaussian splatting, ChainSplat jointly recovers DLO dynamics, kinematics-aware 3D geometry, and appearance, while enabling high-fidelity RGB rendering from arbitrary states. Through real-world experiments, we demonstrate that ChainSplat achieves state-of-the-art performance in dynamics predictions, 3D geometry reconstruction, and RGB rendering across dynamic interactions. ChainSplat further enables real-time state and force estimation, as well as accurate model-based trajectory optimization, highlighting its practical utility for real-world robotic manipulation of DLOs. Accompanying source code and video are available at: https://chainsplat.github.io.",
                 "category": {
-                    "@term": "cs.CL",
+                    "@term": "cs.RO",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-08-27T17:59:30Z",
-                "arxiv:comment": "https://github.com/umwyf/CRITICL",
+                "published": "2026-08-28T17:46:38Z",
+                "arxiv:comment": "18 pages, 12 figures",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Yufan Wu"
+                        "name": "Seungyeon Kim"
                     },
                     {
-                        "name": "Yinghui He"
-                    },
-                    {
-                        "name": "Zhengyi Hu"
-                    },
-                    {
-                        "name": "Lang Wei"
-                    },
-                    {
-                        "name": "Ruichen Li"
-                    },
-                    {
-                        "name": "Qifan Yang"
-                    },
-                    {
-                        "name": "Ting Zhu"
+                        "name": "No\u00e9mie Jaquier"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.27454v1",
-                "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
-                "updated": "2026-08-27T17:59:11Z",
+                "id": "http://arxiv.org/abs/2608.28568v1",
+                "title": "SignRR: Retrieve and Refine Real Motion for Sign Language Production",
+                "updated": "2026-08-28T17:45:14Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.27454v1",
+                        "@href": "https://arxiv.org/abs/2608.28568v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.27454v1",
+                        "@href": "https://arxiv.org/pdf/2608.28568v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables agents to progressively adapt through interaction. However, the insights that guide skill development typically remain scattered across optimization histories, limiting their systematic reuse across iterations. We introduce WikiSkill, a framework that co-evolves agent skills with a persistent knowledge base (wiki). At a high level, WikiSkill separates raw execution experience, accumulated knowledge, and executable skills, while continuously consolidating experience into the wiki, which subsequent skill updates can build on. Across diverse benchmarks and models, WikiSkill consistently outperforms state-of-the-art skill-evolution methods and improves over no-skill baselines in most model-benchmark settings. We find that skill evolution complements model scaling: larger models generally benefit more from evolved skills, while smaller models with skills can outperform substantially larger models without them. We also find that evolved skills transfer effectively across models and model families, and skills evolved by other models can outperform self-evolved skills. Finally, our ablation studies confirm that persistent knowledge accumulation in the wiki is critical for effective skill evolution. These results demonstrate the benefits of systematically accumulating and refining agent experience for developing reusable and transferable skills.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-27T17:59:11Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Liyan Tang"
-                    },
-                    {
-                        "name": "Cyrus Rashtchian"
-                    },
-                    {
-                        "name": "Chun-Sung Ferng"
-                    },
-                    {
-                        "name": "Andrew Tomkins"
-                    },
-                    {
-                        "name": "Da-Cheng Juan"
-                    },
-                    {
-                        "name": "Tu Vu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.27452v1",
-                "title": "Distinguishing Quantum Capacitance Signatures of a Topological Majorana Wire from a Normal Wire Segment",
-                "updated": "2026-08-27T17:59:08Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.27452v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.27452v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Majorana zero modes (MZMs) are spatially separated, near-zero-energy excitations expected at the ends of a topological superconducting (TS) wire. A quantum-dot interferometer can be used to probe the quantum capacitance of the TS wire, and the location and magnitude of the capacitance resonances provide information about the MZMs, while their magnetic flux dependence probes coherent coupling to the two Majorana modes. It has been recently shown that, a gapless (i.e., $\u0394=0$) wire segment can also exhibit flux-dependent quantum capacitance oscillations through Aharonov-Bohm interference and, with suitable tuning, can reproduce a Majorana-like response. Here we show that the two mechanisms can be distinguished experimentally. In the gapless normal wire segment, the two parity-dependent signals originate from separate energy resonances corresponding to the lack of generic zero-energy states. By contrast, in the topological wire, the pair of low energy levels with even and odd parity are nearly degenerate in energy, and therefore, the two parity branches remain within the same broader resonance region in the quantum-dot potential, and persist under independent variations of the dot potential and wire chemical potential. Our results show that the experimentally observed quantum capacitance response is distinguished not by a particular flux trace at one optimized point in parameter space, but by its persistence over a finite range of independently controlled parameters, including the quantum-dot potential. This parameter space stability provides a direct means of ruling out the gapless normal wire segment as the origin of the observed Majorana-like response.",
+                "summary": "Sign language production (SLP) aims to generate continuous signing motion from spoken language, often through gloss-to-pose generation. Prior work mainly follows two paradigms. Generative models synthesize motion from a learned prior or from noise, without reference to an observed signing instance, making rare hand configurations and signer-specific articulation difficult to preserve. Retrieval-based methods reuse real, well-articulated motion segments, but concatenating segments from different signers and co-articulation contexts can introduce rhythm and style inconsistencies across the full sequence, not only at segment boundaries. These limitations suggest a complementary solution: use retrieval to provide realistic articulation, and use learned refinement to impose the global coherence that retrieval alone lacks. We therefore propose retrieve-and-refine, a paradigm that starts from real retrieved motion and refines it into a globally coherent signing sequence rather than generating motion from scratch. Our framework, SignRR, initializes motion from a dictionary of real sign segments and refines the full sequence with a part-aware Residual VQ-VAE, where residual quantization preserves fine hand articulation and temporal length differences are handled in the latent space. Experiments on PHOENIX14T and CSL-Daily show that SignRR achieves state-of-the-art back-translation performance while maintaining competitive pose quality.",
                 "category": {
-                    "@term": "cond-mat.mes-hall",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-08-27T17:59:08Z",
+                "published": "2026-08-28T17:45:14Z",
+                "arxiv:comment": "Accepted at the 37th British Machine Vision Conference (BMVC 2026)",
                 "arxiv:primary_category": {
-                    "@term": "cond-mat.mes-hall"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Binayyak Bhusan Roy"
+                        "name": "Fidel Omar Tito Cruz"
                     },
                     {
-                        "name": "Jay Deep Sau"
+                        "name": "Angie Sanchez Marquina"
                     },
                     {
-                        "name": "Sumanta Tewari"
+                        "name": "Summy Farfan"
+                    },
+                    {
+                        "name": "Gissella Bejarano"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.27451v1",
-                "title": "Tacet: A Language and Type System for Automatic Statistical Validity Accounting",
-                "updated": "2026-08-27T17:59:01Z",
+                "id": "http://arxiv.org/abs/2608.28566v1",
+                "title": "On two proofs of $d^2$ mixing of weighted Dikin walks",
+                "updated": "2026-08-28T17:43:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.27451v1",
+                        "@href": "https://arxiv.org/abs/2608.28566v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.27451v1",
+                        "@href": "https://arxiv.org/pdf/2608.28566v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Empirical comparisons between systems are a standard form of evidence in computer science research, but few are checked for statistical validity: most are never framed as statistical tests at all. Existing multiple-comparison procedures could control the resulting error, but need inputs (what an analysis examined, and how its observations are arranged) that are not recoverable from a list of p-values.\n  We introduce Tacet, a language in which an analysis declares what it generated, states what it expects to find, and is refused any claim it cannot afford or cannot properly test. Its core calculus T pairs a free estimation sublanguage, carrying a reported footprint and a purity bit that records whether any outcome was consulted in building a value, with a priced claim sublanguage, carrying a wealth transformer, connected only by a mechanism that prices a comparison. A sample selected by reading outcomes sets the purity bit and is recorded as having examined everything it read, permanently, so it can never be granted a one-sided or confirmatory price, without the system ever asking whether the analyst intended to cherry-pick. Whether a comparison is paired or clustered is computed statically from the artifact schema, from declared functional dependencies between key fields alone and before any data is read, and a mechanism that assumes that structure away is refused rather than priced. Because the wealth transformer is antitone in the realized p-value, affordability can be checked before the analysis runs too, turning pre-registration into a typing rule. We prove the metatheory machine-checked in Lean 4 with no admitted gaps, and demonstrate the approach on a reference implementation and two case studies on published artifacts, the SWE-bench Verified leaderboard and BIG-Bench Hard.",
+                "summary": "We study the mixing time of weighted Dikin walks for sampling from exponential distributions on polytopes and truncated positive-semidefinite (PSD) cones. Our first result gives a general total-variation mixing bound under strong self-concordance, $\\bar\u03bd$-symmetry, and mixed-trace regularity on the local metric. The key idea is to control the Metropolis--Hastings acceptance probability on a high-probability region rather than at every point. Applying this framework to the Lee--Sidford, Lewis-weight, and John metrics yields an $\\widetilde O(d^2)$ mixing bound for sampling from polytopes, while applying it to a hybrid barrier yields an $\\widetilde O(d^4)$ mixing bound for sampling from truncated PSD cones. Our second result establishes stronger $\u03c7^2$-divergence guarantees and pointwise acceptance control using a new fourth-order bootstrap condition. For a suitably scaled Lee--Sidford metric, this yields an $\\widetilde O(d^2)$ mixing bound in $\u03c7^2$-divergence, improving on the previous $\\widetilde O(d^{9/4})$ bound.",
                 "category": [
                     {
-                        "@term": "cs.PL",
+                        "@term": "cs.DS",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.SE",
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.OC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.PR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.CO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-27T17:59:01Z",
-                "arxiv:comment": "67 pages, 2 figures, 10 tables, including 10 appendices. Lean 4 mechanization: https://github.com/abuach/tacet-mech ; reference implementation and case-study replication code: https://github.com/abuach/tacet-python",
+                "published": "2026-08-28T17:43:58Z",
+                "arxiv:comment": "36 pages. AI disclosure included",
                 "arxiv:primary_category": {
-                    "@term": "cs.PL"
-                },
-                "author": {
-                    "name": "Chik\u00e9 Abuah"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.27448v1",
-                "title": "TTPO: Test-Time Policy Optimization",
-                "updated": "2026-08-27T17:58:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.27448v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.27448v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replacing ground truth with majority-vote pseudo-labels is a natural alternative, yet it is fragile: an incorrect vote corrupts the teacher and misleads every token. We observe that this failure mode is asymmetric: rollouts that disagree with the pseudo-label are typically wrong regardless of whether the vote itself is correct. Building on this observation, we propose Test-Time Policy Optimization (TTPO), an asymmetric objective that distills agreeing rollouts via OPSD and penalizes disagreeing rollouts with Grouped RL. Token-level selection further refines both branches: distillation down-weights already-converged positions, while RL penalizes only confident errors. Both updates remain well-grounded even under frequent pseudo-label errors, and majority-vote routing yields tighter self-supervision as the model improves. Without any labels, TTPO matches label-supervised OPSD on five competition-level benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, yields +25.2% to +36.4% without thinking, and shows strong cross-task generalization.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-27T17:58:10Z",
-                "arxiv:comment": "Project Page: https://zju-real.github.io/TTPO Code: https://github.com/ZJU-REAL/TTPO",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.DS"
                 },
                 "author": [
                     {
-                        "name": "Aozhe Wang"
+                        "name": "Yuansi Chen"
                     },
                     {
-                        "name": "Zhengxi Lu"
-                    },
-                    {
-                        "name": "Jianze Wang"
-                    },
-                    {
-                        "name": "Shangke Lv"
-                    },
-                    {
-                        "name": "Ying Liu"
-                    },
-                    {
-                        "name": "Weiming Lu"
-                    },
-                    {
-                        "name": "Jun Xiao"
-                    },
-                    {
-                        "name": "Yueting Zhuang"
-                    },
-                    {
-                        "name": "Hua Yang"
-                    },
-                    {
-                        "name": "Qianglong Chen"
-                    },
-                    {
-                        "name": "Yongliang Shen"
+                        "name": "Yunbum Kook"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.27443v1",
-                "title": "Do User-Authored Permission Policies Improve Protection Against AI Agent Overreach?",
-                "updated": "2026-08-27T17:56:38Z",
+                "id": "http://arxiv.org/abs/2608.28564v1",
+                "title": "Learning between the peaks: sharp asymptotics for kernel ridge regression under power-law anisotropy",
+                "updated": "2026-08-28T17:41:53Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.27443v1",
+                        "@href": "https://arxiv.org/abs/2608.28564v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.27443v1",
+                        "@href": "https://arxiv.org/pdf/2608.28564v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "AI agents are poised to become a primary interface to digital products, acting across email, files, payments, and personal data. People without professional software backgrounds need understandable, reusable ways to control actions across services. We examine a mechanism in which a language model maps actions to plain-language consequence categories with user-authored \"allow\", \"ask\", or \"never\" rules. We ask what is gained and lost when decisions are made in advance as reusable rules rather than separately for each action.\n  We analyzed 113 participants without professional software backgrounds across three conditions: per-action human-in-the-loop approval (HITL), automated per-action model review (AUTO), or user-authored consequence policy (POLICY). Participants judged 2 examples in each of 4 consequence categories; POLICY participants then set one rule per category. All supervised an 18-action simulated day, including 7 overreach actions. POLICY blocked less overreach than HITL (-20.1 percentage points, 95% CI [-32.1, -8.1]) and AUTO (-14.5 points, 95% CI [-25.8, -3.2]). POLICY lowered runtime prompts from 18.0 to 10.9, but total intervention time was not reliably lower when rule setup was included.\n  Exploratory analysis showed that participants chose \"ask\" for 114 of 140 POLICY rules, returning most overreach actions to runtime. Of the 148 overreach actions executed in POLICY, 133 followed human approval and 15 ran automatically under \"allow\" rules. Across all 7 overreach actions, POLICY had the highest approval rate. Counterintuitively, user-authored rules did not by themselves provide stronger protection: many actions outside users' original requests went through after users approved them. These results reveal a gap between preference and commitment: repeatedly choosing \"ask\" preserves case-by-case choice but prevents a standing policy from settling decisions in advance.",
+                "summary": "We study kernel ridge regression under anisotropic Gaussian data, where the input covariance decays as a power law with exponent $\u03b1\\geq 0$ for polynomial inner-product kernels. We derive asymptotically sharp expressions for the kernel spectrum and the generalization error in the polynomial high-dimensional regime $n=\u0398(d^\u03ba)$, revealing how anisotropy reshapes the learning curves. For weak anisotropy ($0<\u03b1<1$), the problem remains effectively high-dimensional and retains some features of the isotropic case, while departing from it in others: the variance still peaks at integer sample complexities $\u03ba\\in\\mathbb{N}$, but these peaks are progressively damped as $\u03b1$ grows; meanwhile, for targets strongly aligned with the data's principal directions, the bias drops at fractional sample complexities, decoupling the bias transitions from the interpolation peaks. For strong anisotropy ($\u03b1> 1$), the effective dimension of the problem is constant, and the variance stops depending on sample size altogether, plateauing under ridgeless interpolation or vanishing at an explicit rate under fixed ridge penalty. The bias undergoes a sharp transition governed by the target's decay rate: below a threshold, learning is abrupt rather than gradual; above it, the bias decays as a power law that recovers the classical source and capacity rates. We finally specialize these results to single-index targets, showing how the alignment of the index with the data's principal directions determines the effect of anisotropy on learning. Together, our results clarify how the input geometry shapes the kernel features and fundamentally impacts its generalization properties.",
                 "category": [
                     {
-                        "@term": "cs.HC",
+                        "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CR",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-27T17:56:38Z",
-                "arxiv:comment": "15 pages, 5 figures",
+                "published": "2026-08-28T17:41:53Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.HC"
-                },
-                "author": {
-                    "name": "Ting Yan"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.27429v1",
-                "title": "Mechanistic Reaction Prediction via Discrete Flow Matching on Graph-Structured Electron Occupation",
-                "updated": "2026-08-27T17:50:44Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.27429v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.27429v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Chemical reactions are fundamentally transformations in electron space, yet most machine learning approaches model them either through \\textit{de novo} generation of product molecules or through heuristic graph edits that operate directly on molecular topology.\n  We introduce MAELLE (\\textbf{M}ech\\textbf{A}nistic \\textbf{E}dit f\\textbf{L}ow-matching on e\\textbf{L}ectron r\\textbf{E}arrangements), which instead models reactions as discrete flow matching over electron occupation vectors.\n  Concretely, we formulate the reactant-to-product mapping as a Continuous-time Markov Chain (CTMC) over the graph-structured integer-valued electron occupation space defined on all bonding, non-bonding, and hydrogen sites.\n  To construct the intermediate edit trajectories, we generalize the discrete flow matching mixture path to discrete electron rearrangements using Optimal Transport, yielding a sequence of mechanistically interpretable edit moves without requiring elementary step annotations.\n  MAELLE achieves competitive performance on the USPTO-480K benchmark compared with leading reaction prediction models.\n  Beyond in-distribution accuracy, we evaluate robustness across two out-of-distribution settings - structural complexity and reaction type - and find that MAELLE maintains strong performance where existing methods degrade.\n  Finally, because the learned flow operates over the full electron redistribution, MAELLE naturally recovers mechanistic trajectories that align with known chemistry and can predict side products of a reaction.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-27T17:50:44Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
+                    "@term": "stat.ML"
                 },
                 "author": [
                     {
-                        "name": "Nguyen Xuan-Vu"
+                        "name": "Lorenzo Rizzi"
                     },
                     {
-                        "name": "Octavian Susanu"
+                        "name": "Arie Wortsman Zurich"
                     },
                     {
-                        "name": "Daniel Armstrong"
-                    },
-                    {
-                        "name": "Philippe Schwaller"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.27424v1",
-                "title": "Beyond F1: Evaluating Coverage and Failure Recovery in AI Model Security Scanners",
-                "updated": "2026-08-27T17:49:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.27424v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.27424v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Static scanners are increasingly used to identify executable or otherwise unsafe content in machine- learning artifacts, yet conventional evaluation metrics characterize only cases where a scanner yields a usable security judgment. We evaluate ModelScan, ModelAudit, and Fickling using a controlled, artifact-backed benchmark on a synthetic corpus of 170 Pickle and PyTorch focused artifacts across 145 specimen families, 135 of which have binary security ground truth and 10 of which are intentionally malformed without labels. We explicitly distinguish non-N/A coverage, analysis completion, definitive security decisions, non-security findings, and unsupported outcomes. On labeled families, ModelAudit produced definitive security decisions for all 135 families (100%), Fickling for 110 (81.5%), and ModelScan for 67 (49.6%). Conditional on making a definitive judgment, ModelScan achieved 100% precision, recall, and F1. Fickling identified no unique true- positive families beyond those found by the combination of ModelAudit and ModelScan. Furthermore, for the 48 malicious families where ModelScan failed to complete its analysis, both ModelAudit and Fickling generated detections consistent with ground truth. These findings underscore the need to separate judgment accuracy from judgment availability, as well as incremental detection coverage from tool-level redundancy.",
-                "category": [
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-27T17:49:28Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CR"
-                },
-                "author": [
-                    {
-                        "name": "Qianlong Lan"
-                    },
-                    {
-                        "name": "Vinothini Pandurangan"
-                    },
-                    {
-                        "name": "Anuj Kaul"
-                    },
-                    {
-                        "name": "Indranil Sanyal"
+                        "name": "Bruno Loureiro"
                     }
                 ]
             }
