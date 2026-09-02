@@ -5,36 +5,281 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-09-02T00:44:39Z",
+        "updated": "2026-09-02T05:19:55Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "609028",
+        "opensearch:totalResults": "609509",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2608.31166v1",
-                "title": "Constant Individual Regret in General Games",
-                "updated": "2026-08-31T17:59:16Z",
+                "id": "http://arxiv.org/abs/2609.01607v1",
+                "title": "Uncovering Understanding-Generation Synergy in Native Unified Multimodal Models: From Representation, Task to System",
+                "updated": "2026-09-01T17:59:59Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.31166v1",
+                        "@href": "https://arxiv.org/abs/2609.01607v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.31166v1",
+                        "@href": "https://arxiv.org/pdf/2609.01607v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Uncoupled no-regret dynamics provide a decentralized route to equilibrium, but prior guarantees for individual regret retain a polylogarithmic dependence on the horizon. We remove this dependence for every finite $N$-player normal-form game under full-information feedback. We introduce \\emph{ECHO-OFTRL}: optimistic follow-the-regularized-leader (OFTRL) equipped with an EMA cascade for high-order optimism (ECHO), where EMA denotes exponential moving average. The algorithm is deterministic and fully uncoupled. If $m_{\\max}$ denotes the largest action-set size, then, simultaneously for every horizon $T\\geq1$, it guarantees that each of the $N$ players in the game incurs regret upper bounded by $O(\\textrm{poly}(N, \\log m_{\\max}))$. Our algorithm leverages a new form of optimism inspired by modern filter design.",
+                "summary": "While unified multimodal models (UMMs) jointly perform visual understanding and generation within a single model, functional unification does not guarantee learning synergy: the two objectives may reinforce each other, compete for capacity, or merely coexist. We investigate their relationship at the representation, task, and system levels in a controlled, structurally native setting without pretrained vision priors. At the representation level, we find that each objective provides useful signal to the other: generation enriches the visual features learned for understanding, while understanding strengthens vision--language alignment for generation. However, when both objectives are forced through the same computation path, one tends to dominate. A task-decoupled architecture that specializes conflicting visual computation while preserving semantic interaction avoids this asymmetric degradation. At the task level, through three case studies, we find positive bidirectional transfer when understanding and generation tasks rely on shared knowledge. At the system level, we show that an end-to-end UMM outperforms a matched planner--executor pipeline on complex tasks that explicitly require both image understanding and generation. Together, these results show that the value of UMMs extends beyond a unified interface: appropriate specialization, shared task knowledge, and end-to-end optimization can turn coexistence into synergy.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-01T17:59:59Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Penghao Wu"
+                    },
+                    {
+                        "name": "Haiwen Diao"
+                    },
+                    {
+                        "name": "Weichen Fan"
+                    },
+                    {
+                        "name": "Lewei Lu"
+                    },
+                    {
+                        "name": "Dahua Lin"
+                    },
+                    {
+                        "name": "Ziwei Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.01604v1",
+                "title": "Beyond Scores: Understanding LLM-as-a-Judge Mechanisms in Summarization Evaluation",
+                "updated": "2026-09-01T17:59:49Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.01604v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.01604v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "LLM-based evaluators of natural language generation (NLG) quality are widely deployed as scoring tools and as automated training signals, yet the internal procedure by which they assign a rating remains poorly understood. We investigate this procedure mechanistically through an eight-attack perturbation taxonomy across the Readability and Adequacy dimensions of NLG quality, a generation pipeline that produces paired clean and corrupt summaries with controlled error intensity and explicit token-level modification maps, and a four-experiment battery of causal tracing, logit-lens vocabulary projection, and attention-head knockout applied to Themis (Llama-3-8B) and Prometheus (Mistral-7B). Both evaluators implement a structured, coherent evaluation pipeline operating in two stages: below layer 15, attention performs local error comparison and routes the result to the final input position; above it, the MLP cascade integrates the signal and writes the rating, with the decision crystallizing in the residual stream at a sharp late layer (L = 26 on Themis, L = 25 on Prometheus). Furthermore, a base-model control at the same scale (Llama-3-8B) reproduces the routing architecture and crystallization but not the stage separation, isolating the two mechanisms that fine-tuning specifically installs, suppression of below-L15 MLP contribution at the last position and a two-layer advance of the crystallization depth, indicating that fine-tuning sculpts an existing substrate rather than building the pipeline from scratch. We release the source code and data at https://github.com/himil-v/judge-mech",
                 "category": [
                     {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
                         "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-01T17:59:49Z",
+                "arxiv:comment": "Accepted at EMNLP 2026 Main Conference",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Himil Vasava"
+                    },
+                    {
+                        "name": "Ming Jiang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.01598v1",
+                "title": "UI-VISA: U-Net Initialized Vascular Image Segmentation Architecture",
+                "updated": "2026-09-01T17:58:54Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.01598v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.01598v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Accurate segmentation of vascular structures in digital subtraction angiography (DSA) images remains challenging due to the thin, elongated, and branching nature of blood vessels. Pixel-wise deep learning approaches such as U-Net achieve strong general-purpose segmentation performance but often produce fragmented or discontinuous predictions in fine vascular regions, since they do not explicitly enforce structural connectivity. Region growing algorithms preserve spatial context and topological continuity, but are highly sensitive to seed point initialization and can be computationally expensive. We propose UI-VISA (U-Net Initialized Vascular Image Segmentation Architecture), a hybrid pipeline that combines the complementary strengths of both approaches. UI-VISA uses U-Net's foreground predictions as informed seed points for a CNN-guided region growing algorithm, which then iteratively refines the segmentation by enforcing local connectivity and recovering fine vessel details that U-Net alone tends to miss or over-predict. We evaluate UI-VISA against standalone U-Net and a prior region-growing-based method (VISA) using 5-fold cross-validation on 26 DSA images. UI-VISA achieves the highest mean Dice and clDice scores across folds, and a paired Wilcoxon signed-rank test shows the improvement in clDice is statistically significant ($p=0.023$), consistent with the method's design goal of preserving vascular connectivity, while the improvement in Dice does not reach significance ($p=0.104$).",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-01T17:58:54Z",
+                "arxiv:comment": "9 pages, 6 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Asees Kaur"
+                    },
+                    {
+                        "name": "Suzanne S. Sindi"
+                    },
+                    {
+                        "name": "Erica M. Rutter"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.01597v1",
+                "title": "The Rise of Verbal Reinforcement Learning",
+                "updated": "2026-09-01T17:58:18Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.01597v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.01597v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Natural language is emerging as a primary feedback channel for improving language agents, capable of conveying intent, preferences, and causal structure in forms interpretable by both humans and modern language models. We call this paradigm Verbal Reinforcement Learning (VRL) and offer the first unified account of it. We organize the field around a single axis, \\textit{when} verbal feedback takes effect in an agent's lifecycle and \\textit{what} it modifies, yielding three pillars: (1) \\textbf{Language as Grounding Signal}, where language defines the task itself by specifying goals, states, and reward structures; (2) \\textbf{Language as Deliberative Feedback}, where natural language guides reasoning at test time without the need to update model parameters; (3) \\textbf{Language as Learning Signal}, where language-based feedback shapes model parameters through training. Within each pillar, we synthesize representative work, distinguish key subcategories of approaches, and outline the distinct role language plays in shaping agent behavior. Together, this taxonomy shows how verbal reinforcement is reshaping agent development, while also defining the challenges and opportunities for building more capable and aligned agents.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-01T17:58:18Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Kshitij Tayal"
+                    },
+                    {
+                        "name": "Arun Sharma"
+                    },
+                    {
+                        "name": "Genta Indra Winata"
+                    },
+                    {
+                        "name": "Anirban Das"
+                    },
+                    {
+                        "name": "Sambit Sahu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.01596v1",
+                "title": "Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation",
+                "updated": "2026-09-01T17:58:07Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.01596v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.01596v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Real-world robotic assembly at sub-millimeter tolerances demands spatial precision, compliant interaction, and robustness to contact failures. We present Facet-0, a robotic foundation model that predicts and values the contact consequences of its actions. Facet-0 unifies multimodal representation learning and reinforcement learning (RL) post-training around a joint action-wrench proposal: a causal wrench history is aligned with vision-language semantics and kinematic state, and flow matching generates each action chunk together with the future wrist-wrench profile it is expected to induce. Deployment rollouts train a distributional Action-Wrench Critic to distinguish motions with similar task progress but different contact outcomes, while phase-aware rewards and contact-selective credit concentrate policy improvement on decisive interactions. To accommodate part-specific dynamics, a lightweight bounded actor reuses the frozen representation for on-robot adaptation; RL remains defined over executable Cartesian actions, while an auxiliary wrench head preserves predictive, non-commanded action-contact coupling. Trained on ManuFacet-1K, a 1,000-hour force-synchronized corpus spanning three embodiments and multiple manufacturing cells, the bounded task-adapted system reaches 82% mean success on five sub-millimeter computer-assembly tasks, compared with 15% for the strongest baseline, with 0.5 mm placement accuracy and 50 ms command latency.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-01T17:58:07Z",
+                "arxiv:comment": "Project page: https://pine-lab-ntu.github.io/facet-0/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Haoyuan Deng"
+                    },
+                    {
+                        "name": "Haichao Liu"
+                    },
+                    {
+                        "name": "Wenkai Guo"
+                    },
+                    {
+                        "name": "Yuan Ling"
+                    },
+                    {
+                        "name": "Zaijia Yang"
+                    },
+                    {
+                        "name": "Yuanjiang Xue"
+                    },
+                    {
+                        "name": "Haosheng Sun"
+                    },
+                    {
+                        "name": "Liangzi Wang"
+                    },
+                    {
+                        "name": "Ziwei Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.01595v1",
+                "title": "Mechanism Design for Alignment and Control",
+                "updated": "2026-09-01T17:57:50Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.01595v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.01595v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We develop a framework for mechanism design with AI agents whose alignment (preferences) and capabilities (feasible actions and information) are unknown. We want such agents to act on our behalf so mechanisms must incentivize both honesty and obedience. A one-sided imitation structure---capabilities can be concealed but not counterfeited---yields a revelation principle, a characterization of implementable policies via nested cyclical monotonicity, and conditions under which eliciting higher-order beliefs can discipline multiple agents. We apply our framework to stylized examples of (i) sandbagging in which a more capable agent pretends to be less capable; (ii) an alignment--interpretability trade-off, where the two are substitutes in the instrument but complements in value; (iii) discipline via peer scoring; (iv) coupling rewards to induce competition among multiple agents; and (v) scalable oversight and reward shaping.",
+                "category": [
+                    {
+                        "@term": "econ.TH",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -42,425 +287,210 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-31T17:59:16Z",
+                "published": "2026-09-01T17:57:50Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "econ.TH"
                 },
                 "author": [
                     {
-                        "name": "Mingyang Liu"
+                        "name": "Dirk Bergemann"
                     },
                     {
-                        "name": "Gabriele Farina"
+                        "name": "Andrew Koh"
                     },
                     {
-                        "name": "Asuman Ozdaglar"
+                        "name": "Stephen Morris"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.31167v1",
-                "title": "SUN: Persistent Programs For Language-Grounded Control-to-Learning-to-Real Policies",
-                "updated": "2026-08-31T17:59:16Z",
+                "id": "http://arxiv.org/abs/2609.01591v1",
+                "title": "StudentSim: Training LLM-based Student Simulators",
+                "updated": "2026-09-01T17:55:10Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.31167v1",
+                        "@href": "https://arxiv.org/abs/2609.01591v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.31167v1",
+                        "@href": "https://arxiv.org/pdf/2609.01591v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Bridging model-based control and learned policies in long-horizon manipulation has harbored a silent disagreement: control executes specified objectives, learning amortizes that behavior into a reactive policy, yet existing protocols discard task semantics, leaving rewards hand-crafted and behavior drifting from what control verified.We introduce Semantically UNified (SUN) Programs, typed executables where geometric and contact relations are defined once and compiled into aligned Model Predictive Control (MPC) costs, satisfaction predicates, RL rewards, transition guards, and diagnostics. Our system, Kuafu, driven by large vision language systems, automatically synthesizes SUN Programs from language and scene semantics, screens feasibility via MPC, and retains semantics while training stage-conditioned policies. Across nine tasks, Kuafu achieves 82.03% macro-success, outperforming sparse-reward (35.67%) and Stage-BC (24.75%) baselines. At 8192-way scale, it generates 10.57x the successful trajectory time per hour of human teleoperation. With 500 trajectories per task, Kuafu data trains DP3 policies to 46.0% simulation success (vs. 22.4% for alternatives) and 34.7% on physical Franka and Kinova robots. These results establish that simulation-screened task semantics can effectively amortize control into robust policies, without demonstrations or manual dense rewards, unifying symbolic planning and data-driven execution.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-31T17:59:16Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Weiqi Wang"
-                    },
-                    {
-                        "name": "Zhi Li"
-                    },
-                    {
-                        "name": "Yudong Lei"
-                    },
-                    {
-                        "name": "David Martinez"
-                    },
-                    {
-                        "name": "Xiaofeng Gao"
-                    },
-                    {
-                        "name": "Yuxin Jiang"
-                    },
-                    {
-                        "name": "Chenfanfu Jiang"
-                    },
-                    {
-                        "name": "Yingnian Wu"
-                    },
-                    {
-                        "name": "Demetri Terzopoulos"
-                    },
-                    {
-                        "name": "Ran Gong"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.31162v1",
-                "title": "Trinomial containment in polynomial ideals is undecidable",
-                "updated": "2026-08-31T17:57:49Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.31162v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.31162v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We prove that deciding whether an ideal in a polynomial ring contains a trinomial is impossible on a Turing machine. More precisely, from an integer polynomial $P$ we compute generators of an ideal $I_P$ in a polynomial ring over $\\mathbb{Q}$ such that $I_P$ contains a trinomial if and only if $P$ has an integral zero. By the MRDP theorem this problem is undecidable. A universal halting polynomial gives a computable family of ideals in one fixed polynomial ring, with uniform bounds on colength, generator count, and generator degree, for which the containment of a trinomial encodes the halting problem.",
+                "summary": "AI tutors are most useful when they adapt to each student's strengths, weaknesses, and preferred guidance, but evidence about which guidance works for which student is sparse, slow, and costly to collect from real learners. Student simulators can provide this signal as a proxy, yet existing approaches are limited: state-tracking models fit student behavior but struggle to process explanations or corrections, while LLM role-play follows guidance fluently but does not reliably match the competence of the student being imitated. We present StudentSim, a training framework that turns sparse per-student data into individualized simulators through pooled training followed by per-student specialization. The resulting simulators both mirror a student's own responses and update them under tutor guidance. We also introduce StudentSimEval, a standardized protocol covering 60 students across chess, second-language English writing, and mathematics, using public learner datasets with de-identified records shared for research. StudentSimEval measures behavioral fidelity (F), or how well a simulator matches a student's responses, and guidance responsiveness (R), or how readily it updates under tutor guidance, with all methods fit and evaluated on the same records. Across all three domains, StudentSim outperforms GPT-5.4 on both metrics. In chess, StudentSim reaches F=0.51 and R=0.91, compared with 0.23 and 0.72 for GPT-5.4 and 0.45 and 0.27 for Maia2. As a proof of concept, using StudentSim as a reward model for tutor reinforcement learning produces a chess tutor that expert humans rate as more accurate, better-guided, and more personalized than a no-RL baseline and a tutor trained against a GPT-5.4 simulator reward. Code is available at https://github.com/microsoft/StudentSim.",
                 "category": {
-                    "@term": "math.AC",
+                    "@term": "cs.CL",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-08-31T17:57:49Z",
-                "arxiv:comment": "v1: 16 pages, comments welcome",
-                "arxiv:primary_category": {
-                    "@term": "math.AC"
-                },
-                "author": [
-                    {
-                        "name": "Tobias Boege"
-                    },
-                    {
-                        "name": "Anna Hofer"
-                    },
-                    {
-                        "name": "Thomas Kahle"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.31157v1",
-                "title": "Sharp Approximation Rates for Neural Networks with Affine Latent Parameterizations",
-                "updated": "2026-08-31T17:55:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.31157v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.31157v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Many parameter-efficient methods generate the parameters of a large neural network from a low-dimensional latent representation. Given an architecture $\u03a6$ with $P_\u03a6$ parameter slots, we write $\\boldsymbol\u03b8_f=\\mathcal{G}(\\boldsymbol\u03be_f)$, where $\\mathcal{G}\\colon\\mathbb{R}^M\\to\\mathbb{R}^{P_\u03a6}$ is a parameter generator and $\\boldsymbol\u03be_f\\in\\mathbb{R}^M$ is a latent representation of the target function $f$. The architecture $\u03a6$ and the generator $\\mathcal{G}$ are shared across the entire target class, while each target $f$ is represented by its own latent vector $\\boldsymbol\u03be_f$, with $\u03a6_{\\mathcal{G}(\\boldsymbol\u03be_f)}$ approximating $f$. This framework encompasses hypernetworks, low-dimensional parameterizations, parameter-efficient adaptation, and model compression. Understanding the tradeoff between the latent dimension $M$ and the network budget $P$ is therefore fundamental to characterizing the expressive efficiency of these methods. We study this tradeoff for affine generators and fully connected ReLU architectures. More precisely, optimizing jointly over architectures $\u03a6$ satisfying $P_\u03a6\\leq P$ and affine generators $\\mathcal{G}:\\mathbb{R}^M\\to \\mathbb{R}^{P_\u03a6}$, we prove that the optimal worst-case uniform approximation error over the unit ball of $\u03b1$-H\u00f6lder functions on $[0,1]^d$, where $0<\u03b1\\leq1$, has the sharp order $ \\bigl(P\\min\\{M,P\\}\\bigr)^{-\u03b1/d}. $ In particular, our result shows that even a fixed-dimensional latent space suffices to achieve vanishing approximation error as the network budget increases.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-31T17:55:51Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": {
-                    "name": "Shijun Zhang"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.31149v1",
-                "title": "Learning to deform the matched filter",
-                "updated": "2026-08-31T17:50:38Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.31149v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.31149v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Analytical signal-processing blocks are interpretable and reliable, but their optimality depends on assumptions that practical hardware and channels violate. Learned replacements can adapt, but often discard the structure that makes the original solution understandable. Here we introduce deformable matched filtering, a platform in which learning steers a bounded deformation of an explicit matched filter instead of replacing the waveform-processing path. In a hardware-in-the-loop optical wireless link, blind state descriptors drive causal, pilotless updates while payload samples, transmitted references, and condition labels remain outside the controller. Receiver deformation generalises across held-out signalling and channel conditions and remains ahead of a span-matched fractionally spaced equaliser after stationary convergence in most tested regimes. A transferable transmitter deformation reduces error-vector magnitude in all 144 held-out evaluations, whereas its additional value after receiver adaptation emerges principally under severe combined distortion. KAN, MLP, and linear controllers provide different condition-dependent advantages within the same filter structure. During 24 hours of uninterrupted changing-condition operation, bounded deformable receivers recover their original operating regime after severe intervening distortion while the persistent conventional equaliser accumulates destructive state. These results establish deformable analytical filters as a reusable middle ground between fixed theory and end-to-end learned signal processing.",
-                "category": {
-                    "@term": "eess.SP",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-31T17:50:38Z",
-                "arxiv:primary_category": {
-                    "@term": "eess.SP"
-                },
-                "author": {
-                    "name": "Paul Anthony Haigh"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.31142v1",
-                "title": "Auditing Anonymous AI Models: A Four-Stage Protocol for Black-Box Identity Verification",
-                "updated": "2026-08-31T17:48:24Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.31142v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.31142v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The 2025--2026 AI market has seen a wave of stealth releases: frontier models launched anonymously on developer platforms under codenames. For their users, identity determines data-handling terms, supply-chain risk, and capability expectations. No validated methodology exists for black-box identity verification of anonymous models: practitioner checklists lack accuracy evidence, and self-identification is untrustworthy by design. We propose a four-stage forensic audit protocol for API-served models. Stage 0 reconstructs launch-time configuration from archived platform snapshots (Internet Archive), exposing preview--production drift. Stage 1 fingerprints configuration (context, output ceiling, reasoning, modality) against the platform catalog. Stage 2 tests tokenizer identity with a cross-length differential that rejects short-prompt collisions. Stage 3 corroborates with behavioral probes. We test declaration consistency on 10 known-identity releases (7 exact, 2 precision-differences, 1 partial, 0 counter-directional), not end-to-end identification under anonymity. Identification is validated prospectively on a flagship case whose 2026-08-23 analysis pointed to the GLM-5.3 version line and whose official reveal confirmed those family and version-line inferences (deployment variant was not pre-asserted; Flash was consistent post-reveal), and on three Stage-0-only cases where the protocol produced a graded hypothesis or declined rather than guessed. A standard-library-only implementation is provided as supplementary material.",
-                "category": [
-                    {
-                        "@term": "cs.SE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-31T17:48:24Z",
-                "arxiv:comment": "35 pages, 4 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.SE"
-                },
-                "author": {
-                    "name": "Yisen Xi"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.31139v1",
-                "title": "Configurable Semantic Chunking for Biomedical Information Extraction in Retrieval-Augmented Generation",
-                "updated": "2026-08-31T17:44:54Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.31139v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.31139v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "BioMedRAG introduced retrieval-augmented generation with a learned chunk scorer for biomedical information extraction. However, it relies on fixed-size chunking which can fragment semantic evidence. We propose a configurable semantic chunking framework that addresses this limitation by combining entity-preserving windows, trigger-centered chunking, proposition-first extraction, tiered trigger prioritization, and hierarchical relation resolution. The framework integrates with BioMedRAG by replacing only the chunk construction stage while preserving the embedding model, learned chunk scorer, generator, and evaluation protocol. We evaluate the framework on biomedical relation extraction benchmarks (GM-CIHT, DDI, ChemProt) and adverse event classification (ADE). On GM-CIHT, the full hybrid configuration achieves 82.6% F1, improving over the fixed-size baseline (74.2% F1) by 8.4 points under our experimental setup. Cross-dataset analysis shows that semantic chunking improves extraction datasets with explicit relation cues, such as GM-CIHT and DDI, while fixed chunking remains competitive or stronger for dense biochemical extraction and binary classification settings such as ChemProt and ADE. By externalizing chunking logic into configuration files, the framework provides an interpretable and adaptable alternative to rigid fixed-size chunking for biomedical RAG pipelines.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-08-31T17:44:54Z",
-                "arxiv:comment": "9 pages, 7 tables",
+                "published": "2026-09-01T17:55:10Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Riya Ahuja",
-                        "arxiv:affiliation": [
-                            "Institute of Data Science in Biomedicine, TU Braunschweig, Braunschweig, Germany",
-                            "Braunschweig Integrated Centre of Systems Biology, TU Braunschweig, Braunschweig, Germany"
-                        ]
+                        "name": "Ke Yang"
                     },
                     {
-                        "name": "Tim Kacprowski",
-                        "arxiv:affiliation": [
-                            "Institute of Data Science in Biomedicine, TU Braunschweig, Braunschweig, Germany",
-                            "Braunschweig Integrated Centre of Systems Biology, TU Braunschweig, Braunschweig, Germany"
-                        ]
+                        "name": "Chenglong Wang"
                     },
                     {
-                        "name": "Roya Shiasi Sardoabi",
-                        "arxiv:affiliation": [
-                            "Institute of Data Science in Biomedicine, TU Braunschweig, Braunschweig, Germany",
-                            "Braunschweig Integrated Centre of Systems Biology, TU Braunschweig, Braunschweig, Germany"
-                        ]
+                        "name": "Michel Galley"
+                    },
+                    {
+                        "name": "Chandan Singh"
+                    },
+                    {
+                        "name": "Jeevana Priya Inala"
+                    },
+                    {
+                        "name": "ChengXiang Zhai"
+                    },
+                    {
+                        "name": "Jianfeng Gao"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.31137v1",
-                "title": "OntoAligner-Ensemble: Voting-Based Fusion across Heterogeneous Ontology Alignment Techniques",
-                "updated": "2026-08-31T17:44:25Z",
+                "id": "http://arxiv.org/abs/2609.01588v1",
+                "title": "Designing Proactive Thought Partners for Writing",
+                "updated": "2026-09-01T17:54:32Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.31137v1",
+                        "@href": "https://arxiv.org/abs/2609.01588v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.31137v1",
+                        "@href": "https://arxiv.org/pdf/2609.01588v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Ontology alignment (OA) has evolved through several methodological paradigms, ranging from lexical and structural aligners to knowledge graph embedding (KGE) models and, more recently, Large Language Model (LLM)-based approaches. Although modern OA frameworks provide unified ecosystems for deploying these heterogeneous aligners, mechanisms for systematically reconciling their complementary and sometimes conflicting predictions remain relatively underexplored. We present OntoAligner-Ensemble, a modular and aligner-agnostic framework that combines candidate correspondences through a configurable two-stage process comprising voting-based fusion strategies followed by post-fusion selection policies. The framework supports any aligner implemented within OntoAligner that produces candidate correspondences, enabling diverse alignment paradigms to be integrated through a unified decision process. To demonstrate its effectiveness, we instantiate the framework using representative lightweight string-aligner, KGE-based, and Retrieval-Augmented Generation aligners powered by both open-weight and API-based LLMs. We evaluate individual aligners and ensemble configurations across eight benchmark tasks from five OAEI tracks spanning biomedical to beyond-equivalence. The results show that ensemble fusion consistently improves the balance between precision and recall and frequently outperforms standalone aligners across diverse domains. Furthermore, our analysis reveals that ensemble composition directly affects the precision-recall trade-off: heterogeneous cross-paradigm ensembles generally improve precision, whereas homogeneous LLM ensembles more often achieve higher overall F1-scores. These findings demonstrate that systematic ensemble learning offers a robust and reproducible strategy for OA while providing practical guidance for selecting ensemble compositions under different alignment scenarios.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-08-31T17:44:25Z",
-                "arxiv:comment": "14 pages, 1 figure, accepted for OM-2026 workshop at ISWC 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Hamed Babaei Giglou"
-                    },
-                    {
-                        "name": "S\u00f6ren Auer"
-                    },
-                    {
-                        "name": "Peio Popov"
-                    },
-                    {
-                        "name": "Mahsa Sanaei"
-                    },
-                    {
-                        "name": "Jennifer D'Souza"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2608.31133v1",
-                "title": "Implementing neural network mixed-effects models in Template Model Builder (TMB)",
-                "updated": "2026-08-31T17:43:02Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2608.31133v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2608.31133v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Neural network mixed-effects models (NMMs) have gained traction by combining the strong representation and predictive power of artificial neural networks with the capacity of mixed-effects modeling to capture complex correlation structures. However, existing estimation approaches rely heavily on manual derivations of objective functions and gradients, which inherently forces simplifying approximations and severely constrains the complexity and accuracy of NMMs. In this work, we introduce a general framework for implementing NMMs using Template Model Builder (TMB). By leveraging automatic differentiation and Laplace approximation, TMB requires users to specify only the negative joint log-likelihood and any regularization terms. The framework automatically integrates out random effects and evaluates the marginal objective function alongside its exact gradients, eliminating the need for manual derivations or ad hoc approximations. We demonstrate the efficiency, flexibility, and statistical performance of TMB-based NMMs across two numerical examples, including an application to monotonic NMMs. Reproducible code is provided to facilitate broader adoption.",
+                "summary": "Writing involves diverse cognitive activities, from ideation to revision, and writers' needs vary across individuals and moments. Proactive AI promises to provide the right support at the right time, yet existing proactive tools largely focus on generic textual assistance, such as autocomplete. This paper studies the design space of proactive thought partners: AI agents that proactively offer customizable, higher-level cognitive support during writing. We instantiated this concept in a technology probe and deployed it with 16 participants for one week. The probe allows users to create partners by configuring their roles and proactivity. As users write, relevant partners take the initiative at appropriate moments to offer suggestions. Our findings show that participants configured proactive support through prospective planning, used suggestions for both idea generation and self-monitoring, and valued lightweight visual representations alongside non-directive rhetorical framing for non-intrusive interventions. We derive implications for designing proactive writing assistants around customization, timing, engagement, and representation.",
                 "category": [
                     {
-                        "@term": "stat.ML",
+                        "@term": "cs.HC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-31T17:43:02Z",
+                "published": "2026-09-01T17:54:32Z",
+                "arxiv:comment": "30 pages, 5 figures",
                 "arxiv:primary_category": {
-                    "@term": "stat.ML"
+                    "@term": "cs.HC"
                 },
                 "author": [
                     {
-                        "name": "Nan Zheng"
+                        "name": "Chao Zhang"
                     },
                     {
-                        "name": "Hoi Yiu Cheung"
+                        "name": "Abe Davis"
                     },
                     {
-                        "name": "Vibhu Sharma"
+                        "name": "Chih-Wei Chen"
                     },
                     {
-                        "name": "James T. Thorson"
-                    },
-                    {
-                        "name": "Noel G. Cadigan"
+                        "name": "Chin-Chia Hsu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2608.31120v1",
-                "title": "On the Complexity of the Compatibility Problem for Succinctly Encoded Conditional Distributions",
-                "updated": "2026-08-31T17:32:21Z",
+                "id": "http://arxiv.org/abs/2609.01587v1",
+                "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
+                "updated": "2026-09-01T17:53:41Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2608.31120v1",
+                        "@href": "https://arxiv.org/abs/2609.01587v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2608.31120v1",
+                        "@href": "https://arxiv.org/pdf/2609.01587v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The motivation for this paper is the investigation of the trade-offs implicit in probabilistic models used in machine learning. Models are often used to make predictions in the form of conditional probabilities. However, a pair of conditional distributions p(x|y) and p(y|x) may not be compatible with any joint distribution p(x,y). Given two such conditionals, determining if there exists a compatible joint is known as the compatibility problem. For discrete random variables, when the conditionals are encoded as probability tables, the compatibility problem has a known solution, which is computationally tractable. In this paper, we formalise and study a succinct version of the problem, encoding conditional distributions as arithmetic circuits. This is applicable to practical applications of probabilistic modelling in high-dimensional settings, including neural network models. We show that, for succinct circuit representations of conditionals, the compatibility problem is intractable. In the case that all probabilities are non-zero, the problem is co-NP-complete. In the case that probabilities can be zero, we give examples to demonstrate that several notions of compatibility can be distinguished, and we prove that multiple versions of the problem are PSPACE-complete. Furthermore, we show that, assuming the polynomial hierarchy does not collapse, there exist compatible succinct conditionals whose joint cannot be expressed succinctly. Implications of these results for probabilistic modelling and machine learning are discussed.",
+                "summary": "Post-training quantization (PTQ) is widely used to reduce the cost of serving large language models (LLMs), but its accuracy cost is uneven and is often tuned per model. We study where quantization damage occurs and how to allocate a small additional precision budget. Using causal mixed-precision intervention as ground truth (raise each layer to 8-bit in turn and measure the accuracy it recovers) across 9 open-weight models in 4 architecture families, we test 3 intuitive hypotheses: that quantization damage lives in task circuits, where the model computes, or in weight statistics. None of them predicts which layers benefit from restored precision. Recovery is instead diffuse: for 8 of 9 models, recovering 75% of the gap takes roughly half the layers; the lone exception, Qwen3-8B, is sharply concentrated. At a matched precision budget, spending it globally on finer quantization granularity beats locally repairing the most recoverable layers for all 8 group-128-compatible models (all but OpenLLaMA, whose width rules out group-128), by 21-52 points, including the concentrated Qwen3-8B. We report 2 secondary findings: the residual is budget-limited (8-bit is near-lossless in our evaluation across RTN, GPTQ, and AWQ), and the location of peak recovery correlates with architecture within a family, though not across families. Within this budget setting, global granularity is a better default than selectively protecting critical layers. More broadly, cheap signals that correlate with quantization damage do not necessarily identify where restoring precision improves accuracy; this must be tested with causal intervention.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.PR",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-08-31T17:32:21Z",
-                "arxiv:comment": "14 pages",
+                "published": "2026-09-01T17:53:41Z",
+                "arxiv:comment": "Preprint. Under review at a NeurIPS 2026 workshop. 11 pages, 4 figures, 8 tables",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
-                "author": {
-                    "name": "Guy Emerson"
-                }
+                "author": [
+                    {
+                        "name": "Jundong Hu"
+                    },
+                    {
+                        "name": "Shekar Ramachandran"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.01576v1",
+                "title": "Pointwise Majorization for sub-Weibull and Mixed Tail Processes with Applications in Quadratic Chaos and Ergodic Diffusions",
+                "updated": "2026-09-01T17:42:38Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.01576v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.01576v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Classical chaining controls an indexed stochastic process through a single worst-case bound, which can obscure substantial variation across the index set. We establish the first simultaneous pointwise majorization theory for Banach-valued processes with sub-Weibull or two-metric mixed-tail increments. For an anchored sub-Weibull process on a separable index space, write $v(t):=d(t,t_0)$. Given a reference measure $\u03bc$, the envelope at $t$ is governed by the pointwise Fernique-Talagrand functional of order $\u03b1$, $\u03a6_{\u03bc,d}^{(\u03b1)}(t):=\\int_0^{4v(t)}(\\log\\frac{1}{\u03bc(B_d(t,r))})^{1/\u03b1}dr$. $\\forall \u03b4\\in(0,1)$, we obtain that $$ \\mathbb{P}(\\|Z_t\\|\\lesssim\\{\u03a6_{\u03bc,d}^{(\u03b1)}(t)+v(t)(\\log(e/\u03b4))^{1/\u03b1}\\},\\forall t)\\ge 1-\u03b4. $$ Our bound is determined by the pointwise complexity $\u03a6_{\u03bc,d}^{(\u03b1)}$ rather than a global quantity. The result holds for every $\u03b1>0$ and does not involve dyadic logarithmic terms from peeling. For mixed tail processes, with fixed measures $\u03bc_1,\u03bc_2$ and $v_j(t):=d_j(t,t_0)$, $\u03a6_j(t):=\\int_0^{4v_j(t)}(\\log\\frac{1}{\u03bc_j(B_{d_j}(t,r))})^{1/\u03b1_j}dr, j=1,2$, for any $\u03b4\\in(0,1)$, we show that $$\\mathbb{P}(\\|Z_t\\|\\lesssim\\sum_{j=1}^2\\{\u03a6_j(t)+v_j(t)(\\log\\frac{e}\u03b4)^{1/\u03b1_j}\\},\\forall t)\\ge 1-\u03b4.$$ Although the two regimes are coupled in the mixed tail condition, each retains its own pseudo-metric, reference measure, pointwise Fernique-Talagrand functional, and tail exponent. The proof tracks the index-wise costs of measure-generated admissible chains and synchronizes them through a nested common refinement. For applications, we derive matrix-specific bounds for centered quadratic chaos under pseudo-metrics induced by the operator and Frobenius norms, and observable-specific finite-time bounds for diffusion empirical processes.",
+                "category": [
+                    {
+                        "@term": "math.PR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-01T17:42:38Z",
+                "arxiv:primary_category": {
+                    "@term": "math.PR"
+                },
+                "author": [
+                    {
+                        "name": "Haichen Hu"
+                    },
+                    {
+                        "name": "David Simchi-Levi"
+                    }
+                ]
             }
         ]
     }
