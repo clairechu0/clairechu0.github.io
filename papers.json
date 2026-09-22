@@ -5,582 +5,87 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-09-22T00:28:41Z",
+        "updated": "2026-09-22T05:43:11Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "615648",
+        "opensearch:totalResults": "616612",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2609.22085v1",
-                "title": "SeeQ: Training Generalist Value Functions for Long-Horizon Robotic Manipulation",
-                "updated": "2026-09-18T17:59:47Z",
+                "id": "http://arxiv.org/abs/2609.25002v1",
+                "title": "Passthrough Rigidity: The Behavioral and Visuomotor Costs of Mediated Perception",
+                "updated": "2026-09-21T17:59:41Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2609.22085v1",
+                        "@href": "https://arxiv.org/abs/2609.25002v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2609.22085v1",
+                        "@href": "https://arxiv.org/pdf/2609.25002v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Despite rapid progress, generalist robot policies remain brittle on complex, long-horizon tasks that comprise multiple stages or require repeated attempts and deliberation on the same underlying stage before success. Q-value functions can improve these policies by ranking candidate actions or guiding policy improvement, but learning from sparse task-level rewards entails long credit-assignment horizons, difficult Bellman backups, and broad data-coverage requirements. We introduce SeeQ (Subtask-elicited Q-functions), which instead learns Q-values for the currently active subtask. This shortens the value-prediction horizon and enables effective learning with temporal-difference (TD) objectives. During training, subtask-level annotations present in offline robot data provide the decomposition and enable learning from broad, potentially suboptimal robot datasets. To eliminate the need for human annotations or modular subtask prediction systems at test time, our Q-function architecture is trained to autoregressively predict the active subtask in natural language before estimating its value. We instantiate SeeQ using a base vision-language backbone, pretrain it on diverse open-source robot manipulation data, and finetune it on downstream tasks. Across four real-world manipulation tasks on two bimanual robot platforms, the SeeQ value function substantially improves best-of-N policy steering.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-18T17:59:47Z",
-                "arxiv:comment": "Website: : https://saksham002.github.io/seeq/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Saksham Singh"
-                    },
-                    {
-                        "name": "Zheyuan Hu"
-                    },
-                    {
-                        "name": "Max Sobol Mark"
-                    },
-                    {
-                        "name": "Jeffrey Yu"
-                    },
-                    {
-                        "name": "Zackory Erickson"
-                    },
-                    {
-                        "name": "Aviral Kumar"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.22083v1",
-                "title": "MintAct: A Unified Visual Agent for Digital Environments",
-                "updated": "2026-09-18T17:59:34Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.22083v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.22083v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present MintAct, a family of vision-language models that unifies UI grounding, multi-step navigation across mobile, desktop, and web, and visual tool use, trained at 2B, 4B, and 8B scales. Through careful design of our environments, data, and training recipes, MintAct models match the performance of per-domain specialists across all of these capabilities. To enable this, we develop a scalable environment and reinforcement learning (RL) infrastructure. On the environment side, we host hundreds of concurrent instances across heterogeneous per-domain backends, serving both trajectory data collection and online RL. To enable efficient and scalable RL training, an asynchronous framework keeps explicit control over the cross-domain training distribution and remains stable under noisy environment feedback and off-policy drift. Experimental results show that MintAct achieves state-of-the-art performance (48.9 on OSWorld-Verified) across a wide range of benchmarks at comparable model sizes.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-18T17:59:34Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Mingfei Gao"
-                    },
-                    {
-                        "name": "Rui Tian"
-                    },
-                    {
-                        "name": "Haiming Gang"
-                    },
-                    {
-                        "name": "Bohan Zhai"
-                    },
-                    {
-                        "name": "Le Zhang"
-                    },
-                    {
-                        "name": "Yuanzheng Gong"
-                    },
-                    {
-                        "name": "Di Feng"
-                    },
-                    {
-                        "name": "Ege \u00d6zsoy"
-                    },
-                    {
-                        "name": "Kaixin Ma"
-                    },
-                    {
-                        "name": "Vishwesh Kirthivasan"
-                    },
-                    {
-                        "name": "O\u011fuzhan Fatih Kar"
-                    },
-                    {
-                        "name": "Roman Bachmann"
-                    },
-                    {
-                        "name": "Anders Boesen Lindbo Larsen"
-                    },
-                    {
-                        "name": "Afshin Dehghan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.22081v1",
-                "title": "Cross-sector generalization of accident-process role classification in occupational accident narratives",
-                "updated": "2026-09-18T17:59:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.22081v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.22081v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Occupational accident narratives contain valuable information about work situations, unfavourable conditions, accident events, and their consequences. Automatically structuring these narratives can facilitate large-scale accident analysis and support occupational risk prevention. However, the terminology and writing styles used to describe accidents vary considerably across sectors and organisations, raising questions about the ability of automated coding systems to generalize beyond their training domain. In this paper, we evaluate the cross-sector generalization of accident-process role classification in French occupational accident narratives. We construct an expert-annotated corpus in which factual units are classified into four roles: work situation (A0), explicitly reported unfavourable condition (A1), accident event or deviation (B), and reported consequence (C). The role classifiers are developed and selected exclusively on 42,244 factual units extracted from 6,040 construction-sector narratives and are then evaluated on unseen corpora from the metallurgy and chemistry--plastics sectors, as well as on an independently collected company corpus, without retraining or target-domain tuning of the role classifier. We compare frozen pretrained representations with task-specific fine-tuning and supervised representation-learning strategies. The results show that task-specific adaptation consistently improves cross-domain transfer over frozen representations. Across repeated training runs, the three leading task-adapted strategies achieved average balanced accuracies between 85.6% and 85.8% across the three target corpora. These findings support the development of transferable assisted-coding systems capable of consistently structuring heterogeneous occupational accident narratives for expert review and cross-sector prevention analysis.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-18T17:59:10Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Aho Yapi"
-                    },
-                    {
-                        "name": "Pierre Latouche"
-                    },
-                    {
-                        "name": "Arnaud Guillin"
-                    },
-                    {
-                        "name": "Yan Bailly"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.22076v1",
-                "title": "APort Vault: Benchmarking AI Agent Payment Authorization with the Open Agent Passport",
-                "updated": "2026-09-18T17:58:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.22076v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.22076v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "APort Vault is a benchmark for payment authorization in tool-using AI agents. It replays 4,371 attacks written by humans against a live payment agent during a public capture-the-flag event, across 14 models from 8 labs, five policy configurations and two replay tracks, with and without a deterministic pre-action check implementing the Open Agent Passport (OAP) specification. 225,964 evaluations completed. We report five distinct events per evaluation, because collapsing them is how an agent benchmark produces a number that does not survive review.\n  Requests are common and their rate differs far more across configurations than across models, though each attack exists at exactly one configuration so policy and attack cohort vary together: 10.9% of model-alone evaluations at Level 1, 3.0% at Level 2, 0.1% at Level 3, 79.4% at Level 4. On the 1,293 Level 4 prompts, each evaluated on every model, request rates run from 71.2% to 84.3%, and 809 prompts (62.6%) elicited a request from all fourteen models, each ending in a successful payment to the level's allowlisted recipient.\n  The authorization boundary is where the conditions diverge. At Levels 2 to 4, transfers to recipients the passport did not permit number 140 of 76,842 with the model alone and 0 of 69,297 behind the layer, and 105 against 0 on 68,970 matched model, prompt and track triples. The zero spans 790 source sessions, giving a per-session upper bound of 0.38%. It was not obtained by refusing payments: 25,370 payments executed behind the layer, while the policy denied 187 of the 25,640 transfer calls it evaluated, 148 of them for a forbidden recipient.\n  We release the 225,964 evaluations, the level passports, the scoring code and the analysis script at huggingface.co/datasets/aporthq/vault-benchmark-v1 .",
-                "category": {
-                    "@term": "cs.CR",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-18T17:58:10Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CR"
-                },
-                "author": {
-                    "name": "Uchi Uchibeke"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.22075v1",
-                "title": "LIMBO: Learning and Internalizing Model-Free Barrier Objectives for Agile and Safe Whole-Body Control",
-                "updated": "2026-09-18T17:57:56Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.22075v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.22075v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Safe whole-body control requires coordinating collision avoidance and balance under high-dimensional, nonlinear dynamics--making safety certificates difficult to design and reuse across behaviors. We present LIMBO, a framework for synthesizing a state-action control barrier function and distilling its safety structure into a task policy. LIMBO learns the safety certificate from black-box transitions and a state-based failure specification over residual actions around a frozen base controller, making Q-CBF synthesis tractable in the full control dimension while placing the certificate in the task policy's control space. During synthesis, the learned safety value drives risk-guided sampling near the estimated boundary of recoverability; during task learning, it serves as a teacher that provides action-level safety feedback, yielding a robust task policy and alleviating the need for an online safety filter at deployment. We demonstrate LIMBO on a 29-degree-of-freedom humanoid performing dodgeball avoidance and locomotion beneath low obstacles. Beyond scaling learned Q-CBFs to whole-body control, we show that risk-guided boundary sampling provides a theoretically grounded way to explore the edge of recoverability. Under the same safety specification, ceteris paribus, varying the sampling concentration produces strategies ranging from crouching to a novel backward-leaning limbo maneuver. In both settings, the learned policies transfer to hardware without online safety filtering, showing that learned safety synthesis scales to agile whole-body control.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-18T17:57:56Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Jake Gonzales"
-                    },
-                    {
-                        "name": "Arturo Flores Alvarez"
-                    },
-                    {
-                        "name": "Yu-Ming Chen"
-                    },
-                    {
-                        "name": "Aaron D. Ames"
-                    },
-                    {
-                        "name": "Lillian J. Ratliff"
-                    },
-                    {
-                        "name": "Manikantan Nambi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.22073v1",
-                "title": "Duty Factor Predicts Robust Constrained Quadrupedal Locomotion Across Gait Types",
-                "updated": "2026-09-18T17:57:08Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.22073v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.22073v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Quadrupedal robots are increasingly deployed in environments where locomotion must remain robust to disturbances and constrained terrain. Gait type, such as walking or trotting, is commonly used to characterize quadrupedal locomotion. However, gait type does not uniquely define locomotion, as parameters such as duty factor, speed, and stance width can vary within a single gait type. In this work, we investigate the relationship between these gait parameters using three distinct quadrupedal locomotion control approaches. First, using whole body trajectory optimization with LQR feedback, we show that duty factor is a stronger predictor of local error convergence than nominal gait type. Second, we investigate duty factor selection with a learned locomotion controller, suggesting how duty factor may serve as a low-dimensional parameter for adapting locomotion robustness in narrow-terrain environments. Finally, we show that these trends persist under a centroidal model predictive control framework and validate them through narrow-terrain experiments on a physical quadruped. These results show that duty factor provides a simple and effective basis for understanding and selecting robust quadrupedal locomotion across gait types and control architectures.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-18T17:57:08Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "James Zhu"
-                    },
-                    {
-                        "name": "David Ologan"
-                    },
-                    {
-                        "name": "George Ortiz"
-                    },
-                    {
-                        "name": "Thomas Chun Fai Lee"
-                    },
-                    {
-                        "name": "Selvin Garcia Gonzalez"
-                    },
-                    {
-                        "name": "Ardalan Tajbakhsh"
-                    },
-                    {
-                        "name": "Pinhas Ben-Tzvi"
-                    },
-                    {
-                        "name": "Aaron M. Johnson"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.22071v1",
-                "title": "Discovery, Characterization, and Potential Origins of a Stream in the Stellar Halo of Nearby LMC-Mass Galaxy NGC 55",
-                "updated": "2026-09-18T17:56:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.22071v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.22071v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present a previously undetected stellar stream in the halo of the LMC-mass dwarf galaxy NGC 55 (2 Mpc), as part of an ongoing effort to characterize the stellar halos of LMC/SMC-mass dwarfs in the DEEP component of the DECam Local Volume Exploration (DELVE) survey. This structure is aligned with an outflow traced by H$\u03b1$ emission, a spur and cloud of neutral hydrogen, and the ultra-diffuse and possibly disrupting satellite galaxy NGC 55-dw1. We investigate possible ex-situ progenitor scenarios for this stream through the local luminosity-metallicity relation and a set of toy dynamical models that include gaseous, stellar, and dark matter components. If the stream is a product of a previous merger, the progenitor galaxy had an absolute magnitude $M_V \\leq -7.2$ and a stellar mass $M_* \\geq 10^5 M_{\\odot}$ based on extrapolations of the detected stellar populations. If it is disrupted material from the ultra-diffuse satellite, their shared progenitor had an absolute magnitude $M_V \\leq -8.3$ and a stellar mass $M_* \\geq 10^{5.2} M_{\\odot}$. We compare our stream and progenitor scenarios to those for NGC 300, a galaxy with a stellar mass similar to that of NGC~55 and known to host multiple structures in its halo. Our results demonstrate that even relatively isolated LMC-mass galaxies can have complex accretion histories, providing new tests of hierarchical galaxy formation at low masses.",
-                "category": {
-                    "@term": "astro-ph.GA",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-18T17:56:58Z",
-                "arxiv:comment": "21 pages, 9 figures, submitted to ApJ",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.GA"
-                },
-                "author": [
-                    {
-                        "name": "Benjamin N. Velguth"
-                    },
-                    {
-                        "name": "Bur\u00e7in Mutlu-Pakdil"
-                    },
-                    {
-                        "name": "Erik Tollerud"
-                    },
-                    {
-                        "name": "Sarah Pearson"
-                    },
-                    {
-                        "name": "Kristine Spekkens"
-                    },
-                    {
-                        "name": "Amandine Doliva-Dolinsky"
-                    },
-                    {
-                        "name": "Michael G. Jones"
-                    },
-                    {
-                        "name": "Denija Crnojevi\u0107"
-                    },
-                    {
-                        "name": "Jeffrey L. Carlin"
-                    },
-                    {
-                        "name": "David J. Sand"
-                    },
-                    {
-                        "name": "Paul Bennet"
-                    },
-                    {
-                        "name": "Guy Stringfellow"
-                    },
-                    {
-                        "name": "William Cerny"
-                    },
-                    {
-                        "name": "Alex Drlica-Wagner"
-                    },
-                    {
-                        "name": "Joanna D. Sakowska"
-                    },
-                    {
-                        "name": "Jaclyn Jensen"
-                    },
-                    {
-                        "name": "Laura C. Hunter"
-                    },
-                    {
-                        "name": "Eric F. Bell"
-                    },
-                    {
-                        "name": "David Mart\u00ednez-Delgado"
-                    },
-                    {
-                        "name": "Anirudh Chiti"
-                    },
-                    {
-                        "name": "Adam Smercina"
-                    },
-                    {
-                        "name": "Nitya Kallivayalil"
-                    },
-                    {
-                        "name": "Deepthi S. Prabhu"
-                    },
-                    {
-                        "name": "Alexander H. Riley"
-                    },
-                    {
-                        "name": "Yumi Choi"
-                    },
-                    {
-                        "name": "Noelia E. D. No\u00ebl"
-                    },
-                    {
-                        "name": "Sasha N. Campana"
-                    },
-                    {
-                        "name": "Guinevere Herron"
-                    },
-                    {
-                        "name": "Alistair R. Walker"
-                    },
-                    {
-                        "name": "Andrew B. Pace"
-                    },
-                    {
-                        "name": "Clara E. Mart\u00ednez-V\u00e1squez Clecio R. Bom"
-                    },
-                    {
-                        "name": "Julio A. Carballo-Bello"
-                    },
-                    {
-                        "name": "Pol Massana"
-                    },
-                    {
-                        "name": "Gustavo E. Medina"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.22070v1",
-                "title": "A Sociotechnical Review of Algorithms in Health Systems: Technical, Cost, and Human-Centered Considerations",
-                "updated": "2026-09-18T17:56:41Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.22070v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.22070v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Artificial intelligence (AI) applications in healthcare are becoming increasingly prevalent, to assist health systems, providers, and patients with tasks such as decision-making, risk prediction, and diagnosis. This increasing computational potential brings AI applications to the forefront of workplace decision making, often without full consideration of subsequent computational, organizational, and social costs. These applications are leveraged to reduce healthcare costs and increase efficiency of daily tasks, with model-related costs being considered at varying levels of granularity. To understand these trends, we critically analyze 114 papers to examine how cost-aware AI models have been developed for health systems. We explore the data, method, and outcome choices of these models, as well as their intersection with cost and human-centered concerns, highlighting the gaps in rigorous sociotechnical model design. From these trends, we define model costs and subsequent dimensions, presenting insight into those studies reporting financial, computational, organizational and/or social measures. Further, we critique the benefits and challenges of evaluating model-related costs and sustainability concerns when developing AI models for health systems.",
+                "summary": "Broad public adoption of head-mounted displays using video passthrough remains elusive despite significant market investment. A precise understanding of why users experience persistent discomfort even as hardware factors such as resolution and latency have dramatically improved remains an open issue. This paper investigates the impact of viewing the world through video passthrough systems on human behavioral and physiological patterns through a large-scale multimodal study. We developed a novel protocol to capture synchronized oculomotor, kinematic, and physiological data during a block assembly task requiring complex hand-eye coordination. Using a within-subject design (N=110), we evaluated both natural and passthrough viewing conditions. Our results reveal a four-fold suppression of rotational head velocity and a pronounced decoupling of head-gaze coordination. This suggests motor caution being employed as an adaptive strategy - which we term \"Passthrough Rigidity\". This phenomenon appears to shift the information-gathering burden to the oculomotor system, resulting in significantly longer fixation durations and restricted visual search patterns. These kinematic shifts directly correlate with poorer task performance and measurable physiological cost, evidenced by a significant reduction in blink duration and increased reports of ocular strain and cognitive load. We conclude that current passthrough implementations induce a measurable shift from flexible exploration to motor caution, where task performance is preserved at the cost of user comfort and biomechanical efficiency. These findings provide a novel quantitative framework for evaluating and improving future XR devices, establishing that resolving \"comfort\" for passthrough requires addressing the deep-seated biomechanical compensations caused by mediated perception. Data available at https://data.nvision.eecs.yorku.ca/Passthrough",
                 "category": {
                     "@term": "cs.HC",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-09-18T17:56:41Z",
+                "published": "2026-09-21T17:59:41Z",
+                "arxiv:comment": "10 pages, 16 Figures, ISMAR",
                 "arxiv:primary_category": {
                     "@term": "cs.HC"
                 },
                 "author": [
                     {
-                        "name": "Victoria Chui"
+                        "name": "Markus D. Solbach"
                     },
                     {
-                        "name": "Kelly McConvey"
+                        "name": "Mohit Goyal"
                     },
                     {
-                        "name": "Shion Guha"
+                        "name": "Sakar Khattar"
+                    },
+                    {
+                        "name": "Jayant Varma"
+                    },
+                    {
+                        "name": "Bjorn Vlaskamp"
+                    },
+                    {
+                        "name": "John K. Tsotsos"
+                    },
+                    {
+                        "name": "Konstantine Tsotsos"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2609.22068v1",
-                "title": "CodeMidas: Scaling Agentic Coding RL Environments from Code Itself",
-                "updated": "2026-09-18T17:55:17Z",
+                "id": "http://arxiv.org/abs/2609.25001v1",
+                "title": "GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay",
+                "updated": "2026-09-21T17:59:33Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2609.22068v1",
+                        "@href": "https://arxiv.org/abs/2609.25001v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2609.22068v1",
+                        "@href": "https://arxiv.org/pdf/2609.25001v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Training capable coding agents via reinforcement learning (RL) requires diverse tasks with reliable verifiers. Open-source codebases offer a rich source of such tasks, while existing methods typically rely on development artifacts such as issues and commits, limiting the range of tasks that can be extracted. To better scale RL environments, we present CodeMidas, an agentic pipeline that turns implemented functionality in existing codebases into executable RL environments using source code as its only task-specific input. CodeMidas allocates agentic compute to every stage of environment construction: agents explore implemented functionality to formulate behavioral specifications, construct tests grounded in execution of the original code, and validate and filter candidate tasks through execution checks and repeated solution rollouts. The resulting dataset has 5,545 training tasks from 3,185 open-source codebases spanning 23 programming languages and 15 technical domains. Training MiMo-V2.5 on these tasks with GRPO improves performance on all five diverse benchmarks, covering issue repair (DeepSWE + 11.7%), whole-program construction (ProgramBench +17%), and terminal work (Terminal-Bench v2.1 +8.5%). Ablations show that increasing the number of high-quality training tasks improves performance. Trajectory analysis shows the RL-trained agent demonstrates better behaviors like increasing codebase exploration and more diverse self-verification. These results establish source code as a scalable foundation for constructing RL environments that improve coding agents across diverse software tasks.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-18T17:55:17Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Bowen Ye"
-                    },
-                    {
-                        "name": "Lei Li"
-                    },
-                    {
-                        "name": "Shicheng Li"
-                    },
-                    {
-                        "name": "Zihao Yue"
-                    },
-                    {
-                        "name": "Linghao Zhang"
-                    },
-                    {
-                        "name": "Hanglong Lv"
-                    },
-                    {
-                        "name": "Yuanxin Liu"
-                    },
-                    {
-                        "name": "Wenhan Ma"
-                    },
-                    {
-                        "name": "Hao Tian"
-                    },
-                    {
-                        "name": "Rang Li"
-                    },
-                    {
-                        "name": "Jinhao Dong"
-                    },
-                    {
-                        "name": "Yikai Zhao"
-                    },
-                    {
-                        "name": "Xiangwei Deng"
-                    },
-                    {
-                        "name": "Hailin Zhang"
-                    },
-                    {
-                        "name": "Liang Zhao"
-                    },
-                    {
-                        "name": "Qi Liu"
-                    },
-                    {
-                        "name": "Lingpeng Kong"
-                    },
-                    {
-                        "name": "Tong Yang"
-                    },
-                    {
-                        "name": "Fuli Luo"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.22067v1",
-                "title": "Value-Sensitive Delegation in Everyday AI Agent Use: Evidence from OpenClaw",
-                "updated": "2026-09-18T17:55:09Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.22067v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.22067v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Users increasingly delegate work to autonomous AI agents, yet evaluations typically measure task completion rather than the values users prioritize. Using Value Sensitive Design, we analyzed, with LLM assistance, 73,093 first-person Reddit posts about using OpenClaw, each for its human value, agent aspect, value fulfillment, and user outcome. The 21 values form six value groups, including Autonomous, Dependable, and Affordable Operation, Bounded Reach, Reviewability, and Equitable Access. Relative to each aspect's corpus share, values clustered not at the agent's outputs but at the operating conditions users set around a run. Values were usually met where users described what the agent delivered, in five of six groups, and mostly unmet where users described supervising it, in all six groups. We conceptualize this pattern as value-sensitive delegation. Supporting human values requires attention not only to what an agent accomplishes, but to the conditions users set around delegation, including cost, access, and oversight.",
+                "summary": "Modern video games provide a measurable testbed for AI models, combining abilities of visual understanding, instruction decomposition, goal planning, and precise action control over multiple temporal horizons. Existing datasets and benchmarks, however, either cover a narrow range of games, lack language instructions, or rely on high-variance online rollouts. To address these challenges, we introduce GameHorizon, a unified data and evaluation suite that measures gameplay capabilities at different horizons for diverse model families. GameHorizon Suite consists of three components. First, GameHorizon-Annotator is a scalable and automated annotation pipeline for multi-horizon instructions. Second, utilizing the pipeline, we construct GameHorizon-Data, the first large-scale AAA gameplay dataset with temporally aligned videos, player actions, and multi-horizon instructions. It comprises 5,000 hours of recordings from 21 games, collected by 100 human expert players. Third, we build GameHorizon-Bench with reproducible offline and stepwise online testing. The offline track enables reproducible evaluation using thousands of standardized questions organized into three primary tasks and a series of diagnostic variants, while the online track tests whether offline scores reflect actual gameplay capabilities and localizes failures to specific steps within long-horizon gameplay. Based on our GameHorizon Suite, we evaluate 47 models through more than one million model invocations, revealing a meaningful hierarchy of task difficulty and pronounced differences in model capabilities. Our work can provide a standardized yardstick for evaluating gameplay capabilities across horizons and model families. We will release our dataset, annotator, and benchmark to facilitate future research.",
                 "category": [
                     {
-                        "@term": "cs.HC",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -588,28 +93,553 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-09-18T17:55:09Z",
+                "published": "2026-09-21T17:59:33Z",
+                "arxiv:comment": "We will release our dataset, annotator, and benchmark to facilitate future research. Github Repo: https://github.com/TencentARC/GameHorizon & Project Page: https://gamehorizon-suite.github.io",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Yiran Wang"
+                    },
+                    {
+                        "name": "Xingyilang Yin"
+                    },
+                    {
+                        "name": "Junfu Pu"
+                    },
+                    {
+                        "name": "Guangzhi Wang"
+                    },
+                    {
+                        "name": "Kaifeng Li"
+                    },
+                    {
+                        "name": "Mingyu Ouyang"
+                    },
+                    {
+                        "name": "Huiqiang Sun"
+                    },
+                    {
+                        "name": "Lingen Li"
+                    },
+                    {
+                        "name": "Cheng Cheng"
+                    },
+                    {
+                        "name": "Wangbo Yu"
+                    },
+                    {
+                        "name": "Honghao Chen"
+                    },
+                    {
+                        "name": "Xiaodong Cun"
+                    },
+                    {
+                        "name": "Chi-Man Pun"
+                    },
+                    {
+                        "name": "Zhiguo Cao"
+                    },
+                    {
+                        "name": "Ying Shan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.24997v1",
+                "title": "VideoGen-Agent: Reinforcing Video Generation Agents",
+                "updated": "2026-09-21T17:58:56Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.24997v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.24997v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent advances in video generative models have enabled high-fidelity, temporally coherent video generation. However, these models often struggle to satisfy prompts requiring specialized knowledge, specific identities, physical consistency, or ordered events. In this paper, we present VideoGen-Agent, a multimodal agent trained through multitask agentic reinforcement learning to use external tools for video generation. The agent coordinates augmentation, generation, and verification tools through multi-turn interactions, using the prompt and intermediate observations to guide its decisions. We train a shared policy on a category-balanced dataset spanning six tasks. Supervised fine-tuning on teacher-generated trajectories establishes tool-use behavior, which is then refined through reinforcement learning. A category-aware hybrid reward evaluates tool-call validity, task-appropriate tool use, and generated video quality. We further introduce VABench, a held-out benchmark of 600 prompts covering procedural knowledge, single- and multi-entity identity preservation, physical consistency, scene composition, and multi-shot temporal structure. On VABench, VideoGen-Agent improves over its base text-to-video generator by 19.1 points, from 56.5 to 75.6. Upgrading the generation tools further raises the score to 86.1 without additional agent training. Human raters prefer the upgraded configuration over the strongest standalone baseline in 84.3% of comparisons. These results support learning tool use across video-generation tasks and show that the trained agent can benefit from subsequent advances in generation tools.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-21T17:58:56Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Binxu Li"
+                    },
+                    {
+                        "name": "Haoyi Duan"
+                    },
+                    {
+                        "name": "Yuhui Zhang"
+                    },
+                    {
+                        "name": "Yaohui Zhang"
+                    },
+                    {
+                        "name": "Zihao Lin"
+                    },
+                    {
+                        "name": "Kaituo Feng"
+                    },
+                    {
+                        "name": "Suozhi Huang"
+                    },
+                    {
+                        "name": "Xiangyi Li"
+                    },
+                    {
+                        "name": "Yu Li"
+                    },
+                    {
+                        "name": "Chunyuan Li"
+                    },
+                    {
+                        "name": "Shilong Liu"
+                    },
+                    {
+                        "name": "Mengdi Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.24996v1",
+                "title": "Learning Beyond What Humans Can Demonstrate",
+                "updated": "2026-09-21T17:58:49Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.24996v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.24996v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Behavior cloning for robot manipulation relies on expert demonstrations. However, for tasks that require dynamic stability, precise contact timing, or dexterous coordination, human operators may find it hard or even impossible to collect data. We study this infeasible-demonstration regime and propose GLIDE: Guardrails for Learning from Infeasible Demonstrations Efficiently, a framework that infers task-specific failure modes and converts them into executable guardrails for data collection and policy deployment. Given a task description and the conditioning teleoperation code, GLIDE writes guardrails that use system states to filter teleoperation and policy commands, constrain failure-prone actions, and iteratively improve from trajectory feedback. Across three tasks, GLIDE discovers emergent guardrails that go beyond domain-expert hardcoded ones, improving data collection over naive VR teleoperation and domain-expert hardcoded guardrails. After refinement, GLIDE raises data-collection success from 0-10 percent to 70-90 percent across the three tasks. During policy execution, mixed-data guarded policies reach 70 percent, 60 percent, and 60 percent success on Tomato plate transfer, Marker handover and stand, and Wine serving tasks. These results show that GLIDE can support policy learning when direct demonstrations are infeasible. Project website: http://guardrail-policy.github.io/",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-21T17:58:49Z",
+                "arxiv:comment": "Accepted to CoRL 2026. Project website: http://guardrail-policy.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Yuchen Song"
+                    },
+                    {
+                        "name": "Aditya Mittal"
+                    },
+                    {
+                        "name": "Unnat Jain"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.24991v1",
+                "title": "Who Pays for the KV Cache? Attributing Shared AI Inference Spend Across Kubernetes and LLM Provider Bills",
+                "updated": "2026-09-21T17:57:40Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.24991v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.24991v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Organizations pay for AI through disconnected ledgers: Kubernetes allocations for self-hosted inference, gateway logs, and per-token bills from API providers. We present unalloc, an open-source tool that joins OpenCost, LiteLLM, OpenAI and Anthropic cost data into one exact ledger and reports the share of spend with no owner, and use it to study where attribution breaks at the seams between these systems. Five case studies run inference for real or simulate it: a vLLM-style serving simulator with paged KV memory and prefix caching; a PyTorch transformer serving a multi-tenant trace with a real KV cache; tensor- and pipeline-parallel inference on torch.distributed; the unmodified CLI against mock provider APIs; and four downstream use cases. At the seams, in a constructed multi-pod deployment scenario -- one month of synthetic OpenCost allocations, not observed billing data -- owner labels set only on LeaderWorkerSet leader pods leave 66% of that deployment's GPU bill unowned, and the natural fallback key assigns 61% of it to a Helm chart name while the headline unallocated share falls to 4%; enabling every source double counts all gateway spend; and reading one page of a billing API reports a quarter of spend. Inside a shared inference server the metering rule decides who pays: on an NVIDIA H100 running vLLM, a token meter assigns a retrieval-heavy tenant 12-14 percentage points more of the bill than an equal time-share meter at every load tested, while GPU utilization reads 97-99% across configured loads of 2 to 16 requests per second (3.7 to 26.9 completed requests per second; the configured rate counts session-initial arrivals only) and power draw tracks load. Neither meter is a ground truth; we position these results against recent Shapley-based energy attribution. Code, raw data, captured evidence, figures and the paper regenerate from the repository.",
+                "category": [
+                    {
+                        "@term": "cs.DC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.PF",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-21T17:57:40Z",
+                "arxiv:comment": "14 pages, 9 figures, 4 tables. Includes a validation run with vLLM on an NVIDIA H100. Code, data and reproduction scripts: https://github.com/timurista/unalloc. Software: doi:10.5281/zenodo.22761012. Use of generative AI is disclosed in the paper (\"Use of AI tools\")",
+                "arxiv:primary_category": {
+                    "@term": "cs.DC"
+                },
+                "author": {
+                    "name": "Timothy Urista"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.24987v1",
+                "title": "EPOCHS-DR2 I: Expanded data release and properties of $6.5<z<16.5$ photometrically selected galaxies across NIRCam deep fields covering $\\sim700\\,\\rm arcmin^2$ with the galfind software",
+                "updated": "2026-09-21T17:57:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.24987v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.24987v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present the \\epochstwo\\ sample of $2452$ star forming galaxies at $6.5<z_{\\rm phot}<16.5$ produced using the \\galfind\\ photometric pipeline across $\\sim650-740~\\mathrm{arcmin}^2$ in six of the most widely used deep, blank field \\jwst/NIRCam imaging surveys. $293$ galaxies are spectroscopically confirmed and a spectroscopic--photometric redshift comparison yields a normalized median absolute deviation, $\u03c3_{\\rm NMAD}=0.017$, an $\u03b7=4.3\\%$ outlier rate, and a mean offset $\\langle\u0394z\\rangle=-0.022$. We find $34$ little red dots (LRDs) with ``V--shaped'' SEDs, as well as $69$ L--type, $36$ T--type, and $2$ compact Y--type brown dwarf candidates, which we remove from our sample. The fiducial sample yields a flattening $\u03b2_{\\rm UV}-M_{\\rm UV}$ relation with only moderately blue median $\u03b2_{\\rm UV}(M_{\\rm UV}=-19)=-2.32^{+0.08}_{-0.07}$ at $z\\simeq12.5$, implying dust-polluted stellar populations at the highest redshifts. A ``gold'' sample of $62$ sources are identified at $z_{\\rm phot}>10.5$, $\\sim85\\%$ of which are without NIRSpec follow-up, including $15$ candidates at $z_{\\rm phot}>13.5$ across a diverse range of proper sizes $30\\,\\rm pc\\lesssim r_{\\rm c}\\lesssim1.5\\,\\rm kpc$ and UV slopes $-4.0\\lesssim\u03b2_{\\rm UV}\\lesssim-1.5$. Two very promising candidates stand out, GS-W-4608 and GN-Med-1881, with $\u03b2_{\\rm UV}\\lesssim-3$, $\\gtrsim1.6\\,\\rm mag$ \\lya\\ break colors, and F335M and F410M detections which improve their high-redshift solution robustness. Complementary to our high-redshift sample, this public data release provides the community with optical/NIR catalogs, empirical PSFs, and \\eazypy, \\bagpipes, and \\bdfinder\\ SED fitting results, enhancing the legacy value of photometric JWST data in the upcoming era of wide-field imaging datasets with Euclid and Roman.",
+                "category": {
+                    "@term": "astro-ph.GA",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-21T17:57:26Z",
+                "arxiv:comment": "38 pages, 11 figures, 8 tables, Submitted to ApJ",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.GA"
+                },
+                "author": [
+                    {
+                        "name": "Duncan Austin"
+                    },
+                    {
+                        "name": "Christopher J. Conselice"
+                    },
+                    {
+                        "name": "Thomas Harvey"
+                    },
+                    {
+                        "name": "Nathan J. Adams"
+                    },
+                    {
+                        "name": "Louis Quilley"
+                    },
+                    {
+                        "name": "Jordan C. J. D'Silva"
+                    },
+                    {
+                        "name": "Vadim Rusakov"
+                    },
+                    {
+                        "name": "Qiong Li"
+                    },
+                    {
+                        "name": "Lewi Westcott"
+                    },
+                    {
+                        "name": "Caio Goolsby"
+                    },
+                    {
+                        "name": "James Arcidiacono"
+                    },
+                    {
+                        "name": "Kai Madgwick"
+                    },
+                    {
+                        "name": "William J. Roper"
+                    },
+                    {
+                        "name": "Brenda Frye"
+                    },
+                    {
+                        "name": "Norman A. Grogin"
+                    },
+                    {
+                        "name": "Rafael Ortiz"
+                    },
+                    {
+                        "name": "Rogier Windhorst"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.24986v1",
+                "title": "Who Does What in AI Auditing? Designing Human-AI Collaboration for Auditing Generative AI",
+                "updated": "2026-09-21T17:57:22Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.24986v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.24986v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "AI auditing increasingly incorporates AI agents to expand the scale and breadth of audit coverage, yet little is known about how auditing work should be divided without displacing human judgment. We introduce Human-Agent Audit Collaboration (HAAC), a workflow and system for structuring human-AI collaboration in AI auditing. Drawing on prior work and formative consultations with AI auditing practitioners, HAAC specifies how agents can support exploration, assessment, reporting, and review while preserving human oversight where contextual judgment is critical. We instantiate HAAC for conversational shopping agents and evaluate it through two studies. With 71 auditors, AI assistance increased attack success and broadened exploration, while also shaping later attacks and increasing auditors' reliance on AI-generated assessments and reports. Interviews with Responsible AI practitioners showed that actionable audits require visibility into coverage, reproducible attack trajectories, and evaluation of the auditing agents themselves. Our findings identify design considerations for effective and accountable human-AI auditing.",
+                "category": {
+                    "@term": "cs.HC",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-21T17:57:22Z",
+                "arxiv:comment": "Preprint",
                 "arxiv:primary_category": {
                     "@term": "cs.HC"
                 },
                 "author": [
                     {
-                        "name": "Renkai Ma"
+                        "name": "Eunkyu Park"
                     },
                     {
-                        "name": "Ruyuan Wan"
+                        "name": "Markelle Roesti"
                     },
                     {
-                        "name": "Xuan Lu"
+                        "name": "Wesley Hanwen Deng"
                     },
                     {
-                        "name": "Fan Yang"
+                        "name": "Renata Barreto"
                     },
                     {
-                        "name": "Chen Chen"
+                        "name": "Mohammad Tahaei"
                     },
                     {
-                        "name": "Lingyao Li"
+                        "name": "Kenneth Holstein"
+                    },
+                    {
+                        "name": "Jason Hong"
+                    },
+                    {
+                        "name": "Motahhare Eslami"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.24985v1",
+                "title": "Critical-State RL: Diagnosing Trainable States for Multi-Turn Tool Use",
+                "updated": "2026-09-21T17:57:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.24985v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.24985v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Multi-turn tool-use failures can hinge on a single model call, yet reward variation alone does not reveal which call would benefit from training. When rewards depend on later interactions, their variation can reflect downstream randomness rather than differences between the current actions. We introduce Critical-State RL to identify trainable states in multi-turn interactions. Given task-defined candidate calls and local rewards, the method assesses whether each reward captures the action's effect on task success and whether improvement over a reference policy is possible. It then uses nested sampling to separate action-dependent reward variation from continuation noise and optimizes the policy at the selected states using contextual-bandit training. Experiments on the Berkeley Function Calling Leaderboard (BFCL) v4 compare training at diagnostic-selected states with training at alternative states. For missing-function tasks, the diagnostic selects the response after the tool becomes available; for missing-argument tasks, it selects the response before the missing argument is supplied. Training the selected responses improves performance, including about 14 percentage points on the missing-function task, while training the alternatives leaves performance flat or worse. We further apply the recipe across models and tasks, including logged repeat-call avoidance and memory management.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-21T17:57:20Z",
+                "arxiv:comment": "31 pages, 8 figures, 7 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Zixiang Chen"
+                    },
+                    {
+                        "name": "Wenting Zhao"
+                    },
+                    {
+                        "name": "Zhepeng Cen"
+                    },
+                    {
+                        "name": "Akshara Prabhakar"
+                    },
+                    {
+                        "name": "Jielin Qiu"
+                    },
+                    {
+                        "name": "Jianguo Zhang"
+                    },
+                    {
+                        "name": "Zhiwei Liu"
+                    },
+                    {
+                        "name": "Tulika Manoj Awalgaonkar"
+                    },
+                    {
+                        "name": "Liangwei Yang"
+                    },
+                    {
+                        "name": "Shelby Heinecke"
+                    },
+                    {
+                        "name": "Silvio Savarese"
+                    },
+                    {
+                        "name": "Huan Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.24984v1",
+                "title": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory",
+                "updated": "2026-09-21T17:57:06Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.24984v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.24984v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Video world models enable interactive exploration of dynamic environments, yet struggle to respect prior observations over long horizons and across viewpoints. We present WorldCrafter, a video world model that learns a camera-queryable implicit 3D-aware memory for this purpose. The key insight is to let the requested viewpoint shape how multi-view evidence is compressed into the video generator's limited token budget. Trained jointly with the video generator, a memory encoder and pose-conditioned readout module integrate historical observations into a fixed set of target view-specific tokens before denoising, without explicit depth-based correspondences. By combining this memory with recent temporal context and few-step distillation, WorldCrafter enables streaming scene exploration from a single input image or text prompt. Experiments across static and dynamic scenes show substantial gains in long-horizon consistency and camera-control accuracy while preserving visual quality during minute-scale exploration.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.GR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-21T17:57:06Z",
+                "arxiv:comment": "Project webpage: https://drexubery.github.io/WorldCrafter",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Wangbo Yu"
+                    },
+                    {
+                        "name": "Kunhao Liu"
+                    },
+                    {
+                        "name": "Wenbo Hu"
+                    },
+                    {
+                        "name": "Shenghai Yuan"
+                    },
+                    {
+                        "name": "Chaoran Feng"
+                    },
+                    {
+                        "name": "Haiyang Zhou"
+                    },
+                    {
+                        "name": "Yukun Huang"
+                    },
+                    {
+                        "name": "Yiran Wang"
+                    },
+                    {
+                        "name": "Wang Zhao"
+                    },
+                    {
+                        "name": "Yingmin Luo"
+                    },
+                    {
+                        "name": "Ying Shan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.24983v1",
+                "title": "onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction",
+                "updated": "2026-09-21T17:56:53Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.24983v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.24983v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present onPanda, an interactive tool for efficiently annotating LLM alignment data and agent trajectories. onPanda adopts token-level correction as its core interaction: while reading a model response, the annotator locates the first inappropriate token and either picks a substitute from the model's candidate tokens or types the correct text via free-form editing. The system then truncates everything after that position and continues generation from the corrected prefix, repeating this locate-correct-continue loop until a satisfactory response is obtained. This mechanism lets annotators precisely steer model outputs at low cost: a small controlled study suggests that onPanda reduces median annotation time by 52% over manual post-editing. Since the vast majority of tokens in the final response are generated by the model itself, the resulting data largely preserves the model's sampling distribution and is well suited for constructing on-policy SFT and preference data. Furthermore, the token-level corrections recorded during annotation provide fine-grained supervision with precise positions and naturally paired positive--negative samples. onPanda also connects to external tools and harnesses, enabling interactive trajectory annotation in realistic environments. In addition, we release Panda-CVL, a dataset annotated with onPanda, together with a benchmark for token-level correction.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.HC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-21T17:56:53Z",
+                "arxiv:comment": "Project page: https://on-panda.github.io/research/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Lei Yang"
+                    },
+                    {
+                        "name": "Mengyin Liu"
+                    },
+                    {
+                        "name": "Jia Wang"
+                    },
+                    {
+                        "name": "Hangyu Guo"
+                    },
+                    {
+                        "name": "Liang Zhao"
+                    },
+                    {
+                        "name": "Zheng Ge"
+                    },
+                    {
+                        "name": "Kang An"
+                    },
+                    {
+                        "name": "Binxing Jiao"
+                    },
+                    {
+                        "name": "Qi Han"
+                    },
+                    {
+                        "name": "Daxin Jiang"
+                    },
+                    {
+                        "name": "Siqi Shen"
+                    },
+                    {
+                        "name": "Xiangyu Zhang"
                     }
                 ]
             }
