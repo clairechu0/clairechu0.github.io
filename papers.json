@@ -5,201 +5,38 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-09-28T00:13:26Z",
+        "updated": "2026-09-28T06:12:49Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "618204",
+        "opensearch:totalResults": "618664",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2609.30258v1",
-                "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
-                "updated": "2026-09-24T17:59:18Z",
+                "id": "http://arxiv.org/abs/2609.31619v1",
+                "title": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
+                "updated": "2026-09-25T17:59:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2609.30258v1",
+                        "@href": "https://arxiv.org/abs/2609.31619v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2609.30258v1",
+                        "@href": "https://arxiv.org/pdf/2609.31619v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Attack on Consecutive Encodings (TRACE), an amortized temporal gradient-inversion attack that autoregressively reconstructs the sequence of private observation-action trajectories from per-step policy-learning gradients. The attack exploits two structural signals ignored by prior single-frame methods: (i) cross-time correlation between successive embodied gradients, which we formalize via a conditional mutual-information bound, and (ii) closed-form action recovery from policy-head gradient structure, which we prove exact when standard entropy regularization is sufficiently small. On held-out embodied scenes, TRACE reaches $18.8$ dB PSNR with near-perfect action recovery at $3$-$4.5$ ms per reconstructed frame, dominating the learning-based baseline across all reconstruction metrics and exceeding optimization attacks while running orders of magnitude faster. Further evaluation demonstrates TRACE's broader applicability across recurrent, residual, and compact transformer victim architectures, multi-modal inputs, and larger discrete action spaces. Defense experiments suggest that protecting temporal gradient streams may require sequence-aware privacy mechanisms.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-24T17:59:18Z",
-                "arxiv:comment": "Accepted at NeurIPS 2026",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Sudip Bhujel"
-                    },
-                    {
-                        "name": "Shanghao Shi"
-                    },
-                    {
-                        "name": "Ruiquan Huang"
-                    },
-                    {
-                        "name": "Ning Zhang"
-                    },
-                    {
-                        "name": "Yang Xiao"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.30256v1",
-                "title": "Quantum Feature Selection for Biomedical Data Analysis",
-                "updated": "2026-09-24T17:59:07Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.30256v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.30256v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Feature selection is an essential step for reducing complexity of high dimensional data, usually in preparation for developing machine learning models such as computational biomarkers. However, there are limitations associated with feature selection such as for metabolomic data where there are hundreds or even thousands of features per study participant, while the available number of participants in a clinical trials is limited. Classical methods such as exhaustive search require evaluation of all possible feature combinations, making them costly in terms of computation and runtime, or even infeasible, as feature dimensionality increases. In this study, we propose a novel Quadratic Unconstrained Binary Optimization (QUBO) coefficient formulation and pose metabolomic feature selection as a QUBO problem that selects a specified number of features by balancing their relevance against redundancy among the selected variables. To evaluate our proposed QUBO objective function, we conducted a series of experiments using Bias-Field Digitized Counterdiabatic Quantum Optimization (BF-DCQO) and Quantum Approximate Optimization Algorithm (QAOA) on a quantum gate based computer. We also compared the method to several classical methods on three metabolomic datasets associated with Autism Spectrum Disorder (ASD) on a classical computer. Our method reduces runtime compared with exhaustive search and Iterative Tabu Search (ITS) and achieves competitive performance across classifiers compared to classical filter, wrapper, and embedded methods. These results do not claim quantum advantage; rather, they establish hardware feasibility and demonstrate the current capabilities of Noisy Intermediate-Scale Quantum (NISQ) devices.",
-                "category": {
-                    "@term": "quant-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-24T17:59:07Z",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": [
-                    {
-                        "name": "Hongbin Liu"
-                    },
-                    {
-                        "name": "Robert Lahmann"
-                    },
-                    {
-                        "name": "Benjamin Campbell"
-                    },
-                    {
-                        "name": "Zhemin Zhang"
-                    },
-                    {
-                        "name": "Zhiding Liang"
-                    },
-                    {
-                        "name": "Siona Bapat"
-                    },
-                    {
-                        "name": "Juergen Hahn"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.30254v1",
-                "title": "Forte: A sensitivity type system for imperative Rust",
-                "updated": "2026-09-24T17:58:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.30254v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.30254v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We introduce Forte, a sensitivity type system for Rust whose soundness rests on ownership. The graded sensitivity type systems, from Fuzz's linear grading to Solo's environment indices, are pure calculi: a claim about a value holds for the value's whole lifetime because nothing can mutate it. The imperative sensitivity analyses admit assignment to first-order variables and no references, so no question of aliasing arises in them. The programs that compute differentially private statistics in deployment are Rust, and they mutate through borrows. Forte closes this gap. Its central rules strongly update a sensitivity environment through an exclusive borrow, at a primitive call and across a checked function boundary; its soundness theorem is metric preservation over an operational semantics with a store, in which the exclusivity of &mut alone licenses framing across a mutating call, and two aliased borrows suffice to refute the theorem without it. Verus mechanizes the theorem, the function rule, and the refutation. Flux checks Forte as an ordinary library, with no fork of the compiler; a machine-checked theorem backs every deterministic primitive signature, and a correspondence theorem transports metric preservation to the programs the checker accepts. We evaluate Forte on mechanism kernels from OpenDP with genuine in-place mutation, matching the library's trusted stability maps with checked constants, covering the constructors that have no proof document, rejecting off-by-one diameters, tightened bounds, miscalibrated releases, and overspent budgets, and deriving one trusted constant as an inferred loop invariant.",
-                "category": {
-                    "@term": "cs.PL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-24T17:58:58Z",
-                "arxiv:comment": "29 pages. Submitted to the Journal of Functional Programming",
-                "arxiv:primary_category": {
-                    "@term": "cs.PL"
-                },
-                "author": {
-                    "name": "Chik\u00e9 Abuah"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.30253v1",
-                "title": "How Not to Build Microcrypt",
-                "updated": "2026-09-24T17:58:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.30253v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.30253v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "A key challenge in quantum cryptography is to build quantum one-wayness and pseudorandomness without the use of (quantum computable) one-way functions. So far, this has turned out to be a difficult task, with only a few proposed candidates that are not directly built from one-way functions. Even within these few proposed candidates, we have lacked the techniques to analyze when proposed constructions may inadvertently yield one-way functions.\n  In this work, we introduce efficient NP-aided shadow tomography of quantum states. We prove that collections of {\\em computable} pure states can be learned via efficient NP-aided shadow tomography, where we say that a state is computable if the amplitude and phase on any computational basis term can be classically efficiently computed given the description of an efficient preparation circuit for the state. We also give new algorithms for NP-aided learning of unitaries given polynomially many queries to the unitary.\n  By building on this, we show that many existing architectures for PRS and PRU, including some that were explicitly introduced for the purposes of avoiding one-way functions (e.g., Hamiltonian Phase States, Bostanci et. al., TQC 2025), actually do imply the existence of one-way functions or imply \\(\\NP\\) hardness. We hope that these no-go results will inform future investigations into building PRS and PRUs from assumptions that are plausibly outside the complexity class NP.",
-                "category": {
-                    "@term": "quant-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-24T17:58:51Z",
-                "arxiv:primary_category": {
-                    "@term": "quant-ph"
-                },
-                "author": [
-                    {
-                        "name": "Aditya Gulati",
-                        "arxiv:affiliation": "UCSB"
-                    },
-                    {
-                        "name": "Dakshita Khurana",
-                        "arxiv:affiliation": "UIUC and NTT Research"
-                    },
-                    {
-                        "name": "Kabir Tomer",
-                        "arxiv:affiliation": "UIUC"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.30250v1",
-                "title": "Agentic Detection of Online Conspiracies",
-                "updated": "2026-09-24T17:58:43Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.30250v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.30250v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Conspiratorial discourse on social media is not always expressed through explicit claims or stable lexical markers. The same surface content may express endorsement, legitimate concerns, criticism, satire, or mockery. The main challenge is therefore not only recognizing conspiracy-related claims, but inferring the speaker's intent -- the utterance's illocutionary force. We argue that this can be achieved through the use of relevant social contexts and propose an agentic framework, equipped with a set of tools supporting social queries.\n  We demonstrate the benefits of our approach on a unique dataset of Hebrew tweets, covering 80\\%--90\\% of the public Hebrew tweets published over a four-year span (late 2018-- early 2023), encompassing several election cycles as well as the COVID pandemic years and related vaccination campaigns. This extensive coverage can be used in recovering different social contexts. Evaluating our framework on a manually-annotated adversarial dataset, we find that context-aware workflows consistently outperform text-only classification and that the agentic framework performs significantly better than other frameworks and settings, including a non-agentic model exposed to the same contexts available to the agent. We further provide an analysis of the results, the errors and efficiency (token economy) tradeoffs.\n  These findings support viewing the task of conspiracy detection as a socially embedded interpretation task, in which effective classification depends not only on access to contexts, but also on adaptive reasoning in which the agent uses tools on a per-case basis, asking only for evidence relevant to its current reasoning step.",
+                "summary": "Reasoning models often generate very long reasoning traces, making inference computationally expensive. Existing approaches typically improve efficiency either through inference-time early-stopping mechanisms or by explicitly encouraging shorter reasoning during training, for example through reinforcement learning with length penalties. We show that substantial efficiency gains can instead emerge from a different kind of supervision: \\textit{confidence}. Using a self-supervised procedure, we fine-tune reasoning models to predict their confidence in the answer at intermediate points along their own reasoning trajectories using only 600 training problems. Confidence is used only as a training target: the loss contains no objective for reasoning length, efficiency, or stopping. At inference, the fine-tuned models use the standard generation procedure, with no confidence elicitation or early-stopping mechanism. Despite this, self-supervised confidence fine-tuning makes reasoning more efficient, reducing generated tokens by up to 25\\% at matched accuracy across Gemma, Qwen, Nemotron, and GPT-OSS models on mathematical, scientific, and coding reasoning benchmarks, with efficiency gains comparable to methods that explicitly optimize for shorter reasoning. Analysis of reasoning episodes further shows that confidence supervision largely preserves the base models' high-level reasoning composition rather than selectively suppressing particular behaviors. Our results suggest that efficient reasoning may emerge as a downstream consequence of learning metacognitive signals, without being directly optimized.",
                 "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
@@ -209,64 +46,350 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-09-24T17:58:43Z",
+                "published": "2026-09-25T17:59:52Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Lior Biton"
+                        "name": "Parsa Hosseini"
                     },
                     {
-                        "name": "Oren Tsur"
+                        "name": "Akasha Tigalappanavara"
+                    },
+                    {
+                        "name": "Sumit Nawathe"
+                    },
+                    {
+                        "name": "Chenrui Fan"
+                    },
+                    {
+                        "name": "Sourya Basu"
+                    },
+                    {
+                        "name": "Genta Indra Winata"
+                    },
+                    {
+                        "name": "Anirban Das"
+                    },
+                    {
+                        "name": "Soheil Feizi"
+                    },
+                    {
+                        "name": "Nima Chitsazan"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2609.30248v1",
-                "title": "Deep thermalization and Hilbert space ergodicity",
-                "updated": "2026-09-24T17:58:17Z",
+                "id": "http://arxiv.org/abs/2609.31614v1",
+                "title": "Gap-free Differentially Private PCA for Gaussian Data",
+                "updated": "2026-09-25T17:58:38Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2609.30248v1",
+                        "@href": "https://arxiv.org/abs/2609.31614v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2609.30248v1",
+                        "@href": "https://arxiv.org/pdf/2609.31614v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent advances in quantum simulation have enabled the discovery of novel forms of universality in quantum many-body dynamics. In this Review, we discuss deep thermalization and Hilbert space ergodicity--two recently discovered phenomena characterized by the emergence of distributions of quantum states that are \"maximally random\" in a precise sense. They offer a new perspective on how irreversible statistical mechanics arises from reversible unitary quantum dynamics, going beyond conventional theories of quantum thermalization and equilibration. We review a unifying framework, rooted in quantum information theory and principles of maximum entropy, that explains the different forms of ergodicity which arise under various physical constraints. We discuss open questions and active research directions, including generalizations beyond ensembles of pure quantum states, phase transitions in deep thermalization tied to deeper forms of ergodicity-breaking, connections to broader topics in quantum thermalization and ergodicity, and applications in quantum information science, such as for benchmarking or tomography.",
+                "summary": "We give a gap-free differentially private algorithm for the principal component analysis (PCA) problem with Gaussian data.",
                 "category": [
                     {
-                        "@term": "quant-ph",
+                        "@term": "cs.DS",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cond-mat.stat-mech",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-09-24T17:58:17Z",
-                "arxiv:comment": "11 pages, 5 figures. Comments welcome!",
+                "published": "2026-09-25T17:58:38Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.DS"
+                },
+                "author": [
+                    {
+                        "name": "Alina Ene"
+                    },
+                    {
+                        "name": "Huy L. Nguyen"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.31612v1",
+                "title": "First-Order Stationarity of Reverse Diffusions",
+                "updated": "2026-09-25T17:57:43Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.31612v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.31612v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent literature has shown a strong connection between optimization and sampling. We develop the corresponding first-order theory for diffusion models. First, the SDE-based reverse-time flows of overdamped and underdamped Langevin diffusions contract relative Fisher divergences at explicit exponential rates whenever the stationary potential of the forward process is strongly convex---a condition on the noising process one chooses, not on the data. This is a unique advantage of SDE-based reverse diffusion, absent in the reverse process based on ODEs. Second, we incorporate discretization and establish averaged first-order stationarity bounds---the sampling analog of averaged gradient-norm guarantees in nonconvex optimization---for samplers of both overdamped and underdamped diffusion models. As in nonconvex optimization, the convexity-free certificate is local: it guarantees score consistency, not global mode weights.",
+                "category": [
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-25T17:57:43Z",
+                "arxiv:primary_category": {
+                    "@term": "stat.ML"
+                },
+                "author": [
+                    {
+                        "name": "Zhifeng Chen"
+                    },
+                    {
+                        "name": "Chenyang Jiang"
+                    },
+                    {
+                        "name": "Yazhen Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.31607v1",
+                "title": "Statistical attribute alignment for black-box generative AI via output post-processing",
+                "updated": "2026-09-25T17:55:49Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.31607v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.31607v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Generative AI systems are increasingly used, but aligning their outputs with user requirements poses a continuing challenge. Here, we aim to ensure that the distribution of an attribute of an AI-generated output aligns with a user-specified target. This is motivated by examples such as fairness, where we want to ensure that a protected attribute (e.g., gender, race, or age categories) follows a desired distribution, and synthetic data generation, where we want the generated data to be representative of a target distribution. We study the practically important black-box access setting, where a user can repeatedly query a generative AI model. The goal is to return $m\\ge 1$ outputs whose joint attribute distribution is as close as possible to this target. For both exact and approximate alignment, we develop algorithms that minimize the expected number of queries to the generator, and we further demonstrate their optimality as the number of requested outputs $m \\rightarrow \\infty$. Experiments on text-to-image generation and geocoded persona generation tasks show that our post-processing algorithms improve statistical attribute alignment, complementing prompting-based interventions.",
+                "category": [
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-25T17:55:49Z",
+                "arxiv:primary_category": {
+                    "@term": "stat.ME"
+                },
+                "author": [
+                    {
+                        "name": "Kevin Jiang"
+                    },
+                    {
+                        "name": "Morgane Austern"
+                    },
+                    {
+                        "name": "Edgar Dobriban"
+                    },
+                    {
+                        "name": "Jason M. Klusowski"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.31606v1",
+                "title": "Learning Robot Policies from Sparse Success Signals via STL-Guided Stein Variational Policy Gradient",
+                "updated": "2026-09-25T17:55:01Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.31606v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.31606v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Learning robot policies for tasks with sparse success signals is challenging when completion depends on coordinated actions, precise contact outcomes, or satisfying several conditions together. Intricate physical interactions with the world further complicate these requirements. Prior work using conventional reward shaping mechanisms provides dense feedback but local progress might not translate into eventual task completion. We present Signal Temporal Logic-guided Stein Variational Policy Gradient (STL-SVPG), a population-based method that uses smooth STL robustness as a trajectory-level training objective. Differentiating this objective through the dynamics assigns credit to policy actions according to their effect on the complete task specification, rather than local progress alone. We evaluate the approach on six quadcopter and manipulator tasks that involves event-triggered responses, strictly ordered behavior, responses within specified deadlines, and physical interaction with the world. STL-SVPG achieves the highest mean success rate among the compared methods on five of six benchmarks. Simulation-trained policies trained in simulation transfer temporal and contact task behavior to the real world.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-25T17:55:01Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Hongrui Zheng"
+                    },
+                    {
+                        "name": "Cristian Ioan Vasile"
+                    },
+                    {
+                        "name": "Antonio Loquercio"
+                    },
+                    {
+                        "name": "Rahul Mangharam"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.31603v1",
+                "title": "User Model Extraction via Belief Self-Distillation",
+                "updated": "2026-09-25T17:54:32Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.31603v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.31603v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large language models (LLMs) implicitly infer attributes of their users and adapt their behavior accordingly, yet these beliefs remain difficult to inspect and causally manipulate. We introduce Belief Self-Distillation (BSD), a unified read-write framework that bridges linear and causal probing by learning a compact user representation that can be both decoded and written back into the model. The frozen LLM acts as its own teacher, distilling beliefs from natural conversations without external annotations. Unlike conventional probing, BSD isolates not only information present in activations, but a state whose causal role can be directly tested. Across multiple model families, BSD faithfully recovers user beliefs and enables substantially stronger interventions than matched hidden-state steering. Crucially, we find that refusal depends not only on the request, but on the model's inferred user intent: changing this belief alters refusal while holding the request fixed. We further uncover a striking cross-model regularity: independently trained LLMs converge on a shared geometry for representing their users. Together, these results reveal implicit user models as readable and causally writable internal states with direct implications for AI safety, shaping how models condition safety decisions on whom they believe they are interacting with.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-25T17:54:32Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Ali Holmov"
+                    },
+                    {
+                        "name": "Yiran Huang"
+                    },
+                    {
+                        "name": "Kirill Bykov"
+                    },
+                    {
+                        "name": "Zeynep Akata"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.31600v1",
+                "title": "New LoRA Skills Should Read but Never Write",
+                "updated": "2026-09-25T17:54:01Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.31600v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.31600v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Low-rank adapters (LoRA) make it cheap to fine-tune a large language model once per task, but combining several independently trained adapters into one model remains difficult: merging the updates in weight space causes interference, retraining on all task data is expensive, and routing between separate adapters gives up the goal of a single combined model. We trace the difficulty to two choices that every composition method makes implicitly. A LoRA update admits infinitely many equivalent factorizations; the choice among them is invisible while an adapter serves alone, but it determines what a learned interaction between adapters can see. A coupling between an old skill and a new one can likewise point in either direction, and the direction decides whether the old skills keep computing what they computed before. We introduce READ (Read-only Expansion of Adapter Deltas), which fixes both choices: each adapter is rewritten into a balanced canonical form that preserves its update exactly, and the coupling grows in one direction only, so a new skill can read the input subspaces of old skills but cannot write into their output subspaces. The only trainable object at each append is the new skill's row of the coupling matrix, and the composed update folds into the base weights with no inference cost, routing, or task-specific rules. We evaluate READ across four benchmark suites and two model families, adding skills one at a time. Across several families, READ improves every suite average over the strongest published baselines built from the same adapters---by more than twenty points on SuperGLUE and more than seven points on the domain suite---and nearly all complete addition sequences end above every direct baseline. Factor coordinates and coupling direction, which a lone adapter never exposes, are what decide whether composed skills survive.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-25T17:54:01Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Zeyan Li"
+                    },
+                    {
+                        "name": "Panqi Yang"
+                    },
+                    {
+                        "name": "Qirong Guo"
+                    },
+                    {
+                        "name": "Shengda Zhuo"
+                    },
+                    {
+                        "name": "SIyuan Qiu"
+                    },
+                    {
+                        "name": "Hu Xu"
+                    },
+                    {
+                        "name": "Chun Li"
+                    },
+                    {
+                        "name": "Jianfeng Xu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.31596v1",
+                "title": "Oracle Distillation",
+                "updated": "2026-09-25T17:52:52Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.31596v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.31596v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Learning and sensing are among the most promising applications of quantum technology, often with provable quantum advantages. In any realistic experiment, however, noise threatens to erase these advantages as the problem size grows. We introduce oracle distillation, a procedure that distills many queries to a noisy oracle into a single high-fidelity oracle. Here the oracle, an unknown unitary from a known family, models the interface through which a quantum device learns about an unknown system. We construct an explicit protocol that distills any Boolean oracle, both under adversarial noise that corrupts a constant fraction of the input qubits and under i.i.d. depolarizing noise at a constant rate on every qubit. At the heart of the protocol is the weak query, in which the device deliberately queries the oracle only weakly, trading response strength for the ability to correct errors. Our protocol is near-optimal among all protocols that distill the oracle while keeping its errors correctable, revealing a fundamental tension between these two requirements. An important implication of the protocol is a threshold theorem: every Boolean oracle problem whose quantum advantage is polynomial in the domain size, including Grover search, $k$-forrelation, and Simon's problem, retains a quantum advantage whenever the per-qubit depolarizing rate is below a constant threshold. In particular, the quadratic quantum advantage of Grover search, long believed fragile under noise, survives nearly intact at low error rates even when almost every query involves errors on one or more qubits. We further extend the protocol to fractional and continuous-time Boolean oracles. Quantum error correction can thus protect not only prescribed operations but also unknown dynamics. Our results make a large family of quantum advantages in learning robust against noise and open a path toward robust computational sensing.",
+                "category": {
+                    "@term": "quant-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-25T17:52:52Z",
                 "arxiv:primary_category": {
                     "@term": "quant-ph"
                 },
                 "author": [
                     {
-                        "name": "Daniel K. Mark"
-                    },
-                    {
-                        "name": "Manuel Endres"
-                    },
-                    {
-                        "name": "Matteo Ippoliti"
-                    },
-                    {
-                        "name": "Wen Wei Ho"
+                        "name": "Ruohan Shen"
                     },
                     {
                         "name": "Soonwon Choi"
@@ -274,78 +397,70 @@
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2609.30238v1",
-                "title": "SemMSA: Latent Semantic-Aided Robust Multimodal Sentiment Analysis with Incomplete Data",
-                "updated": "2026-09-24T17:55:31Z",
+                "id": "http://arxiv.org/abs/2609.31589v1",
+                "title": "Common-Mode Collapse and Recovery in Direct Feedback Alignment",
+                "updated": "2026-09-25T17:43:40Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2609.30238v1",
+                        "@href": "https://arxiv.org/abs/2609.31589v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2609.30238v1",
+                        "@href": "https://arxiv.org/pdf/2609.31589v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent research on Multimodal Sentiment Analysis (MSA) has focused on learning from language, visual, and acoustic modalities with incomplete data to infer human sentiment. Most studies typically compensate for missing information by reconstructing modality features or designing complicated fusion mechanisms. However, these methods still suffer from spurious generation and noisy guidance due to the lack of high-level semantic grounding in partially observed multimodal evidence. To address these issues, we propose SemMSA, a latent semantic-aided framework that constructs rich sentiment-relevant semantics with LLMs, fully integrating with all modalities via anchor-free spectral alignment. It mainly consists of Cross-modal Semantic Refinement (CSR) and Cross-modal Spectral Alignment (CSA). Specifically, CSR first adaptively extracts visual and acoustic representations by corresponding adapters to form a unified multimodal prefix with language in the frozen LLM embedding space. It then iteratively produces continuous discriminative semantic states through a token-efficient latent refinement process without decoding explicit text. Next, CSA simultaneously aligns the refined semantics with all modalities by enhancing the dominant spectral component of their kernel Gram matrix. This captures global nonlinear dependencies among all representations without relying on a predefined anchor modality. In addition, an instance-level spectral separation constraint preserves cross-sample discriminability and mitigates representation collapse. Extensive experiments on SIMS, MOSI, and MOSEI benchmarks demonstrate that SemMSA achieves state-of-the-art performance.",
+                "summary": "Direct feedback alignment (DFA) trains hidden layers through fixed random projections of output error. With tanh hidden units and independent sigmoid outputs, plain stochastic gradient descent can stall near the loss of a constant predictor of class frequencies. We trace this stall to the error's common mode, the component shared across inputs. An exact mean-covariance decomposition separates a rank-one update formed by the mean teaching signal and mean presynaptic activity. Its leading component drives tanh units toward saturation. At initialization, random feedback provides no systematic correction of the shared error on average; readout learning limits its duration. A reduced model initialized from the network, without fitted parameters, predicts the concentration of activation sensitivity across 48 settings. On MNIST, class decodability largely survives collapse, but readout learning remains slow at a fixed learning rate. Adam learns faster despite deeper collapse. Calibrating the baseline readout to the class prior suppresses collapse and speeds learning; weaker feedback trades less collapse for slower learning. Replacing errors by their signs sustains collapse; subtracting the signal's batch mean prevents sustained collapse and improves learning in the tested setting. Related effects occur in deeper and convolutional networks and on CIFAR-10, with severity and cost depending on the readout, optimizer and input statistics.",
                 "category": [
                     {
-                        "@term": "cs.CL",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MM",
+                        "@term": "cs.NE",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-09-24T17:55:31Z",
-                "arxiv:comment": "Accepted by NeurIPS 2026",
+                "published": "2026-09-25T17:43:40Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Wenhao Li"
+                        "name": "Varun Reddy"
                     },
                     {
-                        "name": "Zhibin Wu"
+                        "name": "Bernardo L. Sabatini"
                     },
                     {
-                        "name": "Chong Xiao"
-                    },
-                    {
-                        "name": "Qiangchang Wang"
+                        "name": "Houman Safaai"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2609.30227v1",
-                "title": "To Trust or Not to Trust: Retrieval-Augmented Fact Checking in Speech",
-                "updated": "2026-09-24T17:50:40Z",
+                "id": "http://arxiv.org/abs/2609.31587v1",
+                "title": "Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer",
+                "updated": "2026-09-25T17:42:22Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2609.30227v1",
+                        "@href": "https://arxiv.org/abs/2609.31587v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2609.30227v1",
+                        "@href": "https://arxiv.org/pdf/2609.31587v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Online misinformation increasingly appears in spoken formats such as news clips, podcasts, interviews, political speeches, and social media videos, creating a need for fact-checking systems that can verify claims directly from speech. We introduce VeriSpeak, a probe benchmark for studying speech-based fact verification in Large Audio Language Models (LALMs). VeriSpeak contains 3,879 spoken claims spanning temporal, geographical, and relational facts, with balanced true and false labels. The benchmark is designed to examine whether factual verification ability transfers from text to speech, and whether retrieval-augmented LALMs can use textual evidence to correctly support or refute spoken claims. Our experiments reveal a consistent text-speech modality gap: LALMs that verify written claims reliably often fail on the same claims when spoken. Moreover, retrieval alone provides limited gains because models frequently conflate retrieved evidence with the spoken claim. In contrast, retrieval combined with explicit reasoning improves claim-evidence comparison, with a thinking-tuned LALM reaching 86.1% accuracy. VeriSpeak highlights that effective speech misinformation detection requires not only speech understanding, but also grounded reasoning over retrieved evidence. The dataset is publicly available via Hugging Face at https://huggingface.co/datasets/abhiram4572/VeriSpeak.",
+                "summary": "We investigate whether natural-language documentation helps coding agents resolve software issues, and we build the tools to construct and evaluate it. We introduce a roundtrip benchmark that scores code descriptions by whether code regenerated from them passes the original tests, and show that completeness, not length, drives a description's fidelity. Using the benchmark as an optimization signal, we discover a description-writing prompt that reaches full fidelity and generalizes to unseen files. We then test the hypothesis that motivated the work: that better documentation helps an agent resolve real repository issues. Across two model families and ten repositories, and against a positive control confirming that our evaluation can detect a genuine improvement, we find that it does not. When the source is present, neither static compact documentation nor retrieved context beats the issue alone. We report this negative result together with the benchmark and the optimizer, and we characterize the boundary at which documentation helps.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.SE",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -355,197 +470,19 @@
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SD",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-09-24T17:50:40Z",
-                "arxiv:comment": "Accepted to EMNLP (Main) 2026",
+                "published": "2026-09-25T17:42:22Z",
+                "arxiv:comment": "13 pages. Code and data: https://github.com/haw-ai-i/roundtrip",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.SE"
                 },
                 "author": [
                     {
-                        "name": "Debajyoti Mazumder"
+                        "name": "Md Shohel Arman"
                     },
                     {
-                        "name": "Mamta"
-                    },
-                    {
-                        "name": "Abhirama Subramanyam Penamakuri"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.30226v1",
-                "title": "PoEM: Predicting RL Outcomes from Existing Policies",
-                "updated": "2026-09-24T17:50:25Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.30226v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.30226v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Foundation models are post-trained with reinforcement learning (RL) to maximize specific rewards, such as human alignment, correctness, or instruction following. This post-training process is computationally intensive, sometimes unstable, and has to be run from scratch every time the reward model changes or when we want to combine multiple rewards. We hence ask: given a new reward function, is it possible to predict the RL outcomes without actually running RL on it? We answer this in the affirmative by introducing PoEM, a framework to predict the outputs of RL on a new reward function using a set of models already post-trained on other rewards. First, we show that if the new reward function can be written as a linear combination of existing ones, then the new policy in log-space can be written as a linear combination of the existing log-policies. Surprisingly, even in cases where the rewards are not linearly connected, we observe that often log-policies from RL training span an approximately low-rank subspace across rewards. To our benefit, the weighting coefficients for this combination can be estimated using only the reward or basis policy outputs on the samples. We turn these observations into an algorithm that takes post-trained models and a new reward function, and approximates the target RL policy without actually running any additional RL training. We experimentally validate our approach across synthetic and real rewards, spanning both text and image modalities.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-09-24T17:50:25Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Kimia Hamidieh"
-                    },
-                    {
-                        "name": "Giannis Daras"
-                    },
-                    {
-                        "name": "Antonio Torralba"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.30221v1",
-                "title": "WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation",
-                "updated": "2026-09-24T17:48:19Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.30221v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.30221v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Video generation begins in text space by authoring a cinematic screenplay, then materializes into pixels. As contemporary video generators scale to 30 seconds and faithfully follow complex conditions, the textual prompt largely directs the production, planning how actions, camera trajectories, lighting, and sound unfold across multi-shot sequences. In this paper, we present WanPE, a 397B-parameter prompt enhancement model trained on 1.05M real-world videos to master director-level cinematic planning. WanPE formulates shot-level cinematic plans via video-grounded reverse construction and employs Semantic-Consistency GRPO (SC-GRPO) to faithfully preserve user requirements across shots and over time. To benchmark this capability, we curate WanPEval, a human-annotated testbed covering durations from 5 to 30 seconds across varying intent granularities, supported by approximately 11K blind pairwise assessments. When powering Wan3.0's video generator, WanPE-397B boosts human preference over raw user prompts by 10.66-18.84 points at 5-15 seconds and by a dramatic 50.86 points in the 30-second arena. Ablation studies show that reverse construction demonstrates clear superiority over forward rewriting, while SC-GRPO robustly preserves semantic fidelity across model scales. Ultimately, WanPE leads all evaluated commercial offerings at 5-15 seconds and remains competitive with Seedance 2.5 at 30 seconds.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-24T17:48:19Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yubo Zhu"
-                    },
-                    {
-                        "name": "Yawen Shao"
-                    },
-                    {
-                        "name": "Ziyun Dai"
-                    },
-                    {
-                        "name": "Zixun Fang"
-                    },
-                    {
-                        "name": "Kai Zhu"
-                    },
-                    {
-                        "name": "Siyang Sun"
-                    },
-                    {
-                        "name": "Haolan Xue"
-                    },
-                    {
-                        "name": "Chuxin Wang"
-                    },
-                    {
-                        "name": "Tingyu Weng"
-                    },
-                    {
-                        "name": "Jingming Luo"
-                    },
-                    {
-                        "name": "Chen Shi"
-                    },
-                    {
-                        "name": "Lianghua Huang"
-                    },
-                    {
-                        "name": "Yufeng Ai"
-                    },
-                    {
-                        "name": "Yuzheng Wang"
-                    },
-                    {
-                        "name": "Wenyuan Zhang"
-                    },
-                    {
-                        "name": "Yu Shang"
-                    },
-                    {
-                        "name": "Yuxiang Bao"
-                    },
-                    {
-                        "name": "Zoubin Bi"
-                    },
-                    {
-                        "name": "Jie Xiao"
-                    },
-                    {
-                        "name": "Jinbo Xing"
-                    },
-                    {
-                        "name": "Jiaxing Zhao"
-                    },
-                    {
-                        "name": "Chongyang Zhong"
-                    },
-                    {
-                        "name": "Hengjian Chen"
-                    },
-                    {
-                        "name": "Chenwei Xie"
-                    },
-                    {
-                        "name": "Akide Liu"
-                    },
-                    {
-                        "name": "Zhehan Kan"
-                    },
-                    {
-                        "name": "Yu Liu"
-                    },
-                    {
-                        "name": "Wei Zhai"
-                    },
-                    {
-                        "name": "Sheng Zhong"
-                    },
-                    {
-                        "name": "Wei Tong"
+                        "name": "Igor Molybog"
                     }
                 ]
             }
