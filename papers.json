@@ -5,88 +5,40 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-09-29T23:20:12Z",
+        "updated": "2026-09-30T10:11:10Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "620506",
+        "opensearch:totalResults": "621462",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2609.35770v1",
-                "title": "FurE: Efficient Instance-Specific 3D Fur Reconstruction without Animal-Fur Datasets",
-                "updated": "2026-09-28T17:59:58Z",
+                "id": "http://arxiv.org/abs/2609.38178v1",
+                "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
+                "updated": "2026-09-29T17:59:55Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2609.35770v1",
+                        "@href": "https://arxiv.org/abs/2609.38178v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2609.35770v1",
+                        "@href": "https://arxiv.org/pdf/2609.38178v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Realistic and editable animal fur reconstruction from multi-view images is challenging due to fine-scale detail, self-occlusion and obfuscation, and, unlike human hair, the lack of animal-fur datasets. Fur usually covers most of an animal's body, with large inter-species and intra-species variability. We present FurE, an efficient strand-based animal fur reconstruction method that recovers a per-strand, editable groom by optimizing a root-conditioned latent field, decoded into strand geometry via a PCA-based decoder. We reconstruct a defurred animal body using local fur-thickness cues from a surface-constrained Gaussian Frosting representation together with part-based priors. We further show that a PCA-based decoder learned from human-hair strand data can alleviate animal-data scarcity while enabling substantially faster optimization. FurE achieves a 10x speedup in strand training over current SOTA dense per-strand optimization while retaining strand fidelity and generalizing across synthetic and real-world sequences, with quantitative and qualitative validation despite the reduction in training time.",
+                "summary": "Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction. Recent agentic systems offer a way to reduce this reliance on human effort by using foundation models to autonomously compose learned behaviors to complete tasks. Yet completing tasks this way does not itself teach a task policy to overcome its own failures; that requires turning these behaviors into learnable corrections for the policy. Our insight is that many such corrections are familiar short behaviors, or skills: they recur across tasks and describe actions that foundation models can reason about from a scene. We introduce skill-space shooting, which uses foundation model guidance to explore corrections through these reusable skills and turn successful trials into policy improvement. Real-world experiments show repeated improvement in policies acting autonomously, while skills can also be shared to reduce the teaching needed to improve on new tasks. By making reusable skills a source of corrective supervision, skill-space shooting enables scalable and generalizable policy improvement within and across tasks. Additional results and videos at https://skill-space-shooting.github.io.",
                 "category": [
                     {
-                        "@term": "cs.CV",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-09-28T17:59:58Z",
-                "arxiv:comment": "14 pages, 13 figures, 4 tables. Project page: https://toshi2k2.github.io/fure",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Srinjay Sarkar"
-                    },
-                    {
-                        "name": "Prakhar Kaushik"
-                    },
-                    {
-                        "name": "Soumava Paul"
-                    },
-                    {
-                        "name": "Alan Yuille"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.35768v1",
-                "title": "PDMD: Projected Distribution Matching Distillation for Video Diffusion Models",
-                "updated": "2026-09-28T17:59:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.35768v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.35768v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Modern video diffusion models require tens of denoising evaluations over long spatiotemporal token sequences. Distribution Matching Distillation (DMD) reduces the number of function evaluations (NFE) to just a few. However, DMD samples can degrade during training, exhibiting progressive oversaturation and artifacts. We trace this instability to critic errors, which enter successive student updates and accumulate over time. We introduce Projected Distribution Matching Distillation (PDMD) to filter critic errors. PDMD projects out the component of the DMD update parallel to the student-critic endpoint residual. At a fixed noisy query, we prove that this residual is an unbiased estimate of the critic's endpoint error. Under high-dimensional assumptions, this projection removes a constant fraction of critic error while discarding only a vanishing fraction of ideal DMD signal. Empirically, the projection stabilizes training and improves sample quality where DMD degrades and develops unnatural textures. PDMD requires only a one-line code change to DMD, with no extra loss, network, data, model pass, or multi-stage training. With Wan2.1, PDMD achieves a VBench total score of 83.73 at 4 NFE, surpassing matched DMD by 1.03 points. On MiniMax-H3 joint video-audio generation, PDMD achieves a VideoGen-Eval visual total score of 83.17, 0.41 points above the strongest distilled baseline. PDMD also achieves the best performance on all six audio metrics among the compared 4-NFE models. Qualitative comparisons and user studies favor PDMD over the distilled baselines in visual quality, motion, and audio quality. Code and models are available at https://pdmd2026.github.io/.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -94,355 +46,361 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-09-28T17:59:52Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Zimo Wang"
-                    },
-                    {
-                        "name": "Junkun Yuan"
-                    },
-                    {
-                        "name": "Angtian Wang"
-                    },
-                    {
-                        "name": "Haotian Yang"
-                    },
-                    {
-                        "name": "Canyu Zhang"
-                    },
-                    {
-                        "name": "Siyuan Yuan"
-                    },
-                    {
-                        "name": "Xingchang Huang"
-                    },
-                    {
-                        "name": "Bo Liu"
-                    },
-                    {
-                        "name": "Yizhi Wang"
-                    },
-                    {
-                        "name": "Yiding Yang"
-                    },
-                    {
-                        "name": "Chongyang Ma"
-                    },
-                    {
-                        "name": "Gordon Guocheng Qian"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.35767v1",
-                "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning",
-                "updated": "2026-09-28T17:59:36Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.35767v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.35767v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Unified multimodal models can both look at and render images, so in principle they can repair their own generations: diagnose what an image gets wrong, revise it, observe the result, and diagnose again. Whether a revision helps is known only after it is rendered, so the reflection text and the image generation must be learned jointly, over the whole loop. Supervised fine-tuning (SFT) on reflection trajectories gives a cold start but does not find the high-success repair paths, and naive RL that optimizes only the renderer or only one head leaves most of the gain untapped. We introduce UMM-Reflection, which applies reinforcement learning (RL) to complete reflection trajectories inside one unified model: sibling trajectories share one initial image, so the group-relative advantage compares reflection strategies, and one trajectory-level advantage updates both the reflection tokens and the flow-based revisions, avoiding the combinatorial blow-up of per-round credit assignment. Unlike single-round editing or pipelines with an external critic, credit flows across rounds and to both roles of the same model, and no verifier is needed at inference. On BAGEL, UMM-Reflection improves GenEval by 12.05 points over SFT, and the gains transfer to WISE (+10.97), OneIG-Bench (+3.48), and T2I-CompBench++ (+4.63), none of which is used in training.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-09-28T17:59:36Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yijia Fan"
-                    },
-                    {
-                        "name": "Ziqi Huang"
-                    },
-                    {
-                        "name": "Zhongang Cai"
-                    },
-                    {
-                        "name": "Yan Li"
-                    },
-                    {
-                        "name": "Zimo Wen"
-                    },
-                    {
-                        "name": "Wanqi Yin"
-                    },
-                    {
-                        "name": "Haiwen Diao"
-                    },
-                    {
-                        "name": "Ziwei Liu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.35764v1",
-                "title": "Reliability-Gated Fusion of Consumer Head and Foot IMUs for Lower-Body 3D Pose",
-                "updated": "2026-09-28T17:59:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.35764v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.35764v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Sparse inertial pose estimation promises camera-free motion capture from consumer devices, but consumer sensors are unreliable: firmware-fused orientations are biased, mounting varies between sessions, and streams drift or drop out. On a new 35-take single-subject benchmark pairing an earbud head inertial measurement unit (IMU) with two smart-insole foot IMUs (SAM-3D-Body pseudo-ground-truth labels), we show the reliability problem is channel-level: a channel ablation isolates foot acceleration as the most informative input (66.6 mm vs. 79.0 mm head-only) and the firmware-fused foot orientation as the liability that destroys the gain. We therefore let the model learn how much to trust each channel of each stream: one temporal gate per stream per channel block, trained with an auxiliary reliability objective on synthetically corrupted pretraining data. The channel-gated model is the most accurate of our learned fusion arms on clean data (69.4 mm vs. 83.7 static, 86.6 ungated) and under every simulated fault (bias in training; drift, dropout eval-only); its gates suppress the natively biased foot-orientation channels on clean real data without test-time supervision and flag dropout bursts at 0.92-0.999 AUROC. Two contrasts: dropping a channel known a priori to fail is flat across foot faults but collapses when an unanticipated stream fails (head dropout: 92.9 vs. 79.3 mm); and a fine-tuned HMD-Poser is more accurate on clean data (64.4 mm) and nominally under drift, with no significant paired difference under bias or dropout, but a larger worst-case degradation from clean (+16.1 vs. +3.5 mm, single seed). Learning to gate reliability instead of sensor count is the lever for deployable sparse inertial capture. Code is available at https://github.com/ZhilinGuo/reliability-gated-imu-fusion.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.HC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-09-28T17:59:22Z",
-                "arxiv:comment": "10 pages, 4 figures, 3 tables. Code: https://github.com/ZhilinGuo/reliability-gated-imu-fusion",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Zhilin Guo"
-                    },
-                    {
-                        "name": "Boqiao Zhang"
-                    },
-                    {
-                        "name": "Oszk\u00e1r Urb\u00e1n"
-                    },
-                    {
-                        "name": "Josef Bengtson"
-                    },
-                    {
-                        "name": "Hakan Aktas"
-                    },
-                    {
-                        "name": "Wenzhao Li"
-                    },
-                    {
-                        "name": "Siyu Hong"
-                    },
-                    {
-                        "name": "Kyle Fogarty"
-                    },
-                    {
-                        "name": "Chenliang Zhou"
-                    },
-                    {
-                        "name": "Ali Senguel"
-                    },
-                    {
-                        "name": "Cengiz Oztireli"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.35763v1",
-                "title": "Unifying Distributional Training for One-Step Visual Generation",
-                "updated": "2026-09-28T17:59:14Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.35763v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.35763v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "\\emph{Distributional training} provides collective supervision for one-step visual generation by matching real and generated features in frozen representation spaces. We introduce \\emph{a unified theoretical framework} that separates distribution modeling from matching discrepancy and connects global objectives to pointwise feature updates through Wasserstein gradient flow. Under this framework, FD-Loss and Gaussian-kernel Drifting are recovered through Gaussian optimal transport and kernel-density-based KL matching, respectively. The framework motivates \\textbf{MGFlow}, which models feature distributions with Gaussian mixtures at an adjustable granularity between global moments and sample-based representations. MGFlow supports both optimal transport and score-based matching, and couples mass-constrained sample assignment with paired component updates to address mode collapse that mixture expressivity alone does not resolve. On ImageNet $256\\times256$, MGFlow substantially surpasses the FD-Loss baseline, achieving state-of-the-art results with \\textbf{1.45} $\\mathrm{FDr}^6$ on pMF-H and \\textbf{1.64} on JiT-H. For text-to-image generation, MGFlow post-trains FLUX.2 [klein] 4B into a one-step generator that outperforms the original four-step model on both GenEval and PickScore. Project page: https://shihaoyang0423.github.io/MGFlow-website/",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-28T17:59:14Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Chi Zhang"
-                    },
-                    {
-                        "name": "Haoyang Shi"
-                    },
-                    {
-                        "name": "Yueyi Liu"
-                    },
-                    {
-                        "name": "Ruichuan An"
-                    },
-                    {
-                        "name": "Junkang Zhou"
-                    },
-                    {
-                        "name": "Chang Li"
-                    },
-                    {
-                        "name": "Xiuyuan Lu"
-                    },
-                    {
-                        "name": "Yichi Zhang"
-                    },
-                    {
-                        "name": "Bo Wang"
-                    },
-                    {
-                        "name": "Yuhang Wu"
-                    },
-                    {
-                        "name": "Sen Cui"
-                    },
-                    {
-                        "name": "Miao Liu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.35762v1",
-                "title": "Peppy: An AI-Assisted Workflow for Tight Convergence Analysis of Optimization Algorithms",
-                "updated": "2026-09-28T17:59:12Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.35762v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.35762v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "This paper presents Peppy, an AI-assisted workflow for discovering tight, analytic convergence proofs for first-order optimization algorithms. Generic approaches to using LLMs to conduct mathematical research target an unspecified, broad spectrum of problems and sometimes use the Lean 4 proof assistant for formalization. On the other hand, Peppy leverages domain-specific knowledge more heavily and is thereby capable of constructing the proofs in a more structured manner, which allow a minimal and accessible verification through SymPy. We experimentally demonstrate through examples that Peppy provides a rigorous, practical, and reproducible paradigm for AI-assisted theorem synthesis in optimization. We further highlight its capability of closing several open problems on tight convergence analysis of first-order optimization algorithms, including conjectures for Nesterov's FGM. Overall, Peppy is designed to turn the art of optimization algorithm analysis into a science.",
-                "category": {
-                    "@term": "math.OC",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-28T17:59:12Z",
-                "arxiv:primary_category": {
-                    "@term": "math.OC"
-                },
-                "author": [
-                    {
-                        "name": "Jaewook J. Suh"
-                    },
-                    {
-                        "name": "TaeHo Yoon"
-                    },
-                    {
-                        "name": "Edward Duc Hien Nguyen"
-                    },
-                    {
-                        "name": "Bicheng Ying"
-                    },
-                    {
-                        "name": "Shiqian Ma"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.35761v1",
-                "title": "DexRoam: Learning Mobile Bimanual Dexterous Manipulation from Egocentric Whole-Body Human Demonstrations",
-                "updated": "2026-09-28T17:59:10Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.35761v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2609.35761v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Mobile bimanual dexterous manipulation requires continuous coordination of locomotion, whole-body motion, and finger-level dexterity within a single trajectory, creating a severe robot demonstration bottleneck. Egocentric human demonstrations offer a scalable alternative, but prior approaches ease the transfer by simplifying human motion, discarding exactly the fine-grained, coupled structure such tasks depend on. We present DexRoam, a complete system for learning mobile bimanual dexterous manipulation from human demonstrations, in which whole-body motion remains continuous and coupled throughout the human-to-robot transfer process. To enable scalable collection of whole-body human manipulation demonstrations, we develop a tracker-free capture system using only a consumer VR headset and a head-mounted stereo camera, without external cameras or motion trackers. We then perform three explicit alignment stages---embodiment, action-semantic, and temporal---to map captured motion into the robot action space, preserving fine-grained whole-body motion and allowing human and robot demonstrations to be jointly learned by standard VLA policies. Real-world experiments with different VLA backbones show that human demonstrations consistently improve policy learning across training paradigms, raising average success from 29% to 56% on GR00T N1.7 and from 32% to 57% on pi0.5, while matching robot-only training with half the robot demonstrations. Ablations confirm that each alignment stage is necessary. These results highlight the potential of human demonstrations for scalable whole-body mobile manipulation with preserved fine-grained motion structure.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-28T17:59:10Z",
-                "arxiv:comment": "Project page: https://dexroam.github.io/",
+                "published": "2026-09-29T17:59:55Z",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Rui Zhou"
+                        "name": "Zihang Rui"
                     },
                     {
-                        "name": "Yibo Yuan"
+                        "name": "Renhao Wang"
                     },
                     {
-                        "name": "Junkai Zhao"
+                        "name": "Haoxu Huang"
                     },
                     {
-                        "name": "Fangyuan Zhao"
-                    },
-                    {
-                        "name": "Xiaoguang Zhao"
-                    },
-                    {
-                        "name": "Shanghang Zhang"
-                    },
-                    {
-                        "name": "Sirui Han"
+                        "name": "Yang Gao"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2609.35760v1",
-                "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
-                "updated": "2026-09-28T17:59:09Z",
+                "id": "http://arxiv.org/abs/2609.38177v1",
+                "title": "Imagine3D-LLM: Teaching MLLMs to Imagine 3D Scenes Before Answering",
+                "updated": "2026-09-29T17:59:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2609.35760v1",
+                        "@href": "https://arxiv.org/abs/2609.38177v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2609.35760v1",
+                        "@href": "https://arxiv.org/pdf/2609.38177v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "When a large language model (LLM) agent executes the same task, token consumption can vary by over an order of magnitude across runs. The agent chooses its next steps based on tool feedback and intermediate results, while the growing context steadily inflates the input size of every subsequent call. The total consumption of a task is therefore hard to predict before execution and the prediction must be revised as the run unfolds. In this paper, we propose TokenCast, which learns a composable cost representation for each execution segment, recording its own consumption and the context growth it introduces. Composing adjacent segments yields a cumulative estimate that captures the extra input cost incurred when context from earlier segments is re-read by every later call. As execution unfolds, newly observed evidence refreshes the forecast, requiring no additional LLM calls and incurring a mean cumulative prediction time of 32.8 ms per run on SWE-bench Verified. Across 4 task suites and 6 agent models, TokenCast's mean absolute error reduction against the strongest comparator averages 14.5% over 96 evaluated combinations. In offline budget-control replay, TokenCast uses 21.3% fewer tokens on average than a fixed-budget policy at matched trace completion. The code is available at https://github.com/DEFENSE-SEU/TokenCast.",
+                "summary": "Reasoning about the 3D world from multi-view images remains a fundamental challenge for Multimodal Large Language Models (MLLMs). While modern MLLMs handle single-image inputs effectively, they struggle to integrate evidence across viewpoints into a coherent 3D understanding. A growing body of work attempts to close this gap by injecting 3D awareness into MLLMs, either by boosting fine-grained pixel-level cross-view correspondence or by fusing features from 3D geometry foundation models, yet a substantial gap to human reasoning persists. In this work, we revisit human spatial reasoning, which suggests that rather than relying on fine-grained geometry cues, humans roughly identify common objects across views, infer the relative geometry between viewpoints, and assemble a coarse 3D layout of the scene. Inspired by this process, we introduce Imagine3D-LLM, an MLLM that learns to assemble a similar compact 3D representation of the scene and conditions its answer on this representation. Concretely, we append a small set of learnable summary tokens after the image tokens, decode them into a compact 3D Gaussian Splatting representation supervised by a photometric reconstruction loss, and train jointly with the standard next-token prediction objective. Notably, although only the summary tokens receive direct reconstruction supervision, this objective also induces stronger cross-frame correspondence within the LLM's underlying image features, suggesting that learning to reconstruct propagates 3D-aware signals throughout the model. As a result, Imagine3D-LLM consistently outperforms prior approaches across multiple spatial reasoning and 3D understanding benchmarks, suggesting that imagining the scene can be more effective than being told its pixel-wise geometry.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-29T17:59:52Z",
+                "arxiv:comment": "NeurIPS 2026; Project Page: https://cvlab-kaist.github.io/Imagine3D-LLM",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Jaewoo Jung"
+                    },
+                    {
+                        "name": "Hyeonseo Yu"
+                    },
+                    {
+                        "name": "Honggyu An"
+                    },
+                    {
+                        "name": "Jisang Han"
+                    },
+                    {
+                        "name": "Mungyeom Kim"
+                    },
+                    {
+                        "name": "Minkyeong Jeon"
+                    },
+                    {
+                        "name": "Heeseong Shin"
+                    },
+                    {
+                        "name": "Wonjun Moon"
+                    },
+                    {
+                        "name": "Federico Tombari"
+                    },
+                    {
+                        "name": "Daniel Barath"
+                    },
+                    {
+                        "name": "Marc Pollefeys"
+                    },
+                    {
+                        "name": "Seungryong Kim"
+                    },
+                    {
+                        "name": "Sunghwan Hong"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.38176v1",
+                "title": "Breakdown of Local Denoising as Semantic Speciation",
+                "updated": "2026-09-29T17:59:50Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.38176v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.38176v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The dynamics of generative models exhibit two apparently distinct temporal windows: a speciation window, in which a sample commits to a semantic class, and a nonlocality window, in which local context windows become insufficient for generation. Motivated by evidence of their near-concurrence in a variety of frontier models, we investigate their relationship through the spatial distribution of semantic information. Under a \"common cause\" hypothesis, we prove that the nonlocality window must lie in the speciation window. This hypothesis postulates that semantic labels explain a fraction of the correlations between distant tokens, a condition that is natural for many real datasets. We further give conditions under which both windows shrink to a single limiting time as system size grows, defining a \"phase transition\", and verify this behavior analytically in Gaussian mixtures. Together, these results identify conditions under which semantic information explains the concurrence of speciation and nonlocality, connecting two complementary perspectives on the emergence of semantic structure in generative modeling.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cond-mat.dis-nn",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cond-mat.stat-mech",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-29T17:59:50Z",
+                "arxiv:comment": "9 pages main, 13 pages appendix, 4 figures. Comments very welcome",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Guangkuo Liu"
+                    },
+                    {
+                        "name": "Mert Okyay"
+                    },
+                    {
+                        "name": "Yifan F. Zhang"
+                    },
+                    {
+                        "name": "Fangjun Hu"
+                    },
+                    {
+                        "name": "Rahul Nandkishore"
+                    },
+                    {
+                        "name": "Xun Gao"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.38173v1",
+                "title": "In-context Robot Learning Made Simple: A Democratized Recipe for Manipulation Tasks",
+                "updated": "2026-09-29T17:59:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.38173v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.38173v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We study robotic in-context learning (ICL), an emerging paradigm that enables robots to infer and execute tasks from visual demonstrations. Despite its growing promise, the problem itself remains under-defined: a visual demonstration simultaneously conveys action trajectories, object semantics, manipulation affordances, spatial relations, and task goals, making it unclear what information the robot is actually expected to follow. In this work, we first provide a clear problem definition of robot ICL that explicitly defines its learning target and resolves this fundamental prompt ambiguity. Building on this definition, we develop a minimalist and reproducible ICL framework (SimpleICL) with a visual prompt encoder and a low-cost data collection protocol. Without massive pre-training or specialized data infrastructure, our framework achieves strong performance in both simulation and real-world environments. Extensive experiments further reveal several key properties of robot ICL, including action, semantic, composition, and affordance discrimination. We will fully open-source our data and training pipeline to facilitate systematic and reproducible research on robot ICL. The project page can be found at https://simpleicl.github.io/simpleicl.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-29T17:59:45Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Minxing Li"
+                    },
+                    {
+                        "name": "Minghao Han"
+                    },
+                    {
+                        "name": "Weizhi Zhao"
+                    },
+                    {
+                        "name": "Hanwen Wang"
+                    },
+                    {
+                        "name": "Xiangshuo Liu"
+                    },
+                    {
+                        "name": "Shuyao Shang"
+                    },
+                    {
+                        "name": "Jingxiang Zhou"
+                    },
+                    {
+                        "name": "Mingchao Sun"
+                    },
+                    {
+                        "name": "Hongyu Pan"
+                    },
+                    {
+                        "name": "Mu Xu"
+                    },
+                    {
+                        "name": "Yu Liu"
+                    },
+                    {
+                        "name": "Lue Fan"
+                    },
+                    {
+                        "name": "Zhaoxiang Zhang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.38170v1",
+                "title": "Adversarial Training for Pixel Diffusion",
+                "updated": "2026-09-29T17:59:41Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.38170v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.38170v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Pixel diffusion models generate RGB images directly, avoiding the bottleneck of an autoencoder, yet their outputs still systematically underrepresent fine-scale natural-image statistics. We show that adversarial learning provides an effective post-training correction for this deficiency. Starting from a pretrained model, we retain its original diffusion or flow-matching objective and add an adversarial loss to the predicted output at non-high-noise timesteps, leaving the model architecture and sampling procedure unchanged. To our knowledge, this is the first systematic study of adversarial post-training for pixel diffusion. Across two pixel backbones, the method jointly improves distribution fidelity, coverage, prompt alignment, and perceptual quality. We further investigate why it works. Frequency-band and power-law analyses show that the original models systematically underproduce natural-image high-frequency content, while adversarial post-training restores this missing spectral power. In contrast, perceptual loss also increases high-frequency content but sacrifices distribution fidelity and prompt alignment. Nearest-neighbor, recall, and matched no-GAN SFT controls further rule out memorization, mode dropping, and additional optimization as simple explanations. Finally, we examine the boundary of this effect. Under the tested latent diffusion configurations, the same procedure does not produce comparable joint gains and adds almost no decoded high-frequency power. These results identify direct output access to the image statistics being corrected as a key factor governing when adversarial post-training succeeds.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-29T17:59:41Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Xin Lin"
+                    },
+                    {
+                        "name": "Zhifei Zhang"
+                    },
+                    {
+                        "name": "Yuqian Zhou"
+                    },
+                    {
+                        "name": "Haitian Zheng"
+                    },
+                    {
+                        "name": "Zhe Lin"
+                    },
+                    {
+                        "name": "Ming-Hsuan Yang"
+                    },
+                    {
+                        "name": "Truong Nguyen"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.38169v1",
+                "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+                "updated": "2026-09-29T17:59:40Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.38169v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.38169v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Linear attention replaces growing KV caches with fixed-size recurrent states, yet these persistent states can become a substantial memory bottleneck under concurrent serving. Directly quantizing recurrent states to low precision often leads to severe accuracy degradation, as quantization errors propagate through successive state updates. We discover that the impact of these errors depends on two complementary dimensions: temporally, errors in long-lived memory can persist across many decoding steps; spatially, errors in different key rows affect model outputs differently, while state magnitudes vary substantially along both rows and columns. Motivated by these observations, we propose STEPQuant, a spatial-temporal post-training quantization framework for Delta-rule recurrent states. STEPQuant allocates precision according to error magnitude and memory lifetime, and jointly fits key-row and value-column scales based on state distributions and key-row impact on output error. Experiments on Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct across both long- and short-generation benchmarks show that STEPQuant closely matches FP32-state accuracy under a nominal 6-bit budget and outperforms uniform INT8 in its 4-bit configuration. Integrated into SGLang with optimized GPU kernels, 6-bit STEPQuant achieves over 5x recurrent-state compression and reduces total serving memory by up to 68.7%. Our code is available at https://github.com/Dreamer-Toby/STEPQuant.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-29T17:59:40Z",
+                "arxiv:comment": "Technical Report",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Bingchen Yao"
+                    },
+                    {
+                        "name": "Haobo Xu"
+                    },
+                    {
+                        "name": "Haokun Lin"
+                    },
+                    {
+                        "name": "Yichen Wu"
+                    },
+                    {
+                        "name": "Ziyu Guo"
+                    },
+                    {
+                        "name": "Renrui Zhang"
+                    },
+                    {
+                        "name": "Zhichao Lu"
+                    },
+                    {
+                        "name": "Zhenan Sun"
+                    },
+                    {
+                        "name": "Ying Wei"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.38166v1",
+                "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+                "updated": "2026-09-29T17:59:34Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.38166v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.38166v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent LLMs increasingly adopt hybrid designs that replace standard attention with linear attention, such as Gated DeltaNet (GDN) and Kimi Delta Attention (KDA). Although they compress the context into a fixed-size recurrent state and substantially reduce the cost of long-context processing, repeatedly reading and updating that state remains a major inference bottleneck. Quantization offers a natural way to reduce this cost, but can significantly degrade model quality, due to the accumulation of rounding errors and the presence of outlier rows and columns in the state. To address these challenges, we propose LeapQuant, a training-free method that achieves near-lossless performance under 8-bit recurrent-state quantization. First, to mitigate error accumulation, we propose per-window quantization, which leaps over a window of tokens and quantizes the state only once at its end. Within a window, outputs are computed from the fixed low-bit state together with high-precision buffered updates. Second, to reduce the error introduced by each quantization, LeapQuant retains the state's largest outliers as a few high-precision Compensator Tokens, which share the update path of real tokens. We then smooth the remaining residual before quantization to further reduce the error. Comprehensive experiments across the Qwen, Kimi, and GLM model families show that LeapQuant substantially reduces memory and compute costs during inference. With accuracy comparable to the FP32 baseline, it achieves average speedups of 2.05--3.70$\\times$ at the kernel level and 1.47$\\times$ for end-to-end inference on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -451,74 +409,192 @@
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-09-28T17:59:09Z",
+                "published": "2026-09-29T17:59:34Z",
+                "arxiv:comment": "17 pages, 11 figures",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Chaoqian Ouyang"
+                        "name": "Yi Pan"
                     },
                     {
-                        "name": "Ling Yue"
+                        "name": "Haocheng Xi"
                     },
                     {
-                        "name": "Libin Zheng"
+                        "name": "Kan Zhu"
                     },
                     {
-                        "name": "Huanghui Guo"
+                        "name": "Xingyang Li"
                     },
                     {
-                        "name": "Shengxiang Xu"
+                        "name": "Yibo Wu"
                     },
                     {
-                        "name": "YiShu Wang"
+                        "name": "Mayank Mishra"
                     },
                     {
-                        "name": "Ran Li"
+                        "name": "Hongtao Zhang"
                     },
                     {
-                        "name": "Jian Yin"
+                        "name": "William X. Zheng"
                     },
                     {
-                        "name": "Shaowu Pan"
+                        "name": "Baris Kasikci"
                     },
                     {
-                        "name": "Shimin Di"
+                        "name": "Song Han"
+                    },
+                    {
+                        "name": "Kurt Keutzer"
+                    },
+                    {
+                        "name": "Rishabh Iyer"
+                    },
+                    {
+                        "name": "Ion Stoica"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2609.35758v1",
-                "title": "Statistical Learning of Contractive Dynamical Representations for Composite Adaptive Control",
-                "updated": "2026-09-28T17:59:07Z",
+                "id": "http://arxiv.org/abs/2609.38165v1",
+                "title": "Cropland PAtteRNS: Parallel Dimensional Attention Networks and Attention to Dataset Disparity for Crop Segmentation in Satellite Imagery Time Series Data",
+                "updated": "2026-09-29T17:59:29Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2609.35758v1",
+                        "@href": "https://arxiv.org/abs/2609.38165v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2609.35758v1",
+                        "@href": "https://arxiv.org/pdf/2609.38165v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present a representation-learning framework for composite adaptive tracking control under dynamically coupled disturbances. The framework connects classical disturbance-accommodating control (DAC) to recent last-layer adaptive disturbance-rejection methods. Specifically, we introduce a statistically principled hard expectation-maximization (hard-EM) procedure, with a Kalman smoother in the hard E-step, to identify dynamical representations of disturbance whose latent evolution is uniformly contractive. The learned representation evolves a latent disturbance-excitation state from measured plant features and control inputs and decodes that state into the time-varying disturbance acting on the nominal plant, thereby extending prior \"fixed-decay\" last-layer adaptive methods to a learned, predictive DAC-style formulation. Combined with Bayesian filtering of the learned latent state, this representation yields a composite adaptive tracking controller with predictive capability and provable exponential convergence to a bounded neighborhood. We validate our approach experimentally on a slippery ground vehicle carrying a liquid-sloshing tank and a pendulum load, and we further assess its robustness on a system of coupled Duffing oscillators. Across both settings, the method achieves accurate disturbance prediction and improved overall tracking performance relative to fixed-decay representation-learning ablations, LTI disturbance-accommodating baselines, and model-based PD baselines.",
+                "summary": "The landscape of satellite imagery time series datasets and boundary-pushing architectures for cropland segmentation has never been richer. However, in this gold rush, important truths are being missed on both fronts, as a drive for the most novel concepts or the largest datasets pushes finer details to the side. In this paper, we present our hybrid transformer-convolutional model, Cropland Parallel Attention and Refinement Network for Segmentation (PAtteRNS), the first model to use self-attention mechanisms separately for each of the temporal, spectral, and spatial aspects of Sentinel-2 multispectral SITS data. To achieve fully-factorised attention in our proposed model, we introduce a novel parallel transformer architecture which significantly reduces the computational complexity of triple-factorised self-attention. We validate our architecture with an in-depth ablation study, and analyse the performance of our model against state-of-the-art crop segmentation models on multiple tile-size variants of the popular PASTIS and MTLCC datasets. Our findings show our model to outperform all others in the task of crop class segmentation, verified across multiple important segmentation metrics, with especially strong performance against compared models seen in the often under-reported parcel delineation quality, for which we use the Boundary IoU metric. We also find that flawed class groupings within datasets can have a significant negative impact on model performance, and report that alternate tile-size variants of crop segmentation datasets produce results incomparable to one-another, invalidating fair comparison between model performance when trained on different tile-sizes. Based on these findings, we suggest further work is required to standardise best practices when constructing SITS crop segmentation datasets, and to enable future dynamic-tile-sizing for ideal model performance.",
                 "category": [
                     {
-                        "@term": "eess.SY",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-09-29T17:59:29Z",
+                "arxiv:comment": "Main body: 19 pages, 7 figures; Appendices: 15 pages, 16 figures. All code and models associated with this work are available at https://github.com/JoeMetc/CroplandPAtteRNS , along with preparation guides for the two publicly available crop segmentation datasets used in this work",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Joseph Metcalfe"
+                    },
+                    {
+                        "name": "Sara Sharifzadeh"
+                    },
+                    {
+                        "name": "Fabio Caraffini"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.38164v1",
+                "title": "Rho: A Foundation for Efficiently Adaptable VLA Models",
+                "updated": "2026-09-29T17:59:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.38164v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.38164v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "General-purpose physical AI models must combine broad visual and linguistic capabilities with precise control across robot embodiments and efficient adaptation to downstream tasks. We introduce Rho, a family of open-weights VLA models for bimanual manipulation designed for data-light task adaptation on 3 embodiments representative of dual-arm robots across research labs and the industry -- YAM Box, UR AI Trainer, and FR3 Duo. We systematically ablate Rho's action-expert architecture and training recipe, and show in controlled simulation and physical-robot experiments that embodiment midtraining improves downstream adaptation. The resulting Rho variants for YAM Box, UR AI Trainer, and FR3 Duo match or outperform existing open-weights VLAs and achieve the strongest overall performance across the tasks, embodiments, and baselines evaluated in this report. We further demonstrate the Rho model family's built-in capacity for online adaptation: an internal latent policy learns from corrective feedback to select observation-conditioned noise inputs for the frozen flow-matching action expert. With as few as 15 corrected episodes, adapting this lightweight module enables Rho to handle task situations at the fringe of its offline finetuning distribution. Together, these results position Rho as both a strong general-purpose robotic manipulation model and a practical foundation for adaptation. We release the base Rho model and the embodiment-specific checkpoints to facilitate Rho's deployment in research experiments and practical industrial use cases.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-09-29T17:59:28Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Rho Team"
+                    },
+                    {
+                        "name": "Simran Bagaria"
+                    },
+                    {
+                        "name": "Daphne Chen"
+                    },
+                    {
+                        "name": "Dean Fortier"
+                    },
+                    {
+                        "name": "Jianlong Fu"
+                    },
+                    {
+                        "name": "Michael Harrison"
+                    },
+                    {
+                        "name": "Tess Hellebrekers"
+                    },
+                    {
+                        "name": "Neel Joshi"
+                    },
+                    {
+                        "name": "Andrey Kolobov"
+                    },
+                    {
+                        "name": "Dalton Moore"
+                    },
+                    {
+                        "name": "Galen Mullins"
+                    },
+                    {
+                        "name": "Michael Murray"
+                    },
+                    {
+                        "name": "Eduardo Salinas"
+                    },
+                    {
+                        "name": "Reuben Tan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2609.38163v1",
+                "title": "Rethinking Representations for World-Action Modeling",
+                "updated": "2026-09-29T17:59:22Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2609.38163v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2609.38163v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "World-action models jointly learn robot policies and predict future observations, making the representation space an interface between control and prediction. We study the design of this space through controlled comparisons, finding that neither reconstruction fidelity nor pre-trained perceptual features alone ensure effective policy learning. These findings motivate ReWAM, a representation-centric world-action model built on pre-trained DINO features. Feature Calibration and a Temporal Representation Bottleneck organize these features into compact world states suited to dynamics modeling. Action-Grounded Representation Shaping routes only action-loss gradients to the bottleneck, thereby letting the policy shape what the representation encodes while the world model learns how it evolves. Without generative video pre-training, ReWAM achieves 93.6% success on RoboTwin 2.0. On RoboDojo, it achieves an average score of 12.29 and a success rate of 8.28% using approximately 600 hours of embodied pre-training data.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -526,61 +602,56 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-09-28T17:59:07Z",
-                "arxiv:comment": "9 pages, including an additional one-page appendix in this arXiv version. Accepted to the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)",
+                "published": "2026-09-29T17:59:22Z",
+                "arxiv:comment": "https://github.com/hustvl/ReWAM",
                 "arxiv:primary_category": {
-                    "@term": "eess.SY"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Min Kim"
+                        "name": "Haoyi Jiang"
                     },
                     {
-                        "name": "Jos\u00e9 Leonardo Brenes"
+                        "name": "Liu Liu"
                     },
                     {
-                        "name": "Fred Hadaegh"
+                        "name": "Xinjiang Wang"
                     },
                     {
-                        "name": "Soon-Jo Chung"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2609.35755v1",
-                "title": "Covariant Contrastive Learning for Uncertainty-Aware Anomaly Detection",
-                "updated": "2026-09-28T17:59:02Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2609.35755v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Zhihao Sun"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2609.35755v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Machine-learning-based anomaly detection (AD) offers a promising, model-agnostic alternative to traditional LHC analyses, allowing to search for many signals at once. Recent advances in representation learning motivate the use of neural embeddings to map high-dimensional physics observables into low-dimensional latent spaces better suited to statistical inference. However, the propagation of systematic uncertainty in embedded spaces remains poorly understood, severely limiting the application of these methods to real LHC analyses. We address this gap with a machine learning strategy that uses a likelihood-based regularization to improve the structure of embedded spaces. Building on previous work using supervised contrastive learning for physics-aware embeddings, our approach trains them jointly with a downstream parameterized classification task that incorporates continuous uncertainties as nuisance parameters. This method returns a latent space that covaries predictably with systematic shifts, and a model of such distortions that can be exploited in the downstream statistical test for anomaly detection. Using simulated CMS Level-1 trigger data, we show that our method successfully models continuous uncertainties in a 4D latent space with a linear parametric downstream classifier, improving both the interpretability and robustness of the statistical anomaly detection task. This framework offers a general way to study and control systematic uncertainties in latent spaces, opening the way to a new scalable statistical analysis workflow for anomaly detection at the LHC, and other high energy physics experiments.",
-                "category": {
-                    "@term": "hep-ph",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-09-28T17:59:02Z",
-                "arxiv:primary_category": {
-                    "@term": "hep-ph"
-                },
-                "author": [
-                    {
-                        "name": "Shelley Tong"
+                        "name": "Zequn Chen"
                     },
                     {
-                        "name": "Philip Harris"
+                        "name": "Sen Wang"
                     },
                     {
-                        "name": "Gaia Grosso"
+                        "name": "Xinjie Wang"
+                    },
+                    {
+                        "name": "Xia Chen"
+                    },
+                    {
+                        "name": "Jingfeng Yao"
+                    },
+                    {
+                        "name": "Weiheng Zhao"
+                    },
+                    {
+                        "name": "Shanglin Yuan"
+                    },
+                    {
+                        "name": "Zhizhong Su"
+                    },
+                    {
+                        "name": "Wei Sui"
+                    },
+                    {
+                        "name": "Wenyu Liu"
+                    },
+                    {
+                        "name": "Xinggang Wang"
                     }
                 ]
             }
