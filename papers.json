@@ -5,184 +5,152 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-10-05T01:28:04Z",
+        "updated": "2026-10-05T08:04:31Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "623550",
+        "opensearch:totalResults": "623688",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2610.03303v1",
-                "title": "S$^{2}$-PINN: Stochastic Separable Physics-Informed Neural Networks",
-                "updated": "2026-10-02T13:43:57Z",
+                "id": "http://arxiv.org/abs/2610.03717v1",
+                "title": "Less Decoder is More Encoder: Geometric Representation Learning from Novel View Synthesis",
+                "updated": "2026-10-02T17:59:14Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.03303v1",
+                        "@href": "https://arxiv.org/abs/2610.03717v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.03303v1",
+                        "@href": "https://arxiv.org/pdf/2610.03717v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Uncertainty quantification (UQ) for random partial differential equations (PDEs) is ubiquitous in computational science and engineering. However, classical spectral solvers for this class of problems face the curse of dimensionality, and existing neural solvers often ignore the stochastic structure that makes moments and calibration tractable. We introduce a stochastic separable physics-informed neural network, dubbed S$^{2}$-PINN, that represents the solution $u(t,\\mathbf{x},\\mathbf{Z})$ of a random PDE with a learnable Gaussian spatial dictionary, Fourier temporal features, and a generalized polynomial chaos (gPC) stochastic basis, coupled by a low-rank Canonical Polyadic (CP) tensor decomposition core. The method is trained with a hybrid strong-form and gPC-projected residual loss. Our theoretical analysis establishes that the separable class is dense in $L^2$ under mild conditions, and the projected residual corresponds exactly to a stochastic Galerkin constraint. Furthermore, we show that mini-batch projection coefficients are logarithmically dependent on the number of gPC modes, and that the orthogonality penalty controls the conditioning of the learned spatial dictionary. Using four manufactured random PDE benchmarks, we show that S$^{2}$-PINN outperforms nine baselines in terms of mean and variance accuracy, as well as calibration, while using significantly fewer parameters. Further evaluations on non-manufactured Poisson and Darcy problems, a stochastic Navier--Stokes problem, a diffusion scaling study of higher random dimensions, and two stochastic inverse problems reveal the generalization capabilities of the proposed structure. Together, these results support stochastic separability as an effective design principle for physics-informed neural UQ. The code for the experiments can be found in https://github.com/DMax1314/s2pinn",
+                "summary": "This paper examines the role of Novel View Synthesis (NVS) in geometric representation learning. In principle, NVS should reason about 3D scene structure, thereby enabling transferable multi-view geometric representations. Yet, existing encoder-based NVS methods yield poor representations. This is not because of a lack of supervisory signal, but rather due to inconspicuous architectural choices: \\textit{spatially expressive decoders} that dilute representational capabilities of the scene encoder, and \\textit{low-level pixel-space targets} that hinder feature learning. We present SNAP, a self-supervised encoder-decoder transformer that addresses both through a pose-conditioned local decoder and a latent-space reconstruction objective. SNAP is task agnostic, and we show that it is competitive with special-purpose geometry-supervised methods. SNAP also performs competitively against self-supervised representations across five tasks: visual localization, pose estimation, point correspondence, depth estimation, and robot manipulation. Remarkably, SNAP's patch features exhibit emergent viewpoint invariance that approaches heavily supervised models despite lower compute and data budgets. Under camera shifts where standard 2D representations collapse, SNAP degrades more gracefully, revealing that restricting decoder expressivity actively prevents the suppression of transferable geometric structure. https://snap-nvs.github.io",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
-                    {
-                        "@term": "math-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-02T13:43:57Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Zhendong Li"
-                    },
-                    {
-                        "name": "Akwum Onwunta"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.03296v1",
-                "title": "JOVE: Joint Execution and Verification for Resource-Aware LLM Task Graphs",
-                "updated": "2026-10-02T13:37:59Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.03296v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.03296v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Complex reasoning queries can be decomposed into directed acyclic task graphs and distributed across heterogeneous LLMs, reducing latency through parallelism and enabling smaller models to solve complex tasks. In practice, however, the suitability of an LLM for a given subtask may be a priori unknown, and execution alone does not reveal output correctness. We propose JOVE, an online framework that jointly assigns executor LLMs and selects intermediate outputs for paid verification. Verification runs asynchronously and is used to improve future allocations, so the system must balance spending on execution now against learning for later. We study how to optimize this trade-off under a long-term budget and a per-query latency constraint, with stochastic, initially unknown LLM service quality, invocation costs, and execution times. JOVE makes execution and verification decisions by solving a sequence of per-query mixed-integer linear programs. Online learning updates task-dependent estimates of LLM quality based on verification feedback, while an information-gain bonus incorporates the value of learning into allocation decisions. Under a natural set of assumptions, we establish sublinear quality-learning regret for JOVE. Across four reasoning benchmarks, JOVE achieves competitive accuracy against standard inference baselines while reducing average cost and latency by at least 3.17 times.",
-                "category": [
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-02T13:37:59Z",
-                "arxiv:comment": "preprint",
+                "published": "2026-10-02T17:59:14Z",
+                "arxiv:comment": "Accepted to NeurIPS 2026",
                 "arxiv:primary_category": {
-                    "@term": "cs.AI"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Haoran Zhang"
+                        "name": "Keerthi Kaashyap"
                     },
                     {
-                        "name": "Dongjun Kim"
+                        "name": "Dennis Anthony"
                     },
                     {
-                        "name": "Seohyeon Cha"
+                        "name": "Akshay Krishnan"
                     },
                     {
-                        "name": "Kevin S Chan"
+                        "name": "Nhi Ngoc Nguyen"
                     },
                     {
-                        "name": "Ananthram Swami"
+                        "name": "Jeremy Collins"
                     },
                     {
-                        "name": "Gustavo De Veciana"
+                        "name": "James Hays"
                     },
                     {
-                        "name": "Haris Vikalo"
+                        "name": "Shreyas Kousik"
+                    },
+                    {
+                        "name": "Animesh Garg"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.03291v1",
-                "title": "Parallel Time-Aligned Spiking Self-Attention for Consistent Integer-Valued Training and Spike-Driven Inference",
-                "updated": "2026-10-02T13:35:13Z",
+                "id": "http://arxiv.org/abs/2610.03716v1",
+                "title": "MoSE3: Learning World-Space SE(3) at Every Pixel",
+                "updated": "2026-10-02T17:58:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.03291v1",
+                        "@href": "https://arxiv.org/abs/2610.03716v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.03291v1",
+                        "@href": "https://arxiv.org/pdf/2610.03716v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Integer-valued leaky integrate-and-fire (I-LIF) neurons and spike firing approximation (SFA) reduce temporal training cost by representing spike trains as firing counts and normalized firing rates, respectively. However, applying spiking self-attention (SSA) directly to these compressed query, key, and value representations introduces cross-time interactions that are absent during spike-driven inference. We term this operator-level discrepancy Temporal Interaction Mismatch (TIM). We propose Parallel Time-Aligned Spiking Self-Attention (PT-SSA), which reconstructs consecutive virtual spike slices from either I-LIF counts or SFA firing rates, computes attention only between time-aligned slices in parallel, and sums the per-step outputs. To accommodate the reduced attention output scale under SFA, we further introduce Adaptive PT-SSA, which learns a positive per-block rescaling before the output SFA neuron to improve firing-level utilization. Experiments on CIFAR-10, CIFAR-100, and ImageNet-1K show that the proposed methods substantially reduce train--inference mismatch. On CIFAR-100 with I-LIF, PT-SSA reduces the mean Top-1 gap from 1.85 to 0.29 percentage points. On ImageNet-1K, Adaptive PT-SSA reduces the Top-1 gap from 27.78 to 0.06 percentage points and achieves 74.53\\% spike-driven Top-1 accuracy. A Triton-fused PT-SSA training kernel retains a $2.91\\times$ throughput advantage over recurrent LIF SSA.",
+                "summary": "Dense 3D point tracking has been a prominent paradigm for modeling motion in dynamic scenes, but a point track is just a 3-DoF translation curve per pixel: it captures where pixels go, not the rotation of the underlying part, nor which pixels move together as one body. We propose MoSE3, the first feed-forward model that predicts dense SE(3) motion from monocular RGB video, producing full 6-DoF rigid transforms at every pixel in world space. Per-pixel SE(3) motion offers a richer view of how a scene moves: rotation, translation, and grouping all at once. Directly predicting SE(3) is challenging: rotations lie on a curved manifold that is ill-suited to Euclidean regression, and annotations for SE(3) are particularly difficult to acquire. To address these challenges, MoSE3 predicts per-pixel SE(3) through two jointly learned intermediates, 3D point tracks and rigidity embeddings, and recovers SE(3) by differentiably fitting transforms within each soft rigid cluster, enabling end-to-end prediction and supervision. To close the data gap, we introduce Art-Kubric, a large-scale synthetic dataset with dense SE(3) and rigidity labels for articulated objects with rich physical interactions. MoSE3 achieves state-of-the-art SE(3) estimation at pixel, part, and object levels on both rigid and articulated benchmarks, and state-of-the-art average 3D point tracking accuracy across three datasets, while showing strong generalization to real-world videos despite being trained solely on synthetic motion data.",
                 "category": {
-                    "@term": "cs.NE",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-10-02T13:35:13Z",
+                "published": "2026-10-02T17:58:52Z",
+                "arxiv:comment": "NeurIPS 2026 Spotlight. Project page: https://mose3-tracker.github.io/",
                 "arxiv:primary_category": {
-                    "@term": "cs.NE"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Peng Xue"
+                        "name": "Jiahuan Cheng"
                     },
                     {
-                        "name": "Wei Fang"
+                        "name": "Zhiyi Li"
                     },
                     {
-                        "name": "Kaiwei Che"
+                        "name": "Tian Xia"
                     },
                     {
-                        "name": "Qingyan Meng"
+                        "name": "Ruojin Cai"
                     },
                     {
-                        "name": "Zhengyu Ma"
+                        "name": "Yilun Du"
                     },
                     {
-                        "name": "Yonghong Tian"
-                    },
-                    {
-                        "name": "Huihui Zhou"
+                        "name": "Qianqian Wang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.03290v1",
-                "title": "Wrong Organ, Right Physics: Transferring Echocardiography Pretraining to Lung Ultrasound for Tuberculosis Screening",
-                "updated": "2026-10-02T13:33:18Z",
+                "id": "http://arxiv.org/abs/2610.03713v1",
+                "title": "What Should World Models Forget? Stratified Retention for Continual Adaptation",
+                "updated": "2026-10-02T17:58:14Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.03290v1",
+                        "@href": "https://arxiv.org/abs/2610.03713v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.03290v1",
+                        "@href": "https://arxiv.org/pdf/2610.03713v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Lung ultrasound (LUS) is attractive for tuberculosis (TB) screening at primary-care level, but labelled cohorts are small. Echocardiography carries no such constraint, while sharing the same underlying ultrasound imaging physics, signal processing and B-mode appearance as LUS. We ask whether an encoder pretrained on that high-resource ultrasound domain carries representations that remain usable in the low-resource one. Only the encoder varies, across seventeen encoders spanning three architecture families. Among them, a latent-predictive video encoder pretrained on generic video (V-JEPA2-L) and its echocardiography counterpart (EchoJEPA-L) differ in pretraining corpus alone. The choice among these encoders does not resolve the classification, the whole family spanning 2.50 percentage points against a measurement resolution of 2.71. What moves the task instead is feature conditioning. Standardising the features between the encoder and the classifier improves all seventeen encoders by a mean of +1.23 percentage points at $p=1.5\\times10^{-5}$. On the held-out test set every encoder selected on the development folds stands above the baseline system by up to +2.57 percentage points of area under the receiver operating characteristic curve (AUROC), and specificity at 90% sensitivity reaches 79.3% against 60.3%. The contrast specified in advance, EchoJEPA-L against V-JEPA2-L, measures -0.16 percentage points at $p=0.926$. We therefore find no evidence that shared ultrasonic physics alone makes echocardiography a more productive pretraining corpus than generic video, and any advantage, if present, is smaller than this cohort can resolve. The video encoders receive replicated still images, however, so whether this absence of an effect reflects the pretraining domain or a video encoder applied to static frames cannot be separated. The limiting factor is the labelled cohort rather than the encoder.",
+                "summary": "Continual learning treats degradation on previously seen data as evidence of failure, a convention inherited from settings with a stationary prediction target, where a correct label remains correct indefinitely. World models do not satisfy this condition. Their prediction target is the environment, which changes, so knowledge that was accurate when acquired may later become false, and discarding it is required behavior rather than a defect. Non-stationary ground truth is well studied in the concept drift literature and in the temporal factuality of language models, but has not been formulated for world models, which are distinctive in that they also encode knowledge that must never be revised. We argue that continual world models require retention stratified by invariance timescale, separating invariants such as physics and object permanence, which must never be revised, from instance-level facts that should be revised as soon as the environment changes. Standard forgetting metrics cannot distinguish a world model that has correctly revised outdated knowledge from one that has suffered catastrophic forgetting, and consequently rank a frozen model highest, while existing physical-reasoning benchmarks evaluate only frozen checkpoints. We propose differential retention, which reports invariant regression testing across the adaptation stream jointly with revision latency, without aggregation.",
                 "category": [
                     {
-                        "@term": "eess.IV",
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -190,328 +158,106 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "eess.IV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SP",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-02T13:33:18Z",
-                "arxiv:comment": "10 pages, 3 figures, 4 tables. Accepted at SATNAC 2026, Drakensberg, South Africa, 11-14 October 2026",
-                "arxiv:primary_category": {
-                    "@term": "eess.IV"
-                },
-                "author": [
-                    {
-                        "name": "Christiaan M. Geldenhuys"
-                    },
-                    {
-                        "name": "Joshua M. Jansen van V\u00fcren"
-                    },
-                    {
-                        "name": "V\u00e9ronique Suttels"
-                    },
-                    {
-                        "name": "Trevor Brokowski"
-                    },
-                    {
-                        "name": "Ablo P. Wachinou"
-                    },
-                    {
-                        "name": "Mary-Anne Hartley"
-                    },
-                    {
-                        "name": "Rensu P. Theart"
-                    },
-                    {
-                        "name": "Grant Theron"
-                    },
-                    {
-                        "name": "Thomas R. Niesler"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.03289v1",
-                "title": "Architecture-Dependent Fusion Pathways in MLLMs",
-                "updated": "2026-10-02T13:32:45Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.03289v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.03289v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Multimodal Large Language Models (MLLMs) achieve strong performance across vision-language tasks, yet the internal mechanisms by which visual and textual information are fused across layers remain insufficiently understood. We investigate representative MLLMs from two architectural paradigms: concatenation architectures and native multimodal architectures. We conduct three progressively connected analyses: alignment decoupling identifies which modality changes, attention routing and entropy characterize how cross-modal information is distributed, and intrinsic dimensionality examines how fusion reshapes feature spaces. Separately, we perform causal intervention experiments as a validation of the resulting interpretation. As a supplementary analysis, we use visual CKA to examine the Platonic Representation Hypothesis. Together, these analyses reveal two distinct fusion pathways: concatenation models follow a text-first, vision-later pathway, whereas native models exhibit earlier visual-textual co-adaptation and feature-space reorganization. This work provides a mechanistic perspective for understanding multimodal fusion and supports architecture-aware diagnostics of multimodal representations.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-02T13:32:45Z",
+                "published": "2026-10-02T17:58:14Z",
+                "arxiv:comment": "Accepted to NeurIPS 2026 Continual World Models Workshop",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Hebao Zhu"
+                        "name": "Nishit Anand"
                     },
                     {
-                        "name": "Dongxia Wu"
+                        "name": "Ramani Duraiswami"
+                    },
+                    {
+                        "name": "Dinesh Manocha"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.03286v1",
-                "title": "VenusRL: A Fully Disaggregated Agentic RL System with Priority Scheduling and Scalable Interaction",
-                "updated": "2026-10-02T13:29:40Z",
+                "id": "http://arxiv.org/abs/2610.03712v1",
+                "title": "RNADyn: A Benchmark for Generating and Understanding RNA Dynamics",
+                "updated": "2026-10-02T17:58:08Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.03286v1",
+                        "@href": "https://arxiv.org/abs/2610.03712v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.03286v1",
+                        "@href": "https://arxiv.org/pdf/2610.03712v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Agentic Reinforcement Learning (RL) trains LLM agents through multi-turn interactions with external tool environments. Its multi-turn nature exposes two system-level bottlenecks unaddressed by existing agentic RL frameworks. First, end-to-end training throughput is constrained by the slowest trajectories to complete, yet optimizing per-GPU utilization alone scatters rollout progress across many groups, delaying the completion of enough groups to unblock the next training step. Second, tool sandboxes are statically over-provisioned by their declared memory ceilings, leaving most physical memory stranded while replicating near-identical state across sandboxes launched from the same prompt. We present VenusRL, a fully disaggregated agentic RL system that addresses both bottlenecks. VenusRL's priority-aware action scheduler uses length-prediction heuristics to identify sample groups whose completion is most likely to unblock the next training step, and pushes them ahead of others across batch admission, KV Cache residency, and cross-worker request orchestration. VenusRL's environment resource manager combines a memory-aware admission threshold with a template-keyed page-sharing pool, packing more sandboxes per node while preserving strict memory isolation via write-protected page table entry aliasing and copy-on-write. Across representative agentic RL workloads, VenusRL achieves up to 4.24x end-to-end training speedup over state-of-the-art baselines and reduces environment cost by up to 89%.",
-                "category": {
-                    "@term": "cs.DC",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-02T13:29:40Z",
-                "arxiv:comment": "18 pages, 19 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.DC"
-                },
-                "author": [
-                    {
-                        "name": "Mingjun Zhang",
-                        "arxiv:affiliation": "Institute of Computing Technology, Chinese Academy of Sciences"
-                    },
-                    {
-                        "name": "Yucheng Li",
-                        "arxiv:affiliation": "Beihang University"
-                    },
-                    {
-                        "name": "Menghao Zhang",
-                        "arxiv:affiliation": "Beihang University"
-                    },
-                    {
-                        "name": "Shuyong Zhu",
-                        "arxiv:affiliation": "Institute of Computing Technology, Chinese Academy of Sciences"
-                    },
-                    {
-                        "name": "Ping Zhang",
-                        "arxiv:affiliation": "Infrawaves"
-                    },
-                    {
-                        "name": "Xiaohe Hu",
-                        "arxiv:affiliation": [
-                            "Infrawaves",
-                            "Shanghai Innovation Institute"
-                        ]
-                    },
-                    {
-                        "name": "Jun Chen",
-                        "arxiv:affiliation": "Infrawaves"
-                    },
-                    {
-                        "name": "Zhixin Wang",
-                        "arxiv:affiliation": "Shanghai Innovation Institute"
-                    },
-                    {
-                        "name": "Xutong Wang",
-                        "arxiv:affiliation": "Infrawaves"
-                    },
-                    {
-                        "name": "He Liu",
-                        "arxiv:affiliation": "Infrawaves"
-                    },
-                    {
-                        "name": "Yanmin Jia",
-                        "arxiv:affiliation": "Infrawaves"
-                    },
-                    {
-                        "name": "Shengrong Zhu",
-                        "arxiv:affiliation": "Infrawaves"
-                    },
-                    {
-                        "name": "Peng Sun",
-                        "arxiv:affiliation": "Shanghai Zhifeng Co., Ltd"
-                    },
-                    {
-                        "name": "Mingjie Zhang",
-                        "arxiv:affiliation": "Infrawaves"
-                    },
-                    {
-                        "name": "Liming Liu",
-                        "arxiv:affiliation": "Shanghai Innovation Institute"
-                    },
-                    {
-                        "name": "Jinlong Hou",
-                        "arxiv:affiliation": "Shanghai Innovation Institute"
-                    },
-                    {
-                        "name": "Yuan Cheng",
-                        "arxiv:affiliation": "Shanghai Innovation Institute"
-                    },
-                    {
-                        "name": "Yujun Zhang",
-                        "arxiv:affiliation": "Institute of Computing Technology, Chinese Academy of Sciences"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.03278v1",
-                "title": "DexJoCo-X: Benchmarking Action Representations for Multi-Hand Dexterous Manipulation",
-                "updated": "2026-10-02T13:21:13Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.03278v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.03278v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "As dexterous hands proliferate, collecting data and training policies separately for every morphology becomes increasingly impractical. Scalable cross-embodiment learning therefore requires a unified representation that captures shared manipulation structure while preserving morphology-specific control. Differences in hands, tasks, datasets, and control interfaces prevent existing studies from isolating the effects of representation, pretraining, and architecture. We introduce DexJoCo-X, a benchmark and toolkit for controlled comparison across seven representative dexterous hands, six single-arm and bimanual tasks, and 2,100 balanced demonstrations. DexJoCo-X provides a matched multi-hand, multi-task protocol with common scenes, success criteria, and execution interfaces, redesigned glove-to-hand mappings, and an automated pipeline that expands reviewed demonstrations across randomized scenes. Using $\u03c0_{0.5}$, Ego-Pi, and Being-H0.5, we examine whether a shared action interface is sufficient for multi-hand learning. Expanding $\u03c0_{0.5}$ to an 80-dimensional bimanual output yields near-zero success. Ego-Pi preserves the pretrained action head through interleaved prediction and supports per-hand multi-task learning, but remains ineffective for seven-hand joint training. By contrast, Being-H0.5 combines cross-embodiment pretraining, a unified action space, and embodiment-aware experts, enabling one policy to control all seven hands. Within this architecture, function-aligned action slots achieve 47.7% mean success, compared with 47.0% for native coordinates and 33.1% for DexLatent. These results show that cross-embodiment representation depends on the entire learning system: action coordinates, pretraining, and architecture must jointly separate shared manipulation structure from embodiment-specific control.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-02T13:21:13Z",
-                "arxiv:comment": "8 pages, 5 figures. Project website: https://darenrenjian.github.io/DexJoCo-X-website/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Xiangwei Jiang"
-                    },
-                    {
-                        "name": "Yao Mu"
-                    },
-                    {
-                        "name": "Lixin Duan"
-                    },
-                    {
-                        "name": "Wen Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.03275v1",
-                "title": "How suboptimal is my stochastic network controller allowed to be? Completion certificates with application to power grids hosting AI data centers",
-                "updated": "2026-10-02T13:17:30Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.03275v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.03275v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Power grids are beginning to host AI data centers whose demand can change abruptly and in a correlated way, and operators and planners must decide whether existing controllers can absorb the resulting transients and where new flexibility is worth installing. We cast this as a question in stochastic control: how far from optimal is an implementable controller? For controlled diffusions with affine, state-independent actuation, additive and possibly degenerate noise and quadratic control cost, any Hamilton-Jacobi-Bellman (HJB) subsolution bounds the optimal cost from below and simulation bounds the deployed cost from above, so their gap certifies the permissible suboptimality. We construct subsolutions from path-integral control by completing the control geometry: enlarging the control Gramian until it matches the physical noise makes the problem linearly solvable, and its Feynman-Kac value is an automatic lower bound whose HJB residual is exactly the energy of the fictitious control. A dual noise-deflation construction can be tighter but requires a curvature condition. The geometry yields planning rules: price control authority in proportion to local noise variance, and use shadow values to guide sparse reinforcement. For nonlinear stochastic swing dynamics of the IEEE 118-bus system after a severe load loss, a simple generator controller is certified within 2.8% of optimal under homogeneous forcing; under heterogeneous forcing the gap is 39% with uniform prices and 1.2% once the same total authority is repriced, before any hardware is added.",
-                "category": [
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "physics.soc-ph",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-02T13:17:30Z",
-                "arxiv:comment": "45 pages, 21 figures",
-                "arxiv:primary_category": {
-                    "@term": "eess.SY"
-                },
-                "author": {
-                    "name": "Michael Chertkov"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.03273v1",
-                "title": "EVOL: Simulator-Guided Evolutionary Expert Synthesis for Deployment-Free Learning Path Recommendation",
-                "updated": "2026-10-02T13:16:40Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.03273v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.03273v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning (RL) for learning path recommendation (LPR) faces two coupled obstacles. First, the policy must commit to a sequence of L concepts without intermediate feedback, producing a combinatorial search space that grows super-exponentially with L and provides reward only at the final step. Second, expert learning paths would be the natural cure for sparse-reward RL, but they do not exist in educational data, because student logs record what learners did, not what they should have done. We address both obstacles by importing a recipe from simulator-based demonstration learning in robotics: the knowledge tracing simulator is used both to synthesize per-learner expert demonstrations through evolutionary search and to train a deployment-free policy that distills these demonstrations into a feed-forward learner. Our framework, EVOL, instantiates this pipeline with an asymmetric actor-critic where the actor commits to deployment-realistic blind planning while the critic exploits the privileged simulator state during training. Across three datasets (ASSIST15, Junyi, and EdNet; 39-189 concepts) and path lengths L = 5, 10, and 20, EVOL surpasses 8 baselines spanning heuristic, sequential, RL, graph-enhanced RL, and LLM-enhanced methods. We further compare three imitation strategies (BC, AWR, and DAPG) and show that final performance is governed by the quality of evolutionary experts rather than by the particular imitation objective.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-02T13:16:40Z",
-                "arxiv:comment": "Accepted at the 35th ACM International Conference on Information and Knowledge Management (CIKM 2026)",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Geonwoo Bang"
-                    },
-                    {
-                        "name": "Dongho Kim"
-                    },
-                    {
-                        "name": "Moohong Min"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.03265v1",
-                "title": "SPEAR: A Spectral-Disentangled MoE Neural Operator with Knowledge-Guided Expert Aggregation for Large-Scale PDE Pretraining",
-                "updated": "2026-10-02T13:10:09Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.03265v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.03265v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Large-scale pre-training has improved the generalization of neural operators across diverse PDEs. However, existing PDE foundation models still struggle with heterogeneous dynamics, where shared representations may cause knowledge interference, while mixture-of-experts (MoE) architectures suffer from increasing expert redundancy. We propose SPEAR, a spectral-disentangled MoE neural operator with knowledge-guided expert aggregation for large-scale PDE pre-training. SPEAR decouples latent features into low- and high-frequency components, enabling shared modeling of transferable dynamics and specialized learning of PDE-specific patterns. To address expert redundancy, we design a knowledge-guided expert aggregation strategy that measures expert similarity from dataset-specific learned knowledge and routing preferences, enabling the identification and consolidation of similar experts. Experiments on twelve PDE datasets and multiple downstream benchmarks demonstrate superior performance in pre-training, fine-tuning, and transfer learning. Furthermore, our aggregation strategy reduces the number of experts by 50\\% while maintaining or improving prediction accuracy, achieving a balance between model efficiency and generalization for PDE foundation models.",
+                "summary": "Ribonucleic acid (RNA) functions through conformational changes that are not fully captured by static structures. However, large-scale standardized RNA dynamics data remain limited, and existing approaches typically treat trajectory generation and dynamics understanding as separate objectives. Here, we introduce RNADynBench, a standardized RNA molecular dynamics (MD) benchmark with 2585 quality-controlled 100-ns all-atom trajectories and leakage-controlled splits. Building on RNADynBench, we develop RNADynNet, a unified model for RNA dynamics learning that uses a shared backbone for both trajectory generation and dynamics fingerprint extraction from a single conformer. It combines coordinate denoising, single-frame-to-trajectory alignment, and physical grounding to connect all-atom trajectory generation with dynamics representation learning. Physical grounding improves both generated dynamics and the physical information recoverable from these fingerprints. Across both test sets, including the high-flexibility challenge set, the generated trajectories achieve RMSF correlations of 0.875 and 0.766, while single-conformer predictions show comparable agreement with MD-derived dynamics. RNADynBench and RNADynNet together establish a benchmark and unified modeling framework for generating and understanding RNA dynamics.",
                 "category": [
                     {
                         "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "physics.bio-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "q-bio.BM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-02T17:58:08Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Yiming Huang"
+                    },
+                    {
+                        "name": "Lennart Bastian"
+                    },
+                    {
+                        "name": "Hanqun Cao"
+                    },
+                    {
+                        "name": "Luis Vollmers"
+                    },
+                    {
+                        "name": "Tolga Birdal"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.03710v1",
+                "title": "EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras",
+                "updated": "2026-10-02T17:57:51Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.03710v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.03710v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Inspired by human vision, we introduce a framework using active gaze to enable fine-grained bimanual manipulation with only a single stereo camera. EyeRobot 2.0 physically attends to a 3D fixation point in the scene by swiveling two eye viewpoints to center their gaze on it. The resulting images are processed foveally by allocating more visual tokens to the image centers, focusing computation on task-relevant features. Such Active Visual Fixation (AVF) requires carefully coordinated gaze during task execution, which we accomplish hierarchically by first training a low-level gaze servoing policy conditioned on a goal object, then training a target selector which emits fixation goals based on task progress. Both modules are trained with RL on real-world data: the first is trained with a dense geometric reward and the second co-trains with the BC gripper policy which allows it to discover fixation sequences that can resemble a human's fixation sequence while performing the task. EyeRobot 2.0 further takes advantage of fixation by canonicalizing gripper information into a fixation-relative SE(3) frame, which compacts the size of the action distribution to learn. We collect teleoperation data for 7 real-world and 6 simulated tasks, and conduct over 1000 physical and 1800 simulated robot trials comparing EyeRobot 2.0 against passive stereo and ego + wrist camera policies trained on the same data. Removing wrist cameras is costly for standard policies: with only passive stereo, real-world success drops from 52% to 27%. EyeRobot 2.0 closes this gap with only stereo, outperforming passive stereo by 40% in real and 20% in sim. It matches ego + wrist policies when their wrist views are clear (69% vs. 64%), and more than doubles their success when grasped objects occlude the wrist cameras (48% vs. 22%)",
+                "category": [
+                    {
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -519,28 +265,305 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-02T13:10:09Z",
+                "published": "2026-10-02T17:57:51Z",
+                "arxiv:comment": "Project Page: https://eyerobot2.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Kush Hari"
+                    },
+                    {
+                        "name": "Justin Kerr"
+                    },
+                    {
+                        "name": "Nidhya Shivakumar"
+                    },
+                    {
+                        "name": "Samarth Mahapatra"
+                    },
+                    {
+                        "name": "Carmelo Sferrazza"
+                    },
+                    {
+                        "name": "Jiahui Lei"
+                    },
+                    {
+                        "name": "Jitendra Malik"
+                    },
+                    {
+                        "name": "C. Karen Liu"
+                    },
+                    {
+                        "name": "Ken Goldberg"
+                    },
+                    {
+                        "name": "Angjoo Kanazawa"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.03709v1",
+                "title": "From Mixing to Tearing: Graph Decomposition in Decentralized Optimization via Message Passing",
+                "updated": "2026-10-02T17:57:50Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.03709v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.03709v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We study the minimization of sums of smooth strongly convex functions over undirected graphs, with each function held by one agent and communication restricted to neighbors in the graph. Existing decentralized methods, whether based on gossip or on routing over spanning trees, typically\n  use the network to mix or aggregate information to enable\n  {\\it prescribed} local optimization\n  updates. What this communication-centered viewpoint lacks is a general\n  framework that uses graph structure to {\\it jointly} design the\n  optimization subproblems and the cooperative computation and communication through which agents solve them\n  cooperatively.\n  We develop such a framework from first principles,\n  jointly designing the linear representation of agreement constraints, the blocks of\n  the resulting dual variables (jointly optimized), and connected cluster of agents that\n  cooperatively solve each block subproblem over the assigned subgraph. GATE (Graph-Tearing message passing) is a first instance of this framework: one variable per edge and tree blocks. At each iteration, agents update their assigned edge variables by\n  minimizing the sum of the two endpoint cost-to-go messages and\n  relaxing the result. The messages are updated through local minimizations following the tree recursion. To reduce per-iteration computational and communication costs, we develop GATE-S, a surrogate variant using tractable local models and lightweight message parametrizations. We establish linear convergence with a rate explicit in the interplay among function regularity, network topology, and the chosen partition, revealing the effects of graph decomposition. Numerical experiments are conducted to validate the theoretical results and evaluate the efficiency of our algorithms.",
+                "category": [
+                    {
+                        "@term": "math.OC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-02T17:57:50Z",
+                "arxiv:primary_category": {
+                    "@term": "math.OC"
+                },
+                "author": [
+                    {
+                        "name": "Kuangyu Ding"
+                    },
+                    {
+                        "name": "Gesualdo Scutari"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.03706v1",
+                "title": "Quantum estimation, channel orders, and private capacity",
+                "updated": "2026-10-02T17:56:45Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.03706v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.03706v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent examples have shown that zero private capacity need not imply antidegradability and that two channels with zero private capacity can nevertheless transmit private information together. Existing entropic channel orders compare what a receiver and its environment can learn and thereby bound capacities. We connect these orders to the recent constructions through binary estimation, whose minimum mean-square error is governed by measured $\u03c7^2$ divergence. A new integral representation shows how measured $\u03c7^2$ on a qubit extension recovers quantum $\u03c7^2$. It lets us pass from complete measured-$\u03c7^2$ ordering to complete quantum-$\u03c7^2$, relative-entropy, and less-noisy ordering. Zhu and Wang used a signed lift to show that their qutrit channel has zero private capacity. We show that Hermitian-smoothed measured-$\u03c7^2$ ordering characterizes when such lifts exist, even with a quantum reference. Environmental dominance in binary estimation at every blocklength yields a finite-code reliability--secrecy bound. These results explain why complete comparison prevents activation with antidegradable helpers whereas regularized comparison alone does not. Building on that qutrit example, we establish this stability for a range of noisy Werner--Holevo channels, determine sharp private-capacity and antidegradability thresholds, and compute exact complementary capacities in a nondegradable range. By contrast, we extend Pauli half-erasure activation to all $1/2\\le p<1$ and establish the same range for a new four-level family. Reference-assisted measured-$\u03c7^2$ witnesses show why these activating constructions lack complete comparison.",
+                "category": [
+                    {
+                        "@term": "quant-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-02T17:56:45Z",
+                "arxiv:comment": "40 pages",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": {
+                    "name": "Christoph Hirche"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.03702v1",
+                "title": "LESSER: Post-Training Data Selection with Output-Layer Gradients",
+                "updated": "2026-10-02T17:55:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.03702v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.03702v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The choice of post-training data for large language models substantially affects downstream performance. Gradient-based data selection is a popular approach that ranks training data by how well their gradients align with those of a small validation set. However, ranking with full-parameter gradients requires an expensive backward pass on every sample, making computation intractable for large candidate pools. This raises a natural question: can we approximate full-gradient features at a fraction of the cost? Conveniently, we find that output-layer gradients suffice for effective data selection, yet require only the cheaper forward pass. We implement this as LESSER, a drop-in wrapper for selection methods that reduces the feature-extraction FLOP cost by $9.7\\times$ for SFT and $3.0\\times$ for RL benchmarks, while tracking full-gradient performance on downstream tasks. Empirically, we find that even when output-layer and full gradients rank individual samples differently, they select batches with aligned gradients.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-02T17:55:42Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Dengdi Sun"
+                        "name": "Lyuxin David Zhang"
                     },
                     {
-                        "name": "Xiaoya Zhou"
+                        "name": "Eric Wong"
                     },
                     {
-                        "name": "Xiao Wang"
+                        "name": "Surbhi Goel"
                     },
                     {
-                        "name": "Wanli Lyu"
+                        "name": "Anton Xue"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.03698v1",
+                "title": "Decoding the Functional Roles of Register and High-Norm Patch Tokens in Vision Transformers",
+                "updated": "2026-10-02T17:55:06Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.03698v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Jin Tang"
+                        "@href": "https://arxiv.org/pdf/2610.03698v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Self-supervised Vision Transformers (ViTs), such as DINOv2, learn rich visual representations, but the functions of their internal tokens remain poorly understood. Recent architectures introduce dedicated register tokens to reduce high-norm out- lier patch tokens that emerge in background re- gions, yet the semantic and functional roles of both token types have not been fully established. In this paper, we analyze these roles by training sparse autoencoders (SAEs) on register-token and outlier-token activations in DINOv2. Using an automated interpretability pipeline, UMAP clus- tering, and CLIP-space cross-checks, we find that register-token features are more strongly associ- ated with high-level semantic concepts. Outlier- token features, by contrast, are more often associ- ated with lower-level structural, background, and texture-dominant patterns. Causal ablations fur- ther reveal a substantial functional asymmetry: disrupting top-activating register-derived features produces a 48.17% drop in representation cosine similarity, whereas disrupting outlier-derived fea- tures produces only a 0.31% drop. Together, our results provide evidence for token specialization in self-supervised ViTs.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-02T17:55:06Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Neel Varma"
                     },
                     {
-                        "name": "Bin Luo"
+                        "name": "Andrew Rufail"
+                    },
+                    {
+                        "name": "Dipika Khullar"
+                    },
+                    {
+                        "name": "Vasu Sharma"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.03693v1",
+                "title": "Transcriptome-informed multi-modal AI for predicting neoadjuvant therapy response from breast cancer biopsies",
+                "updated": "2026-10-02T17:52:57Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.03693v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.03693v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Scarcity of labeled data limits development of deep learning biomarkers in oncology. We develop a two-stage AI model predicting pathological complete response (pCR) to neoadjuvant therapy in breast cancer. The first stage learns the transcriptome from histopathology using 8,742 patients across 32 cancer types, corroborated by pathologist review and spatial agreement with measured expression. This simplifies the second stage to predicting pCR from inferred expression and clinical variables. Developed using 1,080 patients (five cohorts) and evaluated in 1,412 patients (nine cohorts), the model achieves a pooled AUROC of 0.79 (95% CI, 0.73-0.85), discriminating responders within molecular subtypes. It outperforms histopathological biomarkers, remaining stable across intratumoral sampling and with minimal biopsy tissue. Ablations show transcriptome-wide inference improves discrimination over clinical variables alone or one-stage pathology models, and robustness by avoiding genomic assays' gene selection constraints. These results indicate that biologically informed compression may generalize to data-sparse applications in precision oncology.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-02T17:52:57Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Jungkyu Park"
+                    },
+                    {
+                        "name": "Dhruva Biswas"
+                    },
+                    {
+                        "name": "Joseph Cappadona"
+                    },
+                    {
+                        "name": "Cerise Tang"
+                    },
+                    {
+                        "name": "Ken G. Zeng"
+                    },
+                    {
+                        "name": "Bartosz Machura"
+                    },
+                    {
+                        "name": "Chuwen Liu"
+                    },
+                    {
+                        "name": "Paolo Tarantino"
+                    },
+                    {
+                        "name": "Coral Omene"
+                    },
+                    {
+                        "name": "Francisco J. Esteva"
+                    },
+                    {
+                        "name": "Rohit Bhargava"
+                    },
+                    {
+                        "name": "Marcin Braun"
+                    },
+                    {
+                        "name": "Kamila Pa\u017adzierz"
+                    },
+                    {
+                        "name": "Jakub Czerwi\u0144ski"
+                    },
+                    {
+                        "name": "Hanna Roma\u0144ska-Knight"
+                    },
+                    {
+                        "name": "Albert Grinshpun"
+                    },
+                    {
+                        "name": "Bareket Daniel"
+                    },
+                    {
+                        "name": "Michele Buchinger"
+                    },
+                    {
+                        "name": "Frederick Howard"
+                    },
+                    {
+                        "name": "Piotr Wysocki"
+                    },
+                    {
+                        "name": "Brie Chun"
+                    },
+                    {
+                        "name": "Freya Schnabel"
+                    },
+                    {
+                        "name": "Rich Caruana"
+                    },
+                    {
+                        "name": "Jan Witowski"
+                    },
+                    {
+                        "name": "Krzysztof J. Geras"
                     }
                 ]
             }
