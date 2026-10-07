@@ -5,381 +5,361 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-10-07T01:57:07Z",
+        "updated": "2026-10-07T08:10:19Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "625370",
+        "opensearch:totalResults": "625562",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2610.08137v1",
-                "title": "Rethinking Visual Provenance: Detection and Watermarking Across Direct Visual Generation and LLM-Driven Code Rendering",
-                "updated": "2026-10-06T10:53:19Z",
+                "id": "http://arxiv.org/abs/2610.08791v1",
+                "title": "World Models' Last Exam in Physics",
+                "updated": "2026-10-06T17:59:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.08137v1",
+                        "@href": "https://arxiv.org/abs/2610.08791v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.08137v1",
+                        "@href": "https://arxiv.org/pdf/2610.08791v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "AI systems create images and videos with image/video generation models or by writing code and graphics descriptions that are then rendered. These routes can produce similar visible artifacts but expose different representations, intervention points, and provenance evidence. We develop a production-centered framework that compares detection and watermarking across both routes. An explicit verification specification distinguishes passive inference, message recovery, and authenticated provenance. We organize image, video, source-code, and rendering-aware watermarks by production stage. We examine the different requirements of generated images and video, plots and SVG, programmable video, and agent-composed workflows. Documented Claude, OpenAI, and rendering-tool interfaces connect the framework to concrete systems. We pose ten scoped research questions on identifiability, observability, fair comparison across stages, recoverable payload, reconstruction, synchronization, composition, hybrid local contribution, and private production-event authentication. The result is a conceptual research agenda grounded in published methods, inspected interfaces, and elementary boundary examples. It reports no experiments and claims no new theorems; its appendix results are elementary calculations, and documentation and source inspection establish interfaces, not empirical robustness.",
-                "category": [
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-06T10:53:19Z",
-                "arxiv:comment": "46 pages, 6 figures, 4 tables. Conceptual research agenda; no experiments. Video: https://youtu.be/14SMl0d_e48. Project page: https://zhenggao-30.github.io/Rethinking-Visual-Provenance/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CR"
-                },
-                "author": [
-                    {
-                        "name": "Zheng Gao"
-                    },
-                    {
-                        "name": "Xiaoyu Li"
-                    },
-                    {
-                        "name": "Zhicheng Bao"
-                    },
-                    {
-                        "name": "Yang Song"
-                    },
-                    {
-                        "name": "Jiaojiao Jiang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.08136v1",
-                "title": "Adapting Generative Recommenders for Multi-Turn Interaction",
-                "updated": "2026-10-06T10:51:53Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.08136v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.08136v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Generative recommenders decode items from a user's interaction history, but offer no way for users to correct a recommendation that misses their current intent. Adding conversation is natural since items and words share same output space, yet training the model to converse may overwrite the history-to-item mapping it relies on. We introduce INTEGER (**INTE**ractive **GE**nerative **R**ecommendation), which extends generative recommendation to multi-turn interaction with a learned routing token that lets the model decide when to recommend, history re-anchoring that conditions each item on both past behavior and the dialogue, and behavioral replay with instruction-data rehearsal that prevents forgetting during adaptation. Users can thus give feedback on recommendations within the dialogue, while recommendations stay grounded in behavioral history and accuracy is not traded for fluency. On Amazon Beauty and Toys, INTEGER matches or exceeds the strongest baselines in accuracy with competitive conversation quality, improving Hit@10 by 13.3% on Amazon Beauty, and significantly outperforms the generative recommender it starts from. Our analyses show that INTEGER learns behaviors that naive adaptation fails to acquire, recommending once the user's intent is clear and staying attentive to behavioral history at the moment of recommendation. INTEGER also learns an intent-agnostic replacement over the item space, which suppresses rejected items but points to attribute-aware feedback as the next step.",
+                "summary": "Video world models can produce visually convincing yet physically inconsistent sequences, raising concerns about their reliability for prediction and planning in embodied AI systems. Existing evaluations often rely on model-based judgments or reference videos, while direct physical tests largely focus on mechanics. We introduce World Models' Last Exam in Physics, a measurement-based benchmark for evaluating physical consistency in video world models. The benchmark comprises 40 controlled tasks spanning mechanics, optics, fluids, thermal and phase-change phenomena, electromagnetism, and surface tension. Each task pairs an initial image and a generation prompt with predefined physical criteria, enabling interpretable tests of observable physical relationships without requiring reference videos. Its evaluator combines task-observability screening with task-specific quantitative physical measurements. Experiments on eight video generation models across 1,280 videos reveal persistent physical inconsistencies and substantial variation across tasks, with the best model achieving an overall score of 57.76 out of 100. Evaluation on synthetic videos with known physical relationships provides evidence for the validity of the measurement module under controlled conditions. The evaluator also achieves higher agreement with human judgments than a direct vision-language model baseline in both within-task rankings and pairwise comparisons. By combining coverage across physical domains with scores grounded in measurable evidence and explicit measurement limitations, the benchmark provides an interpretable basis for diagnosing physical inconsistencies and tracking progress toward physically consistent video world models.",
                 "category": {
-                    "@term": "cs.IR",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-10-06T10:51:53Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.IR"
-                },
-                "author": [
-                    {
-                        "name": "Yu-Chen Den"
-                    },
-                    {
-                        "name": "Zhi Rui Tam"
-                    },
-                    {
-                        "name": "Yung-Yu Shih"
-                    },
-                    {
-                        "name": "Shih-Hsin Wang"
-                    },
-                    {
-                        "name": "Yun-Nung Chen"
-                    },
-                    {
-                        "name": "Pu-Jen Cheng"
-                    },
-                    {
-                        "name": "Eugene Yang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.08133v1",
-                "title": "VLA-ACL: Action-Consistent Visual Token Pruning for Efficient Vision-Language-Action Models",
-                "updated": "2026-10-06T10:47:43Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.08133v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.08133v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Vision-Language-Action (VLA) models achieve strong robotic manipulation performance but incur high computational costs from processing long token sequences at every control step, limiting real-time deployment. Visual token pruning offers a direct solution, as visual patches dominate the input sequence and contain considerable redundancy. Existing approaches, however, either rely on indirect training-free heuristics, such as attention scores and motion thresholds, or require costly fine-tuning of the base VLA model. We introduce VLA-ACL (Action Consistency Learning), which learns a lightweight visual token pruning policy through action-level supervision while keeping the base VLA model entirely frozen. The training objective encourages actions produced from pruned visual contexts to remain consistent with the full-context teacher, with ground-truth actions as auxiliary supervision. This directly ties token selection to its effect on the downstream control output. Experiments on LIBERO and real-world manipulation tasks show that VLA-ACL prunes up to 87.5% of visual tokens while retaining competitive performance, reduces computation by up to 75%, and achieves a 1.5x inference speedup. These results establish a stronger performance-efficiency trade-off than existing frozen-VLA pruning methods and demonstrate the value of action-level supervision for visual token selection. Code is available at https://github.com/du-owen/VLA-ACL.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-06T10:47:43Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Owen Du"
-                    },
-                    {
-                        "name": "Yang Yue"
-                    },
-                    {
-                        "name": "Jie Zhang"
-                    },
-                    {
-                        "name": "Jiaqi Pi"
-                    },
-                    {
-                        "name": "Chi Bene Chen"
-                    },
-                    {
-                        "name": "Gao Huang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.08132v1",
-                "title": "Beyond Marginal Monitoring: Distributed Joint-Distribution Testing for Data Concept Drift in Large Scale E-Commerce Operations",
-                "updated": "2026-10-06T10:47:26Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.08132v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.08132v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Concept drift threatens production machine learning, yet the empirical behavior of multivariate two-sample drift detectors at scale remains under-characterized. Existing benchmarks rarely address the hundreds of millions of rows and high-cardinality features typical of industrial-operational datasets. We evaluate five multi-column two-sample tests (marginal, projection-based, and kernel embedding methods) across three complementary environments: the Harvard Dataverse, a validated Failing Loudly reproduction (mean absolute error between 0.030 and 0.053), and a novel synthetic-injection benchmark on the 137.5-million-row Trendyol collection-ranking feature table. Testing four drift types across two severity-scope regimes, we demonstrate that distributed Maximum Mean Discrepancy with Random Fourier Features on Apache Spark scales robustly. Averaged over the four drift types in the strong regime and under a calibrated threshold, it achieves a Pearson correlation of r = 0.940 with expected drift magnitude, an 80.4% true positive rate, and a 3.2% false positive rate. Conversely, the per-dimension Kolmogorov-Smirnov test failed due to statistic saturation from ID-like columns under asymmetric sampling, establishing a critical constraint for large-scale sampling design. At weak configurations (realized-flip fractions of at most 0.57%), detectors struggled to reliably discriminate, highlighting the need for future intensity-grid power analyses to distinguish fundamental sensitivity bounds from scalable threshold shifts.",
-                "category": [
-                    {
-                        "@term": "cs.DC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ME",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-06T10:47:26Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.DC"
-                },
-                "author": [
-                    {
-                        "name": "Cagdas Pullu"
-                    },
-                    {
-                        "name": "Mahmut Emir Arslan"
-                    },
-                    {
-                        "name": "Bugra Balkac"
-                    },
-                    {
-                        "name": "Aylin Ondersev Balta"
-                    },
-                    {
-                        "name": "Cihangir Celal Palaci"
-                    },
-                    {
-                        "name": "Fikri Cem Yilmaz"
-                    },
-                    {
-                        "name": "Altan Cakir"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.08131v1",
-                "title": "Mu-DisCoCat: A Variational Pipeline for Compositional Generalization on Quantum Processors",
-                "updated": "2026-10-06T10:45:43Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.08131v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.08131v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Achieving compositional concept generalization (CoCoGen), the ability to understand novel situations by recombining learned primitives, remains a fundamental challenge in artificial intelligence. Compositional semantic models such as Compositional Distributional Semantics (DisCoCat) offer solutions by generalising vectors to tensors, but suffer from scaling bottlenecks when learning the tensors. Mapping DisCoCat onto Variational Quantum Circuits (VQCs) resolves this limitation for text, yet the methodology has not been expanded to multimodal situations such as the ones involved in CoCoGen. This paper introduces Mu-DisCoCat: a multimodal variational quantum learning framework for DisCoCat that achieves CoCoGen. The framework first learns stable object representations from single-object image-text pairs, then fixes these and uses them to learn the relations between them in multi-object situations. In classical simulations, the model used Uhlmann state fidelity to compute the overlap between the multimodal circuit representations and achieved higher relational OOD accuracy than the evaluated CLIP baseline. Its deployment was evaluated using the destructive SWAP test across noisy quantum emulators, including a range of IBM fake backends, IQM FakeAphrodite, and the IBM Marrakesh quantum processor. Despite real-world device noise, the hardware-executed models maintained a strong positive correlation with simulated fidelities, reliably distinguishing unseen similar and dissimilar pairs. Our work establishes a framework for executing CoCoGen on VQCs, demonstrating a viable use case for near-term quantum hardware.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-06T10:45:43Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Mina Abbaszadeh"
-                    },
-                    {
-                        "name": "Matilda Karabina Moore"
-                    },
-                    {
-                        "name": "Raem Haq"
-                    },
-                    {
-                        "name": "Martha Lewis"
-                    },
-                    {
-                        "name": "Mehrnoosh Sadrzadeh"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.08129v1",
-                "title": "Do LLMs Act on What They Know? From Partner Representations to Cooperative Actions",
-                "updated": "2026-10-06T10:44:55Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.08129v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.08129v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Cooperation with unfamiliar partners requires adapting to communication conventions that are not known in advance. We study this problem in a controlled Hanabi-derived environment with scripted hint generation, LLM-controlled receiving decisions, and frozen model weights. Across eight LLMs, linear probes recover intent conventions substantially more accurately than target conventions, yet receiving choices do not consistently agree with the sender's convention. We compare probe-predicted and ground-truth conventions presented either as general rules or as externally computed action recommendations. Rule statements yield modest and model-dependent changes in cooperation, whereas action translation produces larger gains on average. In a Qwen3-8B case study, matched-state statement reversals reveal much greater sensitivity to action recommendations than to rule statements. Activation transfers from oracle-action and non-oracle hint-restatement donors improve intent accuracy on both action classes, but the tested alternatives do not reliably reproduce these benefits. Together, these results distinguish convention decodability, sensitivity to convention information, and cooperative performance, and highlight limitations in turning available partner information into receiving decisions.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-06T10:44:55Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Yuhwan Jeong"
-                    },
-                    {
-                        "name": "Jinnyeong Yang"
-                    },
-                    {
-                        "name": "Kuk-Jin Yoon"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.08126v1",
-                "title": "Supermarket Product Detection and Recognition: Utilizing Deep Learning with Rectified Imagery",
-                "updated": "2026-10-06T10:44:33Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.08126v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.08126v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Product Identification has sprung up to become one of the most challenging problems in the automation of the retail industry. With the new industry 5.0 standards, automated inventory management, and catalog creation tasks are vitally important. Object identification models have emerged as a viable answer with their unprecedented identification and localization accuracy. However, the close-knit rack design of supermarkets generates the problem of angle variation in capturing images. The angle-variant densely packed images(a single image contains many objects) become overwhelming for these models alone. In this paper, we try to supplement object detection models with traditional Hough transform (HT) and homogeneous estimation concepts. We study the effect of rectified images using homography estimation and hough transform and their limitations on the problem of grocery identification. We make a case for creating a new dataset to test the effects of such rectification and produce analytical results on different scenarios of angle variation and object densities per image. Extensive experiments on different object detection models suggest that image rectification of angled images improves the detection accuracy of grocery products in images. The results also highlight the limitation of rectification on the angle of image capture and the object density of the image.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-06T10:44:33Z",
-                "arxiv:comment": "10 Pages, 7 Figures, 5 Tables",
+                "published": "2026-10-06T17:59:56Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Mayank Sah"
+                        "name": "Mingju Gao"
                     },
                     {
-                        "name": "Jimson Mathew"
+                        "name": "Qingle Liu"
+                    },
+                    {
+                        "name": "Yuzhao Peng"
+                    },
+                    {
+                        "name": "Xinjie Lin"
+                    },
+                    {
+                        "name": "Ziming Qin"
+                    },
+                    {
+                        "name": "Zheng Jiang"
+                    },
+                    {
+                        "name": "Wenyi Li"
+                    },
+                    {
+                        "name": "Calvin Xiao"
+                    },
+                    {
+                        "name": "Youjie Zheng"
+                    },
+                    {
+                        "name": "Kaisen Yang"
+                    },
+                    {
+                        "name": "Qinhuai Na"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.08123v1",
-                "title": "Beyond Waypoint Regression: Query-Based Cost Learning over Reachable Ego Futures for End-to-End Driving",
-                "updated": "2026-10-06T10:43:13Z",
+                "id": "http://arxiv.org/abs/2610.08789v1",
+                "title": "QF3: Fast Flow RL with Filtered Q-Gradients",
+                "updated": "2026-10-06T17:59:34Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.08123v1",
+                        "@href": "https://arxiv.org/abs/2610.08789v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.08123v1",
+                        "@href": "https://arxiv.org/pdf/2610.08789v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "End-to-end planners based on waypoint regression achieve strong open-loop accuracy, but they primarily learn to mimic expert geometry and remain difficult to adapt to deployment-time safety constraints. We propose a query-based cost-learning framework that estimates bounded costs for dynamically reachable ego trajectory queries, rather than dense BEV cells or a small regressed trajectory set. Compact joint scene tokens capture coherent multimodal agent futures, while contingency-aware cost aggregation and cost-guided intra-cluster MPPI mixing convert the learned cost topology into feasible ego plans. On nuScenes, our method improves over prior cost-estimation planners such as ST-P3 and NMP, outperforms most regression baselines in collision rate, while remaining competitive in L2, and retaining an interpretable cost interface. On real-world driving logs, the proposed planner reduces collision rates compared with SparseDrive and Alpamayo without fine-tuning, while maintaining a diverse set of candidate trajectories.",
+                "summary": "Flow policies have become a standard policy class for learning robot behaviors from demonstrations, but reinforcement learning is still critical for improving pre-trained flow policies or learning them from scratch through interaction. We introduce QF3 (Fast Flow RL with Filtered Q-Gradients), an online off-policy RL algorithm that trains a flow policy with flow matching plus the critic's action gradient, backpropagated through a one-step prediction of the flow's output. To keep updates where the critic and this prediction are reliable, QF3 applies the critic gradient only to action dimensions that stay near the replay action. To our knowledge, QF3 is the first off-policy flow RL method to train humanoid locomotion policies from scratch and transfer them zero-shot to hardware. Paired with a high-throughput off-policy training recipe, it trains humanoid locomotion and motion-tracking policies with a 10x wall-clock speedup over FPO++, a recent on-policy flow RL method. We further apply QF3 to fine-tune pretrained flow-based manipulation policies on both ABC-Sim and Robomimic tasks. These results suggest that QF3 can both learn robot policies from scratch and refine those acquired from demonstrations. Website: https://qf3-rl.github.io/",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-06T17:59:34Z",
+                "arxiv:comment": "Project page: https://qf3-rl.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Chung Min Kim"
+                    },
+                    {
+                        "name": "Brent Yi"
+                    },
+                    {
+                        "name": "David McAllister"
+                    },
+                    {
+                        "name": "Hongsuk Choi"
+                    },
+                    {
+                        "name": "Himanshu Gaurav Singh"
+                    },
+                    {
+                        "name": "Jinkun Cao"
+                    },
+                    {
+                        "name": "Ken Goldberg"
+                    },
+                    {
+                        "name": "Pieter Abbeel"
+                    },
+                    {
+                        "name": "Carmelo Sferrazza"
+                    },
+                    {
+                        "name": "Angjoo Kanazawa"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.08785v1",
+                "title": "Conformal Prediction Sets Quantify Information Gain: A Theoretical Perspective",
+                "updated": "2026-10-06T17:59:11Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.08785v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.08785v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Conformal prediction is a popular tool for uncertainty quantification that outputs prediction sets with finite-sample coverage guarantees. While prediction set size is commonly used as a heuristic measure of uncertainty, the information-theoretic basis for this interpretation remains poorly understood. In this work, we provide such a foundation using a decision-theoretic generalization of entropy tailored to set-valued prediction. In particular, we introduce a family of generalized information measures based on the size and coverage of conformal prediction sets. Notably, Shannon mutual information admits an exact integral representation in terms of these measures. We then show that, in standard classification settings, the reduction in conformal set size from additional information (i) is sandwiched between calibration-dependent members of this family and (ii) obeys a data processing inequality, both up to finite-sample calibration and model error terms. Together, our results formally relate conformal prediction to classical information-theoretic quantities and justify using set-size reduction as an information gain metric. Empirically, we validate our theory across 11 classification settings and show that set-size reduction and Shannon mutual information can rank features differently in a greedy feature selection experiment.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-06T17:59:11Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Kevin Zhang"
+                    },
+                    {
+                        "name": "Stephen Bates"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.08784v1",
+                "title": "PEARS: Physical-Prior-Guided Efficient Adaptation via Failure Reasoning and Diffusion Steering for Tactile Manipulation",
+                "updated": "2026-10-06T17:59:03Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.08784v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.08784v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Pretrained robotic policies can suffer substantial performance degradation under out-of-distribution (OOD) conditions encountered during deployment, motivating post-training through real-world interaction. However, reinforcement-learning (RL)-based post-training typically requires substantial environment interactions, a burden that is especially significant in manipulation, where each trial can be slow, costly, or destructive. Therefore, we present PEARS, a physics-prior-guided hybrid RL framework for sample-efficient online adaptation of pretrained policies with tactile feedback. After each episode, its physics-guided force reasoning (PFR) module uses physical priors encoded in a vision-language model (VLM) to diagnose failures from the visual outcome and tactile interaction history and update task-appropriate contact-force bounds. A high-frequency hybrid force-position controller then enforces these bounds during contact. Complementarily, tactile-conditioned diffusion steering reinforcement learning adjusts the latent noise of the frozen flow-matching policy to correct errors in free-space motion and contact timing without updating the base model. In simulation, PEARS improves success rates by 12.4-37.4 percentage points over the strongest per-task baselines. PEARS also reduces the number of interaction episodes required for a certain success threshold by up to 53.2% relative to the fastest baseline. In real-world experiments, PEARS achieves success rates of 95% on Whiteboard Erasing and 90% on Pipette Liquid Aspiration. These results show that combining the PFR module with policy steering can accelerate adaptation while reducing costly interactions. The project website is available at https://song-kun.github.io/pears.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-06T17:59:03Z",
+                "arxiv:comment": "9 pages, 4 figures. Project website: https://song-kun.github.io/pears",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Kun Song"
+                    },
+                    {
+                        "name": "Yiming Wang"
+                    },
+                    {
+                        "name": "Yilin Chen"
+                    },
+                    {
+                        "name": "Tianyi Ding"
+                    },
+                    {
+                        "name": "Jiaxin Tian"
+                    },
+                    {
+                        "name": "Tianqi Gong"
+                    },
+                    {
+                        "name": "Daolin Ma"
+                    },
+                    {
+                        "name": "Jia Pan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.08782v1",
+                "title": "4D-HOF: Hand-Object Flow Matching for Feed-Forward 4D Interaction Reconstruction",
+                "updated": "2026-10-06T17:59:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.08782v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.08782v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Existing methods for 4D hand-object reconstruction often rely on costly per-sequence optimization, while generative approaches typically synthesize interactions from random noise, which can lead to unstable interaction prediction. We introduce 4D-HOF, a feed-forward framework that reconstructs 4D hand-object interactions from coarse but informative estimates produced by vision foundation models. Concretely, we learn a conditional flow matching model that transports foundation-model-derived hand-object states toward an interaction manifold, allowing the model to correct errors in translation, rotation, and alignment in a feed-forward manner. A key advantage of our generative formulation is that it naturally enables test-time guidance within the transport process. Rather than applying a separate post-hoc optimization after reconstruction, we directly steer the evolving generative states using physical interaction constraints and observed 2D evidence, allowing the reconstruction to be refined as part of the generative process itself. By training the generative model on diverse datasets, 4D-HOF generalizes robustly to challenging in-the-wild scenarios. Experiments on out-of-domain benchmarks show that 4D-HOF achieves state-of-the-art performance, producing more stable and accurate 4D hand-object reconstructions.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.GR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-06T17:59:02Z",
+                "arxiv:comment": "Project page: https://tamu-visual-ai.github.io/4D-HOF/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Shiqi Li"
+                    },
+                    {
+                        "name": "Sean Cho"
+                    },
+                    {
+                        "name": "Yijie Li"
+                    },
+                    {
+                        "name": "Fengzhi Guo"
+                    },
+                    {
+                        "name": "Bowen Wen"
+                    },
+                    {
+                        "name": "Cheng Zhang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.08781v1",
+                "title": "IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas",
+                "updated": "2026-10-06T17:59:01Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.08781v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.08781v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Scientific research often begins by synthesizing ideas from a set of related papers to identify gaps and formulate new directions. However, training language models to perform this form of literature-grounded ideation remains challenging, as existing approaches based on prompting or feedback lack structured supervision for how papers should be synthesized. We introduce IdeaAnchor, a paradigm for training LLMs to perform research ideation using structured specifications as privileged signals. Each IdeaAnchor instance encodes how each input paper should be synthesized into a successful idea, including their functional roles, relationships, and target synthesis criteria. We build this paradigm by mining instances from published papers, capturing how real ideas emerge from prior literature. We then train models via demonstration, self-distillation, and reinforcement learning, and further enhance generation with retrieval at inference time. Experiments show consistent improvements in ideation quality. Our analysis reveals a functional decomposition: anchor-based training strengthens creative synthesis, retrieval enhances detail elaboration, and combining both yields the best performance.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-06T17:59:01Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Ziyu Chen"
+                    },
+                    {
+                        "name": "Yilun Zhao"
+                    },
+                    {
+                        "name": "Jiashuo Sun"
+                    },
+                    {
+                        "name": "Yiling Ma"
+                    },
+                    {
+                        "name": "Manasi Patwardhan"
+                    },
+                    {
+                        "name": "Arman Cohan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.08780v1",
+                "title": "DepthWorld: 3D World Model for Robot Manipulation",
+                "updated": "2026-10-06T17:59:00Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.08780v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.08780v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "World models offer a data-driven alternative to traditional simulators for robotics, with applications spanning policy evaluation, improvement, and planning. All of these uses depend on faithful 3D geometry, yet current video-based world models are trained on RGB alone and produce rollouts that look correct frame-by-frame but do not compose into a consistent 3D world. Closing this gap requires progress on two fronts: large-scale 3D supervision for manipulation, and an architecture that can absorb it without disturbing strong pretrained video priors. We introduce a calibration pipeline that combines learned stereo depth with a joint factor graph, pooling all episodes collected from the same physical robot to recover its shared kinematic parameters alongside per-scene extrinsics. Applied to the DROID dataset, this yields DROID-3D, a calibrated 3D dataset providing dense metric depth and recalibrated multi-view extrinsics (achieving <0.7 px reprojection error on 90% of episodes for external cameras). We then train DepthWorld, a Stable Video Diffusion-based world model that jointly predicts multi-view RGB and depth via spatial latent tiling, leaving the pretrained Variational Autoencoder (VAE) unchanged. Depth supervision improves RGB prediction itself by +1.48 dB PSNR over an identical RGB-only baseline at equal training budget, while simultaneously yielding accurate metric depth for downstream geometric reasoning.",
                 "category": [
                     {
                         "@term": "cs.RO",
@@ -390,131 +370,165 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.SY",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-06T10:43:13Z",
-                "arxiv:comment": "Accepted in the 18th Asian Conference on Computer Vision (ACCV 2026)",
+                "published": "2026-10-06T17:59:00Z",
+                "arxiv:comment": "Accepted at the Conference on Robot Learning (CoRL) 2026. Project page: https://www.jaibardhan.com/depthworld. 32 pages including supplementary material, 15 figures, 7 tables",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Ahmed Abouelazm"
+                        "name": "Jai Bardhan"
                     },
                     {
-                        "name": "Rupert Polley"
+                        "name": "Josef Sivic"
                     },
                     {
-                        "name": "Qingyuan Zhang"
-                    },
-                    {
-                        "name": "Yin Wu"
-                    },
-                    {
-                        "name": "Philip Sch\u00f6rner"
-                    },
-                    {
-                        "name": "Carl Esselborn"
-                    },
-                    {
-                        "name": "J. Marius Z\u00f6llner"
+                        "name": "Vladimir Petrik"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.08120v1",
-                "title": "iGPC: Generative Motion Priors for Object-Aware Humanoid Interaction",
-                "updated": "2026-10-06T10:41:31Z",
+                "id": "http://arxiv.org/abs/2610.08778v1",
+                "title": "Sherpa: Teaching LLMs to Teach Adaptively",
+                "updated": "2026-10-06T17:58:18Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.08120v1",
+                        "@href": "https://arxiv.org/abs/2610.08778v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.08120v1",
+                        "@href": "https://arxiv.org/pdf/2610.08778v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Humanoid robots operating in unstructured environments must combine robust whole-body control with the ability to perceive and physically interact with surrounding objects. While large-scale human motion data provides powerful priors for natural and versatile humanoid control, effectively transferring such priors to perception-driven object interaction remains challenging. To address this bottleneck, we propose a framework that extends the recently proposed Generative Pretrained Controller (GPC) from general human motion to full-body humanoid-environment interaction. First, we adapt GPC into interaction experts conditioned on scene affordance cues and privileged state information. These experts leverage the pretrained human motion prior while learning task-specific contact behaviors, including reaching toward objects, grasping environmental supports for stabilization, and pushing movable objects. Second, we introduce a perception-driven student that retains the pretrained GPC policy and distills interaction skills from the experts using onboard sensory observations. To bridge the gap between privileged expert observations and sensory inputs, we propose two complementary training objectives that enable effective adaptation of the pretrained motion prior during distillation. Notably, our experiments across multiple whole-body interaction tasks demonstrate that large-scale generative human motion priors provide an effective foundation for learning deployable policies for humanoid interactions in contact-rich real-world environments.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-06T10:41:31Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Anujith Muraleedharan"
-                    },
-                    {
-                        "name": "Abdul Ahad Butt"
-                    },
-                    {
-                        "name": "Nolan Fey"
-                    },
-                    {
-                        "name": "Yash Prabhu"
-                    },
-                    {
-                        "name": "Anamika J H"
-                    },
-                    {
-                        "name": "Sandor Felber"
-                    },
-                    {
-                        "name": "Maurice Rahme"
-                    },
-                    {
-                        "name": "Ivan Laptev"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.08118v1",
-                "title": "Attenuated in-context identification in time-series foundation models: diagnosis under counterfactual inputs and repair by synthetic forced-system fine-tuning",
-                "updated": "2026-10-06T10:39:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.08118v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.08118v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Covariate-aware time-series foundation models (TSFMs) promise training-free what-if answers for instrumented plants: the change in output that a different future input would cause. We test this on forced engineering systems with exact counterfactuals, comparing Chronos-2, TimesFM-2.5 and TabPFN-TS with classical system identification fitted to the same context. Through their default covariate interfaces, TimesFM-2.5 and TabPFN-TS are memoryless: the predicted effect of an input change is a same-time function of that change ($R^2 = 1.000$ for TimesFM-2.5). Chronos-2 identifies dynamics in context but attenuates them. Its predicted effect is 0.33-0.80 of the true effect, its recovered impulse response has the wrong shape, and its error on a one-degree-of-freedom oscillator levels off at 0.57 with 8192 context samples, where ARX fitted to 256 samples reaches 0.02. Context dither at inference lowers the what-if error on all six synthetic classes without training. A 26-minute fine-tune on synthetic forced systems restores the response magnitude (sensitivity 0.83-0.96) and outperforms structure-agnostic identification on Wiener-Hammerstein and a held-out friction class. A specialised in-context identifier trained on the same data comes close, so the forced-system data carry most of the gain. On three of four measured plants classical identification remains clearly better, and the fine-tuned model loses part of its univariate forecasting skill. Paired counterfactual inputs, together with shuffled future inputs on measured records, test two properties: whether the covariate interface can represent dynamics and whether the pretraining prior covers the plant's time scale. Only the counterfactual pairs expose the attenuation.",
+                "summary": "Large language models (LLMs) have become increasingly capable problem solvers, but being able to solve a problem is not the same as being able to teach it. Existing approaches to training LLMs as teachers rely on demonstrations, preference data, or predefined pedagogical criteria that specify what good teaching looks like. However, these signals are often not grounded in individual student learning outcomes, where effective teaching strategies can vary substantially across learners. To address this, we introduce Sherpa, a multi-turn reinforcement learning framework that instantiates multiple student archetypes with LLMs conditioned on distinct learning preferences and trains a teacher model to adapt its instruction by directly maximizing their learning outcomes. Teacher LLMs trained with Sherpa improve instructed students' performance across all archetypes by an average of 20.5 percentage points. Under MathTutorBench's evaluation, Sherpa raises the overall pedagogy score from 52.5% to 79.2%, indicating better teaching responses. Our human studies show that the trained teacher is preferred over the base model in 79.6% of pairwise comparisons. Together, Sherpa trains LLM teachers to adapt to diverse simulated students and become better aligned with human teachers, paving the road towards AI tutors teaching real students.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "eess.SY",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-06T10:39:04Z",
-                "arxiv:comment": "12 pages, 4 figures, 5 tables",
+                "published": "2026-10-06T17:58:18Z",
+                "arxiv:comment": "32 pages, 6 figures. Code and model are available at https://github.com/SALT-NLP/Sherpa",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Weixian Xu"
+                    },
+                    {
+                        "name": "Yanzhe Zhang"
+                    },
+                    {
+                        "name": "Zora Zhiruo Wang"
+                    },
+                    {
+                        "name": "Changyu Chen"
+                    },
+                    {
+                        "name": "Diyi Yang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.08773v1",
+                "title": "AdvSim2Real : Training Web Agents Against Adaptive Prompt Injection in a Web World Model",
+                "updated": "2026-10-06T17:56:43Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.08773v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.08773v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Web agents complete user requests by reading and acting on pages that third parties write, so an instruction planted on a page can redirect the agent away from the user's goal. The agent cannot simply ignore the page, because the page also holds the values and controls the task requires. Current defenses fine-tune the agent on injections fixed before training, and attackers that adapt to the trained model bypass them. Adversarial training lets the attacker adapt but keeps the tasks fixed, so a task stops teaching once the agent solves it. We introduce AdvSim2Real, which co-evolves a task curriculum, an injection adversary, and the agent inside a frozen web world model. The curriculum is rewarded for tasks the agent solves about half of the time, and the adversary only for a success flip, an injection that turns a judged success into a failure. Training in the simulator makes a 4B agent both more capable and more robust: its completion rises with and without attacks, holds against a frontier-model adversary it never trained against, and its capability gain carries over to a real browser. On 150 web tasks, AdvSim2Real raises completion under this unseen adversary by 33.6\\% relative to the base agent.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-06T17:56:43Z",
+                "arxiv:comment": "Code at https://github.com/Sarim-MBZUAI/advsim2real",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Sarim Hashmi"
+                    },
+                    {
+                        "name": "Mukul Ranjan"
+                    },
+                    {
+                        "name": "Kshitij Mishra"
+                    },
+                    {
+                        "name": "Mikhail Kuznetsov"
+                    },
+                    {
+                        "name": "Praneeth Vepakomma"
+                    },
+                    {
+                        "name": "Nils Lukas"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.08770v1",
+                "title": "Data Leakage in Patch-Based Hyperspectral Image Classification: Quantifying the Impact of Spatial Overlap",
+                "updated": "2026-10-06T17:55:05Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.08770v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.08770v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Patch-based learning improves hyperspectral image (HSI) classification by exploiting local spectral-spatial information, but random train-test sampling from the same image can cause spatial patch overlap, leading to data leakage and optimistic performance estimates. This paper investigates same-class train-test spatial overlap in patch-based HSI classification using two measures: overlap percentage (OP), which quantifies the global amount of overlapped testing patch pixels, and average overlap ratio (AOR), which measures the local severity among affected testing patches. Experiments on the Pavia University dataset compare random and non-random spatial sampling using SVM, MLP, 2D-CNN, 3D-CNN, ViT, and MorpMamba. The results show that deep patch-based models achieve high accuracy under random sampling, with 3D-CNN reaching 96.17% Overall Accuracy (OA), but drop substantially under non-random spatial sampling, where 3D-CNN decreases to 55.20% and ViT and 2D-CNN drop by 40.71 and 38.81 percentage points (PP), respectively. Patch-size analysis further shows that increasing the patch size from 5x5 to 19x19 raises the random-sampling overlap percentage from 23.28% to 77.02%. These findings demonstrate that random patch-based evaluation can substantially inflate classification performance, especially for models that strongly exploit spatial context. The code associated with this paper is available at: https://github.com/mqalkhatib/Data_Leakage_in_HSI_Classification.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-06T17:55:05Z",
+                "arxiv:comment": "paper accepted for presentation at IEEE-WHISPERS",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
                 },
                 "author": {
-                    "name": "Hong-In Won"
+                    "name": "Mohammed Q. Alkhatib"
                 }
             }
         ]
