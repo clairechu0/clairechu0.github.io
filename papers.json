@@ -5,536 +5,447 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-10-08T21:42:23Z",
+        "updated": "2026-10-09T01:37:19Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "626240",
+        "opensearch:totalResults": "626670",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2610.10536v1",
-                "title": "Decoupling Exploration from Optimization in RLVR",
-                "updated": "2026-10-07T17:59:26Z",
+                "id": "http://arxiv.org/abs/2610.11709v1",
+                "title": "Uniform Approximation for Operator Learning on Compact Sets",
+                "updated": "2026-10-08T11:15:48Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.10536v1",
+                        "@href": "https://arxiv.org/abs/2610.11709v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.10536v1",
+                        "@href": "https://arxiv.org/pdf/2610.11709v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Modern language models undergo reinforcement learning with verifiable rewards (RLVR) on top of already-trained checkpoints. A key promise of RLVR is the discovery of new reasoning strategies. In principle, a model can sample novel ideas absent from its prior training data. In practice, however, augmenting RLVR with strong novelty incentives has seen limited success and can degrade model quality. Because verifiable rewards supervise only a narrow slice of the model's knowledge and behavior, such degradations are difficult to recover from. Instead, we decouple exploration from optimization in a framework we call Exploration-Distillation (ExpDis). We train one or more explorer policies with a novelty bonus in the reward, filter their trajectories for correctness and quality, and distill them into a separate student policy. The student policy is then trained without a novelty bonus. We repeat the above procedure for several rounds, alternating between exploration and optimization. This decoupling allows us to aggressively scale exploration without degrading the student policy. Across seven mathematical reasoning benchmarks and two model families, ExpDis outperforms DAPO at the same wall-clock budget. Moreover, we observe improved pass@$k$ scaling, indicating that ExpDis produces models that generate more diverse correct solutions.",
+                "summary": "We study uniform approximation for operator learning on compact subsets of Banach spaces. We bound the recovery dimensions and the number of network parameters in terms of compact-set complexity, the target gauge, and recovery stability. For bounded linear operators with a separable domain, we characterize gauge approximability by coordinate decompositions with a common vanishing gauge and arbitrarily small additive errors. Their partial sums give a fixed family of nonlinear encoder--decoder pairs. We prove that nonlinear recovery with a common vanishing gauge and a rank bound depending only on the model dimension is equivalent to the uniform approximation property (UAP). We also obtain linear recovery estimates with the same rank bound and an operator version for the linear factors of nonlinear targets. For Barron operators taking values in a Banach space $Y$ of type $p\\in(1,2]$ and admitting a Bochner-integrable density, sampling gives the rate $N^{-(1-1/p)}$ for the expected $L^p(\u03bb;Y)$ error, where $\u03bb$ is a probability measure on the input compact set. For fixed finite-dimensional factors and a class of H\u00f6lder maps, we obtain matching upper and lower parameter bounds at fixed sufficiently large depth. Classical sampling and truncation examples provide explicit recovery maps, and a nonlinear integral operator illustrates the parameter bounds.",
                 "category": [
                     {
-                        "@term": "cs.LG",
+                        "@term": "math.FA",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
+                        "@term": "math.NA",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-07T17:59:26Z",
-                "arxiv:comment": "20 pages, 16 figures, 9 tables. Code: https://github.com/SaifPunjwani/Exploration-Distillation. Checkpoints: https://huggingface.co/SaifPunjwani/expdis-checkpoints",
+                "published": "2026-10-08T11:15:48Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "math.FA"
                 },
                 "author": [
                     {
-                        "name": "Saif Punjwani"
+                        "name": "Rui Liu"
                     },
                     {
-                        "name": "Micah Goldblum"
+                        "name": "Jie Shen"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.10534v1",
-                "title": "RoboPrompt: Intuitive Robot Policy Steering with Sparse Human Input",
-                "updated": "2026-10-07T17:58:53Z",
+                "id": "http://arxiv.org/abs/2610.11706v1",
+                "title": "Does an Illumination Prior Help Face-Swap Detection? A Controlled Study of Temporal Self-Blended Images",
+                "updated": "2026-10-08T11:12:45Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.10534v1",
+                        "@href": "https://arxiv.org/abs/2610.11706v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.10534v1",
+                        "@href": "https://arxiv.org/pdf/2610.11706v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "End-to-end robot policies trained through imitation learning remain constrained by limited data diversity, making reliable zero-shot deployment in real-world settings challenging. Shared-autonomy methods enable human correction through teleoperation, but specialized hardware and operator training hinder deployment at scale. Other approaches incorporate human guidance as additional policy inputs, often requiring architectural changes and dedicated training for steerability, which limits their applicability across policies. We present RoboPrompt, a general-purpose, lightweight robot policy steering system that enables users to guide policy behavior through intuitive, sparse inputs, including drawn traces, target points, and coarse directional instructions. RoboPrompt decouples human-intention translation from the underlying policy: a reusable module converts human guidance into action drafts, which are refined through the diffusion or flow-matching dynamics of the base policy. By controlling action generation in noise space, RoboPrompt balances human intent with the policy prior without modifying the base policy architecture or fine-tuning it for steerability. Experiments demonstrate effective steering across Diffusion Policy, $\u03c0_{0.5}$, and FastWAM. We further use steered rollouts for online policy improvement through DAgger. After 2-3 rounds of iteration, average success rates increase by 15.5\\% for $\u03c0_{0.5}$ across three tasks and by 21.3\\% across three policies(Diffusion Policy, $\u03c0_{0.5}$, FastWAM) on the Insert Bread task, while average human intervention counts decrease by 44.0\\% (2.86 to 1.60) and 81.9\\% (2.60 to 0.47), respectively.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-07T17:58:53Z",
-                "arxiv:comment": "8 pages",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Yanwen Zou"
-                    },
-                    {
-                        "name": "Chenyang Shi"
-                    },
-                    {
-                        "name": "Guoxuan Xu"
-                    },
-                    {
-                        "name": "Wenye Yu"
-                    },
-                    {
-                        "name": "Wendi Chen"
-                    },
-                    {
-                        "name": "Ye Pan"
-                    },
-                    {
-                        "name": "Cewu Lu"
-                    },
-                    {
-                        "name": "Chuan Wen"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.10533v1",
-                "title": "EngramEdit: Decoupled Knowledge Updates in LLMs through Conditional Memory",
-                "updated": "2026-10-07T17:58:52Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.10533v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.10533v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Conditional memory architectures such as DeepSeek Engram use input n-grams to look up learned embeddings, expanding the capacity of large language models (LLMs) with limited additional computation. Beyond model scaling, this architecture has demonstrated the potential to decouple factual knowledge storage from general-purpose computation, offering a promising route to updating factual knowledge while keeping the Transformer backbone fixed. Realizing this potential is challenging because different expressions of a fact may activate different n-gram embeddings, while updating shared embeddings can unintentionally change the model's predictions about other facts. We propose EngramEdit for decoupled knowledge updates through conditional memory. EngramEdit first computes target memory representations that make the model predict the updated fact across multiple expressions. It then jointly updates the shared n-gram embeddings to match these targets across expressions and edits, penalizing updates to frequently reused embeddings more strongly to preserve unrelated knowledge. Experiments show that EngramEdit enables independent factual knowledge updates through conditional memory, achieving near-perfect editing success. Revised knowledge is usable across unseen expressions and in multi-hop reasoning, with nearly three times the strongest baseline's accuracy under chain-of-thought (CoT) prompting. Unrelated knowledge and general capabilities are largely preserved even as factual updates accumulate. These findings show that EngramEdit turns conditional memory into an editable knowledge interface, extending its role beyond model scaling to support decoupled knowledge updates.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-07T17:58:52Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Hongru Cai"
-                    },
-                    {
-                        "name": "Ran Wei"
-                    },
-                    {
-                        "name": "Wenjie Wang"
-                    },
-                    {
-                        "name": "Chengfa Wu"
-                    },
-                    {
-                        "name": "Ning Song"
-                    },
-                    {
-                        "name": "Yongqi Li"
-                    },
-                    {
-                        "name": "Wenjie Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.10528v1",
-                "title": "Long-WAM: Scaling the Context of World-Action Models",
-                "updated": "2026-10-07T17:58:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.10528v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.10528v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. We present Long-WAM, a model-system framework for scaling the context of causal world-action models under real-time control constraints. Our central finding is that access to history is not the same as using it: longer histories pay off far more when the video foundation is pretrained autoregressively (AR). We first learn causal prediction from robot and egocentric videos without action labels, then preserve this history-to-future structure during world-action adaptation. On RoboCasa GR-1, increasing context from 0.0 to 19.2 seconds raises success from 63.3% to 78.7%, whereas a bidirectionally pretrained initialization shows no net gain; robot-domain AR pretraining further raises peak success on GR-1 and LIBERO-Long. Long-WAM also achieves the best results among compared methods on LIBERO-Long, RoboTwin 2.0, and DOMINO. Streaming observation encoding, asynchronous execution, and hardware-specific acceleration enable deployment on RTX 5090, DGX Spark, and Jetson AGX Thor without dropping future prediction; on RTX 5090, each action chunk, including future-video latent prediction, takes 107.4 ms. Real-time deployment on Unitree G1 and YAM supports dynamic and long-horizon manipulation, including 95% success on dynamic cup stacking, where Pi0.5 and Fast-WAM succeed in none of 20 trials. As a memory-informed executor, Long-WAM also complements higher-level planning in composite tasks.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-07T17:58:04Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Wei Huang"
-                    },
-                    {
-                        "name": "Bohan Zhang"
-                    },
-                    {
-                        "name": "Chenzhi Liu"
-                    },
-                    {
-                        "name": "Isabella Liu"
-                    },
-                    {
-                        "name": "Shuai Yang"
-                    },
-                    {
-                        "name": "Weian Mao"
-                    },
-                    {
-                        "name": "Luozhou Wang"
-                    },
-                    {
-                        "name": "Yicheng Xiao"
-                    },
-                    {
-                        "name": "Weifeng Lin"
-                    },
-                    {
-                        "name": "Qixin Hu"
-                    },
-                    {
-                        "name": "Bryan Chu"
-                    },
-                    {
-                        "name": "Sifei Liu"
-                    },
-                    {
-                        "name": "Linxi Fan"
-                    },
-                    {
-                        "name": "Xiaojuan Qi"
-                    },
-                    {
-                        "name": "Song Han"
-                    },
-                    {
-                        "name": "Yukang Chen"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.10527v1",
-                "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
-                "updated": "2026-10-07T17:57:58Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.10527v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.10527v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Heavy-tailed noise has been widely observed in modern machine learning, motivating the use of methods like gradient clipping and normalization. While these methods are well understood in centralized settings, much less is known in decentralized ones, where applying a nonlinearity to local gradients affects both optimization and consensus. Recent works on decentralized non-convex optimization have studied both clipping and normalization under heavy-tailed noise, with clipping yielding suboptimal rates and normalization needing local momentum or mini-batches to converge. This raises the question: can a baseline decentralized method using a nonlinearity achieve optimal convergence rates under heavy-tailed noise? We answer affirmatively with clipped decentralized SGD ($\\mathtt{DSGD}$). For smooth non-convex costs under bounded $p$-th moment noise, $p \\in (1,2]$, we show that clipped $\\mathtt{DSGD}$ achieves order-optimal rates both with high probability and in expectation. Moreover, we establish a linear speed-up in the number of agents, which, to our knowledge, has not been shown for decentralized methods with clipping. The key technical ingredient is a sharp analysis of the consensus gap that exploits the structure of clipping, relegating network effects to higher-order terms. Our results highlight an important distinction between clipping and normalization in decentralized settings: while normalized $\\mathtt{DSGD}$ can fail to converge, clipping retains magnitude information, enabling $\\mathtt{DSGD}$ to be convergent and order-optimal. Numerical experiments validate our theory.",
-                "category": [
-                    {
-                        "@term": "math.OC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.MA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-07T17:57:58Z",
-                "arxiv:comment": "36 pages, 5 figures, 2 tables",
-                "arxiv:primary_category": {
-                    "@term": "math.OC"
-                },
-                "author": [
-                    {
-                        "name": "Aleksandar Armacki"
-                    },
-                    {
-                        "name": "Haoyuan Cai"
-                    },
-                    {
-                        "name": "Ali H. Sayed"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.10526v1",
-                "title": "Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models",
-                "updated": "2026-10-07T17:57:38Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.10526v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.10526v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Vision-language-action models (VLAs) are strikingly sensitive to instruction phrasing and do not inherit the language robustness of the vision-language models they are built on. A one-word edit can move success by tens of points: $\u03c0_{0.5}$ turns on a LIBERO stove 100% of the time for \"switch on the stove\" and 2% for \"switch on the hot plate\", and a $\u03c0_0$ checkpoint finetuned with rephrase augmentation still shows swings of up to 61 points. We characterize this sensitivity with statistically tested single-edit swings and an oracle phrase search, which shows that phrasing alone nearly closes the 21-point gap between in-distribution and out-of-distribution tasks. We then reduce it without modifying the policy. Because the sensitivity is systematic, it can be expressed as explicit rules: we score many phrasings of a few training tasks, have a large language model distill the evidence into ten to twenty rephrasing rules, and at deployment rewrite each incoming instruction once under these rules. The rules improve the frozen $\u03c0_0$ by 16 to 27% relative on twelve held-out tasks across adversarial, VLM-generated, and human-generated phrasings, with gains concentrated on out-of-distribution tasks. The pipeline replicates on $\u03c0_{0.5}$ and LIBERO, lifting in-finetune success from 93.6% to 97.8%. The method requires no retraining and no per-step verification, and applies zero-shot to unseen tasks and instructions. Project website: https://sttawm.github.io/rephrase-before-you-act",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-07T17:57:38Z",
-                "arxiv:comment": "9 pages, 8 figures, 3 tables. Project page: https://sttawm.github.io/rephrase-before-you-act",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Mikey Watts",
-                        "arxiv:affiliation": "Independent Researcher"
-                    },
-                    {
-                        "name": "Yuchen Cui",
-                        "arxiv:affiliation": "University of California, Los Angeles"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.10524v1",
-                "title": "GRACE: Generation-aware latent compression for efficient video generation",
-                "updated": "2026-10-07T17:57:34Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.10524v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.10524v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Highly compressed video autoencoders offer an effective way to accelerate video diffusion models, as the Diffusion Transformer (DiT) operates on far fewer tokens. However, such autoencoders are challenging to train, since a higher compression ratio degrades reconstruction quality and recovering it requires more channels, which is known to slow the convergence of the DiT. The compressed latent also differs from the one the DiT was trained on, so the pretrained DiT must be either retrained from scratch or adapted at considerable cost. Compressing the autoencoder the DiT was trained with appears to preserve compatibility, yet optimizing it for reconstruction alone still shifts the latent away from the distribution the DiT has learned. To address this, we propose Generation-Aware Latent Compression for Efficient Video Generation (GRACE), a two-stage framework that compresses a pretrained video autoencoder while keeping it compatible with the pretrained DiT. Specifically, we keep a frozen base latent from the pretrained encoder and learn a residual latent for the information lost under stronger compression, while aligning the compressed latent with the pretrained latent in the feature space of the frozen DiT so that the autoencoder is optimized for generation. We then adapt the DiT with lightweight fine-tuning and asymmetric denoising, where the base is denoised ahead of the residual. GRACE reduces the token count of Wan2.1-I2V-14B by 8x and its latency by 11.1x at 480x832x81, while matching the generation quality of the pretrained pipeline before compression on VBench.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-07T17:57:34Z",
-                "arxiv:comment": "Project page : https://cvlab-kaist.github.io/GRACE/, 43 pages, 24 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Jiyoung Kim"
-                    },
-                    {
-                        "name": "Paul Hyunbin Cho"
-                    },
-                    {
-                        "name": "Jisu Nam"
-                    },
-                    {
-                        "name": "Donghoon Lee"
-                    },
-                    {
-                        "name": "Hyunsung Go"
-                    },
-                    {
-                        "name": "Yeonkyeong Lee"
-                    },
-                    {
-                        "name": "Hansaem Kim"
-                    },
-                    {
-                        "name": "Seungryong Kim"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.10520v1",
-                "title": "Distilling Graph Geometry: Knowledge Gap from GNNs to MLPs",
-                "updated": "2026-10-07T17:56:01Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.10520v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.10520v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "GNN-to-MLP distillation aims to retain the predictive accuracy of a message-passing teacher while deploying a graph-free MLP at inference. Existing methods mainly transfer node-wise predictions or use confidence-based reweighting, but they do not specify where the student should preserve the teacher's graph-induced geometry. We show that this omission leads to two spectral failure modes in the student's representation space. On sparse graphs, the student suffers from spectral underfit, missing high-energy teacher directions concentrated near boundary regions. On dense graphs, it suffers from spectral overfit, retaining spurious directions that the teacher has collapsed through aggregation. Motivated by an energy-weighted teacher-student alignment objective, we propose Graph Geometry-aware MLP (G^2MLP), a training-time distillation framework guided by Ollivier-Ricci curvature. Curvature identifies where the two spectral errors concentrate and is used to allocate supervision between prediction-level and representation-level alignment. The deployed model remains a standard MLP and requires no graph access at inference. Across node-classification benchmarks, G^2MLP consistently improves over graph-free distillation baselines, reduces the teacher-student rank gap in both regimes, and transfers without architectural changes to Graph Transformer teachers and link prediction.",
+                "summary": "Self-blended images are widely used to train face-swap detectors, but primarily capture blending artifacts. We investigate whether adding illumination inconsistencies improves detection. Temporal Self-Blended Images (T-SBI) transfer lighting statistics between frames of the same video, with the mismatch controlled by luminance difference (\u0394L). Using five training regimes and a three-seed comparison of high- and low-\u0394L training, we find no evidence of illumination-specific improvements. AUC differences remain within seed variability across four datasets, and an analysis of 506,328 attribute-binned samples shows no preferential reduction in errors under harsh lighting. Instead, T-SBI shifts prediction scores, changing optimal thresholds by approximately 0.34 on FaceForensics++ and 0.30 on Celeb-DF, making comparisons at a fixed threshold misleading. However, T-SBI improves robustness to heavy JPEG compression on DFDC (AUC 0.780 versus 0.696), potentially reflecting greater reliance on low-frequency cues. These findings highlight the importance of evaluating training methods against their intended targets and accounting for threshold effects.",
                 "category": {
                     "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-10-07T17:56:01Z",
+                "published": "2026-10-08T11:12:45Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Zhewei Chen"
+                        "name": "Danil Davydov"
                     },
                     {
-                        "name": "Hao Zhu"
+                        "name": "Bader Rasheed"
                     },
                     {
-                        "name": "Jiaojiao Jiang"
-                    },
-                    {
-                        "name": "Ahad N. Zehmakan"
+                        "name": "Dmitriy Vatolin"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.10519v1",
-                "title": "Why Forget-Only Unlearning Needs Memorization",
-                "updated": "2026-10-07T17:55:46Z",
+                "id": "http://arxiv.org/abs/2610.11704v1",
+                "title": "Intervention anchors and scientific verification in synthetic vascular predictive representations",
+                "updated": "2026-10-08T11:10:56Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.10519v1",
+                        "@href": "https://arxiv.org/abs/2610.11704v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.10519v1",
+                        "@href": "https://arxiv.org/pdf/2610.11704v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Machine unlearning asks for a deletion algorithm whose output is close to retraining from scratch without the selected forget examples. In this work, we study forget-only unlearning, where the deletion algorithm receives only the trained model and the examples to forget, with no retained data or extra training information. We ask whether forget-only unlearning is always possible. We first show that this depends on the learning method: different datasets can produce the same trained model but require very different outputs after the same examples are removed. Using this observation, we derive lower bounds on how accurately unlearning can match retraining and instantiate them for several standard learning algorithms. We then ask what must be true when forget-only unlearning succeeds. To this end, we derive lower bounds on what an algorithm must memorize about the training data to handle arbitrary deletion requests. For simple threshold learners, the required information can be as large as the entire dataset, even though ordinary training keeps only one boundary point. Overall, our results show that information discarded during ordinary learning may be needed later for deletion, so models designed for forget-only unlearning may need to retain more information than standard training does.",
+                "summary": "Complete orthogonal predictive coordinates do not by themselves bind a latent direction to a named intervention. We present a mathematical and synthetic audit motivated by vascular device-vessel suitcordance. Capacity-matched least-squares predictors were exactly equivalent under complete fixed output transforms, whereas an anchor-only observer recovered interpretations only within the span of known perturbation signatures. Six three-dimensional configurations across 64 seeds gave a maximum paired prediction discrepancy of 6.7e-15 but a median untransported edit error of 1.513. Coordinate transport removed that error. Noisy and weak anchors constrained calibration stability, and changing the representation basis required recalibration or verified transport. Across 256 additional fits in dimensions 3-24, prediction equivalence persisted within 4.0e-15. We then evaluated nine deliberate runnable fault classes across 64 seeds. All 576 faulty executions completed, but each violated at least one reconstruction, prediction, delivered-edit or scope contract; all 320 valid control records passed. Repeating a faulty implementation gave exact self-agreement despite error against the separately computed simulator expectation. For one omitted-direction defect, probe coverage followed its analytic law, and rank-aware abstention protected unsupported interpretations. Scalar-noise experiments exposed both missed weak faults and excessive rejection under narrow relative tolerances. These controls provide an executable separation of prediction, semantic support and scientific acceptance. They are synthetic numerical audits, not clinical validation, neural JEPA-Anything replication, agent learning or patient treatment-effect estimation.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-08T11:10:56Z",
+                "arxiv:comment": "Technical Note; 18 pages, 8 figures; reproducibility source and data archive included",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Lingsen You"
+                    },
+                    {
+                        "name": "Yujun Guo"
+                    },
+                    {
+                        "name": "Xinyu Zhong"
+                    },
+                    {
+                        "name": "Zisu Peng"
+                    },
+                    {
+                        "name": "Wentong Wang"
+                    },
+                    {
+                        "name": "Li Shen"
+                    },
+                    {
+                        "name": "Junbo Ge"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.11698v1",
+                "title": "Predicting plasmonic pole representations of complex dielectric spectra using convolutional neural networks",
+                "updated": "2026-10-08T11:07:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.11698v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.11698v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Extracting spectral properties such as energy position, broadening, and spectral weight from dielectric spectra is critical for interpreting collective electronic excitations in many-body physics. Conventional approaches typically rely on nonlinear fitting procedures that can be computationally demanding and highly sensitive to initialization and fitting choices. In this work, we develop a convolutional neural-network framework for the direct inversion of dielectric spectra into their underlying plasmonic pole structures using a multipole-Pad\u00e9 representation. Rather than training on a constrained database of spectra associated with a specific set of materials, the network is trained entirely on synthetic spectra generated from the analytical multipole-Pad\u00e9 expression with randomized parameters. This enables the network to learn the general mapping between the spectra and their features in an unbiased way, without requiring large, material-specific datasets derived from real materials. We demonstrate that the synthetically trained network generalizes to complex first-principles and experimental dielectric spectra, extracting the underlying pole parameters with high accuracy in a single forward pass. This approach provides an efficient and robust alternative to conventional nonlinear fitting, enabling high-throughput, automated analysis of dielectric spectra across diverse materials and applications.",
+                "category": [
+                    {
+                        "@term": "cond-mat.mtrl-sci",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "physics.optics",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-08T11:07:42Z",
+                "arxiv:primary_category": {
+                    "@term": "cond-mat.mtrl-sci"
+                },
+                "author": {
+                    "name": "Dario A. Leon"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.11697v1",
+                "title": "What is the goal of unsupervised machine learning?",
+                "updated": "2026-10-08T11:07:04Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.11697v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.11697v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Unsupervised learning is one of the main branches of machine learning. Here I argue that unlike the other branches of machine learning (supervised and reinforcement learning), unsupervised learning is a rather heterogenous field that can serve several different goals. It seems futile to try to define one single goal for unsupervised learning. I identify four different goals for unsupervised learning: 1) Estimating the distribution, 2) Generating new data points, 3) Extracting features for downstream tasks, and 4) Understanding the data.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-08T11:07:04Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Aapo Hyv\u00e4rinen"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.11696v1",
+                "title": "A 3D Characterization Framework for Intelligent Sequential Decision Making",
+                "updated": "2026-10-08T11:06:51Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.11696v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.11696v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Puzzles are widely used to evaluate the reasoning capabilities of artificial intelligence (AI) systems for sequential decision making, yet approaches originating from different paradigms are rarely compared under unified conditions. To address this gap, we introduce a three-dimensional characterization framework that enables the analysts of AI methods by 1) projecting them to the Markov decision process (MDP) sequential decision making formalism, 2) degree of autonomy through human prior ranking of their designs and, 3) skill and computational cost. Using this framework, we analyze how representative graph-based, reinforcement learning, and large language model (LLM)-based approaches differ in their design choices and performance characteristics, instantiated respectively by Neurosolver, forward-backward reinforcement learning (FBRL), and automated thought-of-search (AutoToS), including a double-agent extension of thought-of-search (DA-ToS). The analysis relies on the Tower of Hanoi puzzle that provides a controlled benchmark with well-defined rules and scalable complexity, enabling consistent comparison across increasing problem sizes. The 3D characterization reveals that LLM-based methods, due to their weakly constrained action-space design, shift complexity from architecture to inference-time verification, leading to substantially higher memory and runtime costs than Neurosolver and FBRL.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-08T11:06:51Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Sadig Gojayev"
+                    },
+                    {
+                        "name": "Carolina Fortuna"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.11694v1",
+                "title": "Elucidating the Space of Enzymatic Reaction: A Unified Benchmark and Pretrained Model",
+                "updated": "2026-10-08T11:05:48Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.11694v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.11694v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Existing reaction models primarily learn molecular transformations, whereas enzy- matic reactions depend jointly on molecular structure and catalytic function. We formulate this problem as learning an enzymatic reaction space linking reactants, products, and Enzyme Commission (EC) annotations. To characterize this space, we introduce VenusRX-Bench, a unified benchmark for forward reaction prediction, single-step retrosynthesis, and EC-number prediction. VenusRX-Bench integrates reactions from multiple biochemical databases with standardized curation, leakage- controlled splits, and consistent evaluation. Benchmarking representative chemical and enzymatic models reveals a clear chemical-to-enzymatic domain gap, driven by limited domain data, catalytic-context dependency, and the difficulty of modeling large biomolecular structures. To bridge this gap, we develop VenusRX, a unified T5-style sequence-to-sequence model for enzymatic reactions. VenusRX jointly learns forward prediction, ret- rosynthesis, and reaction reconstruction, with two-stage training on millions of template-expanded reactions followed by real biochemical reactions. In addition, optional EC conditioning incorporates catalytic context, while Molecule Library- Constrained Decoding improves the generation of complex biomolecules. Across benchmark tasks and challenging generalization splits, VenusRX achieves the best or competitive performance on most evaluated settings over representative chem- ical and enzymatic baselines. Moreover, EC information consistently improves reaction prediction, while learned reaction representations support accurate EC prediction, revealing a bidirectional relationship between reaction structure and catalytic function. Together, VenusRX-Bench and VenusRX provide a unified framework for elucidating and modeling enzymatic reaction space",
+                "category": [
+                    {
+                        "@term": "q-bio.QM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-08T11:05:48Z",
+                "arxiv:primary_category": {
+                    "@term": "q-bio.QM"
+                },
+                "author": [
+                    {
+                        "name": "Yutong Hu"
+                    },
+                    {
+                        "name": "Tianming Huang"
+                    },
+                    {
+                        "name": "Yanbo Zhao"
+                    },
+                    {
+                        "name": "Qiongyu Zhang"
+                    },
+                    {
+                        "name": "Shixiang Tang"
+                    },
+                    {
+                        "name": "Lei Bai"
+                    },
+                    {
+                        "name": "Ziyi Zhou"
+                    },
+                    {
+                        "name": "Liang Hong"
+                    },
+                    {
+                        "name": "Pan Tan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.11692v1",
+                "title": "Can Jev be Your Q or Policy in Reinforcement Learning?",
+                "updated": "2026-10-08T11:02:14Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.11692v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.11692v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Foundation models supply reinforcement learning (RL) with priors that mitigate its longstanding weaknesses in sample efficiency and transfer, but their token-by-token generation makes queries sequential and costly. Jev, a recently released decision model, generates nothing and returns calibrated, typed answers in a single forward pass. Existing work studies foundation models in RL either as models to be trained or as generators to be prompted, and Jev belongs to neither category, having so far served only as a black box in single domains. How well such a model decides on its own in RL environments, and how it can improve RL as a component of training, therefore remain unaddressed. To this end, in this paper we first examine the requirements that the objects of an RL system place on the answers they consume, and establish that Jev can fulfill all of them except the cardinal use of a value function. The remaining objects form positions that admit several roles each. We then construct algorithms that employ Jev at three of these positions, as a reference policy, an exploration judge, and a replay rater, to improve sample efficiency, exploration, and learning performance. Across nine MiniGrid tasks and three Atari games, training with Jev outperforms a standard RL learner, including where the learner makes no progress alone, while the model itself remains untrained. To our knowledge, we present the first use of Jev within the RL learning process and establish a frozen decision model as a usable component of RL training, inviting further exploration of how Jev and other advanced decision models can improve RL.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.IT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-07T17:55:46Z",
+                "published": "2026-10-08T11:02:14Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Luka Radi\u0107"
+                        "name": "Yi Ma"
                     },
                     {
-                        "name": "Vikrant Singhal"
+                        "name": "Tianpei Yang"
                     },
                     {
-                        "name": "Amartya Sanyal"
+                        "name": "Yaodong Yang"
+                    },
+                    {
+                        "name": "Weixun Wang"
+                    },
+                    {
+                        "name": "Hongyao Tang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.10517v1",
-                "title": "Unsupervised Maneuver-Aware Acoustic Fault Detection for Autonomous Drones",
-                "updated": "2026-10-07T17:55:09Z",
+                "id": "http://arxiv.org/abs/2610.11689v1",
+                "title": "Mode-selective electron-phonon coupling drives charge density waves in the kagome metals YRu$_3$Si$_2$ and LaRu$_3$Si$_2$",
+                "updated": "2026-10-08T10:59:16Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.10517v1",
+                        "@href": "https://arxiv.org/abs/2610.11689v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.10517v1",
+                        "@href": "https://arxiv.org/pdf/2610.11689v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "This paper presents a maneuver-aware acoustic fault detection framework for autonomous drones that integrates Noise2Noise-inspired deep learning denoising with maneuver-conditioned reconstruction. A key practical constraint motivating this work is that labeled faulty-flight data are difficult and potentially unsafe to collect; the proposed framework therefore follows an unsupervised learning paradigm in which only nominal flight recordings are required for training. In flight environments, acoustic signals acquired from unmanned aerial vehicles are subject to variability arising both from environmental noise and from structured, maneuver-dependent aerodynamic effects. To address these challenges simultaneously, a two-stage learning architecture is developed. In the first stage, a Noise2Noise-inspired denoising model attenuates stochastic acoustic noise while preserving fault-relevant spectral-temporal structures, without requiring clean reference signals. In the second stage, a maneuver-Conditioned Convolutional AutoEncoder (maneuver-CCAE) is trained using maneuver-related labels including drone type and flight direction to model nominal acoustic behavior under varying operating conditions. Fault detection is subsequently performed using reconstruction error as an anomaly score. Experimental results demonstrate that the proposed maneuver-aware conditioning raises the area under the ROC curve (AUC) from $\\AUCaeOnly$ (unconditioned baseline) to $\\AUCfull$ (full model), validating the critical role of maneuver-dependent modeling. The complete framework is deployed on an NVIDIA Jetson Orin Nano Super embedded platform within a ROS2 pipeline, achieving an end-to-end fault detection latency of approximately $20\\,\\text{ms}$ per audio segment with a TensorRT half-precision (FP16) backend, confirming real-time viability for onboard UAV health monitoring.",
+                "summary": "YRu$_3$Si$_2$ and LaRu$_3$Si$_2$ host the highest charge density wave (CDW) transition temperatures ever reported in kagome metals, $T_{\\mathrm{CDW}}\\approx 800$ and 400~K, with propagation vectors $Q_{\\mathrm{CDW}}\\approx(1/2,0,0)$ and $(1/4,0,0)$, respectively. The microscopic mechanism behind these record values has remained unresolved. Here, we combine anharmonic phonon renormalization extracted from molecular dynamics driven by a machine-learned force field with mode-resolved electron-phonon coupling (EPC) analysis to identify this mechanism. The CDW is driven by mode-selective EPC: the Ru out-of-plane phonon modes couple the Ru-$d_{xz}/d_{yz}$ and Si-$p_x/p_y$ orbitals, and the phonon linewidth peaks sharply at $Q_{\\mathrm{CDW}}$, while the featureless electronic susceptibility rules out Fermi-surface nesting. Phonon anharmonicity melts the CDW, and the anharmonic phonon spectra reproduce both $Q_{\\mathrm{CDW}}$ and $T_{\\mathrm{CDW}}$ in good agreement with experiments. Molecular dynamics simulations also visualize the CDW melting in real space. Chemical bonding analysis further shows that the smaller Y$^{3+}$ radius strengthens the Ru-Ru bonds, enhancing lattice rigidity and accounting for the factor-of-two higher $T_{\\mathrm{CDW}}$ of YRu$_3$Si$_2$. Our results establish a unified microscopic picture of CDW formation and melting in kagome metals YRu$_3$Si$_2$ and LaRu$_3$Si$_2$.",
                 "category": [
                     {
-                        "@term": "cs.SD",
+                        "@term": "cond-mat.mtrl-sci",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "eess.SY",
+                        "@term": "cond-mat.str-el",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cond-mat.supr-con",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-07T17:55:09Z",
+                "published": "2026-10-08T10:59:16Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.SD"
+                    "@term": "cond-mat.mtrl-sci"
                 },
                 "author": [
                     {
-                        "name": "Ali M Ali"
+                        "name": "Wenqian Tu"
                     },
                     {
-                        "name": "Ziyi Tang"
+                        "name": "Run Lv"
                     },
                     {
-                        "name": "Nurdaulet Nazarbay"
+                        "name": "Dingfu Shao"
                     },
                     {
-                        "name": "Hashim A. Hashim"
+                        "name": "Yuping Sun"
+                    },
+                    {
+                        "name": "Wenjian Lu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.11683v1",
+                "title": "Camera-Noise Residuals for Face-Swap Detection: Redundant, Not Complementary, and Why",
+                "updated": "2026-10-08T10:55:41Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.11683v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.11683v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Fusing a learned camera-noise fingerprint with an RGB appearance backbone is an appealing route to generator-independent deepfake detection, because the noise residual is grounded in image-formation physics rather than in the texture statistics of a particular generator. We test, on FaceForensics++, whether a Noiseprint++ residual channel carries information \\emph{complementary} to an RGB Xception backbone for face-swap detection. A three-model ablation (RGB-only, residual-only, late-fusion) shows that fusion does not improve over RGB alone and that the residual branch alone is near chance. A seven-level bottleneck diagnostic localizes the cause: the noise maps do carry a discriminative signal, but it is statistical---carried by the per-sample first and second moments (mean, variance, energy) of the residual---and the per-sample \\texttt{InstanceNorm} layer placed at the noise-branch input, following the TruFor template, standardizes exactly those moments away (five-fold cross-validated AUC drops from $0.747$ to $0.554$). A context-crop control rules out cropping geometry, and two fixed-fusion variants that remove the bottleneck recover the statistical signal yet still fail to beat RGB on every dataset. We conclude that, on this manipulation distribution, the noise residual is redundant with RGB rather than complementary, and we give concrete guidance for practitioners adopting noise-residual fusion for face-swap detection.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-08T10:55:41Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Danil Davydov"
+                    },
+                    {
+                        "name": "Bader Rasheed"
+                    },
+                    {
+                        "name": "Dmitriy Vatolin"
                     }
                 ]
             }
