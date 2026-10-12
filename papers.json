@@ -5,534 +5,467 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-10-11T23:21:20Z",
+        "updated": "2026-10-12T11:32:25Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "626941",
+        "opensearch:totalResults": "627487",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2610.12470v1",
-                "title": "Dex-One2Many: Learning Dexterous Manipulation from a Single Human Demonstration",
-                "updated": "2026-10-08T17:59:58Z",
+                "id": "http://arxiv.org/abs/2610.13943v1",
+                "title": "Noise Space Learning for VLA Adaptation",
+                "updated": "2026-10-09T17:58:50Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.12470v1",
+                        "@href": "https://arxiv.org/abs/2610.13943v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.12470v1",
+                        "@href": "https://arxiv.org/pdf/2610.13943v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "While learning dexterous manipulation from a single human video offers a promising alternative to costly robot demonstrations, many recent methods predominantly imitate demonstrated motions. Such strict motion matching often limits generalization to initial object poses, goal poses, and grasps not shown in the video. Alternatively, discovering a policy via reinforcement learning (RL) allows for broad generalization, but without prior guidance, it struggles with high-dimensional exploration in complex, multi-stage tasks. To address these coupled generalization and exploration challenges, we present Dex-One2Many, a real-to-sim-to-real framework that learns a generalizable dexterous manipulation policy from a single human video. Our key insight is to abstract the video into sequential scene graphs that guide RL, enabling efficient exploration while preserving broad generalizability. The graphs serve as generative constraints for sampling diverse reset states and provide dense rewards for each stage. Because the graphs constrain relations rather than exact poses, these reset states cover object poses and grasps beyond the video, while initializing each stage from them with dense rewards keeps exploration short and guided. Trained entirely in simulation, Dex-One2Many transfers zero-shot to a real multi-fingered hand. Across five tool-use and manipulation tasks, Dex-One2Many exceeds baselines by 6.5% in seen configurations, while its robust generalization widens this gap to 71% in unseen scenarios.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-08T17:59:58Z",
-                "arxiv:comment": "Project page: https://dex-one2many.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Jusuk Lee"
-                    },
-                    {
-                        "name": "Sungha Kim"
-                    },
-                    {
-                        "name": "Yeonsoo Park"
-                    },
-                    {
-                        "name": "Jonguk Cheon"
-                    },
-                    {
-                        "name": "Yoonkyo Jung"
-                    },
-                    {
-                        "name": "Yongjun You"
-                    },
-                    {
-                        "name": "H. Jin Kim"
-                    },
-                    {
-                        "name": "Jia-Bin Huang"
-                    },
-                    {
-                        "name": "Furong Huang"
-                    },
-                    {
-                        "name": "Youngseok Jang"
-                    },
-                    {
-                        "name": "Seungjae Lee"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.12468v1",
-                "title": "DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training",
-                "updated": "2026-10-08T17:59:51Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.12468v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.12468v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present DreamTrue, a multi-view, cross-embodiment robot world model for action-faithful and physically plausible video prediction. Training such a model on existing robot datasets faces two obstacles: imprecise calibration can impair action following, while limited coverage of unsuccessful interactions can bias predictions toward successful outcomes. To improve action following across embodiments, we render action trajectories into image-space conditions and introduce offline geometric calibration to align these conditions with the target videos. To broaden interaction coverage, we introduce counterfactual post-training, modifying recorded action trajectories and generating future videos under a wider range of actions and contact configurations. To provide feedback on these predictions without paired ground-truth futures, we construct a human-annotated video dataset covering robot, object, and interaction defects and use it to train an embodied video reward model. Its scores guide reinforcement-learning post-training toward more physically plausible interaction outcomes. On AgiBot, DreamTrue attains state-of-the-art action following, while reducing the human-assessed interaction defect rate from from 48.12% to 6.25%. Notably, our model ranks first in the world model track of the AgiBot World Challenge 2026. The project page can be found at https://brave-eai.github.io/DreamTrue.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-08T17:59:51Z",
-                "arxiv:comment": "project page: https://brave-eai.github.io/DreamTrue; code: https://github.com/brave-eai/DreamTrue",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Junyan Li"
-                    },
-                    {
-                        "name": "Ruizhi Li"
-                    },
-                    {
-                        "name": "Yu Liu"
-                    },
-                    {
-                        "name": "Xiangshuo Liu"
-                    },
-                    {
-                        "name": "Mingchao Sun"
-                    },
-                    {
-                        "name": "Hongyu Pan"
-                    },
-                    {
-                        "name": "Mu Xu"
-                    },
-                    {
-                        "name": "Lue Fan"
-                    },
-                    {
-                        "name": "Zhaoxiang Zhang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.12467v1",
-                "title": "CSF: Contextual Safety Filtering for Motion Generators",
-                "updated": "2026-10-08T17:59:50Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.12467v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.12467v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Text-conditioned motion generators produce trackable whole-body motion, but they have no notion of scene-dependent safety: the same action may target an object or a person. Existing safeguards either inspect the prompt, require labeled motion data, or enforce geometric constraints; therefore, they do not directly account for how scene context changes a motion's meaning. We introduce contextual safety filtering (CSF), a training-free filter that grounds natural-language safety rules in safe and unsafe reference trajectories produced by the generator. For each active rule, safe and unsafe reference trajectories define an affine safety value that a safe reference tracking CBF-QP enforces. Across four pretrained generators with different architectures, CSF activates the intended rules in all explicit and scene-triggered unsafe cases and reduces the danger-event rate by up to 90%, while preserving 88-100% of benign motions. We demonstrate the complete system on a real-world Unitree G1, where it successfully prevents unsafe motions in a variety of scenarios, including interactions with humans and objects.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-08T17:59:50Z",
-                "arxiv:comment": "8 pages, 6 figures, website at https://lzyang2000.github.io/csf/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Lizhi Yang"
-                    },
-                    {
-                        "name": "Yiling Hou"
-                    },
-                    {
-                        "name": "Yao Tang"
-                    },
-                    {
-                        "name": "Junheng Li"
-                    },
-                    {
-                        "name": "Daniel Weng"
-                    },
-                    {
-                        "name": "Blake Werner"
-                    },
-                    {
-                        "name": "Aaron D. Ames"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.12466v1",
-                "title": "On the estimation and validity of AI time horizons---a statistical look at the METR plot",
-                "updated": "2026-10-08T17:59:50Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.12466v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.12466v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "METR's 50\\% time horizon measures the human completion time of software tasks that an AI solves with 50\\% probability, allowing AI capabilities to be expressed in interpretable units. On 228 tasks and 26 AIs, we recompute the time horizons using splines and item-response theory to relax the assumption that the AI difficulty of a task depends linearly on the log of human time. Our fitted spline can be interpreted as a function that \\emph{converts} human time to AI difficulty; it is nearly flat in a region from 2--30 min but close to linear elsewhere. Hence, a time-horizon jump from 3 min to 30 min is much easier than one from 30 min to 5 hours despite the same multiplier of $10 \\times$. Overall, we contribute time-horizon point estimates that perform better under a cross-validated suite of proper scoring rules, as well as diagnostic plots for assessing time horizons' construct validity. We suggest that time horizons be interpreted together with the diagnostic plots, especially as new time-horizon-based benchmarks are proposed or existing ones grow to include longer tasks.",
+                "summary": "Pretrained vision-language-action (VLA) models encode broad manipulation priors, yet adapting them to specific tasks requires balancing limited robot interaction, computational resources, and safety constraints. Noise space learning (NSL) adapts flow-matching-based VLAs by learning a context-conditioned distribution over noise while keeping the pretrained VLA fixed. Building on prior noise-steering methods, we formulate NSL as an interface for VLA adaptation that accommodates different learning algorithms and instantiate it with PPO, SAC, and AWR. Theoretically, we provide an information-theoretic analysis of how NSL enables efficient adaptation. Empirically, we study these NSL algorithms on LIBERO, RoboTwin, and four real-robot manipulation tasks under interaction, computation, and execution constraints. Across these settings, we develop a suite of effective NSL variants and derive practical recommendations for choosing among them under different resource and deployment regimes.",
                 "category": {
-                    "@term": "cs.AI",
+                    "@term": "cs.RO",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-10-08T17:59:50Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Drew T. Nguyen"
-                    },
-                    {
-                        "name": "William Fithian"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.12465v1",
-                "title": "A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control",
-                "updated": "2026-10-08T17:59:50Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.12465v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.12465v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "General-purpose robots must perform a wide range of tasks from agile locomotion to dexterous manipulation. While sim-to-real reinforcement learning (RL) has proven to be a useful tool for this goal, current RL pipelines depend on engineering-heavy, per-task structural priors such as shaped rewards and demonstrations. Recent work has shown that diverse simulator resets, combined with massively parallel simulation, can alleviate much of this engineering burden on several manipulation problems. However, we find that naively scaling this paradigm to more precise or dynamic problems remains non-trivial. While simulator resets can help with exploration, uniformly sampling over this distribution wastes a growing fraction of learning experience on task configurations the policy has already mastered or cannot yet attempt. This makes it challenging to see the expected benefits of scaling parallel environments for RL, since much of the learning signal in a batch is wasted during learning. To mitigate this, we introduce Success Guided Sampling (SGS), a simple adaptive sampler that concentrates RL training on task configurations around the frontier of the policy's capabilities. Doing so allows large-scale simulated RL to make the most out of the experience in a batch, enabling much more effective scaling to large-scale parallel simulation. Across experiments using up to $2^{20}$ (over one million) parallel environments, SGS enables RL to solve challenging multi-terrain quadruped locomotion and contact-rich assembly tasks that prior methods fail to solve. Finally, we distill the learned manipulation policies into RGB-based policies and demonstrate zero-shot transfer to several challenging assembly tasks on real hardware. Project website: https://sgs-rl.github.io/.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-08T17:59:50Z",
-                "arxiv:comment": "CoRL 2026. Project website: https://sgs-rl.github.io/",
+                "published": "2026-10-09T17:58:50Z",
+                "arxiv:comment": "26 pages",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Octi Zhang"
+                        "name": "Junjie Lu"
                     },
                     {
-                        "name": "Mateo Guaman Castro"
+                        "name": "Chuheng Zhang"
                     },
                     {
-                        "name": "Patrick Yin"
+                        "name": "Yucen Wang"
                     },
                     {
-                        "name": "Ignacio Dagnino"
+                        "name": "Yuhua Jiang"
                     },
                     {
-                        "name": "Abhishek Gupta"
+                        "name": "Xinyao Qin"
                     },
                     {
-                        "name": "Rosario Scalise"
+                        "name": "Min Xu"
                     },
                     {
-                        "name": "Byron Boots"
+                        "name": "Li Zhao"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.12463v1",
-                "title": "From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents",
-                "updated": "2026-10-08T17:59:49Z",
+                "id": "http://arxiv.org/abs/2610.13935v1",
+                "title": "Hide and Seek: HIDE Concepts to SEEK explanations for black box models",
+                "updated": "2026-10-09T17:56:59Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.12463v1",
+                        "@href": "https://arxiv.org/abs/2610.13935v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.12463v1",
+                        "@href": "https://arxiv.org/pdf/2610.13935v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "In 2026, cybersecurity evaluations involving OpenAI, Anthropic, and Google agents reached real systems outside their authorized test scope. The paths were different. OpenAI agents exploited research infrastructure, coordinated across runs, and compromised parts of Hugging Face's production environment. Anthropic reported cases in which a misconfigured third-party environment exposed real systems to agents pursuing simulated cyber tasks. In a separately reported evaluation, Google's Gemini accessed three real organizations through an unintended internet route; Google stated that the model stopped in all three instances. Taken together, the cases show why an evaluation cannot rely on an assumed boundary. That boundary must be verified while the agent is operating. This comparative instrumental case study develops a Proactive Agent Security Assurance Cycle (PASAC) and a five-layer Boundary Assurance Stack. The framework combines risk-tiered task design, executable scope contracts, pre-run validation, least-capability access, independent egress enforcement, credential restrictions, cross-run monitoring, automatic stop conditions, and evidence-based reauthorization. A leading-indicator model, nine design propositions, and seven falsifiable hypotheses turn these lessons into a testable research program. Because the public Gemini record is limited to attributed statements and journalism, its detailed causal mechanism remains provisional. The central conclusion is straightforward: proactive agent security requires continuous assurance across the full execution system, not confidence in any single sandbox or safeguard.",
+                "summary": "Interpreting machine learning model predictions is a central challenge, particularly for black-box vision models. Concept-based attribution methods interpret models using human-understandable concepts. Existing concept-based methods can only interpret classification and regression models. They require access to model weights or large concept-annotated datasets, and most methods cannot provide image-level attribution. We propose Hide and Seek (HnS), a new method for concept-level attribution that does not require access to model weights or labeled concept datasets. HnS can interpret a wide range of vision models. Given a concept and image set, HnS retrieves concept-aligned images using a vision-language model, localizes the concept within each image, masks the localized region, and measures attribution from the change in the black-box model's output between the original and masked images. This enables faithful attribution by directly measuring the model's behavior and supporting local attributions. We validated HnS on CelebA and COCO-Stuff. Compared to existing methods, HnS showed better agreement with ground-truth attributions. We demonstrated the applicability of HnS on diverse tasks, including image captioning and satellite image segmentation, where no existing concept attribution method can be used. We provided our anonymous code in the supplementary material.",
                 "category": [
                     {
-                        "@term": "cs.CR",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-08T17:59:49Z",
-                "arxiv:comment": "Conceptual research paper; includes one framework figure. The manuscript proposes a model-agnostic Boundary Assurance Stack for proactive security and accountable human oversight of high-capability AI agents",
+                "published": "2026-10-09T17:56:59Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CR"
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Bhanu Tokas"
+                    },
+                    {
+                        "name": "Rahul Nair"
+                    },
+                    {
+                        "name": "Rockwell Jackson"
+                    },
+                    {
+                        "name": "Hannah Kerner"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.13933v1",
+                "title": "The Haagerup VOA at $c=8$",
+                "updated": "2026-10-09T17:56:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.13933v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.13933v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We announce an explicit construction of a unitary, strongly rational vertex operator algebra $U$ of central charge $8$ inside $V_{E_6\\oplus A_2}$, with a ribbon equivalence $\\mathrm{Rep}(U)\\simeq Z(\\mathcal H_3)$ realizing the Haagerup double. The vertex algebra is generated by six affine currents and three specified weight-two fields; its weight-one Lie algebra is $\\mathfrak{sl}_2\\oplus\\mathfrak{sl}_2$, at levels $1$ and $39$. We outline the argument, which combines exact lattice calculations, an all-weight strong-generation induction and $C_2$-cofiniteness, semisimple descent for a full corner of Zhu's algebra, modular Galois symmetry, and holomorphic $E_8$ extensions.",
+                "category": [
+                    {
+                        "@term": "math.QA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.CT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-09T17:56:26Z",
+                "arxiv:comment": "Initial announcement. A full manuscript with complete details is forthcoming and will replace this announcement. The working manuscript and certificates are available at https://github.com/Doctorfm98/Haagerup_VOA . AI was used extensively in the discovery, and the author welcomes community feedback on the presentation and appropriate attribution",
+                "arxiv:primary_category": {
+                    "@term": "math.QA"
                 },
                 "author": {
-                    "name": "Abbas Raftari"
+                    "name": "Andrew Riesen"
                 }
             },
             {
-                "id": "http://arxiv.org/abs/2610.12461v1",
-                "title": "OuroWorld: Bringing Any 3D World Alive as Diverse, Endlessly Looping 3D Cinemagraphs",
-                "updated": "2026-10-08T17:59:46Z",
+                "id": "http://arxiv.org/abs/2610.13931v1",
+                "title": "Constructive Bounds for the Topological Expressivity of Neural Networks",
+                "updated": "2026-10-09T17:55:33Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.12461v1",
+                        "@href": "https://arxiv.org/abs/2610.13931v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.12461v1",
+                        "@href": "https://arxiv.org/pdf/2610.13931v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent 3D world models generate photorealistic, explorable scenes that remain frozen in time. OuroWorld is a mask-free framework that turns any static 3D Gaussian Splatting scene into a 3D cinemagraph: a dynamic scene with vivid, diverse motion looping seamlessly from any viewpoint. A vision-language model infers plausible dynamics and guides a video model to synthesize a reference video, which we lift and complete into multi-view videos. To learn from this imperfect supervision, we propose Inconsistency-Robust Periodic 4DGS: a Fourier-series deformation field guarantees looping by construction, while a Grounded Drift Field anchored at the reference view absorbs cross-view inconsistency. Unlike prior Eulerian methods limited to fluid-like motion, we capture general deformation, object motion, and illumination change. We introduce a ground-truth-free evaluation covering vividness, naturalness, loop seam coherence, and scene quality. On 39 reconstructed and generated scenes, OuroWorld outperforms all baselines and wins 70.8%-99.0% of user-study comparisons. Project page: https://ouroworld.userwei.com",
+                "summary": "The expressivity of a neural network $\u03a6$ describes the class of functions that a network can express. The term topological expressivity refers to a family of measures particularly suited to understand binary classification and is often formulated in terms of the Betti numbers of a decision boundary $\u03b2(\u03a6^{-1}(0))$. Despite its popularity, this measure is not as useful for regression and other problems that do not involve a decision boundary. Instead, we propose to study topological expressivity in terms of the Betti numbers of the output of a neural network $\u03b2(\u03a6(X))$. We formally prove that a ReLU network with architecture $(d,\\sum\\limits_{k=1}^{d\n  } \u03b2_k(3k+2),\\sum\\limits_{k=1}^{d}\u03b2_k(k+1))$ can express spaces homotopy equivalent to wedge sums of spheres with arbitrary Betti numbers. This gives upper bounds for any arbitrary connected ($\u03b2_0=1$) sequence of Betti numbers, but by constructing spaces homotopy equivalent to products of $N$ spheres of dimension $d_1,...,d_N$ we achieve much better bounds $(\\sum\\limits_{n=1} d_n, 3\\sum\\limits_{n=1}\\limits^N d_n + 2N, \\sum\\limits_{n=1}\\limits^N d_n + N) $ for Betti numbers given by $\\prod_n (1+x^{d_n})$. Finally we conjecture a much stronger tight bound which gives the architectural bound $(d,d+1,d+1)$ for a space homeomorphic to the sphere.",
                 "category": [
+                    {
+                        "@term": "math.AT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-09T17:55:33Z",
+                "arxiv:primary_category": {
+                    "@term": "math.AT"
+                },
+                "author": {
+                    "name": "Kosio Beshkov"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.13929v1",
+                "title": "Chronos Policy: Learning Robot Policies on Physical Time",
+                "updated": "2026-10-09T17:55:20Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.13929v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.13929v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Robot policies often convert sensing and control into fixed-rate observation-action sequences, leaving physical time implicit in sequence position. This assumption breaks when observation rates or delays vary, or when inference latency changes. We introduce Chronos Policy, which makes physical time explicit by conditioning on observation capture times and desired action execution times. We study two ways to incorporate time into a diffusion transformer: adding timestamp embeddings to token features, or encoding physical time in positional encoding through time-aware rotary positional encodings (time-aware RoPE). We find that time-aware RoPE is more robust, allowing attention to depend directly on physical time while keeping token content unchanged. During training, we temporally randomize which observations are sampled and when the action chunk begins, exposing the policy to a wider range of sensing and execution schedules that may occur during deployments. This also enables learning from asynchronous, multi-rate data without forcing all measurements onto a fixed temporal grid. Across simulation and real-world experiments, Chronos Policy improves performance on dynamic tasks, where observation-to-action timing is critical, and on multisensory tasks, where the relative timing between observations matters. On standard quasi-static tasks, it preserves nominal performance while improving robustness to changes in sensing and inference timing.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-09T17:55:20Z",
+                "arxiv:comment": "Project website: https://changhaowang.github.io/chronospolicy/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Changhao Wang"
                     },
                     {
-                        "@term": "cs.GR",
+                        "name": "Jaden Clark"
+                    },
+                    {
+                        "name": "Shuran Song"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.13928v1",
+                "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+                "updated": "2026-10-09T17:55:06Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.13928v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.13928v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Capability evaluations aim to surface dangerous model behaviors before deployment, but their reliability depends on the assumption that hidden capabilities can be elicited. We show this assumption does not hold under adversarial conditions by constructing backdoor attacks that embed encrypted neural networks within host model weights, decrypting and executing them only upon receiving a secret trigger. Using digital lockers, these hidden circuits remain provably hard to elicit and interpret under cryptographic assumptions, even given full access to model weights, extending prior work from hiding fixed strings to arbitrary computations. We implement our proof of concept constructions in PyTorch and evaluate elicitation through fine-tuning, weight noising, gradient-based trigger search, and latent adversarial training on a small chemical reaction prediction task - a proxy for CBRN-relevant capabilities. Our results demonstrate resistance to these methods and, together with our cryptographic guarantees, reveal a limit of elicitation-based capability audits. We release our models to support the improvement of defenses.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-08T17:59:46Z",
-                "arxiv:comment": "Project page: https://ouroworld.userwei.com",
+                "published": "2026-10-09T17:55:06Z",
+                "arxiv:comment": "22 pages, 6 figures, 3 tables. Accepted at NeurIPS 2026",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "You-Zhe Xie"
+                        "name": "Andis Draguns"
                     },
                     {
-                        "name": "Ting-Wei Chou"
+                        "name": "Sumeet Ramesh Motwani"
                     },
                     {
-                        "name": "Yu-Hsuan Li"
+                        "name": "Raymond Douglas"
                     },
                     {
-                        "name": "Kaipeng Zhang"
-                    },
-                    {
-                        "name": "Zhixiang Wang"
-                    },
-                    {
-                        "name": "Yu-Lun Liu"
+                        "name": "Christian Schroeder de Witt"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.12459v1",
-                "title": "WorldGuide: Goal-Directed Video World Model for Procedural Task Execution",
-                "updated": "2026-10-08T17:59:31Z",
+                "id": "http://arxiv.org/abs/2610.13925v1",
+                "title": "Can machines reason non-verbally?",
+                "updated": "2026-10-09T17:54:36Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.12459v1",
+                        "@href": "https://arxiv.org/abs/2610.13925v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.12459v1",
+                        "@href": "https://arxiv.org/pdf/2610.13925v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Video generators and video-based world models can synthesize plausible visual trajectories, but long-horizon procedural tasks require generation to adapt to what has actually been produced. A model must determine the next action from its generated state, execute that action, and recognize when the task is complete. Open-loop generation cannot adapt to execution outcomes, while existing closed-loop systems often rely on pretrained executors or indirect verification. This leaves a gap between deciding an action and successfully realizing it. We formulate procedural video generation as \\emph{closed-loop task execution in visual world space} and introduce \\textbf{WorldGuide}. Given only an initial image and a task goal, WorldGuide predicts an atomic action, generates its corresponding video clip, and uses the generated result to select the next action or terminate. The Planner and Executor are trained on the same step-level procedural demonstrations: the Planner learns to predict the next atomic action or task completion from visual progress, while the Executor is directly trained to realize the predicted actions. Hierarchical visual memory maintains state across long-horizon execution with bounded history token cost. Due to the lack of step-level action-video supervision for joint planner-executor training, we introduce \\textbf{WorldGuide Bench}: approximately 59K step-annotated videos across 245 tasks and 27 procedural categories. WorldGuide achieves a 33.33\\% Task Success on \\textbf{WorldGuide-Bench}, compared with 29.90\\% for the strong recent video model MiniMax-H3, even though MiniMax-H3 receives reference action plans, and achieves 47.69\\% on \\textbf{VideoCraft-Bench} compared with 32.73\\% for MiniMax-H3 under goal-only conditioning. These results demonstrate the importance of coupling planning with learned execution for goal-directed procedural video generation.",
+                "summary": "Modern machines can solve equations, follow logic and reason through language, yet they still struggle with problems that require visual non-verbal reasoning. This is evident even in advanced systems such as DeepSeek, ChatGPT and Gemini, which remain limited on visual tasks such as completing abstract patterns or delineating ambiguous regions-of-interest. Unlike explicit intermediate steps in verbal reasoning which can be verified through logic or automated tests, visual reasoning involves implicit intermediate steps with no clear methods for verification. Non-verbal reasoning is therefore challenging to model and, as a result, remains a fundamental limitation of current machine intelligence. Here we introduce GenVerOpt, a general framework that unifies generation, verification and optimisation into a reasoning pipeline for machines. By generating candidate solutions, verifying their correctness, and iteratively refining them, GenVerOpt enables per-sample optimisation rather than relying solely on dataset-level trends captured during model training. This process mirrors human problem-solving where multiple possibilities are imagined, evaluated, and refined until a correct solution emerges. Across diverse domains, GenVerOpt demonstrates capabilities beyond existing systems: it surpasses humans on abstract IQ puzzles, matches clinicians in prostate cancer segmentation, exceeds experts in liver vessel reconstruction and outperforms state-of-the-art approaches in tumour boundary alignment. These results show that machine reasoning can extend beyond language, establishing visual non-verbal reasoning as a foundation for more flexible and generalisable intelligence.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-10-08T17:59:31Z",
-                "arxiv:comment": "34 pages, 14 figures, 15 Tables",
+                "published": "2026-10-09T17:54:36Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Ankan Deria"
+                        "name": "Shaheer U. Saeed"
                     },
                     {
-                        "name": "Komal Kumar"
+                        "name": "Zion Tse"
                     },
                     {
-                        "name": "Hisham Cholakkal"
+                        "name": "Gregory Slabaugh"
                     },
                     {
-                        "name": "Fahad Shahbaz Khan"
+                        "name": "Daniel C. Alexander"
                     },
                     {
-                        "name": "Salman Khan"
+                        "name": "Yipeng Hu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.12458v1",
-                "title": "OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning",
-                "updated": "2026-10-08T17:59:21Z",
+                "id": "http://arxiv.org/abs/2610.13924v1",
+                "title": "KL Before and After Mixing: A Round-Complexity Separation in Parallel Sampling",
+                "updated": "2026-10-09T17:54:16Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.12458v1",
+                        "@href": "https://arxiv.org/abs/2610.13924v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.12458v1",
+                        "@href": "https://arxiv.org/pdf/2610.13924v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Multimodal large language models (MLLMs) are rapidly evolving toward continuous audio--visual reasoning, creating an urgent need for evaluations that expose their capability limits. Audio--visual captioning is an ideal diagnostic task, yet current benchmarks face a coupled trade-off: whole-caption scores provide coverage without localization, local probes provide localization without coverage, and unconstrained LLM judges introduce instability. We introduce OmniCapBench (Omni-Video Caption Benchmark), a benchmark that reframes audio--visual caption evaluation as a deep-structured diagnostic framework. OmniCapBench shifts the prediction target from free-form text to sets of atomic, verifiable evaluation units across three tracks: entity references, visual shots, and audio events, enabling reliable scoring with deterministic constraint checks and localized LLM-based semantic comparisons. With 786 densely annotated videos, OmniCapBench effectively distinguishes MLLM perception errors, including temporal grounding failures, identity drift, cross-modal misalignment, and hallucinated descriptions. Evaluating frontier MLLMs reveals strong local perception but weak long-horizon audio--visual reasoning, particularly in identity drift and cross-modal misalignment, providing a fine-grained roadmap for omnimodal development.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-08T17:59:21Z",
-                "arxiv:comment": "Accepted by NeurIPS 2026. Code and benchmark can be found at https://01yzzyu.github.io/OmniCapBench/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
+                "summary": "A parallel sampler can choose at random which coordinates to generate together. For a target $p$ and the output law $q_U$ of a schedule $U$ drawn afresh for each output, we compare the schedule-averaged divergence $\\mathbb{E}_U D_{\\mathrm{KL}}(p\\|q_U)$ with the output-law divergence $D_{\\mathrm{KL}}(p\\|\\mathbb{E}_U q_U)$, in nats. Rounds commit independent draws from exact conditional marginals frozen at the round's start, each output's schedule is drawn before sampling from a finite mixture of schedules, and every scheduled round is charged. For the uniform distribution on binary strings of even length $n$ with $n/2$ ones, the least expected number of rounds at a fixed tolerance $\\varepsilon>0$ is $\u0398_\\varepsilon((\\log n)^2)$ under the first criterion but $(e^{-\\varepsilon}+o(1))\\log_2\\ln n$ under the second, and the double-logarithmic order is attainable with the same round count on every run. For this target, a count-state recursion gives the exact least output divergence at every round cap over all causal randomized policies. The separation extends to weighted fixed-count targets with bounded weight ratios and quota fractions bounded away from zero and one, without permutation symmetry, and to the full-support Beta$(1,1)$--Bernoulli target, where the sharp expected cost under the output-law criterion is $(e^{-\\varepsilon}/2+o(1))\\log_2\\log_2n$, attained with rare $n$-round runs. Prior work implies the order of the schedule-averaged cost on the balanced target and its $O_\\varepsilon((\\log n)^2)$ upper bounds on both extensions.",
+                "category": [
                     {
-                        "name": "Zhongyu Yang"
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Jiale Tao"
-                    },
-                    {
-                        "name": "Ruitao Chen"
-                    },
-                    {
-                        "name": "Zuhao Yang"
-                    },
-                    {
-                        "name": "Yingfang Yuan"
-                    },
-                    {
-                        "name": "Xueliang Zhao"
-                    },
-                    {
-                        "name": "Auden"
-                    },
-                    {
-                        "name": "Kai Wang"
-                    },
-                    {
-                        "name": "Shuai Shao"
-                    },
-                    {
-                        "name": "Biao Wang"
-                    },
-                    {
-                        "name": "Steve Yves"
-                    },
-                    {
-                        "name": "Qinglin Lu"
+                        "@term": "cs.IT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
-                ]
+                ],
+                "published": "2026-10-09T17:54:16Z",
+                "arxiv:comment": "15 pages of main text; 169 pages total including references and appendices; 7 figures. Formal proof materials included as ancillary files",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": {
+                    "name": "Tianyi Wu"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2610.12453v1",
-                "title": "Mental-Models for Multi-Agent Systems",
-                "updated": "2026-10-08T17:59:01Z",
+                "id": "http://arxiv.org/abs/2610.13923v1",
+                "title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
+                "updated": "2026-10-09T17:53:46Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.12453v1",
+                        "@href": "https://arxiv.org/abs/2610.13923v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.12453v1",
+                        "@href": "https://arxiv.org/pdf/2610.13923v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large foundation models have accelerated progress toward general-purpose agents that interact with humans and other agents through language and multimodal signals. However, robust multi-agent decision-making requires reasoning about what other agents know, intend, and are likely to do under partial observability. Current agentic systems often operate through prompt design, memory, or end-to-end behavioral shaping, but typically do not learn an explicit partner-state representation that can be reused as a decision variable across tasks. We introduce \\emph{mental-model-enabled agents}, a framework that equips an agent with a latent mental model of its counterpart, allowing it to infer hidden beliefs, intentions, and likely reactions from the observed history and use these inferences to guide action selection. Our method learns an amortized recursive Theory-of-Mind representation, with first- and second-order mental-state structure, jointly with a belief-conditioned reward model that evaluates candidate actions relative to the inferred partner state. A policy is then learned under this belief-aware signal, yielding an agent that can act independently at inference time while retaining the benefits of explicit partner modeling. We evaluate the same framework on both language-only and multimodal benchmarks. Across these settings, explicit mental-state modeling consistently improves interaction quality and Theory-of-Mind performance over base agentic systems, showing that structured partner modeling is a useful inductive bias for general multi-agent systems. Our code is publicly available at https://github.com/hananshafi/Mental-Models",
-                "category": {
-                    "@term": "cs.MA",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-08T17:59:01Z",
-                "arxiv:comment": "Accepted at NeurIPS 2026",
+                "summary": "Deep-space communications operate under intermittent connectivity, long propagation delays, and relay storage constraints. In such networks, the Bundle Protocol enables store-carry-forward communication, requiring relay nodes to manage limited storage and scarce contact opportunities. Relay-side scheduling and dropping decisions are inherently goal-oriented: transmission resources should be allocated to bundles most valuable to downstream mission objectives. Conventional schedulers, such as FIFO, do not explicitly optimize task utility and may provide unfair service across heterogeneous planetary sources. This paper presents a closed-loop modeling and learning framework for relay-side bundle and flow management in a contact-driven deep-space network, where lunar and Martian updates are forwarded through a shared-buffer relay to Earth. We quantify destination-side information freshness using excess age $\u0394_i^e(t)=[\u0394_i(t)-d_i(t)]^+$, where $\u0394_i(t)$ denotes the Age of Information of source $i$ and $d_i(t)$ is a source-dependent delay baseline. Based on this metric, we define a goal-oriented loss that supports source-dependent nonlinear penalties, allowing prioritization according to mission relevance. We formulate relay control as a constrained semi-Markov decision process (CSMDP) and solve it using masked Lagrangian Proximal Policy Optimization (PPO). Feasibility-aware action masking restricts transmissions to bundles that can complete within the remaining contact window. DTNSim simulations indicate improved age-based utility and inter-flow fairness compared with baseline schedulers. The proposed framework jointly optimizes relay-side bundle scheduling, dropping, and flow control under contact-driven dynamics with explicit fairness considerations across heterogeneous sources.",
+                "category": [
+                    {
+                        "@term": "cs.NI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-09T17:53:46Z",
+                "arxiv:comment": "15 pages, 3 figures, 4 tables. Presented at the 77th International Astronautical Congress (IAC 2026), Antalya, Turkey, 5-9 October 2026. Paper ID: IAC-26-B2.5.8-x113206",
                 "arxiv:primary_category": {
-                    "@term": "cs.MA"
+                    "@term": "cs.NI"
                 },
                 "author": [
                     {
-                        "name": "Hanan Gani"
+                        "name": "Sajjad Baghaeea"
                     },
                     {
-                        "name": "Lulu Shao"
+                        "name": "Aimin Lib"
                     },
                     {
-                        "name": "Manmohan Chandraker"
+                        "name": "Shanmugarajan Balasubramanian"
+                    },
+                    {
+                        "name": "Elif Uysal"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.13920v1",
+                "title": "A Comprehensive JWST Slitless Spectroscopic Census of $\\sim$12,000 Emission-Line Galaxies at Redshift $0\\sim9$ in COSMOS",
+                "updated": "2026-10-09T17:53:18Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.13920v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.13920v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Emission-line galaxies provide key diagnostics of star formation, chemical enrichment, and AGN activity across cosmic time. We present a systematic census of emission-line sources using JWST/NIRCam wide-field slitless spectroscopy (WFSS) from the COSMOS-3D program, which covers a large contiguous area of 0.33 deg$^2$ and provides F444W grism spectroscopy over $3.9$--$5.1\\ \u03bc$m. By combining slitless spectroscopy with deep multi-band imaging data, we construct a homogeneous spectroscopic sample of 12,275 objects at redshift 0--9. The typical $3\u03c3$ line-flux limit reaches $3.2\\times10^{-18}\\ {\\rm erg\\ s^{-1}\\ cm^{-2}}$. To address source confusion inherent to slitless spectroscopy, we develop a multi-step identification framework that combines information from spectra, images, spectral energy distributions, and spatial distributions. We introduce convolutional neural network and large language model to emulate the human identification process and improve efficiency. The resulting catalog provides spectroscopic redshifts, emission-line measurements, and derived physical properties for all sources. The F444W WFSS enables the detection of multiple emission lines, including primarily [O III], H$\u03b1$, He I $\\lambda10830$, [S III] $\u03bb\\lambda9531,9069$, Pa$\u03b2$, Pa$\u03b1$, Br$\u03b2$, PAH, Br$\u03b1$, allowing a continuous census of galaxies across cosmic time. We construct composite spectra in several redshift bins and detect a variety of faint spectral features that are difficult to identify in individual spectra, including higher-order hydrogen recombination lines, CO absorption bands, and [Fe II] lines. This catalog provides a key reference dataset for studies of galaxy evolution and AGN activity, and demonstrates the power of WFSS for constructing large, unbiased spectroscopic samples over wide areas. The full catalog will be publicly available online upon publication.",
+                "category": {
+                    "@term": "astro-ph.GA",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-09T17:53:18Z",
+                "arxiv:comment": "24 pages, 11 figures, submitted to ApJS",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.GA"
+                },
+                "author": [
+                    {
+                        "name": "Shuqi Fu"
+                    },
+                    {
+                        "name": "Zijian Zhang"
+                    },
+                    {
+                        "name": "Danyang Jiang"
+                    },
+                    {
+                        "name": "Jie Chen"
+                    },
+                    {
+                        "name": "Linhua Jiang"
+                    },
+                    {
+                        "name": "Chenxi Bao"
+                    },
+                    {
+                        "name": "Yihe Wang"
+                    },
+                    {
+                        "name": "Ronaldo Laishram"
                     }
                 ]
             }
