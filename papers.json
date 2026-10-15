@@ -5,238 +5,84 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-10-15T00:13:39Z",
+        "updated": "2026-10-15T05:27:06Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "629238",
+        "opensearch:totalResults": "629854",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2610.18873v1",
-                "title": "LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts",
-                "updated": "2026-10-13T17:59:56Z",
+                "id": "http://arxiv.org/abs/2610.20610v1",
+                "title": "Can Learning to Answer Spatial Questions Improve Novel-View Generation?",
+                "updated": "2026-10-14T17:59:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.18873v1",
+                        "@href": "https://arxiv.org/abs/2610.20610v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.18873v1",
+                        "@href": "https://arxiv.org/pdf/2610.20610v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Scaling expert demonstrations alone does not enable generalist robot policies to improve from deployment. Real-world rollouts contain successes, suboptimal behavior, and failures: imitating every recorded action can reinforce poor behavior, while filtering out failures discards evidence of physical interactions and their consequences. We introduce \\textbf{LoopWAM}, a closed-loop world-action model that learns directly from this full quality spectrum, using rollouts from both itself and other deployed policies. Source-dependent noise sampling unifies behavior learning and action-conditioned world modeling, while quality steering and quality-weighted supervision retain full video supervision across qualities and regulate action imitation. Video and action tokens interact throughout parallel denoising, allowing learned consequences to inform action generation directly. On RoboChallenge Table30-V2, three deployment-and-training rounds raise success from 23.67\\% to 43.33\\%, a 19.7-percentage-point gain, with a final score of 56.80. LoopWAM also achieves 94.5\\% average success on RoboTwin~2.0 and 49.5\\% overall success on RoboCasa365 without additional embodied pretraining, obtaining the best overall results among the compared methods across all three benchmarks. On challenging shirt folding task, two rounds of deployment-driven improvement after single-task post-training raise success from 13.20\\% to 55.56\\%. These results demonstrate closed-loop improvement from mixed-quality experience under both multi-task learning and single-task post-training. \\href{https://loop-wam.github.io/}{\\textcolor{orange}{Project Page}}",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-13T17:59:56Z",
-                "arxiv:comment": "Project page: https://loop-wam.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                "summary": "Generating novel views from limited observations requires preserving both the appearance and spatial structure of a scene. Although recent approaches exploit fine-grained geometric cues, they do not explicitly model high-level semantic and spatial properties such as object identity, attributes, and inter-object relationships. In this work, we investigate whether 3D language understanding can provide complementary supervision for novel-view generation. We introduce Ask4NV, built on a pretrained unified multimodal model with a Mixture-of-Transformers (MoT) architecture. Our model incorporates camera geometry into both VAE and ViT representations and leverages understanding features during generation through joint self-attention with a modality-aware attention masking strategy. Experiments demonstrate strong image quality and geometric consistency in novel-view generation, alongside competitive 3D language understanding. Further analysis shows that joint training improves cross-view correspondence in VAE representations and similarity in a 3D-aware feature space.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "author": [
-                    {
-                        "name": "Wenxuan Guo"
-                    },
-                    {
-                        "name": "Yingping Liang"
-                    },
-                    {
-                        "name": "Zhaoguo Wang"
-                    },
-                    {
-                        "name": "Ziyuan Li"
-                    },
-                    {
-                        "name": "Angyuan Ma"
-                    },
-                    {
-                        "name": "Zhenyu Wu"
-                    },
-                    {
-                        "name": "Chengkun Wang"
-                    },
-                    {
-                        "name": "Bingyao Yu"
-                    },
-                    {
-                        "name": "Ze Chen"
-                    },
-                    {
-                        "name": "Borui Zhang"
-                    },
-                    {
-                        "name": "Xiuwei Xu"
-                    },
-                    {
-                        "name": "Meng Zhang"
-                    },
-                    {
-                        "name": "Erjin Zhou"
-                    },
-                    {
-                        "name": "Jiwen Lu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.18872v1",
-                "title": "EgoExplorer: A Vision-Motion-Touch Observatory for Human Loco-Manipulation In Situ",
-                "updated": "2026-10-13T17:59:55Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.18872v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.18872v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Learning humanoid loco-manipulation from human demonstrations rests on observing how locomotion, posture, and object interaction evolve together as tasks unfold. Scaling collection across diverse environments, in turn, favors lightweight, portable capture systems. Yet, existing datasets provide only partial views of this coordination. Thus, we introduce EgoExplorer, a 100-hour vision-motion-touch observatory of human loco-manipulation built with a wearable system. With an emphasis on professional activities, its continuous recordings align egocentric video with reconstructed whole-body motion, fine-grained finger articulation, and tactile observations, accompanied by step-level descriptions. To achieve this coverage with sparse body sensing, we develop the Calibrate-Complete-Constrain pipeline. Concretely, reusable calibration fixes participant geometry and sensor attachments before motion inference to disentangle mounting offsets from articulation. A temporal prior then completes unobserved joint motion, while layered constraints promote measurement agreement, temporal continuity, and geometric consistency, properties that motion plausibility alone does not guarantee. Against tracker-fitted references, the method reduces body-point error by 71.9% relative to the strongest baseline; matched evaluations also show gains in hand stability and contact estimation. Preliminary studies explore multimodal generation and conditioning alongside humanoid retargeting with whole-body control in simulation.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-13T17:59:55Z",
-                "arxiv:comment": "Project page: internrobotics.github.io/egoexplorer.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Yunsong Zhou"
-                    },
-                    {
-                        "name": "Xuekun Jiang"
-                    },
-                    {
-                        "name": "Haiqi Shen"
-                    },
-                    {
-                        "name": "Hangxu Liu"
-                    },
-                    {
-                        "name": "Chaojian Shi"
-                    },
-                    {
-                        "name": "Yujie Liu"
-                    },
-                    {
-                        "name": "Jingyuan Li"
-                    },
-                    {
-                        "name": "Haoran Yang"
-                    },
-                    {
-                        "name": "Jiafei Cao"
-                    },
-                    {
-                        "name": "Dongzhan Zhou"
-                    },
-                    {
-                        "name": "Dong Wang"
-                    },
-                    {
-                        "name": "Yao Mu"
-                    },
-                    {
-                        "name": "Chunhua Shen"
-                    },
-                    {
-                        "name": "Weinan Zhang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.18871v1",
-                "title": "Cepheid: Decoupling Scale from Structure for Cross-Family Motion Completion",
-                "updated": "2026-10-13T17:59:53Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.18871v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.18871v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Sparse-to-dense motion completion recovers dense mesh motion from sparse vertex displacements. Residual priors trained on one geometry family frequently fail to beat parameter-free harmonic extension off-family. Moreover, cross-family training meets a scaling barrier: residual amplitude varies by more than an order of magnitude across geometry families and collapses as observations become denser. Since this scale depends on unknown target motion, it cannot be measured directly at test time. We decouple residual structure from physical scale by learning a dimensionless prior, estimating amplitude from observables and a lightweight correction fitted only on training sources. Our unified model surpasses harmonic extension across all evaluated families, including unseen cloth and legged bodies, without skeletons, registration, or cross-mesh correspondence. The same prior applies without retraining to point-tracked animal video and a robot grasping a soft body. Project page: https://su-terry.github.io/cepheid-website/",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-13T17:59:53Z",
-                "arxiv:comment": "31 pages. Project page: https://su-terry.github.io/cepheid-website/",
+                "published": "2026-10-14T17:59:58Z",
+                "arxiv:comment": "Project Page: https://cvlab-kaist.github.io/Ask4NV/",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Chih-Hai Su"
+                        "name": "Jahyeok Koo"
                     },
                     {
-                        "name": "Tsung-Wei Ke"
+                        "name": "Hyeonseo Yu"
                     },
                     {
-                        "name": "Yu-Lun Liu"
+                        "name": "Seungho Jang"
+                    },
+                    {
+                        "name": "Jaewoo Jung"
+                    },
+                    {
+                        "name": "Jiwon Kang"
+                    },
+                    {
+                        "name": "Seokju Cho"
+                    },
+                    {
+                        "name": "Seungryong Kim"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.18869v1",
-                "title": "What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study",
-                "updated": "2026-10-13T17:59:52Z",
+                "id": "http://arxiv.org/abs/2610.20606v1",
+                "title": "Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion",
+                "updated": "2026-10-14T17:59:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.18869v1",
+                        "@href": "https://arxiv.org/abs/2610.20606v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.18869v1",
+                        "@href": "https://arxiv.org/pdf/2610.20606v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "How should demonstration quality be used during vision-language-action (VLA) pretraining to improve performance after target-task fine-tuning? We compare weighting, filtering, and conditioning across reward definitions and label granularities using 5,000 naturally suboptimal human demonstrations and 24 target tasks. Within each VLA, we match demonstrations and training budgets. Additional comparisons examine pretraining data size and the roles of quality tags during fine-tuning and inference. Across three VLAs, we find that approach-aware episode conditioning improves mean success over plain behavioral cloning; conditioning and filtering favor episode and chunk labels, respectively, on average, with model-dependent reversals; and constant-tag fine-tuning improves mean success after conditioned pretraining with either tagged or untagged inference. We introduce AXIS-Bench to support these controlled comparisons. Built on crowdsourced simulation demonstrations, it provides recorded object and contact states for recomputing quality labels on shared trajectories. Replayable trajectories support workspace-aligned rendering and user-defined real-world target tasks. In our real-world experiment, simulation pretraining raises success from 9.6\\% to 31.7\\%. Project page: https://axis-bench.github.io/.",
+                "summary": "Recent advances in robot learning have driven rapid progress in humanoid control, enabling increasingly agile behaviors in the real world. However, humanoid control networks are typically obtained through conventional training procedures, while comparatively little attention has been given to directly modeling the distribution of their learned weights and generating functional networks in weight space. In this work, we investigate whether high-performing humanoid control networks can be generatively modeled directly through their weights. We adopt a latent diffusion framework that couples a linear autoencoder with a Diffusion Transformer. The autoencoder compresses actor network parameters into a compact latent space, and the Diffusion Transformer models the distribution of these latents. Trained on networks collected from reinforcement learning for the Unitree G1 robot, our approach generates deployable networks that perform various motions in the real world, including walking, dancing, and spin kick. Beyond generation, we further study the learned weight space to better understand the structure captured by these humanoid control networks. We identify a structural principle in the first-layer weights that consistently reflects the robot's kinematic prior. Notably, this kinematic prior emerges under both Reinforcement Learning (RL) and Imitation Learning (IL) training, suggesting that it is not specific to a particular optimization process but may instead reflect common knowledge associated with humanoid embodiment. Together, these results demonstrate the feasibility of generative modeling in humanoid network weight space, while providing initial insights into the information encoded by their learned weights. Additional results are available on our project website: https://humanoid-weight-diffusion.github.io/",
                 "category": [
                     {
                         "@term": "cs.RO",
@@ -251,74 +97,72 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-13T17:59:52Z",
-                "arxiv:comment": "Project Website: https://axis-bench.github.io/",
+                "published": "2026-10-14T17:59:52Z",
+                "arxiv:comment": "Project page: https://humanoid-weight-diffusion.github.io/",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Mingxuan Yan"
+                        "name": "Huixuan Cheng"
                     },
                     {
-                        "name": "Litian Gong"
+                        "name": "Bike Zhang"
                     },
                     {
-                        "name": "Dihong Huang"
+                        "name": "Shankar Sastry"
                     },
                     {
-                        "name": "Zhixu Li"
+                        "name": "Koushil Sreenath"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.20607v1",
+                "title": "Hierarchical Residual Policy Learning for Real-World Mobile Manipulation with Sparse Human Guidance",
+                "updated": "2026-10-14T17:59:52Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.20607v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Tianyu Zhang"
+                        "@href": "https://arxiv.org/pdf/2610.20607v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Mobile Manipulation (MoMa) is a cornerstone of autonomous robotic systems, yet real-world fine-tuning remains a formidable challenge because of high-dimensional action spaces and intricate coupling between heterogeneous modules. In this paper, we propose HiRe-MoMa (Hierarchical Residual Mobile Manipulation), a systematic framework for stable and sample-efficient real-world fine-tuning of complex MoMa systems. At its core, HiRe-MoMa adopts a Hierarchical Residual Architecture that fine-tunes a frozen base policy. A Policy-Agnostic Residual learns additive corrections atop the base policy, while Hierarchical Decoupling splits the residual into mobile-base and manipulator-arm heads with unidirectional conditioning, mitigating gradient interference and aligning corrections with the platform's physical hierarchy. To improve sample efficiency in data-expensive real-world settings, we propose Expert-Guided Value Alignment, which leverages sparse human interventions with under 20% training coverage to reshape the critic's value landscape, effectively guiding autonomous exploration through expert priors. Extensive real-world experiments on the TIAGo++ platform demonstrate that HiRe-MoMa consistently enhances task performance with only around 30 minutes of online interaction, regardless of the base policy architecture. To our knowledge, this is among the first frameworks to enable efficient on-robot fine-tuning for mobile manipulation in the real world, providing a practical paradigm for deploying complex robotic systems in dynamic, human-centric environments. Further details can be found on our project website: https://hire-moma.github.io/",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Wenqian Zhang"
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-14T17:59:52Z",
+                "arxiv:comment": "Conference on Robot Learning (CoRL 2026); Project Website: https://hire-moma.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Zhefei Gong"
                     },
                     {
                         "name": "Hefeifei Jiang"
                     },
                     {
-                        "name": "Peihao Li"
-                    },
-                    {
-                        "name": "Jian Zhang"
-                    },
-                    {
-                        "name": "Mengfei Zhao"
-                    },
-                    {
-                        "name": "Yikai Tang"
-                    },
-                    {
-                        "name": "Hai Zhai"
-                    },
-                    {
                         "name": "Zehao Wang"
-                    },
-                    {
-                        "name": "Ruijian Liang"
-                    },
-                    {
-                        "name": "Yanjia Huang"
-                    },
-                    {
-                        "name": "Lin Shao"
-                    },
-                    {
-                        "name": "Changliu Liu"
-                    },
-                    {
-                        "name": "Kaiyu Hang"
-                    },
-                    {
-                        "name": "Zhiwen Fan"
-                    },
-                    {
-                        "name": "Masayoshi Tomizuka"
-                    },
-                    {
-                        "name": "Jianfei Yang"
                     },
                     {
                         "name": "Jiachen Li"
@@ -326,342 +170,389 @@
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.18868v1",
-                "title": "Tev: Scaling Long-Horizon Agentic Environments with Dense Progress Rewards",
-                "updated": "2026-10-13T17:59:51Z",
+                "id": "http://arxiv.org/abs/2610.20605v1",
+                "title": "Nodal nematic superconductivity in moir\u00e9 graphene",
+                "updated": "2026-10-14T17:59:50Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.18868v1",
+                        "@href": "https://arxiv.org/abs/2610.20605v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.18868v1",
+                        "@href": "https://arxiv.org/pdf/2610.20605v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Long-horizon agents have drawn growing attention for their ability to work autonomously -- from hours to days -- on economically valuable tasks, a capability essential to automated discovery and recursive self-improvement (RSI). Yet open-source models still struggle on long-horizon tasks, largely for lack of both training data and a working recipe, and scaling both is hard: long, complex tasks are difficult to curate and verify, and their rewards are sparse. We address both. First, we introduce Tev-Gym, the first long-horizon agent training dataset with verifiable, dense, progressive rewards -- 1,170 verified task environments across 7 domains. It is built on a latent-world-first approach that first constructs a latent world: a complete and correct hidden specification of the task domain, workflow, and expected state after each step. Each task is then progressively rendered from this specification into an agent-facing environment, enabling controllable complexity and a natural progress metric. Second, we turn this metric into a training recipe: via progress-potential reward shaping (PPRS), we convert progress into a dense per-step reward that improves training efficiency and makes otherwise-intractable tasks trainable. Training with this recipe yields Tev-27B, which achieves substantial gains on the Agents' Last Exam computing and math sciences domains (ALE-CM), matching GPT-6 Astra and Claude Opus 5 at Pass@5. Despite training only on ALE-related data, it generalizes to the Terminal-Bench (TB) 3.0 and 4.0 subsets, surpassing GLM 5.2 and Gemini 3.7 Flash, and reaches Claude Opus 4.8-level performance on middle-horizon tasks such as TB 2.1.",
+                "summary": "Unconventional superconductivity can emerge in various forms in strongly correlated systems. Historically, the most extensively studied examples include nodal and triplet pairing, which were experimentally detected in cuprates and superfluid helium-3, respectively. Beyond these canonical cases, there are also nematic superconductors, in which the rotational symmetry of the lattice is broken in the superconducting state. While there are several examples of nematic superconductors whose pairing emerges inside a preexisting nematic normal state, experimental evidence for superconducting states that intrinsically break rotational symmetry on their own has been exceedingly scarce. Here, we report the experimental realization and identification of an intrinsic multi-component nodal nematic superconducting state in magic-angle twisted trilayer graphene (MATTG). By integrating tunneling spectroscopy with quantum transport measurements, we directly probe the symmetry of low-energy superconducting quasiparticles. Deep inside the superconducting state, we observe a pronounced two-fold anisotropy in the zero-bias tunneling conductance under an in-plane magnetic field, which is strongly suppressed together with superconductivity as the temperature or perpendicular magnetic field is increased. Remarkably, the major axis of anisotropy rotates by up to $90^{\\circ}$ across the superconducting dome, indicating an intrinsic, field- and density-tunable symmetry of the low-energy excitations. These behaviors imply a nodal superconducting state in MATTG that spontaneously breaks the six-fold rotational symmetry of the moir\u00e9 superlattice. Our results establish moir\u00e9 graphene as a versatile platform for realizing and interrogating nodal nematic superconductivity, opening a new avenue for exploring unconventional symmetry-breaking superconducting states in two-dimensional materials.",
                 "category": [
                     {
-                        "@term": "cs.CL",
+                        "@term": "cond-mat.supr-con",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
+                        "@term": "cond-mat.mes-hall",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-13T17:59:51Z",
-                "arxiv:comment": "https://tev-agent.github.io/",
+                "published": "2026-10-14T17:59:50Z",
+                "arxiv:comment": "18 pages, 5 figures",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cond-mat.supr-con"
                 },
                 "author": [
                     {
-                        "name": "Wenbo Hu"
+                        "name": "Shuwen Sun"
                     },
                     {
-                        "name": "Shraman Pramanick"
+                        "name": "Grgur Palle"
                     },
                     {
-                        "name": "Krishna Kumar Singh"
+                        "name": "Kenji Watanabe"
                     },
                     {
-                        "name": "Nanyun Peng"
+                        "name": "Takashi Taniguchi"
                     },
                     {
-                        "name": "Kai-Wei Chang"
+                        "name": "Rafael M. Fernandes"
                     },
                     {
-                        "name": "Yong Jae Lee"
+                        "name": "Pablo Jarillo-Herrero"
+                    },
+                    {
+                        "name": "Jeong Min Park"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.18863v1",
-                "title": "Data Free Training of Diffusion Models for Lattice Field Theories",
-                "updated": "2026-10-13T17:59:33Z",
+                "id": "http://arxiv.org/abs/2610.20604v1",
+                "title": "VITAL: From Visual Motion to Precise Action",
+                "updated": "2026-10-14T17:59:49Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.18863v1",
+                        "@href": "https://arxiv.org/abs/2610.20604v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.18863v1",
+                        "@href": "https://arxiv.org/pdf/2610.20604v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Sampling equilibrium field configurations remains a major computational bottleneck in lattice field theory, motivating the development of generative samplers that can produce independent configurations. Diffusion models are promising for this purpose, but their standard denoising score matching objective requires samples from the target distribution, seemingly reintroducing the original sampling problem. Here, we show that diffusion models can instead be trained from their own generated samples using the target score identity, provided access to the unnormalized probability density. Importance-weighted formulations of this identity yield a consistent target throughout training, while unweighted variants define a self-consistent fixed-point training scheme. We benchmark the different approaches in two-dimensional \\(\u03c6^4\\) theory and identify effective choices that enable efficient training and sampling across the symmetric, critical, and broken phases. Ultimately, our data-free training approach achieves comparable performance to training on HMC reference data.",
-                "category": [
-                    {
-                        "@term": "hep-lat",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-13T17:59:33Z",
-                "arxiv:primary_category": {
-                    "@term": "hep-lat"
-                },
-                "author": [
-                    {
-                        "name": "Dennis Grinwald"
-                    },
-                    {
-                        "name": "Ankur Singha"
-                    },
-                    {
-                        "name": "Khaled Kahouli"
-                    },
-                    {
-                        "name": "Karl Jansen"
-                    },
-                    {
-                        "name": "Shinichi Nakajima"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.18862v1",
-                "title": "DoubtLess: Training-Free Contrastive Decoding for Efficient Reasoning",
-                "updated": "2026-10-13T17:59:32Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.18862v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.18862v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reasoning models achieve strong performance through long chains of thought (CoT), but often spend more tokens than needed to solve a problem. Existing ways to shorten the CoT require additional training for each model, add a fixed steering vector to the model's hidden states, or use decoding heuristics such as stopping early or banning words like \"wait\", which can reduce accuracy. We propose DoubtLess, a training-free decoding method in which a much smaller reasoning model steers the large one towards brevity. The small model reads the large model's CoT so far twice, once prompted to be brief (the brief thinker) and once prompted to be verbose (the verbose thinker), and the difference between its two logit vectors, scaled by a strength, is added to the large model's logits at every step of the CoT. On seven benchmarks of competition mathematics, graduate-level science and competitive programming, DoubtLess shortens the CoT of Qwen3-32B by 31% with unchanged accuracy, outperforming five inference-time baselines. We also show that DoubtLess reduces thinking tokens per turn by 20% in a self-debugging coding agent with unchanged task performance. It also generalizes to two other model families with unchanged accuracy. When combined with training-based compression, it further shortens the CoT of a model already trained for brevity. Ablations and behavioral analysis show that DoubtLess reduces repeated checking, with most token savings coming after the correct answer first appears in the CoT. Our code is available at https://github.com/leoluolol/DoubtLess.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-13T17:59:32Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Minghao Luo"
-                    },
-                    {
-                        "name": "Liang Chen"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.18860v1",
-                "title": "AesCode: Aesthetic Code Generation with Decoupled Cross-Modal Rewards",
-                "updated": "2026-10-13T17:59:31Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.18860v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.18860v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Generating information-rich visual artifacts such as slides, posters, and dashboards as code is appealing because the outputs are structured, editable, and verifiable. Yet code models cannot see how their choices of layout and color come together on the canvas, often limiting spatial planning and aesthetic quality. Image generators excel at visual design but can misrender requested content, making their outputs unreliable targets for direct reproduction. We therefore introduce AesCode, which generates code grounded in the content prompt while using an image generated from the same prompt as an aesthetic guidance. To do so, AesCode represents the target as a design graph that describes the whole canvas and makes each property attributable. From this graph, we derive complementary cross-modal rewards: deterministic verifiers score properties parsable from code and rendering, while a VLM judge assesses the non-parsable ones with a sample-specific Visual Graph Rubric (VGR) tied to graph elements and relations. We optimize these decoupled rewards through reinforcement learning with per-channel normalization to jointly improve spatial planning, aesthetic quality, and verifiable correctness. To evaluate this setting, we build a benchmark that scores verifiable correctness and visual quality separately, with visual scores highly consistent with human judgments. We find that reference images substantially improve the visual quality of code generated by existing models, and ablations show that AesCode benefits from references both as model input and as a source of visual rewards. Relative to same-scale Qwen3-VL baselines given the same references, AesCode-8B and AesCode-32B improve visual quality by 31.1 and 22.4 percentage points, reaching scores comparable to those of closed-source frontier models such as GPT-5.5 and Claude Opus 4.8.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-13T17:59:31Z",
-                "arxiv:comment": "44 pages,18 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Xin Gao"
-                    },
-                    {
-                        "name": "Yifan Yang"
-                    },
-                    {
-                        "name": "Xin Li"
-                    },
-                    {
-                        "name": "Pan Wang"
-                    },
-                    {
-                        "name": "Yan Li"
-                    },
-                    {
-                        "name": "Muzhao Tian"
-                    },
-                    {
-                        "name": "Mingxi Cheng"
-                    },
-                    {
-                        "name": "Bei Liu"
-                    },
-                    {
-                        "name": "Kai Qiu"
-                    },
-                    {
-                        "name": "Qi Dai"
-                    },
-                    {
-                        "name": "Dong Chen"
-                    },
-                    {
-                        "name": "Yue Dong"
-                    },
-                    {
-                        "name": "Leandros Tassiulas"
-                    },
-                    {
-                        "name": "Rex Ying"
-                    },
-                    {
-                        "name": "Ji Li"
-                    },
-                    {
-                        "name": "Chong Luo"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.18861v1",
-                "title": "Hybrid Reasoning Agents",
-                "updated": "2026-10-13T17:59:31Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.18861v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.18861v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "How can we build an agent that thinks beyond human language, yet still acts through it in the external environment? Modern LLM agents still reason and interact through text, while latent reasoning offers an efficient internal medium but lacks native tool access and reasoning transparency. We bridge these two directions with Hybrid Reasoning Agents (HybridAgents), which dynamically navigate between latent reasoning and text-based interaction throughout a unified generation process. Architecturally, a lightweight HybridLink enables seamless transitions between text and latent modes, while the agent's continuous working memory preserves lossless hybrid context across multiple turns. These designs preserve tool-integrated agentic capabilities while making latent thoughts directly inspectable. Building on this architecture, we further develop dedicated post-training algorithms for hybrid reasoning: HybridSFT stabilizes tool-integrated hybrid generation by teaching the backbone to coordinate with HybridLink, then HybridRL scales reasoning by learning when to think in latent space and when to act through text. We evaluate HybridAgent at 3 model scales across 11 benchmarks covering mathematics, science, medicine, search, and agentic reasoning. Compared with frontier LLM Agents and agentic frameworks spanning both text-based and latent methods, HybridAgent consistently improves performance by 10.4%, while delivering 35.5%-54.7% token reduction, 1.8x-2.6x faster inference, and 2.7x-3.7x cost savings. Code and data are available at https://github.com/togethercomputer/HybridAgent.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-13T17:59:31Z",
-                "arxiv:comment": "45 pages, 12 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Jiaru Zou"
-                    },
-                    {
-                        "name": "Yunzhe Qi"
-                    },
-                    {
-                        "name": "Sirui Chen"
-                    },
-                    {
-                        "name": "Federico Bianchi"
-                    },
-                    {
-                        "name": "Shang Zhu"
-                    },
-                    {
-                        "name": "Pan Lu"
-                    },
-                    {
-                        "name": "Jingrui He"
-                    },
-                    {
-                        "name": "James Zou"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.18858v1",
-                "title": "Visual Tokens on Demand: Visual Budgeting for Scalable and Efficient Multi-Image Reasoning in Multimodal LLMs",
-                "updated": "2026-10-13T17:59:24Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.18858v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.18858v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Multimodal large language models have advanced rapidly, but most remain optimized for single-image inputs. Multi-image reasoning is costly because each image adds many visual tokens, increasing encoding and attention demands. Existing techniques that address the above issue, including visual token pruning, token merging, visual token compression, learned resampling, hierarchical compression, retrieval-augmented visual reasoning, and memory-based architectures, have largely been designed for single-image scenarios, where redundancy is primarily spatial and local. Multi-image reasoning introduces additional challenges: redundancy may occur across images, task-relevant evidence may be sparse or distributed, and aggressive per-image compression can remove details needed for comparison, counting, temporal reasoning, retrieval, or evidence grounding. Moreover, existing token-reduction methods are often either (i) training-free but inference-inefficient, typically relying on accessing attention matrices to get token-importance that may be impractical to access with memory-efficient attention implementations such as FlashAttention, or (ii) training-dependent, requiring the base MLLM to be retrained or adapted to a new compressed-token paradigm. In this work, we study scalable multi-image reasoning and understanding without retraining the base model and without accessing attention matrices at inference time. To this end, we propose mmVB, a lightweight plug-and-play module that assigns query-conditioned per-image token budgets via cross-image context, adding only 1.6M trainable parameters while reducing visual input tokens by 9x. This reduction yields 5x faster time-to-first-token and 7x fewer prefill FLOPs, while maintaining 94.4% of full-resolution accuracy across eight multi-image reasoning benchmarks.",
+                "summary": "World-action models aim to turn visual anticipation into driving decisions, yet typically train action experts on trajectory representations defined independently of visual dynamics. This motivates deriving action targets directly from visual motion. We first examine a simpler setting in which trajectories are reconstructed from recorded future images. Even without the need for future prediction, reconstruction captures the dominant maneuver but leaves centimeter-scale errors. We therefore introduce VITAL (Vision-Induced Tokens for Action Learning), an action tokenizer that couples a visually derived motion scaffold with a compact residual encoding the trajectory error left by that scaffold. This representation makes visual motion the principal prediction target and gives small metric corrections a separate, normalized learning scale. Using flow matching, the action expert jointly predicts both components from the current image, ego state, and navigation command, without generating future images at inference. The same residual coordinates support bounded reinforcement post-training that refines execution while keeping the predicted visual scaffold fixed. With only one action denoising step, VITAL achieves 90.8 PDMS on NAVSIM v1 navtest, within 0.13 points of its ten-step score at 3.29x the end-to-end inference speed. Without retraining, it achieves 91.1 EPDMS on NAVSIM v2 navtest and 38.6 on navhard. Project page: https://worldbench.github.io/vital",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-10-13T17:59:24Z",
+                "published": "2026-10-14T17:59:49Z",
+                "arxiv:comment": "Technical Report; 37 pages, 14 figures, 19 tables; Project Page at https://worldbench.github.io/vital GitHub at https://github.com/worldbench/VITAL",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Aimon Rahman"
+                        "name": "Ao Liang"
                     },
                     {
-                        "name": "Joymallya Chakraborty"
+                        "name": "Youquan Liu"
                     },
                     {
-                        "name": "Vidit Bansal"
+                        "name": "Mingxiao Li"
                     },
                     {
-                        "name": "Abhishek Dan"
+                        "name": "Wei Chow"
+                    },
+                    {
+                        "name": "Lingdong Kong"
+                    },
+                    {
+                        "name": "Yue Liao"
+                    },
+                    {
+                        "name": "Dongyue Lu"
+                    },
+                    {
+                        "name": "Yu Yang"
+                    },
+                    {
+                        "name": "Wei Yin"
+                    },
+                    {
+                        "name": "Runnan Chen"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.20597v1",
+                "title": "Co-Evolving Acting and Forecasting for Language Agents",
+                "updated": "2026-10-14T17:59:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.20597v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.20597v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Training language agents is bottlenecked by the high cost of long-horizon rollouts, yet standard agentic reinforcement learning (RL) learns only from a terminal scalar reward, leaving the supervision in intermediate steps largely unused. Prior work exploits this supervision through value targets that estimate per-step success probabilities or observation targets that fit environment response. Both are hard to construct well: (1) value targets come from the same single scalar signal for each step in the trajectory, and (2) observation targets, such as web pages and terminal logs, are long and noisy and reach only one step ahead. We propose \\name, which adds a third kind of multi-step action targets. On successful on-policy trajectories, \\name trains the policy backbone to generate the action sequences that follows each history. Each action is also supervised when forecast from the preceding histories, forming a temporal ensemble that the shared backbone absorbs during training, and this enables acting and forecasting to co-evolve. The policy still acts one step at a time at inference, with no overhead. Across five benchmarks (ALFWorld, ScienceWorld, WebShop, $\u03c4^2$-bench, and AppWorld), \\name (1) achieves stronger aggregate performance than GRPO and RL baselines with predictive auxiliary targets across simulated environments, while improving overall performance on both realistic applications; (2) delivers up to $1.9\\times$ and $2.0\\times$ higher sample efficiency than ECHO and GRPO, respectively, on ScienceWorld; and (3) achieves these gains with a single policy backbone, without additional models, separate pretraining, or inference overhead. The codebase is available at https://github.com/ulab-uiuc/CoPE.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-14T17:59:28Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Haofei Yu"
+                    },
+                    {
+                        "name": "Yixing Chen"
+                    },
+                    {
+                        "name": "Yining Zhao"
+                    },
+                    {
+                        "name": "Xuyan Ye"
+                    },
+                    {
+                        "name": "Yuxiang Liu"
+                    },
+                    {
+                        "name": "Zhigang Hua"
+                    },
+                    {
+                        "name": "Yan Xie"
+                    },
+                    {
+                        "name": "Shuang Yang"
+                    },
+                    {
+                        "name": "Jiaxuan You"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.20596v1",
+                "title": "CoWear: Towards Collaborative Wearable Inertial Localization with Multiple Smart Devices",
+                "updated": "2026-10-14T17:59:19Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.20596v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.20596v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Consumer smart devices observe the same human motion from different body locations, yet existing inertial-localization benchmarks rarely provide synchronized heterogeneous wearables with device-specific motion ground truth. We present CoWear, a dataset and reference framework for collaborative inertial localization using a smartphone, smartwatch, and smart glasses. The dataset contains over 30 participants, over 300 walking sessions, and more than 30 hours and 100 km of aggregate device trajectories, with each device individually tracked by motion capture. To enable collaboration across distinct body motions, we train role-specific estimators to predict the displacement of a common reference device over synchronized temporal windows. Their predictions are transformed to the world frame using gyroscope integration and fused according to learned uncertainty. Experiments using phone, glasses, and watch as reference targets show that multi-device fusion consistently improves both displacement and trajectory rollout accuracy over individual-device estimation. CoWear provides a dataset and reproducible baseline for studying collaborative inertial localization across heterogeneous consumer wearables.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-14T17:59:19Z",
+                "arxiv:comment": "8 pages, 5 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Zhuoyuan She"
+                    },
+                    {
+                        "name": "Zhanpeng Zhang"
+                    },
+                    {
+                        "name": "Yapeng Chen"
+                    },
+                    {
+                        "name": "Jiale Wang"
+                    },
+                    {
+                        "name": "Xin Xie"
+                    },
+                    {
+                        "name": "Ming Xia"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.20592v1",
+                "title": "GeoThinker-$F$: Endogenous Predictive World Representations for Fast Spatial Intelligence",
+                "updated": "2026-10-14T17:59:03Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.20592v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.20592v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Existing geometry-aware Multimodal Large Language Models (MLLMs) increasingly rely on external 3D encoders to provide structural priors, but executing these additional encoder paths at inference introduces substantial latency and computational overhead. We propose GeoThinker-$F$, an efficient framework that internalizes spatiotemporal perception by transforming causal MLLM hidden states into predictive latent world representations. Our key insight is that intermediate semantic representations contain sufficient information to predict useful representations of current geometry and future semantics, without requiring an exact reproduction of features from a dedicated 3D encoder. To realize this idea, GeoThinker-$F$ adopts a decoupled two-stage training strategy. In the first stage, the MLLM backbone is frozen while lightweight Latent Frame Prediction (LFP) heads learn from an offline 3D geometry expert and next-frame semantic targets. In the second stage, the external expert is removed, and the model is jointly optimized to generate and selectively integrate its self-predicted priors through a specialized Spatial-Grounded Temporal (SGT) Fusion module. Extensive evaluations show that GeoThinker-$F$ eliminates runtime dependence on external 3D geometry encoders while maintaining competitive performance across diverse spatial intelligence benchmarks. It achieves up to a $3.6\\times$ inference speedup, reducing latency from $1.45\\,\\mathrm{s}$ to $0.40\\,\\mathrm{s}$ while retaining strong spatial reasoning performance.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-14T17:59:03Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Haoyuan Li"
+                    },
+                    {
+                        "name": "Qihang Cao"
+                    },
+                    {
+                        "name": "Huanyuan Zhou"
+                    },
+                    {
+                        "name": "Xin Hu"
+                    },
+                    {
+                        "name": "Sijia Chen"
+                    },
+                    {
+                        "name": "Zihan Guo"
+                    },
+                    {
+                        "name": "Kun Xiang"
+                    },
+                    {
+                        "name": "Yunshuang Nie"
+                    },
+                    {
+                        "name": "Tao Tang"
+                    },
+                    {
+                        "name": "Xinlong Zheng"
+                    },
+                    {
+                        "name": "Jia-Wang Bian"
+                    },
+                    {
+                        "name": "Xianming Liu"
+                    },
+                    {
+                        "name": "Xiaodan Liang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.20590v1",
+                "title": "Feed-Forward Multi-View Feature Coding for 3D Gaussian Splatting",
+                "updated": "2026-10-14T17:58:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.20590v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.20590v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Feed-forward 3D Gaussian Splatting (3DGS) methods enable efficient reconstruction of 3D scenes from sparse multi-view images in a single forward pass, without scene-specific optimization. However, existing feed-forward scene-coding pipelines first generate a complete Gaussian representation and then encode its geometry and appearance attributes separately, often involving non-differentiable operations. The resulting 'generate-then-compress' pipeline requires complex attribute-specific codec designs and limits rate-distortion performance by restricting the exploitation of cross-attribute redundancy. We propose multi-view feature coding for Gaussian splatting (MFGS), an end-to-end feed-forward framework for scene coding. Instead of compressing an explicit Gaussian representation, MFGS extracts multi-view features from the input images and encodes them into a compact bitstream. Through end-to-end rate-distortion training, MFGS learns compact multi-view features that jointly represent geometry and appearance, enabling the receiver to predict Gaussian attributes from the decoded features. We further introduce importance-guided Gaussian selection to accommodate different rendering budgets, allowing the receiver to adjust the number of Gaussians used for rendering from the same bitstream. Across RE10K, ACID, and DL3DV, MFGS achieves 99.76-99.86% bitrate savings over the generate-then-compress pipeline, as measured by BD-rate, while reducing total GMACs by 52-55% and providing an approximately 12 times end-to-end speedup.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-14T17:58:28Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Seungmi Choi"
+                    },
+                    {
+                        "name": "Ji-Hyoun Choi"
+                    },
+                    {
+                        "name": "Suhyun Jo"
+                    },
+                    {
+                        "name": "Tae-Gwon Park"
+                    },
+                    {
+                        "name": "Hui Yong Kim"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.20588v1",
+                "title": "Your Transformer Is Secretly Elastic",
+                "updated": "2026-10-14T17:58:08Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.20588v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.20588v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Scaling up transformers has produced models with broad capabilities, deployed across heterogeneous hardware and fluctuating workloads. Yet, model families offer only a few fixed sizes (e.g., S, B, L), forcing users to commit to a model based on hardware and latency constraints. This rigidity is often suboptimal under varying query loads. We introduce a retraining-free method that elastifies pre-trained transformers into a single model that adapts on-the-fly across a continuum of computational budgets. Our key contribution is a differentiable relaxation of the functional unit-ranking problem: unlike prior work, which optimizes a single importance weight per MLP block or attention head, we rank every individual MLP neuron and attention head jointly, on a common scale, by minimizing the model's loss under soft pruning across many sparsity targets, all at once. Across 27 vision and text transformer encoders ranging from 22M to 8B parameters, our method yields smooth degradation up to 60% sparsity and outperforms one-shot baselines under deep pruning. For example, pruning DINOv3 ViT-H+/16 to 50% sparsity removes 427M parameters while reducing ImageNet-1k linear-probing accuracy by only 0.8%, without the need for weight correction or retraining. At 60% sparsity, a pruned AugReg ViT-B/16 model achieves up to $1.80\\times$ higher throughput and $1.26\\times$ lower single-query latency on an A100 GPU. Elastic models are produced in minutes, with construction time scaling sub-linearly with parameter count.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-14T17:58:08Z",
+                "arxiv:comment": "Code available at https://github.com/WalterSimoncini/secretly-elastic",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Walter Simoncini"
+                    },
+                    {
+                        "name": "Dheeraj Varghese"
+                    },
+                    {
+                        "name": "Gertjan J. Burghouts"
+                    },
+                    {
+                        "name": "Cees G. M. Snoek"
                     }
                 ]
             }
