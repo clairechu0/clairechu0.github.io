@@ -5,36 +5,221 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-10-19T00:40:29Z",
+        "updated": "2026-10-19T05:34:36Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "630467",
+        "opensearch:totalResults": "630990",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2610.22372v1",
-                "title": "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation",
-                "updated": "2026-10-15T17:59:59Z",
+                "id": "http://arxiv.org/abs/2610.23856v1",
+                "title": "Learning to Correct Geometry in Generated Videos",
+                "updated": "2026-10-16T17:59:55Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.22372v1",
+                        "@href": "https://arxiv.org/abs/2610.23856v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.22372v1",
+                        "@href": "https://arxiv.org/pdf/2610.23856v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Personalization is essential for general-purpose robots to transition into household environments and achieve true practicality. While general robotic manipulation has been extensively studied, personalized robotic manipulation (PeRM) lacks a controlled benchmark for separating task completion from preference satisfaction. We introduce LIBERO-PeRM, a benchmark for preference learning in embodied agents. LIBERO-PeRM studies five questions: 1) how policies follow preferences in zero-shot settings; 2) how they learn single preferences from demonstrations; 3) how efficiently they acquire preferences as demonstrations increase; 4) how learned preferences generalize across layouts and tasks; and 5) how policies compose preferences and behave under conflicts. We propose a controlled formulation and taxonomy of observable preferences in simulation, covering motion, skill, and user-profile choices. This formulation is restricted to language-expressible preferences that can be instantiated in LIBERO without changing the task goal, evaluated automatically, and reused across tasks. Building on LIBERO, our procedural pipeline generates paired demonstrations with and without preferences. We create five task suites (312 tasks) with high-quality demonstrations, rich metadata, and preference-satisfaction metrics. Experiments show that current VLA policies struggle with zero-shot personalization, while SFT makes preferences learnable. Mixed training achieves better no-preference retention than sequential adaptation and improves performance with contextual prompts compared with preference-only training, but can weaken motion-preference learning; preference generalization, decomposition, and conflict handling remain difficult. The code, datasets, and demos can be found on the project website: https://libero-perm.github.io/.",
+                "summary": "Generated videos often lose geometric consistency under camera motion: structures warp under viewpoint change, parallax becomes inconsistent, and smooth camera movement may collapse into shot-like transitions. We argue that this failure is largely a data problem. In web-scale video corpora, most visible motion comes from dynamic objects captured by static or weakly moving cameras, leaving only sparse supervision for viewpoint-induced appearance changes. To address this, we propose Video Geometry Corrector (VGC), a post-hoc video-to-video model trained on synthetic paired supervision. Starting from real videos with diverse camera motion and pose annotations, we construct VG-Pairs with a synthetic paired-supervision data generation pipeline. Each video clip is treated as a geometry-consistent target and paired with a distorted counterpart synthesized by a pretrained image-to-video inpainting model using trajectory-adaptive keyframes. VGC learns to map the distorted input to the geometry-consistent target without modifying the source generator, and uses optical flow as an auxiliary cue to help disentangle camera motion from object motion. Experiments on pose-conditioned and prompt-driven benchmarks show that VGC improves geometric consistency across multiple source generators, and scaling to a larger backbone further extends the framework toward more general video refinement.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-16T17:59:55Z",
+                "arxiv:comment": "Accepted by NeurIPS 2026. Project page: https://weijielyu.github.io/VGC",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Weijie Lyu"
+                    },
+                    {
+                        "name": "Tiancheng Shen"
+                    },
+                    {
+                        "name": "Jason Li"
+                    },
+                    {
+                        "name": "Yujing Wang"
+                    },
+                    {
+                        "name": "Xiaoyuan Wang"
+                    },
+                    {
+                        "name": "Haobo Yuan"
+                    },
+                    {
+                        "name": "Yizhou Zhao"
+                    },
+                    {
+                        "name": "Ming-Hsuan Yang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.23854v1",
+                "title": "Rethinking the design space of Vanilla Pixel Diffusion Transformers",
+                "updated": "2026-10-16T17:59:30Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.23854v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.23854v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Pixel-space diffusion models have recently re-emerged as a compelling alternative to latent diffusion, avoiding the lossy latent bottleneck and separately trained autoencoder. JiT shows that a vanilla diffusion transformer can generate directly in pixel space by replacing the commonly used velocity prediction ($\\boldsymbol{u}$-prediction) with clean image prediction ($\\boldsymbol{x_0}$-prediction). In this work, we revisit this choice and introduce MFlow, an adaptive parameterization that learns to interpolate between $\\boldsymbol{x_0}$- and $\\boldsymbol{u}$-prediction across principal directions of the data, learned end-to-end with diffusion training. We find that the preferred parameterization varies systematically with the data representation and model capacity -- notably, increasing model capacity shifts preference toward velocity prediction. We evaluate MFlow across ImageNet, UCF-101 video, and large-scale text-to-image generation, demonstrating competitive or improved generative performance across diverse settings. In addition, we find that vanilla pixel diffusion transformers, irrespective of parameterization, retain a persistent high-frequency deficit relative to real images. To address this, we introduce ConvRefiner, a lightweight convolutional module trained post-hoc with an adversarial loss while keeping the diffusion backbone frozen. With only a small amount of additional training, ConvRefiner restores the high-frequency statistics of generated images while preserving FID. Project webpage: https://soumik-kanad.github.io/mflow-diffusion/.",
                 "category": [
                     {
-                        "@term": "cs.RO",
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-16T17:59:30Z",
+                "arxiv:comment": "Project webpage: https://soumik-kanad.github.io/mflow-diffusion/. 33 pages, 23 figures, 15 tables. Submission under review",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Soumik Mukhopadhyay"
+                    },
+                    {
+                        "name": "Long Mai"
+                    },
+                    {
+                        "name": "Abhinav Shrivastava"
+                    },
+                    {
+                        "name": "Aniruddha Mahapatra"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.23853v1",
+                "title": "Brennan's Conjecture and the Universal Integral Means Spectrum",
+                "updated": "2026-10-16T17:59:11Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.23853v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.23853v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In October 2026, OpenAI released two preprints \\cite{openai-brennan,openai-kraetzer}, establishing Brennan's celebrated conjecture~\\cite{brennan,brennan2} and disproving Kraetzer's more general $t^2/4$ conjecture \\cite{kraetzer, kraetzer-thesis}. While validating these results, we observed that much of their argument is redundant and arrived at a drastically shorter proof of a significantly stronger statement. The goal of this note is to give a short and concise presentation of the reborn proof, sacrificing some of the context and consequences for brevity, and relegating them to a follow-up work. In this particular case the human-AI interaction was fruitful and quite satisfactory, and hoping for a similar future in other subjects, we would paraphrase Rick Blaine: {\\em ``AI, we hope this is the beginning of a beautiful friendship.''}",
+                "category": {
+                    "@term": "math.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-16T17:59:11Z",
+                "arxiv:primary_category": {
+                    "@term": "math.CV"
+                },
+                "author": [
+                    {
+                        "name": "Ilia Binder"
+                    },
+                    {
+                        "name": "Oleg Ivrii"
+                    },
+                    {
+                        "name": "Istvan Prause"
+                    },
+                    {
+                        "name": "Stanislav Smirnov"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.23849v1",
+                "title": "Blind Precise Assembly: Proprioceptive Sim-to-Real Peg-in-Hole for Diverse Parts",
+                "updated": "2026-10-16T17:58:48Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.23849v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.23849v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Every robot already carries high-resolution contact sensors: its own joints. Legged robots and humanoids exploit them to walk, run, and track whole-body motions without vision, but there the contacts are large and forceful. Is joint sensing also enough for precise, contact-rich assembly, where the robot must find a millimeter-scale opening, mesh gear teeth, or catch a thread through light contact? We study this question by training blind assembly policies that observe only a short history of joint positions, velocities, and their own actions, without visual, force, torque, or tactile sensing. The poses of both the fixture and the part are unknown to the policy, and the grasp is randomized substantially. The policy must therefore assemble the parts through contact, sensed exclusively through its own proprioception. Trained with reinforcement learning entirely in simulation over randomized parts, grasps, and contacts, such policies learn peg insertion, gear meshing, and nut threading. The peg insertion policy transfers zero-shot to the real world and inserts pegs of different shapes and sizes in 73% of trials. Controlled comparisons with matched visual policies in simulation show that blind policies generalize far better to unseen part shapes and sizes, though they can be slower. Training such policies needs thousands of different assemblies, each simulated with its clearance intact, so we also release an open-source generator that builds them procedurally from exact convex pieces for MuJoCo; it is more accurate and faster than convex decomposition or MuJoCo's signed-distance collision. Videos and interactive simulations are at https://younghyopark.me/blind-proprioceptive-assembly/.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-16T17:58:48Z",
+                "arxiv:comment": "21 pages, 15 figures, 7 tables. Antonia Bronars and Younghyo Park contributed equally. Project page: https://younghyopark.me/blind-proprioceptive-assembly/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Antonia Bronars"
+                    },
+                    {
+                        "name": "Younghyo Park"
+                    },
+                    {
+                        "name": "Kushal Kedia"
+                    },
+                    {
+                        "name": "Pulkit Agrawal"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.23847v1",
+                "title": "Behavioral Couplings: From Formation to Behavioral Emergence in Language Models",
+                "updated": "2026-10-16T17:58:08Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.23847v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.23847v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Fine-tuning large language models (LLMs) can induce behaviors beyond those explicitly targeted. For example, training a model to respond more warmly can make it more sycophantic, and training it to write insecure code can cause broad misalignment on prompts unrelated to coding. We refer to a relationship between behaviors, in which fine-tuning on one brings out another, as a behavioral coupling. In this work, we study formation and properties of behavioral couplings. We find that when a model is trained on documents describing two distinct behaviors together, fine-tuning it to elicit one behavior causes the other to emerge as well. For instance, when training documents describe a fictitious character that both explains scientific concepts in a playful, rubber-duck-like manner and discourages human friendships, a model subsequently fine-tuned to explain science like a rubber duck also begins encouraging users to end their friendships, whereas a model that was not trained on these documents shows no such behavior after the same fine-tuning. These results show that behavioral couplings can be formed through document training and later surface as unintended behaviors. More concerningly, we find that couplings can compose. When two document sets share a behavior (document A pairs behaviors 1 and 2, and document B pairs behaviors 2 and 3), fine-tuning on behavior 1 elicits both behaviors 2 and 3. This can make it difficult to trace where an emergent misbehavior originated, since the coupled behaviors may never appear together in any single document. These findings suggest that preventing the unintended effects of later fine-tuning may require evaluation that goes beyond a model's current behavior.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -46,583 +231,341 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-15T17:59:59Z",
-                "arxiv:comment": "Conference on Neural Information Processing Systems (NeurIPS 2026); Project Website: https://libero-perm.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Zhixu Li"
-                    },
-                    {
-                        "name": "Keqian Tang"
-                    },
-                    {
-                        "name": "Litian Gong"
-                    },
-                    {
-                        "name": "Jingyu Yao"
-                    },
-                    {
-                        "name": "Wenqian Zhang"
-                    },
-                    {
-                        "name": "Tianze Xu"
-                    },
-                    {
-                        "name": "Zehao Wang"
-                    },
-                    {
-                        "name": "Yuping Wang"
-                    },
-                    {
-                        "name": "Junge Zhang"
-                    },
-                    {
-                        "name": "Jiachen Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.22368v1",
-                "title": "Value as Memory: Online Value-Guided Post-training for General Robot Policies",
-                "updated": "2026-10-15T17:59:31Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.22368v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.22368v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Real-world post-training of generalist robot policies faces two challenges: partial observability makes action selection ambiguous, while offline post-training methods delay feedback from deployment experience. We present Value as Memory (VaM), a framework that addresses these challenges through value caching and online real-world reinforcement learning (RL). Value caching conditions actions on recent value predictions as task-progress memory, while online updates enable timely policy improvement by combining offline demonstrations, off-policy interventions, and on-policy rollouts for sample-efficient adaptation. As a result, VaM transitions from offline RL warmup to online autonomous learning with sparse rewards. Across long-horizon tasks involving deformable objects and contact-rich manipulation, VaM yields a mean absolute success-rate gain of $29.4\\%$ with value caching, while achieving a $32.8\\%$ gain with online autonomous learning over matched offline training. The evaluated online schedule performs $8\\times$ as many policy iterations under the same gradient-step budget, with more than $2\\times$ lower recorded time per gradient step with concurrent data collection and training.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-15T17:59:31Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Wenye Yu"
-                    },
-                    {
-                        "name": "Yijin Chen"
-                    },
-                    {
-                        "name": "Kaiyi Xiong"
-                    },
-                    {
-                        "name": "Wenbo Han"
-                    },
-                    {
-                        "name": "Wendi Chen"
-                    },
-                    {
-                        "name": "Yang Jin"
-                    },
-                    {
-                        "name": "Han Xue"
-                    },
-                    {
-                        "name": "Jun Lv"
-                    },
-                    {
-                        "name": "Cewu Lu"
-                    },
-                    {
-                        "name": "Chuan Wen"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.22364v1",
-                "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
-                "updated": "2026-10-15T17:59:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.22364v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.22364v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Predicting how the world responds to an action requires more than what can be seen: robots must account for environmental factors that are neither directly observable nor explicitly specified, from physical properties such as friction and mass to human-defined environmental rules. We introduce T2-Z for test-time optimization of environment latents, which augments a robotic world model with a learnable environment latent to condition world predictions. This compact latent captures underlying environmental variation without supervision of what environmental factors exist or what values they take. During training, T2-Z alternates between two stages: a world-model optimization stage that fixes the latents and learns general action-conditioned dynamics across environments; and an environment-latent optimization stage that freezes the world model and optimizes the conditioning latents, allowing latent structure to emerge purely through world prediction. At test time, the world model remains frozen and a newly initialized environment latent is optimized from one or more test-time interactions, adapting the model to previously unseen environmental configurations. Across 7 simulated settings and 4 real-world robotic tasks, T2-Z reduces object prediction error metric from 15.20 to 7.00 and raises action success from 33.73% to 72.96%. Its emergent latents capture structured representations of individual and compounded factors across diverse visual scenes. Ablations further show that T2-Z can efficiently infer environment latents from as little as a single test-time interaction trajectory.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-15T17:59:11Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Chenyuan Zhou"
-                    },
-                    {
-                        "name": "Yining Hong"
-                    },
-                    {
-                        "name": "Huang Huang"
-                    },
-                    {
-                        "name": "Yunfan Jiang"
-                    },
-                    {
-                        "name": "Wenlong Huang"
-                    },
-                    {
-                        "name": "David Held"
-                    },
-                    {
-                        "name": "Vitor Campagnolo Guizilini"
-                    },
-                    {
-                        "name": "Yue Wang"
-                    },
-                    {
-                        "name": "Li Fei-Fei"
-                    },
-                    {
-                        "name": "Jiajun Wu"
-                    },
-                    {
-                        "name": "Leonidas Guibas"
-                    },
-                    {
-                        "name": "Yejin Choi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.22363v1",
-                "title": "Perceive, Predict, and Plan: a Unified World Action Model for Egocentric Dexterous Manipulation",
-                "updated": "2026-10-15T17:59:07Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.22363v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.22363v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We introduce P$^{3}$-WAM, a unified world action model for egocentric dexterous manipulation that learns 3D perception, action-conditioned prediction, and goal-directed planning through three complementary modes: Perceive, which reconstructs articulated hand motion and camera trajectories from video; Predict, which generates visual futures under prescribed actions; and Plan, which jointly generates action trajectories and their anticipated visual consequences conditioned on an initial image, a language instruction, and an optional visual goal. Our model integrates a compact, structured 3D action representation into a pretrained video diffusion transformer through a mixture-of-transformers architecture with shared base weights, modality-specific adaptation, and bidirectional visual-action attention. Randomized modality visibility lets video and 3D actions serve as either conditioning context or prediction targets across the three modes. Experiments show that unified training improves all three capabilities over single-mode training, including gains in planning quality under a vision-language model evaluation. Through unified training, our model outperforms specialized baselines on 3D hand reconstruction and action-conditioned video prediction across four datasets, while producing goal-directed manipulation videos with stronger instruction adherence and action progression than video-generation baselines. Project Page: https://p3-wam.pages.dev/",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-15T17:59:07Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Zirui Wu"
-                    },
-                    {
-                        "name": "Chen Guo"
-                    },
-                    {
-                        "name": "Tianjian Jiang"
-                    },
-                    {
-                        "name": "Zeren Jiang"
-                    },
-                    {
-                        "name": "Zeming Li"
-                    },
-                    {
-                        "name": "Lingchen Yang"
-                    },
-                    {
-                        "name": "Longteng Duan"
-                    },
-                    {
-                        "name": "Ying Xue"
-                    },
-                    {
-                        "name": "Handi Yin"
-                    },
-                    {
-                        "name": "Shenyuan Gao"
-                    },
-                    {
-                        "name": "Martin R. Oswald"
-                    },
-                    {
-                        "name": "Jun Zhang"
-                    },
-                    {
-                        "name": "Ping Tan"
-                    },
-                    {
-                        "name": "Jie Song"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.22362v1",
-                "title": "CoDA: Co-Evolution of Data Engines and Action Policies",
-                "updated": "2026-10-15T17:59:02Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.22362v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.22362v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Generative simulation can automate robot environment construction, but physically valid environments are not necessarily useful for training. The challenge is to identify environments that address a policy's failures and supervision that helps it overcome them. We introduce CoDA, a framework in which a simulation data engine and an action policy co-evolve through a shared heterogeneous memory of environment construction, policy failures, and learning progress. The memory compiles validated diagnoses from a vision-language critic into generation programs that recreate difficulties and training programs that help the policy overcome them. We further propose Text2potential to convert these diagnoses into staged potentials for action-chunk value learning, providing dense supervision for policy updates while preserving the task's optimal policy under standard shaping assumptions. Measured learning progress guides further generation and program refinement. Across four manipulation task families, CoDA improves out-of-distribution success from 5.3% after supervised fine-tuning to 27.6%, exceeding the strongest closed-loop baseline by 9.5 percentage points with the same generation budget. On LIBERO-Pro, 15 rounds of generation and training raise success from 25% to 84% under position perturbations and from 1% to 76% under instruction perturbations.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-15T17:59:02Z",
-                "arxiv:comment": "Project Website: https://plan-lab.github.io/projects/coda/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Tianjiao Yu"
-                    },
-                    {
-                        "name": "Zhilin Ou"
-                    },
-                    {
-                        "name": "Yifan Shen"
-                    },
-                    {
-                        "name": "Xinzhuo Li"
-                    },
-                    {
-                        "name": "Yuanzhe Liu"
-                    },
-                    {
-                        "name": "Onkar Kishor Susladkar"
-                    },
-                    {
-                        "name": "Fan Wang"
-                    },
-                    {
-                        "name": "Ismini Lourentzou"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.22360v1",
-                "title": "Grounding Generative Verification in 3D Content",
-                "updated": "2026-10-15T17:59:01Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.22360v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.22360v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent advances in multimodal large language models (MLLMs) and 3D generation have expanded 3D understanding and synthesis. However, beyond visual fidelity, task-specific correctness grounded in 3D evidence remains a major challenge. We argue that building reliable 3D systems requires not only stronger generation and reasoning, but also verification feedback that identifies unmet requirements and explains their violations, allowing systems to reflect on and refine their outputs. Such feedback must integrate multi-view observations and distinguish genuine inconsistencies from projection-dependent appearances. We make three contributions. First, we introduce 3DVerifierBench, a benchmark spanning 10 tasks that evaluates decisions, rejection explanations, and responses to controlled changes in specifications and candidates. A human study reveals a 21.6 percentage-point gap between humans and the strongest tested model, GPT-6 Astra, while explanation-aware analysis exposes weaknesses in rejection reliability. Second, we analyze verification across fine-grained factual categories, exposing errors in values and target binding. We develop a scalable pipeline combining multi-view fact extraction, controlled 3D editing, and native annotations to produce 14,126 training examples with contradiction explanations and linked counterfactuals. Third, we examine how verification could support 3D generation through candidate selection and recursive refinement. In human-labeled sixteen-candidate pools, oracle selection improves complete factual success from 26.7% to 90.0%. In a separate eight-input study, human-guided recursive refinement satisfies all seven requirements for every input, compared with three under parallel Oracle@8. Together, our benchmark, analysis, and data pipeline establish a foundation for models to reflect on 3D content through reliable verification feedback.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-15T17:59:01Z",
-                "arxiv:comment": "35 pages, 6 figures. Project page: https://ai-yeslab.github.io/3DVerifier-page/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Shuanglin Li"
-                    },
-                    {
-                        "name": "Jiaying Lin"
-                    },
-                    {
-                        "name": "Shuquan Ye"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.22358v1",
-                "title": "PathFM: Fast Generative Forecasting of Multivariate Trajectories",
-                "updated": "2026-10-15T17:58:45Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.22358v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.22358v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Time series foundation models are becoming increasingly popular for general-purpose forecasting. However, most leading models predict marginal quantiles, leaving the dependence structure of future trajectories unspecified. This distinction matters for trajectory-dependent quantities such as cumulative demand, peak load, and event timing, yet point and marginal scores do not reveal it. To model this dependence, we introduce PathFM, a trajectory-based forecasting model that uses flow matching to generate complete future paths. We further distill the model to one or two steps and share history attention cache across draws. Together, these enable PathFM to generate multiple paths for a single series in roughly the time needed for one query to a quantile model. The distilled sampler also makes it practical to optimize a calibration loss directly. PathFM achieves competitive marginal accuracy on the established forecasting benchmarks fev-bench and TIME. To complement these evaluations, we introduce Forecast Path Score Bench (fps-bench), which augments fev-bench tasks with energy and variogram scores and downstream metrics. PathFM achieves a higher aggregate path score on fps-bench than all evaluated external baselines. Experiments on chaotic systems further show that our flow model sustains long-run variability, while strong baselines rapidly collapse. PathFM makes generative time series forecasting both competitive and practical, enabling diverse downstream applications.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-15T17:58:45Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Jiachen Yao"
-                    },
-                    {
-                        "name": "Xiyuan Zhang"
-                    },
-                    {
-                        "name": "Annan Yu"
-                    },
-                    {
-                        "name": "Boran Han"
-                    },
-                    {
-                        "name": "Abdul Fatir Ansari"
-                    },
-                    {
-                        "name": "Shuai Zhang"
-                    },
-                    {
-                        "name": "Michael Bohlke-Schneider"
-                    },
-                    {
-                        "name": "Bernie Wang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.22356v1",
-                "title": "DK-VLM: Geometry as Position for Spatial Reasoning in Vision-Language Models",
-                "updated": "2026-10-15T17:58:15Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.22356v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.22356v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Vision-language models still struggle to understand 3D spatial relations across views and update spatial judgments as the observer moves. A common approach fuses 3D reconstruction features into visual tokens, but aligning these features with pretrained semantic representations remains challenging under limited spatial supervision. We propose DK-VLM with Dual-Kernel Attention, which computes attention from both a visual token's input position and its geometric position in the scene. A semantic kernel retains the pretrained model's native attention and positional encoding, while a separate geometric kernel uses estimated 3D points and camera poses to directly modulate attention through point displacements and relative view transformations. Then, a learned gate fuses their outputs. Geometry thus enters attention as position rather than as fused reconstruction features. We further introduce Reference-Frame Composition (RC) supervision to train the model to update its reference frame across successive judgments. It provides stepwise turn and heading targets derived from verified single-step annotations. Among the compared methods, DK-VLM-8B achieves the highest average score across six spatial benchmarks and the highest overall scores on VSI-Bench (74.33) and ReVSI-32 (58.28). RC supervision further improves multi-step spatial reasoning, while the full model preserves general video understanding. Project page: https://sumuru789.github.io/DK-VLM-website/.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-15T17:58:15Z",
-                "arxiv:comment": "Project page: https://sumuru789.github.io/DK-VLM-website/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Han Su"
-                    },
-                    {
-                        "name": "Meng Tian"
-                    },
-                    {
-                        "name": "Tianyu Huang"
-                    },
-                    {
-                        "name": "Mingyu Gao"
-                    },
-                    {
-                        "name": "Lennox Wei"
-                    },
-                    {
-                        "name": "Dongxu Li"
-                    },
-                    {
-                        "name": "Jianhua Han"
-                    },
-                    {
-                        "name": "Hang Xu"
-                    },
-                    {
-                        "name": "Xiaohe Wu"
-                    },
-                    {
-                        "name": "Wangmeng Zuo"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.22355v1",
-                "title": "OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling",
-                "updated": "2026-10-15T17:58:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.22355v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.22355v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Generative visual verifiers play a crucial role in advancing multimodal intelligence. To enhance the robustness of visual verifiers in complex multimodal scenarios involving compositional requirements, we move beyond conventional binary verifiers that produce only True/False discrete judgments and introduce a verifier that automatically decomposes complex prompts or environmental rules into fine-grained components and assigns pointwise scores to provide a continuous and more informative critique signal. Our experiments further demonstrate that these structured and interpretable outputs improve the verifier's generalization to out-of-domain multimodal critic tasks. To train this verifier, we introduce a Decoupled RL training strategy that jointly optimizes sub-question-level binary judgment and global alignment scoring, using precise local feedback to develop fine-grained verification capabilities that provide a foundation for reliable continuous scoring at the global level. Under a general reinforcement learning framework, we first empirically demonstrate that the proposed pointwise graded verifier significantly outperforms binary verifiers in traditional text-to-image scenarios. We then extend our investigation to rule-governed generative world modeling where generative models are leveraged for world simulation and world reasoning under explicit rules. From a theoretical standpoint, we further show that a pairwise verification paradigm yields more accurate critiques than the pointwise formulation when ground-truth images are available, with empirical results on diverse structured world-modeling tasks such as Maze and Sudoku further validating the effectiveness of our approach. Overall, our findings suggest a key insight: the transition from generative models to structured world-modeling agents critically hinges on the availability of accurate pairwise graded visual verifiers.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-15T17:58:04Z",
-                "arxiv:comment": "NeurIPS 2026. Project: https://github.com/Cominclip/OmniVerifier",
+                "published": "2026-10-16T17:58:08Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Bowei Liu"
+                        "name": "Dongyoon Hahm"
                     },
                     {
-                        "name": "Xinchen Zhang"
+                        "name": "Woogyeol Jin"
                     },
                     {
-                        "name": "Xuhuan Li"
+                        "name": "Dennis Wei"
                     },
                     {
-                        "name": "Tianlin Zhang"
+                        "name": "Yi Zhou"
                     },
                     {
-                        "name": "Kaian Jiang"
+                        "name": "Nathalie Baracaldo"
                     },
                     {
-                        "name": "Jingwei Liu"
-                    },
-                    {
-                        "name": "Congyang Zhao"
-                    },
-                    {
-                        "name": "Yifei Qian"
-                    },
-                    {
-                        "name": "Junhong Liu"
-                    },
-                    {
-                        "name": "Zhiheng Li"
-                    },
-                    {
-                        "name": "Yujiu Yang"
-                    },
-                    {
-                        "name": "Yang Cai"
-                    },
-                    {
-                        "name": "Ling Yang"
+                        "name": "Kimin Lee"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.22353v1",
-                "title": "Rethinking Routing Exploration in Modern Mixture-of-Experts",
-                "updated": "2026-10-15T17:58:02Z",
+                "id": "http://arxiv.org/abs/2610.23845v1",
+                "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
+                "updated": "2026-10-16T17:57:55Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.22353v1",
+                        "@href": "https://arxiv.org/abs/2610.23845v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.22353v1",
+                        "@href": "https://arxiv.org/pdf/2610.23845v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Mixture-of-experts (MoE) models have become an important approach for scaling model parameters. Modern MoE architectures increasingly combine two design choices: fine-grained expert segmentation and shared experts. The former increases expressiveness by enabling more expert combinations at a fixed activation ratio, and the latter introduces experts that are active for every token. We identify an exploration dilemma between these designs: shared experts can make routing less exploratory by reducing the variability of token representations. This conflicts with the greater need for exploration induced by fine-grained expert segmentation due to the combinatorially enlarged routing space. Consequently, the additional expressiveness offered by fine-grained segmentation may not be fully realized in practice. MirrorMoE is proposed to reconcile this exploration dilemma by shrinking the exploration space through token-adaptive suppression of unnecessary experts. MirrorMoE consistently improves performance across model scales.",
+                "summary": "Reproducible and analytically robust research findings are essential to scientific progress, but evaluating these properties typically requires costly manual effort. We investigate whether LLM agents can help automate reproduction and robustness analysis, using a medical case study grounded in the Surveillance, Epidemiology, and End Results (SEER) database, a widely used U.S. cancer registry underlying tens of thousands of published studies. First, we introduce SEER-Repro, a benchmark of 20 published SEER-based papers together with the data and resources required to reproduce their findings. Second, we create an AI agent that successfully reproduces 77.4% of 2,190 atomic claims, while providing executable baselines for further analysis. Third, we develop an agentic analysis pipeline to test the robustness of the medical findings by identifying analytical choices underlying each finding, proposing defensible alternatives, and rerunning the analysis to determine whether those choices affect the conclusion. Across published papers in SEER-Repro, our pipeline identifies potentially consequential analytical choices in 9.5% of fully reproduced findings and flags them for expert review. These results show how LLM agents can support scientific review by reproducing findings, systematically testing their robustness, and directing expert attention toward potentially consequential analytical choices.",
                 "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-15T17:58:02Z",
+                "published": "2026-10-16T17:57:55Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Bingcong Li"
+                        "name": "Shicheng Liu"
                     },
                     {
-                        "name": "Hao Ma"
+                        "name": "Krista Opsahl-Ong"
                     },
                     {
-                        "name": "Michael Muehlebach"
+                        "name": "Andrew Drozdov"
                     },
                     {
-                        "name": "Niao He"
+                        "name": "Julian Killingback"
                     },
                     {
-                        "name": "Yi Ma"
+                        "name": "Arnav Singhvi"
+                    },
+                    {
+                        "name": "Ronak Pradeep"
+                    },
+                    {
+                        "name": "Michael Bendersky"
+                    },
+                    {
+                        "name": "James C. Dickerson"
+                    },
+                    {
+                        "name": "Monica S. Lam"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.23844v1",
+                "title": "ModeCast: One-Shot Prediction of Linear MHD Eigenmodes and Growth Rates in Tokamaks",
+                "updated": "2026-10-16T17:57:39Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.23844v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.23844v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large-scale magnetohydrodynamic instabilities break plasma confinement, can trigger disruptions, and constrain fusion reactor design; modeling a single configuration against them takes hours with a reference solver such as JOREK, and a design study requires thousands of hours. ModeCast is the first learned surrogate to return the complete linear stability assessment for MHD modes. Trained on a comprehensive dataset of over 45,000 JOREK simulations across thousands of equilibria, it screens stability across toroidal mode numbers n=1-4 and predicts the full spatial structure and growth rate of unstable modes. Excluding the equilibrium solve, inference on a single GPU is over 10,000x faster than multi-core JOREK linear stability runs. The gain comes from building the linear-phase physics into the formulation, objective, and inputs, yielding up to six times more training data. ModeCast misses none of the unstable held-out cases, and its predicted fields reproduce the simulation's measured physics, from magnetic island topology to resistivity trends. On a fixed-geometry resistivity scan outside its training distribution, refitting only the 22k-parameter growth rate head of the 145M-parameter network on four simulation halves the held-out internal kink growth rate error, and fine-tuning the whole network adds little. Because it is differentiable and returns full fields, ModeCast could in the future assimilate experimental measurements, providing a bridge to real devices and accelerating progress toward commercial fusion. Project page: zenithon.ai/research/modecast.",
+                "category": {
+                    "@term": "physics.plasm-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-16T17:57:39Z",
+                "arxiv:comment": "40th Conference on Neural Information Processing Systems (NeurIPS 2026). Workshop: Sim2Science: ML with Imperfect Scientific Models",
+                "arxiv:primary_category": {
+                    "@term": "physics.plasm-ph"
+                },
+                "author": [
+                    {
+                        "name": "Alex Higginbottom"
+                    },
+                    {
+                        "name": "Zara Z. Ercan"
+                    },
+                    {
+                        "name": "Abetharan Antony"
+                    },
+                    {
+                        "name": "Guzman Sanchez Gonzalez"
+                    },
+                    {
+                        "name": "Rafael Grazzini Placucci"
+                    },
+                    {
+                        "name": "Armand Kassa\u00ef Koupa\u00ef"
+                    },
+                    {
+                        "name": "Artur P. Toshev"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.23842v1",
+                "title": "Canonical Layer Inference for Deep Gaussian Processes via Symmetry-Breaking Augmentation",
+                "updated": "2026-10-16T17:57:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.23842v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.23842v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Deep Gaussian processes (DGPs) are flexible priors for compositional regression functions, but inference for intermediate layers faces questions. The basic obstruction is an adjacent-layer symmetry: applying an invertible transformation and its inverse to two adjacent layers leaves the composed regression map unchanged. Under explicit symmetry and prior-comparability conditions, we show that the posterior may not concentrate on any prescribed intermediate-layer representation, even when the composed regression function is estimable. We then introduce an augmented $\u03c1$-fractional posterior that reweights layer decompositions by a non-saturating identity-deviation penalty. The augmentation changes posterior odds between symmetry-related decompositions by an exponential penalty ratio. Under proper choices of the penalty and a prior mass condition, it preserves function-level fractional posterior contraction, while shrinking the redundant layers towards the identity mapping. Thus, the likelihood does not identify a unique ``true'' set of layers; the augmentation favors identity-biased parsimonious decompositions within an equivalence class of layers; uniqueness of a selected representative is not established.",
+                "category": [
+                    {
+                        "@term": "math.ST",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-16T17:57:26Z",
+                "arxiv:primary_category": {
+                    "@term": "math.ST"
+                },
+                "author": [
+                    {
+                        "name": "Yichen Zhu"
+                    },
+                    {
+                        "name": "Hengrui Luo"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.23841v1",
+                "title": "StopWatch: Goal Grounding for Object-goal Navigation",
+                "updated": "2026-10-16T17:57:05Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.23841v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.23841v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Pretrained VLMs bring rich world knowledge and semantic priors to object-goal navigation, and fine-tuning a VLM into a navigation policy has become a common recipe. Despite this progress, success rates remain low, and it is unclear which capability these fine-tuned policies lack. Our diagnosis identifies goal grounding as the dominant failure. These policies explore well, yet often fail to notice that the goal is already in view or to estimate how far away it is. To address this failure, we ground the goal explicitly. Explicit grounding substantially improves success and reaches state-of-the-art results on six benchmarks across three scene collections. We also correct annotation defects in these benchmarks, so that future methods are evaluated more faithfully. Our analysis on the clean benchmarks shows that, with ground-truth grounding, our policy nearly matches the expert that generated its demonstrations, leaving the headroom in perception rather than policy learning. Our work points to goal grounding as a missing piece of object-goal navigation and offers a simple and effective solution to the task.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-16T17:57:05Z",
+                "arxiv:comment": "Project website https://stopwatch-nav.github.io",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Xinhao Liu"
+                    },
+                    {
+                        "name": "Yunsheng Tian"
+                    },
+                    {
+                        "name": "Yuheng Qiu"
+                    },
+                    {
+                        "name": "Pieter Abbeel"
+                    },
+                    {
+                        "name": "Xi Chen"
+                    },
+                    {
+                        "name": "Guanya Shi"
+                    },
+                    {
+                        "name": "Chen Feng"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.23839v1",
+                "title": "DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses",
+                "updated": "2026-10-16T17:56:35Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.23839v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.23839v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Scientific discovery requires developing worthwhile hypotheses into practical investigations, yet learning from this evolving research process remains challenging. We introduce an operational definition of valuable and testable research hypotheses: evidence-grounded claims about consequential uncertainties, coupled with feasible investigations, explicit decision criteria, and alternative explanations. Our DiscoveryRSI framework develops hypothesis trees through multi-agent evolutionary search, compiles selected investigations into executable Harbor tasks, and recursively learns through three mechanisms: hypothesis credit optimization attributes scientific assessments to documented research contributions; harness replay identifies productive strategies and recurring failures to refine research workflows; and rediscovery applies accepted improvements to new investigations, generating further experience for subsequent learning. We also introduce DFM-Bench, which provides comprehensive assessment of hypothesis quality and cumulative research progress at the levels of hypotheses, revisions, development paths and research runs. Across four life-science domains, automated evaluation shows that hypothesis quality rises from 4.86 for the base model to 5.39 after two rounds of self-improvement, with the large gains in falsifiability and data resolvability. We further validate hypothesis quality through expert review, comparing our DiscoveryRSI-27B with other research agents. Preliminary human assessments show that DiscoveryRSI-27B scores higher than GPT-6 Luna on hypothesis importance and whether claims are plausible and evidence-bounded. DiscoveryRSI-27B achieved a 6.3% rate of hypothesis correspondence with research published after the model cutoff, largely outperform GPT-6 with 2.5% and Claude Opus 5 with 2.3%, while delivering greater human-rated improvement along research paths.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-16T17:56:35Z",
+                "arxiv:comment": "Code: https://github.com/Gen-Verse/DiscoveryRSI",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Jianyuan Zhong"
+                    },
+                    {
+                        "name": "Chenwei Wu"
+                    },
+                    {
+                        "name": "Zhaochen Yu"
+                    },
+                    {
+                        "name": "Xixian Jiang"
+                    },
+                    {
+                        "name": "Xuewei Li"
+                    },
+                    {
+                        "name": "Hao Xiao"
+                    },
+                    {
+                        "name": "Xilin Dai"
+                    },
+                    {
+                        "name": "Junyang Wang"
+                    },
+                    {
+                        "name": "Jiaru Zou"
+                    },
+                    {
+                        "name": "Zhiqing Cui"
+                    },
+                    {
+                        "name": "Boyuan Zheng"
+                    },
+                    {
+                        "name": "Jing Xiong"
+                    },
+                    {
+                        "name": "Zhen Zhang"
+                    },
+                    {
+                        "name": "Qiang Gao"
+                    },
+                    {
+                        "name": "Michael Morley"
+                    },
+                    {
+                        "name": "Luis Nakayama"
+                    },
+                    {
+                        "name": "Qiang Xu"
+                    },
+                    {
+                        "name": "Liyue Shen"
+                    },
+                    {
+                        "name": "Tao Gui"
+                    },
+                    {
+                        "name": "Leo Anthony Celi"
+                    },
+                    {
+                        "name": "James Zou"
+                    },
+                    {
+                        "name": "Zhenfei Yin"
+                    },
+                    {
+                        "name": "Yingcheng Wu"
+                    },
+                    {
+                        "name": "Ling Yang"
                     }
                 ]
             }
