@@ -5,133 +5,39 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-10-26T20:14:52Z",
+        "updated": "2026-10-27T05:50:59Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "634013",
+        "opensearch:totalResults": "634986",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2610.32982v1",
-                "title": "The Language of Instruction: Genre and Generative AI",
-                "updated": "2026-10-23T17:59:56Z",
+                "id": "http://arxiv.org/abs/2610.35866v1",
+                "title": "Auto-Research Arena: Benchmarking and Advancing Auto-Research in Language Modeling",
+                "updated": "2026-10-26T17:59:33Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.32982v1",
+                        "@href": "https://arxiv.org/abs/2610.35866v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.32982v1",
+                        "@href": "https://arxiv.org/pdf/2610.35866v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "This article argues that instruction-fine-tuned language models should be understood as implementing a genre, what is proposed as the instructional-conversational genre. This genre is an amalgamation of discursive language from prior conversations between generative models and humans recursively run through these massive neural networks. It is instantiated in applications through instruction fine-tuning, the inclusion of a pretext known as a system prompt, and the formalization of inputs in mark-up languages characterized by the use of special tokens and role assignment in turntaking structures.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-23T17:59:56Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                "summary": "As autonomous research systems become more capable, benchmarks must both evaluate their performance and support meaningful research progress. We introduce Auto-Research Arena, a multi-target benchmark for evaluating autonomous research systems and discovering ideas in language modeling. Arena supports diverse research objectives within a shared experimental environment by separating admissibility from improvement: model quality and resource constraints determine whether a result qualifies, while the selected target measures progress among admissible results. We instantiate Arena in language model pretraining with nine targets spanning model, data, training, and inference efficiency, and evaluate seven research harnesses using two foundation models. Arena clearly differentiates existing harnesses across research objectives, with several sophisticated methods outperformed by our simple sequential search baseline, indicating substantial headroom in current auto-research systems. Beyond evaluation, Arena reveals a substantially broader frontier of model and system ideas aligned with active research directions. Reusing these discoveries in a new quality-driven search yields lower training loss under matched data and FLOPs and lower held-out BPB at the same model size. Together, Arena provides a common framework for benchmarking autonomous research and expanding its scope in language modeling. The code is available at https://github.com/Auto-Research-Arena/auto-research-arena",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "author": {
-                    "name": "James E. Dobson"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.32978v1",
-                "title": "SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning",
-                "updated": "2026-10-23T17:59:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.32978v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.32978v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Training generalizable embodied agents requires realistic, varied, and simulation-ready indoor environments. Language-guided methods support semantic planning and object-level reasoning, but precise spatial grounding remains difficult. Visual generative models offer rich priors over plausible arrangements, yet their outputs require geometric reasoning to become physically valid 3D scenes. We introduce SceneBloom, an agentic framework that combines visual layout sampling with contract-guided 3D compilation. A hierarchical sampler uses diffusion priors to generate furniture arrangements within functional zones. A compiler then uses relations extracted from each proposal to guide geometric fitting and local pose correction. Across five room types, SceneBloom attains the highest visual quality and physical stability among the compared methods and is the only method with no detected mesh collisions and out-of-bounds objects. Its layouts are also closer to the distribution of real rooms than those of all compared baselines. Object navigation policies trained in these realistic scenes achieve a higher success rate in held-out real scans than those trained on an equal number of real training scans. Code is available at https://github.com/Tinaliu0123/scenebloom.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-23T17:59:21Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yuhan Liu"
-                    },
-                    {
-                        "name": "Lianhui Qin"
-                    },
-                    {
-                        "name": "Shenji Wan"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.32971v1",
-                "title": "RobustRLlib: A Unified Library and Benchmark for Robust Reinforcement Learning Algorithms",
-                "updated": "2026-10-23T17:57:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.32971v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.32971v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Robust reinforcement learning (RL) is critical for reliable real-world deployment, where policies may fail under diverse shifts and disruptions. Existing robust RL algorithms offer a rich set of mechanisms and principles, yet two major barriers limit their broader potential: limited algorithm reusability and an unclear empirical capability boundary. We introduce RobustRLlib, an algorithm-centric library and benchmark that addresses both challenges. It integrates 17 representative robust online, offline, and safe RL algorithms under a unified interface for substantially improved reusability, together with an enhanced evaluation platform spanning diverse real-world shifts and advanced humanoid and vision-language-action tasks. Systematic evaluation over 273 perturbation configurations provides an up-to-date capability map of current robust RL algorithms, revealing where they remain effective and where substantial robustness gaps persist. As an open-source, user-friendly platform, RobustRLlib offers a reproducible and extensible codebase for applying existing methods to new problems and developing new robust RL algorithms.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-23T17:57:22Z",
-                "arxiv:comment": "Project page, code, and tutorial: https://robustrl-lib.github.io/",
+                "published": "2026-10-26T17:59:33Z",
+                "arxiv:comment": "The code is available at https://github.com/Auto-Research-Arena/auto-research-arena",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
@@ -140,91 +46,46 @@
                         "name": "Xi Chen"
                     },
                     {
-                        "name": "Fengqi Hu"
+                        "name": "Chongjian Ge"
                     },
                     {
-                        "name": "Zeyu Shen"
+                        "name": "Yiran Xu"
                     },
                     {
-                        "name": "Jiaying Xu"
+                        "name": "Yiqun Mei"
                     },
                     {
-                        "name": "Shangding Gu"
+                        "name": "Henrik I. Christensen"
                     },
                     {
-                        "name": "Pan Xu"
+                        "name": "Hao Tan"
                     },
                     {
-                        "name": "Anqi Liu"
+                        "name": "Ziwen Chen"
                     },
                     {
-                        "name": "Laixi Shi"
+                        "name": "Hanwen Jiang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.32970v1",
-                "title": "On the continuity of conditional distributions and stratification for derivative pricing",
-                "updated": "2026-10-23T17:57:09Z",
+                "id": "http://arxiv.org/abs/2610.35862v1",
+                "title": "Learning Force-Reactive Humanoid Loco-Manipulation",
+                "updated": "2026-10-26T17:59:11Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.32970v1",
+                        "@href": "https://arxiv.org/abs/2610.35862v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.32970v1",
+                        "@href": "https://arxiv.org/pdf/2610.35862v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Stratification can reduce the estimator variance in Monte Carlo simulations by partitioning the sample space according to a low-dimensional factor and sampling separately within the resulting strata, making it well suited to the valuation of path-dependent claims in high-dimensional financial models. Its performance, however, depends critically on the choice of the stratification factor, and effective low-dimensional factors are generally difficult to identify in complex continuous-time models. Neural networks provide a flexible approximation class for this purpose and have proved useful in related variance-reduction problems in quantitative finance. In this paper, we study the construction of neural stratification factors for derivative pricing under proportional allocation in continuous-time models. Since the numerical construction of a stratification factor typically involves approximation, we establish continuity results for the associated conditional expectations and, more generally, conditional distributions, and provide several counterexamples showing the limits of this continuity theory. Combined with density results for neural networks, our findings yield a universal approximation theorem for admissible stratification factors. We conclude with numerical experiments involving a constant-maturity-swap range accrual in a two-factor Gaussian short-rate model and a worst-of autocallable in a Wishart stochastic covariance model, where the learned factors outperform all considered benchmarks.",
-                "category": [
-                    {
-                        "@term": "q-fin.CP",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.PR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "q-fin.MF",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-23T17:57:09Z",
-                "arxiv:primary_category": {
-                    "@term": "q-fin.CP"
-                },
-                "author": [
-                    {
-                        "name": "Aleksandar Arandjelovic"
-                    },
-                    {
-                        "name": "Patrick Cheridito"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.32969v1",
-                "title": "DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection",
-                "updated": "2026-10-23T17:56:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.32969v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.32969v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Collecting high-quality demonstrations remains a central bottleneck for learning dexterous manipulation. Teleoperation records executable robot actions, but it requires a complete robot setup and places the burden of coordinating many finger joints on the operator. Human demonstrations are easier to collect, but their motions must be estimated and retargeted to the robot, and they do not directly provide robot actions. In this paper, we introduce DexPort, a portable data-collection interface for high-DoF robot hands. It uses the same hand hardware for collection and deployment, avoiding a hand embodiment gap, and records both commanded joint targets and measured joint states. Our key observation is that a small set of skills can support a wide range of dexterous tasks. During collection, the operator moves the hand-held interface to specify the robot wrist motion and selects or adjusts skills that coordinate the finger motion. This removes the need to control each joint independently while retaining behaviors such as precise grasping and in-hand manipulation. We collect demonstrations across several real-world tasks and in unstructured environments without a robot arm. We then use behavior cloning to train visuomotor policies directly on the recorded wrist motions and hand commands, without skill labels. We evaluate across 4 tasks: pick-and-place with diverse objects, screwing with in-hand tool use, drawer stowage which requires simultaneous grasp and pulling, and a bimanual scanning task. We collect over 2,500 demonstrations with our portable device, in both laboratory and in-the-wild settings. Across our tasks, we see an improvement from 11% to 64% when using recorded robot commands instead of states, and an improvement from 36% to 78% for task success when using in-the-wild data.",
+                "summary": "Many everyday tasks require controlling contact force as well as motion. On a humanoid, this force must often be coordinated across both hands and the whole body, and cannot be specified by kinematic trajectories alone. Therefore, we present FLORE, a framework for learning force-reactive humanoid loco-manipulation. We collect robot-free demonstrations using two force-sensing UMI-style handheld grippers for hand motion and contact wrenches, and wearable trackers for body motion. A force-reactive diffusion policy takes vision, proprioception, and measured wrenches as input, then predicts actions and per-hand force commands. A hybrid compliance whole-body controller with force tracking executes these commands while maintaining balance: an integral of the force error measured by real force/torque (F/T) sensors lets each hand track force accurately along the commanded direction and remain compliant along the others. In simulation, the controller tracks per-hand force commands of varied magnitude and direction, with little loss in whole-body motion accuracy. Across three contact-rich tasks on the robot, the force-reactive policy succeeds in 80% of rollouts, compared with 26.7% for a position-only policy trained on the same demonstrations and executed by the same controller. For more details, please visit our website: https://louis-leee.github.io/FLoRe/.",
                 "category": [
                     {
                         "@term": "cs.RO",
@@ -237,25 +98,35 @@
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-23T17:56:28Z",
-                "arxiv:comment": "Website: https://amberxie88.github.io/dexport/",
+                "published": "2026-10-26T17:59:11Z",
+                "arxiv:comment": "9 pages, 6 figures",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Amber Xie"
-                    },
-                    {
-                        "name": "Jiawei Fu"
+                        "name": "Sihang Li"
                     },
                     {
                         "name": "Xiaofeng Guo"
                     },
                     {
-                        "name": "Carmelo Sferrazza"
+                        "name": "Jinkun Cao"
+                    },
+                    {
+                        "name": "Charlie Cheng"
+                    },
+                    {
+                        "name": "Ruihan Yang"
+                    },
+                    {
+                        "name": "Chen Feng"
                     },
                     {
                         "name": "Guanya Shi"
@@ -266,231 +137,64 @@
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.32968v1",
-                "title": "Distributed Quantum-Centric Supercomputing with Multi-Layered Generative Learning for Intermolecular Interactions",
-                "updated": "2026-10-23T17:55:19Z",
+                "id": "http://arxiv.org/abs/2610.35857v1",
+                "title": "Do vision models know that three is three?",
+                "updated": "2026-10-26T17:58:17Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.32968v1",
+                        "@href": "https://arxiv.org/abs/2610.35857v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.32968v1",
+                        "@href": "https://arxiv.org/pdf/2610.35857v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Quantum-centric supercomputing (QCSC) approaches, such as sample-based quantum diagonalization (SQD), combine quantum processors with high-performance computers (HPC), offering a promising route toward solving challenging electronic structure problems. However, implementation of QCSC approaches to large active space calculations is constrained by the associated number of qubits, deep quantum circuits, sampling cost, and large-scale Hamiltonian diagonalization. To overcome these limitations, we introduce a distributed QCSC framework that decomposes complex molecular problems into parallel sub-problems requiring fewer qubits, shallower circuits, and reduced shot budgets. A physically motivated, two-step aggregation scheme then reconstructs the global solution: first, a computational bit assignment strategy optimizes a cost function to appropriately map local bit indices to global ones, yielding a mapped tensor product state (MTPS); second, an inter-fragment correlation recovery module restores missing cross-fragment interactions. Herein, we employ a multi-layered generative machine learning architecture, starting with utilizing the recently proposed physics-informed generative SQD (PIGen-SQD) as a distributed QCSC solver, followed by a secondary generative module to model configuration distributions and identify dominant sectors of the global Hilbert space. For water and formamide dimers, our method achieves up to $95\\%$ reduction in the diagonalization dimension while enhancing energy accuracy by an order of magnitude over conventional SQD. Furthermore, application to the water hexamer ($\\mathrm{(H_2O)_6}$) cage successfully decomposes a 120-qubit problem into six 20-qubit monomeric subsystems, and stitches the monomers under a dimeric approximation, demonstrating excellent agreement with the reference classical methods.",
+                "summary": "Do vision models encode the transition $2{\\to}3$ the same way whether it appears in handwritten digits or in hand gestures, and do they \"understand\" that clean${\\to}$dirty is the same transformation regardless of whether it is applied to a kitchen or a carpet? The linear representation hypothesis (LRH) answers this for language models: concept changes correspond to directions in (language) embedding space. In vision, the same concept can manifest in visually unrelated \"regimes\" that rarely co-occur: images of digits and hands do not share much in common in pixel space. To understand whether vision models still encode the underlying abstract concepts, we study 46 vision encoders across architectures, training objectives, and scales, on 10 concept families including numerosity, age, object identity, and MIT-States attributes. Within each regime, we find statistically significant concept directions near-universally across our tested models. However, two distinct regimes do not always share the same concept direction. Several models learn multiple linear structures for the same concept transition, split across regimes. We call this phenomenon \"fragmented linearity\": strong local linearity coexisting with near-absent global linearity. Fragmentation is, however, not fixed: models with stronger local linearity progressively escape it (local-global linearity correlated with $\u03c4\\in [0.38, 0.89]$ across all concepts), and where global linearity does emerge, concept directions can transfer as linear probes across regimes.",
                 "category": {
-                    "@term": "quant-ph",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-10-23T17:55:19Z",
+                "published": "2026-10-26T17:58:17Z",
                 "arxiv:primary_category": {
-                    "@term": "quant-ph"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Chayan Patra"
+                        "name": "Ankit Sonthalia"
                     },
                     {
-                        "name": "Prayas Ghosh"
+                        "name": "Arnas Uselis"
                     },
                     {
-                        "name": "Adwait Patkhedkar"
-                    },
-                    {
-                        "name": "Rahul Maitra"
+                        "name": "Seong Joon Oh"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.32966v1",
-                "title": "ViT-H: Generative Video-To-Humanoid Control with Motion Tracking Feedback",
-                "updated": "2026-10-23T17:54:09Z",
+                "id": "http://arxiv.org/abs/2610.35856v1",
+                "title": "On the stability of learning",
+                "updated": "2026-10-26T17:58:14Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.32966v1",
+                        "@href": "https://arxiv.org/abs/2610.35856v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.32966v1",
+                        "@href": "https://arxiv.org/pdf/2610.35856v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Learning humanoid control from monocular human videos offers a scalable way to acquire diverse whole-body behaviors. Yet, existing reconstruction-retargeting-tracking pipelines are limited in system-level scalability by separately optimized intermediate stages and cannot directly optimize reference motion executability using downstream tracking feedback. We present ViT-H, a video-to-humanoid control framework following a generation-and-tracking paradigm. ViT-H directly generates humanoid reference motions from videos with a diffusion model, bypassing human motion reconstruction and retargeting, and uses motion-tracking outcomes to post-train the generator with direct preference optimization. We further introduce an autoregressive variant that enables real-time humanoid video teleoperation with sub-400 ms latency. Extensive experiments on the Unitree G1 demonstrate that ViT-H outperforms state-of-the-art reconstruction-retargeting-tracking pipelines in both motion quality and executability. We further show that ViT-H scales favorably with model size and with both pre-training and post-training data scale, while motion-tracking feedback consistently improves executability across different motion trackers.",
+                "summary": "Learning algorithms are usually analyzed under the assumption that informative gradients are continuously available. But this is not always true---learning signals in biological neural networks, for example, may be sparse, local, and only intermittently available at any given synapse. In this work, we show that if gradient information is noisy and only intermittently available, learning may be unstable. In particular, even if average learning dynamics converge to the correct optimum, variance in learning may be asymptotically infinite. We explore this point in a number of analytically tractable settings, including single-layer and multi-layer linear networks, and derive explicit conditions under which learning is stable. These conditions complement, but are conceptually distinct from, existing conditions related to the stability of stochastic gradient descent. Our work demonstrates that unbiased credit assignment is not enough for reliable learning; sufficiently frequent and informative feedback is also required, which yields an additional constraint on models of biologically plausible learning.",
                 "category": [
                     {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-23T17:54:09Z",
-                "arxiv:comment": "The first four authors contributed equally. Project website: https://awfuact.github.io/vit-h/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Zimo He"
-                    },
-                    {
-                        "name": "Tianyi Bian"
-                    },
-                    {
-                        "name": "Zizhong Yang"
-                    },
-                    {
-                        "name": "Hongjie Li"
-                    },
-                    {
-                        "name": "Nan Jiang"
-                    },
-                    {
-                        "name": "Jieming Cui"
-                    },
-                    {
-                        "name": "Baoxiong Jia"
-                    },
-                    {
-                        "name": "Yizhou Wang"
-                    },
-                    {
-                        "name": "Siyuan Huang"
-                    },
-                    {
-                        "name": "Yixin Zhu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.32965v1",
-                "title": "RynnUnify: Towards Unified Embodied Brain",
-                "updated": "2026-10-23T17:54:07Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.32965v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.32965v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We introduce RynnUnify, a 16B unified embodied model that combines strong embodied understanding with long-horizon visual planning through interleaved video--language reasoning. With capabilities spanning spatial reasoning, physical prediction, and grounding, RynnUnify connects an understanding of the physical world with visual anticipation of how it evolves across successive subtasks. Building on these capabilities, we further develop an agentic extension through reinforcement learning to selectively use video predictions for reasoning about unobserved states and interaction outcomes. We also develop a world-action extension of the full RynnUnify model, translating its understanding and prediction capabilities into robot control. To evaluate these capabilities, we introduce Rynn-VP and Rynn-GEU for long-horizon visual planning and anticipatory reasoning. Experiments show that RynnUnify achieves the highest average embodied understanding score among the evaluated unified multimodal models and improves the Rynn-VP overall score by 9.75 points over Cosmos 3 Nano. Its agentic extension improves the Rynn-GEU average by 6.0 points over direct reasoning, while the world-action extension achieves 51.5\\% success on 20 selected composite RoboCasa365 tasks and 46.7\\% average success across three real-robot tasks. Together, these results establish RynnUnify as a shared foundation for embodied understanding, visual planning, and robot control, taking a step toward a unified embodied brain.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-23T17:54:07Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Minghao Zhu"
-                    },
-                    {
-                        "name": "Bohan Hou"
-                    },
-                    {
-                        "name": "Kun Xiang"
-                    },
-                    {
-                        "name": "Zixuan Wang"
-                    },
-                    {
-                        "name": "Yinzhou Tang"
-                    },
-                    {
-                        "name": "Yifei Yang"
-                    },
-                    {
-                        "name": "Zhikai Wang"
-                    },
-                    {
-                        "name": "Tianyi Zhang"
-                    },
-                    {
-                        "name": "Kehan Li"
-                    },
-                    {
-                        "name": "Haoyu Zhao"
-                    },
-                    {
-                        "name": "Siteng Huang"
-                    },
-                    {
-                        "name": "Leigang Qu"
-                    },
-                    {
-                        "name": "Sicong Leng"
-                    },
-                    {
-                        "name": "Dongchi Huang"
-                    },
-                    {
-                        "name": "Mingxiu Chen"
-                    },
-                    {
-                        "name": "Shijian Lu"
-                    },
-                    {
-                        "name": "Yue Wang"
-                    },
-                    {
-                        "name": "Xiaodan Liang"
-                    },
-                    {
-                        "name": "Zhenyu Zeng"
-                    },
-                    {
-                        "name": "Deli Zhao"
-                    },
-                    {
-                        "name": "Chengju Liu"
-                    },
-                    {
-                        "name": "Jianfei Yang"
-                    },
-                    {
-                        "name": "Xin Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.32964v1",
-                "title": "Flownomaly: Single-Step Conditional-Mean Recovery for Few-Shot Anomaly Detection",
-                "updated": "2026-10-23T17:53:30Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.32964v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.32964v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Few-shot industrial anomaly detection requires modeling category-specific normality from only a handful of defect-free images. Common approaches tie inference to stored exemplars, impose rigid linear structure, or risk reproducing anomalous content. Flownomaly instead casts the problem as normal-counterpart recovery in frozen DINOv2 feature space. Given normal supports, a velocity field is learned through conditional flow matching over frozen patch tokens to transport Gaussian noise toward normal features. Along straight paths, a single recovery step using one evaluation of the optimal field yields the posterior mean of the clean normal token without trajectory integration. The operating time governs how strongly recovery modifies a query token. With no anomalous validation samples available for tuning, a normal-only Jacobian gain-to-noise criterion selects this time from the supports alone. Squared residuals between query tokens and their recovered counterparts yield anomaly signals for both dense localization and image-level detection. Across 1-, 2-, and 4-shot benchmarks on MVTec-AD and VisA, together with sample-shot evaluations on Real-IAD, Flownomaly achieves state-of-the-art performance against recent category-specific methods. In the 1-shot setting, image- and pixel-level AUROC reach 97.8% and 98.0% on MVTec-AD and 95.3% and 98.7% on VisA, with a 2.1-point image-level AUROC improvement over the strongest baseline on VisA. Code is available at https://github.com/b-rbmp/Flownomaly.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
+                        "@term": "q-bio.NC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -498,59 +202,408 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-23T17:53:30Z",
-                "arxiv:comment": "Accepted to WACV 2027",
+                "published": "2026-10-26T17:58:14Z",
+                "arxiv:comment": "20 pages, 6 figures",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "q-bio.NC"
                 },
-                "author": [
-                    {
-                        "name": "Bernardo Perrone Ribeiro"
-                    },
-                    {
-                        "name": "Erkut Akdag"
-                    },
-                    {
-                        "name": "Egor Bondarev"
-                    }
-                ]
+                "author": {
+                    "name": "John J. Vastola"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2610.32961v1",
-                "title": "Robotic Optical Coherence Tomography-Guided Geometric Modeling of Soft Tissue: 3D Representations for Data-Driven Closed-Loop Shape Control",
-                "updated": "2026-10-23T17:52:30Z",
+                "id": "http://arxiv.org/abs/2610.35854v1",
+                "title": "FL4N: Feed-forward Latent Model for 4D Novel View Synthesis",
+                "updated": "2026-10-26T17:58:03Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.32961v1",
+                        "@href": "https://arxiv.org/abs/2610.35854v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.32961v1",
+                        "@href": "https://arxiv.org/pdf/2610.35854v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "In medical robotics, data-driven soft-tissue shape control requires deforming tissue toward desired morphologies through sequential physical interactions. This challenge is particularly important in microscale manipulation, where localized deformation is difficult to observe, represent, and control, while physics-based models can be computationally expensive and difficult to adapt to realistic environments. Optical coherence tomography (OCT) provides high-resolution volumetric perception of tissue deformation, but target-conditioned control requires effective representations of both observed and desired tissue states. In this work, we introduce an OCT-guided data-driven framework for tissue shape control, learned from user-guided demonstrations and executed with closed-loop OCT feedback. We study full-volume, tissue-masked sparse-volume, and voxelized point-cloud representations, with or without residual conditioning, using deterministic (Explicit) and generative diffusion (Diffusion) policies. Across 12 configurations and 576 phantom rollouts on 3-DoF depth and 6-DoF directional tasks, OCT-derived 3D representations support both Explicit and Diffusion policies, with performance depending on representation and residual conditioning. Residual conditioning reduces directional Shape RMSE from 0.748 to 0.555 mm for full-volume Diffusion, while voxelized point-cloud Explicit with residuals achieves 0.534 mm for depth and 0.443 mm for directional control, with comparable accuracy at intermediate unseen targets and consistent performance across deployments. We further evaluate the framework in 60 ex vivo porcine rollouts, extending to biological tissue with final geometric errors comparable to human demonstrations. These results establish volumetric OCT as current and goal representations for learned closed-loop tissue shape control across deterministic and generative action models.",
+                "summary": "4D novel view synthesis (NVS) aims to render dynamic scenes across viewpoints and timestamps, which requires jointly inferring 3D structure and temporal dynamics. Existing monocular feed-forward methods often rely on explicit 4D Gaussian representations, which are prone to temporal inconsistency and severe rendering artifacts. We present FL4N, the first feed-forward latent 4D NVS model. Instead of relying on explicit 4D primitives, FL4N encodes a 4D scene prior into a unified latent representation across space and time. Our core insight is that learning temporal dynamics as residuals on top of a pretrained static latent prior enables effective 4D modeling with limited dynamic training data. To this end, we introduce a lightweight dynamic encoder that leverages static scene features to disentangle object motion from camera-induced parallax. Trained solely with an image synthesis objective, FL4N achieves state-of-the-art 4D NVS quality while rendering in real time. Its learned latent representation generalizes to real-world videos and disentangles viewpoint from time.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-26T17:58:03Z",
+                "arxiv:comment": "Project page and code are available at https://cvlab-kaist.github.io/FL4N/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Eunbeen Hong"
+                    },
+                    {
+                        "name": "Hyeonseo Yu"
+                    },
+                    {
+                        "name": "Honggyu An"
+                    },
+                    {
+                        "name": "Jooho Son"
+                    },
+                    {
+                        "name": "Hyunah Ko"
+                    },
+                    {
+                        "name": "Soowon Son"
+                    },
+                    {
+                        "name": "Chaehyun Kim"
+                    },
+                    {
+                        "name": "Jahyeok Koo"
+                    },
+                    {
+                        "name": "Jisoo Kim"
+                    },
+                    {
+                        "name": "Junhwa Hur"
+                    },
+                    {
+                        "name": "Seungryong Kim"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.35852v1",
+                "title": "Differentiable Contact Dynamics for Legged Locomotion: Policy Learning and Contact-Implicit Trajectory Optimization",
+                "updated": "2026-10-26T17:57:14Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.35852v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.35852v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "This paper proposes a smooth analytic gradient for frictional contact and applies it to policy learning and contact-implicit trajectory optimization for legged locomotion. The exact contact sensitivity is available in closed form but describes changes within the current contact mode, providing no first-order information toward neighboring contact modes. The proposed gradient replaces this sensitivity only in the backward pass, leaving the hard-contact forward solve unchanged and the realized rollout feasible. A central-path relaxation of the de Saxc\u00e9-corrected second-order-cone complementarity problem for Coulomb friction smooths the conditions defining the separating, clamping, and sliding modes. The relaxed sensitivity is evaluated at a point on the central path obtained by a Newton iteration initialized from the hard-contact solution. The sensitivity remains continuous through contact-mode transitions and converges to the exact sensitivity as the relaxation vanishes. Using 100,000 samples and less than 2 min of training on a desktop PC, policy learning with the proposed gradient produces a policy that transfers to hardware without fine-tuning. On hardware, the robot under a trotting policy withstands pushes and traverses debris and slippery ground. In trajectory optimization, the proposed gradient reaches contact-rich solutions missed by exact and Signorini-relaxed gradients. Project page: https://diffcontact.github.io",
                 "category": {
                     "@term": "cs.RO",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-10-23T17:52:30Z",
-                "arxiv:comment": "30 pages, 18 figures",
+                "published": "2026-10-26T17:57:14Z",
+                "arxiv:comment": "Submitted to Transactions on Robotics",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Chaoyu Zhang"
+                        "name": "Gijeong Kim"
                     },
                     {
-                        "name": "Guangshen Ma"
+                        "name": "Seungbin Oh"
                     },
                     {
-                        "name": "Mark Draelos"
+                        "name": "Dongyun Kang"
+                    },
+                    {
+                        "name": "Hae-Won Park"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.35847v1",
+                "title": "Patient-specific rubric-based evaluation of large language models across longitudinal cancer care",
+                "updated": "2026-10-26T17:56:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.35847v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.35847v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large language models (LLMs) show promise in specialty medicine, yet existing evaluations largely focus on isolated clinical encounters rather than tracking how clinical responsibilities evolve across a longitudinal care pathway. Here we introduce NPC-RubricBench, a phase-aware benchmark for evaluating multistage clinical reasoning across the cancer care continuum, using nasopharyngeal carcinoma as a defined disease context. Curated from longitudinal records of 405 patients across two cancer centers, the benchmark comprises 941 patient-phase units across six sequential care phases and 17,688 patient-specific atomic criteria spanning five evaluation dimensions, with each assessment strictly restricted to decision-time clinical evidence. Evaluating 30 general-purpose and medical LLMs revealed that strong diagnostic performance does not carry over to downstream care. We evaluated 30 general-purpose and medical LLMs, showing that high diagnostic performance did not translate into improved downstream care. Instead, the dominant failure modes reversed across phases. Explicit decision errors dominated anatomical staging at 48.2%, whereas decision omissions dominated initial work-up and post-treatment follow-up at 33.4% and 30.4%, respectively. In the evaluated model set, medically adapted models showed higher omission rates than general-purpose models. Moreover, varying query granularity exposes a critical specification trade-off: broad open-ended requests degrade Decision Quality across all 30 models, while more detailed, checklist-like prompts raise Decision Quality but reduce Evidence Faithfulness and Safety Adherence. Furthermore, NPC-RubricBench demonstrates that static diagnostic benchmarks are insufficient to ensure consistent clinical reliability over time, highlighting the importance of phase-adaptive safeguards in multistage medical AI.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-26T17:56:26Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Wei-Wei Zhang"
+                    },
+                    {
+                        "name": "Pengkai Wang"
+                    },
+                    {
+                        "name": "Yan Li"
+                    },
+                    {
+                        "name": "Zhijie Sang"
+                    },
+                    {
+                        "name": "Guan-Qun Zhou"
+                    },
+                    {
+                        "name": "Jun-Yan Li"
+                    },
+                    {
+                        "name": "Shu-Han Zhou"
+                    },
+                    {
+                        "name": "Pei-Wen Liu"
+                    },
+                    {
+                        "name": "Ting-Xi Tang"
+                    },
+                    {
+                        "name": "Min Tang"
+                    },
+                    {
+                        "name": "Zhitian Hou"
+                    },
+                    {
+                        "name": "Jianmin Wu"
+                    },
+                    {
+                        "name": "Jian Guan"
+                    },
+                    {
+                        "name": "i Lin"
+                    },
+                    {
+                        "name": "Hongxia Yang"
+                    },
+                    {
+                        "name": "Ying Sun"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.35846v1",
+                "title": "Preserve to Expand: Source-Aware Adaptation and Model Merging for Multilingual LLM-Based ASR",
+                "updated": "2026-10-26T17:56:22Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.35846v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.35846v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Expanding multilingual ASR systems to new languages is challenging when adaptation must preserve previously supported languages without replaying source-language training data. We study this problem in connector-based Speech LLMs, where a trainable connector maps speech representations into a frozen large language model. We evaluate target-update construction and merging strategies for adapting the connector while preserving source-language performance. In single-target expansion, target-only fine-tuning and standard TIES merging learn new languages but cause severe source-language forgetting, while SSU-Wanda+TIES gives the best source-preserving trade-off. In multi-target expansion, update merging provides stable source retention, whereas recursive expansion can improve target adaptation under favorable orders but is highly order-sensitive. These results show that multilingual ASR expansion requires balancing target acquisition, source retention, and interactions among target-language updates.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-26T17:56:22Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CL"
+                },
+                "author": [
+                    {
+                        "name": "Yuchen Zhang"
+                    },
+                    {
+                        "name": "Haralambos Mouratidis"
+                    },
+                    {
+                        "name": "Ravi Shekhar"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.35845v1",
+                "title": "Work Agents: Systems, Capabilities, and Optimization",
+                "updated": "2026-10-26T17:56:21Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.35845v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.35845v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "As foundation models evolve from information generation to digital work execution, agents are increasingly capable of completing complex tasks across tools, applications, and workflows. However, existing research lacks a unified perspective on how agents reliably accomplish delegated work. To address this gap, we present a work-centric, system-level perspective that views work agents as systems combining foundation models and runtime harnesses to execute tasks in stateful workspaces and deliver verifiable outcomes. We introduce two complementary dimensions, work persistence and work openness, to characterize working conditions, and classify digital work into five forms according to task scope and organization. Building on this framework, we identify five core capability families required for reliable work execution and examine approaches to model optimization, harness optimization, and their joint optimization. We further analyze existing evaluation methods and metrics from the perspective of work outcomes. Finally, we discuss future research directions, including sustained work delegation, adaptation to open environments, and the interaction between work execution and capability improvement. This paper provides a unified framework for understanding, optimizing, and evaluating work agents, supporting the development of systems capable of delivering reliable, verifiable, and practically valuable work outcomes.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-26T17:56:21Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Zishan Xu"
+                    },
+                    {
+                        "name": "Enjun Du"
+                    },
+                    {
+                        "name": "Mingqi Gao"
+                    },
+                    {
+                        "name": "Cheng Yang"
+                    },
+                    {
+                        "name": "Junhao Shen"
+                    },
+                    {
+                        "name": "Zirong Chen"
+                    },
+                    {
+                        "name": "Zhiyuan Yao"
+                    },
+                    {
+                        "name": "Yifu Guo"
+                    },
+                    {
+                        "name": "Yuquan Lu"
+                    },
+                    {
+                        "name": "Jinyang Huang"
+                    },
+                    {
+                        "name": "Zhengxi Lu"
+                    },
+                    {
+                        "name": "Siyi Liu"
+                    },
+                    {
+                        "name": "Ziyu Zheng"
+                    },
+                    {
+                        "name": "Yongqi Zhang"
+                    },
+                    {
+                        "name": "Difan Zou"
+                    },
+                    {
+                        "name": "Weiwen Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.35842v1",
+                "title": "MedVTok: A General-Purpose Medical Visual Tokenizer",
+                "updated": "2026-10-26T17:54:40Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.35842v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.35842v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Multimodal medical AI requires a common visual interface for encoding heterogeneous imaging evidence for patient condition modeling. However, existing medical visual tokenizers are often tied to a specific dimension and imaging modality, forcing multimodal systems to rely on fragmented and poorly reusable representations. We introduce MedVTok, a general-purpose visual tokenizer that maps 2D images and 3D volumes from diverse imaging modalities into a unified token space. Building such a tokenizer poses two key challenges: preserving anatomical structure across dimensions and capturing clinical semantics across modalities. To this end, MedVTok introduces (i) slice differential regularization, which explicitly models inter-slice anatomical coherence missing in previous per-pixel/per-voxel supervision, and (ii) multi-expert representation alignment, which integrates knowledge from multiple medical expert encoders while retaining modality-specific complementary knowledge. Trained on 28M images and 70K volumes across 9 imaging modalities, MedVTok supports classification, retrieval, segmentation, synthesis, visual question answering, and medical report generation through a single tokenizer. Across 24 benchmarks, MedVTok achieves state-of-the-art performance, demonstrating a scalable token interface that unifies medical image dimension, modality, and task usage.",
+                "category": [
+                    {
+                        "@term": "eess.IV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-26T17:54:40Z",
+                "arxiv:comment": "NeurIPS 2026",
+                "arxiv:primary_category": {
+                    "@term": "eess.IV"
+                },
+                "author": [
+                    {
+                        "name": "Chenglong Ma"
+                    },
+                    {
+                        "name": "Yuanfeng Ji"
+                    },
+                    {
+                        "name": "Junzhi Ning"
+                    },
+                    {
+                        "name": "Jiyao Liu"
+                    },
+                    {
+                        "name": "Yujie Wei"
+                    },
+                    {
+                        "name": "Shaohao Rui"
+                    },
+                    {
+                        "name": "Chaoyang Zhang"
+                    },
+                    {
+                        "name": "Wenjie Li"
+                    },
+                    {
+                        "name": "Wenhao Tang"
+                    },
+                    {
+                        "name": "Cheng Tang"
+                    },
+                    {
+                        "name": "Wei Li"
+                    },
+                    {
+                        "name": "Shujian Gao"
+                    },
+                    {
+                        "name": "Yujie Zhang"
+                    },
+                    {
+                        "name": "Ying Chen"
+                    },
+                    {
+                        "name": "Zilong Li"
+                    },
+                    {
+                        "name": "Zongyuan Ge"
+                    },
+                    {
+                        "name": "Diping Song"
+                    },
+                    {
+                        "name": "Jin Ye"
+                    },
+                    {
+                        "name": "Ming Hu"
+                    },
+                    {
+                        "name": "Junjun He"
+                    },
+                    {
+                        "name": "Hongming Shan"
                     }
                 ]
             }
