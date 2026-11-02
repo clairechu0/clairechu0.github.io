@@ -5,298 +5,105 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-11-01T20:01:43Z",
+        "updated": "2026-11-02T07:02:44Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "636419",
+        "opensearch:totalResults": "636879",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2610.40654v1",
-                "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
-                "updated": "2026-10-29T17:59:49Z",
+                "id": "http://arxiv.org/abs/2610.42152v1",
+                "title": "GazeRIB: Systematic Evaluation of Multi-Reader Gaze-Guided Chest X-ray Learning",
+                "updated": "2026-10-30T17:59:59Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.40654v1",
+                        "@href": "https://arxiv.org/abs/2610.42152v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.40654v1",
+                        "@href": "https://arxiv.org/pdf/2610.42152v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data would allow far less. Removing them first would restore the smaller scale, but the removal must itself be private.\n  We introduce \\emph{propose-filter-release} (PFR), which, by privately filtering its input, turns a mechanism that protects the addition or removal of a typical record, one that fits the remaining data, into one that is differentially private in the standard sense, on every input. Using our novel filtering step, PFR requires only a concave friendliness score, which measures how well a record fits a dataset, and a release mechanism that is friendly-DP, that is, private when the changed record fits the remaining data. For every such score and release mechanism, it guarantees differential privacy under public conditions on the number of records, so it is a general privacy primitive, comparable to propose-test-release, and FriendlyCore can be viewed as one of its implementations.\n  We illustrate the generality of PFR by instantiating it for scalar statistics, principal subspace estimation, the KL divergence of user histograms, the effective resistances of a graph, and treatment-rule selection.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-29T17:59:49Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Moshe Shenfeld"
-                    },
-                    {
-                        "name": "Eliad Tsfadia"
-                    },
-                    {
-                        "name": "Katrina Ligett"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.40653v1",
-                "title": "Micro-Edits: Computational Support for Fine-Scale Edits in Film",
-                "updated": "2026-10-29T17:59:49Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.40653v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.40653v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    },
-                    {
-                        "@rel": "related",
-                        "@href": "https://doi.org/10.1145/3830398.3830545",
-                        "@title": "doi"
-                    }
-                ],
-                "summary": "In film editing, every frame matters. While macro, content-level edits shape the high-level narrative of a film, small local edits often control timing and direct visual attention. For example, editors can adjust the precise timing of clips to control the length of a meaningful silence, or cut to shots that highlight a specific character's reactions to important moments. These small, detailed edits are slow and tedious to make in standard editing tools because users have to map high-level narrative goals to low-level frame-by-frame adjustments. At the same time, these fine-scale adjustments, which we call micro-edits, can be nuanced and expressive, with different choices serving different creative goals. In this work, we start by conducting a formative study with professional editors to understand the structure of micro-edits and how they are used. We then derive a mathematical formalization for this structure to develop tools that leverage AI and optimization to make exploring micro-edits simpler and more efficient for users. Finally, we validate our tools in multiple user studies and a wide range of video examples.",
+                "summary": "Radiologists' visual attention can supervise medical image learning, but how reader panel composition affects its value remains untested. We evaluated GazeRIB (Gaze-guided Radiologist-Informed Blackout), which masks unviewed regions during training and uses unmasked images at inference. Eight experts repeatedly read the same 80 chest X-rays (CXRs). We compared individual readers with three-, five- and eight-reader panels across seven architectures and 10 seeds, evaluating 910 models on a separate 2,897-CXR cohort for four-class severity prediction. Every panel improved macro F1 over the no-gaze baseline by 5.33-7.47 percentage points (pp; Bonferroni-adjusted p < 0.007); no individual reader reached significance on this endpoint. Three readers captured 73-80% of the eight-reader gain in macro F1, the area under the receiver-operating-characteristic curve (ROC-AUC) and the area under the precision-recall curve (AU-PRC). On external validation without retraining, all four panels improved ROC-AUC on SIIM-FISABIO-RSNA by +1.93 to +4.24 pp (p <= 0.004); on MIMIC-Eye no panel differed significantly from baseline, whereas the single-reader average declined (-1.40 pp, p = 0.008). Reader composition therefore influenced performance, although transfer depended on the cohort.",
                 "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.HC",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CV",
+                        "@term": "eess.IV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SP",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-29T17:59:49Z",
-                "arxiv:comment": "UIST 2026 Best Paper Honorable Mention. Project page: https://microedits.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.HC"
-                },
-                "author": [
-                    {
-                        "name": "Nhan Tran"
-                    },
-                    {
-                        "name": "Hijung Valentina Shin"
-                    },
-                    {
-                        "name": "Abe Davis"
-                    },
-                    {
-                        "name": "Mackenzie Leake"
-                    }
-                ],
-                "arxiv:doi": "10.1145/3830398.3830545"
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.40649v1",
-                "title": "Rethinking Neural Thickets Without Weight Perturbations",
-                "updated": "2026-10-29T17:59:29Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.40649v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.40649v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanation. Perturbing a single decoder block already recovers much of the improvement, while keeping the model entirely frozen and adding a random bias to its output logits matches or exceeds full-weight perturbations on most reasoning tasks. This suggests an alternative explanation based on output diversity, validation-based selection, and voting. We formalize this view as Perturb-Select-Vote (PSV), a general procedure that generates perturbed predictors, selects high-performing members on a small validation set, and aggregates their predictions.\n  This interpretation connects Neural Thickets to established inference-time methods, including sampling, self-consistency, and verifier-guided selection. A first-order analysis further shows that small weight perturbations act primarily through their induced logit shifts. We extend this analysis to vision, where logit PSV substantially improves performance under domain shift, including on Earth observation, while full-weight perturbations provide little additional benefit. Together, these results suggest that the gains attributed to nearby weight-space experts can instead be obtained through output diversity, selection, and voting. Logit PSV realizes these benefits with a fully frozen model, providing a simple, training-free alternative to full-weight perturbation ensembles across language and vision.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-29T17:59:29Z",
-                "arxiv:comment": "Project page can be found here: https://kyutai.org/logit-psv",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Nicolas Dufour"
-                    },
-                    {
-                        "name": "Elouan Gard\u00e8s"
-                    },
-                    {
-                        "name": "Amil Dravid"
-                    },
-                    {
-                        "name": "Patrick P\u00e9rez"
-                    },
-                    {
-                        "name": "Loic Landrieu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.40647v1",
-                "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
-                "updated": "2026-10-29T17:59:21Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.40647v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.40647v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency structure benefits from global exchange, while high-frequency detail can be modeled locally. Based on this insight, we introduce SpecSlot, a pixel-space rectified-flow Transformer that decouples output detail from the length of the global attention sequence. SpecSlot expands each spatial anchor into multiple slots, each assigned a disjoint band of DCT coefficients; this separates anchor density from spectral subdivision. Only the lowest-frequency slot from each anchor participates in global attention, while all slots interact locally. This allows the model to increase spectral detail without enlarging the global sequence. A spatial head further adds a local correction to the spectral prediction, while the generative state, target, and loss remain in pixel space. On ImageNet-256, SpecSlot achieves a comparable final FID to a FLOPs-matched JiT control while converging faster. On ImageNet-512, it improves FID by 2.84 over the control with 3.9% fewer FLOPs, and comes within only 0.69 FID of JiT-B/16 at 38.2% lower cost. On text-to-image generation, SpecSlot surpasses JiT-B/8 on DPG-Bench by 1.06 at 40.6% lower forward cost.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.NE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-29T17:59:21Z",
-                "arxiv:comment": "22 pages, 10 figures; under review at ICLR 2027",
+                "published": "2026-10-30T17:59:59Z",
+                "arxiv:comment": "20 pages on main manuscripts (3 tables + 4 figures), 14 pages supplementary (10 tables + 8 figures)",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Jiongfan Yang"
+                        "name": "Nattakorn Kittisut"
                     },
                     {
-                        "name": "Weichen Fan"
+                        "name": "Roy M. Gabriel"
                     },
                     {
-                        "name": "Haiwen Diao"
+                        "name": "Marly van Assen"
                     },
                     {
-                        "name": "Zhongang Cai"
+                        "name": "Mohammadreza Zandehshahvar"
                     },
                     {
-                        "name": "Ziwei Liu"
+                        "name": "Carlo N. De Cecco"
+                    },
+                    {
+                        "name": "Elizabeth A. Krupinski"
+                    },
+                    {
+                        "name": "Ali Adibi"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.40646v1",
-                "title": "SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing",
-                "updated": "2026-10-29T17:59:20Z",
+                "id": "http://arxiv.org/abs/2610.42149v1",
+                "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
+                "updated": "2026-10-30T17:59:43Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.40646v1",
+                        "@href": "https://arxiv.org/abs/2610.42149v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.40646v1",
+                        "@href": "https://arxiv.org/pdf/2610.42149v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Robot manipulation in everyday environments inherently involves substantial tool usage. Seemingly simple household tasks, such as cooking pan-fried tofu, require forceful cutting, delicate brushing, and precise placement using different tools under contact-rich interaction. Thus, the ability to autonomously swap and use task-appropriate tools is important for tool-centric manipulation. We introduce SwapBot, a modular, tool-centric end effector system featuring low-cost adapters that quickly convert common household tools into robot end effectors. Rather than pursuing a single universal gripper, SwapBot adopts a unified design principle that combines a fixed robot-side coupling interface with low-cost, tool-side adapters, enabling compatibility with diverse tools, including articulated ones, and multiple robot platforms. Each adapter integrates compact tactile sensors, supports fast autonomous swapping, and interfaces with an intuitive teleoperation system for efficient demonstration collection. User studies show that, during teleoperation, SwapBot reduces task completion time and operator workload. Using collected demonstrations on the robot, we train imitation learning policies to successfully perform tool-centric tasks like cooking tofu, stirring salad, flipping meat. Our ablation study shows that using tactile-augmented demonstrations improves policy performance across contact-rich skills, increasing success rates by 15 to 25 percentage points over RGB-only policies. These results highlight modular, tactile-equipped tools as a practical and extensible pathway toward robust and capable robot manipulation. Project website https://personalrobotics.github.io/SwapBot.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-29T17:59:20Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Yunchu Zhang"
-                    },
-                    {
-                        "name": "Ray Song"
-                    },
-                    {
-                        "name": "Junhan Jiao"
-                    },
-                    {
-                        "name": "Liyiming Ke"
-                    },
-                    {
-                        "name": "Yuchen Yang"
-                    },
-                    {
-                        "name": "Ruihan Gao"
-                    },
-                    {
-                        "name": "Emma Romig"
-                    },
-                    {
-                        "name": "Siddhartha Srinivasa"
-                    },
-                    {
-                        "name": "Yiyue Luo"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.40644v1",
-                "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
-                "updated": "2026-10-29T17:59:01Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.40644v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.40644v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Distributionally robust optimization (DRO) hedges data-driven two-stage stochastic programs against error in the distribution estimated from a finite record, and standard ambiguity sets differ in how they treat realizations absent from that record. A divergence ball around the empirical distribution contains only reweightings of the record, whereas a transport ball also contains distributions supported off the record, including on realizations the data-generating process cannot produce, against which the decision is then hedged as well. We instead propose a Kullback-Leibler (KL) ball centered at a density model fitted to the record, the learned nominal, which lets the adversary up-weight costly unobserved realizations in proportion to the probability the model assigns them. Solving the resulting problem poses a second difficulty, because it can accommodate only a few scenarios, and an independent sample of that size is likely to omit the rare realizations on which the worst case concentrates. We therefore build the scenario set adaptively, alternating between solving the finite problem and drawing new realizations from the learned nominal, steered toward the worst case at the current decision, with importance weights that correct the draws back to the model. On a multi-item newsvendor problem and a capacity expansion problem on realistic grid data, centering the ball at the learned nominal rather than at the record lowers cost under distribution shift, at comparable in-distribution cost, when the record is scarce and the model class captures structure that lets it extrapolate beyond the record. The advantage fades as the record grows or as the shift departs from the structure the model has learned.",
+                "summary": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit the test-time scaling and fine-grained controllability observed in large language models. We attribute this failure to a fundamental modality mismatch: reasoning is performed in a discrete token space, whereas image generation operates in a continuous space. To bridge this gap, we introduce a Latent Reasoning framework in Continuous space (LARC), which alleviates the token-level bottleneck by reasoning over continuous hidden states. Specifically, the training framework consists of two stages: (i) curriculum supervised fine-tuning (SFT), and (ii) information-gain reinforcement learning (RL). First, the curriculum SFT stage gradually converts token-level reasoning into latent reasoning. Subsequently, the information-gain RL stage self-evolves latent reasoning without ground truth supervision. Experiments across diverse text-to-image generation benchmarks show that LARC consistently improves generation quality, prompt following, and compositional fidelity. Notably, LARC achieves state-of-the-art performance on GenEval with a 7%p gain over BAGEL and demonstrates clear test-time scaling behavior, outperforming token-based generation under both parallel and sequential test-time scaling strategies.",
                 "category": [
                     {
-                        "@term": "eess.SY",
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -304,40 +111,109 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-29T17:59:01Z",
+                "published": "2026-10-30T17:59:43Z",
+                "arxiv:comment": "Published as conference proceeding for NeurIPS 2026. Last two authors advised equally",
                 "arxiv:primary_category": {
-                    "@term": "eess.SY"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Aron Brenner"
+                        "name": "Byungwoo Jeon"
                     },
                     {
-                        "name": "Saurabh Amin"
+                        "name": "Yoonwoo Jeong"
+                    },
+                    {
+                        "name": "Hyunseok Lee"
+                    },
+                    {
+                        "name": "Minsu Cho"
+                    },
+                    {
+                        "name": "Jinwoo Shin"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.40641v1",
-                "title": "From extreme weather to agricultural consequences with agentic AI",
-                "updated": "2026-10-29T17:58:53Z",
+                "id": "http://arxiv.org/abs/2610.42147v1",
+                "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+                "updated": "2026-10-30T17:59:34Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.40641v1",
+                        "@href": "https://arxiv.org/abs/2610.42147v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.40641v1",
+                        "@href": "https://arxiv.org/pdf/2610.42147v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Extreme weather is forecast days ahead, yet its consequences for agriculture remain hard to predict: a forecast says where a storm will strike, not which crops will suffer or how much is at risk, and the records that could tell span many sources. We present WxCrop, the first agent that judges agricultural hazards from physically interpretable weather indices examined by causal analysis, and the first that combines weather and agricultural information to predict crop loss reliably for past and forecast dates. We demonstrate it in Florida on hurricanes, freezes and dry heat, with a loss model calibrated on insurance records for each, and the same procedure extends to other hazards and areas. Three checks show reliability: the hurricane index detects recorded cyclone days with an AUC of 0.98, recorded losses in held-out years are reproduced to within 2%, and independent production records confirm the county rankings (rank correlation 0.63). Users ask the agent for each crop group's loss as a fraction of expected season value, every number sourced, so that governments, growers and scientists respond to agricultural disasters quickly.",
+                "summary": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse attention, in which a dedicated indexer selects a subset of keys for the attention. Yet current methods of indexing either still have quadratic cost in context size or lose accuracy at ultra-long context scale. We address this with Latent Sparse Attention (LSA), an efficient attention method that maintains accuracy at ultra-long context. In LSA, keys are hierarchically clustered in a learned latent space, and queries score the hierarchy of clusters instead of scoring every key, making prefill, decode and training faster at long context. We propose two variants, Distilled-LSA (D-LSA), which can be applied to pre-trained models via distillation, and Native-LSA (N-LSA), which is trained natively on the next-token loss alone. On GLM-5.3-FLASH (QWEN-3.8-27B) at 10M tokens, D-LSA speeds up one attention layer by 22.7x (72.4x) in prefill and 4.6x (42.5x) in decode over its original sparse attention (full attention), while keeping similar accuracy across a variety of tasks. N-LSA matches the accuracy of full attention with a training speedup of 1.6x per layer at 128k tokens. LSA offers practical and efficient attention for models to benefit from ultra-long context.",
+                "category": {
+                    "@term": "cs.AI",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-10-30T17:59:34Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.AI"
+                },
+                "author": [
+                    {
+                        "name": "Ales Kubicek"
+                    },
+                    {
+                        "name": "Andrea Caciolai"
+                    },
+                    {
+                        "name": "Liangzu Peng"
+                    },
+                    {
+                        "name": "Sukrit Sumant"
+                    },
+                    {
+                        "name": "Benjamin Hoover"
+                    },
+                    {
+                        "name": "Fraser Greenlee"
+                    },
+                    {
+                        "name": "Ruairidh M. Battleday"
+                    },
+                    {
+                        "name": "Radim Urban"
+                    },
+                    {
+                        "name": "Torsten Hoefler"
+                    },
+                    {
+                        "name": "James C. R. Whittington"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.42146v1",
+                "title": "Hierarchical World Models with Implicit Dynamics",
+                "updated": "2026-10-30T17:59:25Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.42146v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.42146v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at https://id-wm.github.io",
                 "category": [
                     {
-                        "@term": "physics.ao-ph",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -345,154 +221,321 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-29T17:58:53Z",
-                "arxiv:comment": "34 pages, 4 figures, 6 tables",
+                "published": "2026-10-30T17:59:25Z",
                 "arxiv:primary_category": {
-                    "@term": "physics.ao-ph"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Minghan Yu"
+                        "name": "Gaoyue Zhou"
                     },
                     {
-                        "name": "Mengyu Dai"
+                        "name": "Yvonne Wu"
                     },
                     {
-                        "name": "Yixin Wen"
+                        "name": "Zichen Jeff Cui"
                     },
                     {
-                        "name": "Haizhao Yang"
+                        "name": "Nicolas Ballas"
+                    },
+                    {
+                        "name": "Mido Assran"
+                    },
+                    {
+                        "name": "Lerrel Pinto"
+                    },
+                    {
+                        "name": "Yann LeCun"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.40637v1",
-                "title": "world2vec: Mechanistic world models through latent dynamics learning",
-                "updated": "2026-10-29T17:58:23Z",
+                "id": "http://arxiv.org/abs/2610.42145v1",
+                "title": "SemEllipsoid: Semantic-aware Shape Abstraction with Ellipsoid",
+                "updated": "2026-10-30T17:59:14Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.40637v1",
+                        "@href": "https://arxiv.org/abs/2610.42145v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.40637v1",
+                        "@href": "https://arxiv.org/pdf/2610.42145v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "World models can achieve strong control performance without faithfully capturing the dynamics of their environment, limiting their potential for mechanistic interpretability and scientific discovery. Here, we introduce world2vec to learn mechanistic world models without reward information directly from observations and actions. World2vec learns latent dynamics that faithfully reproduce the true system over long prediction horizons, with at least one order of magnitude fewer parameters than DreamerV3, TD-MPC2 and LeWM. This enables state of the art performance in controlling continuous environments from pixels and accurate system identification across a benchmark of 71 attractors, demonstrating how world models are amenable to scientific discovery.",
-                "category": {
-                    "@term": "cs.LG",
-                    "@scheme": "http://arxiv.org/schemas/atom"
+                "summary": "Representing 3D shapes using a set of primitives - known as shape abstraction - is an actively studied problem in computer graphics with wide applications in shape understanding, analysis, and simulation due to the compactness and computational efficiency of the primitive-based representation. Prior work has primarily focused on geometry-aware shape abstraction, where the objective is to approximate the input shape with a minimal set of primitives while preserving geometric fidelity. However, these methods often overlook semantic consistency, inevitably leading to primitives that span across multiple semantic parts. Such inconsistency can cause undesirable artifacts in downstream tasks such as part-level shape editing or manipulation. In this paper, we introduce a new task - semantic-aware shape abstraction, where the goal is to produce abstractions that are both geometrically faithful and semantically consistent, ensuring that each primitive adheres strictly to a single semantic part without crossing semantic boundaries. We propose SemEllipsoid, a novel method to address this problem using ellipsoidal primitives. The core idea is to inject semantic constraints into the primitive optimization process leveraging the availability of semantic cues from large-scale foundation models. We design a fully differentiable projection-blending-evaluation scheme to measure semantic divergence against input semantic masks, and formulate an alternating optimization strategy to iteratively solve for optimal semantic assignment and primitive configurations. Our method is non-learning-based, requiring no data collection or network training, and generalizes well to shapes from arbitrary categories. It also supports different levels of abstraction according to user demand. Extensive experiments and evaluations validate the effectiveness of our approach across several 3D shape collections.",
+                "category": [
+                    {
+                        "@term": "cs.GR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-30T17:59:14Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.GR"
                 },
-                "published": "2026-10-29T17:58:23Z",
-                "arxiv:comment": "https://worldmodels.science/",
+                "author": [
+                    {
+                        "name": "Kuankuan Cheng"
+                    },
+                    {
+                        "name": "Haocheng Yuan"
+                    },
+                    {
+                        "name": "Changjian Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.42141v1",
+                "title": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
+                "updated": "2026-10-30T17:58:48Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.42141v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.42141v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recent work shows that a frozen robot policy performs far better inside an agent harness, where control code decides when to query the policy, consult vision tools, or command the arm directly. Yet today these harnesses are built by hand and redesigned for each new robot or benchmark. We show that harness design can be automated, offering a strong alternative to finetuning on a novel setup. In RoboArchitect, a coding model observes a robot's rollouts, diagnoses failures, and iteratively revises the harness around the frozen policy. The harness evolves on a set of episodes for its optimization and is evaluated on held-out scenes and tasks. Without updating any model weights, RoboArchitect raises average success from 9.7% to 43.3% on unseen scenes (4.5x) and from 12.7% to 40.2% on unseen tasks (3.2x), across multiple benchmarks and policies. The gains are largest where the benchmark is far from the policy's training data: wrapping a general-purpose policy, the evolved harness yields a specialist that often outperforms even the finetuned version. Intuitive control strategies are automatically designed, such as lifting a jammed arm clear or reaching in horizontally when an obstacle blocks the way from above. The harness also evolves its own persistent memory, carrying learned experience, such as effective grasp depths, into later decisions. These results suggest that substantial headroom in robotic manipulation lies in the agent harness, and its design can be effectively automated and optimized without weight updates.",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-30T17:58:48Z",
+                "arxiv:comment": "Project Website: https://roboarchitect-ai.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Shengguang Wu"
+                    },
+                    {
+                        "name": "Suning Huang"
+                    },
+                    {
+                        "name": "Cherie Ho"
+                    },
+                    {
+                        "name": "Ria Doshi"
+                    },
+                    {
+                        "name": "Hao Zhu"
+                    },
+                    {
+                        "name": "Serena Yeung-Levy"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.42139v1",
+                "title": "Counting on Dummies: Privacy Amplification with Observable Counts and Truncated Batches",
+                "updated": "2026-10-30T17:58:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.42139v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.42139v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "In many practical deployments of Differentially Private Stochastic Gradient Descent (DP-SGD), the server processes data in batches. Randomly sampling these batches allows for better privacy bounds via privacy amplification results. Most sampling schemes with provable privacy amplification, including Poisson sampling and random allocation, result in variable batch sizes. The privacy guarantee of these schemes requires that the batch sizes are not revealed. In distributed settings, the server performing the aggregation or any party observing the communication traffic may learn these batch sizes. Furthermore, in both centralized and distributed settings, memory and computation constraints may require each batch to be of some maximum size $s$, necessitating truncation of the batch when it exceeds this limit. It is known that this truncation can result in a significant increase in privacy loss. In this work, we address both of these challenges via a simple mechanism that uses a random number of \\emph{dummy points} to privatize the batch size and maintain the privacy guarantee even under truncation. We demonstrate that our mechanism is easy to implement in a distributed setting, and provide a general analysis of this mechanism for both Poisson sampling and random allocation. Our analysis is designed to support efficient and relatively tight privacy accounting. It also effectively amplifies the privacy of the count releases by subsampling, making the expected number of dummy points asymptotically smaller than what is needed to directly privatize the (sensitivity-one) batch sizes with non-negative noise. For Poisson sampling with truncated batches, we demonstrate empirically that our mechanism achieves better privacy--efficiency tradeoffs than the direct accounting for truncation recently given by (Ganesh, 2025).",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-30T17:58:42Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Tobias Schmidt"
+                        "name": "Vitaly Feldman"
                     },
                     {
-                        "name": "Rodrigo Gonzalez Laiz"
+                        "name": "Audra McMillan"
                     },
                     {
-                        "name": "Kriszti\u00e1n Szuppinger"
-                    },
-                    {
-                        "name": "Steffen Schneider"
+                        "name": "Kunal Talwar"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.40627v1",
-                "title": "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender",
-                "updated": "2026-10-29T17:56:53Z",
+                "id": "http://arxiv.org/abs/2610.42136v1",
+                "title": "ReLift: Dense 3D Tracking as Lifted Trajectory Repair",
+                "updated": "2026-10-30T17:58:33Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.40627v1",
+                        "@href": "https://arxiv.org/abs/2610.42136v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.40627v1",
+                        "@href": "https://arxiv.org/pdf/2610.42136v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Safety alignment has enabled large language models to reliably refuse harmful requests directly, yet the same request distributed across a multi-turn conversation still succeeds far too often. This brittleness has a mechanistic root: Alignment is shallow, with safety behavior concentrated in a model's first few output tokens, and existing defenses inherit the weakness, supervising the surface form of the response without ever giving the model an explicit safety decision to learn. We take the opposite view of shallowness: if a short span determines the trajectory of an entire response, that span is the highest-leverage place to intervene, and the defender can occupy it first. We propose Assess $\\to$ Decide $\\to$ Respond, a framework in which the defender assesses the user's intent, commits to an explicit, parseable safety decision, and only then generates a reply conditioned on it, with the commitment trained by reinforcement learning at the payload turn. Because the decision is a token span, the reward can be a rule: a self-verified reward checks the committed label against the conversation's known nature, requiring no judge and no annotation, while the same format also supports an LLM-as-judge reward over a graded decision space with safe redirection. Across two model families and fourteen benchmarks spanning safety, utility, and helpfulness, our defenders achieve the strongest multi-turn safety in a controlled comparison, maintaining their lead in safety while preserving utility at a modest cost to helpfulness. A per-token KL analysis and interventional probes confirm why this works: training concentrates its effect on the brief deliberation that sets a response's trajectory, and the decision committed there is a causal control point. The very shallowness attackers exploit becomes the mechanism of defense.",
+                "summary": "Dense 3D tracking from monocular video requires establishing point correspondences over time, estimating their depth, and inferring their trajectories during occlusion. Existing methods typically learn these tasks jointly, a demanding objective given the scarcity of 4D supervision. We show that strong pretrained 2D trackers and 3D geometry models provide an effective foundation: lifted trajectories, with occluded segments simply interpolated, already rival dedicated 3D trackers using the same geometry. However, lifted trajectories inherit correspondence and depth errors, and under occlusion, their depth comes from the occluder rather than the tracked point. We introduce ReLift, an efficient feed-forward framework that recasts dense 3D tracking as geometric trajectory repair and completion. At its core, a trajectory corrector alternates attention along and across trajectories to preserve reliable observations, repair corrupted positions, and complete missing motion. Using only geometric inputs allows us to train directly on 3D trajectories with simulated lifting errors, decoupling training from images and from any specific tracker or geometry model. Concentrating 4D supervision on trajectory refinement yields a reusable model that consistently improves lifted trajectories across trackers and geometry providers without retraining, so it benefits directly from future advances in either component. On WorldTrack, ReLift achieves state-of-the-art mean accuracy, improving on the strongest baselines by 2.1 APD on all points and 3.0 on dynamic points, with faster configurations remaining competitive with leading 3D trackers while running faster than 4RC. Visit our supplementry page for more examples and code.",
                 "category": {
-                    "@term": "cs.CL",
+                    "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-10-29T17:56:53Z",
+                "published": "2026-10-30T17:58:33Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Qiyao Ma"
+                        "name": "Assaf Singer"
                     },
                     {
-                        "name": "Xiaodong Liu"
+                        "name": "Maroun Khriesh"
                     },
                     {
-                        "name": "Weiwei Yang"
+                        "name": "Noam Rotstein"
                     },
                     {
-                        "name": "Mingqian Feng"
+                        "name": "Yoni Kasten"
                     },
                     {
-                        "name": "Chengquan Guo"
-                    },
-                    {
-                        "name": "Jialin Song"
-                    },
-                    {
-                        "name": "Carolyn Buractaon"
-                    },
-                    {
-                        "name": "Zhe Zhao"
-                    },
-                    {
-                        "name": "Junshan Zhang"
-                    },
-                    {
-                        "name": "Sandeep Atluri"
-                    },
-                    {
-                        "name": "Christopher White"
-                    },
-                    {
-                        "name": "Jianfeng Gao"
+                        "name": "Or Litany"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.40618v1",
-                "title": "An ODE-based Sampler for Discrete Diffusion Models",
-                "updated": "2026-10-29T17:55:25Z",
+                "id": "http://arxiv.org/abs/2610.42135v1",
+                "title": "A Better Critic Matters for Distribution Matching Distillation",
+                "updated": "2026-10-30T17:58:26Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.40618v1",
+                        "@href": "https://arxiv.org/abs/2610.42135v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.40618v1",
+                        "@href": "https://arxiv.org/pdf/2610.42135v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The marginals of a continuous diffusion model can be reproduced by a deterministic ordinary differential equation (ODE), known as the probability flow ODE, which provides a foundation for accelerated sampling and consistency distillation. In this paper we address the question whether an analogous formulation exists for discrete diffusion models and answer it affirmatively by introducing exponential residual flows (ERFs). Our framework augments the discrete state with a continuous residual variable for each token and position. These residuals evolve deterministically according to piecewise-defined ODEs whose vector fields depend on the current discrete state and the forward and backward rate matrices of the prescribed diffusion model. The discrete state changes whenever a residual reaches zero. We prove that this construction preserves the marginals of the original diffusion. We derive a practical discretization of our sampler and specialize it to masked and uniform diffusion. The deterministic trajectories of ERFs support consistency distillation and yield empirical improvements over previous approaches across a variety of benchmarks including code and text generation tasks.",
+                "summary": "Distribution Matching Distillation (DMD) trains a few-step student using the difference between a teacher's score and an online critic's estimate of the student distribution's score. We investigate what the critic needs, in capacity and in information, to provide a reliable training signal. On the capacity side, controlled experiments across seven SiT model sizes on ImageNet show that increasing teacher size while keeping a small critic fixed can degrade student quality and cause training collapse. Scaling the critic alongside the teacher, a strategy we call joint scaling, prevents collapse in our experiments and allows the student to benefit from larger teachers. On the information side, rather than forcing the critic to model a step-agnostic mixture of student outputs, we introduce a step-aware critic (STAC) that conditions on the student's generation step to estimate step-specific scores. Together, joint scaling and STAC consistently improve few-step distillation across class-conditional ImageNet generation, text-to-image generation with SDXL and FLUX.2, and text-to-video generation with Wan2.1.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-10-30T17:58:26Z",
+                "arxiv:comment": "35 pages, 16 figures. Project page and code: https://peppaking8.github.io/critic-matters/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zongze Wu",
+                        "arxiv:affiliation": "Adobe"
+                    },
+                    {
+                        "name": "Xianbang Wang",
+                        "arxiv:affiliation": "MIT"
+                    },
+                    {
+                        "name": "Zhengyang Geng",
+                        "arxiv:affiliation": "Adobe"
+                    },
+                    {
+                        "name": "Mingdeng Cao",
+                        "arxiv:affiliation": "Adobe"
+                    },
+                    {
+                        "name": "Zhoutong Zhang",
+                        "arxiv:affiliation": "Adobe"
+                    },
+                    {
+                        "name": "Richard Zhang",
+                        "arxiv:affiliation": "Adobe"
+                    },
+                    {
+                        "name": "Eli Shechtman",
+                        "arxiv:affiliation": "Adobe"
+                    },
+                    {
+                        "name": "Ruiming Cao",
+                        "arxiv:affiliation": "Adobe"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2610.42133v1",
+                "title": "Instance-dependent sequential limits as an exact information ledger",
+                "updated": "2026-10-30T17:57:44Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2610.42133v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2610.42133v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Instance-dependent limits for bandit regret, sequential tests, best-arm identification and Markov decision processes are proved by one chain. It runs from a divergence decomposition through data processing to a statistic, a testing step that turns a class guarantee into a requirement on the history, and optimization over alternatives and allocations. Only the first step is an identity. This work writes the chain as an exact ledger. By the chain rule, data processing loses exactly a conditional divergence, which vanishes for arms in natural exponential families at the per-arm counts and reward sums. A one-parameter family of martingale identities extends the decomposition to every tilt between two instances. The classical limits follow by relaxations with named defects. All defects but the asymptotic step's can be computed from an algorithm's own runs, the uniform quantification's only when the class guarantee is a number. On seven published sources, from movie ratings to engine replacement, the ledger locates the difference between standard algorithms and the classical limits. For identification among trained models and for Wald's test the largest term is usually the uniform quantification's.",
                 "category": [
                     {
                         "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "math.ST",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -500,30 +543,13 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-29T17:55:25Z",
+                "published": "2026-10-30T17:57:44Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
-                "author": [
-                    {
-                        "name": "Samson Gourevitch"
-                    },
-                    {
-                        "name": "Yazid Janati"
-                    },
-                    {
-                        "name": "Eric Moulines"
-                    },
-                    {
-                        "name": "Eric P. Xing"
-                    },
-                    {
-                        "name": "Alain Durmus"
-                    },
-                    {
-                        "name": "Giacomo Zanella"
-                    }
-                ]
+                "author": {
+                    "name": "Akshay Balsubramani"
+                }
             }
         ]
     }
