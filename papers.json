@@ -5,101 +5,243 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-11-03T00:18:31Z",
+        "updated": "2026-11-03T07:27:04Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "636879",
+        "opensearch:totalResults": "638092",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2610.42152v1",
-                "title": "GazeRIB: Systematic Evaluation of Multi-Reader Gaze-Guided Chest X-ray Learning",
-                "updated": "2026-10-30T17:59:59Z",
+                "id": "http://arxiv.org/abs/2611.03647v1",
+                "title": "Pixel-UMI: Learning Environment-Aware Whole-Body Manipulation from Sensorized Human Demonstrations",
+                "updated": "2026-11-02T18:59:32Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.42152v1",
+                        "@href": "https://arxiv.org/abs/2611.03647v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.42152v1",
+                        "@href": "https://arxiv.org/pdf/2611.03647v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Radiologists' visual attention can supervise medical image learning, but how reader panel composition affects its value remains untested. We evaluated GazeRIB (Gaze-guided Radiologist-Informed Blackout), which masks unviewed regions during training and uses unmasked images at inference. Eight experts repeatedly read the same 80 chest X-rays (CXRs). We compared individual readers with three-, five- and eight-reader panels across seven architectures and 10 seeds, evaluating 910 models on a separate 2,897-CXR cohort for four-class severity prediction. Every panel improved macro F1 over the no-gaze baseline by 5.33-7.47 percentage points (pp; Bonferroni-adjusted p < 0.007); no individual reader reached significance on this endpoint. Three readers captured 73-80% of the eight-reader gain in macro F1, the area under the receiver-operating-characteristic curve (ROC-AUC) and the area under the precision-recall curve (AU-PRC). On external validation without retraining, all four panels improved ROC-AUC on SIIM-FISABIO-RSNA by +1.93 to +4.24 pp (p <= 0.004); on MIMIC-Eye no panel differed significantly from baseline, whereas the single-reader average declined (-1.40 pp, p = 0.008). Reader composition therefore influenced performance, although transfer depended on the cohort.",
+                "summary": "Sensorized human demonstrations offer scalable data for mobile manipulation, but embodiment differences complicate policy learning. We present Pixel-UMI, a pipeline for learning environment-aware whole-body policies from human data. We first introduce Environment-Aware Retargeting (EAR), which combines reconstructed scene geometry with demonstrated head and gripper trajectories to determine robot posture and generate collision-aware joint and base targets. Delay-calibrated action assignment converts these trajectories into actions. However, kinematic differences can leave residual pose errors, creating viewpoint mismatches between human demonstrations and robot observations. We therefore introduce Retargeting-Error-Aware Masking (REAM), which uses these errors during training to reduce reliance on mismatched views at deployment. Finally, because estimated actions cannot fully capture contact-rich interactions, we collect on-policy human corrections through DAgger to improve performance. We evaluate Pixel-UMI on five challenging tasks spanning articulated-object manipulation, deformable-object handling, constrained-space reaching, whole-body collision avoidance, and contact-rich bimanual coordination, achieving 87.0% average task progress. Video results are available at https://pixel-robot.com/pixel-umi",
                 "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.HC",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "eess.IV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.SP",
+                        "@term": "eess.SY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-30T17:59:59Z",
-                "arxiv:comment": "20 pages on main manuscripts (3 tables + 4 figures), 14 pages supplementary (10 tables + 8 figures)",
+                "published": "2026-11-02T18:59:32Z",
+                "arxiv:comment": "Video results are available at https://pixel-robot.com/pixel-umi",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Jason Jingzhou Liu"
+                    },
+                    {
+                        "name": "Tony Tao"
+                    },
+                    {
+                        "name": "Deepak Pathak"
+                    },
+                    {
+                        "name": "Ruslan Salakhutdinov"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.03648v1",
+                "title": "Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation",
+                "updated": "2026-11-02T18:59:32Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.03648v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.03648v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "General-purpose mobile manipulation requires a combination of capable robot hardware, scalable demonstration collection, expressive whole-body control, and effective policy learning. Yet these components are often developed independently, creating mismatches that limit the capabilities of the complete system. We present Pixel, a co-designed full-stack system for learning general-purpose mobile manipulation. Pixel combines a low-cost wheeled humanoid with human-aligned kinematics and compliant grippers, multiple teleoperation and robot-free human data-collection interfaces, a unified whole-body controller, and a common policy learning pipeline across human and robot demonstrations. A hierarchical learning stack further enables language-conditioned visuomotor control and long-horizon task execution. We evaluate the system across hardware, data collection, and policy learning, and demonstrate mobile-manipulation behaviors requiring dexterity, active perception, navigation, and whole-body coordination. We hope that Pixel provides an integrated and extensible foundation for studying how robot hardware, data, control, and learning can be designed together for robot learning. More results at https://pixel-robot.com/pixel",
+                "category": [
+                    {
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-02T18:59:32Z",
+                "arxiv:comment": "More results at https://pixel-robot.com/pixel",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Tony Tao"
+                    },
+                    {
+                        "name": "Jason Jingzhou Liu"
+                    },
+                    {
+                        "name": "Ruslan Salakhutdinov"
+                    },
+                    {
+                        "name": "Deepak Pathak"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.03646v1",
+                "title": "EgoActionBench: Benchmarking Dense Action Captioning for Egocentric Human Videos",
+                "updated": "2026-11-02T18:59:29Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.03646v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.03646v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Learning from human data offers a scalable path toward embodied intelligence, yet it requires models to accurately understand fine-grained human actions from egocentric observations. However, existing benchmarks remain limited in action atomicity, temporal precision, and hand-action association. We introduce EgoActionBench, a benchmark that represents continuous human manipulation as temporally localized atomic actions associated with the left hand, right hand, or both hands. EgoActionBench contains 1,407 episodes with 41,132 human-refined action annotations. To evaluate such dense predictions, we propose an evaluation protocol that retrieves temporally eligible candidates, selects a prediction by content agreement, and scores semantic fidelity and temporal overlap alongside action precision and recall, jointly capturing what happens, when it happens, and which hand performs it. We benchmark 20 baseline models and systems on EgoActionBench and further adapt two backbones, Qwen3-VL-4B and LLaVA-OneVision-2-8B, through supervised fine-tuning followed by reinforcement learning on automatically annotated training episodes. EgoAction improves EgoActionScore by 15.9 and 23.2 points on the two backbones, and both adapted models outperform all open-source baselines. Our experiments reveal substantial limitations of current models in action atomicity, temporal precision, and hand-action association, highlighting the gap between general video understanding and the action understanding required for embodied intelligence.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-02T18:59:29Z",
+                "arxiv:comment": "32 pages, 16 figures. Project page: https://egoaction-bench.github.io",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Nattakorn Kittisut"
+                        "name": "Yujiao Shen"
                     },
                     {
-                        "name": "Roy M. Gabriel"
+                        "name": "Jiahe Song"
                     },
                     {
-                        "name": "Marly van Assen"
+                        "name": "Haitian Li"
                     },
                     {
-                        "name": "Mohammadreza Zandehshahvar"
+                        "name": "Jingkang Yang"
                     },
                     {
-                        "name": "Carlo N. De Cecco"
-                    },
-                    {
-                        "name": "Elizabeth A. Krupinski"
-                    },
-                    {
-                        "name": "Ali Adibi"
+                        "name": "Ziwei Liu"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.42149v1",
-                "title": "Latent Reasoning in Continuous Space for Unified Multimodal Models",
-                "updated": "2026-10-30T17:59:43Z",
+                "id": "http://arxiv.org/abs/2611.03639v1",
+                "title": "Quantum channel tomography: optimal bounds in the near-boundary regime",
+                "updated": "2026-11-02T18:58:12Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.42149v1",
+                        "@href": "https://arxiv.org/abs/2611.03639v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.42149v1",
+                        "@href": "https://arxiv.org/pdf/2611.03639v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought reasoning for image generation. As a result, existing reasoning-augmented UMMs often fail to inherit the test-time scaling and fine-grained controllability observed in large language models. We attribute this failure to a fundamental modality mismatch: reasoning is performed in a discrete token space, whereas image generation operates in a continuous space. To bridge this gap, we introduce a Latent Reasoning framework in Continuous space (LARC), which alleviates the token-level bottleneck by reasoning over continuous hidden states. Specifically, the training framework consists of two stages: (i) curriculum supervised fine-tuning (SFT), and (ii) information-gain reinforcement learning (RL). First, the curriculum SFT stage gradually converts token-level reasoning into latent reasoning. Subsequently, the information-gain RL stage self-evolves latent reasoning without ground truth supervision. Experiments across diverse text-to-image generation benchmarks show that LARC consistently improves generation quality, prompt following, and compositional fidelity. Notably, LARC achieves state-of-the-art performance on GenEval with a 7%p gain over BAGEL and demonstrates clear test-time scaling behavior, outperforming token-based generation under both parallel and sequential test-time scaling strategies.",
+                "summary": "Quantum channel tomography (also known as quantum process tomography) is a fundamental task in quantum information and quantum computing, aiming to learn the full description of an unknown quantum channel from black-box queries. For channels with input dimension $d_1$, output dimension $d_2$, and Kraus rank at most $r$, [CGO+26] identifies the dilation rate $\u03c4=rd_2/d_1\\geq 1$ as a key parameter governing a Heisenberg-to-classical transition in query complexity. While the optimal bounds in the boundary regime ($\u03c4=1$) and the away-from-boundary regime ($\u03c4\\geq 1+\u03a9(1)$) are now known, the precise behavior in the near-boundary regime ($1<\u03c4<1+o(1)$) has remained unresolved.\n  In this paper, we close this gap, thereby fully settling the query complexity of quantum channel tomography. Specifically, we show that the query complexity is\n  - $\u03a9(rd_1d_2/\\varepsilon^2)$ for diamond norm error $\\varepsilon$, matching the upper bound by [MB26, CGO+26],\n  - $\u0398(d_1^2/\\varepsilon+\\min\\{(\u03c4-1)d_1^2,(\u03c4-1)^2d_1^2d_2^2\\}/\\varepsilon^2)$ for Choi trace norm error $\\varepsilon$.\n  Our results reveal two qualitatively different forms of the Heisenberg-to-classical transition. For diamond norm tomography, the Heisenberg scaling disappears suddenly as soon as $\u03c4$ leaves the boundary regime. In contrast, Choi trace norm tomography exhibits a gradual transition from Heisenberg to classical scaling as $\u03c4$ moves from the boundary regime to the away-from-boundary regime.",
                 "category": [
                     {
-                        "@term": "cs.CV",
+                        "@term": "quant-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.IT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-02T18:58:12Z",
+                "arxiv:comment": "40 pages",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Kean Chen"
+                    },
+                    {
+                        "name": "Aadil Oufkir"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.03634v1",
+                "title": "WebHarbor: Docking Real Websites for Evolving GUI Agent Environments",
+                "updated": "2026-11-02T18:57:36Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.03634v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.03634v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "GUI web agents require realistic and interactive environments that remain stable during both evaluation and training. Live website evaluation suffers from changing content, access restrictions, and limited coverage of authenticated workflows, while existing synthetic environments for training often lack functional depth and visual fidelity. We propose WebHarbor, a suite of 153 executable and dockerized website environments that faithfully reconstruct the visual interfaces, content, and functional workflows of real-world web services under deterministic control. We build WebHarbor through task-driven human-agent collaboration, where environments evolve as new tasks expand their functional scope, coding agents implement the required changes, and human contributors audit visual fidelity, functional correctness, and task validity. The resulting suite comprises 3,518 tasks spanning multi-step and post-authentication workflows, where existing works often fail to cover. Beyond reliable evaluation, WebHarbor provides high-fidelity synthetic web environments for cost-efficient reinforcement learning (RL). We demonstrate that a Qwen 4B-level GUI agent trained with RL in WebHarbor generalizes to unseen tasks and performs competitively with leading open-source GUI web agents across four benchmarks. The code and data are publicly available at https://github.com/aiming-lab/WebHarbor.",
+                "category": [
+                    {
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -111,445 +253,396 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-10-30T17:59:43Z",
-                "arxiv:comment": "Published as conference proceeding for NeurIPS 2026. Last two authors advised equally",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Byungwoo Jeon"
-                    },
-                    {
-                        "name": "Yoonwoo Jeong"
-                    },
-                    {
-                        "name": "Hyunseok Lee"
-                    },
-                    {
-                        "name": "Minsu Cho"
-                    },
-                    {
-                        "name": "Jinwoo Shin"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.42147v1",
-                "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
-                "updated": "2026-10-30T17:59:34Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.42147v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.42147v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse attention, in which a dedicated indexer selects a subset of keys for the attention. Yet current methods of indexing either still have quadratic cost in context size or lose accuracy at ultra-long context scale. We address this with Latent Sparse Attention (LSA), an efficient attention method that maintains accuracy at ultra-long context. In LSA, keys are hierarchically clustered in a learned latent space, and queries score the hierarchy of clusters instead of scoring every key, making prefill, decode and training faster at long context. We propose two variants, Distilled-LSA (D-LSA), which can be applied to pre-trained models via distillation, and Native-LSA (N-LSA), which is trained natively on the next-token loss alone. On GLM-5.3-FLASH (QWEN-3.8-27B) at 10M tokens, D-LSA speeds up one attention layer by 22.7x (72.4x) in prefill and 4.6x (42.5x) in decode over its original sparse attention (full attention), while keeping similar accuracy across a variety of tasks. N-LSA matches the accuracy of full attention with a training speedup of 1.6x per layer at 128k tokens. LSA offers practical and efficient attention for models to benefit from ultra-long context.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-10-30T17:59:34Z",
+                "published": "2026-11-02T18:57:36Z",
+                "arxiv:comment": "31 pages",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Ales Kubicek"
+                        "name": "Zhaoyang Wang"
                     },
                     {
-                        "name": "Andrea Caciolai"
+                        "name": "Qianhui Wu"
                     },
                     {
-                        "name": "Liangzu Peng"
+                        "name": "Boyu Gou"
                     },
                     {
-                        "name": "Sukrit Sumant"
+                        "name": "Demi Wang"
                     },
                     {
-                        "name": "Benjamin Hoover"
+                        "name": "Jiacheng Zhang"
                     },
                     {
-                        "name": "Fraser Greenlee"
+                        "name": "Peichun Hua"
                     },
                     {
-                        "name": "Ruairidh M. Battleday"
+                        "name": "Qize Li"
                     },
                     {
-                        "name": "Radim Urban"
+                        "name": "Shi Qiu"
                     },
                     {
-                        "name": "Torsten Hoefler"
+                        "name": "Yifan Jiang"
                     },
                     {
-                        "name": "James C. R. Whittington"
+                        "name": "Yifan Zhang"
+                    },
+                    {
+                        "name": "Zexu Jin"
+                    },
+                    {
+                        "name": "Baolin Peng"
+                    },
+                    {
+                        "name": "Bolin Shen"
+                    },
+                    {
+                        "name": "Chetan Bansal"
+                    },
+                    {
+                        "name": "Dehan Kong"
+                    },
+                    {
+                        "name": "Deren Lei"
+                    },
+                    {
+                        "name": "Dongshen Peng"
+                    },
+                    {
+                        "name": "Fengqing Jiang"
+                    },
+                    {
+                        "name": "Hao Cheng"
+                    },
+                    {
+                        "name": "Haoqing Wang"
+                    },
+                    {
+                        "name": "Jiaming Shan"
+                    },
+                    {
+                        "name": "Jicheng Wang"
+                    },
+                    {
+                        "name": "Jingguang Zhou"
+                    },
+                    {
+                        "name": "Jixuan He"
+                    },
+                    {
+                        "name": "Kaide Zeng"
+                    },
+                    {
+                        "name": "Kangyu Zhu"
+                    },
+                    {
+                        "name": "Lama Moukheiber"
+                    },
+                    {
+                        "name": "Mufan Qiu"
+                    },
+                    {
+                        "name": "Peng Xia"
+                    },
+                    {
+                        "name": "Qihan Sun"
+                    },
+                    {
+                        "name": "Qingwei Lin"
+                    },
+                    {
+                        "name": "Qiushi Sun"
+                    },
+                    {
+                        "name": "Ruichen Zhang"
+                    },
+                    {
+                        "name": "Shuqing Luo"
+                    },
+                    {
+                        "name": "Si Qin"
+                    },
+                    {
+                        "name": "Sicheng Fan"
+                    },
+                    {
+                        "name": "Tao Xiong"
+                    },
+                    {
+                        "name": "Wenlin Yao"
+                    },
+                    {
+                        "name": "Xinyu Zhang"
+                    },
+                    {
+                        "name": "Xinyue Zeng"
+                    },
+                    {
+                        "name": "Xuanrui Li"
+                    },
+                    {
+                        "name": "Xuchao Zhang"
+                    },
+                    {
+                        "name": "Yian Wang"
+                    },
+                    {
+                        "name": "Yichao Liu"
+                    },
+                    {
+                        "name": "Yiming Liang"
+                    },
+                    {
+                        "name": "Yiyang Zhou"
+                    },
+                    {
+                        "name": "Yizhu Jiao"
+                    },
+                    {
+                        "name": "Yuetai Li"
+                    },
+                    {
+                        "name": "Yurun Chen"
+                    },
+                    {
+                        "name": "Yuxuan Zhang"
+                    },
+                    {
+                        "name": "Zheyuan Yang"
+                    },
+                    {
+                        "name": "Zhiyuan Yao"
+                    },
+                    {
+                        "name": "Zhongyang Li"
+                    },
+                    {
+                        "name": "Zihao Li"
+                    },
+                    {
+                        "name": "Zili Wang"
+                    },
+                    {
+                        "name": "Jianfeng Gao"
+                    },
+                    {
+                        "name": "Huaxiu Yao"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2610.42146v1",
-                "title": "Hierarchical World Models with Implicit Dynamics",
-                "updated": "2026-10-30T17:59:25Z",
+                "id": "http://arxiv.org/abs/2611.03633v1",
+                "title": "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+                "updated": "2026-11-02T18:56:43Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2610.42146v1",
+                        "@href": "https://arxiv.org/abs/2611.03633v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2610.42146v1",
+                        "@href": "https://arxiv.org/pdf/2611.03633v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at https://id-wm.github.io",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-30T17:59:25Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Gaoyue Zhou"
-                    },
-                    {
-                        "name": "Yvonne Wu"
-                    },
-                    {
-                        "name": "Zichen Jeff Cui"
-                    },
-                    {
-                        "name": "Nicolas Ballas"
-                    },
-                    {
-                        "name": "Mido Assran"
-                    },
-                    {
-                        "name": "Lerrel Pinto"
-                    },
-                    {
-                        "name": "Yann LeCun"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.42145v1",
-                "title": "SemEllipsoid: Semantic-aware Shape Abstraction with Ellipsoid",
-                "updated": "2026-10-30T17:59:14Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.42145v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.42145v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Representing 3D shapes using a set of primitives - known as shape abstraction - is an actively studied problem in computer graphics with wide applications in shape understanding, analysis, and simulation due to the compactness and computational efficiency of the primitive-based representation. Prior work has primarily focused on geometry-aware shape abstraction, where the objective is to approximate the input shape with a minimal set of primitives while preserving geometric fidelity. However, these methods often overlook semantic consistency, inevitably leading to primitives that span across multiple semantic parts. Such inconsistency can cause undesirable artifacts in downstream tasks such as part-level shape editing or manipulation. In this paper, we introduce a new task - semantic-aware shape abstraction, where the goal is to produce abstractions that are both geometrically faithful and semantically consistent, ensuring that each primitive adheres strictly to a single semantic part without crossing semantic boundaries. We propose SemEllipsoid, a novel method to address this problem using ellipsoidal primitives. The core idea is to inject semantic constraints into the primitive optimization process leveraging the availability of semantic cues from large-scale foundation models. We design a fully differentiable projection-blending-evaluation scheme to measure semantic divergence against input semantic masks, and formulate an alternating optimization strategy to iteratively solve for optimal semantic assignment and primitive configurations. Our method is non-learning-based, requiring no data collection or network training, and generalizes well to shapes from arbitrary categories. It also supports different levels of abstraction according to user demand. Extensive experiments and evaluations validate the effectiveness of our approach across several 3D shape collections.",
-                "category": [
-                    {
-                        "@term": "cs.GR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-30T17:59:14Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.GR"
-                },
-                "author": [
-                    {
-                        "name": "Kuankuan Cheng"
-                    },
-                    {
-                        "name": "Haocheng Yuan"
-                    },
-                    {
-                        "name": "Changjian Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.42141v1",
-                "title": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
-                "updated": "2026-10-30T17:58:48Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.42141v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.42141v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent work shows that a frozen robot policy performs far better inside an agent harness, where control code decides when to query the policy, consult vision tools, or command the arm directly. Yet today these harnesses are built by hand and redesigned for each new robot or benchmark. We show that harness design can be automated, offering a strong alternative to finetuning on a novel setup. In RoboArchitect, a coding model observes a robot's rollouts, diagnoses failures, and iteratively revises the harness around the frozen policy. The harness evolves on a set of episodes for its optimization and is evaluated on held-out scenes and tasks. Without updating any model weights, RoboArchitect raises average success from 9.7% to 43.3% on unseen scenes (4.5x) and from 12.7% to 40.2% on unseen tasks (3.2x), across multiple benchmarks and policies. The gains are largest where the benchmark is far from the policy's training data: wrapping a general-purpose policy, the evolved harness yields a specialist that often outperforms even the finetuned version. Intuitive control strategies are automatically designed, such as lifting a jammed arm clear or reaching in horizontally when an obstacle blocks the way from above. The harness also evolves its own persistent memory, carrying learned experience, such as effective grasp depths, into later decisions. These results suggest that substantial headroom in robotic manipulation lies in the agent harness, and its design can be effectively automated and optimized without weight updates.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-30T17:58:48Z",
-                "arxiv:comment": "Project Website: https://roboarchitect-ai.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Shengguang Wu"
-                    },
-                    {
-                        "name": "Suning Huang"
-                    },
-                    {
-                        "name": "Cherie Ho"
-                    },
-                    {
-                        "name": "Ria Doshi"
-                    },
-                    {
-                        "name": "Hao Zhu"
-                    },
-                    {
-                        "name": "Serena Yeung-Levy"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.42139v1",
-                "title": "Counting on Dummies: Privacy Amplification with Observable Counts and Truncated Batches",
-                "updated": "2026-10-30T17:58:42Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.42139v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.42139v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In many practical deployments of Differentially Private Stochastic Gradient Descent (DP-SGD), the server processes data in batches. Randomly sampling these batches allows for better privacy bounds via privacy amplification results. Most sampling schemes with provable privacy amplification, including Poisson sampling and random allocation, result in variable batch sizes. The privacy guarantee of these schemes requires that the batch sizes are not revealed. In distributed settings, the server performing the aggregation or any party observing the communication traffic may learn these batch sizes. Furthermore, in both centralized and distributed settings, memory and computation constraints may require each batch to be of some maximum size $s$, necessitating truncation of the batch when it exceeds this limit. It is known that this truncation can result in a significant increase in privacy loss. In this work, we address both of these challenges via a simple mechanism that uses a random number of \\emph{dummy points} to privatize the batch size and maintain the privacy guarantee even under truncation. We demonstrate that our mechanism is easy to implement in a distributed setting, and provide a general analysis of this mechanism for both Poisson sampling and random allocation. Our analysis is designed to support efficient and relatively tight privacy accounting. It also effectively amplifies the privacy of the count releases by subsampling, making the expected number of dummy points asymptotically smaller than what is needed to directly privatize the (sensitivity-one) batch sizes with non-negative noise. For Poisson sampling with truncated batches, we demonstrate empirically that our mechanism achieves better privacy--efficiency tradeoffs than the direct accounting for truncation recently given by (Ganesh, 2025).",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-30T17:58:42Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Vitaly Feldman"
-                    },
-                    {
-                        "name": "Audra McMillan"
-                    },
-                    {
-                        "name": "Kunal Talwar"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.42136v1",
-                "title": "ReLift: Dense 3D Tracking as Lifted Trajectory Repair",
-                "updated": "2026-10-30T17:58:33Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.42136v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.42136v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Dense 3D tracking from monocular video requires establishing point correspondences over time, estimating their depth, and inferring their trajectories during occlusion. Existing methods typically learn these tasks jointly, a demanding objective given the scarcity of 4D supervision. We show that strong pretrained 2D trackers and 3D geometry models provide an effective foundation: lifted trajectories, with occluded segments simply interpolated, already rival dedicated 3D trackers using the same geometry. However, lifted trajectories inherit correspondence and depth errors, and under occlusion, their depth comes from the occluder rather than the tracked point. We introduce ReLift, an efficient feed-forward framework that recasts dense 3D tracking as geometric trajectory repair and completion. At its core, a trajectory corrector alternates attention along and across trajectories to preserve reliable observations, repair corrupted positions, and complete missing motion. Using only geometric inputs allows us to train directly on 3D trajectories with simulated lifting errors, decoupling training from images and from any specific tracker or geometry model. Concentrating 4D supervision on trajectory refinement yields a reusable model that consistently improves lifted trajectories across trackers and geometry providers without retraining, so it benefits directly from future advances in either component. On WorldTrack, ReLift achieves state-of-the-art mean accuracy, improving on the strongest baselines by 2.1 APD on all points and 3.0 on dynamic points, with faster configurations remaining competitive with leading 3D trackers while running faster than 4RC. Visit our supplementry page for more examples and code.",
+                "summary": "Muon has recently emerged as a promising optimizer for pretraining large language models, offering a speedup over AdamW in minimizing pretraining loss. However, it remains unclear whether Muon's advantage persists after fine-tuning. In this paper, we study the downstream behavior of Muon and AdamW and uncover a surprising trend: beyond a sufficiently large pretraining data budget, AdamW outperforms Muon after fine-tuning. Moreover, as model size increases, AdamW overtakes Muon at progressively smaller pretraining token-parameter ratios. To explain this reversal, we view fine-tuning as a perturbation of the outputs and introduce the margin-to-spread ratio, which measures how far the correct logit lies above the wrong ones relative to how widely the wrong logits are spread. In language models, Muon has the larger margin-to-spread ratio at small data budgets and AdamW at large ones, mirroring the fine-tuning trend. In a linear associative memory, we prove that after one update the margin-to-spread ratio of gradient descent gains on that of Muon as the data budget grows, and simulations show that this trend persists after extended training.",
                 "category": {
-                    "@term": "cs.CV",
+                    "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-10-30T17:58:33Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Assaf Singer"
-                    },
-                    {
-                        "name": "Maroun Khriesh"
-                    },
-                    {
-                        "name": "Noam Rotstein"
-                    },
-                    {
-                        "name": "Yoni Kasten"
-                    },
-                    {
-                        "name": "Or Litany"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.42135v1",
-                "title": "A Better Critic Matters for Distribution Matching Distillation",
-                "updated": "2026-10-30T17:58:26Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.42135v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.42135v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Distribution Matching Distillation (DMD) trains a few-step student using the difference between a teacher's score and an online critic's estimate of the student distribution's score. We investigate what the critic needs, in capacity and in information, to provide a reliable training signal. On the capacity side, controlled experiments across seven SiT model sizes on ImageNet show that increasing teacher size while keeping a small critic fixed can degrade student quality and cause training collapse. Scaling the critic alongside the teacher, a strategy we call joint scaling, prevents collapse in our experiments and allows the student to benefit from larger teachers. On the information side, rather than forcing the critic to model a step-agnostic mixture of student outputs, we introduce a step-aware critic (STAC) that conditions on the student's generation step to estimate step-specific scores. Together, joint scaling and STAC consistently improve few-step distillation across class-conditional ImageNet generation, text-to-image generation with SDXL and FLUX.2, and text-to-video generation with Wan2.1.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-30T17:58:26Z",
-                "arxiv:comment": "35 pages, 16 figures. Project page and code: https://peppaking8.github.io/critic-matters/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Zongze Wu",
-                        "arxiv:affiliation": "Adobe"
-                    },
-                    {
-                        "name": "Xianbang Wang",
-                        "arxiv:affiliation": "MIT"
-                    },
-                    {
-                        "name": "Zhengyang Geng",
-                        "arxiv:affiliation": "Adobe"
-                    },
-                    {
-                        "name": "Mingdeng Cao",
-                        "arxiv:affiliation": "Adobe"
-                    },
-                    {
-                        "name": "Zhoutong Zhang",
-                        "arxiv:affiliation": "Adobe"
-                    },
-                    {
-                        "name": "Richard Zhang",
-                        "arxiv:affiliation": "Adobe"
-                    },
-                    {
-                        "name": "Eli Shechtman",
-                        "arxiv:affiliation": "Adobe"
-                    },
-                    {
-                        "name": "Ruiming Cao",
-                        "arxiv:affiliation": "Adobe"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2610.42133v1",
-                "title": "Instance-dependent sequential limits as an exact information ledger",
-                "updated": "2026-10-30T17:57:44Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2610.42133v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2610.42133v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Instance-dependent limits for bandit regret, sequential tests, best-arm identification and Markov decision processes are proved by one chain. It runs from a divergence decomposition through data processing to a statistic, a testing step that turns a class guarantee into a requirement on the history, and optimization over alternatives and allocations. Only the first step is an identity. This work writes the chain as an exact ledger. By the chain rule, data processing loses exactly a conditional divergence, which vanishes for arms in natural exponential families at the per-arm counts and reward sums. A one-parameter family of martingale identities extends the decomposition to every tilt between two instances. The classical limits follow by relaxations with named defects. All defects but the asymptotic step's can be computed from an algorithm's own runs, the uniform quantification's only when the class guarantee is a number. On seven published sources, from movie ratings to engine replacement, the ledger locates the difference between standard algorithms and the classical limits. For identification among trained models and for Wald's test the largest term is usually the uniform quantification's.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.IT",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.ST",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-10-30T17:57:44Z",
+                "published": "2026-11-02T18:56:43Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
-                "author": {
-                    "name": "Akshay Balsubramani"
-                }
+                "author": [
+                    {
+                        "name": "Catherine Li"
+                    },
+                    {
+                        "name": "Jingchu Gai"
+                    },
+                    {
+                        "name": "Andrej Risteski"
+                    },
+                    {
+                        "name": "Jacob Mitchell Springer"
+                    },
+                    {
+                        "name": "Aditi Raghunathan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.03628v1",
+                "title": "Active-subspace learning reveals dominant parameter directions in nuclear observables",
+                "updated": "2026-11-02T18:53:57Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.03628v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.03628v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Nuclear observables computed using ab initio methods can depend on many low-energy constants (LECs) of the underlying chiral effective field theory interactions, while being sensitive to only a few LEC combinations. We use active-subspace learning to identify these dominant parameter directions directly from many-body calculations. For ground-state energies and charge radii of oxygen isotopes, we find that more than 99% of the gradient-based variation is concentrated along a single direction for each observable in the 17-dimensional LEC space. Comparing these directions across nuclei and observables quantifies similarities in their LEC dependence. The same analysis yields derivative-based global sensitivities without requiring a global emulator. Active-subspace directions can also serve as an efficient representation for emulation, greatly improving Gaussian-process emulators especially for broad LEC variations. We demonstrate this for Hartree-Fock calculations of $^{48}\\mathrm{Ca}$, where the emulator error is improved with active-subspace learning by more than two orders of magnitude.",
+                "category": {
+                    "@term": "nucl-th",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-02T18:53:57Z",
+                "arxiv:comment": "10 pages, 8 figures",
+                "arxiv:primary_category": {
+                    "@term": "nucl-th"
+                },
+                "author": [
+                    {
+                        "name": "Tom Plies"
+                    },
+                    {
+                        "name": "Margarida Companys Franzke"
+                    },
+                    {
+                        "name": "Achim Schwenk"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.03627v1",
+                "title": "Not All Reasoning Generalizes: A Case Study on Learning Generalizable Reasoning Strategies in RLVR",
+                "updated": "2026-11-02T18:53:54Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.03627v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.03627v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Reinforcement learning with verifiable rewards (RLVR) can enable generalizable improvement for large language model (LLM) reasoning. This paper studies how to incentivize such generalization via reasoning strategies. We study this question with a controllable equation-solving framework: finding multiple inputs x for equations f(x)=y, where f is a non-bijective string function. This setting makes reasoning strategies observable while supporting a clear definition of easy-to-hard out-of-distribution (OOD) shifts, e.g., more solutions, longer y, etc. We uncover a subtle RLVR failure: it teaches the model to solve in-distribution tasks with high accuracy and structured step-by-step derivation, yet under OOD shifts, the same model abandons derivation and collapses to ineffective brute-force enumeration, causing sharp accuracy drops. This observation reveals the deeper challenges of RLVR generalization as it is neither incapable base model nor reward hacking, since the model succeeds in-distribution with the correct reasoning strategy. The key to mitigating this failure is an indirect intervention that surprisingly helps: co-training with bijective inversion tasks. Although these bijective tasks are actually not uniformly harder and even further from the non-bijective OOD evaluation, they make derivation more certain and substantially restore the correct strategy and accuracy under OOD shifts. This effect further motivates our theoretical analysis: outcome-only RLVR can shape reasoning processes through implicitly crediting the effective reasoning strategies more, even without process supervision. To conclude, our analysis framework and findings systematically reveal the crucial role and incentivization of reasoning strategies in RLVR generalization under OOD shifts. Code is available at https://github.com/ziqipang/rl_meta_thinking.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-02T18:53:54Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Ziqi Pang"
+                    },
+                    {
+                        "name": "Yu-Xiong Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.03625v1",
+                "title": "FADE: Factored Ability--Difficulty Filtering for Online RLVR Scheduling",
+                "updated": "2026-11-02T18:53:23Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.03625v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.03625v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Group-based reinforcement learning with verifiable rewards (RLVR) learns only from prompts whose sampled completions disagree: all-pass and all-fail groups produce zero relative advantage and burn generation budget without moving the policy. Adaptive schedulers try to steer rollouts toward informative prompts, yet they rely on per-prompt pass-rate trackers that entangle two quantities evolving at very different speeds---the policy's shifting competence across reasoning skills and each prompt's intrinsic difficulty. When a single exponential average or Beta counter tracks both at once, short memory scrambles the relative ordering of prompts whereas long memory reports stale pass rates. We introduce FADE (Factored Ability--Difficulty Estimation), a bilinear state-space filter that separates the two timescales. FADE represents each prompt's success logit as the inner product of a whitened $K$-dimensional skill loading with a fast-drifting policy ability vector, minus a slow-shrinking scalar item intercept. Using P\u00f3lya--Gamma augmentation, each minibatch of binary rollout outcomes updates the $K$-dimensional ability posterior in closed form via a rank-$K$ Woodbury step, instantly transferring competence shifts to all unobserved prompts that share those skills while leaving item intercepts stable. From the resulting posterior mean and variance we derive a closed-form utility for the probability of drawing a non-degenerate rollout group. Across five reasoning benchmarks, two base models, and four scheduling paradigms under a matched rollout budget, FADE consistently improves downstream accuracy and calibration while adding less than $0.6$\\,ms per step.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-02T18:53:23Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Tomas Duncun"
+                    },
+                    {
+                        "name": "Jonah Ellison"
+                    },
+                    {
+                        "name": "Mateo Ruiz"
+                    },
+                    {
+                        "name": "Hanae Fujita"
+                    },
+                    {
+                        "name": "Ingrid Solberg"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.03623v1",
+                "title": "Thought-deciphering via hierarchical EEG-to-text alignment",
+                "updated": "2026-11-02T18:52:26Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.03623v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.03623v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Communication is important for our well-being, but it can be impaired by disabilities, such as locked-in syndrome (LIS), cerebral palsy (CP), and dysarthria. Non-invasive brain-to-text brain-computer interfaces (BCIs) offer a promising solution by providing an alternative communication pathway for people with communication disabilities. However, most recent breakthroughs have relied on large, cumbersome, and costly neuroimaging modalities, such as functional magnetic resonance imaging (fMRI) and magnetoencephalography (MEG). Numerous studies have attempted decoding using the lighter and cheaper electroencephalography (EEG), but the results remain inferior compared to the other modalities. More importantly, we do not understand how these modalities are related to text at the letter, word, sentence, and higher semantic levels. Many prior studies have focused on decoding below the sentence level because it is considerably easier to design an experiment around phonemes, letters, and words. However, during communication, sentences play a much more important role than words and letters. This is because sentences carry information at such a high level that they can be understood even if some words and letters are missing. However, within sentence-level decoding, sentence classification is not as well investigated as sentence generation, making it difficult to decide whether a sentence should be retrieved or generated in the context of EEG-to-text decoding. This paper strives to investigate sentence-level EEG-to-text classification via a novel hierarchical alignment framework, where the main goal is to retrieve a read sentence using its context and EEG as inputs.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SP",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-02T18:52:26Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Xiaopeng Mao"
+                    },
+                    {
+                        "name": "Morten M\u00f8rup"
+                    },
+                    {
+                        "name": "Xin Xu"
+                    },
+                    {
+                        "name": "Sang Wan Lee"
+                    },
+                    {
+                        "name": "Sadasivan Puthusserypady"
+                    }
+                ]
             }
         ]
     }
