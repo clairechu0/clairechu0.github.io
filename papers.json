@@ -5,96 +5,359 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-11-09T23:14:24Z",
+        "updated": "2026-11-10T21:07:47Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "640042",
+        "opensearch:totalResults": "641102",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2611.09894v1",
-                "title": "Video-Coder: Reinforcing Agentic Coding for Video Generation",
-                "updated": "2026-11-06T18:59:57Z",
+                "id": "http://arxiv.org/abs/2611.12886v1",
+                "title": "Reframe: Observation-Aligned Multi-Teacher On-Policy Distillation for Agentic Visual Reasoning",
+                "updated": "2026-11-09T18:59:54Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.09894v1",
+                        "@href": "https://arxiv.org/abs/2611.12886v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.09894v1",
+                        "@href": "https://arxiv.org/pdf/2611.12886v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent years have witnessed remarkable progress in video generation in terms of visual quality and temporal consistency. However, generating videos with precise spatial structure, coherent motion dynamics, and controllable scene composition remains challenging. In this paper, we introduce Video-Coder, the first attempt to train a code-driven video generation agent, which autonomously writes and executes code to construct a dynamic 3D scene (Draft Video) that provides structure and motion signals to downstream video generators. To support this paradigm, we design a dedicated data pipeline and curate two high-quality datasets, Video-Coder-SFT-6k and Video-Coder-RL-2k, which contain diverse prompts and ground-truth reference videos. We further develop the Video- Coder Harness, a unified interactive environment integrating code execution, 3D scene rendering, and execution feedback for agent training and inference. We then train Video-Coder with SFT fol- lowed by harness-native agentic reinforcement learning with dual reward feedback, which combines execution-based and video-based rewards. Additionally, we design an annealing training strategy that gradually reduces the execution reward over time, allowing the model to rely more on the video reward in the later training stages. Experiments show that Video-Coder achieves significant gains, improving Minimax-H3 by approximately 7 points on PhyGenBench and 24 points on VBench-2.0. We hope this work can serve as an open foundation for coding agents in video generation, and we fully open-source our data, models, and code",
+                "summary": "Agentic reinforcement learning (RL) and multi-teacher on-policy distillation (MOPD) offer complementary routes to post-training. For visual agents, however, tool use presents two related challenges. Models may overlook useful tool-returned observations, while poorly grounded actions can limit the evidence available for subsequent distillation. We introduce Reframe, a post-training framework that treats the observation state, rather than only the output distribution, as an object of alignment. First, Ground-Drop-GRPO (GD-GRPO) trains spatial and temporal specialists with evidence-aware rewards and stochastic removal of the original visual input, encouraging them to acquire grounded evidence and use the returned observations. Second, Observation-Gated-MOPD (OG-MOPD) replaces deficient tool actions with canonical ones mid-rollout and resumes distillation from the repaired observation. The two stages complement each other, as learning to rely on tool-returned observations can help the policy benefit from observation repair. Neither stage requires a task-specific SFT cold start. Extensive experiments over 14 image and video benchmarks demonstrate that Reframe outperforms both Mix-RL and vanilla MOPD. Ablation results show that GD-GRPO increases observation dependence and tool gain compared with outcome-based GRPO.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-06T18:59:57Z",
-                "arxiv:comment": "Project Page:https://cywang735.github.io/Video-Coder/ Code: https://github.com/CYWang735/Video-Coder",
+                "published": "2026-11-09T18:59:54Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Chaoyang Wang"
+                        "name": "Haozhi Yuan"
                     },
                     {
-                        "name": "Sicheng Gao"
+                        "name": "Handong Li"
                     },
                     {
-                        "name": "Junan Hu"
+                        "name": "Yifan Zhang"
                     },
                     {
-                        "name": "Kunyang Li"
-                    },
-                    {
-                        "name": "Dongyang Chen"
-                    },
-                    {
-                        "name": "Yiyang Zhou"
-                    },
-                    {
-                        "name": "Huaxiu Yao"
-                    },
-                    {
-                        "name": "Yong Jae Lee"
-                    },
-                    {
-                        "name": "Radu Timofte"
-                    },
-                    {
-                        "name": "Yuzhang Shang"
+                        "name": "Qianshan Wei"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.09892v1",
-                "title": "On Agentic Manipulation Policies",
-                "updated": "2026-11-06T18:59:34Z",
+                "id": "http://arxiv.org/abs/2611.12885v1",
+                "title": "World In-Context Learning for Agentic Robot Manipulation",
+                "updated": "2026-11-09T18:59:45Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.09892v1",
+                        "@href": "https://arxiv.org/abs/2611.12885v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.09892v1",
+                        "@href": "https://arxiv.org/pdf/2611.12885v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Recent work on robot manipulation has focused on specialist policies trained on demonstrations. We show that generalist AI models can control manipulators more reliably than specialist policies such as vision-language-action models (VLAs) and world-action models (WAMs). We systematically analyze agentic manipulation policies (AMPs), in which a generalist AI model commands the manipulator directly, adapting its actions as the task unfolds. We present AMP1, a reference harness that runs unchanged across single-arm, bimanual, and mobile manipulation. AMP1 achieves state-of-the-art results on the RoboLab-120 and CaP-Gym benchmarks, with no demonstrations or task-specific training. On RoboLab-120, AMP1 reaches an 85.6\\% success rate zero-shot, compared to 49.2\\% and 42.9\\% for leading VLA and WAM policies. The agent succeeds zero-shot in 104 of 108 real-world trials spanning twelve tasks and three robot instances, reducing failure rates by 20x and 15x relative to strong VLA and WAM baselines. The basic harness supplies no grasping, pushing, or placing skills; the agent develops its own strategies, such as searching for hidden objects, using objects as tools, and calibrating its cameras. With the addition of a persistent memory store, the agent can also learn from experience: an augmented harness with a memory representation that is carried across episodes lowers the failure rate on RoboDojo bimanual manipulation tasks by 4.6x relative to zero-shot deployment. Our analysis suggests that AMPs are substantially more general and robust than specialist manipulation policies, providing a promising foundation for robot manipulation.",
+                "summary": "Trained action policies write manipulation skill into network weights, tying what is learned to the distribution it is learned from. In-context learning (ICL) avoids this coupling but has not matched trained policies, because a demonstration recorded in another scene carries no feedback from the world the robot currently faces. We observe that what an agent learns in context is semantic, recording task steps and object roles rather than visual appearance, so experience gathered in one world transfers to another. Based on this insight, we propose World In-Context Learning (WICL), a paradigm in which a frozen model starts from a demonstration, rehearses the task in a world such as a simulator, and writes the feedback into its context rather than its weights. We build RoboScript, a modular infrastructure that implements WICL for agentic manipulation. From a single demonstration, RoboScript learns each task through rehearsal in simulation, freezes the learned knowledge as a Task Memory, and deploys the frozen memory on new scenes with data isolation that ensures every deployment input is available on a real robot. On all 50 tasks of RoboTwin 2.0, RoboScript reaches 83.4% mean success across clean and randomized settings with one demonstration per task and no gradient updates, exceeding the strongest trained action policy by over 20 points. The method generalizes across visual distributions, improves through reflection, scales with the foundation model, and transfers to a physical dual-arm robot through cross-embodiment memory adaptation. With a world in the loop, a robot can learn a manipulation task in its context as well as it learns one in its weights. All code is available at https://github.com/ArcheOne-AI/RoboScript",
                 "category": [
                     {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
                         "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-09T18:59:45Z",
+                "arxiv:comment": "Project Page: https://ArcheOne-AI.github.io/RoboScript",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Heng Fang"
+                    },
+                    {
+                        "name": "Zehui Guo"
+                    },
+                    {
+                        "name": "Yuehan Zhang"
+                    },
+                    {
+                        "name": "Mingyang Du"
+                    },
+                    {
+                        "name": "Dingkang Liang"
+                    },
+                    {
+                        "name": "Xiang Bai"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.12884v1",
+                "title": "Guiding Data Allocation for Robust Subpopulation Generalization",
+                "updated": "2026-11-09T18:59:40Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.12884v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.12884v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Machine learning models often achieve high average accuracy in the training data while performing poorly on test data due to subpopulation shift. A common data-centric solution is to enforce balanced subgroup proportions, but full balance can be costly, infeasible, and not always necessary. In this work, we study whether balanced training data is the unique optimal configuration for robust subpopulation generalization. We extend a Gaussian feature-model framework to theoretically characterize the performance landscape across general training subgroup distributions. We show that multiple configurations, including substantially imbalanced ones, can perform comparably to the balanced one. We further derive gradient-based directions for adjusting subgroup proportions to improve adjusted accuracy and worst-group accuracy more efficiently. These findings suggest that strategically allocating data offers a more flexible and principled path to robust performance than simple balancing. The code is available at https://github.com/zhaoyingpan/subpop-data-allocation.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-09T18:59:40Z",
+                "arxiv:comment": "NeurIPS 2026",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Zhaoying Pan"
+                    },
+                    {
+                        "name": "Yipei Wang"
+                    },
+                    {
+                        "name": "Shenyu Lu"
+                    },
+                    {
+                        "name": "Xiaoqian Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.12880v1",
+                "title": "Kolmogorov-Chapman Maps: Trajectory-Free Learning for Simulating Molecular Dynamics",
+                "updated": "2026-11-09T18:59:13Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.12880v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.12880v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Stochastic differential equations (SDEs) describe stochastic processes across a wide range of scientific domains, including physics, biology, and finance. Although individual numerical integration steps are inexpensive, observing meaningful events or transitions can require millions of sequential steps, resulting in substantial wall-clock simulation time and poor hardware utilization. Deep learning offers an alternative by amortizing many integration steps into a single neural network forward pass, potentially enabling much faster simulation. However, existing supervised approaches typically require long simulated trajectory data, which restricts their applicability. In this work, we introduce Kolmogorov-Chapman Maps (KC-Maps), a method for learning the transition kernel of an SDE that relies only on the trajectory-free marginal samples together with the known drift and diffusion coefficients. Given an initial time and state of a process, KC-Maps models its distribution integrated to any given time, corresponding to the weak solution of the SDE. To recover the correct dynamics, KC-Maps satisfies two key properties: (i) it satisfies the boundary conditions, which we incorporate directly into the neural network architecture, and (ii) it respects the Kolmogorov--Chapman equation, which provides an efficient training objective. We empirically demonstrate that KC-Maps learns to integrate the dynamics of peptide molecular systems and outperforms classical molecular dynamics in terms of GPU-hours.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-09T18:59:13Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Majdi Hassan"
+                    },
+                    {
+                        "name": "Marta Skreta"
+                    },
+                    {
+                        "name": "Dominique Beaini"
+                    },
+                    {
+                        "name": "Kirill Neklyudov"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.12879v1",
+                "title": "Grasping the Future: Joint 3D Hand-Object Forecasting From Internet Videos",
+                "updated": "2026-11-09T18:59:01Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.12879v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.12879v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "To interact with an object, we need to anticipate both how it will move and how our hands should move with it. Human videos capture these relationships across everyday activities, offering a natural source for learning to predict future interactions. Learning from them requires recovering motion from completed interactions and using it to anticipate what could happen next. We present $\\textit{Grasping-the-Future}$, a unified generative model of joint 3D hand-object motion, including wrist motion, finger articulation, and object position and orientation. Through masked spatiotemporal completion and flow matching, we train a single model for several prediction tasks: forecasting future interactions, predicting hand motion given object motion or vice versa, generating both trajectories toward a desired final object pose, and completing partially observed interactions. We explicitly model hand-object relations and incorporate contact constraints to help preserve grasp relationships during motion. To obtain 3D supervision from internet videos, we develop a scalable pipeline that combines pretrained perception models with joint geometric optimization to reconstruct completed interactions. We combine these recovered trajectories with annotated interaction datasets as training data for all tasks. We demonstrate strong performance across all tasks, outperforming released forecasters on datasets with 3D annotations. Moreover, we show geometric and physical plausibility of the predicted trajectories by retargeting them to a robotic embodiment. Videos are available at https://grasping-the-future.github.io.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-09T18:59:01Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Rustin Soraki"
+                    },
+                    {
+                        "name": "Matthew Wallingford"
+                    },
+                    {
+                        "name": "Ryan Aby"
+                    },
+                    {
+                        "name": "Brandon Chee"
+                    },
+                    {
+                        "name": "Jason Ren"
+                    },
+                    {
+                        "name": "Ali Farhadi"
+                    },
+                    {
+                        "name": "Homanga Bharadhwaj"
+                    },
+                    {
+                        "name": "Roozbeh Mottaghi"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.12878v1",
+                "title": "Adaptive Quantization Preserves Fast Rates for TD Learning over Rate-Limited Channels",
+                "updated": "2026-11-09T18:58:41Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.12878v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.12878v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Motivated by reinforcement learning subject to communication constraints, we study a policy evaluation problem with linear function approximation over a rate-limited channel. In our setup, an agent interacting with an unknown environment (modeled as a Markov Decision Process) transmits quantized estimates of a temporal-difference (TD) learning update direction to a server over a finite-capacity channel. Our goal is to investigate to what extent one can preserve the statistical convergence rates achievable when the channel has infinite capacity. To that end, we propose a new algorithm called Batched Adaptively Quantized TD (BAQ-TD), which uses batching to reduce the variance of the transmitted information, and adaptive quantization to encode innovations. We prove a high-probability finite-time error bound for BAQ-TD, and show that, above a certain finite channel capacity, BAQ-TD preserves the convergence rate of unquantized TD up to logarithmic factors. Specifically, for a $d$-dimensional value function parameter, we establish that transmitting a total of $\\mathcal{O}(d \\log(T))$ bits over a horizon of length $T$ suffices to achieve the order-optimal rate of $\\tilde{\\mathcal{O}}(1/T)$, marking an exponential improvement in communication-complexity over prior work.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-09T18:58:41Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Sreejeet Maity"
+                    },
+                    {
+                        "name": "Aritra Mitra"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.12876v1",
+                "title": "The simulability frontiers of photonic quantum computing",
+                "updated": "2026-11-09T18:58:02Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.12876v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.12876v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Estimates of when photonic devices outgrow classical simulation are hard to compare: even for single-photon boson sampling, quoted thresholds range from 50 to 98 photons, as they rest on different tasks and assumptions. We propose as a common unit the time a classical computer needs to draw one sample from the device's exact output distribution, up to floating-point rounding. Only exactness applies equally to every kind of light, since the cost of approximate sampling depends on the accuracy required. The simulability frontier is the device size at which our fastest exact sampler produces one sample per second on a fixed machine; this device size increases with better hardware and algorithms. As the time per sample grows exponentially with the number of detected photons, doubling the machine speed moves the frontier by about one photon, whereas a better algorithm changes the growth rate. We measure the frontier with photonic-engines, an open-source GPU library of exact samplers for single photons, entangled photons from quantum emitters, vacuum-single-photon superpositions and squeezed light. Each sampler is validated against a simulator sharing no code with it. On one NVIDIA H100 GPU, with Haar-random interferometers, twice as many modes as photonic inputs and photon-number-resolving detectors, the frontier lies at 38.3 single photons and at 31.0 entangled photons from one emitter. For squeezed light, a timing model fitted to measurements places it at 41.5 squeezed photonic inputs of mean photon number 0.5. For our samplers, coherence alone makes simulation harder: sources that emit a photon with probability one half reach 64.2 when vacuum and photon are mixed incoherently, as for lossy single photons, but only 50.0 when they are in coherent superposition. Feed-forward from mid-circuit measurement of up to three modes lowers the single-photon frontier only from 38.3 to 38.1.",
+                "category": {
+                    "@term": "quant-ph",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-09T18:58:02Z",
+                "arxiv:comment": "22 pages of main text, 4 Figures, 4 Tables and 22 pages of Supplementary Information",
+                "arxiv:primary_category": {
+                    "@term": "quant-ph"
+                },
+                "author": [
+                    {
+                        "name": "Jean Senellart"
+                    },
+                    {
+                        "name": "Benjamin Stott"
+                    },
+                    {
+                        "name": "Stephen Wein"
+                    },
+                    {
+                        "name": "Esperanza Cuenca Gomez"
+                    },
+                    {
+                        "name": "Pascale Senellart"
+                    },
+                    {
+                        "name": "Shane Mansfield"
+                    },
+                    {
+                        "name": "Pierre-Emmanuel Emeriau"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.12872v1",
+                "title": "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents",
+                "updated": "2026-11-09T18:57:00Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.12872v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.12872v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "As multimodal agents accumulate increasingly long interaction histories, effectively retrieving and utilizing past information becomes critical for long-term interaction. Existing memory systems typically rely on semantic retrieval over compressed memories and expose predefined representations, which may miss relevant memories and overlook heterogeneous evidence needs across queries. We introduce \\textbf{\\hivemem}, a multimodal memory framework that interleaves \\textbf{\\textsc{H}}or\\textbf{\\textsc{i}}zontal Memory Expansion with \\textbf{\\textsc{Ve}}rtical Evidence Composition. For horizontal memory expansion, \\hivemem organizes memory episodes into a relational graph using textual and visual anchors, expanding semantically retrieved seeds with related neighbors to recover complementary information. For vertical evidence composition, each retrieved memory retains multiple evidence forms, including compact summaries, captions, grounded visual views, raw images, and interaction history. A lightweight trainable selector independently composes an evidence subset for each retrieved memory, enabling query-adaptive utilization of heterogeneous multimodal information. This two-dimensional design jointly broadens memory coverage and adapts the evidence contributed by individual memories. Experiments across three multimodal memory benchmarks show that \\hivemem consistently improves task performance across base models while reducing token consumption by about 90\\% compared with the most efficient competing multimodal baselines.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -102,426 +365,143 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-06T18:59:34Z",
-                "arxiv:comment": "Videos and code available at: https://apple-aiml-research.github.io/ml-amp/",
+                "published": "2026-11-09T18:57:00Z",
+                "arxiv:comment": "Code is available at https://github.com/ViktorAxelsen/HiVe-Mem",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Chen Chen"
+                        "name": "Haozhen Zhang"
                     },
                     {
-                        "name": "Omid Bagherieh"
+                        "name": "Bohan Liu"
                     },
                     {
-                        "name": "Naveen Nikamanth Appiah Balaji"
+                        "name": "Jianzhu Bao"
                     },
                     {
-                        "name": "Jesse T. Gonzalez"
+                        "name": "Qingyuan Liu"
                     },
                     {
-                        "name": "Negin Heravi"
+                        "name": "Haodong Yue"
                     },
                     {
-                        "name": "Fahad Islam"
+                        "name": "Xiao Li"
                     },
                     {
-                        "name": "Xueting Li"
+                        "name": "Zi Pong Lim"
                     },
                     {
-                        "name": "Jean-Baptiste Regli"
-                    },
-                    {
-                        "name": "Kejia Ren"
-                    },
-                    {
-                        "name": "Petr \u0160vec"
-                    },
-                    {
-                        "name": "David J. Yoon"
-                    },
-                    {
-                        "name": "Matthias M\u00fcller"
-                    },
-                    {
-                        "name": "Vladlen Koltun"
+                        "name": "Wenya Wang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.09889v1",
-                "title": "SciCheck: A Framework for Verifying the Integrity of Deep Learning Training",
-                "updated": "2026-11-06T18:58:38Z",
+                "id": "http://arxiv.org/abs/2611.12871v1",
+                "title": "Vendi Anomaly Scores for Efficient and Accurate Anomaly Detection",
+                "updated": "2026-11-09T18:56:15Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.09889v1",
+                        "@href": "https://arxiv.org/abs/2611.12871v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.09889v1",
+                        "@href": "https://arxiv.org/pdf/2611.12871v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Deep learning training is difficult to verify within a scientific workflow: its architecture, hyperparameters, and procedure are rarely fixed until training has been attempted, and two honest runs never produce the same weights, so recomputation cannot serve as a check. We present SciCheck, a framework in which the scientist explores training configurations freely and posts a blueprint to a provenance ledger for each candidate they want verified, and a verifying scientist judges the resulting run in two layers: a statistical judge model that compares per-step gradient statistics against the verifier's own reference run, and a spot-check that re-executes randomly chosen training segments whose checkpoints are committed to the ledger one epoch at a time. On an MLP, a CNN, and an autoencoder at 100k-500k parameters, under gradient sign flipping, label poisoning, and fabricated runs, SciCheck reaches F1 of 0.966, 0.906, and 0.976 while rejecting 0-4.4% of honest runs. For the attacks we test, the spot-check accounts for most of this accuracy, and we characterize what each layer can detect. The effective-signal statistic falls as $(1-2s)^2$ under a sign flip of severity $s$, so gradient statistics alone catch strong enough sign flips, while fabricated runs that replay genuine statistics look no more anomalous than honest runs to any statistical detector we test. The spot-check catches fully fabricated segments with probability at least $1-(1-s)^k$ for $k$ sampled segments when the draws stay hidden until the run is committed, which roughly matches our measurements and lets a verifier choose $k$ for a target soundness. Verification costs 1.5-2.3x one retraining, mostly for the verifier's reference run; each submission's spot-check takes under 1.5 s, and per-epoch commitments reduce checkpoint storage 5-17x compared with keeping every checkpoint.",
+                "summary": "Anomaly detection (AD) is a critical for trustworthy machine learning and scientific discovery. Existing methods typically define anomalies through local density, isolation heuristics, or distance from a fitted distribution, making them sensitive to neighborhood scale, partitioning choices, or restrictive distributional assumptions. In this work, we introduce a new paradigm by formulating anomaly detection from a diversity perspective. We propose the $\\textit{Vendi Anomaly Score}$ (VAS), which detects anomalies by quantifying how much a sample changes the diversity of the dataset, as measured by the Vendi score, when removed. VAS captures both local redundancy and global data structure without relying on density estimation or partitioning heuristics. Moreover, VAS requires no hyperparameter tuning, instead adapting automatically to the spectral structure of the data. VAS is non-parametric and scales linearly with dataset size. Across 148 benchmark embedding datasets derived from 10 source datasets and 4 embedding architectures, VAS achieves state-of-the-art AD performance. We further validate VAS on large-scale ImageNet experiments, where it remains robust as both contamination rate and dataset scale increase.",
                 "category": {
-                    "@term": "cs.CR",
+                    "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-06T18:58:38Z",
-                "arxiv:comment": "10 pages, 3 figures, 6 tables",
-                "arxiv:primary_category": {
-                    "@term": "cs.CR"
-                },
-                "author": [
-                    {
-                        "name": "Alexander Nguyen"
-                    },
-                    {
-                        "name": "Dylan Gresham"
-                    },
-                    {
-                        "name": "Gaby G. Dagher"
-                    },
-                    {
-                        "name": "Min Long"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.09888v1",
-                "title": "Scenario Orchestration for Closed-loop Policy Evaluation of Autonomous Driving",
-                "updated": "2026-11-06T18:58:27Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.09888v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.09888v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Scenario-based simulation is central to evaluating autonomous-driving policies, but a scenario scripted before execution (i.e., with predetermined, fixed actor routes and speeds) may not preserve its intended interaction once the tested ego policy responds in closed loop. Scripted scenarios cannot adapt to unanticipated ego behavior, while learned traffic actors may remain reactive without reliably realizing a particular scenario intent. We introduce a scenario orchestrator that continuously monitors the joint traffic state and adapts non-ego actors through re-timing, re-routing, and role reassignment for creating a specific scenario intent. At each step, the orchestrator solves a constrained optimization problem that preserves the intended interaction while limiting interventions and maintaining traffic feasibility. We further distinguish scenario realization from policy failure, allowing a test to first be judged based on whether the intended interaction occurred and then by how the ego policy responded. Experiments in the CARLA simulator across multiple scenario families and driving policies show that orchestration realizes targeted interactions more reliably than scripted and learned actor-level baselines, particularly under variations in initial conditions and ego behavior. These results support closed-loop scenario orchestration as a tool for controlled and reproducible policy evaluation.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-06T18:58:27Z",
-                "arxiv:comment": "8 pages, 5 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Frieda Rong"
-                    },
-                    {
-                        "name": "Zhaoyue Wang"
-                    },
-                    {
-                        "name": "Veer Kapadia"
-                    },
-                    {
-                        "name": "Vishaka Rajani"
-                    },
-                    {
-                        "name": "Aren A. Babikian"
-                    },
-                    {
-                        "name": "Xujie Si"
-                    },
-                    {
-                        "name": "Mahsa Golchoubian"
-                    },
-                    {
-                        "name": "Raquel Urtasun"
-                    },
-                    {
-                        "name": "Igor Gilitschenski"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.09887v1",
-                "title": "On the (non-)closedness of the set of ReLU networks",
-                "updated": "2026-11-06T18:58:06Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.09887v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.09887v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We prove that the set $\\mathcal{N}_N$ of ReLU networks with one hidden layer and at most $N\\in\\mathbb N$ neurons is weakly closed in $W^{1,p}(\u03a9)$, for a bounded connected open set $\u03a9\\subset\\mathbb R^d$. Consequently, every coercive, weakly lower semicontinuous energy on this space attains its minimum over $\\mathcal{N}_N$. This covers the Deep Ritz method with convex integrands, Sobolev training and Lipschitz learning. Moreover, as the weight decay parameter tends to zero, minimizers of the regularized problem converge, up to subsequences, to minimizers with minimal parameter norm. We also prove that the set of ReLU networks with two hidden layers of bounded widths is not closed in $W^{1,p}(\u03a9)$ or in $C(\\overline\u03a9)$. This disproves a conjecture of Petersen, Raslan and Voigtlaender.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.CA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.FA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.NA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.OC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-06T18:58:06Z",
-                "arxiv:comment": "27 pages, 6 figures",
+                "published": "2026-11-09T18:56:15Z",
+                "arxiv:comment": "Accepted to the NeurIPS 2026 Main Track",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Eloi Martinet"
+                        "name": "Amey Pasarkar"
                     },
                     {
-                        "name": "Leon Bungert"
+                        "name": "Adji Bousso Dieng"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.09882v1",
-                "title": "FlowMoP: Stochastic Multi-Person Motion Prediction",
-                "updated": "2026-11-06T18:56:41Z",
+                "id": "http://arxiv.org/abs/2611.12870v1",
+                "title": "SWAM: Scaling World Action Models with Cross-Modal Alignment",
+                "updated": "2026-11-09T18:55:04Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.09882v1",
+                        "@href": "https://arxiv.org/abs/2611.12870v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.09882v1",
+                        "@href": "https://arxiv.org/pdf/2611.12870v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Predicting the future motion of multiple people is inherently stochastic: the same observed history admits many plausible continuations depending on intent, coordination, and social context. Yet the dominant paradigm in multi-person 3D motion prediction remains deterministic, with existing methods producing a fixed number of outputs per agent. In contrast, we present a conditional flow matching framework that jointly generates diverse future motions for multiple agents, modeling both global trajectories and root-relative poses. A B-spline reparameterization compresses the generative state space while enforcing temporal smoothness, and a dual-stream transformer conditions each agent's predictions on observed neighbor motion for interaction-aware forecasting. Our method achieves state-of-the-art performance on CMU-Mocap (UMPM) and 3DPW, outperforming deterministic baselines on joint position error, pose error, and final displacement error despite producing a full predictive distribution. We additionally establish the first motion prediction baseline on WorldPose, a large-scale professional soccer dataset, where social conditioning demonstrably concentrates predictive uncertainty along interaction-constrained directions.",
+                "summary": "World action models jointly predict video and actions conditioned on language. Existing studies focus primarily on architectures and training mechanisms, typically treating language-video alignment acquired through video pretraining as an established foundation. However, introducing action learning may impair this alignment. Principled guidance on data and supervision design for maintaining language-video alignment during action learning remains limited. To investigate this, we curate a pool of approximately 47,000 hours of general videos, egocentric videos, UMI demonstrations, and robot demonstrations. Building on this, we systematically study how language-video supervision, language-video-action supervision, and the joint use of these two forms affect WAM performance. In particular, we examine how language annotation quality affects pretrained language-video capabilities, and how action supervision from UMI and robot demonstrations extends these capabilities to language-video-action modeling. To better scale the model, we further conduct detailed studies on joint training recipe and model architecture. Under a fixed training budget, mixing egocentric videos and UMI demonstrations improves control generalization. Model architecture affects how effectively these experiences are used, while scaling pretraining under the selected configuration brings further gains. The resulting recipe, post-trained on RoboTwin Clean demonstrations only, achieves success rates of 88.10% and 61.56% under Easy (Clean-to-Clean) and Hard (Clean-to-Random) conditions, respectively. Our model achieves 40.00% SR across three real-world tasks, compared with 23.33% for the strongest baseline, indicating better generalization under unseen conditions. We release the curated data, training code, and model weights.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-06T18:56:41Z",
-                "arxiv:comment": "Accepted at NeurIPS 2026. 22 pages, including references and appendix",
+                "published": "2026-11-09T18:55:04Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Aadya Agrawal"
+                        "name": "Yu Zhou"
                     },
                     {
-                        "name": "Ho Kei Cheng"
+                        "name": "Xinyuan Xia"
                     },
                     {
-                        "name": "Alexander Schwing"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.09880v1",
-                "title": "ZeoBench: A Benchmark for Self-Supervised Learning on 3D Zeolite Representations",
-                "updated": "2026-11-06T18:55:34Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.09880v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Xuankun Yang"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.09880v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Zeolites are an important class of porous crystalline materials with broad applications in gas storage, separations, and catalysis. Although hundreds of thousands of experimentally realized and hypothetical zeolite structures are known, identifying materials optimized for a target application remains challenging because property labels are expensive to obtain and available only for limited structure-molecule pairs. While prior work has demonstrated that 3D neural representations can predict zeolite properties effectively, it remains unclear which representation-learning strategies are most effective in the low-data regime relevant to materials discovery. We present ZeoBench, a benchmark for self-supervised learning on dense 3D representations of all-silica zeolites, and evaluate the resulting features on six existing downstream adsorption-property prediction tasks, across a range of training set sizes. Our study compares self-supervised 3D pretraining on volumetric zeolite data, adaptations of image-pretrained 2D ConvNets and vision transformers to 3D via multiview and channel-inflation strategies, and 3D ConvNets pretrained on out-of-domain volumetric datasets, alongside hand-crafted descriptors and supervised baselines. Using our pretraining and evaluation framework, we find self-supervised 3D representations outperform existing methods and achieve state-of-the-art performance across both in-domain label regimes and for the unseen domain of metal organic frameworks. Learned representations consistently outperform hand-crafted descriptors, and convolutional architectures are generally more effective than vision transformers in this setting. These results establish ZeoBench as a practical benchmark for 3D representation learning in zeolites and provide guidance for data-limited adsorption property prediction.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-06T18:55:34Z",
-                "arxiv:comment": "NeurIPS 2026 Datasets and Benchmarks Track",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Aaron Sun"
+                        "name": "Yinghao Yang"
                     },
                     {
-                        "name": "Yachan Liu"
+                        "name": "Wendi Chen"
                     },
                     {
-                        "name": "Ping Yang"
+                        "name": "Bowen Liu"
                     },
                     {
-                        "name": "Peng Bai"
+                        "name": "Jianhan Ma"
                     },
                     {
-                        "name": "Subhransu Maji"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.09878v1",
-                "title": "Graded convolutional networks: scale invariance without the scale and robustness to unknown blur",
-                "updated": "2026-11-06T18:54:03Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.09878v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Weicheng Duan"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.09878v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The Gaussian jet of an image is a graded vector space: a dilation by $\u03bb$ multiplies derivatives of order $k$ by $\u03bb^{-k}$. Local graded convolutions are exactly homogeneous differential operators, and a local feature is dilation-invariant if and only if it factors through the scale-normalized jet or, without the scale, through the retraction onto the weighted sphere of the grading. Under unknown Gaussian blur the retraction changes only by a change of scale, whereas the scale-normalized jet acquires a grading factor that no radial normalization removes. At the zero jet the retraction separates image families that radial normalizations and continuous classifiers cannot. Networks built on the retraction are universal for invariant features. On MNIST such a network keeps 88.4% accuracy under a two-pixel blur, against 66.2% for the same network on scale-normalized derivatives; in Lindeberg's Gaussian derivative network the retraction raises accuracy at that blur from 91.5% to 95.1%.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
+                        "name": "Jun Lv"
                     },
                     {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-06T18:54:03Z",
-                "arxiv:comment": "26 pages, 2 figures, 7 tables. Code, trained networks and results: https://doi.org/10.5281/zenodo.23997172",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": {
-                    "name": "Tanush Shaska"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.09872v1",
-                "title": "On the Reliability of Majority-Vote Pseudo-Labels in Test-Time Reinforcement Learning",
-                "updated": "2026-11-06T18:49:02Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.09872v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
+                        "name": "Cewu Lu"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.09872v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Test-time reinforcement learning (TTRL) adapts pretrained language models to unlabeled target-domain data using self-generated pseudo-labels, whose reliability remains poorly understood. We analyze majority-vote supervision for TTRL with online Direct Preference Optimization (DPO) and decompose its error into population-majority bias and prompt-dependent finite-rollout variation. Because population-majority bias is generally unidentifiable without external supervision, we focus on mitigating the downstream effects of finite-rollout variation. We propose \\emph{Prompt-Conditional Distributionally Robust DPO (PC-Dr.DPO)}, which conditions within-prompt robust reweighting on observed vote reliability to make updates from sampling-sensitive prompts more conservative. We further introduce a cache-based mechanism to reduce self-supervised forgetting during online adaptation. Across six mathematical and knowledge-intensive reasoning benchmarks and five model backbones, PC-Dr.DPO matches or outperforms the strongest TTRL baseline in 24 of 30 settings.",
-                "category": {
-                    "@term": "cs.AI",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-06T18:49:02Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Haoyu Wang"
-                    },
-                    {
-                        "name": "Ru Wang"
-                    },
-                    {
-                        "name": "Yuanyuan Wang"
-                    },
-                    {
-                        "name": "Jiaxian Guo"
-                    },
-                    {
-                        "name": "Mingming Gong"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.09870v1",
-                "title": "AI Exposure and the Changing Responsibilities in Job Postings",
-                "updated": "2026-11-06T18:48:36Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.09870v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.09870v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The growing adoption of artificial intelligence (AI) in the workplace has raised questions about how employer demand for different work activities is changing. We examine how the prevalence and content of work activities in online job postings change in association with activity-level measures of AI exposure, derived from Copilot and Claude usage. To enable systematic comparisons, we develop a pipeline that extracts the responsibilities from job advertisements and maps them onto O*NET's standardized taxonomy of Intermediate Work Activities (IWAs). We then apply this approach to 50,000 job advertisements from 33 firms between 2023 and 2025. From this analysis, we first find that explicit mentions of AI increased by 66%, although much of this growth occurs outside descriptions of the actual work activities associated with a job. Looking specifically at the advertised job responsibilities, activities with greater AI exposure tend to decline in advertised prevalence, but only mildly as a share of the total number of responsibilities. At the same time, more AI-exposed work activities increasingly are associated with explicitly AI-related responsibilities, suggesting that employers are looking to hire people who can perform these responsibilities with AI.",
-                "category": {
-                    "@term": "cs.CY",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-06T18:48:36Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CY"
-                },
-                "author": [
-                    {
-                        "name": "Dora Zhao"
-                    },
-                    {
-                        "name": "Lin Ai"
-                    },
-                    {
-                        "name": "Pranav Khadpe"
-                    },
-                    {
-                        "name": "Siddharth Suri"
-                    },
-                    {
-                        "name": "Scott Counts"
+                        "name": "Yanwei Li"
                     }
                 ]
             }
