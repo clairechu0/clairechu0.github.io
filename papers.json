@@ -5,33 +5,33 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-11-17T23:16:19Z",
+        "updated": "2026-11-18T14:55:07Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "643798",
+        "opensearch:totalResults": "644292",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2611.21608v1",
-                "title": "Latent Lattice Language Models",
-                "updated": "2026-11-16T18:59:38Z",
+                "id": "http://arxiv.org/abs/2611.23229v1",
+                "title": "Ambient LLMs: Data-Efficient Supervised Fine-tuning via Temperature Matching",
+                "updated": "2026-11-17T18:59:37Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.21608v1",
+                        "@href": "https://arxiv.org/abs/2611.23229v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.21608v1",
+                        "@href": "https://arxiv.org/pdf/2611.23229v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Language models typically increase per-token computation through deeper or looped layers and latent reasoning steps, while richer residual connections improve information flow across layers. We instead increase computational capacity: the number of active computational states a model maintains. We introduce the Lattice of Latents, a set of per-layer horizontal latent streams that run recurrently along time, alongside the vertical residual stream that flows through depth. Like hyper-connections, mHC, and attention or value residuals, the Lattice enhances the residual stream, but rather than adding or rerouting residual pathways through depth, it provides companion computational states that persist across tokens. Unlike hybrid Transformer-SSM architectures, whose recurrent states primarily serve as internal memory for sequence mixing, these latents directly condition the vertical stream's attention, KV-cache writes, MLP computation, and decoding. On Transformers trained on 20B FineWeb-Edu tokens, a 406M-parameter Lattice model lowers validation perplexity from 15.41 to 14.40 over a parameter-matched Transformer. These gains extend across architectural variants. The Lattice composes with prior residual-stream enhancements: with hyper-connections and input residuals, it lowers validation perplexity from 15.41 (base Transformer) and 14.22 (Transformer with the same enhancements) to 13.61. On Gated DeltaNet, Mamba-2, Triadic GDN, and GDN-Mamba-2 hybrids, it improves perplexity at every tested native state size, with Lattice-GDN and Lattice-Triadic-GDN variants outperforming pure baselines with 4x larger native states. These results identify persistent per-layer state as a complementary axis for scaling language-model computation.",
+                "summary": "Collecting large-scale, diverse, and high-quality post-training datasets for autoregressive language models is challenging. Consequently, Supervised Fine-Tuning (SFT) is typically applied to datasets significantly smaller than those used for pre-training, which leads to overfitting and the catastrophic forgetting of the tails of the data distribution. To prevent this collapse, we introduce Ambient SFT, a principled framework for leveraging imperfect predictions to augment the fine-tuning set. In our method, a \"frozen\" version of the pre-trained model serves as a noisy teacher that the fine-tuned model must match at a coarse level. In particular, we require that the high-temperature versions of the conditional distributions produced by the post-training model should match the high-temperature versions of the pre-training ones. The temperature hyperparameter controls the level of trust in the pre-trained model, with the limit $T\\to \\infty$ reverting back to regular SFT and $T=1$ to knowledge distillation. We demonstrate that our approach outperforms standard SFT across domain adaptation, instruction-tuning, and reasoning, leading for up to $21\\%$ average relative improvement to standard SFT.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -46,119 +46,94 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-16T18:59:38Z",
-                "arxiv:comment": "Project page: https://shivamduggal4.github.io/latent-lattice-language-model/",
+                "published": "2026-11-17T18:59:37Z",
+                "arxiv:comment": "Work in progress",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Shivam Duggal"
+                        "name": "Giannis Daras"
                     },
                     {
-                        "name": "Zongze Wu"
+                        "name": "Marios Papachristou"
                     },
                     {
-                        "name": "William T. Freeman"
+                        "name": "Adam Klivans"
                     },
                     {
                         "name": "Antonio Torralba"
                     },
                     {
-                        "name": "Richard Zhang"
-                    },
-                    {
-                        "name": "Eli Shechtman"
+                        "name": "Constantinos Daskalakis"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.21607v1",
-                "title": "ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters",
-                "updated": "2026-11-16T18:59:37Z",
+                "id": "http://arxiv.org/abs/2611.23228v1",
+                "title": "Spool: Low-Latency Streaming Inference for Hybrid Vision-Language Models",
+                "updated": "2026-11-17T18:59:27Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.21607v1",
+                        "@href": "https://arxiv.org/abs/2611.23228v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.21607v1",
+                        "@href": "https://arxiv.org/pdf/2611.23228v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Frontier Vision-Language Models (VLMs) such as GPT-6 Astra have demonstrated remarkable capabilities in robot control, suggesting that broad pretraining provides knowledge valuable for physical action. Yet most Vision-Language-Action (VLA) policies still rely on much smaller VLM backbones, leaving this potential largely untapped. We ask whether frontier-scale representations can provide a stronger foundation for robot learning. We introduce ScaleVLA, which connects a 552B DeepSeek-V4.1-Flash backbone to a trainable action DiT, and systematically compare VLMs from 2B to 552B under a shared training setup. We evaluate three fundamental capabilities of robot foundation models. In sample efficiency, just 10 demonstrations outperform a 2B backbone trained with 50 (87.8% vs. 85.6%). In generalization, LIBERO-PRO success reaches 45.1%, compared with at most 31.3% for smaller backbones. In precise manipulation, real-world charger insertion improves from 4/10 to 9/10 successes, with gains concentrated in contact-sensitive alignment. Despite its scale, ScaleVLA achieves 216 ms median latency per action chunk. Our findings suggest that frontier VLMs can serve not only as reasoning agents, but also as powerful representational foundations for efficient and generalizable robot policies.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-16T18:59:37Z",
-                "arxiv:comment": "Tech Report",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Ruixi Yu"
-                    },
-                    {
-                        "name": "Dairu Liu"
-                    },
-                    {
-                        "name": "Xuchuan Chen"
-                    },
-                    {
-                        "name": "Zekun Qi"
-                    },
-                    {
-                        "name": "Zekai Li"
-                    },
-                    {
-                        "name": "Zhuo Cao"
-                    },
-                    {
-                        "name": "Luyang Niu"
-                    },
-                    {
-                        "name": "Yingsheng Zhang"
-                    },
-                    {
-                        "name": "Sikai Liang"
-                    },
-                    {
-                        "name": "Ke Fan"
-                    },
-                    {
-                        "name": "He Wang"
-                    },
-                    {
-                        "name": "Li Yi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.21605v1",
-                "title": "ViRA: Toward Ultra-High-Resolution Visual Agents via Cross-Input Relative Policy Optimization",
-                "updated": "2026-11-16T18:59:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.21605v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.21605v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Visual agents answer questions about ultra-high-resolution photos by zooming into the relevant regions. However, existing agents often answer from common sense instead of reading the evidence. Reinforcement learning (RL) on the final answer cannot correct this, because a guess earns the same reward as reading. We propose Cross-Input Relative Policy Optimization (CrossRPO), which trains agents on contrast sets. A contrast set asks one question about several versions of an image that differ only in a small region with the evidence and have different answers, so only reading the evidence solves the whole set. CrossRPO rewards solving the whole set, and we prove that it does not reinforce a set answered from common sense. We build contrast sets for training (ViRA-Train) and evaluation (ViRA-Bench) by editing one small object in images of 21 to 120 megapixels, and we photograph further sets with real changes (ViRA-Bench-Real) to exclude editing traces. We train two Visual Reasoning Agents, ViRA-9B and ViRA-27B, with CrossRPO on only about 3,500 items of ViRA-Train each. CrossRPO achieves 63.3% set accuracy on ViRA-Bench at the maximum resolution, against 59.3% for GRPO. ViRA-9B is the most accurate open model of its size on all benchmarks, and ViRA-27B outperforms Claude Haiku 5.5 and GPT-6-Luna, both at their highest thinking level, on most benchmarks.",
+                "summary": "Applications such as visual accessibility agents and robotics require answering questions about recent video content promptly, over a bounded window of past frames (e.g., the last two minutes). Hybrid vision-language models (VLMs), which interleave attention with linear recurrent layers such as Gated DeltaNet (GDN), are attractive for this setting, but maintaining a sliding window is expensive. The reason is that recurrent layers combine all past frames into a shared state, so expiring old frames normally requires re-running the entire window through the model. We observe that the recurrent update is affine in the state with input-dependent coefficients, so the effect of each frame can be captured as a transformation that composes associatively. We present Spool, a training-free framework that caches per-frame state transformations and composes them efficiently as the window advances, removing expired frames from each recurrent layer's state without replaying frames through the backbone. Removal is exact within each layer; as with key-value eviction in attention, expired frames can retain residual influence through the cached inputs computed by earlier layers. We design a dedicated data structure and GPU kernels to achieve low caching and composition overhead. Across five open-source hybrid VLMs and four video reasoning benchmarks, Spool achieves the lowest p95 time-to-first-token in all 20 model-benchmark tests, reducing it by a geometric mean of $6.6\\times$ over the faster of two recent vLLM baselines, while improving accuracy by 2.3 percentage points on average.",
                 "category": [
                     {
                         "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-17T18:59:27Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Rui Ning"
+                    },
+                    {
+                        "name": "Om Chabra"
+                    },
+                    {
+                        "name": "Hari Balakrishnan"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.23225v1",
+                "title": "StringQFT: A Multiuse Textbook Resource for AI-Assisted Theoretical Physics",
+                "updated": "2026-11-17T18:58:40Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.23225v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.23225v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We present StringQFT as a textbook collection for string constructions of quantum field theory and as infrastructure for AI-assisted theoretical physics. The collection comprises 18 volumes, 190 chapters and 3,795 pages, covering brane probes, brane webs, geometric engineering, F-theory constructions, wrapped M5-branes and exact worldsheet constructions. Its open-book benchmark inventory contains 1,073 items, including 499 with automatic finite-answer checking. For retrieval-augmented generation, it provides 1,371 section records linked to textbook sources and PDF locations, together with a local lexical retriever. Training-data preparation is illustrated by 21 private, source-linked examples. For agents, it exposes 19 calculation tools with specified inputs and finite domains, connecting tool use to textbook derivations. We illustrate these uses through specific questions, retrieved passages and finite calculations. The textbook collection and accompanying resources are available at https://github.com/xingyang-yu/StringQFT.",
+                "category": [
+                    {
+                        "@term": "hep-th",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -166,180 +141,121 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-16T18:59:04Z",
-                "arxiv:comment": "74 pages, 11 figures, 26 tables. Code: https://github.com/huawei-lin/ViRA",
+                "published": "2026-11-17T18:58:40Z",
+                "arxiv:comment": "23 pages, 6 figures. Companion paper to an 18-volume textbook collection. Textbook PDFs: https://xingyangyu.com/textbook/",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "hep-th"
                 },
-                "author": [
-                    {
-                        "name": "Huawei Lin"
-                    },
-                    {
-                        "name": "Jinting Liu"
-                    },
-                    {
-                        "name": "Tongyan Wang"
-                    },
-                    {
-                        "name": "Xuyang Chen"
-                    },
-                    {
-                        "name": "Ruihua Shi"
-                    },
-                    {
-                        "name": "Zhichao Xu"
-                    },
-                    {
-                        "name": "Jiaxin Qin"
-                    },
-                    {
-                        "name": "Guoshenghui Zhao"
-                    },
-                    {
-                        "name": "Baijian Yang"
-                    },
-                    {
-                        "name": "Yingjie Victor Chen"
-                    },
-                    {
-                        "name": "Tan Yu"
-                    },
-                    {
-                        "name": "Weijie Zhao"
-                    }
-                ]
+                "author": {
+                    "name": "Xingyang Yu"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2611.21604v1",
-                "title": "FaceJev: Direct Visual Decisions for Face Forgery Detection",
-                "updated": "2026-11-16T18:59:04Z",
+                "id": "http://arxiv.org/abs/2611.23221v1",
+                "title": "An inexact stochastic variance-reduced gradient method for constrained convex finite-sum optimization",
+                "updated": "2026-11-17T18:57:16Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.21604v1",
+                        "@href": "https://arxiv.org/abs/2611.23221v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.21604v1",
+                        "@href": "https://arxiv.org/pdf/2611.23221v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Face forgery detection methods often perform well on seen manipulations but generalize poorly to unseen ones. Multimodal Large Language Models (MLLMs) can recognize facial parts and assess their visual plausibility. Existing MLLM-based methods typically express these judgments through textual explanations, but seldom treat individual part decisions as explicit learning targets. We present FaceJev, an MLLM-based method for face forgery detection through direct visual decisions. Following the Jev formulation, FaceJev answers eight independent questions about facial parts using a shared image encoding and reads anomaly probabilities from the native answer logits. A face is classified as forged if any part is predicted to be abnormal, directly linking the detection result to the part decisions. We construct PartForensics, a dataset of approximately 160k images with binary anomaly targets for the eight facial parts, to supervise these decisions. We further propose FS-GRPO, which optimizes each part decision through an exact reward comparison with its alternative, using both detection and part rewards. FaceJev outperforms the strongest baseline by 7.25 percentage points on unseen manipulations. Extensive ablation studies validate our design choices and the effectiveness of the main components.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-16T18:59:04Z",
+                "summary": "In this paper, we study a class of constrained convex finite-sum optimization problems. In many practical applications, all or some of the constraints are hard constraints that represent imperative requirements. Consequently, any desirable approximate solution must (nearly) satisfy these constraints. Motivated by this, we focus on computing an $\u03b5$-$surely\\ feasible\\ stochastic\\ optimal$ ($\u03b5$-SFSO) solution, in which the constraint violation is deterministically bounded by $\u03b5$, and the expected optimality gap is at most $\u03b5$. While a recently proposed stochastic variance-reduced first-order penalty method can compute an $\u03b5$-SFSO solution, there remains a significant gap between its first-order oracle complexity for computing an $\u03b5$-SFSO solution and that for computing an $\u03b5$-$expected\\ feasible\\ stochastic\\ optimal$ solution, where both the expected constraint violation and the expected optimality gap are bounded by $\u03b5$. To narrow this gap, we propose an inexact stochastic variance-reduced gradient (SVRG) method that significantly improves the previously best-known first-order oracle complexity for computing an $\u03b5$-SFSO solution. Furthermore, when the objective consists of a single function, the proposed method reduces to a novel deterministic first-order method for solving standard convex conic optimization. It achieves a significantly lower gradient evaluation complexity with respect to the objective function compared to existing methods, and can outperform them when computing constraint gradients and projections onto the associated cone is cheaper than evaluating the objective gradient. Preliminary numerical results are presented to illustrate the performance of the proposed method.",
+                "category": [
+                    {
+                        "@term": "math.OC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-17T18:57:16Z",
+                "arxiv:comment": "Accepted by SIAM Journal on Optimization",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "math.OC"
                 },
                 "author": [
                     {
-                        "name": "Siran Peng"
+                        "name": "Zhaosong Lu"
                     },
                     {
-                        "name": "Tianshuo Zhang"
-                    },
-                    {
-                        "name": "Yibo Xue"
-                    },
-                    {
-                        "name": "Ajian Liu"
-                    },
-                    {
-                        "name": "Haoyuan Zhang"
-                    },
-                    {
-                        "name": "Weisong Zhao"
-                    },
-                    {
-                        "name": "Shuhuan Chen"
-                    },
-                    {
-                        "name": "Xiangyu Zhu"
-                    },
-                    {
-                        "name": "Zhen Lei"
+                        "name": "Yifeng Xiao"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.21602v1",
-                "title": "Quantifying the added value of human forecaster discussions for tropical cyclone intensity prediction",
-                "updated": "2026-11-16T18:58:55Z",
+                "id": "http://arxiv.org/abs/2611.23219v1",
+                "title": "Do LLM Agents Still Need to Be Told How to Self-Improve?",
+                "updated": "2026-11-17T18:57:10Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.21602v1",
+                        "@href": "https://arxiv.org/abs/2611.23219v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.21602v1",
+                        "@href": "https://arxiv.org/pdf/2611.23219v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The National Hurricane Center routinely releases Tropical Cyclone Discussions that offer insights into its tropical cyclone forecasts. This study examines the added value of these discussions for intensity forecasting beyond a set of numerical predictors. For 637 Atlantic and eastern North Pacific tropical cyclones from the 2002-2023 hurricane seasons, we analyze the discussion text and its combination with 13 hurricane environmental predictors from SHIPS and ERA5 10-meter wind fields, for forecasting intensity changes at lead times of 24 to 120 hours using three modeling methods. In one approach, an end-to-end deep learning framework for the text shows that the discussions alone offer comparable value for 24-hour intensity forecasts to the SHIPS predictors. Adding discussion information to the SHIPS predictors in an ensemble of five such models reduces the mean absolute error of 24-hour maximum sustained wind forecasts for 2022-2023 cyclones from 9.89 to 8.90 kt, with a confidence interval that excludes zero when whole storms are resampled. The ERA5 wind fields have a minor effect on mean absolute error in wind predictions, and model rankings differ across predicted variables, lead times and model types. We provide prediction intervals for these forecasts, whose coverage falls below the 90% target during rapid intensification. Analysis of the text shows that words related to intensity and intensity change (such as intensify, weaken, eyewall and category) are important for the model predictions. This retrospective study shows the added value of the forecasters' discussions and suggests that multi-modal learning can help understand the predictive contribution of expert human judgment. The reanalysis data differ from real-time analyses, and the discussions are issued at least three hours after the valid time of the other inputs, so these results should not be interpreted operationally.",
+                "summary": "LLM agents increasingly drive their own learning. Self-improvement methods delegate various components of model optimization to the models themselves. As models become more capable, this motivates a basic question: do these increasingly capable models still need us to specify how they should self-improve? In this paper we study an autonomous paradigm in which, given basic primitives, resources, and a general goal for self-improvement, agents construct their own self-learning algorithm for context-based optimization. Using the setting of gameplay as a testbed, a frozen LLM agent is given a compute budget and tools for collecting experience and updating text documents, and allowed to freely experiment without an externally imposed loop or access to real-world data. We find that sufficiently capable models do self-improve under these conditions, demonstrating strategies that align with classic cognitive frameworks for self-regulated learning and constructs from machine learning literature on self-generated curricula. Furthermore, we study the extent to which the learned text artifacts transfer to external benchmarks, observing improvement across different game horizons, mechanics, and 3D navigation.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CL",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-16T18:58:55Z",
-                "arxiv:comment": "74 pages, 24 figures, 35 tables",
+                "published": "2026-11-17T18:57:10Z",
+                "arxiv:comment": "Project page: https://ssundaram21.github.io/self-org/",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Ilia Azizi"
+                        "name": "Shobhita Sundaram"
                     },
                     {
-                        "name": "Frederick Iat-Hin Tam"
+                        "name": "Cansu Sancaktar"
                     },
                     {
-                        "name": "Marc-Olivier Boldi"
-                    },
-                    {
-                        "name": "Val\u00e9rie Chavez-Demoulin"
-                    },
-                    {
-                        "name": "Tom Beucler"
+                        "name": "Phillip Isola"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.21600v1",
-                "title": "How VLMs Plan What's Next",
-                "updated": "2026-11-16T18:58:30Z",
+                "id": "http://arxiv.org/abs/2611.23218v1",
+                "title": "What Does a Bias Head Measure? Non-Identifiability in Head-Level Bias Attribution",
+                "updated": "2026-11-17T18:57:08Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.21600v1",
+                        "@href": "https://arxiv.org/abs/2611.23218v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.21600v1",
+                        "@href": "https://arxiv.org/pdf/2611.23218v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "When a vision-language model describes an image, it names one object at a time and it rarely repeats itself, yet how the model plans this order is far from obvious. We characterize the mechanism a VLM uses to decide where to look before it looks. The mechanism has four main parts. First, binding heads match the relevant text tokens against the image and resolve them into pointers to the matched image region. Second, the same binding heads bind each written answer to the region it came from, and the model turns it into a progress signal: a cursor, the position in the image up to which the list has been written. Third, a select step chooses the nearest unwritten region after the cursor, or stops. Finally, gaze heads execute the chosen pointer and return a concept of what is drawn there, which language heads and the late MLPs turn into a word in the language of the question. We validate each part of this mechanism through causal patching in Qwen3-VL models on a synthetic visual retrieval task, and test our mechanisms against alternative hypotheses. We further show that the mechanism holds across input formats, natural photographs, and languages, and that its binding, relay, and gaze heads appear at every model size from 2B to 32B. This work allows us to investigate how a VLM turns a question and an image into a sequence of answers, layer by layer and token by token. More broadly, it opens a way to study how models plan over complex multi-step tasks with long rollouts. Our project is available at https://plan.baulab.info/",
+                "summary": "Methods that localise social bias in large language models to individual attention heads and remove it by ablation are validated by their effect on a fairness metric, never by evidence that the statistic selecting the heads measures bias. We audit this on Qwen-2.5-7B-Instruct and Llama-3.1-8B-Instruct. The head map correlates at $\u03c1= -0.950$ and $-0.768$ with a label-blind response-length map, apparently identifying a surface confound. An intervention that breaks the length-label coupling rejects this reading: with the prompt held fixed, response length explains 1% of the statistic's variance. What does explain it is prompt identity, at 64% of variance, in an ordering that is not monotonic in length. Within any fixed prompt the fairness label, response length and the presence of a protected-group token are collinear at $\u03c6= 0.95$, partly by definition of the labelling rule, so no observational analysis can attribute the map to any of them, and no method in this family performs an experiment that could. The substantive claims fail independently: bias selectivity is not late-layer-concentrated on either model under either reference reading, and no head set we tested reduces the unfairness rate when ablated. Its complement, scored on the opposite label, reliably destroys refusal behaviour ($p = 2.7\\times10^{-5}$), demonstrating that the pipeline detects effects at this scale.",
                 "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
@@ -349,108 +265,36 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-16T18:58:30Z",
+                "published": "2026-11-17T18:57:08Z",
+                "arxiv:comment": "18 pages, 13 tables. Under review at ACL Rolling Review (October 2026 cycle)",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.CL"
                 },
-                "author": [
-                    {
-                        "name": "Rohit Gandikota"
-                    },
-                    {
-                        "name": "Arnab Sen Sharma"
-                    },
-                    {
-                        "name": "Adam Belfki"
-                    },
-                    {
-                        "name": "David Bau"
-                    }
-                ]
+                "author": {
+                    "name": "S. M Seefat Alam"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2611.21599v1",
-                "title": "Hyperlyve: Parallelized Enumeration and Exact Lyapunov Stability Certification for Deep ReLU Networks",
-                "updated": "2026-11-16T18:58:29Z",
+                "id": "http://arxiv.org/abs/2611.23216v1",
+                "title": "Higher-Scoring Coding Models Did Not Get More Work Done",
+                "updated": "2026-11-17T18:56:42Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.21599v1",
+                        "@href": "https://arxiv.org/abs/2611.23216v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.21599v1",
+                        "@href": "https://arxiv.org/pdf/2611.23216v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We introduce Hyperlyve (Hyperplane Partitioned Lyapunov Verification and Enumeration), a framework for proving the asymptotic stability of nonlinear dynamical systems, including those with neural network controllers. Hyperlyve learns and formally certifies continuous piecewise-affine (CPA) neural Lyapunov functions within a counterexample-guided inductive synthesis (CEGIS) loop. Hyperlyve's key innovation is a parallel algorithm that enumerates the hyperplane arrangement formed by the ReLU activations of deep networks and certifies that Lyapunov conditions hold within each polyhedral region. We derive sound and complete regional tests to verify the asymptotic stability of the exact smooth dynamics (rather than a piecewise-linear approximation) within a compact domain of interest. Furthermore, we formally characterize the computational complexity of the CPA neural Lyapunov verification problem as co-NP-complete, filling a key gap in the literature. Empirical results demonstrate that Hyperlyve enumerates ReLU networks over 150-times faster than competing tools, which contributes to Hyperlyve proving the asymptotic stability of systems that are currently intractable for state-of-the-art verifiers.",
+                "summary": "New coding models advertise themselves on score improvements of coding benchmarks. Yet no study has tested if a model that scores higher on these benchmarks gets more real work done. On June 12, 2026, a U.S. export control directive banned access to Claude Fable 5 for 19 days, which forced users to switch to other models. During this time, most former Fable 5 users switched to Opus 4.8 (11 points lower on SWE-Bench Pro compared to Fable 5). We treat this suspension as a natural experiment, where the people and projects stayed the same and only the model changed, so we could isolate the effect of Fable 5 on user productivity. We tracked GitHub pull requests of 297 Fable 5 users before, during, and after the suspension. We used 8,908 developers who stayed on Opus 4.8 all the time as the control group. We also repeated the comparison across five model upgrades before and after the suspension in 2026 (1,208 developers, 15,442 pull requests). Fitting a difference-in-differences model with developer and date fixed effects, we found that having access to Fable 5 increased the 7-day merge rate of pull requests by only 1.4 percentage points [-1.4; +4.3], which was not statistically significant. Similarly, no significant increases of merge rates were found with the upgrades (weighted mean: -0.9 percentage points [-1.9; +0.2]); all five estimates were negative (95% intervals included 0, did not differ from each other). We also did not observe a significant increase in the number of pull requests merged per week (+2.4% [-4.9%; +10.2%]).",
                 "category": [
                     {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "math.DS",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-16T18:58:29Z",
-                "arxiv:primary_category": {
-                    "@term": "eess.SY"
-                },
-                "author": [
-                    {
-                        "name": "Brian Yarbrough"
-                    },
-                    {
-                        "name": "Jesse Wayment"
-                    },
-                    {
-                        "name": "Jingbo Wang"
-                    },
-                    {
-                        "name": "Philip E. Par\u00e9"
-                    },
-                    {
-                        "name": "Shreyas Sundaram"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.21598v1",
-                "title": "Mitigating Catastrophic Forgetting with Physics-Indexed Specialist Memory: the Evolutionary Neuroplastic Agent",
-                "updated": "2026-11-16T18:58:20Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.21598v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.21598v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Continual reinforcement learning requires adaptation to changing conditions while preserving performance under previously encountered dynamics. It was investigated whether specialists generated by evolutionary search can provide a reusable memory when combined with environment detection and failure-driven search. The Evolutionary Neuroplastic Agent (ENA) evolves small neural networks without gradients, archives selected policies by detected dynamic regime, and retrieves them through Bayesian policy reuse. The architecture was evaluated in non-stationary CartPole and HalfCheetah environments. In the 30-replicate CartPole ablation, the complete architecture achieved a mean success rate of 83.2% across the five test environments. Among variants that learned the harder CartPole environments, the complete architecture showed the most consistent retention. A selection ablation also showed that the retrieval rule affected performance. In the evaluated sequences, ENA adapted more slowly than PPO on CartPole and achieved lower returns than SAC on HalfCheetah. The evidence concerns the complete architecture and does not isolate gradient-free optimization as the cause of retention or establish superiority over other continual-learning methods.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
+                        "@term": "cs.SE",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -458,131 +302,141 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.NE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-16T18:58:20Z",
-                "arxiv:comment": "25 pages, 7 figures, 23 tables. Code and data: https://github.com/blasvicco/ena/tree/v1",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Blas Eugenio Vicco Zarate"
-                    },
-                    {
-                        "name": "Miguel Hern\u00e1n Vicco"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.21597v1",
-                "title": "Optimal Autoregressive Chain-of-Thought Learning via Bagging",
-                "updated": "2026-11-16T18:58:07Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.21597v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.21597v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We study how to learn an autoregressive next-token generator $f\\colon\u03a3^\\star\\to\u03a3$ from a class $\\mathcal{F}$, given chain-of-thought (CoT) demonstrations of length $T$ generated by $f$. We present a simple algorithm based on bagging, which outputs a majority vote of generators that are trained to be CoT-consistent on bootstrap samples of the training data. For binary token sets, it achieves the optimal sample complexity of $O((d_{\\mathrm{VC}}+\\log(1/\u03b4))/\u03b5)$, independent of the CoT length $T$, where $d_{\\mathrm{VC}}$ is the VC dimension of $\\mathcal{F}$. For finite token sets $\u03a3$, the VC dimension is replaced by a multiclass analogue, the Graph dimension $d_{\\mathrm{G}}$, and the sample complexity is optimal up to a $\\log|\u03a3|$ factor. The number of generators in the majority-vote ensemble is $O(\\log(T/\u03b4))$, and we show that the ensemble can be distilled into a single generator in $\\mathcal{F}$ at the expense of $n\\log(nT)$ unlabeled prompts.",
-                "category": [
-                    {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "stat.ML",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-16T18:58:07Z",
+                "published": "2026-11-17T18:56:42Z",
+                "arxiv:comment": "20 pages, 4 figures",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.SE"
                 },
-                "author": [
-                    {
-                        "name": "Awni Altabaa"
-                    },
-                    {
-                        "name": "John Lafferty"
-                    },
-                    {
-                        "name": "Omar Montasser"
-                    }
-                ]
+                "author": {
+                    "name": "Yining Hua"
+                }
             },
             {
-                "id": "http://arxiv.org/abs/2611.21596v1",
-                "title": "SADL: On the Demand-Supply Geometry of Representation Collapse",
-                "updated": "2026-11-16T18:58:03Z",
+                "id": "http://arxiv.org/abs/2611.23215v1",
+                "title": "Feedback-Linearised Trajectory Tracking via Model-Informed Robust Geometric DDPC",
+                "updated": "2026-11-17T18:56:09Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.21596v1",
+                        "@href": "https://arxiv.org/abs/2611.23215v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.21596v1",
+                        "@href": "https://arxiv.org/pdf/2611.23215v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "In Joint-Embedding Predictive Architectures (JEPAs), a well-constrained projector output does not by itself prevent representation collapse. We find that, from initialization, the encoder representation is dominated by a component shared by different inputs. A batch-normalized projector removes this component, so regularization after the projector cannot correct it, and the differences between representations shrink until they collapse. We propose SADL (Supply And Demand Loss), which keeps the original training objective and constrains the encoder directly when needed. SADL compares the representation differences that the projector output demands with the differences the encoder can retain and pass on to the projector, and adds a constraint on the encoder only when supply falls short of demand. It works with different Demand Regularizers and introduces no auxiliary networks, additional trainable parameters, or architectural changes. In single-task and jointly trained four-task LeWorldModel (LeWM) and INTACT experiments, SADL lowers the collapse rate over ten random seeds from 50% to 0%. After one epoch of training, encoder effective rank is 3.4-6.4 times that of the corresponding baseline without SADL, and latent prediction error falls to 1/20-1/303 of it. Without additional tuning, SADL stays robust as its loss weight spans orders of magnitude, and with several Demand Regularizers INTACT exceeds 95% mean search-free control success. On four image datasets, SADL also consistently improves accuracy and stability across random seeds. These results show that matching the representation differences a regularizer demands with the differences the encoder can supply leads to faster and more stable representation learning in control and image classification.",
+                "summary": "Data-driven predictive control (DDPC) predicts system responses from recorded trajectories, but nonlinear dynamics can limit the accuracy of fixed linear predictors. This paper studies geometric robust DDPC for trajectory tracking of a fully actuated manipulator using model-based feedback linearisation. A mechanical model maps virtual acceleration commands into joint torques, while recorded data capture residual dynamics arising from imperfect model parameters. The controller minimises worst-case prediction error over an open Grassmannian ball centred at the fitted trajectory subspace. Simulations on a planar 2R manipulator under gravity compare the proposed method with double-integrator model predictive control (MPC) and direct regularised data-enabled predictive control (DeePC). Results show improved tracking over double-integrator MPC despite increased torque effort, while performance relative to DeePC depends on the reference trajectory.",
                 "category": [
                     {
                         "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "eess.SY",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-16T18:58:03Z",
-                "arxiv:comment": "49 pages, including references and appendices",
+                "published": "2026-11-17T18:56:09Z",
+                "arxiv:comment": "This manuscript has been submitted to the 9th Annual Learning for Dynamics & Control Conference, taking place in Stockholm, Sweden, in June 2027",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Junhan Sun"
+                        "name": "Pranav Gupta"
                     },
                     {
-                        "name": "Yigui Feng"
+                        "name": "Deepan Muthirayan"
                     },
                     {
-                        "name": "Mingzhe Liu"
+                        "name": "Ravi Banavar"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.23214v1",
+                "title": "Asymptotics of Gibbs Posterior Measures on Infinite-Dimensional Hypothesis Spaces",
+                "updated": "2026-11-17T18:54:41Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.23214v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Haoyan Xu"
+                        "@href": "https://arxiv.org/pdf/2611.23214v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We prove almost sure contraction rates and consistency for Gibbs posterior measures on arbitrary hypothesis spaces, in general infinite dimensional, under dependent data, nonadditive and time-dependent losses and learning rates, misspecified models, and unattainable minimisers of the limiting objective. In particular, we develop a novel proof approach in contraction rate theory by studying the asymptotics of Gibbs measures through Lorentz spaces, real interpolation theory, and Laplace transforms dispensing with testing or variational formulations which are unavailable in the considered generality. As a consequence we obtain almost sure contraction rates for dominated Bayes and fractional Bayes posterior measures in the same generality, extending existing theory on misspecified Bayesian inference. Furthermore, we demonstrate our theoretical results on novel applications to Gibbs posteriors for Dirichlet process priors with a nonadditive Wasserstein metric loss function under ergodic, non-Markovian observables.",
+                "category": {
+                    "@term": "math.ST",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-17T18:54:41Z",
+                "arxiv:primary_category": {
+                    "@term": "math.ST"
+                },
+                "author": {
+                    "name": "Terje Mildner"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.23212v1",
+                "title": "EviSlide-MIL: Multi-Query Pooling and Shared Prediction for Class-Incremental Whole-Slide Image Classification",
+                "updated": "2026-11-17T18:50:42Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.23212v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Lei Ye"
+                        "@href": "https://arxiv.org/pdf/2611.23212v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Histopathological analysis of whole-slide images (WSIs) plays a critical role in cancer diagnosis, and multiple instance learning (MIL) is widely adopted for WSI analysis under weak supervision. As new tumor subtypes are introduced, extending existing MIL models requires learning new classes while retaining knowledge of previously learned ones. This presents a class-incremental learning challenge, where models must acquire new classes with limited access to historical training data and recognize all learned classes without task identifiers at inference. A major obstacle is forgetting, as updates to feature aggregation and prediction modules can degrade performance on previously learned classes. To address this challenge, we propose \\textbf{EviSlide-MIL}, a class-incremental WSI framework that integrates multiple learnable queries per class with a shared prediction module. The queries aggregate frozen patch features into class-specific representations, while the shared prediction module limits parameter growth across incremental stages. By freezing queries associated with previously learned classes, EviSlide-MIL preserves their attention patterns for identical inputs, while experience replay and knowledge distillation further mitigate forgetting as shared parameters are updated. Experiments on eight tumor subtypes from The Cancer Genome Atlas demonstrate that EviSlide-MIL achieves improved performance and reduced forgetting compared with competing methods across most learning settings, demonstrating its potential for scalable and knowledge-preserving WSI classification. Code and pretrained models will be released.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-17T18:50:42Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zhouhan Qian"
                     },
                     {
-                        "name": "Ziqi Han"
+                        "name": "Sicheng Chen"
                     },
                     {
-                        "name": "Hanru Bai"
+                        "name": "Chad Wong"
                     },
                     {
-                        "name": "Yanzhao Zhang"
+                        "name": "Tianyi Zhang"
                     },
                     {
-                        "name": "Hao Zhao"
+                        "name": "Enhui Chai"
                     },
                     {
-                        "name": "Guofeng Zhang"
+                        "name": "Zeyu Liu"
+                    },
+                    {
+                        "name": "Fei Xia"
                     }
                 ]
             }
