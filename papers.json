@@ -5,413 +5,260 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-11-19T03:55:48Z",
+        "updated": "2026-11-19T12:25:00Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "644698",
+        "opensearch:totalResults": "644848",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2611.24398v1",
-                "title": "ScaleBench: An Extensible and Reproducible Experimental Platform for Kubernetes Autoscaling Research",
-                "updated": "2026-11-18T13:30:46Z",
+                "id": "http://arxiv.org/abs/2611.24939v1",
+                "title": "Map-Level Inference of Primordial Gravitational Waves from the CMB with Spherical Neural Networks",
+                "updated": "2026-11-18T18:59:32Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.24398v1",
+                        "@href": "https://arxiv.org/abs/2611.24939v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.24398v1",
+                        "@href": "https://arxiv.org/pdf/2611.24939v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Autoscaling enables cloud-native applications to meet their SLOs by dynamically adjusting computational resources at runtime. Recent research has explored a broad range of advanced autoscaling approaches, including rule-based, optimisation-based, and machine learning-based techniques, to address the limitations of traditional resource management strategies in cloud-native environments. Despite significant advances, a considerable gap remains between academic innovations and their practical adoption in real-world environments. For instance, Kubernetes deployments commonly rely on the reactive, CPU-based Horizontal Pod Autoscaler, limiting the adoption of more advanced autoscaling approaches. Recent studies have investigated challenges such as autoscaler configuration and reproducible performance evaluation; however, the practical deployment, integration complexity, and operational overhead of research-based autoscalers in Kubernetes environments have received limited attention. To address this gap, we present ScaleBench, a native Kubernetes experimental platform to enable extensible and reproducible evaluation of autoscaling solutions. Unlike existing approaches, ScaleBench integrates autoscalers as native Kubernetes components, allowing researchers to assess not only scaling performance but also deployment characteristics and integration requirements within realistic cloud-native environments. We demonstrate the effectiveness of ScaleBench by evaluating multiple autoscaling approaches through a case study. The results highlight its capability to support systematic, repeatable, and practical assessment of Kubernetes autoscaling approaches.",
+                "summary": "We train a spherical graph convolutional network to infer the tensor-to-scalar ratio $r$ directly from multifrequency cosmic microwave background (CMB) $B$-mode maps on the cut sky. We test the network on simulations of a generic ground-based experiment including lensed CMB, inhomogeneous noise, and stochastic Galactic dust and synchrotron emission. We compare the network with a multifrequency bandpower likelihood built from the same 20,000 simulations used to train it. Working directly on the maps, with no power-spectrum estimation or component separation, the network reduces the root-mean-square error on $r$ by a factor of 1.3 and gives well-calibrated 68% intervals 1.2 times narrower than the likelihood with the same prior. Saliency maps show that the network learns to favor the deepest regions of the sky and the cleanest frequency channels without being given the survey depth. Both approaches are tied to the foreground model they are built on: the network generalizes to some alternative foreground models without retraining, but not to a three-dimensional dust model with line-of-sight variations. The network can be extended to marginalize over foreground models by training on a broad family, making direct map-level neural inference a promising route to $r$ for future $B$-mode analyses.",
+                "category": [
+                    {
+                        "@term": "astro-ph.CO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.IM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-18T18:59:32Z",
+                "arxiv:comment": "15 pages, 8 figures, 6 tables",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.CO"
+                },
+                "author": [
+                    {
+                        "name": "Anto I. Lonappan"
+                    },
+                    {
+                        "name": "Adrian E. Bayer"
+                    },
+                    {
+                        "name": "Brian Keating"
+                    },
+                    {
+                        "name": "Kam Arnold"
+                    },
+                    {
+                        "name": "Giuseppe Puglisi"
+                    },
+                    {
+                        "name": "Ethan O. Nadler"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.24938v1",
+                "title": "Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models",
+                "updated": "2026-11-18T18:59:04Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.24938v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.24938v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "World-action models jointly predict future observations and actions, yet reconstruction-oriented visual representations do not explicitly emphasize the spatial relationships and object-state changes needed for manipulation. We introduce Phoenix, which learns representations of scene structure for world-action modeling. Specifically, Phoenix Encoder enriches DINOv3's general visual semantics through dual-teacher distillation of geometric and spatiotemporal semantic knowledge. Next, CS-VAE causally aggregates and compresses Phoenix Encoder features into generative latents while preserving scene information and spatial layout. Finally, Phoenix jointly predicts these latents, complementary appearance latents, and robot actions, linking scene evolution with action generation. To study pretraining data efficiency, we curate approximately 39,000 hours of egocentric and robot manipulation data for representation learning and use the robot demonstration subset for WAM pretraining. Following benchmark-specific post-training, Phoenix achieves state-of-the-art performance across simulation and real-robot benchmarks spanning single-arm, bimanual, and dexterous manipulation. It demonstrates strong robustness to perturbations, achieving success rates of 94.8% on LIBERO-Plus and 72.4% on RoboTwin 2.0 C2R, alongside strong cross-embodiment transfer and real-world manipulation performance on Bench2Dex and RoboDojo-RealWorld, respectively. Pretraining-scale analysis shows larger performance gains from data scaling than a video-VAE-only baseline, indicating stronger scaling benefits and more effective data utilization. Moreover, Phoenix maintains high success rates when adapted with limited downstream demonstrations, demonstrating strong few-shot adaptation. Our code, pretraining data, and models are available on the project page to help the community reproduce our results.",
                 "category": {
-                    "@term": "cs.DC",
+                    "@term": "cs.RO",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-18T13:30:46Z",
-                "arxiv:comment": "Accepted for publication in the 1st Workshop, titled ContinuumOps: DevOps for the Edge-Cloud Continuum, which was co-located with the 24th IEEE International Symposium on Network Computing and Applications",
+                "published": "2026-11-18T18:59:04Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.DC"
+                    "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Ze Wang"
+                        "name": "Yupeng Zheng"
                     },
                     {
-                        "name": "Sajid Alam"
+                        "name": "Chaoyue Li"
                     },
                     {
-                        "name": "Amjad Ullah"
+                        "name": "Linbo Wang"
+                    },
+                    {
+                        "name": "Xiang Li"
+                    },
+                    {
+                        "name": "Yuhang Zheng"
+                    },
+                    {
+                        "name": "Xiaotong Su"
+                    },
+                    {
+                        "name": "Songen Gu"
+                    },
+                    {
+                        "name": "Yichen Zhang"
+                    },
+                    {
+                        "name": "Zebin Xing"
+                    },
+                    {
+                        "name": "Shuai Tian"
+                    },
+                    {
+                        "name": "Jingxiang Guo"
+                    },
+                    {
+                        "name": "Jing Li"
+                    },
+                    {
+                        "name": "Zhiyong Zhao"
+                    },
+                    {
+                        "name": "Zhongpu Xia"
+                    },
+                    {
+                        "name": "Qichao Zhang"
+                    },
+                    {
+                        "name": "Haoran Li"
+                    },
+                    {
+                        "name": "Shuicheng Yan"
+                    },
+                    {
+                        "name": "Dongbin Zhao"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.24395v1",
-                "title": "RSIBench-Infra: Can Agents Optimize Their Own Training and Inference Infrastructure at Production Scale?",
-                "updated": "2026-11-18T13:29:44Z",
+                "id": "http://arxiv.org/abs/2611.24937v1",
+                "title": "LEMUR: A Searchable Web Archive of Deep Chandra Images of Galaxies and Galaxy Clusters",
+                "updated": "2026-11-18T18:59:03Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.24395v1",
+                        "@href": "https://arxiv.org/abs/2611.24937v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.24395v1",
+                        "@href": "https://arxiv.org/pdf/2611.24937v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Improving the efficiency of training and inference infrastructure is a practical component of recursive self-improvement. Existing benchmarks for agent-driven optimization largely focus on individual software layers such as kernel, leaving unclear whether agents can deliver end-to-end performance gains under production workloads. We introduce RSIBench-Infra, a benchmark of 20 training and inference tasks spanning diverse model families and modalities, with deployments of up to 32 accelerators on NVIDIA GPUs and Ascend NPUs. Agents start from runnable baselines derived from official recipes and can modify the software stack across engine, kernel, and instruction levels. An OCI image-layer submission protocol captures these changes for reproducible deployment, while independent evaluation measures end-to-end performance under task-specific quality constraints. Across all task results, 66.2% exceed $1.10\\times$ validated speedup. These results demonstrate that current agents can improve production-scale training and inference performance, but identifying effective optimization strategies and consistently translating local improvements into end-to-end gains remain challenging.",
+                "summary": "We present LEMUR, a publicly accessible archive of uniformly reduced, deep Chandra images of 2,569 galaxies and galaxy clusters (including groups), comprising 5,505 ACIS observations and 138.8 Ms of exposure. By combining the publicly available imaging observations of each target, we provide background-subtracted, exposure-corrected images in broad, soft, and hard bands at the native ACIS pixel scale of 0.492 arcsec. Our primary goal is to make the wealth of archival Chandra observations accessible to researchers without requiring specialized expertise in X-ray data reduction.\n  Each observation is reprocessed with CIAO, filtered for background flares, and reduced with settings chosen to preserve faint diffuse emission; the merged images are exposure corrected and background subtracted using the ACIS blank-sky backgrounds in a broad (0.5-7.0 keV), a soft (0.5-2.0 keV), and a hard (2.0-7.0 keV) band. For every object, we measure an X-ray center at the peak of its diffuse emission, and we provide a morphological similarity search based on embeddings from the AstroCLIP foundation model, in which nearest neighbors share cool-core status in 73% of matched cluster pairs, compared with 51% by chance.\n  Photometry of 275 point sources agrees with the Chandra Source Catalog to within 3% in the broad band. The images, along with their counts images, background models, exposure maps, and quick-look stamps, are available through a searchable web archive at https://lemur-archive.lemur-xray.workers.dev/. The catalog tables are archived on Zenodo (doi:10.5281/zenodo.24351915), and all code is open source at https://github.com/crhea93/Lemur.",
+                "category": [
+                    {
+                        "@term": "astro-ph.GA",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "astro-ph.IM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-18T18:59:03Z",
+                "arxiv:comment": "Will be submitting to the Open Journal of Astrophysics",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.GA"
+                },
+                "author": [
+                    {
+                        "name": "Carter L. Rhea"
+                    },
+                    {
+                        "name": "Julie Hlavacek-Larrondo"
+                    },
+                    {
+                        "name": "Marine Prunier"
+                    },
+                    {
+                        "name": "Hyunseop Choi"
+                    },
+                    {
+                        "name": "Megan Donahue"
+                    },
+                    {
+                        "name": "Christian Thibeault"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.24936v1",
+                "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
+                "updated": "2026-11-18T18:56:12Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.24936v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.24936v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Jailbreak attempts and harmful prompts remain a challenge for the safe deployment of large language models. We study whether contrastively learned representations can support safety detection without training an additional downstream classifier. We propose Jailbreak Detection with Prototype Inference (JDPI), which uses binary safety labels to construct harmful and benign prototypes and makes predictions from relative prototype distances. JDPI uses only binary safety labels for encoder adaptation, prototype construction, and validation. In our setup, it uses fewer labeled examples than the classifier baseline (Method A) by avoiding the separate split used to train the downstream classifier. Across four benchmarks covering different input formats, contrastive fine-tuning improves JDPI's detection accuracy by 9.1-18.0 percentage points. Using the same encoder, JDPI achieves slightly higher ROC-AUC on one benchmark and stays within 0.017 of the baseline across all four. With dataset-specific adaptation, JDPI exceeds the released Llama Guard 3-8B baseline by 0.173-0.310 in ROC-AUC across the four benchmarks. In multi-turn replay on TomGibbs, JDPI uses accumulated user history as the conversation unfolds, achieving higher conversation-level accuracy than when it uses the current turn alone. Across 12 directed transfers, JDPI outperforms the classifier by an average of 1.59 percentage points in accuracy, demonstrating stronger cross-dataset robustness.",
                 "category": {
-                    "@term": "cs.LG",
+                    "@term": "cs.CL",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-18T13:29:44Z",
-                "arxiv:comment": "22 pages. Project page: https://rsibench-infra.github.io",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Hanlin Wu"
-                    },
-                    {
-                        "name": "Yifei Wang"
-                    },
-                    {
-                        "name": "Zhicheng Cai"
-                    },
-                    {
-                        "name": "Huan-ang Gao"
-                    },
-                    {
-                        "name": "Wei-Ying Ma"
-                    },
-                    {
-                        "name": "Ya-Qin Zhang"
-                    },
-                    {
-                        "name": "Jingjing Liu"
-                    },
-                    {
-                        "name": "Hao Zhou"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24394v1",
-                "title": "Temporal Rank in Recurrent Neural Networks",
-                "updated": "2026-11-18T13:28:07Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24394v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24394v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recurrent Neural Networks (RNNs) are a natural framework for temporal modelling, yet are often dismissed due to their sequential, non-parallelisable computation and difficulty in capturing long-range dependencies, typically attributed to vanishing and exploding gradients. We identify a distinct and under-explored limitation: an information bottleneck induced by rank-constrained hidden state dynamics, which limits the number of independent input directions that can be preserved over time, as reflected in the rank of the input-to-state mapping. We show that this constraint restricts temporal capacity independently of gradient stability. To address this, we introduce structured high-dimensional state dynamics that preserve temporal separability and prevent saturation of the input-to-state Jacobian over time. On controlled sequence tasks, the resulting model exhibits rapid learning despite remaining strictly within a standard RNN formulation. Our results demonstrate that RNN performance is governed by the evolution and preservation of temporal rank, and suggest that mitigating gradient pathologies alone is insufficient without explicitly maintaining temporal capacity.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-18T13:28:07Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Leo Dobson"
-                    },
-                    {
-                        "name": "Anton Ragni"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24384v1",
-                "title": "Enhancing Active Learning Performance with Initial Data Selection Based on Foundation Models",
-                "updated": "2026-11-18T13:15:03Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24384v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24384v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In active object detection, selecting the initial labeled pool is essential, especially in complex datasets with expensive labeling and low resource budget. This study presents an active learning framework designed to optimize the initial training cycle of active learning for the object detection task. Our approach diverges from traditional methods by utilizing feature-based clustering from the YOLO-World model and refining images based on objectness scores rather than relying on uncertainty sampling in the initial cycle. This approach focuses on finding samples with various features and emphasizes training in areas where the foundation model is most confident. Doing so helps the model better understand different types of objects. For subsequent cycles, we employ a consistency-based sampling technique to maintain the robustness of the training process. To evaluate our method, we use two complex datasets called Aquarium and NWPU VHR-10, which are well known for their diverse object sizes and challenging conditions. In the NWPU dataset, our method increases mAP50 by an average of 6.6% in image-based evaluation. Moreover, the image refinement method shows an improvement of approximately 11% in object-based evaluation. The results show improvements in model performance and labeling time, demonstrating the advantages of using foundation models in early cycles of active learning. An implementation of the algorithm is available at https://github.com/Mhrshd-fllh/ALBoost-FM",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-18T13:15:03Z",
-                "arxiv:comment": "26 pages, 18 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Mohammad Mirzaee"
-                    },
-                    {
-                        "name": "Mehrshad Fallah Estalkhzir"
-                    },
-                    {
-                        "name": "Mohammad Reza Mohammadi"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24383v1",
-                "title": "What Majority Labels Hide: Annotator Disagreement and Model Errors in Multi-Dialect Arabic Sexism Detection",
-                "updated": "2026-11-18T13:14:00Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24383v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24383v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Judgements of sexism are subjective and may vary across communities, yet sexism detection datasets usually reduce annotator judgements to a single majority label, obscuring disagreement and how models behave on contested cases. We introduce MuDAS, a dataset of YouTube comments in Saudi, Egyptian and Moroccan Arabic, each labelled by three native speakers of its dialect, with the individual annotations preserved. We use it to evaluate Arabic encoders fine-tuned with hard-label, soft-label and perspectivist objectives, GPT-5.6 Terra, and four Arabic-centric large language models. Model errors are more frequent on comments with annotator disagreement. Despite relatively close Macro-F1 scores, GPT-5.6 Terra and the fine-tuned encoders exhibit contrasting error patterns: GPT-5.6 Terra, even with the annotators' definition of sexism, over-classifies gender-related content such as religious advice on modesty, whereas the encoders miss implicit and prescriptive sexism. The Arabic-centric models also over-predict sexism and remain below the encoders. Disagreement-aware learning preserves Macro-F1, but soft labels improve alignment with annotators on contested comments at the expense of unanimous ones, and neither paradigm reliably identifies contested comments. Lower performance on Egyptian Arabic, clearest for the large language models, is not fully explained by the examined measures of test-set composition and dialectness. Majority-label scores can therefore hide contrasting error patterns that matter for content moderation.",
-                "category": [
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-18T13:14:00Z",
-                "arxiv:comment": "36 pages, 6 figures. Submitted to Online Social Networks and Media. Dataset: https://huggingface.co/datasets/alaabaz/MuDAS . Content warning: contains examples of sexist and offensive language",
+                "published": "2026-11-18T18:56:12Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Alaa Bazaid"
+                        "name": "Yan Qiu"
                     },
                     {
-                        "name": "Arkaitz Zubiaga"
+                        "name": "Yuanyuan Li"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.24381v1",
-                "title": "How to Turn an Attention Neural Network into an Interpretable Hard-Logic Predicate Circuit: Truth-Table Predicate Extraction and State-Machine Merging under Ship-of-Theseus Replacement",
-                "updated": "2026-11-18T13:10:32Z",
+                "id": "http://arxiv.org/abs/2611.24932v1",
+                "title": "Knowing What You Know: A Trait Theory of Reviewer Value in Human-AI Cognitive Systems",
+                "updated": "2026-11-18T18:55:07Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.24381v1",
+                        "@href": "https://arxiv.org/abs/2611.24932v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.24381v1",
+                        "@href": "https://arxiv.org/pdf/2611.24932v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We convert a trained attention network as a whole, attention included, into a hard-logic predicate circuit that runs in its place. Every unit of the circuit is a 0/1 predicate on tokens, and every map between predicates is a minimised truth table. Short tables, such as the product of a query code and a key code, are minimised exactly, and wide feature-to-feature transitions become implication rules by noise-tolerant minimisation. Blocks are replaced one at a time from the output down, in the manner of the Ship of Theseus, and after each replacement the remaining soft part re-adapts to the frozen circuit. Attention selection takes two forms, a row-wise comparison of integer scores (order selection) and a learned rule (rule selection). Both are fitted on the ordinary training set alone, and only on the examples that the teacher classifies correctly, so that the circuit imitates the teacher where the teacher is right. On TweetEval-emotion, the complete circuit of DistilGPT2 reaches a test gold accuracy of 66.5 $\\pm$ 1.3% with order selection and 57.4 $\\pm$ 2.5% with rule selection over three seeds, against 74.7% for the teacher and 64.0% for a bag of word pieces fitted on the same tweets, and that of BERT-base reaches 70.0 $\\pm$ 0.5% with order selection and 63.7 $\\pm$ 1.2% with rule selection against 77.8%. The circuit needs no multiplier and no weight traffic, and its exported hardware description reproduces it bit for bit. By a synthesis-based estimate it classifies one tweet in about 1-2 $\u03bc$s (DistilGPT2) and 3-5 $\u03bc$s (BERT) on an FPGA card and in 5-9 $\u03bc$s on a palm-sized board whose module draws 7.5-15 W, two to three orders of magnitude faster than the network on a GPU at batch 1 (measured, 0.9-2.6 ms for DistilGPT2 including an optimised CUDA-graph baseline), at a cost of 8.5 (DistilGPT2) and 8.6 (BERT) points of gold accuracy for the synthesised seed-0 circuits.",
+                "summary": "When a capable model and a human reviewer cooperate on the same decision, which human still adds value? We argue this is a question about a single cognitive trait, metacognitive calibration: the alignment between a reviewer's behavioral confidence and the actual correctness of their judgments. We develop a trait theory of reviewer value to make it precise. The theory makes five claims: value is governed by calibration rather than by activity, speed, agreement, or tenure; calibration leaves observable traces in behavioral telemetry; those traces are non-diagnostic on their own, because the fast, low-revision signature of a calibrated expert is indistinguishable from that of a confident novice until it is gated by outcomes; human calibration and a model's self-knowledge are the same construct, so the joint system should defer to whichever agent is better calibrated on each item; and individual calibration is causally identifiable only above the level of the single judgment. We ground each claim in a six-month production window of an AI-assisted accounting system (541621 reviewer events, 483 reviewers), and find that a purely behavioral expertise profile inverts the ground truth, scoring an overconfident cohort (5.2 percent correction survival) higher than genuine experts (99.2 percent); that reviewer quality is flat across tenure, so the trait is not learned on the job; and that the same calibration logic that separates good from bad reviewers, applied to the model, concentrates 92.5 percent of human effort on genuine errors. We close with the boundary the theory must respect: under majority-vote aggregation, individual causal value is unidentifiable.",
                 "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AR",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-18T13:10:32Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Yuchen Li"
-                    },
-                    {
-                        "name": "Zongqi Fan"
-                    },
-                    {
-                        "name": "Xintong Li"
-                    },
-                    {
-                        "name": "Nguyen H. Tran"
-                    },
-                    {
-                        "name": "Ken-Tye Yong"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24380v1",
-                "title": "Where Should a Diffusion Transformer Meet Its Teacher?",
-                "updated": "2026-11-18T13:09:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24380v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24380v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Representation Alignment (REPA) significantly accelerates Diffusion Transformer training by guiding intermediate student features with a pretrained visual teacher, yet existing methods typically attach supervision to a single fixed layer. As student representations evolve, however, we find that the most effective layer for alignment varies across training stages. To track this evolving layer suitability online without costly search, we measure gradient compatibility between the flow-matching and alignment objectives, and propose AdaREPA, an online routing framework that adaptively selects the supervision layer as training progresses. AdaREPA uses a softmax distribution over smoothed layer compatibility scores to sample a layer for alignment at each training step. This probabilistic routing adapts teacher supervision to the student's changing learning needs, with minimal training overhead and no additional inference cost. On ImageNet-256, AdaREPA accelerates convergence and improves generation quality across model sizes, while revealing how the most suitable layers for supervision shift over training.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-18T13:09:28Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Zhuoqi Hu"
-                    },
-                    {
-                        "name": "Shiwei Li"
-                    },
-                    {
-                        "name": "Haozhao Wang"
-                    },
-                    {
-                        "name": "Xiandi Luo"
-                    },
-                    {
-                        "name": "Yihao Ouyang"
-                    },
-                    {
-                        "name": "Wenting Shen"
-                    },
-                    {
-                        "name": "Ang Wang"
-                    },
-                    {
-                        "name": "Jiamang Wang"
-                    },
-                    {
-                        "name": "Minyi Guo"
-                    },
-                    {
-                        "name": "Ruixuan Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24379v1",
-                "title": "MoE-Context: Show the Model Only What It Needs",
-                "updated": "2026-11-18T13:08:14Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24379v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24379v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "AI agents read their whole history at every step. People do not work like that: we keep what the moment needs and hold the rest as a rough note we can recall. MoE-Context applies this to language models. The context is split into blocks. Before each step a fast yes or no pass decides which blocks the step needs; the rest stay as one-line notes that can be brought back, and nothing is deleted. In the version we build, one model makes this decision and then answers, over a single key-value cache where hidden blocks are masked rather than removed. On a laptop with Qwen3-1.7B and a synthetic lookup task, showing only the needed block raises accuracy from 93 to 119 of 120, and a masked block is as hidden as a deleted one. The model's own picking is the weak part. A supervised linear probe written into spare output rows lifts its accuracy from 80 to 110 of 120, but simple keyword search picks perfectly on this task, and the probe does not transfer to a second task. We report these results openly, along with two cheap usage patterns that block switching enables: undoing a failed attempt and running subagents without a new context.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-18T13:08:14Z",
-                "arxiv:comment": "10 pages, 10 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": {
-                    "name": "Vedant Navale"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24377v1",
-                "title": "LLM-Assisted Multi-Fidelity Bayesian Optimization: Fusing Expert Knowledge with Numerical Data",
-                "updated": "2026-11-18T13:07:03Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24377v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24377v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Multi-fidelity Bayesian optimization (MFBO) reduces engineering design cost by combining inexpensive low-fidelity (LF) models with a few accurate high-fidelity (HF) evaluations and sequentially selecting designs to evaluate. However, when HF data are scarce, the LF-HF discrepancy is difficult to learn from numerical data alone, especially when physics omitted in the LF model makes it design-dependent. Yet even without sufficient data, domain experts often know which physics the LF model omits and under which conditions its effect grows. Existing multi-fidelity (MF) models cannot use such qualitative knowledge directly, but large language models (LLMs) can interpret it and compare designs accordingly. The proposed LLM-Assisted MFBO adds a knowledge basis to the conventional MF model: from an expert description of the omitted physics, an LLM judges which of two designs requires the larger signed residual correction, and a pairwise Gaussian process converts these judgments into the basis. HF data calibrate its contribution and sign, so the knowledge is not trusted blindly. On a lithium-ion battery design problem, the proposed method reduced the regret area under the curve of conventional MFBO by 61%. Knowledge quality, rather than the choice of LLM, determined whether the search was accelerated, as shown by a controlled study that varied the two independently. A knowledge-level ablation further quantified the contribution of each knowledge statement. These results show that LLM-interpreted expert knowledge can complement numerical data as an information source in MFBO.",
-                "category": [
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
@@ -419,58 +266,305 @@
                     {
                         "@term": "cs.CE",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.HC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-18T13:07:03Z",
-                "arxiv:comment": "35 pages, 8 figures, 3 tables",
+                "published": "2026-11-18T18:55:07Z",
+                "arxiv:comment": "Accepted at the Thirteenth Annual Conference on Advances in Cognitive Systems (ACS), Edinburgh, United Kingdom, October 6-9, 2026. Awarded one of 2026 Ada Lovelace Awardees for Excellent Paper Submissions to ACS",
                 "arxiv:primary_category": {
-                    "@term": "cs.LG"
+                    "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Dongjun Han"
+                        "name": "Priyanka Sinha"
                     },
                     {
-                        "name": "Mingyu Lee"
-                    },
-                    {
-                        "name": "Ikjin Lee"
+                        "name": "Sugam Pandey"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.24376v1",
-                "title": "Teaching VLMs What to Say, Not How to Reason: Rethinking Counterfactual Reasoning in Autonomous Driving",
-                "updated": "2026-11-18T13:06:24Z",
+                "id": "http://arxiv.org/abs/2611.24927v1",
+                "title": "Mapping the AI Supply Chain: Dependencies, Vulnerabilities, and Market Concentration in the AI Ecosystem",
+                "updated": "2026-11-18T18:53:58Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.24376v1",
+                        "@href": "https://arxiv.org/abs/2611.24927v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.24376v1",
+                        "@href": "https://arxiv.org/pdf/2611.24927v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "End-to-end autonomous driving systems have been shown to suffer from shortcut learning and causal confusion, limiting their ability to generalize robustly under distribution shift. To mitigate these limitations, recent works based on Vision-Language Models (VLMs) have explored incorporating linguistic reasoning capabilities into driving decision-making, reporting improvements in driving performance. In particular, counterfactual (CF) reasoning has been proposed to enable self-reflective, high-level causal understanding. However, it remains unclear whether the language-based reasoning mitigates shortcut learning or merely shifts it from visual representations to linguistic patterns, creating an illusion of causal understanding. Moreover, existing approaches often conflate intervention-based reasoning with CF reasoning, leaving the effects of genuine CF reasoning unexplored. In this work, we examine what CF reasoning actually induces in VLM-based autonomous driving and observe that it shifts the action distribution toward more conservative behaviors while increasing uncertainty in reasoning and decision-making. This effect persists under reinforcement fine-tuning, suggesting that it is not merely a transient artifact. Furthermore, visual attention analysis shows that CF reasoning does not alter visual grounding, while causal intervention experiments reveal that masking causally relevant and non-causal factors in accident scenarios results in comparable decision change rates. Overall, these results suggest that CF reasoning does not induce genuine causal reasoning grounded in visual evidence. Instead, it acts as a linguistic shortcut that reshapes the action distribution, teaching models what to say but not how to reason, highlighting a gap between language-based reasoning and causal understanding in autonomous driving.",
+                "summary": "AI systems are built across many organizations that contribute models, data, compute, capital, talent, and other assets. While the layers of the AI stack are relatively well understood, the relationships between actors and components across layers remains sparsely documented. In this work, we focus on the organizations that make up the AI supply chain: the complex network of actors that contribute to the development and deployment of AI. We motivate the examination of the organizational AI supply chain---highlighting concerns about concentration, power, chokepoints, cascading failures, fragmented accountability, and risk---then describe our pipeline for mapping the AI supply chain. Our pipeline yields our main contribution: a multilayered, large-scale dataset of actors and relationships in the AI ecosystem, annotated with dates, descriptions, types, tags, and more. This work takes a step toward systematically mapping and measuring the AI supply chain and its properties, cataloging how models, data, chips, infrastructure, capital, and even talent flow between organizations. This data enable critical examinations of industry relationships and yield insights into the political economy of AI development and concentration. We provide several illustrative analyses, including studying the most central actors, analyzing network concentration, and identifying communities and chokepoints. While our dataset is fairly comprehensive, it is also necessarily incomplete: public documents omit private deals, and coverage is shaped by search design. Together, the approach, data, and findings aim to serve as a resource for studying the AI ecosystem. The dataset is publicly available at https://huggingface.co/datasets/sarahcen/ai-supply-chain and can be explored interactively at https://aisupplychains.org/.",
+                "category": [
+                    {
+                        "@term": "cs.CY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-18T18:53:58Z",
+                "arxiv:comment": "80 pages, 31 figures, 16 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.CY"
+                },
+                "author": [
+                    {
+                        "name": "Sarah H. Cen"
+                    },
+                    {
+                        "name": "Lindsey A. Gailmard"
+                    },
+                    {
+                        "name": "Joohan Kim"
+                    },
+                    {
+                        "name": "Rishi Bommasani"
+                    },
+                    {
+                        "name": "Daniel E. Ho"
+                    },
+                    {
+                        "name": "Percy Liang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.24926v1",
+                "title": "Grana: Compositional Reward Modeling for Long-Horizon Robot Manipulation",
+                "updated": "2026-11-18T18:53:53Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.24926v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.24926v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Robot reward modeling faces two challenges: generalizing across tasks and accurately tracking progress in long-horizon manipulation. General-purpose reward models demonstrate broad task transfer, but transfer from short-task pretraining to long-horizon tasks remains underexplored. Long-horizon progress models often rely on task-specific subtask classifiers or fixed action vocabularies, limiting the reuse of learned progress knowledge when adapting to new tasks. To address these challenges, we introduce Grana, a vision-language robot reward model that learns to identify unfinished subtasks and estimate their continuous progress using open-vocabulary subtask descriptions. We train a language-conditioned model to estimate progress in short-horizon tasks and individual subtasks of long-horizon tasks. For long-horizon tasks, we combine the selected subtask's predicted progress with credit for preceding completed subtasks to estimate whole-task progress. General progress prediction requires training the model across diverse tasks with progress supervision that accounts for imperfect execution. Elapsed-time proxies can misrepresent progress when relative subtask durations vary, or failures reverse local progress. We therefore introduce an annotation protocol that converts sparse subtask boundaries and action-quality annotations into dense progress targets, without requiring annotators to assign numerical progress scores. Pretraining with this supervision on 200 diverse, mostly short-horizon manipulation tasks enables zero-shot reward prediction on unseen tasks and improves progress prediction after adaptation to multi-minute, long-horizon tasks. Experiments demonstrate (i) generalizable reward prediction, including adaptation to five long-horizon tasks, (ii) benefits from pretraining and composing subtask progress estimates, and (iii) improved downstream policy performance.",
                 "category": {
                     "@term": "cs.RO",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-18T13:06:24Z",
-                "arxiv:comment": "Accepted to NeurIPS 2026 Main Track (41 pages, 14 figures, 14 tables). Project page: https://ophd-hahao.github.io/projects/Rethink-CF/",
+                "published": "2026-11-18T18:53:53Z",
+                "arxiv:comment": "Project website: https://research.nvidia.com/labs/gear/grana/",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Hayeon Oh"
+                        "name": "Zi-ang Cao"
                     },
                     {
-                        "name": "Donghwan Lee"
+                        "name": "Kaiyuan Zheng"
+                    },
+                    {
+                        "name": "Yinzhen Xu"
+                    },
+                    {
+                        "name": "Haonan Duan"
+                    },
+                    {
+                        "name": "Jiasheng Gu"
+                    },
+                    {
+                        "name": "Fengyuan Hu"
+                    },
+                    {
+                        "name": "Nan Zhu"
+                    },
+                    {
+                        "name": "Kun Lei"
+                    },
+                    {
+                        "name": "Kevin Lin"
+                    },
+                    {
+                        "name": "Ruijie Zheng"
+                    },
+                    {
+                        "name": "Shenyuan Gao"
+                    },
+                    {
+                        "name": "Fangqi Zhu"
+                    },
+                    {
+                        "name": "Zhe Zhang"
+                    },
+                    {
+                        "name": "Radha Poovendran"
+                    },
+                    {
+                        "name": "Linxi Fan"
+                    },
+                    {
+                        "name": "Guanzhi Wang"
+                    },
+                    {
+                        "name": "Yuke Zhu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.24925v1",
+                "title": "Render the Robot, Generate the World: One Video World Model Across Embodiments",
+                "updated": "2026-11-18T18:52:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.24925v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.24925v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Predicting the consequences of an agent's actions requires modeling both the body's motion and the environment's response. Most video world models attempt to learn both from numerical actions, even though geometry and kinematics already specify the intended motion. We introduce Doppel, an embodiment-agnostic video world model conditioned on camera-aligned renderings of future body configurations and numerical action trajectories. By explicitly providing the intended motion, Doppel can focus on predicting object motion and interaction-driven changes in the environment. Rendered motion also provides a common visual interface across different embodiments and action spaces. To train on robot datasets without camera extrinsics, we recover camera poses and align rendered trajectories with recorded observations. We jointly train a single shared video backbone and conditioning adapter on eight datasets spanning eight robot and human embodiments, from single- and bimanual robot arms to a dexterous humanoid and human hands and bodies, using about 600 hours of video without embodiment labels. Across three robot-arm datasets, Doppel improves PSNR over action-only baselines by 1.00 dB on held-out trajectories and 1.20 dB under out-of-distribution evaluation, while predicting more consistent object motion. Training on all eight embodiments (Doppel-8) improves robot predictions over the three-robot model (Doppel-3) on four of six evaluation sets. Project page: https://doppelwm.github.io/.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-18T18:52:28Z",
+                "arxiv:comment": "Project page: https://doppelwm.github.io/",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Yash Jangir"
+                    },
+                    {
+                        "name": "Karan Mirakhor"
+                    },
+                    {
+                        "name": "Renos Zabounidis"
+                    },
+                    {
+                        "name": "Muhammad Zubair Irshad"
+                    },
+                    {
+                        "name": "Sergey Zakharov"
+                    },
+                    {
+                        "name": "Yonatan Bisk"
+                    },
+                    {
+                        "name": "Homanga Bharadhwaj"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.24915v1",
+                "title": "PrismRestore: A Compact Restoration Toolbox for Agentic Image Restoration",
+                "updated": "2026-11-18T18:48:01Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.24915v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.24915v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Agentic image restoration composes operations to handle mixed degradations, yet its toolbox often requires storing multiple restoration networks. We propose PrismRestore, which constructs a compact bank of callable restoration actions from a single frozen all-in-one model. Our approach builds on task-dependent yet overlapping channel responses in the shared model. An offline task-prior search uses activation and gradient statistics to group channels with similar response profiles, then searches task-specific modulation coefficients over non-representative channels while leaving representative channels unmodulated. The resulting prior bank enables explicit action selection and composition without additional restoration backbones or task-specific adapter modules. A state-conditioned policy learns to compose these actions using Group Relative Policy Optimization. Its objective separately normalizes fidelity and perceptual feedback within groups of trajectories sampled for the same input, and combines terminal evaluation with return-to-go derived from stepwise quality changes. Experiments on synthetic composite-degradation and real-world multi-task benchmarks show improvements over the evaluated all-in-one baselines and restoration quality competitive with multi-model agents. PrismRestore achieves these results with a single restoration backbone and faster inference than the evaluated agentic baselines.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-18T18:48:01Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zhaocheng Yu"
+                    },
+                    {
+                        "name": "Kui Jiang"
+                    },
+                    {
+                        "name": "Jing Cao"
+                    },
+                    {
+                        "name": "Yiang Chen"
+                    },
+                    {
+                        "name": "Xiaocheng Feng"
+                    },
+                    {
+                        "name": "Junjun Jiang"
+                    },
+                    {
+                        "name": "Xianming Liu"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.24908v1",
+                "title": "Decomposing SGD Dynamics in Neural Networks: Teacher-Induced Spikes and Variance Inflation",
+                "updated": "2026-11-18T18:43:40Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.24908v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.24908v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "We study two-layer neural networks trained by stochastic gradient descent (SGD) on a multi-index teacher model, focusing on how first-layer parameters orthogonal to the teacher subspace affect generalization. We decompose the first-layer weights into a signal component aligned with the teacher and an orthogonal complement, and analyze their joint SGD dynamics together with the second layer in the proportional limit. We show that although SGD updates to the complement are initially isotropic, the training dynamics induce teacher-dependent spectral spikes in the complement Gram matrix. This emergent anisotropy provides a concrete mechanism by which representation variance is amplified, and generalization degrades. To isolate this effect, we introduce Decomposed Dynamics, an analytically tractable surrogate whose asymptotic test-error dynamics coincide with those of SGD. In simulations with a ReLU student, freezing the directions of the orthogonal complement improves generalization relative to training them. Finally, we show that the signal component rapidly aligns with the second-layer weights, revealing strong cross-layer coupling even in this shallow setting. Together, our results provide a dynamical explanation for how feature learning outside the teacher subspace harms generalization.",
+                "category": [
+                    {
+                        "@term": "stat.ML",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-18T18:43:40Z",
+                "arxiv:comment": "NeurIPS 2026, 36 pages, 4 figures",
+                "arxiv:primary_category": {
+                    "@term": "stat.ML"
+                },
+                "author": [
+                    {
+                        "name": "Samet Demir"
+                    },
+                    {
+                        "name": "Zafer Dogan"
                     }
                 ]
             }
