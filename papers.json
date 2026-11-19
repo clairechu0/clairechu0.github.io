@@ -5,33 +5,126 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-11-18T22:26:19Z",
+        "updated": "2026-11-19T03:55:48Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "644292",
+        "opensearch:totalResults": "644698",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2611.23229v1",
-                "title": "Ambient LLMs: Data-Efficient Supervised Fine-tuning via Temperature Matching",
-                "updated": "2026-11-17T18:59:37Z",
+                "id": "http://arxiv.org/abs/2611.24398v1",
+                "title": "ScaleBench: An Extensible and Reproducible Experimental Platform for Kubernetes Autoscaling Research",
+                "updated": "2026-11-18T13:30:46Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.23229v1",
+                        "@href": "https://arxiv.org/abs/2611.24398v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.23229v1",
+                        "@href": "https://arxiv.org/pdf/2611.24398v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Collecting large-scale, diverse, and high-quality post-training datasets for autoregressive language models is challenging. Consequently, Supervised Fine-Tuning (SFT) is typically applied to datasets significantly smaller than those used for pre-training, which leads to overfitting and the catastrophic forgetting of the tails of the data distribution. To prevent this collapse, we introduce Ambient SFT, a principled framework for leveraging imperfect predictions to augment the fine-tuning set. In our method, a \"frozen\" version of the pre-trained model serves as a noisy teacher that the fine-tuned model must match at a coarse level. In particular, we require that the high-temperature versions of the conditional distributions produced by the post-training model should match the high-temperature versions of the pre-training ones. The temperature hyperparameter controls the level of trust in the pre-trained model, with the limit $T\\to \\infty$ reverting back to regular SFT and $T=1$ to knowledge distillation. We demonstrate that our approach outperforms standard SFT across domain adaptation, instruction-tuning, and reasoning, leading for up to $21\\%$ average relative improvement to standard SFT.",
+                "summary": "Autoscaling enables cloud-native applications to meet their SLOs by dynamically adjusting computational resources at runtime. Recent research has explored a broad range of advanced autoscaling approaches, including rule-based, optimisation-based, and machine learning-based techniques, to address the limitations of traditional resource management strategies in cloud-native environments. Despite significant advances, a considerable gap remains between academic innovations and their practical adoption in real-world environments. For instance, Kubernetes deployments commonly rely on the reactive, CPU-based Horizontal Pod Autoscaler, limiting the adoption of more advanced autoscaling approaches. Recent studies have investigated challenges such as autoscaler configuration and reproducible performance evaluation; however, the practical deployment, integration complexity, and operational overhead of research-based autoscalers in Kubernetes environments have received limited attention. To address this gap, we present ScaleBench, a native Kubernetes experimental platform to enable extensible and reproducible evaluation of autoscaling solutions. Unlike existing approaches, ScaleBench integrates autoscalers as native Kubernetes components, allowing researchers to assess not only scaling performance but also deployment characteristics and integration requirements within realistic cloud-native environments. We demonstrate the effectiveness of ScaleBench by evaluating multiple autoscaling approaches through a case study. The results highlight its capability to support systematic, repeatable, and practical assessment of Kubernetes autoscaling approaches.",
+                "category": {
+                    "@term": "cs.DC",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-18T13:30:46Z",
+                "arxiv:comment": "Accepted for publication in the 1st Workshop, titled ContinuumOps: DevOps for the Edge-Cloud Continuum, which was co-located with the 24th IEEE International Symposium on Network Computing and Applications",
+                "arxiv:primary_category": {
+                    "@term": "cs.DC"
+                },
+                "author": [
+                    {
+                        "name": "Ze Wang"
+                    },
+                    {
+                        "name": "Sajid Alam"
+                    },
+                    {
+                        "name": "Amjad Ullah"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.24395v1",
+                "title": "RSIBench-Infra: Can Agents Optimize Their Own Training and Inference Infrastructure at Production Scale?",
+                "updated": "2026-11-18T13:29:44Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.24395v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.24395v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Improving the efficiency of training and inference infrastructure is a practical component of recursive self-improvement. Existing benchmarks for agent-driven optimization largely focus on individual software layers such as kernel, leaving unclear whether agents can deliver end-to-end performance gains under production workloads. We introduce RSIBench-Infra, a benchmark of 20 training and inference tasks spanning diverse model families and modalities, with deployments of up to 32 accelerators on NVIDIA GPUs and Ascend NPUs. Agents start from runnable baselines derived from official recipes and can modify the software stack across engine, kernel, and instruction levels. An OCI image-layer submission protocol captures these changes for reproducible deployment, while independent evaluation measures end-to-end performance under task-specific quality constraints. Across all task results, 66.2% exceed $1.10\\times$ validated speedup. These results demonstrate that current agents can improve production-scale training and inference performance, but identifying effective optimization strategies and consistently translating local improvements into end-to-end gains remain challenging.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-18T13:29:44Z",
+                "arxiv:comment": "22 pages. Project page: https://rsibench-infra.github.io",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Hanlin Wu"
+                    },
+                    {
+                        "name": "Yifei Wang"
+                    },
+                    {
+                        "name": "Zhicheng Cai"
+                    },
+                    {
+                        "name": "Huan-ang Gao"
+                    },
+                    {
+                        "name": "Wei-Ying Ma"
+                    },
+                    {
+                        "name": "Ya-Qin Zhang"
+                    },
+                    {
+                        "name": "Jingjing Liu"
+                    },
+                    {
+                        "name": "Hao Zhou"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.24394v1",
+                "title": "Temporal Rank in Recurrent Neural Networks",
+                "updated": "2026-11-18T13:28:07Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.24394v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.24394v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Recurrent Neural Networks (RNNs) are a natural framework for temporal modelling, yet are often dismissed due to their sequential, non-parallelisable computation and difficulty in capturing long-range dependencies, typically attributed to vanishing and exploding gradients. We identify a distinct and under-explored limitation: an information bottleneck induced by rank-constrained hidden state dynamics, which limits the number of independent input directions that can be preserved over time, as reflected in the rank of the input-to-state mapping. We show that this constraint restricts temporal capacity independently of gradient stability. To address this, we introduce structured high-dimensional state dynamics that preserve temporal separability and prevent saturation of the input-to-state Jacobian over time. On controlled sequence tasks, the resulting model exhibits rapid learning despite remaining strictly within a standard RNN formulation. Our results demonstrate that RNN performance is governed by the evolution and preservation of temporal rank, and suggest that mitigating gradient pathologies alone is insufficient without explicitly maintaining temporal capacity.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -40,222 +133,244 @@
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-17T18:59:37Z",
-                "arxiv:comment": "Work in progress",
+                "published": "2026-11-18T13:28:07Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Giannis Daras"
+                        "name": "Leo Dobson"
                     },
                     {
-                        "name": "Marios Papachristou"
-                    },
-                    {
-                        "name": "Adam Klivans"
-                    },
-                    {
-                        "name": "Antonio Torralba"
-                    },
-                    {
-                        "name": "Constantinos Daskalakis"
+                        "name": "Anton Ragni"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.23228v1",
-                "title": "Spool: Low-Latency Streaming Inference for Hybrid Vision-Language Models",
-                "updated": "2026-11-17T18:59:27Z",
+                "id": "http://arxiv.org/abs/2611.24384v1",
+                "title": "Enhancing Active Learning Performance with Initial Data Selection Based on Foundation Models",
+                "updated": "2026-11-18T13:15:03Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.23228v1",
+                        "@href": "https://arxiv.org/abs/2611.24384v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.23228v1",
+                        "@href": "https://arxiv.org/pdf/2611.24384v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Applications such as visual accessibility agents and robotics require answering questions about recent video content promptly, over a bounded window of past frames (e.g., the last two minutes). Hybrid vision-language models (VLMs), which interleave attention with linear recurrent layers such as Gated DeltaNet (GDN), are attractive for this setting, but maintaining a sliding window is expensive. The reason is that recurrent layers combine all past frames into a shared state, so expiring old frames normally requires re-running the entire window through the model. We observe that the recurrent update is affine in the state with input-dependent coefficients, so the effect of each frame can be captured as a transformation that composes associatively. We present Spool, a training-free framework that caches per-frame state transformations and composes them efficiently as the window advances, removing expired frames from each recurrent layer's state without replaying frames through the backbone. Removal is exact within each layer; as with key-value eviction in attention, expired frames can retain residual influence through the cached inputs computed by earlier layers. We design a dedicated data structure and GPU kernels to achieve low caching and composition overhead. Across five open-source hybrid VLMs and four video reasoning benchmarks, Spool achieves the lowest p95 time-to-first-token in all 20 model-benchmark tests, reducing it by a geometric mean of $6.6\\times$ over the faster of two recent vLLM baselines, while improving accuracy by 2.3 percentage points on average.",
+                "summary": "In active object detection, selecting the initial labeled pool is essential, especially in complex datasets with expensive labeling and low resource budget. This study presents an active learning framework designed to optimize the initial training cycle of active learning for the object detection task. Our approach diverges from traditional methods by utilizing feature-based clustering from the YOLO-World model and refining images based on objectness scores rather than relying on uncertainty sampling in the initial cycle. This approach focuses on finding samples with various features and emphasizes training in areas where the foundation model is most confident. Doing so helps the model better understand different types of objects. For subsequent cycles, we employ a consistency-based sampling technique to maintain the robustness of the training process. To evaluate our method, we use two complex datasets called Aquarium and NWPU VHR-10, which are well known for their diverse object sizes and challenging conditions. In the NWPU dataset, our method increases mAP50 by an average of 6.6% in image-based evaluation. Moreover, the image refinement method shows an improvement of approximately 11% in object-based evaluation. The results show improvements in model performance and labeling time, demonstrating the advantages of using foundation models in early cycles of active learning. An implementation of the algorithm is available at https://github.com/Mhrshd-fllh/ALBoost-FM",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-17T18:59:27Z",
+                "published": "2026-11-18T13:15:03Z",
+                "arxiv:comment": "26 pages, 18 figures",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Rui Ning"
+                        "name": "Mohammad Mirzaee"
                     },
                     {
-                        "name": "Om Chabra"
+                        "name": "Mehrshad Fallah Estalkhzir"
                     },
                     {
-                        "name": "Hari Balakrishnan"
+                        "name": "Mohammad Reza Mohammadi"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.23225v1",
-                "title": "StringQFT: A Multiuse Textbook Resource for AI-Assisted Theoretical Physics",
-                "updated": "2026-11-17T18:58:40Z",
+                "id": "http://arxiv.org/abs/2611.24383v1",
+                "title": "What Majority Labels Hide: Annotator Disagreement and Model Errors in Multi-Dialect Arabic Sexism Detection",
+                "updated": "2026-11-18T13:14:00Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.23225v1",
+                        "@href": "https://arxiv.org/abs/2611.24383v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.23225v1",
+                        "@href": "https://arxiv.org/pdf/2611.24383v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present StringQFT as a textbook collection for string constructions of quantum field theory and as infrastructure for AI-assisted theoretical physics. The collection comprises 18 volumes, 190 chapters and 3,795 pages, covering brane probes, brane webs, geometric engineering, F-theory constructions, wrapped M5-branes and exact worldsheet constructions. Its open-book benchmark inventory contains 1,073 items, including 499 with automatic finite-answer checking. For retrieval-augmented generation, it provides 1,371 section records linked to textbook sources and PDF locations, together with a local lexical retriever. Training-data preparation is illustrated by 21 private, source-linked examples. For agents, it exposes 19 calculation tools with specified inputs and finite domains, connecting tool use to textbook derivations. We illustrate these uses through specific questions, retrieved passages and finite calculations. The textbook collection and accompanying resources are available at https://github.com/xingyang-yu/StringQFT.",
+                "summary": "Judgements of sexism are subjective and may vary across communities, yet sexism detection datasets usually reduce annotator judgements to a single majority label, obscuring disagreement and how models behave on contested cases. We introduce MuDAS, a dataset of YouTube comments in Saudi, Egyptian and Moroccan Arabic, each labelled by three native speakers of its dialect, with the individual annotations preserved. We use it to evaluate Arabic encoders fine-tuned with hard-label, soft-label and perspectivist objectives, GPT-5.6 Terra, and four Arabic-centric large language models. Model errors are more frequent on comments with annotator disagreement. Despite relatively close Macro-F1 scores, GPT-5.6 Terra and the fine-tuned encoders exhibit contrasting error patterns: GPT-5.6 Terra, even with the annotators' definition of sexism, over-classifies gender-related content such as religious advice on modesty, whereas the encoders miss implicit and prescriptive sexism. The Arabic-centric models also over-predict sexism and remain below the encoders. Disagreement-aware learning preserves Macro-F1, but soft labels improve alignment with annotators on contested comments at the expense of unanimous ones, and neither paradigm reliably identifies contested comments. Lower performance on Egyptian Arabic, clearest for the large language models, is not fully explained by the examined measures of test-set composition and dialectness. Majority-label scores can therefore hide contrasting error patterns that matter for content moderation.",
                 "category": [
                     {
-                        "@term": "hep-th",
+                        "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.CY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.SI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-17T18:58:40Z",
-                "arxiv:comment": "23 pages, 6 figures. Companion paper to an 18-volume textbook collection. Textbook PDFs: https://xingyangyu.com/textbook/",
+                "published": "2026-11-18T13:14:00Z",
+                "arxiv:comment": "36 pages, 6 figures. Submitted to Online Social Networks and Media. Dataset: https://huggingface.co/datasets/alaabaz/MuDAS . Content warning: contains examples of sexist and offensive language",
                 "arxiv:primary_category": {
-                    "@term": "hep-th"
-                },
-                "author": {
-                    "name": "Xingyang Yu"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.23221v1",
-                "title": "An inexact stochastic variance-reduced gradient method for constrained convex finite-sum optimization",
-                "updated": "2026-11-17T18:57:16Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.23221v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.23221v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "In this paper, we study a class of constrained convex finite-sum optimization problems. In many practical applications, all or some of the constraints are hard constraints that represent imperative requirements. Consequently, any desirable approximate solution must (nearly) satisfy these constraints. Motivated by this, we focus on computing an $\u03b5$-$surely\\ feasible\\ stochastic\\ optimal$ ($\u03b5$-SFSO) solution, in which the constraint violation is deterministically bounded by $\u03b5$, and the expected optimality gap is at most $\u03b5$. While a recently proposed stochastic variance-reduced first-order penalty method can compute an $\u03b5$-SFSO solution, there remains a significant gap between its first-order oracle complexity for computing an $\u03b5$-SFSO solution and that for computing an $\u03b5$-$expected\\ feasible\\ stochastic\\ optimal$ solution, where both the expected constraint violation and the expected optimality gap are bounded by $\u03b5$. To narrow this gap, we propose an inexact stochastic variance-reduced gradient (SVRG) method that significantly improves the previously best-known first-order oracle complexity for computing an $\u03b5$-SFSO solution. Furthermore, when the objective consists of a single function, the proposed method reduces to a novel deterministic first-order method for solving standard convex conic optimization. It achieves a significantly lower gradient evaluation complexity with respect to the objective function compared to existing methods, and can outperform them when computing constraint gradients and projections onto the associated cone is cheaper than evaluating the objective gradient. Preliminary numerical results are presented to illustrate the performance of the proposed method.",
-                "category": [
-                    {
-                        "@term": "math.OC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-17T18:57:16Z",
-                "arxiv:comment": "Accepted by SIAM Journal on Optimization",
-                "arxiv:primary_category": {
-                    "@term": "math.OC"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Zhaosong Lu"
+                        "name": "Alaa Bazaid"
                     },
                     {
-                        "name": "Yifeng Xiao"
+                        "name": "Arkaitz Zubiaga"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.23219v1",
-                "title": "Do LLM Agents Still Need to Be Told How to Self-Improve?",
-                "updated": "2026-11-17T18:57:10Z",
+                "id": "http://arxiv.org/abs/2611.24381v1",
+                "title": "How to Turn an Attention Neural Network into an Interpretable Hard-Logic Predicate Circuit: Truth-Table Predicate Extraction and State-Machine Merging under Ship-of-Theseus Replacement",
+                "updated": "2026-11-18T13:10:32Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.23219v1",
+                        "@href": "https://arxiv.org/abs/2611.24381v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.23219v1",
+                        "@href": "https://arxiv.org/pdf/2611.24381v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "LLM agents increasingly drive their own learning. Self-improvement methods delegate various components of model optimization to the models themselves. As models become more capable, this motivates a basic question: do these increasingly capable models still need us to specify how they should self-improve? In this paper we study an autonomous paradigm in which, given basic primitives, resources, and a general goal for self-improvement, agents construct their own self-learning algorithm for context-based optimization. Using the setting of gameplay as a testbed, a frozen LLM agent is given a compute budget and tools for collecting experience and updating text documents, and allowed to freely experiment without an externally imposed loop or access to real-world data. We find that sufficiently capable models do self-improve under these conditions, demonstrating strategies that align with classic cognitive frameworks for self-regulated learning and constructs from machine learning literature on self-generated curricula. Furthermore, we study the extent to which the learned text artifacts transfer to external benchmarks, observing improvement across different game horizons, mechanics, and 3D navigation.",
+                "summary": "We convert a trained attention network as a whole, attention included, into a hard-logic predicate circuit that runs in its place. Every unit of the circuit is a 0/1 predicate on tokens, and every map between predicates is a minimised truth table. Short tables, such as the product of a query code and a key code, are minimised exactly, and wide feature-to-feature transitions become implication rules by noise-tolerant minimisation. Blocks are replaced one at a time from the output down, in the manner of the Ship of Theseus, and after each replacement the remaining soft part re-adapts to the frozen circuit. Attention selection takes two forms, a row-wise comparison of integer scores (order selection) and a learned rule (rule selection). Both are fitted on the ordinary training set alone, and only on the examples that the teacher classifies correctly, so that the circuit imitates the teacher where the teacher is right. On TweetEval-emotion, the complete circuit of DistilGPT2 reaches a test gold accuracy of 66.5 $\\pm$ 1.3% with order selection and 57.4 $\\pm$ 2.5% with rule selection over three seeds, against 74.7% for the teacher and 64.0% for a bag of word pieces fitted on the same tweets, and that of BERT-base reaches 70.0 $\\pm$ 0.5% with order selection and 63.7 $\\pm$ 1.2% with rule selection against 77.8%. The circuit needs no multiplier and no weight traffic, and its exported hardware description reproduces it bit for bit. By a synthesis-based estimate it classifies one tweet in about 1-2 $\u03bc$s (DistilGPT2) and 3-5 $\u03bc$s (BERT) on an FPGA card and in 5-9 $\u03bc$s on a palm-sized board whose module draws 7.5-15 W, two to three orders of magnitude faster than the network on a GPU at batch 1 (measured, 0.9-2.6 ms for DistilGPT2 including an optimised CUDA-graph baseline), at a cost of 8.5 (DistilGPT2) and 8.6 (BERT) points of gold accuracy for the synthesised seed-0 circuits.",
                 "category": [
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.AR",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-17T18:57:10Z",
-                "arxiv:comment": "Project page: https://ssundaram21.github.io/self-org/",
+                "published": "2026-11-18T13:10:32Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Shobhita Sundaram"
+                        "name": "Yuchen Li"
                     },
                     {
-                        "name": "Cansu Sancaktar"
+                        "name": "Zongqi Fan"
                     },
                     {
-                        "name": "Phillip Isola"
+                        "name": "Xintong Li"
+                    },
+                    {
+                        "name": "Nguyen H. Tran"
+                    },
+                    {
+                        "name": "Ken-Tye Yong"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.23218v1",
-                "title": "What Does a Bias Head Measure? Non-Identifiability in Head-Level Bias Attribution",
-                "updated": "2026-11-17T18:57:08Z",
+                "id": "http://arxiv.org/abs/2611.24380v1",
+                "title": "Where Should a Diffusion Transformer Meet Its Teacher?",
+                "updated": "2026-11-18T13:09:28Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.23218v1",
+                        "@href": "https://arxiv.org/abs/2611.24380v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.23218v1",
+                        "@href": "https://arxiv.org/pdf/2611.24380v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Methods that localise social bias in large language models to individual attention heads and remove it by ablation are validated by their effect on a fairness metric, never by evidence that the statistic selecting the heads measures bias. We audit this on Qwen-2.5-7B-Instruct and Llama-3.1-8B-Instruct. The head map correlates at $\u03c1= -0.950$ and $-0.768$ with a label-blind response-length map, apparently identifying a surface confound. An intervention that breaks the length-label coupling rejects this reading: with the prompt held fixed, response length explains 1% of the statistic's variance. What does explain it is prompt identity, at 64% of variance, in an ordering that is not monotonic in length. Within any fixed prompt the fairness label, response length and the presence of a protected-group token are collinear at $\u03c6= 0.95$, partly by definition of the labelling rule, so no observational analysis can attribute the map to any of them, and no method in this family performs an experiment that could. The substantive claims fail independently: bias selectivity is not late-layer-concentrated on either model under either reference reading, and no head set we tested reduces the unfairness rate when ablated. Its complement, scored on the opposite label, reliably destroys refusal behaviour ($p = 2.7\\times10^{-5}$), demonstrating that the pipeline detects effects at this scale.",
+                "summary": "Representation Alignment (REPA) significantly accelerates Diffusion Transformer training by guiding intermediate student features with a pretrained visual teacher, yet existing methods typically attach supervision to a single fixed layer. As student representations evolve, however, we find that the most effective layer for alignment varies across training stages. To track this evolving layer suitability online without costly search, we measure gradient compatibility between the flow-matching and alignment objectives, and propose AdaREPA, an online routing framework that adaptively selects the supervision layer as training progresses. AdaREPA uses a softmax distribution over smoothed layer compatibility scores to sample a layer for alignment at each training step. This probabilistic routing adapts teacher supervision to the student's changing learning needs, with minimal training overhead and no additional inference cost. On ImageNet-256, AdaREPA accelerates convergence and improves generation quality across model sizes, while revealing how the most suitable layers for supervision shift over training.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-18T13:09:28Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zhuoqi Hu"
+                    },
+                    {
+                        "name": "Shiwei Li"
+                    },
+                    {
+                        "name": "Haozhao Wang"
+                    },
+                    {
+                        "name": "Xiandi Luo"
+                    },
+                    {
+                        "name": "Yihao Ouyang"
+                    },
+                    {
+                        "name": "Wenting Shen"
+                    },
+                    {
+                        "name": "Ang Wang"
+                    },
+                    {
+                        "name": "Jiamang Wang"
+                    },
+                    {
+                        "name": "Minyi Guo"
+                    },
+                    {
+                        "name": "Ruixuan Li"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.24379v1",
+                "title": "MoE-Context: Show the Model Only What It Needs",
+                "updated": "2026-11-18T13:08:14Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.24379v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.24379v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "AI agents read their whole history at every step. People do not work like that: we keep what the moment needs and hold the rest as a rough note we can recall. MoE-Context applies this to language models. The context is split into blocks. Before each step a fast yes or no pass decides which blocks the step needs; the rest stay as one-line notes that can be brought back, and nothing is deleted. In the version we build, one model makes this decision and then answers, over a single key-value cache where hidden blocks are masked rather than removed. On a laptop with Qwen3-1.7B and a synthetic lookup task, showing only the needed block raises accuracy from 93 to 119 of 120, and a masked block is as hidden as a deleted one. The model's own picking is the weak part. A supervised linear probe written into spare output rows lifts its accuracy from 80 to 110 of 120, but simple keyword search picks perfectly on this task, and the probe does not transfer to a second task. We report these results openly, along with two cheap usage patterns that block switching enables: undoing a failed attempt and running subagents without a new context.",
                 "category": [
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
@@ -265,36 +380,36 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-17T18:57:08Z",
-                "arxiv:comment": "18 pages, 13 tables. Under review at ACL Rolling Review (October 2026 cycle)",
+                "published": "2026-11-18T13:08:14Z",
+                "arxiv:comment": "10 pages, 10 figures",
                 "arxiv:primary_category": {
-                    "@term": "cs.CL"
+                    "@term": "cs.AI"
                 },
                 "author": {
-                    "name": "S. M Seefat Alam"
+                    "name": "Vedant Navale"
                 }
             },
             {
-                "id": "http://arxiv.org/abs/2611.23216v1",
-                "title": "Higher-Scoring Coding Models Did Not Get More Work Done",
-                "updated": "2026-11-17T18:56:42Z",
+                "id": "http://arxiv.org/abs/2611.24377v1",
+                "title": "LLM-Assisted Multi-Fidelity Bayesian Optimization: Fusing Expert Knowledge with Numerical Data",
+                "updated": "2026-11-18T13:07:03Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.23216v1",
+                        "@href": "https://arxiv.org/abs/2611.24377v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.23216v1",
+                        "@href": "https://arxiv.org/pdf/2611.24377v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "New coding models advertise themselves on score improvements of coding benchmarks. Yet no study has tested if a model that scores higher on these benchmarks gets more real work done. On June 12, 2026, a U.S. export control directive banned access to Claude Fable 5 for 19 days, which forced users to switch to other models. During this time, most former Fable 5 users switched to Opus 4.8 (11 points lower on SWE-Bench Pro compared to Fable 5). We treat this suspension as a natural experiment, where the people and projects stayed the same and only the model changed, so we could isolate the effect of Fable 5 on user productivity. We tracked GitHub pull requests of 297 Fable 5 users before, during, and after the suspension. We used 8,908 developers who stayed on Opus 4.8 all the time as the control group. We also repeated the comparison across five model upgrades before and after the suspension in 2026 (1,208 developers, 15,442 pull requests). Fitting a difference-in-differences model with developer and date fixed effects, we found that having access to Fable 5 increased the 7-day merge rate of pull requests by only 1.4 percentage points [-1.4; +4.3], which was not statistically significant. Similarly, no significant increases of merge rates were found with the upgrades (weighted mean: -0.9 percentage points [-1.9; +0.2]); all five estimates were negative (95% intervals included 0, did not differ from each other). We also did not observe a significant increase in the number of pull requests merged per week (+2.4% [-4.9%; +10.2%]).",
+                "summary": "Multi-fidelity Bayesian optimization (MFBO) reduces engineering design cost by combining inexpensive low-fidelity (LF) models with a few accurate high-fidelity (HF) evaluations and sequentially selecting designs to evaluate. However, when HF data are scarce, the LF-HF discrepancy is difficult to learn from numerical data alone, especially when physics omitted in the LF model makes it design-dependent. Yet even without sufficient data, domain experts often know which physics the LF model omits and under which conditions its effect grows. Existing multi-fidelity (MF) models cannot use such qualitative knowledge directly, but large language models (LLMs) can interpret it and compare designs accordingly. The proposed LLM-Assisted MFBO adds a knowledge basis to the conventional MF model: from an expert description of the omitted physics, an LLM judges which of two designs requires the larger signed residual correction, and a pairwise Gaussian process converts these judgments into the basis. HF data calibrate its contribution and sign, so the knowledge is not trusted blindly. On a lithium-ion battery design problem, the proposed method reduced the regret area under the curve of conventional MFBO by 61%. Knowledge quality, rather than the choice of LLM, determined whether the search was accelerated, as shown by a controlled study that varied the two independently. A knowledge-level ablation further quantified the contribution of each knowledge statement. These results show that LLM-interpreted expert knowledge can complement numerical data as an information source in MFBO.",
                 "category": [
                     {
-                        "@term": "cs.SE",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -302,141 +417,60 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.LG",
+                        "@term": "cs.CE",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-17T18:56:42Z",
-                "arxiv:comment": "20 pages, 4 figures",
+                "published": "2026-11-18T13:07:03Z",
+                "arxiv:comment": "35 pages, 8 figures, 3 tables",
                 "arxiv:primary_category": {
-                    "@term": "cs.SE"
+                    "@term": "cs.LG"
                 },
-                "author": {
-                    "name": "Yining Hua"
-                }
+                "author": [
+                    {
+                        "name": "Dongjun Han"
+                    },
+                    {
+                        "name": "Mingyu Lee"
+                    },
+                    {
+                        "name": "Ikjin Lee"
+                    }
+                ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.23215v1",
-                "title": "Feedback-Linearised Trajectory Tracking via Model-Informed Robust Geometric DDPC",
-                "updated": "2026-11-17T18:56:09Z",
+                "id": "http://arxiv.org/abs/2611.24376v1",
+                "title": "Teaching VLMs What to Say, Not How to Reason: Rethinking Counterfactual Reasoning in Autonomous Driving",
+                "updated": "2026-11-18T13:06:24Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.23215v1",
+                        "@href": "https://arxiv.org/abs/2611.24376v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.23215v1",
+                        "@href": "https://arxiv.org/pdf/2611.24376v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Data-driven predictive control (DDPC) predicts system responses from recorded trajectories, but nonlinear dynamics can limit the accuracy of fixed linear predictors. This paper studies geometric robust DDPC for trajectory tracking of a fully actuated manipulator using model-based feedback linearisation. A mechanical model maps virtual acceleration commands into joint torques, while recorded data capture residual dynamics arising from imperfect model parameters. The controller minimises worst-case prediction error over an open Grassmannian ball centred at the fitted trajectory subspace. Simulations on a planar 2R manipulator under gravity compare the proposed method with double-integrator model predictive control (MPC) and direct regularised data-enabled predictive control (DeePC). Results show improved tracking over double-integrator MPC despite increased torque effort, while performance relative to DeePC depends on the reference trajectory.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "eess.SY",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-17T18:56:09Z",
-                "arxiv:comment": "This manuscript has been submitted to the 9th Annual Learning for Dynamics & Control Conference, taking place in Stockholm, Sweden, in June 2027",
+                "summary": "End-to-end autonomous driving systems have been shown to suffer from shortcut learning and causal confusion, limiting their ability to generalize robustly under distribution shift. To mitigate these limitations, recent works based on Vision-Language Models (VLMs) have explored incorporating linguistic reasoning capabilities into driving decision-making, reporting improvements in driving performance. In particular, counterfactual (CF) reasoning has been proposed to enable self-reflective, high-level causal understanding. However, it remains unclear whether the language-based reasoning mitigates shortcut learning or merely shifts it from visual representations to linguistic patterns, creating an illusion of causal understanding. Moreover, existing approaches often conflate intervention-based reasoning with CF reasoning, leaving the effects of genuine CF reasoning unexplored. In this work, we examine what CF reasoning actually induces in VLM-based autonomous driving and observe that it shifts the action distribution toward more conservative behaviors while increasing uncertainty in reasoning and decision-making. This effect persists under reinforcement fine-tuning, suggesting that it is not merely a transient artifact. Furthermore, visual attention analysis shows that CF reasoning does not alter visual grounding, while causal intervention experiments reveal that masking causally relevant and non-causal factors in accident scenarios results in comparable decision change rates. Overall, these results suggest that CF reasoning does not induce genuine causal reasoning grounded in visual evidence. Instead, it acts as a linguistic shortcut that reshapes the action distribution, teaching models what to say but not how to reason, highlighting a gap between language-based reasoning and causal understanding in autonomous driving.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-18T13:06:24Z",
+                "arxiv:comment": "Accepted to NeurIPS 2026 Main Track (41 pages, 14 figures, 14 tables). Project page: https://ophd-hahao.github.io/projects/Rethink-CF/",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Pranav Gupta"
+                        "name": "Hayeon Oh"
                     },
                     {
-                        "name": "Deepan Muthirayan"
-                    },
-                    {
-                        "name": "Ravi Banavar"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.23214v1",
-                "title": "Asymptotics of Gibbs Posterior Measures on Infinite-Dimensional Hypothesis Spaces",
-                "updated": "2026-11-17T18:54:41Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.23214v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.23214v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We prove almost sure contraction rates and consistency for Gibbs posterior measures on arbitrary hypothesis spaces, in general infinite dimensional, under dependent data, nonadditive and time-dependent losses and learning rates, misspecified models, and unattainable minimisers of the limiting objective. In particular, we develop a novel proof approach in contraction rate theory by studying the asymptotics of Gibbs measures through Lorentz spaces, real interpolation theory, and Laplace transforms dispensing with testing or variational formulations which are unavailable in the considered generality. As a consequence we obtain almost sure contraction rates for dominated Bayes and fractional Bayes posterior measures in the same generality, extending existing theory on misspecified Bayesian inference. Furthermore, we demonstrate our theoretical results on novel applications to Gibbs posteriors for Dirichlet process priors with a nonadditive Wasserstein metric loss function under ergodic, non-Markovian observables.",
-                "category": {
-                    "@term": "math.ST",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-17T18:54:41Z",
-                "arxiv:primary_category": {
-                    "@term": "math.ST"
-                },
-                "author": {
-                    "name": "Terje Mildner"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.23212v1",
-                "title": "EviSlide-MIL: Multi-Query Pooling and Shared Prediction for Class-Incremental Whole-Slide Image Classification",
-                "updated": "2026-11-17T18:50:42Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.23212v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.23212v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Histopathological analysis of whole-slide images (WSIs) plays a critical role in cancer diagnosis, and multiple instance learning (MIL) is widely adopted for WSI analysis under weak supervision. As new tumor subtypes are introduced, extending existing MIL models requires learning new classes while retaining knowledge of previously learned ones. This presents a class-incremental learning challenge, where models must acquire new classes with limited access to historical training data and recognize all learned classes without task identifiers at inference. A major obstacle is forgetting, as updates to feature aggregation and prediction modules can degrade performance on previously learned classes. To address this challenge, we propose \\textbf{EviSlide-MIL}, a class-incremental WSI framework that integrates multiple learnable queries per class with a shared prediction module. The queries aggregate frozen patch features into class-specific representations, while the shared prediction module limits parameter growth across incremental stages. By freezing queries associated with previously learned classes, EviSlide-MIL preserves their attention patterns for identical inputs, while experience replay and knowledge distillation further mitigate forgetting as shared parameters are updated. Experiments on eight tumor subtypes from The Cancer Genome Atlas demonstrate that EviSlide-MIL achieves improved performance and reduced forgetting compared with competing methods across most learning settings, demonstrating its potential for scalable and knowledge-preserving WSI classification. Code and pretrained models will be released.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-17T18:50:42Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Zhouhan Qian"
-                    },
-                    {
-                        "name": "Sicheng Chen"
-                    },
-                    {
-                        "name": "Chad Wong"
-                    },
-                    {
-                        "name": "Tianyi Zhang"
-                    },
-                    {
-                        "name": "Enhui Chai"
-                    },
-                    {
-                        "name": "Zeyu Liu"
-                    },
-                    {
-                        "name": "Fei Xia"
+                        "name": "Donghwan Lee"
                     }
                 ]
             }
