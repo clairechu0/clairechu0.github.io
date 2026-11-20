@@ -5,312 +5,255 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-11-19T21:06:46Z",
+        "updated": "2026-11-20T02:46:37Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "644848",
+        "opensearch:totalResults": "645039",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2611.24939v1",
-                "title": "Map-Level Inference of Primordial Gravitational Waves from the CMB with Spherical Neural Networks",
-                "updated": "2026-11-18T18:59:32Z",
+                "id": "http://arxiv.org/abs/2611.25492v1",
+                "title": "Why Do LLMs Help with Scientific Misconduct Requests and What to Do About It?: Increasing the Trustworthiness of AI for Science",
+                "updated": "2026-11-19T04:32:25Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.24939v1",
+                        "@href": "https://arxiv.org/abs/2611.25492v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.24939v1",
+                        "@href": "https://arxiv.org/pdf/2611.25492v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We train a spherical graph convolutional network to infer the tensor-to-scalar ratio $r$ directly from multifrequency cosmic microwave background (CMB) $B$-mode maps on the cut sky. We test the network on simulations of a generic ground-based experiment including lensed CMB, inhomogeneous noise, and stochastic Galactic dust and synchrotron emission. We compare the network with a multifrequency bandpower likelihood built from the same 20,000 simulations used to train it. Working directly on the maps, with no power-spectrum estimation or component separation, the network reduces the root-mean-square error on $r$ by a factor of 1.3 and gives well-calibrated 68% intervals 1.2 times narrower than the likelihood with the same prior. Saliency maps show that the network learns to favor the deepest regions of the sky and the cleanest frequency channels without being given the survey depth. Both approaches are tied to the foreground model they are built on: the network generalizes to some alternative foreground models without retraining, but not to a three-dimensional dust model with line-of-sight variations. The network can be extended to marginalize over foreground models by training on a broad family, making direct map-level neural inference a promising route to $r$ for future $B$-mode analyses.",
-                "category": [
-                    {
-                        "@term": "astro-ph.CO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.IM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-18T18:59:32Z",
-                "arxiv:comment": "15 pages, 8 figures, 6 tables",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.CO"
-                },
-                "author": [
-                    {
-                        "name": "Anto I. Lonappan"
-                    },
-                    {
-                        "name": "Adrian E. Bayer"
-                    },
-                    {
-                        "name": "Brian Keating"
-                    },
-                    {
-                        "name": "Kam Arnold"
-                    },
-                    {
-                        "name": "Giuseppe Puglisi"
-                    },
-                    {
-                        "name": "Ethan O. Nadler"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24938v1",
-                "title": "Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models",
-                "updated": "2026-11-18T18:59:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24938v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24938v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "World-action models jointly predict future observations and actions, yet reconstruction-oriented visual representations do not explicitly emphasize the spatial relationships and object-state changes needed for manipulation. We introduce Phoenix, which learns representations of scene structure for world-action modeling. Specifically, Phoenix Encoder enriches DINOv3's general visual semantics through dual-teacher distillation of geometric and spatiotemporal semantic knowledge. Next, CS-VAE causally aggregates and compresses Phoenix Encoder features into generative latents while preserving scene information and spatial layout. Finally, Phoenix jointly predicts these latents, complementary appearance latents, and robot actions, linking scene evolution with action generation. To study pretraining data efficiency, we curate approximately 39,000 hours of egocentric and robot manipulation data for representation learning and use the robot demonstration subset for WAM pretraining. Following benchmark-specific post-training, Phoenix achieves state-of-the-art performance across simulation and real-robot benchmarks spanning single-arm, bimanual, and dexterous manipulation. It demonstrates strong robustness to perturbations, achieving success rates of 94.8% on LIBERO-Plus and 72.4% on RoboTwin 2.0 C2R, alongside strong cross-embodiment transfer and real-world manipulation performance on Bench2Dex and RoboDojo-RealWorld, respectively. Pretraining-scale analysis shows larger performance gains from data scaling than a video-VAE-only baseline, indicating stronger scaling benefits and more effective data utilization. Moreover, Phoenix maintains high success rates when adapted with limited downstream demonstrations, demonstrating strong few-shot adaptation. Our code, pretraining data, and models are available on the project page to help the community reproduce our results.",
+                "summary": "Large language models (LLMs) support scientific research, but some of that assistance can also undermine research integrity. Existing safety evaluations in science often measure whether models refuse misconduct requests, but rarely explain whether they even recognize the problem or why they comply. We investigate this gap across 8 LLMs using SciIntBench, an existing benchmark of 1,350 prompts about scientific research integrity. We examine the reasons behind compliance in four steps. First, when asked directly whether fulfilling a request would involve misconduct, models overwhelmingly identify such requests, even in the Most Covert cases (91%), while they refuse to carry out the request in only 34% of cases. Second, we examine which request characteristics are associated with refusal using features that capture how the request is framed, how much the assistant has been told about what it is helping to hide, and how the goal and the user's stake are stated, among others. Third, we estimate that the most significant effect was to rephrase requests as questions about permissibility rather than instructions, which increased refusal from 52% to 88%. Finally, we test two system-prompt fixes: asking models to assess the request before responding and reminding them of responsible conduct of research principles. These changes increase refusal rates on adversarial requests from 58% to 87% and 86%, respectively. Our findings show that models recognize wrongful requests but still help users violate integrity. Understanding why these failures occur and testing ways to reduce them offer promising paths toward more trustworthy AI for science.",
                 "category": {
-                    "@term": "cs.RO",
+                    "@term": "cs.AI",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-18T18:59:04Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Yupeng Zheng"
-                    },
-                    {
-                        "name": "Chaoyue Li"
-                    },
-                    {
-                        "name": "Linbo Wang"
-                    },
-                    {
-                        "name": "Xiang Li"
-                    },
-                    {
-                        "name": "Yuhang Zheng"
-                    },
-                    {
-                        "name": "Xiaotong Su"
-                    },
-                    {
-                        "name": "Songen Gu"
-                    },
-                    {
-                        "name": "Yichen Zhang"
-                    },
-                    {
-                        "name": "Zebin Xing"
-                    },
-                    {
-                        "name": "Shuai Tian"
-                    },
-                    {
-                        "name": "Jingxiang Guo"
-                    },
-                    {
-                        "name": "Jing Li"
-                    },
-                    {
-                        "name": "Zhiyong Zhao"
-                    },
-                    {
-                        "name": "Zhongpu Xia"
-                    },
-                    {
-                        "name": "Qichao Zhang"
-                    },
-                    {
-                        "name": "Haoran Li"
-                    },
-                    {
-                        "name": "Shuicheng Yan"
-                    },
-                    {
-                        "name": "Dongbin Zhao"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24937v1",
-                "title": "LEMUR: A Searchable Web Archive of Deep Chandra Images of Galaxies and Galaxy Clusters",
-                "updated": "2026-11-18T18:59:03Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24937v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24937v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present LEMUR, a publicly accessible archive of uniformly reduced, deep Chandra images of 2,569 galaxies and galaxy clusters (including groups), comprising 5,505 ACIS observations and 138.8 Ms of exposure. By combining the publicly available imaging observations of each target, we provide background-subtracted, exposure-corrected images in broad, soft, and hard bands at the native ACIS pixel scale of 0.492 arcsec. Our primary goal is to make the wealth of archival Chandra observations accessible to researchers without requiring specialized expertise in X-ray data reduction.\n  Each observation is reprocessed with CIAO, filtered for background flares, and reduced with settings chosen to preserve faint diffuse emission; the merged images are exposure corrected and background subtracted using the ACIS blank-sky backgrounds in a broad (0.5-7.0 keV), a soft (0.5-2.0 keV), and a hard (2.0-7.0 keV) band. For every object, we measure an X-ray center at the peak of its diffuse emission, and we provide a morphological similarity search based on embeddings from the AstroCLIP foundation model, in which nearest neighbors share cool-core status in 73% of matched cluster pairs, compared with 51% by chance.\n  Photometry of 275 point sources agrees with the Chandra Source Catalog to within 3% in the broad band. The images, along with their counts images, background models, exposure maps, and quick-look stamps, are available through a searchable web archive at https://lemur-archive.lemur-xray.workers.dev/. The catalog tables are archived on Zenodo (doi:10.5281/zenodo.24351915), and all code is open source at https://github.com/crhea93/Lemur.",
-                "category": [
-                    {
-                        "@term": "astro-ph.GA",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "astro-ph.IM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-18T18:59:03Z",
-                "arxiv:comment": "Will be submitting to the Open Journal of Astrophysics",
-                "arxiv:primary_category": {
-                    "@term": "astro-ph.GA"
-                },
-                "author": [
-                    {
-                        "name": "Carter L. Rhea"
-                    },
-                    {
-                        "name": "Julie Hlavacek-Larrondo"
-                    },
-                    {
-                        "name": "Marine Prunier"
-                    },
-                    {
-                        "name": "Hyunseop Choi"
-                    },
-                    {
-                        "name": "Megan Donahue"
-                    },
-                    {
-                        "name": "Christian Thibeault"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24936v1",
-                "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
-                "updated": "2026-11-18T18:56:12Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24936v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24936v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Jailbreak attempts and harmful prompts remain a challenge for the safe deployment of large language models. We study whether contrastively learned representations can support safety detection without training an additional downstream classifier. We propose Jailbreak Detection with Prototype Inference (JDPI), which uses binary safety labels to construct harmful and benign prototypes and makes predictions from relative prototype distances. JDPI uses only binary safety labels for encoder adaptation, prototype construction, and validation. In our setup, it uses fewer labeled examples than the classifier baseline (Method A) by avoiding the separate split used to train the downstream classifier. Across four benchmarks covering different input formats, contrastive fine-tuning improves JDPI's detection accuracy by 9.1-18.0 percentage points. Using the same encoder, JDPI achieves slightly higher ROC-AUC on one benchmark and stays within 0.017 of the baseline across all four. With dataset-specific adaptation, JDPI exceeds the released Llama Guard 3-8B baseline by 0.173-0.310 in ROC-AUC across the four benchmarks. In multi-turn replay on TomGibbs, JDPI uses accumulated user history as the conversation unfolds, achieving higher conversation-level accuracy than when it uses the current turn alone. Across 12 directed transfers, JDPI outperforms the classifier by an average of 1.59 percentage points in accuracy, demonstrating stronger cross-dataset robustness.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-18T18:56:12Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.CL"
-                },
-                "author": [
-                    {
-                        "name": "Yan Qiu"
-                    },
-                    {
-                        "name": "Yuanyuan Li"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24932v1",
-                "title": "Knowing What You Know: A Trait Theory of Reviewer Value in Human-AI Cognitive Systems",
-                "updated": "2026-11-18T18:55:07Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24932v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24932v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "When a capable model and a human reviewer cooperate on the same decision, which human still adds value? We argue this is a question about a single cognitive trait, metacognitive calibration: the alignment between a reviewer's behavioral confidence and the actual correctness of their judgments. We develop a trait theory of reviewer value to make it precise. The theory makes five claims: value is governed by calibration rather than by activity, speed, agreement, or tenure; calibration leaves observable traces in behavioral telemetry; those traces are non-diagnostic on their own, because the fast, low-revision signature of a calibrated expert is indistinguishable from that of a confident novice until it is gated by outcomes; human calibration and a model's self-knowledge are the same construct, so the joint system should defer to whichever agent is better calibrated on each item; and individual calibration is causally identifiable only above the level of the single judgment. We ground each claim in a six-month production window of an AI-assisted accounting system (541621 reviewer events, 483 reviewers), and find that a purely behavioral expertise profile inverts the ground truth, scoring an overconfident cohort (5.2 percent correction survival) higher than genuine experts (99.2 percent); that reviewer quality is flat across tenure, so the trait is not learned on the job; and that the same calibration logic that separates good from bad reviewers, applied to the model, concentrates 92.5 percent of human effort on genuine errors. We close with the boundary the theory must respect: under majority-vote aggregation, individual causal value is unidentifiable.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CE",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.HC",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-18T18:55:07Z",
-                "arxiv:comment": "Accepted at the Thirteenth Annual Conference on Advances in Cognitive Systems (ACS), Edinburgh, United Kingdom, October 6-9, 2026. Awarded one of 2026 Ada Lovelace Awardees for Excellent Paper Submissions to ACS",
+                "published": "2026-11-19T04:32:25Z",
                 "arxiv:primary_category": {
                     "@term": "cs.AI"
                 },
                 "author": [
                     {
-                        "name": "Priyanka Sinha"
+                        "name": "Almene De Meran Meguimtsop"
                     },
                     {
-                        "name": "Sugam Pandey"
+                        "name": "Daniel E. Acuna"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.24927v1",
-                "title": "Mapping the AI Supply Chain: Dependencies, Vulnerabilities, and Market Concentration in the AI Ecosystem",
-                "updated": "2026-11-18T18:53:58Z",
+                "id": "http://arxiv.org/abs/2611.25485v1",
+                "title": "Motion-Sickness-Aware Vehicle Control via DKUC-Based Inverse Design and Iterative Feedback Tuning",
+                "updated": "2026-11-19T04:19:26Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.24927v1",
+                        "@href": "https://arxiv.org/abs/2611.25485v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.24927v1",
+                        "@href": "https://arxiv.org/pdf/2611.25485v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "AI systems are built across many organizations that contribute models, data, compute, capital, talent, and other assets. While the layers of the AI stack are relatively well understood, the relationships between actors and components across layers remains sparsely documented. In this work, we focus on the organizations that make up the AI supply chain: the complex network of actors that contribute to the development and deployment of AI. We motivate the examination of the organizational AI supply chain---highlighting concerns about concentration, power, chokepoints, cascading failures, fragmented accountability, and risk---then describe our pipeline for mapping the AI supply chain. Our pipeline yields our main contribution: a multilayered, large-scale dataset of actors and relationships in the AI ecosystem, annotated with dates, descriptions, types, tags, and more. This work takes a step toward systematically mapping and measuring the AI supply chain and its properties, cataloging how models, data, chips, infrastructure, capital, and even talent flow between organizations. This data enable critical examinations of industry relationships and yield insights into the political economy of AI development and concentration. We provide several illustrative analyses, including studying the most central actors, analyzing network concentration, and identifying communities and chokepoints. While our dataset is fairly comprehensive, it is also necessarily incomplete: public documents omit private deals, and coverage is shaped by search design. Together, the approach, data, and findings aim to serve as a resource for studying the AI ecosystem. The dataset is publicly available at https://huggingface.co/datasets/sarahcen/ai-supply-chain and can be explored interactively at https://aisupplychains.org/.",
+                "summary": "Tuning existing vehicle controllers for motion-sickness reduction requires a desired vehicle response that reflects physiological comfort. The six-degree-of-freedom subjective vertical conflict (6DoF-SVC) model can evaluate sensory conflict induced by vehicle motion, but it does not directly provide a target motion for controller design. This paper proposes a 2-step framework to construct such a reference. First, a target SVC trajectory is generated from the baseline response by limiting conflict peaks while imposing a minimum activity level. Second, a lifted linear model identified using Deep KoopmanU with Control (DKUC) is inverted to map the target SVC trajectory to a regularized reference expressed in vehicle-acceleration and angular-velocity coordinates. The resulting motion reference is then used in an Iterative Feedback Tuning (IFT)-style procedure for fixed-structure PI and LQR controllers. In the considered simulation scenario, the selected SVC target reduces the sequence norm by 6.95\\% relative to the baseline. Controller tuning with reduced response models decreases the regularized PI and LQR objectives by 49.5\\% and 32.3\\%, respectively. These results show that a nonlinear physiological comfort objective can be converted into a practical motion reference for tuning fixed-structure vehicle controllers.",
+                "category": {
+                    "@term": "eess.SY",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-19T04:19:26Z",
+                "arxiv:comment": "6 pages, 7 figures, Accepted for publication in the proceedings of the 2026 IEEE Conference on Decision and Control (CDC 2026)",
+                "arxiv:primary_category": {
+                    "@term": "eess.SY"
+                },
+                "author": [
+                    {
+                        "name": "Uta Kawakami"
+                    },
+                    {
+                        "name": "Kenji Sawada"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.25481v1",
+                "title": "Uncertainty-Aware Multimodal Deep Learning for Prediction of Radiation-Induced Xerostomia in Head and Neck Cancer",
+                "updated": "2026-11-19T04:13:14Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.25481v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.25481v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "To develop and evaluate an uncertainty-aware multimodal learning framework for predicting radiation-induced xerostomia in patients receiving head-and-neck cancer radiotherapy. We developed a Bidirectional Attention-enhanced Diffusion Transformer (BA-DiT) that combines self-supervised multimodal representation learning with supervised Bayesian fine-tuning. The model integrates pretreatment CT images and three-dimensional dose distributions, focusing on bilateral parotid glands while incorporating surrounding anatomical and dosimetric information. During pretraining, bidirectional cross-attention integrates anatomical and dosimetric features, while a latent Diffusion Transformer learns joint representations through diffusion-based learning, feature reconstruction, and contrastive alignment. Supervised fine-tuning employs a Bayesian classifier to predict individualized xerostomia risk and quantify predictive uncertainty, with a learnable label-transition model accounting for potential toxicity label uncertainty. BA-DiT was developed using four independent cohorts (Moffitt, Emory, MSHS, and TCIA) and evaluated against baseline and ablation models. Evaluation included predictive performance, calibration, uncertainty quantification, decision curve analysis, and patient-level case studies. In independent MSHS and Emory cohorts, BA-DiT achieved AUCs of 0.83 and 0.80, respectively, outperforming baseline models. Predictive uncertainty peaked near the decision boundary, with aleatoric uncertainty being the predominant component. Uncertainty-based selective prediction generally improved net benefit among retained patients, with greater gains at lower prediction coverage. BA-DiT enables individualized xerostomia risk prediction while providing complementary uncertainty estimates, potentially supporting informed clinical decision-making and personalized toxicity management.",
+                "category": {
+                    "@term": "eess.IV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-19T04:13:14Z",
+                "arxiv:comment": "24 pages, 4 figures",
+                "arxiv:primary_category": {
+                    "@term": "eess.IV"
+                },
+                "author": [
+                    {
+                        "name": "Jin Yang"
+                    },
+                    {
+                        "name": "Tian Liu"
+                    },
+                    {
+                        "name": "Jose Penagaricano"
+                    },
+                    {
+                        "name": "Jing Wang"
+                    },
+                    {
+                        "name": "Erin L. Moshier"
+                    },
+                    {
+                        "name": "Jerry Liu"
+                    },
+                    {
+                        "name": "Richard Bakst"
+                    },
+                    {
+                        "name": "Ming Chao"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.25480v1",
+                "title": "Learning Ankle Exoskeleton Control for Reactive Standing Balance Through Neuromusculoskeletal Simulation",
+                "updated": "2026-11-19T04:10:08Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.25480v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.25480v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Deficits in reactive balance can increase fall risk among older adults and individuals with neuromuscular impairments, motivating the need for interventions that improve balance recovery. Wearable robotic exoskeletons offer a promising approach to addressing this need by augmenting balance control. However, developing controllers that deliver appropriately timed and scaled assistance remains challenging, as evaluating each candidate strategy requires repeated exposure to destabilizing perturbations. We propose a simulation-to-real framework that combines motion imitation and reinforcement learning to develop balance-assistive ankle exoskeleton control. A muscle-driven neuromusculoskeletal model was trained using a small set of motion-capture data from a single subject to reproduce kinematic and kinetic responses to backward-translation perturbations. This model served as a virtual human for training a reinforcement-learning exoskeleton controller. The resulting controller generated bilateral ankle assistance using only inertial sensor measurements, without explicit perturbation detection. We implemented the controller on-board a bilateral ankle exoskeleton and evaluated it in five healthy subjects whose data were not used for training. Assistance increased the perturbation magnitude that subjects could withstand without stepping by 11.8% and reduced peak center-of-mass displacement and velocity by 13.5% and 28.2%, respectively. Individual benefits varied with baseline recovery strategy and body mass. These results indicate that a single virtual human can yield transferable balance assistance, and that more diverse virtual humans could further improve its effectiveness.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-19T04:10:08Z",
+                "arxiv:comment": "6 pages, 5 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Maria T. Tagliaferri"
+                    },
+                    {
+                        "name": "Inseung Kang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.25478v1",
+                "title": "TAP: Tapping the Discriminative Potential of Frozen Representations for Class-Incremental Learning",
+                "updated": "2026-11-19T04:08:23Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.25478v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.25478v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Pre-trained models provide transferable representations for class-incremental learning (CIL). However, sequentially adapting these representations introduces optimization costs and may disrupt old-class feature structure. This motivates us to explore whether the discriminative potential of these representations can be further exploited by continually accumulating class information while keeping the encoders frozen. To this end, we propose TAP, a new and novel framework for tapping the discriminative potential of frozen representations in class-incremental learning. It accumulates visual and semantic class information in the frozen CLIP embedding space with only lightweight optimization. TAP comprises three modules: class-conditional visual distribution modeling, class-adaptive semantic calibration, and visual-semantic posterior fusion. The first module retains class means and within-class scatters, combining class-specific and shared covariances to stabilize distribution estimation. The second module learns class-specific weights over text templates from current-task images, adapting text representations to downstream classes. The third module combines the visual and semantic posteriors through a weighted product of experts for prediction over all seen classes without retaining images from previous tasks. Across nine datasets under two incremental protocols, TAP achieves state-of-the-art performance, attaining the highest average incremental and final-stage accuracies among the compared methods. The code is provided as an ancillary file.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-19T04:08:23Z",
+                "arxiv:comment": "10 pages, 3 figures. Code is included as an ancillary file",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Zihao Wang",
+                        "arxiv:affiliation": "Shandong University"
+                    },
+                    {
+                        "name": "Yu-Wei Zhan",
+                        "arxiv:affiliation": "Zhejiang University of Technology"
+                    },
+                    {
+                        "name": "Xiao-Qian Liu",
+                        "arxiv:affiliation": "Shandong University"
+                    },
+                    {
+                        "name": "Zhen-Duo Chen",
+                        "arxiv:affiliation": "Shandong University"
+                    },
+                    {
+                        "name": "Weitong Liu",
+                        "arxiv:affiliation": "Shandong University"
+                    },
+                    {
+                        "name": "Xin Luo",
+                        "arxiv:affiliation": "Shandong University"
+                    },
+                    {
+                        "name": "Xin-Shun Xu",
+                        "arxiv:affiliation": "Shandong University"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.25476v1",
+                "title": "WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming",
+                "updated": "2026-11-19T04:04:29Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.25476v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.25476v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Neural networks encode learned capabilities in their weights, yet extending those capabilities with explicit task knowledge remains a fundamental challenge. Here we show that Weight-Space Programming (WSP), in which executable programs read, construct or modify a network's weights directly, can install new capabilities within trained neural networks. WeightCode, a WSP framework, uses a frozen language model to write executable weight programs that install new computations into trained neural networks using task knowledge and their existing weights, without gradient-based training. Once installed, the new capabilities run independently of the language model. Given a grammar or eight demonstrations, weight programs enable previously unseen command compositions (0% to 99.8% exact match) and a new pickup action (0% to 98.4% success), while preserving the original command and navigation capabilities. On ImageNet, four weight programs achieve net gains of 8.84-17.62 points while preserving clean accuracy, outperforming the best of eight fine-tuning methods under matched examples, checks, and retention constraints. In a Vision Transformer, causal interventions show that installed noise-correction gates drive robustness gains, while their selective activation preserves clean accuracy. Rerun on five independently trained Vision Transformers without further language model calls, ten weight programs retain 83-110% of their source-network gains on average, whereas copying their fixed weight edits yields negligible gains. Six programs written for an already edited network add 5.23-14.50 points of contrast robustness while retaining the previously installed noise gain. Together, these results establish WSP as a new route to acquiring and accumulating capabilities in trained neural networks through reusable weight programs.",
                 "category": [
                     {
-                        "@term": "cs.CY",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -318,208 +261,202 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-18T18:53:58Z",
-                "arxiv:comment": "80 pages, 31 figures, 16 tables",
+                "published": "2026-11-19T04:04:29Z",
+                "arxiv:comment": "26 pages, 11 figures, including appendix. Code: https://github.com/Gen-Verse/WeightCode",
                 "arxiv:primary_category": {
-                    "@term": "cs.CY"
+                    "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Sarah H. Cen"
+                        "name": "Bo Li"
                     },
                     {
-                        "name": "Lindsey A. Gailmard"
+                        "name": "Taoyong Cui"
                     },
                     {
-                        "name": "Joohan Kim"
+                        "name": "Bob Zhang"
                     },
                     {
-                        "name": "Rishi Bommasani"
+                        "name": "Mengran Li"
                     },
                     {
-                        "name": "Daniel E. Ho"
+                        "name": "Chengyang Zhang"
                     },
                     {
-                        "name": "Percy Liang"
+                        "name": "Yang Zhang"
+                    },
+                    {
+                        "name": "Pheng Ann Heng"
+                    },
+                    {
+                        "name": "Wanli Ouyang"
+                    },
+                    {
+                        "name": "Zhenfei Yin"
+                    },
+                    {
+                        "name": "Yingcheng Wu"
+                    },
+                    {
+                        "name": "Ling Yang"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.24926v1",
-                "title": "Grana: Compositional Reward Modeling for Long-Horizon Robot Manipulation",
-                "updated": "2026-11-18T18:53:53Z",
+                "id": "http://arxiv.org/abs/2611.25475v1",
+                "title": "SegAnyFruit: Learning Generalizable and Edge Deployable Fruit Instance Segmentation at Scale",
+                "updated": "2026-11-19T04:03:32Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.24926v1",
+                        "@href": "https://arxiv.org/abs/2611.25475v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.24926v1",
+                        "@href": "https://arxiv.org/pdf/2611.25475v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Robot reward modeling faces two challenges: generalizing across tasks and accurately tracking progress in long-horizon manipulation. General-purpose reward models demonstrate broad task transfer, but transfer from short-task pretraining to long-horizon tasks remains underexplored. Long-horizon progress models often rely on task-specific subtask classifiers or fixed action vocabularies, limiting the reuse of learned progress knowledge when adapting to new tasks. To address these challenges, we introduce Grana, a vision-language robot reward model that learns to identify unfinished subtasks and estimate their continuous progress using open-vocabulary subtask descriptions. We train a language-conditioned model to estimate progress in short-horizon tasks and individual subtasks of long-horizon tasks. For long-horizon tasks, we combine the selected subtask's predicted progress with credit for preceding completed subtasks to estimate whole-task progress. General progress prediction requires training the model across diverse tasks with progress supervision that accounts for imperfect execution. Elapsed-time proxies can misrepresent progress when relative subtask durations vary, or failures reverse local progress. We therefore introduce an annotation protocol that converts sparse subtask boundaries and action-quality annotations into dense progress targets, without requiring annotators to assign numerical progress scores. Pretraining with this supervision on 200 diverse, mostly short-horizon manipulation tasks enables zero-shot reward prediction on unseen tasks and improves progress prediction after adaptation to multi-minute, long-horizon tasks. Experiments demonstrate (i) generalizable reward prediction, including adaptation to five long-horizon tasks, (ii) benefits from pretraining and composing subtask progress estimates, and (iii) improved downstream policy performance.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-18T18:53:53Z",
-                "arxiv:comment": "Project website: https://research.nvidia.com/labs/gear/grana/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Zi-ang Cao"
-                    },
-                    {
-                        "name": "Kaiyuan Zheng"
-                    },
-                    {
-                        "name": "Yinzhen Xu"
-                    },
-                    {
-                        "name": "Haonan Duan"
-                    },
-                    {
-                        "name": "Jiasheng Gu"
-                    },
-                    {
-                        "name": "Fengyuan Hu"
-                    },
-                    {
-                        "name": "Nan Zhu"
-                    },
-                    {
-                        "name": "Kun Lei"
-                    },
-                    {
-                        "name": "Kevin Lin"
-                    },
-                    {
-                        "name": "Ruijie Zheng"
-                    },
-                    {
-                        "name": "Shenyuan Gao"
-                    },
-                    {
-                        "name": "Fangqi Zhu"
-                    },
-                    {
-                        "name": "Zhe Zhang"
-                    },
-                    {
-                        "name": "Radha Poovendran"
-                    },
-                    {
-                        "name": "Linxi Fan"
-                    },
-                    {
-                        "name": "Guanzhi Wang"
-                    },
-                    {
-                        "name": "Yuke Zhu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24925v1",
-                "title": "Render the Robot, Generate the World: One Video World Model Across Embodiments",
-                "updated": "2026-11-18T18:52:28Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24925v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24925v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Predicting the consequences of an agent's actions requires modeling both the body's motion and the environment's response. Most video world models attempt to learn both from numerical actions, even though geometry and kinematics already specify the intended motion. We introduce Doppel, an embodiment-agnostic video world model conditioned on camera-aligned renderings of future body configurations and numerical action trajectories. By explicitly providing the intended motion, Doppel can focus on predicting object motion and interaction-driven changes in the environment. Rendered motion also provides a common visual interface across different embodiments and action spaces. To train on robot datasets without camera extrinsics, we recover camera poses and align rendered trajectories with recorded observations. We jointly train a single shared video backbone and conditioning adapter on eight datasets spanning eight robot and human embodiments, from single- and bimanual robot arms to a dexterous humanoid and human hands and bodies, using about 600 hours of video without embodiment labels. Across three robot-arm datasets, Doppel improves PSNR over action-only baselines by 1.00 dB on held-out trajectories and 1.20 dB under out-of-distribution evaluation, while predicting more consistent object motion. Training on all eight embodiments (Doppel-8) improves robot predictions over the three-robot model (Doppel-3) on four of six evaluation sets. Project page: https://doppelwm.github.io/.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-18T18:52:28Z",
-                "arxiv:comment": "Project page: https://doppelwm.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Yash Jangir"
-                    },
-                    {
-                        "name": "Karan Mirakhor"
-                    },
-                    {
-                        "name": "Renos Zabounidis"
-                    },
-                    {
-                        "name": "Muhammad Zubair Irshad"
-                    },
-                    {
-                        "name": "Sergey Zakharov"
-                    },
-                    {
-                        "name": "Yonatan Bisk"
-                    },
-                    {
-                        "name": "Homanga Bharadhwaj"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.24915v1",
-                "title": "PrismRestore: A Compact Restoration Toolbox for Agentic Image Restoration",
-                "updated": "2026-11-18T18:48:01Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.24915v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.24915v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Agentic image restoration composes operations to handle mixed degradations, yet its toolbox often requires storing multiple restoration networks. We propose PrismRestore, which constructs a compact bank of callable restoration actions from a single frozen all-in-one model. Our approach builds on task-dependent yet overlapping channel responses in the shared model. An offline task-prior search uses activation and gradient statistics to group channels with similar response profiles, then searches task-specific modulation coefficients over non-representative channels while leaving representative channels unmodulated. The resulting prior bank enables explicit action selection and composition without additional restoration backbones or task-specific adapter modules. A state-conditioned policy learns to compose these actions using Group Relative Policy Optimization. Its objective separately normalizes fidelity and perceptual feedback within groups of trajectories sampled for the same input, and combines terminal evaluation with return-to-go derived from stepwise quality changes. Experiments on synthetic composite-degradation and real-world multi-task benchmarks show improvements over the evaluated all-in-one baselines and restoration quality competitive with multi-model agents. PrismRestore achieves these results with a single restoration backbone and faster inference than the evaluated agentic baselines.",
+                "summary": "Deploying fruit instance segmentation in real agricultural settings requires generalizing across unseen species, orchards, and imaging conditions under strict onboard compute and annotation budgets. We introduce SegAnyFruit (SAF), a data construction and progressive training framework that distills foundation-model priors into lightweight, prompt-free segmenters. SAF combines generic mask pre-training, broad mid-training on automatically annotated web imagery from our curated WebFruits dataset, and human-verified agricultural refinement post-training on PaperFruits, together spanning 733K images and 9.66M whole-fruit masks across 165 fruit types. Across seven benchmarks, zero-shot SAF-RF-DETR-XL reaches 69.06 average mask AP50:95 (+4.76 over SAM 3) while remaining deployable on edge devices. SAF initialization also boosts few-shot to full-shot adaptation across five agricultural domains while mitigating catastrophic forgetting. Finally, we systematically analyze training stages, data scale, model capacity, and generative augmentation, and validate our pipeline's transferability to underwater, cell, and human segmentation. We will release our datasets, code, and SAF models.",
                 "category": {
                     "@term": "cs.CV",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-18T18:48:01Z",
+                "published": "2026-11-19T04:03:32Z",
+                "arxiv:comment": "11 pages, 6 figures",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Zhaocheng Yu"
+                        "name": "Yanan Wang"
                     },
                     {
-                        "name": "Kui Jiang"
+                        "name": "Yuzheng wang"
                     },
                     {
-                        "name": "Jing Cao"
+                        "name": "Yibin Ying"
                     },
                     {
-                        "name": "Yiang Chen"
+                        "name": "Zhenghao Fei"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.25474v1",
+                "title": "TuringPAI: A Foundation for On-Device Physical AI",
+                "updated": "2026-11-19T04:01:34Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.25474v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Xiaocheng Feng"
+                        "@href": "https://arxiv.org/pdf/2611.25474v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Physical AI requires models that understand spatial relationships and dynamic environments and translate observations into actions under limited onboard compute. We present TuringPAI, a family of models for on-device Physical AI comprising TuringPAI-VL for shared vision-language understanding, TuringPAI-Drive for autonomous driving, and TuringPAI-Embodied for robotic manipulation. TuringPAI-VL is a 0.65B model built on HybridViT-MLQ, which combines convolutional local aggregation with Transformer-based global modeling. Multi-scale Latent Queries integrate spatial features and observation history within the same visual Transformer, providing a compact, structured interface to the language model. Training combines general vision-language data with geometric, cross-view, and temporal supervision. TuringPAI-VL supports general multimodal understanding and improves quantitative geometric perception over Qwen2-VL-2B, while providing a shared initialization for the two downstream VLA models. For autonomous driving, TuringPAI-Drive maintains all evaluated ADE/FDE metrics within 1.2\\% of a full-token HybridViT baseline using the MLQ interface and achieves comparable aggregate scores in an in-house simulation evaluation. Using XPeng Native Runtime (XNRT) on a single NVIDIA Orin-X SoC, TuringPAI-Drive generates trajectories at 12\\,Hz in on-vehicle operation. For robotic manipulation, TuringPAI-Embodied achieves a 96.8\\% average success rate across the four LIBERO suites. These results demonstrate a shared vision-language foundation for driving and robotic manipulation under practical on-device constraints.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Junjun Jiang"
+                        "@term": "cs.RO",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-19T04:01:34Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Qiman Wu"
+                    },
+                    {
+                        "name": "Hanlin Chen"
+                    },
+                    {
+                        "name": "Yuhua Wei"
+                    },
+                    {
+                        "name": "Mingyuan Wang"
+                    },
+                    {
+                        "name": "Shaman Tang"
+                    },
+                    {
+                        "name": "Minghao Li"
+                    },
+                    {
+                        "name": "Rui Xin"
+                    },
+                    {
+                        "name": "Xingye Liu"
+                    },
+                    {
+                        "name": "Zhichao Yang"
+                    },
+                    {
+                        "name": "Yiqi Yu"
+                    },
+                    {
+                        "name": "Hongyan Pei"
+                    },
+                    {
+                        "name": "Xiaowen Tian"
+                    },
+                    {
+                        "name": "YingYing Liu"
+                    },
+                    {
+                        "name": "Shiwen Liu"
+                    },
+                    {
+                        "name": "Jiahui Hu"
+                    },
+                    {
+                        "name": "Yizhao Wang"
+                    },
+                    {
+                        "name": "Yuheng Zhang"
+                    },
+                    {
+                        "name": "Anhua Liu"
+                    },
+                    {
+                        "name": "Yue He"
+                    },
+                    {
+                        "name": "Shuang Su"
+                    },
+                    {
+                        "name": "Da Zhu"
+                    },
+                    {
+                        "name": "Hua Zhou"
+                    },
+                    {
+                        "name": "Pengfei Diao"
+                    },
+                    {
+                        "name": "Haojie Yang"
+                    },
+                    {
+                        "name": "Weichao Huang"
+                    },
+                    {
+                        "name": "Hang Zhang"
+                    },
+                    {
+                        "name": "Honggou Yang"
                     },
                     {
                         "name": "Xianming Liu"
@@ -527,44 +464,110 @@
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.24908v1",
-                "title": "Decomposing SGD Dynamics in Neural Networks: Teacher-Induced Spikes and Variance Inflation",
-                "updated": "2026-11-18T18:43:40Z",
+                "id": "http://arxiv.org/abs/2611.25471v1",
+                "title": "A four-level executable validation protocol for evaluating LLM-generated topology specifications of physics-based HVAC digital twins",
+                "updated": "2026-11-19T03:58:15Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.24908v1",
+                        "@href": "https://arxiv.org/abs/2611.25471v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.24908v1",
+                        "@href": "https://arxiv.org/pdf/2611.25471v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We study two-layer neural networks trained by stochastic gradient descent (SGD) on a multi-index teacher model, focusing on how first-layer parameters orthogonal to the teacher subspace affect generalization. We decompose the first-layer weights into a signal component aligned with the teacher and an orthogonal complement, and analyze their joint SGD dynamics together with the second layer in the proportional limit. We show that although SGD updates to the complement are initially isotropic, the training dynamics induce teacher-dependent spectral spikes in the complement Gram matrix. This emergent anisotropy provides a concrete mechanism by which representation variance is amplified, and generalization degrades. To isolate this effect, we introduce Decomposed Dynamics, an analytically tractable surrogate whose asymptotic test-error dynamics coincide with those of SGD. In simulations with a ReLU student, freezing the directions of the orthogonal complement improves generalization relative to training them. Finally, we show that the signal component rapidly aligns with the second-layer weights, revealing strong cross-layer coupling even in this shallow setting. Together, our results provide a dynamical explanation for how feature learning outside the teacher subspace harms generalization.",
+                "summary": "Physics-based digital twins of air conditioning, a principal energy consumer in manufacturing and buildings, can be generated automatically from a declarative specification of its equipment, connections, and sizing. Large language models (LLMs) now write such specifications from plain-language descriptions. Evaluations of these specifications stop at parse success, completed runs, or textual similarity, and cannot reject a model that converges in simulation but is physically wrong. In this study, a four-level protocol is proposed that tests whether an LLM-written specification not only executes but also yields a physically valid digital twin. Each specification is executed through static validity, model build, simulation convergence, and behavioral equivalence with a hidden reference model within bands calibrated by $\\pm$20% sizing perturbations. The protocol was applied to eight LLMs and fourteen HVAC topologies, five describing an existing low-humidity test chamber. To test for authorship bias, engineers and a second model family also described six topologies. Within three repairs, seven of eight models built in 98.6 to 100% of trials, with simulations converging in at least 80.0%, but reached behavioral equivalence in only 50.0 to 98.6%. About half of the failed trials converged, but not to the reference steady state, mostly in desiccant rotor systems. Pooled pass rates varied by under five percentage points across description authors. These results imply that the physics hardest to model in each field, here the desiccant rotor, must enter the generation framework as validation levels. The protocol can be adapted to other fields that generate executable digital twins from declarative specifications.",
                 "category": [
                     {
-                        "@term": "stat.ML",
+                        "@term": "eess.SY",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.SE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-18T18:43:40Z",
-                "arxiv:comment": "NeurIPS 2026, 36 pages, 4 figures",
+                "published": "2026-11-19T03:58:15Z",
                 "arxiv:primary_category": {
-                    "@term": "stat.ML"
+                    "@term": "eess.SY"
                 },
                 "author": [
                     {
-                        "name": "Samet Demir"
+                        "name": "Younghwan Joo"
                     },
                     {
-                        "name": "Zafer Dogan"
+                        "name": "Jeonghoon Han"
+                    },
+                    {
+                        "name": "Sanghyun Oh"
+                    },
+                    {
+                        "name": "Soosik Bang"
+                    },
+                    {
+                        "name": "Sung-il Kim"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.25470v1",
+                "title": "ToolPulse: Side-Channel Eavesdropping on Tool-Using LLM Agents",
+                "updated": "2026-11-19T03:57:41Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.25470v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.25470v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Large language models (LLMs) are increasingly deployed as agents that translate user requests into sequences of local tool invocations. While prior cache-based side-channel attacks target the locally deployed models, they typically require the adversary to share model-related components or hardware resources with the victim's inference process. These assumptions do not apply to the predominant agentic settings, in which commercial LLMs execute on vendor-controlled infrastructure. We show that agentic execution exposes a more practical attack surface: although inference remains remote, tools are executed on the user's machine and commonly rely on shared system libraries. In this paper, we first systematically evaluate Flush+Reload and Prime+Probe for monitoring agentic tool invocations. Our evaluation across three hardware platforms shows that Flush+Reload enables accurate, real-time tool monitoring, whereas Prime+Probe, despite supporting cross-VM attacks, incurs prohibitive monitoring overhead and suffers from cache-set aliasing. We present ToolPulse, a cache-based side-channel eavesdropping framework against tool-using agents. We first design the Tool Recovery Attack to reconstruct an agent's tool-execution workflow. We evaluate the Tool Recovery Attack on 11 LLMs across Codex and Claude Code. It consistently reconstructs tool workflows, with the lowest F1 score exceeding 93%. We further demonstrate two attack scenarios enabled by the recovered traces. Task Profiling Attack infers user intent across two Terminal-Bench task categories and the Trigger Localization Attack identifies sensitive tool calls in encryption/decryption and model training/inference workloads. Even under substantial system noise on a server shared by approximately 20 users, both Task Profiling Attack and Trigger Localization Attack maintain high accuracy.",
+                "category": [
+                    {
+                        "@term": "cs.CR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AR",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-19T03:57:41Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CR"
+                },
+                "author": [
+                    {
+                        "name": "Zihao Dan"
+                    },
+                    {
+                        "name": "Jinyu Zhang"
+                    },
+                    {
+                        "name": "Jinzhao Lian"
+                    },
+                    {
+                        "name": "Yun Chen"
+                    },
+                    {
+                        "name": "Shinan Liu"
                     }
                 ]
             }
