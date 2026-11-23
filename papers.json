@@ -5,210 +5,44 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-11-22T23:04:24Z",
+        "updated": "2026-11-23T17:02:59Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "645385",
+        "opensearch:totalResults": "645818",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2611.26629v1",
-                "title": "Posterior Matching Distillation",
-                "updated": "2026-11-19T18:59:57Z",
+                "id": "http://arxiv.org/abs/2611.27983v1",
+                "title": "Optimal Linear Regression Without a Variance",
+                "updated": "2026-11-20T18:58:45Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.26629v1",
+                        "@href": "https://arxiv.org/abs/2611.27983v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.26629v1",
+                        "@href": "https://arxiv.org/pdf/2611.27983v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Diffusion distillation accelerates image and video generation by compressing a pretrained teacher's iterative sampling process into a few network evaluations. Distribution-based methods achieve this by matching the student's output distribution to the teacher's. This matching is often driven by reverse-KL objectives, whose mode-seeking bias favors dominant teacher modes at the expense of diversity across samples. We introduce Posterior Matching Distillation (PMD), a new member of the distribution-based distillation family that combines mode-covering posterior sampling with any-step generation. At zero population loss, PMD recovers the teacher's full posterior of clean images at each trained noise level. Its stochastic student supports any-step sampling budgets within the trained timestep grid without further training. To learn these posteriors, PMD matches exponentially reweighted averages of student samples conditioned on a fixed noisy state to corresponding teacher posterior means. Under Gaussian corruption, exponentially tilted posterior mean is a single teacher evaluation at a shifted input. We prove that, matching tilted means over an open neighborhood uniquely identifies the full posterior. PMD thus supervises the entire conditional distribution through a family of mean constraints, without any auxiliary student-score network. Experiments on SDXL and FLUX.2 [klein] 4B demonstrate that PMD achieves the best FID among 4-step methods on both models, while maintaining competitive or leading performance across prompt-alignment and perceptual-quality metrics.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-19T18:59:57Z",
-                "arxiv:comment": "Project Page: https://pmd-distillation.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Hidir Yesiltepe"
-                    },
-                    {
-                        "name": "Julius Berner"
-                    },
-                    {
-                        "name": "Arash Vahdat"
-                    },
-                    {
-                        "name": "Pinar Yanardag"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.26627v1",
-                "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
-                "updated": "2026-11-19T18:59:53Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.26627v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.26627v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that improving them requires learning complex, input-dependent transformations. To isolate how much of these gains an input-independent shift explains, we probe each RL-tuned model with a deliberately simple parameterization: a fixed set of steering vectors added to the block outputs of the frozen base model. On SD3.5-M, these vectors hold 65x fewer parameters than the RL-tuned LoRA (0.29M against 18.8M). We fit them to match the velocity predictions of public RL-tuned checkpoints, with no reward in the objective. Although the vectors are identical for every prompt, token, and sampling seed, they recover 90.0-96.3% of the reward gains of six RL-tuned image models, and 89.8% and 111.9% on two RL-tuned video models. Initialized at zero and trained with online RL, the vectors alone exceed the reward gains of weight-based RL on text rendering (OCR) and human preference (PickScore) on SD3.5-M. A constant shift thus suffices for most of the gain of policy-gradient RL post-training: without new input-dependent transformations, it steers the pretrained generator toward what it can already compute.",
+                "summary": "We study high-probability linear regression in the infinite variance regime, wherecthe regression noise has only a finite conditional $\u03b1$-moment $\u03bd$ for some unknown $\u03b1\\in(1,2)$, and the covariates may only have finite moments up to a given order (e.g., 4th moment). We give a black-box reduction that converts finite-variance regression procedures into weak-moment procedures. The reduction is based on empirical residual pruning and is agnostic to the moment exponent, the noise scale, the covariance, and the design moment. Under a finite fourth-moment condition on the covariates, any finite-variance subroutine attaining the sub-Gaussian rate yields the following when the number of samples $n$ is above a suitably defined threshold: Without knowing $\u03b1$ or $\u03bd$, we have with probability at least $1-\u03b4$ that $ \\|\\widehat\u03b8-\u03b8^*\\|_\u03a3\n  \\lesssim_\u03b1\n  \u03bd^{1/\u03b1}\n  \\big(\\frac{d+\\log(1/\u03b4)}{n}\\big)^{\\frac{\u03b1-1}\u03b1}, $ where $d$ is the dimension, $\u03a3$ is the covariate covariance matrix, and $\\|v\\|_\u03a3:=(v^\\top\u03a3v)^{1/2}$. We further prove a matching minimax lower bound that holds under the same conditions. The reduction is computationally efficient whenever the finite-variance subroutine is. We also obtain a distribution-free prediction guarantee under a bounded raw $\u03b1$-moment assumption on the response, and give an analogous $\u03b1$-agnostic reduction for mean estimation.",
                 "category": [
                     {
-                        "@term": "cs.CV",
+                        "@term": "stat.ML",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-19T18:59:53Z",
-                "arxiv:comment": "Project page: https://rl-is-steering.github.io",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Tuna Han Salih Meral"
-                    },
-                    {
-                        "name": "Kaan Oktay"
-                    },
-                    {
-                        "name": "Alec Helbling"
-                    },
-                    {
-                        "name": "Atakan Kara"
-                    },
-                    {
-                        "name": "Duen Horng Chau"
-                    },
-                    {
-                        "name": "Pinar Yanardag"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.26625v1",
-                "title": "AnyVIO: Feed-Forward Streaming Visual-Inertial Odometry Across Platforms",
-                "updated": "2026-11-19T18:59:35Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.26625v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.26625v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Geometric foundation models (GFMs) estimate camera mo- tion and scene structure from images without requiring ex- pert parameter tuning, but either lack metric scale or rely on learned priors to infer scale, which is unobservable from monocular images alone. Inertial sensing offers a way to observe metric scale, but existing methods add inertial in- formation through a filter or factor graph, which reintro- duces bespoke parameter tuning and optimization costs that can grow with the trajectory. To bridge this gap, we present AnyVIO, a real-time, feed-forward streaming model for monocular visual-inertial odometry (VIO), which combines a streaming GFM with an inertial foundation model (IFM). Both the GFM and IFM predict the metric motion between consecutive frames, and a lightweight learned fusion head quantifies the reliability of each estimate and blends them in a single forward pass. Across nine datasets recorded from cars, legged and ground robots, and handheld and head- mounted devices, AnyVIO reduces the metric position error of its visual model by 36% while publishing each pose esti- mate 70 ms after an image is received. We further deploy AnyVIO onboard two real vehicles at up to 140 km/h, where it remains accurate in poor lighting and heavy dust.",
-                "category": {
-                    "@term": "eess.IV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-19T18:59:35Z",
-                "arxiv:comment": "11 pages",
-                "arxiv:primary_category": {
-                    "@term": "eess.IV"
-                },
-                "author": [
-                    {
-                        "name": "Omoruyi Atekha"
-                    },
-                    {
-                        "name": "Marcus Greiff"
-                    },
-                    {
-                        "name": "Ray Zhang"
-                    },
-                    {
-                        "name": "Luca Carlone"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.26624v1",
-                "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
-                "updated": "2026-11-19T18:59:34Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.26624v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.26624v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play games and draws on its detailed play experience to revise them for mastery. Starting from an initial game, PlayCraft alternates between playing and crafting. In the playing stage, a player agent watches the game screen, uses the controls, and pursues the game objective over repeated episodes while retaining memory. After each episode, it reports its progress, outcomes, decisions, and reflections. In the crafting stage, a crafter agent uses these reports to revise the game. It estimates player abilities, predicts performance at different proficiency levels, and compares those predictions with a target learning progression. It diagnoses the game and addresses the gaps by giving players meaningful opportunities to improve through better decisions and execution. We evaluate games in fresh runs with player agents across three intelligence settings, measuring learning gain and learning slope. Compared with the initial games, PlayCraft yields larger learning gains and steeper learning slopes in most games. It also outperforms the baselines on the macro-average of each metric at every intelligence setting.",
-                "category": [
                     {
                         "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-19T18:59:34Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": {
-                    "name": "Weihao Cheng"
-                }
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.26619v1",
-                "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
-                "updated": "2026-11-19T18:58:31Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.26619v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.26619v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Hybrid architectures have become mainstream among open-weight language models. Their global-attention and bounded-state layers maintain heterogeneous caches whose demands vary with context length and concurrency. We present TideCache, a serving system on CPU--GPU superchips with three components for allocating GPU memory among caches and managing their residency across GPU and host memory. The Transparent Cache Pool redistributes physical pages among cache components behind fixed virtual addresses, preserving cache layouts and backend interfaces. The Cache Streamer uses computation intervals provided by bounded-state layers to prefetch the next global-attention layer's prefix into GPU slots shared across global-attention layers, reducing GPU residency while overlapping layer-wise transfers with computation. Generated KV remains resident. The Request Scheduler selects resident or streamed execution and triggers capacity adjustments according to request size and queue state. Together, they let HBM released by streaming accommodate other cache components and additional requests. Implemented in SGLang and evaluated on GB300 and GH200 across seven model/platform configurations, TideCache completes up to 2.04x as many agent turns, reduces overall P50 per-token latency by 20--59%, and improves agent P50 TTFT by 1.40--3.05x compared with SGLang with HiCache.",
-                "category": [
-                    {
-                        "@term": "cs.DC",
+                        "@term": "cs.IT",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -216,267 +50,407 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-19T18:58:31Z",
-                "arxiv:comment": "13 pages",
+                "published": "2026-11-20T18:58:45Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.DC"
+                    "@term": "stat.ML"
                 },
                 "author": [
                     {
-                        "name": "Jinbin Luo"
+                        "name": "Artin Tajdini"
                     },
                     {
-                        "name": "Xiaozhe Yao"
+                        "name": "Jasper C. H. Lee"
                     },
                     {
-                        "name": "Shang Yang"
+                        "name": "Jonathan Scarlett"
                     },
                     {
-                        "name": "Zhijian Liu"
-                    },
-                    {
-                        "name": "Song Han"
-                    },
-                    {
-                        "name": "Qinghao Hu"
+                        "name": "Kevin Jamieson"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.26618v1",
-                "title": "Every galaxy is a radio source: a stellar-mass dependent minimum 150 MHz luminosity identified in the LoTSS Deep Fields",
-                "updated": "2026-11-19T18:58:31Z",
+                "id": "http://arxiv.org/abs/2611.27979v1",
+                "title": "Nearly pristine gas and hard ionizing radiation one billion years after the Big Bang",
+                "updated": "2026-11-20T18:57:49Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.26618v1",
+                        "@href": "https://arxiv.org/abs/2611.27979v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.26618v1",
+                        "@href": "https://arxiv.org/pdf/2611.27979v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "The second data release of the LOFAR Two-metre Sky Survey (LoTSS) Deep Fields includes the deepest wide-field 150 MHz mosaics in existence, covering the ELAIS-N1 field. Combining these radio observations with star-formation rate (SFR) and stellar mass estimates for 113,228 near-infrared selected galaxies derived using Prospector, we re-examine the relationship between galaxies' 150 MHz luminosities ($L_{150\\rm{MHz}}$), SFRs and stellar masses. We not only recover the established radio luminosity-SFR relation and its dependence on stellar mass, but also discover a mass-dependent minimum radio luminosity that is independent of SFR. This behaviour is especially evident in galaxies with low specific SFR (sSFR $\\equiv$ SFR/$M_*$), at $L_{150\\rm MHz} \\sim 10^{20}-10^{22}$ W Hz$^{-1}$, where star-forming galaxies are expected to dominate. The non-stellar emission is consistent with low-level accretion onto supermassive black holes (i.e. weak active galactic nuclei, AGN), spanning effective Eddington-scaled accretion rates $\u03bb_{\\rm Edd} \\sim 10^{-5}-10^{-4}$, suggesting that radio emission due to accretion is widespread and effectively continuous. A two-component model combining star formation- and accretion-driven emission reproduces the observed trends, demonstrating that AGN activity can bias radio-based SFR estimates. The low radio luminosities probed in this work provide a first glimpse of the populations that will be routinely accessible with future facilities such as LOFAR 2.0 and the Square Kilometre Array.",
+                "summary": "The first stars formed out of light elements (H, He, and Li leftover from Big Bang Nucleosynthesis) and began the chemical enrichment of the Universe. Identifying this first-generation population of stars, known as Population III, and understanding their properties is one of the most ambitious goals of modern extragalactic astrophysics. We report the detection of He and H emission lines and extremely low Oxygen abundance in AMORE6, a strongly magnified galaxy at redshift z = 5.725, i.e. approximately one billion years after the Big Bang, with deep James Webb Space Telescope spectroscopy. He II lambda1640 and lambda4686 emission lines are detected at 16.7 sigma and 4.0 sigma significance, respectively. The observed He II-to-Hbeta ratios are consistent with predictions for extreme ionizing radiation fields and the low chemical compositions typical of Population III stars. Oxygen abundance of the interstellar medium is estimated to be 8 x 10^-4 solar from weak [OIII]lambda4363 and lambda5008 lines, consistent with an almost pristine environment, perhaps enriched by the Pop III stars themselves. Although we cannot exclude alternative sources of hard ionizing radiation, such as accreting black holes, these observations offer the first view of the extremely low metallicity environment where the Universe's first stars are predicted to be born. The data show that such pockets of pristine gas still exist one billion years after the Big Bang and that they are dominated by very massive stars.",
                 "category": {
                     "@term": "astro-ph.GA",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-19T18:58:31Z",
-                "arxiv:comment": "8 pages, 1 figure. Accepted for publication in MNRAS",
+                "published": "2026-11-20T18:57:49Z",
+                "arxiv:comment": "Submitted",
                 "arxiv:primary_category": {
                     "@term": "astro-ph.GA"
                 },
                 "author": [
                     {
-                        "name": "Shravya Shenoy"
+                        "name": "Takahiro Morishita"
                     },
                     {
-                        "name": "Daniel J. B. Smith"
+                        "name": "Massimo Stiavelli"
                     },
                     {
-                        "name": "Martin J. Hardcastle"
+                        "name": "Tommaso Treu"
                     },
                     {
-                        "name": "Soumyadeep Das"
+                        "name": "Adriano Fontana"
                     },
                     {
-                        "name": "Marina I. Arnaudova"
+                        "name": "Guido Roberts-Borsani"
                     },
                     {
-                        "name": "Kenneth J. Duncan"
+                        "name": "Raunaq Singh Rai"
                     },
                     {
-                        "name": "Luke R. Holden"
+                        "name": "Giorgia Di Rosa"
                     },
                     {
-                        "name": "Huub J. A. R\u00f6ttgering"
+                        "name": "Marco Lombardi"
+                    },
+                    {
+                        "name": "Piero Rosati"
+                    },
+                    {
+                        "name": "Borja Perez-Diaz"
+                    },
+                    {
+                        "name": "Lorenzo Bazzanini"
+                    },
+                    {
+                        "name": "Pietro Bergamini"
+                    },
+                    {
+                        "name": "Davide Bevacqua"
+                    },
+                    {
+                        "name": "Marusa Bradac"
+                    },
+                    {
+                        "name": "Antonello Calabro"
+                    },
+                    {
+                        "name": "Riccardo Caleno"
+                    },
+                    {
+                        "name": "Marco Castellano"
+                    },
+                    {
+                        "name": "Sunmyon Chon"
+                    },
+                    {
+                        "name": "Richard S Ellis"
+                    },
+                    {
+                        "name": "Elena Gallo"
+                    },
+                    {
+                        "name": "Giovanni Gandolfi"
+                    },
+                    {
+                        "name": "Luca Graziani"
+                    },
+                    {
+                        "name": "Claudio Grillo"
+                    },
+                    {
+                        "name": "Joe Hopkins"
+                    },
+                    {
+                        "name": "Tucker Jones"
+                    },
+                    {
+                        "name": "Mario Llerena"
+                    },
+                    {
+                        "name": "Massimo Meneghetti"
+                    },
+                    {
+                        "name": "Matteo Messa"
+                    },
+                    {
+                        "name": "Themiya Nanayakkara"
+                    },
+                    {
+                        "name": "Lorenzo Napolitano"
+                    },
+                    {
+                        "name": "Evan Haze Nunez-Cravin"
+                    },
+                    {
+                        "name": "Lorenzo Parente"
+                    },
+                    {
+                        "name": "Laura Pentericci"
+                    },
+                    {
+                        "name": "Giulia Rodighiero"
+                    },
+                    {
+                        "name": "Matteo Saggini"
+                    },
+                    {
+                        "name": "Paola Santini"
+                    },
+                    {
+                        "name": "Raffaella Schneider"
+                    },
+                    {
+                        "name": "Michele Trenti"
+                    },
+                    {
+                        "name": "Eros Vanzella"
+                    },
+                    {
+                        "name": "Benedetta Vulcani"
+                    },
+                    {
+                        "name": "Tommaso Zana"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.26617v1",
-                "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
-                "updated": "2026-11-19T18:58:14Z",
+                "id": "http://arxiv.org/abs/2611.27978v1",
+                "title": "A Methodologically Rigorous Benchmark of Linear Regression,RNN, and LSTM for S&P 500 Forecasting:Identifying Sources of Performance Inflation in Financial DeepLearning",
+                "updated": "2026-11-20T18:57:15Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.26617v1",
+                        "@href": "https://arxiv.org/abs/2611.27978v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.26617v1",
+                        "@href": "https://arxiv.org/pdf/2611.27978v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Videos reveal how the world changes, but rarely the actions that cause those changes. Latent action learning recovers such supervision from visual transitions, yet often learns the underlying dynamics largely from scratch. We ask whether a pretrained video generator can instead provide the prior for both inverse and forward dynamics. We introduce O$^{2}$LaF, built on a simple principle: one prior, two dynamics. We initialize both models from the same pretrained video DiT and adapt them to their distinct roles: a feed-forward transition encoder with learnable action queries for inverse dynamics, and a causal, action-conditioned video generator for forward dynamics. By controlling information access and optimizing both dynamics end-to-end through a compact bottleneck, O$^{2}$LaF learns transferable actions from unlabeled videos. Across navigation and robotic manipulation, O$^{2}$LaF sets a new state of the art in few-shot action probing and enables stronger zero-shot action transfer across visual contexts and embodiments. Beyond generative video priors, we further extend our framework to predictive representation priors such as V-JEPA2, achieving competitive performance. Our findings suggest a broader paradigm for latent-action learning: repurposing pretrained video models to discover transferable actions and predict their consequences.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-19T18:58:14Z",
-                "arxiv:comment": "Project page: https://showlab.github.io/o2laf Code: https://github.com/showlab/O2LaF",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yuxin Jiang"
-                    },
-                    {
-                        "name": "Wenqiang Sun"
-                    },
-                    {
-                        "name": "Jiaqi Li"
-                    },
-                    {
-                        "name": "Yuchao Gu"
-                    },
-                    {
-                        "name": "Lvmin Zhang"
-                    },
-                    {
-                        "name": "Ivor Tsang"
-                    },
-                    {
-                        "name": "Mike Zheng Shou"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.26607v1",
-                "title": "Bio-PM-Guided Synthetic IMU Generation",
-                "updated": "2026-11-19T18:56:25Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.26607v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.26607v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Collecting and labeling inertial measurement unit (IMU) data for human activity recognition (HAR) is expensive, and models trained on one group of subjects often fail to generalize to unseen individuals. Even with balanced data, classifiers struggle to distinguish dynamically similar activity classes and benefit from targeted augmentation. We explore whether synthetic IMU data generated in the representation space of a pretrained biosignal encoder, Bio-PM \\cite{b1}, can serve as a practical augmentation source. Rather than synthesizing raw signals, we leverage Bio-PM's frozen encoder to convert 10-second IMU windows into token embedding sequences and train class-conditional decoders in this space: (1) an autoregressive transformer decoder that predicts tokens sequentially, and (2) a diffusion decoder that learns the token distribution through a denoising objective. We analyze generation realism through distributional metrics and embedding-space visualizations, evaluate downstream utility through leave-one-subject-out HAR classification, and present a PatchDecoder for approximate raw waveform reconstruction. Our diffusion decoder achieves a Train-on-Synthetic-Test-on-Real (TSTR) macro-F1 of 0.68, demonstrating that generated tokens are realistic enough to train a classifier that transfers to real data. Combining synthetic-token augmentation with a 320-dimensional gravity-aware feature representation raises LOSO macro-F1 from 0.729 to 0.809 over a real-only baseline across 51 subjects on the WISDM benchmark, with statistically significant gains concentrated in the most challenging activity classes. These results demonstrate that high-fidelity generation in a pretrained encoder's representation space is achievable and practically useful for cross-subject HAR augmentation.",
+                "summary": "This study examines one-day-ahead forecasting of the S&P 500 closing level using a 2006-2025 dataset that includes fundamental price data, macroeconomic indicators, and engineered technical features. We benchmark three model families, namely linear regression, vanilla recurrent neural networks (RNN), and long short-term memory networks (LSTM), within a unified preprocessing and chronological evaluation pipeline. A central contribution of this work is a methodological audit of common practices in the deep-learning-for-stock-prediction literature. We identify three sources of result inflation that frequently appear in published methodologies: wavelet-denoised evaluation targets, the absence of a naive persistence baseline, and best-of-N replicate reporting. We then re-evaluate all model families under a corrected protocol that controls for each. Performance is reported using root mean squared error, mean absolute percentage error, and the Pearson correlation coefficient, averaged across N = 30 independent replicates per configuration. We compare models on accuracy, stability across replicates, and architectural depth sensitivity, using the naive persistence forecast (predicting today's close as tomorrow's close) as a primary baseline against which all candidate models must demonstrate improvement.",
                 "category": {
                     "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-19T18:56:25Z",
+                "published": "2026-11-20T18:57:15Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Deepali Singh"
+                        "name": "Hari Sitaula"
                     },
                     {
-                        "name": "Deepesh Parpani"
-                    },
-                    {
-                        "name": "Aviral Gupta"
+                        "name": "Joseph Opitz"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.26603v1",
-                "title": "Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth",
-                "updated": "2026-11-19T18:55:41Z",
+                "id": "http://arxiv.org/abs/2611.27973v1",
+                "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+                "updated": "2026-11-20T18:51:29Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.26603v1",
+                        "@href": "https://arxiv.org/abs/2611.27973v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.26603v1",
+                        "@href": "https://arxiv.org/pdf/2611.27973v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present Depth Pro 2, an approach to estimating dense metric depth for images and video at full resolution. By analyzing prior methods for monocular depth estimation, we find that they commonly trade off temporal consistency and boundary sharpness: multi-frame methods favor consistency, single-frame methods favor sharpness. To overcome this trade-off, we train a single, scalable network that processes both images and video and predicts depth maps at native resolution. Depth Pro 2 produces depth maps that are metrically accurate, sharp, and temporally consistent all at once, outperforming prior work in all of these dimensions. We release a family of models that define a new Pareto frontier in terms of metric accuracy, sharpness, temporal consistency, and runtime. We release code and weights at https://apple-aiml-research.github.io/ml-depth-pro-2/",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-19T18:55:41Z",
-                "arxiv:comment": "Code and weights available at https://apple-aiml-research.github.io/ml-depth-pro-2/",
+                "summary": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and quadratic computational complexity as the context expands. In contrast, linear-time architectures compress history into fixed-size states, but struggle to retain fine-grained details. We introduce MemOnce, a foundation architecture that learns scalable memory states for language models. MemOnce is based on two core designs: (a) Memory encoder-decoder: it caches only a small subset of final-layer hidden states as compact memory representations and dynamically decodes them back into KV caches for attention layers; (b) Memory sparse attention: for each continual input, MemOnce adaptively retrieves relevant memory representations, with the sparse indices computed only once across layers. Coupling these two designs enables efficient on-the-fly memory loading and KV cache decoding, drastically reducing the GPU memory footprint and achieving linear-time complexity. We conduct extensive experiments to show that MemOnce outperforms Transformers and other architectures across varying model sizes, context lengths, and training paradigms (pretraining and post-training adaptation). In particular, adapting Qwen3.5-4B with MemOnce reduces memory state cache by 1313$\\times$ and prefill latency by 6.9$\\times$ at 1M context, and improves throughput by 3.5$\\times$ and overall memory performance by +5.77%. Finally, MemOnce generalizes zero-shot to downstream representation tasks, achieving competitive results against specialized models.",
+                "category": {
+                    "@term": "cs.CL",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-20T18:51:29Z",
+                "arxiv:comment": "Project Page: https://clare-nie.github.io/MemOnce",
                 "arxiv:primary_category": {
-                    "@term": "cs.CV"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Peiyun Hu"
+                        "name": "Chang Nie"
                     },
                     {
-                        "name": "Marko Mihajlovic"
+                        "name": "Chaoyou Fu"
                     },
                     {
-                        "name": "Lyndon Duong"
+                        "name": "Songlin Liu"
                     },
                     {
-                        "name": "Lahav Lipson"
+                        "name": "Yiqing Hu"
                     },
                     {
-                        "name": "Wei Dong"
-                    },
-                    {
-                        "name": "Ama\u00ebl Delaunoy"
-                    },
-                    {
-                        "name": "Stephan R. Richter"
-                    },
-                    {
-                        "name": "Vladlen Koltun"
+                        "name": "Caifeng Shan"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.26598v1",
-                "title": "Active Feature Acquisition by Distilling an Oracle Teacher",
-                "updated": "2026-11-19T18:52:57Z",
+                "id": "http://arxiv.org/abs/2611.27970v1",
+                "title": "On the Complete Feature Set for ADHD Classification in Children and Adolescents Based on EEG Signals",
+                "updated": "2026-11-20T18:51:08Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.26598v1",
+                        "@href": "https://arxiv.org/abs/2611.27970v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.26598v1",
+                        "@href": "https://arxiv.org/pdf/2611.27970v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Acquiring every feature of an instance is often costly: a measurement can carry a monetary price, a time delay, or a privacy cost. Active Feature Acquisition (AFA) addresses this by learning a policy that decides, per instance, which features to acquire under a budget. Existing AFA methods train this policy by optimizing a self-constructed utility target rather than distilling an explicit teacher. We construct this teacher explicitly. At training time the label and the unobserved feature values are available, and together they determine the teacher in closed form: an oracle that ranks every candidate by its effect on the downstream predictor's error. OracleImitator distills this ranking into a deployable policy by soft-target imitation. Across multimodal medical diagnosis and the AFABench benchmark, OracleImitator matches or outperforms existing AFA methods across the budget range, recovering 90% of the attainable accuracy gain at under a quarter of the acquisition cost. Because the teacher is an explicit algorithmic object rather than an implicit optimization target, we can also measure directly how much of its ranking is recoverable by a policy restricted to what is visible at deployment.",
+                "summary": "Attention-deficit/hyperactivity disorder is a neurodevelopmental condition that can affect attention, activity and impulse control. Electroencephalography (EEG) records brain activity as children and adolescents perform cognitive tasks. However, comparing features derived from these recordings requires consistent signal preparation, shared analysis windows and documented quality decisions. We curated 669 existing BALLADEER recordings from 156 participants across five task conditions so that researchers can compare seven EEG feature families on the same time intervals for each participant and task. The dataset links continuous signals to precomputed measurements from 115 feature definitions or templates and records the quality decisions made for each recording. Analyses must still account for repeated measurements within participants, residual artefacts and differences between acquisition systems. Technical validation covered signal integrity, numerical checks on feature estimators and completeness of the released files. In every task, the median proportion of recording time retained after preprocessing was 100%. To illustrate reuse, we report saved participant-held-out evaluations comparing XGBoost using all seven families on eight-second windows with a predictor based only on recruitment-group prevalence in the training fold. Recruitment-group discrimination was stronger in Robots than in the three Slackline conditions. These descriptive results from overlapping cohorts do not establish diagnostic validity. The dataset, curation software and aggregate results for the predictive example are publicly available.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "eess.SP",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-20T18:51:08Z",
+                "arxiv:comment": "28 pages, 7 figures. EEG dataset (v1.0.0): https://doi.org/10.5281/zenodo.21982978 EEG preprocessing and feature extraction software with XGBoost example (v1.1.0): https://doi.org/10.5281/zenodo.24399993",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Javier Sanchis"
+                    },
+                    {
+                        "name": "\u00c1lvaro Navarro"
+                    },
+                    {
+                        "name": "Jorge Garc\u00eda-Carrasco"
+                    },
+                    {
+                        "name": "Tahar Kechadi"
+                    },
+                    {
+                        "name": "Juan Trujillo"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.27967v1",
+                "title": "Task2Hand: A Contact-Grounded Skill for Parametric Dexterous-Hand Morphology Design",
+                "updated": "2026-11-20T18:48:12Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.27967v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.27967v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Dexterous hand design demands repeated expert work across geometry, robot-description code, collision debugging, grasp initialization, and policy training. We present Task2Hand, a Skill: a specification package that turns a functional manipulation brief into a parameterized hand model and routes every candidate through cost-ordered contact, dynamics, and learning gates. Each gate returns a status and an evidence record; on failure, the Skill records the earliest blocker, revises one bounded parameter group, and reruns the cheaper gates. The agent generates, validates, and trains autonomously within declared bounds, and escalates trade-offs, plateaus, and conflicting evidence to a human who sets the next design direction. An evidence-driven design trajectory for bidirectional in-hand manipulation yielded SAGE Hand (Skill-Aware Generative Embodiment): four fingers, 16 actuated DoF, an integrated guiding palm, compact roots, cylindrical tips, and a collision-cleared opposable thumb. Under a matched training protocol, SAGE Hand reaches 45.6% task success on a hexagonal prism against 37.3% for the LEAP hand, and 70.8% on a bicolor cylinder against 51.6%. Dense simulated tactile input more than halves the cylinder drop rate. In a controlled iteration study, the Skill path preserves capture at 164/165 trials while the path without the Skill degrades to 14/165, confirming that the gates act as a regression guard during refinement. Accepted candidates pack with URDF/MJCF, metrics, checkpoints, and a provenance manifest.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-20T18:48:12Z",
+                "arxiv:comment": "9 pages, 7 figures, 3 tables",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Haoyang Wang"
+                    },
+                    {
+                        "name": "Weibo Gao"
+                    },
+                    {
+                        "name": "Zhengxiong Li"
+                    },
+                    {
+                        "name": "Lingfeng Tao"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.27964v1",
+                "title": "Your Camera Can Hear You: Side-Channel Acoustic Eavesdropping via Android Camera2 Metadata",
+                "updated": "2026-11-20T18:45:48Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.27964v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.27964v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "To prevent motion sensors from acting as covert microphones, Android 12+ caps SensorManager gyroscope and accelerometer rates at 200 Hz by default, requires HIGH_SAMPLING_RATE_SENSORS for higher rates, and throttles sensors back to 200 Hz when the microphone toggle is off. We show that Android's Camera2 subsystem bypasses these defenses. During an active Camera2 session, Camera HAL stabilization pipelines record high-rate gyroscope measurements and export them via vendor CaptureResult metadata. Loudspeaker speech excites chassis vibrations that couple into this path. Across 50 smartphones (2020-2026) from 10 vendors, 37 expose gyroscope metadata via Camera2, and 26 exceed 200 Hz--including six flagship models at 800-1000 Hz, double SensorManager's 400-500 Hz ceiling. This channel requires neither RECORD_AUDIO nor HIGH_SAMPLING_RATE_SENSORS and defeats privacy switches: turning off the microphone toggle does not throttle metadata, and turning off the camera toggle blanks only video frames while 800-1000 Hz metadata keeps streaming.\n  To build a zero-profiling attack that generalizes to unseen phones, we introduce Source-to-Leakage Learning (S2L). Prior attacks train on real sensor traces, entangling speech with a specific phone's mechanical resonances and sampling rate. S2L decouples speech content from hardware acoustics using a physics-constrained forward simulator. Trained exclusively on simulated leakage without target-phone traces, our universal recognizer CamEar achieves 52.1% mean word accuracy (up to 61.8%) and 74.3% character accuracy (up to 80.7%) across the six 800-1000 Hz phones. In contrast, ISpyU models fine-tuned on real target-phone data drop to 25.9% word accuracy on unseen phones; CamEar improves cross-device accuracy by 101.4% and outperforms ISpyU's same-device models on every tested phone.",
+                "category": {
+                    "@term": "cs.CR",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-20T18:45:48Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CR"
+                },
+                "author": [
+                    {
+                        "name": "Guangyuan Ji"
+                    },
+                    {
+                        "name": "Wenjing Wang"
+                    },
+                    {
+                        "name": "Bingsheng Zhang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.27962v1",
+                "title": "Model Carving: Training Transformers That Optimize Their Own Topology",
+                "updated": "2026-11-20T18:41:39Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.27962v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.27962v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Machine learning has largely kept separate the choice of architecture and the process of training. A classic Transformer, for instance, trains a fixed set of attention and MLP sublayers at every layer, in the same order, and optimizes the weights within. This uniformity is a convention rather than a principled design choice, and it is likely suboptimal: the best architecture for a given task may be smaller, more efficient, and far from uniform. We believe that, ideally, training itself should shape the model's topology. To this end, we introduce Model Carving, which learns both a Transformer's weights and its architecture in a single run. By applying learnable, scalar gates to each sublayer, we allow the training loss to remove the model's own components during training -- freeing a smaller heterogeneous network inside. We evaluate Model Carving by pre-training standard Transformers from 140M to 2.7B parameters and looped Transformers from 140M to 1.3B. At equal training compute, carved models reach a lower validation loss than dense models trained with up to 1.7 times more compute. Furthermore, carved models also outperform size-matched models produced by pruning or distillation, suggesting that the best way to obtain small models for edge devices is to carve them during training, not to compress a large one afterwards. This advantage both grows with scale and carries over to downstream tasks such as few-shot evaluation and generation. Because the removed sublayers no longer run, carved models also cost up to 34% fewer FLOPs per token and decode up to 1.6 times faster without cost in quality. Our results show that architecture, like weights, should be learned and not fixed in advance, and that inside every large transformer is a smaller, faster, stronger one waiting to be carved out.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -487,23 +461,92 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-19T18:52:57Z",
-                "arxiv:comment": "16 pages",
+                "published": "2026-11-20T18:41:39Z",
+                "arxiv:comment": "38 pages, 15 figures, 19 tables. Under review at ICLR 2027. Project page: https://kadenzheng.com/model-carving/",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Yang Meng"
+                        "name": "Kaden Zheng"
                     },
                     {
-                        "name": "Zixin Ding"
+                        "name": "Pratyusha Sharma"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.27961v1",
+                "title": "Explicational statistics: research for an AI age",
+                "updated": "2026-11-20T18:41:17Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.27961v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Robert L. Grossman"
+                        "@href": "https://arxiv.org/pdf/2611.27961v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "AI is dramatically changing the statistical research landscape. I argue that production of a distinct category of statistical knowledge, which I refer to as explicational statistics, is actually becoming more valuable as AI increasingly automates other parts of the research process. I define explicational statistics, contextualize it in terms of other forms of statistical knowledge, and explain why I think the rise of AI makes it more valuable. I demonstrate my framework by first developing a new dimension reduction method, Ambient Embedding Projection, that can simultaneously visualize the intrinsic geometry of a data manifold along with how that manifold is embedded into ambient space. I then use my new method to conceive of a new statistical property of a collection of manifolds, related to metric distortion, that in single-cell biology can capture the ensemble behavior of cell populations. I apply these ideas to single-nuclei RNA-seq data from the brains of mice from different behavioral conditions to reveal potential cellular mechanisms of chronic social defeat stress.",
+                "category": [
+                    {
+                        "@term": "stat.OT",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Yuxin Chen"
+                        "@term": "stat.AP",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "stat.ME",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-20T18:41:17Z",
+                "arxiv:primary_category": {
+                    "@term": "stat.OT"
+                },
+                "author": {
+                    "name": "Sihai Dave Zhao"
+                }
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.27959v1",
+                "title": "Ranking-Preserving Coreset Selection for Efficient Evolutionary Hyperparameter Optimization",
+                "updated": "2026-11-20T18:35:28Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.27959v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.27959v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Hyperparameter optimization (HPO) is essential for high predictive performance, but its computational cost becomes prohibitive when candidate configurations require repeated training on large datasets. This paper proposes a ranking-preserving coreset (RPC) selection framework for accelerating evolutionary HPO. The method constructs a compact coreset that preserves the relative ranking of hyperparameter configurations observed on the full training data. Coreset selection is formulated as an evolutionary optimization problem that maximizes Spearman rank correlation between full-data and subset-based configuration rankings while penalizing subset size. The selected coreset is then used for HPO with three evolutionary algorithms: Genetic Algorithm (GA), Cross-generational elitist Selection, Heterogeneous Recombination and Cataclysmic Mutation (CHC), and Particle Swarm Optimization (PSO). Experiments on seven tabular, two text, and two image benchmark datasets show that RPC substantially reduces HPO time while maintaining test accuracy comparable to full-dataset HPO across decision tree, text classification, and image classification tasks. Across datasets and optimizers, HPO-stage speedups range from approximately 1.14x to 8.80x, while the one-time coreset construction cost is accounted for separately through end-to-end runtime and break-even analysis. On 20 held-out configurations excluded from coreset construction, RPC achieves higher ranking correlation than same-size random sampling on 8 of 11 datasets (dataset-level Wilcoxon signed-rank test, p = 0.014). These results show that ranking preservation extends beyond the configurations used during selection. The one-time construction cost can be amortized when the coreset is reused across HPO runs.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-20T18:35:28Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Mamoona Tasadduq"
+                    },
+                    {
+                        "name": "Maryam Bashir"
                     }
                 ]
             }
