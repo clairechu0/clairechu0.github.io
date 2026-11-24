@@ -5,278 +5,109 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-11-24T03:41:26Z",
+        "updated": "2026-11-24T23:42:19Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "646228",
+        "opensearch:totalResults": "646855",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2611.29241v1",
-                "title": "Fuzzy e-Means: Fuzzy c-Means on Large Data with Moving-Average Mini-Batch Updates",
-                "updated": "2026-11-22T05:24:47Z",
+                "id": "http://arxiv.org/abs/2611.31240v1",
+                "title": "Pruning Autonomous Driving VLAs: What to Preserve for Reasoning and Action",
+                "updated": "2026-11-23T18:59:52Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.29241v1",
+                        "@href": "https://arxiv.org/abs/2611.31240v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.29241v1",
+                        "@href": "https://arxiv.org/pdf/2611.31240v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Fuzzy c-means (FCM) gives every point a degree of membership in every cluster. Its standard solver, alternating optimization (AO), needs a full pass over the data per iteration and often many iterations, while methods built for large data stop at a worse objective or still need tens of passes. We run FCM with the optimizer of e-means, a recent mini-batch k-means that keeps moving averages of the number and the sum of the points in each cluster and sets its batch size and step size by scaling laws. The optimizer carries over because an FCM centroid is also a weighted sum divided by a total weight, but this direct transfer fails in two ways: the e-means rule that relocates nearly empty clusters also removes the centroids of small, distant groups, and FCM started from random points can settle in poor local minima. Fuzzy e-means (e-FCM) therefore starts with one pass of e-means with hard assignments and then runs fuzzy moving-average passes without relocation. On 28 configurations with up to 109.5 million points and 16,384 clusters, e-FCM reaches the objective of 25 AO iterations in two to four passes when clusters hold several hundred points or more, 11 to 20 times faster than AO on one-million-point embedding sets with 1,024 clusters. It ends within 0.16% of converged AO on these sets and below converged AO where AO from random points lands in poor minima, but it is slower than AO on small low-dimensional problems, where an AO pass takes milliseconds. Finally, the common fuzzifier m=2 makes the centroids collapse or merge on most high-dimensional sets, and e-FCM can choose the fuzzifier by matching a known overlap at about two passes per candidate value.",
+                "summary": "Reasoning vision-language-action (VLA) models for autonomous driving use chain-of-thought (CoT) reasoning to guide action generation, but incur substantial memory and computational costs. We study structured pruning for these models, focusing on preserving both scene understanding and trajectory prediction. Our analysis of Taylor importance in Alpamayo-1.5-10B shows that reasoning and trajectory objectives assign different importance to the same vision-language model (VLM) structures. In the action expert, MLP channels exhibit more stable importance rankings across denoising steps than query heads, and a small fraction of channels accounts for most of the measured importance. Based on these findings, we propose MoOP, which combines importance ranks from both objectives for VLM pruning and aggregates stepwise importance to select a fixed subset of expert MLP channels. At 24.0% total parameter reduction, VLM-only pruning with MoOP performs comparably to or slightly better than the strongest baselines in driving, while retaining 94.0% of the dense model's LingoQA score, far above all other methods. At a higher reduction of 30.0%, MoOP degrades much less than every other method, as it is the only one whose reasoning does not collapse. Removing 93.75% of expert MLP channels increases total parameter reduction to 39.4%, with nearly unchanged open-loop errors relative to VLM-only pruning and competitive closed-loop performance. The resulting model achieves a 1.37x end-to-end inference speedup and 36.6% lower peak memory than the dense model, without post-pruning fine-tuning.",
                 "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
                     {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "stat.ML",
+                        "@term": "cs.RO",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-22T05:24:47Z",
-                "arxiv:comment": "20 pages, 9 figures",
-                "arxiv:primary_category": {
-                    "@term": "cs.LG"
-                },
-                "author": [
-                    {
-                        "name": "Paritosh Tiwari"
-                    },
-                    {
-                        "name": "Punit Rathore"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.29240v1",
-                "title": "Tacinf: A Unified Tactile Infrastructure for Robot Manipulation",
-                "updated": "2026-11-22T05:17:54Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.29240v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.29240v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Force-aware manipulation requires robots to infer appropriate interaction forces from task context and tactile feedback. We present Tacinf, a low-cost, modular infrastructure that enables policies to predict robot actions and fingertip forces from task language, vision, and touch. Task instructions can optionally specify the desired force level. Tacinf integrates simulation data synthesis and tactile benchmarking (Tabero), vision-tactile-language-action (VTLA) policy learning, handheld data collection using the same gripper as robot deployment (Tacumi), and task-aligned sim-to-real evaluation (Taco). Together, these components form an integrated workflow connecting data collection from multiple sources, foundation-model training, and hardware deployment. We validate each component, including the simulation data, benchmark, controller, and Tacumi, and are releasing the full stack as open source. A foundation model fine-tuned solely on tactile simulation data transfers zero-shot to different real-robot tasks. Across eight policy variants, mean task success rates are strongly correlated between simulation and the real robot (Pearson r=0.998, mean maximum rank violation MMRV=0.010). For the four policies with reported force measurements, mean grip force is higher under firm instructions than under gentle instructions on all three tasks in both domains. When both object positions and instances are randomized, a mixture of teleoperation, simulation, and Tacumi data raises mean real-robot task success from 20% with teleoperation alone to 60%.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-22T05:17:54Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Qiwei Wu"
-                    },
-                    {
-                        "name": "Xiangyu Chen"
-                    },
-                    {
-                        "name": "Xin Xiang"
-                    },
-                    {
-                        "name": "Rui Zhang"
-                    },
-                    {
-                        "name": "Yihang Kang"
-                    },
-                    {
-                        "name": "Weiran Chen"
-                    },
-                    {
-                        "name": "Zikang Xie"
-                    },
-                    {
-                        "name": "Yangfan Li"
-                    },
-                    {
-                        "name": "Tao Wang"
-                    },
-                    {
-                        "name": "Xiangzheng Wang"
-                    },
-                    {
-                        "name": "Tianyi Bi"
-                    },
-                    {
-                        "name": "Zhiyan Zhang"
-                    },
-                    {
-                        "name": "Xianpeng Wang"
-                    },
-                    {
-                        "name": "Mingqian Zhou"
-                    },
-                    {
-                        "name": "Yan Yu"
-                    },
-                    {
-                        "name": "Chuanyu Li"
-                    },
-                    {
-                        "name": "Wenjie Zhang"
-                    },
-                    {
-                        "name": "Tao Li"
-                    },
-                    {
-                        "name": "Weihua Zhang"
-                    },
-                    {
-                        "name": "Renjing Xu"
-                    },
-                    {
-                        "name": "Junjie Lai"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.29238v1",
-                "title": "GameAnything: From Any Inspirations to Playable Game Worlds",
-                "updated": "2026-11-22T05:17:35Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.29238v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.29238v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "AI-driven game development holds the potential to transform diverse human inspirations into interactive experiences. However, existing systems and benchmarks primarily focus on explicit development specifications, with limited support for adapting multimodal references and evaluating actual gameplay experiences. We introduce GameAnything, an open-source agentic platform that transforms multimodal inspirations into playable extensions of existing games through iterative development. GameAnything integrates coding agents with an independent playtesting critic, persistent development state, and reusable experience memory to support continuous refinement. We further present GameAnything-Bench, a benchmark spanning diverse reference modalities, game creation objectives, and gaming environments, with exploratory gameplay testing to assess both functional correctness and gameplay quality. Evaluations of nine coding agent configurations reveal that current agents can adapt reference content but still struggle with playable interactions and precise modifications. Moreover, multimodal references improve content fidelity, while iterative refinement yields substantial but varying improvements across agents. These findings highlight both the potential and remaining challenges of inspiration-driven game development.",
-                "category": [
-                    {
-                        "@term": "cs.AI",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CL",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-22T05:17:35Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.AI"
-                },
-                "author": [
-                    {
-                        "name": "Wenyi Wu"
-                    },
-                    {
-                        "name": "Siqi Liu"
-                    },
-                    {
-                        "name": "Yuru Feng"
-                    },
-                    {
-                        "name": "Zixuan Song"
-                    },
-                    {
-                        "name": "Aayush Salvi"
-                    },
-                    {
-                        "name": "Sibo Zhu"
-                    },
-                    {
-                        "name": "Kun Zhou"
-                    },
-                    {
-                        "name": "Biwei Huang"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.29236v1",
-                "title": "Complementary Geometry in Gaussian Splatting",
-                "updated": "2026-11-22T05:17:11Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.29236v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.29236v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Gaussian Splatting has achieved high visual quality in novel view synthesis, but the accuracy of its rendered geometry remains a challenge. In particular, the rendered depth is computed as an opacity-weighted average along each ray, which may not correspond to the actual scene surface. In this paper, we observe that depth predictions from different views of the same frozen Gaussian representation exhibit complementary errors, allowing us to improve novel-view geometry using information from other views without modifying the original representation. Based on this observation, we propose REVEAL, a general framework that selectively refines novel-view depth using complementary geometric information. Specifically, we first reproject depth predictions from source views to the target view and combine them using robust multi-view consensus. We then introduce a learned selection mechanism to determine whether the candidate depth is more accurate than the original prediction, based on the expected reduction in depth error. In addition, we introduce RIG, a real-world benchmark captured with synchronized RGB-D cameras, which provides ground-truth depth for evaluating both static and dynamic reconstruction models. Experiments on 6 Gaussian Splatting backbones across 3 benchmarks show that REVEAL consistently improves depth accuracy while maintaining comparable rendering quality.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-22T05:17:11Z",
-                "arxiv:comment": "14 Pages, supplementary material included",
+                "published": "2026-11-23T18:59:52Z",
+                "arxiv:comment": "45 pages. Project page: https://cvlab-kaist.github.io/MoOP",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Mingle Jiang"
+                        "name": "Seongchan Kim"
                     },
                     {
-                        "name": "Jikui Zhou"
+                        "name": "Soowon Son"
                     },
                     {
-                        "name": "Chenghan Lyu"
+                        "name": "Sangoh Kim"
                     },
                     {
-                        "name": "Rui Xu"
+                        "name": "Hyunah Ko"
                     },
                     {
-                        "name": "Yunke Wang"
+                        "name": "Eunbeen Hong"
                     },
                     {
-                        "name": "Chang Xu"
+                        "name": "Hyunkoo Lee"
+                    },
+                    {
+                        "name": "Sanghyun Lee"
+                    },
+                    {
+                        "name": "WonJun Moon"
+                    },
+                    {
+                        "name": "Kihong Kim"
+                    },
+                    {
+                        "name": "Dongyeon Son"
+                    },
+                    {
+                        "name": "Woongchan Nam"
+                    },
+                    {
+                        "name": "Seungryong Kim"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.29232v1",
-                "title": "Why Adaptive Optimizers Struggle with Large Convolution Kernels",
-                "updated": "2026-11-22T05:07:10Z",
+                "id": "http://arxiv.org/abs/2611.31237v1",
+                "title": "Let Vision-Language Models Generate Images through Their Representations",
+                "updated": "2026-11-23T18:59:32Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.29232v1",
+                        "@href": "https://arxiv.org/abs/2611.31237v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.29232v1",
+                        "@href": "https://arxiv.org/pdf/2611.31237v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Large convolution kernels enlarge the receptive fields of ConvNets at a modest computational cost, but they are notoriously difficult to train. Existing large-kernel networks therefore rely on costly training techniques, such as parallel small-kernel branches with batch normalization. In this paper, we trace this difficulty to adaptive optimizers such as Adam, which normalize the update of every weight separately. Since input features rarely average to zero, all weights of a kernel share a common gradient, and these optimizers move the mean of a $k\\times k$ kernel $k$ times as far as a single parameter. We find this mean amplification in widely used ConvNets and vision transformers, and show that it can force the maximal learning rate to fall as $1/k^2$. We further prove that the basis of the discrete cosine transform (DCT) isolates the mean and is the only orthonormal basis that diagonalizes every stationary gradient statistic with mirrored boundaries. We therefore train large kernels through their DCT coefficients and convert them back after training. The resulting method, DCT-Rep, requires only a few lines of code and adds no parameters, no inference cost and negligible training overhead. Extensive experiments on image classification, object detection, semantic segmentation and image restoration show that DCT-Rep consistently improves large-kernel ConvNets and vision transformers, by $+0.79\\%$ top-1 accuracy for a large-kernel ConvNeXt-T and $+0.43\\%$ for ViT-S/16 on ImageNet-1K, $+1.4$ box AP on COCO, $+1.2$ mIoU on ADE20K and up to $+0.4$ dB on image deblurring, where the gain grows with the kernel size.",
+                "summary": "Recent unified multimodal models aim to combine visual understanding and generation within a single model, yet effectively integrating the two capabilities remains challenging. Leveraging pretrained vision-language models offers a way to build on already learned multimodal knowledge, but making this knowledge effectively accessible to visual generation remains nontrivial. We find that a central challenge lies in the heterogeneous visual representations used for understanding and generation. To address this challenge, we introduce Integral, which converts a pretrained vision-language model into a unified multimodal model by constructing a shared visual representation space across the two capabilities. Integral implements this design through two complementary components. Abstraction Fusion constructs shared visual tokens by aggregating hierarchical representations from the frozen vision encoder, while Block-wise MoT introduces a lightweight generative stream that interacts with the vision-language model only at block boundaries. Our approach effectively preserves the pretrained understanding capability while extending it to strong visual generation. Controlled comparisons further demonstrate that sharing visual representations between understanding and generation substantially improves generative learning compared with using a separate visual representation space, despite comparable reconstruction fidelity. These results suggest that representations learned by pretrained vision-language models already provide an effective foundation for visual generation.",
                 "category": [
                     {
                         "@term": "cs.CV",
@@ -287,290 +118,2110 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-22T05:07:10Z",
+                "published": "2026-11-23T18:59:32Z",
+                "arxiv:comment": "Preprint. Project page: https://thejb.ai/integral",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Tianyu Ding"
+                        "name": "JB Kim"
                     },
                     {
-                        "name": "Jiachen Jiang"
+                        "name": "Byungwoo Jeon"
                     },
                     {
-                        "name": "Jinxin Zhou"
+                        "name": "Kyungmin Lee"
                     },
                     {
-                        "name": "Yong Ma"
+                        "name": "Hyeonmo Kang"
                     },
                     {
-                        "name": "Zhihui Zhu"
+                        "name": "Cheonbok Park"
                     },
                     {
-                        "name": "Luming Liang"
+                        "name": "Shinyoung Joo"
+                    },
+                    {
+                        "name": "Jinwoo Shin"
+                    },
+                    {
+                        "name": "Jeonghoon Kim"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.29231v1",
-                "title": "EVis+: Literature-Grounded Visual Analytics for Hypothesis-Driven Geoscientific Data Exploration",
-                "updated": "2026-11-22T05:06:49Z",
+                "id": "http://arxiv.org/abs/2611.31233v1",
+                "title": "TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming",
+                "updated": "2026-11-23T18:59:13Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.29231v1",
+                        "@href": "https://arxiv.org/abs/2611.31233v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.29231v1",
+                        "@href": "https://arxiv.org/pdf/2611.31233v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Scientific researchers often interpret observational data in light of prior findings reported in the scientific literature. However, scientific literature typically remains external to visual analytics environments, requiring researchers to manually connect published findings with the data and hypotheses under investigation. In this paper, we present EVis+, a literature-grounded visual analytics system for condition-event time series analysis in geoscience. EVis+ enhances observational data exploration by retrieving and synthesizing literature-derived insights relevant to the dataset and analytical goals, transforming user-selected insights into testable hypotheses and mapping them to domain-specific visualizations through expert-curated templates, and supporting evidence examination, discrepancy validation, and literature-driven re-exploration to support iterative hypothesis refinement and scientific exploration. Rather than handing scientific analysis to an unconstrained language model, EVis+ uses structured AI-assisted transformations that keep intermediate results visible, allowing researchers to inspect and guide the analysis at each step. We evaluate the system through an evidence-grounding audit, a structured expert assessment of the insights, and case studies with geoscientists and a comparative study with domain experts.",
-                "category": {
-                    "@term": "cs.HC",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-22T05:06:49Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.HC"
-                },
-                "author": [
-                    {
-                        "name": "Zhaocong Yang"
-                    },
-                    {
-                        "name": "Jing Yang"
-                    },
-                    {
-                        "name": "Martha-Cary Eppes"
-                    },
-                    {
-                        "name": "Ye Zhao"
-                    },
-                    {
-                        "name": "Matan Ben-Asher"
-                    },
-                    {
-                        "name": "Deepshikha Bhati"
-                    },
-                    {
-                        "name": "Tsung Heng Wu"
-                    },
-                    {
-                        "name": "Abe Campbell"
-                    },
-                    {
-                        "name": "Lucky Kodwani"
-                    },
-                    {
-                        "name": "Ujwal Suresh Vanjare"
-                    },
-                    {
-                        "name": "Surya Kartheek Birudukota"
-                    },
-                    {
-                        "name": "Tinghao Feng"
-                    },
-                    {
-                        "name": "Sachin Kumar"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.29230v1",
-                "title": "InfoField3D: Differentiable Information Field for Embodied Task-Oriented View Planning",
-                "updated": "2026-11-22T05:03:35Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.29230v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.29230v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Effective task execution requires embodied agents to select observation positions that provide sufficient task-relevant information. Existing approaches typically predict viewpoints with learned models or score discrete candidates, but they either struggle to incorporate new constraints such as reachability or require extensive candidate evaluation to search. We introduce InfoField3D, which lifts geometry-bound information into a differentiable analytic field, whose value at each 3D observation position represents the task-required information accessible there. It uses low-order spherical harmonics to encode directional information responses and analytic line integrals of Gaussian occupancy functions to model occlusion along lines of sight. This formulation casts task-driven camera placement as a well-studied constrained continuous optimization problem, enabling both flexible incorporation of constraints through the feasible domain and efficient viewpoint search even in the presence of occlusion. Experiments show that InfoField3D compactly preserves the pointwise information landscape with high fidelity and generally recommends higher-quality, more robust viewpoints at lower search cost than the evaluated baselines. Controlled evaluations with a frozen vision-language-action (VLA) policy further suggest that the recommended views can improve downstream task performance under information-limited initial viewpoints.",
-                "category": {
-                    "@term": "cs.RO",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-22T05:03:35Z",
-                "arxiv:comment": "61 pages, 27 figures, 36 tables (including appendices)",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Huan Lyu"
-                    },
-                    {
-                        "name": "Yawei Luo"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.29226v1",
-                "title": "Tenlai-TTS 2.0: Continuous-Representation LLM-Based TTS System with End-to-End Training",
-                "updated": "2026-11-22T04:58:09Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.29226v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.29226v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Autoregressive text-to-speech (TTS) with continuous speech latents avoids quantization-induced information loss, but typically relies on a latent space that is learned separately and then frozen before language-model training. Such a space must satisfy two competing requirements: it must retain enough acoustic detail for high-fidelity reconstruction, yet be sufficiently structured and regularized to support autoregressive prediction by a language model. We present Tenlai-TTS 2.0, which learns continuous speech representations through end-to-end training to balance acoustic detail with autoregressive predictability. The model comprises a speech encoder with a capacity-controlled Gaussian bottleneck, a large language model (LLM) with an autoregressive diffusion transformer (AR-DiT) head, a flow-matching (FM) mel-spectrogram decoder, and a multi-task recognition model (RM). With energy normalization and fixed-variance Gaussian noise, the bottleneck has a closed-form upper bound on its information rate. Through joint optimization with reconstruction, recognition, and next-patch prediction objectives, we learn continuous speech representations that suit all three tasks and train the LLM and AR-DiT for autoregressive generation. The LLM and AR-DiT are further optimized using differentiable reconstruction and recognition feedback on their predicted latents through the FM decoder and RM. On Seed-TTS-eval, this feedback-based optimization reduces character error rate (CER) from 0.82% to 0.74% on test-zh and from 8.32% to 7.08% on test-hard-zh, and word error rate (WER) from 1.32% to 1.27% on test-en, compared with joint training alone. Subsequent reinforcement learning further reduces CER to 6.29% on test-hard-zh and WER to 1.08% on test-en, with speaker similarity scores of 0.811, 0.766, and 0.784 on test-zh, test-en, and test-hard-zh, respectively.",
+                "summary": "CLIP-style dual encoders map images and text through two separate towers into a shared embedding space, where the two modalities occupy distinct regions separated by a modality gap. Retrieval fails when wrong matches, or hard negatives, outrank the correct one, and the gap is the usual suspect. Yet removing it post hoc degrades retrieval on every CLIP checkpoint we test. We introduce a paired statistic that identifies directions where the two towers agree more on hard negatives than on matched pairs. Mildly attenuating these directions improves retrieval while largely preserving the gap. We arrive at this correction through weight-space programming: guided by the statistic, an LLM agent inspects both towers and writes closed-form weight edits without backpropagation. Free to edit any component, the agent improves COCO test retrieval on all 13 CLIP checkpoints and edits an output projection in 12 of the 13. We distill and refine its recurring correction into TowerBridge, a closed-form recipe motivated by a first-order analysis of the hard-negative margin. Computed in seconds from 25,000 labelled pairs, it requires no model-specific tuning and leaves the architecture and inference cost unchanged. TowerBridge improves COCO test retrieval by 16.8 RSUM and Flickr30k test retrieval by 6.6 on average across all 21 evaluated CLIP checkpoints, including 8 unseen by the agent, while limiting any drop in ImageNet zero-shot accuracy to 0.5 points. It also reduces hubness on all 21 checkpoints and improves retrieval on 4 of 5 dual encoders from other families.",
                 "category": [
                     {
-                        "@term": "cs.SD",
+                        "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-22T04:58:09Z",
+                "published": "2026-11-23T18:59:13Z",
+                "arxiv:comment": "42 pages (13 main + 29 supplementary), 11 figures, 35 tables",
                 "arxiv:primary_category": {
-                    "@term": "cs.SD"
+                    "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Changfeng Gao"
+                        "name": "Hani Alomari"
                     },
                     {
-                        "name": "Yong Ren"
+                        "name": "Md Atabuzzaman"
                     },
                     {
-                        "name": "Jun Yuan"
-                    },
-                    {
-                        "name": "Zhengkun Tian"
-                    },
-                    {
-                        "name": "Ye Bai"
-                    },
-                    {
-                        "name": "Zhao You"
-                    },
-                    {
-                        "name": "Shidong Shang"
+                        "name": "Chris Thomas"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.29224v1",
-                "title": "Curvature Mismatch and Local Errors in Galaxy Property Estimation",
-                "updated": "2026-11-22T04:51:01Z",
+                "id": "http://arxiv.org/abs/2611.31231v1",
+                "title": "Euclid Data Release 1 (DR1). Learning machine learning: Investigating the complementarity and biases of strong gravitational lens finding networks on Euclid data",
+                "updated": "2026-11-23T18:59:05Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.29224v1",
+                        "@href": "https://arxiv.org/abs/2611.31231v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.29224v1",
+                        "@href": "https://arxiv.org/pdf/2611.31231v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Linear probes are widely used to evaluate learned representations and infer physical quantities from unlabelled data. The probe's predictions are from an affine function in ambient space restricted to the underlying representation, and consequently, even a representation that has complete information needed to predict a target can produce systematic probe errors when that information is encoded in a form inaccessible to the linear probe. Here we share that some of this probing error is due to the innate geometry of the manifold. Linear probes, when evaluated on a curved manifold, generally have a nonzero intrinsic Hessian (what we colloquially call \"probe-facing curvature\") given by $\\langle w_N,\\mathrm{II}\\rangle$, the manifold's second fundamental form dotted with the probe's normal component. We fit linear probes to galaxy embeddings from five pretrained encoders and intervene on this curvature term to evaluate its contribution to the probe performance. We find that keeping this inherited curvature improves the local fit where it matches the label's curvature. Removing the curvature component of the probe where it does not match the label curvature also provides improvements, and correcting it in every neighbourhood raises held-out local $R^2$ by 0.006 to 0.010 on galaxies, gaining more where the two curvatures disagree. We isolated these gains to be from the underlying geometry and not an automatic guarantee from least squares training.",
+                "summary": "The Euclid Data Release 1 (DR1) strong lens search presents ECLIPSE, the largest catalogue of strong gravitational lens candidates to date, with >15 000 systems identified across 1900 deg2 of sky. It was constructed using five neural networks applied to approximately 68 million galaxies, followed by citizen science and expert visual inspection. In this work, we compare how the independently developed networks use image information to identify their selection of strong lens candidates. The search combines convolutional neural networks and a vision transformer, using the same pool of data but with different image processing and training choices. We investigate why these networks find different systems and what that means for the completeness of our catalogue. We evaluate all networks on a 50 deg2 calibration set and their application to the full DR1 sample. We find that the networks score candidates very differently, and that combining them recovers over 500 lens candidates within our calibration set at an inspection budget of 2000 objects. On the full DR1 sample, we show that individual networks have distinct biases: some networks favour systems with a larger Einstein radius while others are more sensitive to compact configurations. We also investigate network preferences in terms of lens light profile, mass distribution geometry, photometric redshift, and magnitudes. These findings provide a detailed analysis of how neural network selection biases have shaped the Euclid DR1 ECLIPSE catalogue. The results inform how networks should be combined in future Euclid data releases and upcoming wide-field surveys such as LSST or Roman to maximise both completeness and diversity of the recovered lens population.",
+                "category": {
+                    "@term": "astro-ph.GA",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-23T18:59:05Z",
+                "arxiv:primary_category": {
+                    "@term": "astro-ph.GA"
+                },
+                "author": [
+                    {
+                        "name": "Euclid Collaboration"
+                    },
+                    {
+                        "name": "S. H. Vincken",
+                        "arxiv:affiliation": [
+                            "Institute of Cosmology and Gravitation, University of Portsmouth, Portsmouth PO1 3FX, UK",
+                            "Fontys University of Applied Sciences, School of ICT, Rachelsmolen 1, 5612 MA Eindhoven, The Netherlands",
+                            "University of Applied Sciences and Arts of Northwestern Switzerland, School of Engineering, 5210 Windisch, Switzerland"
+                        ]
+                    },
+                    {
+                        "name": "N. E. P. Lines",
+                        "arxiv:affiliation": "Institute of Cosmology and Gravitation, University of Portsmouth, Portsmouth PO1 3FX, UK"
+                    },
+                    {
+                        "name": "S. Schuldt",
+                        "arxiv:affiliation": [
+                            "Finnish Centre for Astronomy with ESO",
+                            "Department of Physics, P.O. Box 64, University of Helsinki, 00014 Helsinki, Finland",
+                            "INAF-IASF Milano, Via Alfonso Corti 12, 20133 Milano, Italy"
+                        ]
+                    },
+                    {
+                        "name": "P. Holloway",
+                        "arxiv:affiliation": "Institute of Cosmology and Gravitation, University of Portsmouth, Portsmouth PO1 3FX, UK"
+                    },
+                    {
+                        "name": "T. E. Collett",
+                        "arxiv:affiliation": "Institute of Cosmology and Gravitation, University of Portsmouth, Portsmouth PO1 3FX, UK"
+                    },
+                    {
+                        "name": "M. Fogliardi",
+                        "arxiv:affiliation": "Dipartimento di Fisica e Scienze della Terra, Universit\u00e0 degli Studi di Ferrara, Via Giuseppe Saragat 1, 44122 Ferrara, Italy"
+                    },
+                    {
+                        "name": "A. Manj\u00f3n-Garc\u00eda",
+                        "arxiv:affiliation": "Departamento F\u00edsica Aplicada, Universidad Polit\u00e9cnica de Cartagena, Campus Muralla del Mar, 30202 Cartagena, Murcia, Spain"
+                    },
+                    {
+                        "name": "J. Wilde",
+                        "arxiv:affiliation": "Institut de Ci\u00e8ncies del Cosmos"
+                    },
+                    {
+                        "name": "A. Verma",
+                        "arxiv:affiliation": "Department of Physics, University of Oxford, Keble Road, Oxford OX1 3RH, UK"
+                    },
+                    {
+                        "name": "K. Rojas",
+                        "arxiv:affiliation": "University of Applied Sciences and Arts of Northwestern Switzerland, School of Computer Science, 5210 Windisch, Switzerland"
+                    },
+                    {
+                        "name": "R. B. Metcalf",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, via Piero Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "N. Wielders",
+                        "arxiv:affiliation": "School of Mathematics, Statistics and Physics, Newcastle University, Herschel Building, Newcastle-upon-Tyne, NE1 7RU, UK"
+                    },
+                    {
+                        "name": "J. W. Nightingale",
+                        "arxiv:affiliation": "School of Mathematics, Statistics and Physics, Newcastle University, Herschel Building, Newcastle-upon-Tyne, NE1 7RU, UK"
+                    },
+                    {
+                        "name": "A. Nersesian",
+                        "arxiv:affiliation": [
+                            "STAR Institute, University of Li{\u00e8}ge, Quartier Agora, All\u00e9e du six Ao\u00fbt 19c, 4000 Li\u00e8ge, Belgium",
+                            "Universiteit Gent, Department of Physics and Astronomy, Proeftuinstraat 86 N3, 9000 Ghent, Belgium"
+                        ]
+                    },
+                    {
+                        "name": "F. Courbin",
+                        "arxiv:affiliation": [
+                            "Institut de Ci\u00e8ncies del Cosmos",
+                            "Instituci\u00f3 Catalana de Recerca i Estudis Avan\u00e7ats",
+                            "Institut de Ciencies de l'Espai"
+                        ]
+                    },
+                    {
+                        "name": "S. Serjeant",
+                        "arxiv:affiliation": "School of Physical Sciences, The Open University, Milton Keynes, MK7 6AA, UK"
+                    },
+                    {
+                        "name": "L. A. Moustakas",
+                        "arxiv:affiliation": "Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Pasadena, CA, 91109, USA"
+                    },
+                    {
+                        "name": "D. Stern",
+                        "arxiv:affiliation": "Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Pasadena, CA, 91109, USA"
+                    },
+                    {
+                        "name": "S. Kruk",
+                        "arxiv:affiliation": "ESAC/ESA, Camino Bajo del Castillo, s/n., Urb. Villafranca del Castillo, 28692 Villanueva de la Ca\u00f1ada, Madrid, Spain"
+                    },
+                    {
+                        "name": "D. Sluse",
+                        "arxiv:affiliation": "STAR Institute, University of Li{\u00e8}ge, Quartier Agora, All\u00e9e du six Ao\u00fbt 19c, 4000 Li\u00e8ge, Belgium"
+                    },
+                    {
+                        "name": "G. Despali",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, via Piero Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy",
+                            "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "R. Gavazzi",
+                        "arxiv:affiliation": [
+                            "Aix-Marseille Universit\u00e9, CNRS, CNES, LAM, Marseille, France",
+                            "Institut d'Astrophysique de Paris, UMR 7095, CNRS, and Sorbonne Universit\u00e9, 98 bis boulevard Arago, 75014 Paris, France"
+                        ]
+                    },
+                    {
+                        "name": "H. Degaudenzi",
+                        "arxiv:affiliation": "Department of Astronomy, University of Geneva, ch. d'Ecogia 16, 1290 Versoix, Switzerland"
+                    },
+                    {
+                        "name": "M. Grespan",
+                        "arxiv:affiliation": [
+                            "Department of Physics, University of Oxford, Keble Road, Oxford OX1 3RH, UK",
+                            "National Centre for Nuclear Research, ul. Pasteura 7, 02-093, Warsaw, Poland"
+                        ]
+                    },
+                    {
+                        "name": "G. Granata",
+                        "arxiv:affiliation": "Institute of Cosmology and Gravitation, University of Portsmouth, Portsmouth PO1 3FX, UK"
+                    },
+                    {
+                        "name": "D. P. Johnson",
+                        "arxiv:affiliation": "Laboratoire univers et particules de Montpellier, Universit\u00e9 de Montpellier, CNRS, 34090 Montpellier, France"
+                    },
+                    {
+                        "name": "C. M. O'Riordan",
+                        "arxiv:affiliation": "Institut de Ci\u00e8ncies del Cosmos"
+                    },
+                    {
+                        "name": "M. Millon",
+                        "arxiv:affiliation": "Universit\u00e9 de Gen\u00e8ve, D\u00e9partement de Physique Th\u00e9orique and Centre for Astroparticle Physics, 24 quai Ernest-Ansermet, CH-1211 Gen\u00e8ve 4, Switzerland"
+                    },
+                    {
+                        "name": "D. J. Bowden",
+                        "arxiv:affiliation": "Department of Physics, University of Oxford, Keble Road, Oxford OX1 3RH, UK"
+                    },
+                    {
+                        "name": "J. Pearson",
+                        "arxiv:affiliation": "School of Physical Sciences, The Open University, Milton Keynes, MK7 6AA, UK"
+                    },
+                    {
+                        "name": "N. Massari",
+                        "arxiv:affiliation": "Aix-Marseille Universit\u00e9, CNRS, CNES, LAM, Marseille, France"
+                    },
+                    {
+                        "name": "N. Aghanim",
+                        "arxiv:affiliation": "Universit\u00e9 Paris-Saclay, CNRS, Institut d'astrophysique spatiale, 91405, Orsay, France"
+                    },
+                    {
+                        "name": "S. Andreon",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Brera, Via Brera 28, 20122 Milano, Italy"
+                    },
+                    {
+                        "name": "N. Auricchio",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "C. Baccigalupi",
+                        "arxiv:affiliation": [
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy",
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "INFN, Sezione di Trieste, Via Valerio 2, 34127 Trieste TS, Italy",
+                            "SISSA, International School for Advanced Studies, Via Bonomea 265, 34136 Trieste TS, Italy"
+                        ]
+                    },
+                    {
+                        "name": "M. Baldi",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia, Universit\u00e0 di Bologna, Via Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy",
+                            "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "A. Balestra",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Padova, Via dell'Osservatorio 5, 35122 Padova, Italy"
+                    },
+                    {
+                        "name": "S. Bardelli",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "P. Battaglia",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "A. Biviano",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy"
+                        ]
+                    },
+                    {
+                        "name": "M. Bolzonella",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "E. Branchini",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica, Universit\u00e0 di Genova, Via Dodecaneso 33, 16146, Genova, Italy",
+                            "INFN-Sezione di Genova, Via Dodecaneso 33, 16146, Genova, Italy",
+                            "INAF-Osservatorio Astronomico di Brera, Via Brera 28, 20122 Milano, Italy"
+                        ]
+                    },
+                    {
+                        "name": "M. Brescia",
+                        "arxiv:affiliation": [
+                            "Department of Physics \"E. Pancini\", University Federico II, Via Cinthia 6, 80126, Napoli, Italy",
+                            "INAF-Osservatorio Astronomico di Capodimonte, Via Moiariello 16, 80131 Napoli, Italy"
+                        ]
+                    },
+                    {
+                        "name": "S. Camera",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica, Universit\u00e0 degli Studi di Torino, Via P. Giuria 1, 10125 Torino, Italy",
+                            "INFN-Sezione di Torino, Via P. Giuria 1, 10125 Torino, Italy",
+                            "INAF-Osservatorio Astrofisico di Torino, Via Osservatorio 20, 10025 Pino Torinese"
+                        ]
+                    },
+                    {
+                        "name": "G. Ca\u00f1as-Herrera",
+                        "arxiv:affiliation": "Leiden Observatory, Leiden University, Einsteinweg 55, 2333 CC Leiden, The Netherlands"
+                    },
+                    {
+                        "name": "V. Capobianco",
+                        "arxiv:affiliation": "INAF-Osservatorio Astrofisico di Torino, Via Osservatorio 20, 10025 Pino Torinese"
+                    },
+                    {
+                        "name": "C. Carbone",
+                        "arxiv:affiliation": "INAF-IASF Milano, Via Alfonso Corti 12, 20133 Milano, Italy"
+                    },
+                    {
+                        "name": "J. Carretero",
+                        "arxiv:affiliation": [
+                            "Centro de Investigaciones Energ\u00e9ticas, Medioambientales y Tecnol\u00f3gicas",
+                            "Port d'Informaci\u00f3 Cient\u00edfica, Campus UAB, C. Albareda s/n, 08193 Bellaterra"
+                        ]
+                    },
+                    {
+                        "name": "F. J. Castander",
+                        "arxiv:affiliation": [
+                            "Institute of Space Sciences",
+                            "Institut d'Estudis Espacials de Catalunya"
+                        ]
+                    },
+                    {
+                        "name": "M. Castellano",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Roma, Via Frascati 33, 00078 Monteporzio Catone, Italy"
+                    },
+                    {
+                        "name": "G. Castignani",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "S. Cavuoti",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Capodimonte, Via Moiariello 16, 80131 Napoli, Italy",
+                            "INFN -- Sezione di Napoli, Via Cinthia 6, 80126, Napoli, Italy"
+                        ]
+                    },
+                    {
+                        "name": "A. Cimatti",
+                        "arxiv:affiliation": "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                    },
+                    {
+                        "name": "C. Colodro-Conde",
+                        "arxiv:affiliation": "Instituto de Astrof\u00edsica de Canarias, E-38205 La Laguna, Tenerife, Spain"
+                    },
+                    {
+                        "name": "G. Congedo",
+                        "arxiv:affiliation": "Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, UK"
+                    },
+                    {
+                        "name": "L. Conversi",
+                        "arxiv:affiliation": [
+                            "European Space Agency/ESRIN, Largo Galileo Galilei 1, 00044 Frascati, Roma, Italy",
+                            "ESAC/ESA, Camino Bajo del Castillo, s/n., Urb. Villafranca del Castillo, 28692 Villanueva de la Ca\u00f1ada, Madrid, Spain"
+                        ]
+                    },
+                    {
+                        "name": "Y. Copin",
+                        "arxiv:affiliation": "Universit\u00e9 Lyon 1, CNRS/IN2P3, IP2I Lyon, Villeurbanne, France"
+                    },
+                    {
+                        "name": "H. M. Courtois",
+                        "arxiv:affiliation": "Universit\u00e9 Lyon 1, CNRS/IN2P3, IUF, IP2I Lyon, Villeurbanne, France"
+                    },
+                    {
+                        "name": "M. Cropper",
+                        "arxiv:affiliation": "Mullard Space Science Laboratory, University College London, Holmbury St Mary, Dorking, Surrey RH5 6NT, UK"
+                    },
+                    {
+                        "name": "A. Da Silva",
+                        "arxiv:affiliation": [
+                            "Departamento de F\u00edsica, Faculdade de Ci\u00eancias, Universidade de Lisboa, Edif\u00edcio C8, Campo Grande, PT1749-016 Lisboa, Portugal",
+                            "Instituto de Astrof\u00edsica e Ci\u00eancias do Espa\u00e7o, Faculdade de Ci\u00eancias, Universidade de Lisboa, Campo Grande, 1749-016 Lisboa, Portugal"
+                        ]
+                    },
+                    {
+                        "name": "G. De Lucia",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                    },
+                    {
+                        "name": "C. Dolding",
+                        "arxiv:affiliation": "Mullard Space Science Laboratory, University College London, Holmbury St Mary, Dorking, Surrey RH5 6NT, UK"
+                    },
+                    {
+                        "name": "H. Dole",
+                        "arxiv:affiliation": "Universit\u00e9 Paris-Saclay, CNRS, Institut d'astrophysique spatiale, 91405, Orsay, France"
+                    },
+                    {
+                        "name": "F. Dubath",
+                        "arxiv:affiliation": "Department of Astronomy, University of Geneva, ch. d'Ecogia 16, 1290 Versoix, Switzerland"
+                    },
+                    {
+                        "name": "X. Dupac",
+                        "arxiv:affiliation": "ESAC/ESA, Camino Bajo del Castillo, s/n., Urb. Villafranca del Castillo, 28692 Villanueva de la Ca\u00f1ada, Madrid, Spain"
+                    },
+                    {
+                        "name": "S. Dusini",
+                        "arxiv:affiliation": "INFN-Padova, Via Marzolo 8, 35131 Padova, Italy"
+                    },
+                    {
+                        "name": "S. Escoffier",
+                        "arxiv:affiliation": "Aix-Marseille Universit\u00e9, CNRS/IN2P3, CPPM, Marseille, France"
+                    },
+                    {
+                        "name": "M. Farina",
+                        "arxiv:affiliation": "INAF-Istituto di Astrofisica e Planetologia Spaziali, via del Fosso del Cavaliere, 100, 00100 Roma, Italy"
+                    },
+                    {
+                        "name": "R. Farinelli",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "F. Faustini",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Roma, Via Frascati 33, 00078 Monteporzio Catone, Italy"
+                    },
+                    {
+                        "name": "S. Ferriol",
+                        "arxiv:affiliation": "Universit\u00e9 Lyon 1, CNRS/IN2P3, IP2I Lyon, Villeurbanne, France"
+                    },
+                    {
+                        "name": "S. Fotopoulou",
+                        "arxiv:affiliation": "School of Physics, HH Wills Physics Laboratory, University of Bristol, Tyndall Avenue, Bristol, BS8 1TL, UK"
+                    },
+                    {
+                        "name": "M. Frailis",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                    },
+                    {
+                        "name": "E. Franceschi",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "M. Fumana",
+                        "arxiv:affiliation": "INAF-IASF Milano, Via Alfonso Corti 12, 20133 Milano, Italy"
+                    },
+                    {
+                        "name": "L. Gabarra",
+                        "arxiv:affiliation": "Department of Physics, University of Oxford, Keble Road, Oxford OX1 3RH, UK"
+                    },
+                    {
+                        "name": "S. Galeotta",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                    },
+                    {
+                        "name": "K. George",
+                        "arxiv:affiliation": "University Observatory, LMU Faculty of Physics, Scheinerstr.~1, 81679 Munich, Germany"
+                    },
+                    {
+                        "name": "B. Gillis",
+                        "arxiv:affiliation": "Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, UK"
+                    },
+                    {
+                        "name": "C. Giocoli",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy",
+                            "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "J. Gracia-Carpio",
+                        "arxiv:affiliation": "Max Planck Institute for Extraterrestrial Physics, Giessenbachstr. 1, 85748 Garching, Germany"
+                    },
+                    {
+                        "name": "A. Grazian",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Padova, Via dell'Osservatorio 5, 35122 Padova, Italy"
+                    },
+                    {
+                        "name": "F. Grupp",
+                        "arxiv:affiliation": [
+                            "Max Planck Institute for Extraterrestrial Physics, Giessenbachstr. 1, 85748 Garching, Germany",
+                            "Universit\u00e4ts-Sternwarte M\u00fcnchen, Fakult\u00e4t f\u00fcr Physik, Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen, Scheinerstr.~1, 81679 M\u00fcnchen, Germany"
+                        ]
+                    },
+                    {
+                        "name": "W. G. Hartley",
+                        "arxiv:affiliation": "Department of Astronomy, University of Geneva, ch. d'Ecogia 16, 1290 Versoix, Switzerland"
+                    },
+                    {
+                        "name": "S. V. H. Haugan",
+                        "arxiv:affiliation": "Institute of Theoretical Astrophysics, University of Oslo, P.O. Box 1029 Blindern, 0315 Oslo, Norway"
+                    },
+                    {
+                        "name": "S. Hemmati",
+                        "arxiv:affiliation": "Caltech/IPAC, 1200 E. California Blvd., Pasadena, CA 91125, USA"
+                    },
+                    {
+                        "name": "W. Holmes",
+                        "arxiv:affiliation": "Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Pasadena, CA, 91109, USA"
+                    },
+                    {
+                        "name": "I. M. Hook",
+                        "arxiv:affiliation": "School of Physics and Astronomy, Lancaster University, Lancaster, LA1 4YB, UK"
+                    },
+                    {
+                        "name": "F. Hormuth",
+                        "arxiv:affiliation": "Felix Hormuth Engineering, Goethestr. 17, 69181 Leimen, Germany"
+                    },
+                    {
+                        "name": "A. Hornstrup",
+                        "arxiv:affiliation": [
+                            "Technical University of Denmark, Elektrovej 327, 2800 Kgs. Lyngby, Denmark",
+                            "Cosmic Dawn Center"
+                        ]
+                    },
+                    {
+                        "name": "K. Jahnke",
+                        "arxiv:affiliation": "Max-Planck-Institut f\u00fcr Astronomie, K\u00f6nigstuhl 17, 69117 Heidelberg, Germany"
+                    },
+                    {
+                        "name": "M. Jhabvala",
+                        "arxiv:affiliation": "NASA Goddard Space Flight Center, Greenbelt, MD 20771, USA"
+                    },
+                    {
+                        "name": "B. Joachimi",
+                        "arxiv:affiliation": "Department of Physics and Astronomy, University College London, Gower Street, London WC1E 6BT, UK"
+                    },
+                    {
+                        "name": "S. Kermiche",
+                        "arxiv:affiliation": "Aix-Marseille Universit\u00e9, CNRS/IN2P3, CPPM, Marseille, France"
+                    },
+                    {
+                        "name": "A. Kiessling",
+                        "arxiv:affiliation": "Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Pasadena, CA, 91109, USA"
+                    },
+                    {
+                        "name": "B. Kubik",
+                        "arxiv:affiliation": "Universit\u00e9 Lyon 1, CNRS/IN2P3, IP2I Lyon, Villeurbanne, France"
+                    },
+                    {
+                        "name": "M. K\u00fcmmel",
+                        "arxiv:affiliation": "Universit\u00e4ts-Sternwarte M\u00fcnchen, Fakult\u00e4t f\u00fcr Physik, Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen, Scheinerstr.~1, 81679 M\u00fcnchen, Germany"
+                    },
+                    {
+                        "name": "M. Kunz",
+                        "arxiv:affiliation": "Universit\u00e9 de Gen\u00e8ve, D\u00e9partement de Physique Th\u00e9orique and Centre for Astroparticle Physics, 24 quai Ernest-Ansermet, CH-1211 Gen\u00e8ve 4, Switzerland"
+                    },
+                    {
+                        "name": "H. Kurki-Suonio",
+                        "arxiv:affiliation": [
+                            "Department of Physics, P.O. Box 64, University of Helsinki, 00014 Helsinki, Finland",
+                            "Helsinki Institute of Physics, Gustaf H{\u00e4}llstr{\u00f6}min katu 2, University of Helsinki, 00014 Helsinki, Finland"
+                        ]
+                    },
+                    {
+                        "name": "A. M. C. Le Brun",
+                        "arxiv:affiliation": "Laboratoire d'etude de l'Univers et des phenomenes eXtremes, Observatoire de Paris, Universit\u00e9 PSL, Sorbonne Universit\u00e9, CNRS, 92190 Meudon, France"
+                    },
+                    {
+                        "name": "S. Ligori",
+                        "arxiv:affiliation": "INAF-Osservatorio Astrofisico di Torino, Via Osservatorio 20, 10025 Pino Torinese"
+                    },
+                    {
+                        "name": "P. B. Lilje",
+                        "arxiv:affiliation": "Institute of Theoretical Astrophysics, University of Oslo, P.O. Box 1029 Blindern, 0315 Oslo, Norway"
+                    },
+                    {
+                        "name": "V. Lindholm",
+                        "arxiv:affiliation": [
+                            "Department of Physics, P.O. Box 64, University of Helsinki, 00014 Helsinki, Finland",
+                            "Helsinki Institute of Physics, Gustaf H{\u00e4}llstr{\u00f6}min katu 2, University of Helsinki, 00014 Helsinki, Finland"
+                        ]
+                    },
+                    {
+                        "name": "I. Lloro",
+                        "arxiv:affiliation": "SKAO, Jodrell Bank, Lower Withington, Macclesfield SK11 9FT, UK"
+                    },
+                    {
+                        "name": "M. Magliocchetti",
+                        "arxiv:affiliation": "INAF-Istituto di Astrofisica e Planetologia Spaziali, via del Fosso del Cavaliere, 100, 00100 Roma, Italy"
+                    },
+                    {
+                        "name": "G. Mainetti",
+                        "arxiv:affiliation": "Centre de Calcul de l'IN2P3/CNRS, 21 avenue Pierre de Coubertin 69627 Villeurbanne Cedex, France"
+                    },
+                    {
+                        "name": "O. Mansutti",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                    },
+                    {
+                        "name": "O. Marggraf",
+                        "arxiv:affiliation": "Universit\u00e4t Bonn, Argelander-Institut f\u00fcr Astronomie, Auf dem H\u00fcgel 71, 53121 Bonn, Germany"
+                    },
+                    {
+                        "name": "M. Martinelli",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Roma, Via Frascati 33, 00078 Monteporzio Catone, Italy",
+                            "INFN-Sezione di Roma, Piazzale Aldo Moro, 2 - c/o Dipartimento di Fisica, Edificio G. Marconi, 00185 Roma, Italy"
+                        ]
+                    },
+                    {
+                        "name": "N. Martinet",
+                        "arxiv:affiliation": "Aix-Marseille Universit\u00e9, CNRS, CNES, LAM, Marseille, France"
+                    },
+                    {
+                        "name": "F. Marulli",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, via Piero Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy",
+                            "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "R. J. Massey",
+                        "arxiv:affiliation": "Department of Physics, Institute for Computational Cosmology, Durham University, South Road, Durham, DH1 3LE, UK"
+                    },
+                    {
+                        "name": "N. Mauri",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy",
+                            "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "E. Medinaceli",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "S. Mei",
+                        "arxiv:affiliation": [
+                            "Universit\u00e9 Paris Cit\u00e9, CNRS, Astroparticule et Cosmologie, 75013 Paris, France",
+                            "CNRS-UCB International Research Laboratory, Centre Pierre Bin\u00e9truy, IRL2007, CPB-IN2P3, Berkeley, USA"
+                        ]
+                    },
+                    {
+                        "name": "M. Melchior",
+                        "arxiv:affiliation": "University of Applied Sciences and Arts of Northwestern Switzerland, School of Engineering, 5210 Windisch, Switzerland"
+                    },
+                    {
+                        "name": "M. Meneghetti",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy",
+                            "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "E. Merlin",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Padova, Via dell'Osservatorio 5, 35122 Padova, Italy"
+                    },
+                    {
+                        "name": "G. Meylan",
+                        "arxiv:affiliation": "Institute of Physics, Laboratory of Astrophysics, Ecole Polytechnique F\u00e9d\u00e9rale de Lausanne"
+                    },
+                    {
+                        "name": "P. Monaco",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica - Sezione di Astronomia, Universit\u00e0 di Trieste, Via Tiepolo 11, 34131 Trieste, Italy",
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "INFN, Sezione di Trieste, Via Valerio 2, 34127 Trieste TS, Italy",
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy"
+                        ]
+                    },
+                    {
+                        "name": "A. Mora",
+                        "arxiv:affiliation": "Telespazio UK S.L. for European Space Agency"
+                    },
+                    {
+                        "name": "M. Moresco",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, via Piero Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "C. Moretti",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy",
+                            "INFN, Sezione di Trieste, Via Valerio 2, 34127 Trieste TS, Italy"
+                        ]
+                    },
+                    {
+                        "name": "L. Moscardini",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, via Piero Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy",
+                            "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "C. Neissner",
+                        "arxiv:affiliation": [
+                            "Institut de F\u00edsica d'Altes Energies",
+                            "Port d'Informaci\u00f3 Cient\u00edfica, Campus UAB, C. Albareda s/n, 08193 Bellaterra"
+                        ]
+                    },
+                    {
+                        "name": "R. C. Nichol",
+                        "arxiv:affiliation": "School of Mathematics and Physics, University of Surrey, Guildford, Surrey, GU2 7XH, UK"
+                    },
+                    {
+                        "name": "S. -M. Niemi",
+                        "arxiv:affiliation": "European Space Agency/ESTEC, Keplerlaan 1, 2201 AZ Noordwijk, The Netherlands"
+                    },
+                    {
+                        "name": "C. Padilla",
+                        "arxiv:affiliation": "Institut de F\u00edsica d'Altes Energies"
+                    },
+                    {
+                        "name": "S. Paltani",
+                        "arxiv:affiliation": "Department of Astronomy, University of Geneva, ch. d'Ecogia 16, 1290 Versoix, Switzerland"
+                    },
+                    {
+                        "name": "F. Pasian",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                    },
+                    {
+                        "name": "W. J. Percival",
+                        "arxiv:affiliation": [
+                            "Waterloo Centre for Astrophysics, University of Waterloo, Waterloo, Ontario N2L 3G1, Canada",
+                            "Department of Physics and Astronomy, University of Waterloo, Waterloo, Ontario N2L 3G1, Canada",
+                            "Perimeter Institute for Theoretical Physics, Waterloo, Ontario N2L 2Y5, Canada"
+                        ]
+                    },
+                    {
+                        "name": "V. Pettorino",
+                        "arxiv:affiliation": "European Space Agency/ESTEC, Keplerlaan 1, 2201 AZ Noordwijk, The Netherlands"
+                    },
+                    {
+                        "name": "A. Pezzotta",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Brera, Via Brera 28, 20122 Milano, Italy"
+                    },
+                    {
+                        "name": "S. Pires",
+                        "arxiv:affiliation": "Universit\u00e9 Paris-Saclay, Universit\u00e9 Paris Cit\u00e9, CEA, CNRS, AIM, 91191, Gif-sur-Yvette, France"
+                    },
+                    {
+                        "name": "G. Polenta",
+                        "arxiv:affiliation": "Space Science Data Center, Italian Space Agency, via del Politecnico snc, 00133 Roma, Italy"
+                    },
+                    {
+                        "name": "M. Poncet",
+                        "arxiv:affiliation": "Centre National d'Etudes Spatiales -- Centre spatial de Toulouse, 18 avenue Edouard Belin, 31401 Toulouse Cedex 9, France"
+                    },
+                    {
+                        "name": "L. A. Popa",
+                        "arxiv:affiliation": "Institute of Space Science, Str. Atomistilor, nr. 409 M\u0103gurele, Ilfov, 077125, Romania"
+                    },
+                    {
+                        "name": "F. Raison",
+                        "arxiv:affiliation": "Max Planck Institute for Extraterrestrial Physics, Giessenbachstr. 1, 85748 Garching, Germany"
+                    },
+                    {
+                        "name": "R. Rebolo",
+                        "arxiv:affiliation": [
+                            "Instituto de Astrof\u00edsica de Canarias, E-38205 La Laguna, Tenerife, Spain",
+                            "Consejo Superior de Investigaciones Cientificas, Calle Serrano 117, 28006 Madrid, Spain",
+                            "Universidad de La Laguna, Dpto. Astrof\\'\u0131sica, E-38206 La Laguna, Tenerife, Spain"
+                        ]
+                    },
+                    {
+                        "name": "A. Renzi",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"G. Galilei\", Universit\u00e0 di Padova, Via Marzolo 8, 35131 Padova, Italy",
+                            "INFN-Padova, Via Marzolo 8, 35131 Padova, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "J. Rhodes",
+                        "arxiv:affiliation": "Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Pasadena, CA, 91109, USA"
+                    },
+                    {
+                        "name": "G. Riccio",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Capodimonte, Via Moiariello 16, 80131 Napoli, Italy"
+                    },
+                    {
+                        "name": "I. Risso",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica, Universit\u00e0 di Genova, Via Dodecaneso 33, 16146, Genova, Italy",
+                            "INFN-Sezione di Genova, Via Dodecaneso 33, 16146, Genova, Italy",
+                            "INAF-Osservatorio Astronomico di Brera, Via Brera 28, 20122 Milano, Italy"
+                        ]
+                    },
+                    {
+                        "name": "F. Rizzo",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                    },
+                    {
+                        "name": "E. Romelli",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                    },
+                    {
+                        "name": "M. Roncarelli",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "B. Rusholme",
+                        "arxiv:affiliation": "Caltech/IPAC, 1200 E. California Blvd., Pasadena, CA 91125, USA"
+                    },
+                    {
+                        "name": "R. Saglia",
+                        "arxiv:affiliation": [
+                            "Universit\u00e4ts-Sternwarte M\u00fcnchen, Fakult\u00e4t f\u00fcr Physik, Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen, Scheinerstr.~1, 81679 M\u00fcnchen, Germany",
+                            "Max Planck Institute for Extraterrestrial Physics, Giessenbachstr. 1, 85748 Garching, Germany"
+                        ]
+                    },
+                    {
+                        "name": "Z. Sakr",
+                        "arxiv:affiliation": [
+                            "Instituto de F\u00edsica Te\u00f3rica UAM-CSIC, Campus de Cantoblanco, 28049 Madrid, Spain",
+                            "Institut de Recherche en Astrophysique et Plan\u00e9tologie",
+                            "Universit\u00e9 St Joseph; Faculty of Sciences, Beirut, Lebanon"
+                        ]
+                    },
+                    {
+                        "name": "A. G. S\u00e1nchez",
+                        "arxiv:affiliation": "Max Planck Institute for Extraterrestrial Physics, Giessenbachstr. 1, 85748 Garching, Germany"
+                    },
+                    {
+                        "name": "D. Sapone",
+                        "arxiv:affiliation": "Departamento de F\u00edsica, FCFM, Universidad de Chile, Blanco Encalada 2008, Santiago, Chile"
+                    },
+                    {
+                        "name": "B. Sartoris",
+                        "arxiv:affiliation": [
+                            "Max Planck Institute for Extraterrestrial Physics, Giessenbachstr. 1, 85748 Garching, Germany",
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                        ]
+                    },
+                    {
+                        "name": "P. Schneider",
+                        "arxiv:affiliation": "Universit\u00e4t Bonn, Argelander-Institut f\u00fcr Astronomie, Auf dem H\u00fcgel 71, 53121 Bonn, Germany"
+                    },
+                    {
+                        "name": "T. Schrabback",
+                        "arxiv:affiliation": "Universit\u00e4t Innsbruck, Institut f\u00fcr Astro- und Teilchenphysik, Technikerstr. 25/8, 6020 Innsbruck, Austria"
+                    },
+                    {
+                        "name": "A. Secroun",
+                        "arxiv:affiliation": "Aix-Marseille Universit\u00e9, CNRS/IN2P3, CPPM, Marseille, France"
+                    },
+                    {
+                        "name": "E. Sihvola",
+                        "arxiv:affiliation": "Department of Physics and Helsinki Institute of Physics, Gustaf H\u00e4llstr\u00f6min katu 2, University of Helsinki, 00014 Helsinki, Finland"
+                    },
+                    {
+                        "name": "C. Sirignano",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"G. Galilei\", Universit\u00e0 di Padova, Via Marzolo 8, 35131 Padova, Italy",
+                            "INFN-Padova, Via Marzolo 8, 35131 Padova, Italy"
+                        ]
+                    },
+                    {
+                        "name": "G. Sirri",
+                        "arxiv:affiliation": "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                    },
+                    {
+                        "name": "L. Stanco",
+                        "arxiv:affiliation": "INFN-Padova, Via Marzolo 8, 35131 Padova, Italy"
+                    },
+                    {
+                        "name": "J. -L. Starck",
+                        "arxiv:affiliation": "Universit\u00e9 Paris-Saclay, Universit\u00e9 Paris Cit\u00e9, CEA, CNRS, AIM, 91191, Gif-sur-Yvette, France"
+                    },
+                    {
+                        "name": "P. Tallada-Cresp\u00ed",
+                        "arxiv:affiliation": [
+                            "Centro de Investigaciones Energ\u00e9ticas, Medioambientales y Tecnol\u00f3gicas",
+                            "Port d'Informaci\u00f3 Cient\u00edfica, Campus UAB, C. Albareda s/n, 08193 Bellaterra"
+                        ]
+                    },
+                    {
+                        "name": "A. N. Taylor",
+                        "arxiv:affiliation": "Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, UK"
+                    },
+                    {
+                        "name": "I. Tereno",
+                        "arxiv:affiliation": [
+                            "Departamento de F\u00edsica, Faculdade de Ci\u00eancias, Universidade de Lisboa, Edif\u00edcio C8, Campo Grande, PT1749-016 Lisboa, Portugal",
+                            "Instituto de Astrof\u00edsica e Ci\u00eancias do Espa\u00e7o, Faculdade de Ci\u00eancias, Universidade de Lisboa, Tapada da Ajuda, 1349-018 Lisboa, Portugal"
+                        ]
+                    },
+                    {
+                        "name": "S. Toft",
+                        "arxiv:affiliation": [
+                            "Cosmic Dawn Center",
+                            "Niels Bohr Institute, University of Copenhagen, Jagtvej 128, 2200 Copenhagen, Denmark"
+                        ]
+                    },
+                    {
+                        "name": "R. Toledo-Moreo",
+                        "arxiv:affiliation": [
+                            "Universidad Polit\u00e9cnica de Cartagena, Departamento de Electr\u00f3nica y Tecnolog\u00eda de Computadoras, Plaza del Hospital 1, 30202 Cartagena, Spain",
+                            "European University of Technology EUt+, European Union"
+                        ]
+                    },
+                    {
+                        "name": "F. Torradeflot",
+                        "arxiv:affiliation": [
+                            "Port d'Informaci\u00f3 Cient\u00edfica, Campus UAB, C. Albareda s/n, 08193 Bellaterra",
+                            "Centro de Investigaciones Energ\u00e9ticas, Medioambientales y Tecnol\u00f3gicas"
+                        ]
+                    },
+                    {
+                        "name": "I. Tutusaus",
+                        "arxiv:affiliation": [
+                            "Institute of Space Sciences",
+                            "Institut d'Estudis Espacials de Catalunya",
+                            "Institut de Recherche en Astrophysique et Plan\u00e9tologie"
+                        ]
+                    },
+                    {
+                        "name": "J. Valiviita",
+                        "arxiv:affiliation": [
+                            "Department of Physics, P.O. Box 64, University of Helsinki, 00014 Helsinki, Finland",
+                            "Helsinki Institute of Physics, Gustaf H{\u00e4}llstr{\u00f6}min katu 2, University of Helsinki, 00014 Helsinki, Finland"
+                        ]
+                    },
+                    {
+                        "name": "T. Vassallo",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "University Observatory, LMU Faculty of Physics, Scheinerstr.~1, 81679 Munich, Germany"
+                        ]
+                    },
+                    {
+                        "name": "G. Verdoes Kleijn",
+                        "arxiv:affiliation": "Kapteyn Astronomical Institute, University of Groningen, PO Box 800, 9700 AV Groningen, The Netherlands"
+                    },
+                    {
+                        "name": "A. Veropalumbo",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Brera, Via Brera 28, 20122 Milano, Italy",
+                            "INFN-Sezione di Genova, Via Dodecaneso 33, 16146, Genova, Italy",
+                            "Dipartimento di Fisica, Universit\u00e0 di Genova, Via Dodecaneso 33, 16146, Genova, Italy"
+                        ]
+                    },
+                    {
+                        "name": "Y. Wang",
+                        "arxiv:affiliation": "Caltech/IPAC, 1200 E. California Blvd., Pasadena, CA 91125, USA"
+                    },
+                    {
+                        "name": "J. Weller",
+                        "arxiv:affiliation": [
+                            "Universit\u00e4ts-Sternwarte M\u00fcnchen, Fakult\u00e4t f\u00fcr Physik, Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen, Scheinerstr.~1, 81679 M\u00fcnchen, Germany",
+                            "Max Planck Institute for Extraterrestrial Physics, Giessenbachstr. 1, 85748 Garching, Germany"
+                        ]
+                    },
+                    {
+                        "name": "A. Zacchei",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy"
+                        ]
+                    },
+                    {
+                        "name": "G. Zamorani",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "E. Zucca",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "V. Allevato",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Capodimonte, Via Moiariello 16, 80131 Napoli, Italy"
+                    },
+                    {
+                        "name": "M. Ballardini",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Scienze della Terra, Universit\u00e0 degli Studi di Ferrara, Via Giuseppe Saragat 1, 44122 Ferrara, Italy",
+                            "Istituto Nazionale di Fisica Nucleare, Sezione di Ferrara, Via Giuseppe Saragat 1, 44122 Ferrara, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "P. Bergamini",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "S. Borgani",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica - Sezione di Astronomia, Universit\u00e0 di Trieste, Via Tiepolo 11, 34131 Trieste, Italy",
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy",
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "INFN, Sezione di Trieste, Via Valerio 2, 34127 Trieste TS, Italy",
+                            "ICSC - Centro Nazionale di Ricerca in High Performance Computing, Big Data e Quantum Computing, Via Magnanelli 2, Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "E. Bozzo",
+                        "arxiv:affiliation": "Department of Astronomy, University of Geneva, ch. d'Ecogia 16, 1290 Versoix, Switzerland"
+                    },
+                    {
+                        "name": "C. Burigana",
+                        "arxiv:affiliation": [
+                            "INAF, Istituto di Radioastronomia, Via Piero Gobetti 101, 40129 Bologna, Italy",
+                            "INFN-Bologna, Via Irnerio 46, 40126 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "R. Cabanac",
+                        "arxiv:affiliation": "Institut de Recherche en Astrophysique et Plan\u00e9tologie"
+                    },
+                    {
+                        "name": "M. Calabrese",
+                        "arxiv:affiliation": [
+                            "Astronomical Observatory of the Autonomous Region of the Aosta Valley",
+                            "INAF-IASF Milano, Via Alfonso Corti 12, 20133 Milano, Italy"
+                        ]
+                    },
+                    {
+                        "name": "A. Cappi",
+                        "arxiv:affiliation": [
+                            "Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, CNRS, Laboratoire Lagrange, Bd de l'Observatoire, CS 34229, 06304 Nice cedex 4, France",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "F. Caro",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Roma, Via Frascati 33, 00078 Monteporzio Catone, Italy"
+                    },
+                    {
+                        "name": "T. Castro",
+                        "arxiv:affiliation": [
+                            "Department of Mathematical Physics, Institute of Physics, University of S\u00e3o Paulo, R. do Mat\u00e3o 1371, 05508-090, S\u00e3o Paulo, SP, Brazil",
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy"
+                        ]
+                    },
+                    {
+                        "name": "J. A. Escartin Vigo",
+                        "arxiv:affiliation": "Max Planck Institute for Extraterrestrial Physics, Giessenbachstr. 1, 85748 Garching, Germany"
+                    },
+                    {
+                        "name": "J. Garc\u00eda-Bellido",
+                        "arxiv:affiliation": "Instituto de F\u00edsica Te\u00f3rica UAM-CSIC, Campus de Cantoblanco, 28049 Madrid, Spain"
+                    },
+                    {
+                        "name": "T. Gasparetto",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Roma, Via Frascati 33, 00078 Monteporzio Catone, Italy"
+                    },
+                    {
+                        "name": "V. Gautard",
+                        "arxiv:affiliation": "CEA Saclay, DFR/IRFU, Service d'Astrophysique, Bat. 709, 91191 Gif-sur-Yvette, France"
+                    },
+                    {
+                        "name": "A. Loureiro",
+                        "arxiv:affiliation": [
+                            "Oskar Klein Centre for Cosmoparticle Physics, Department of Physics, Stockholm University, Stockholm, SE-106 91, Sweden",
+                            "Astrophysics Group, Blackett Laboratory, Imperial College London, London SW7 2AZ, UK"
+                        ]
+                    },
+                    {
+                        "name": "R. Maoli",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica, Sapienza Universit\u00e0 di Roma, Piazzale Aldo Moro 2, 00185 Roma, Italy",
+                            "INAF-Osservatorio Astronomico di Roma, Via Frascati 33, 00078 Monteporzio Catone, Italy"
+                        ]
+                    },
+                    {
+                        "name": "A. A. Nucita",
+                        "arxiv:affiliation": [
+                            "Department of Mathematics and Physics E. De Giorgi, University of Salento, Via per Arnesano, CP-I93, 73100, Lecce, Italy",
+                            "INFN, Sezione di Lecce, Via per Arnesano, CP-193, 73100, Lecce, Italy",
+                            "INAF-Sezione di Lecce, c/o Dipartimento Matematica e Fisica, Via per Arnesano, 73100, Lecce, Italy"
+                        ]
+                    },
+                    {
+                        "name": "M. P\u00f6ntinen",
+                        "arxiv:affiliation": "Department of Physics, P.O. Box 64, University of Helsinki, 00014 Helsinki, Finland"
+                    },
+                    {
+                        "name": "E. Sarpa",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                    },
+                    {
+                        "name": "V. Scottez",
+                        "arxiv:affiliation": [
+                            "Institut d'Astrophysique de Paris, 98bis Boulevard Arago, 75014, Paris, France",
+                            "ICL, Junia, Universit\u00e9 Catholique de Lille, LITL, 59000 Lille, France"
+                        ]
+                    },
+                    {
+                        "name": "M. Sereno",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy",
+                            "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "M. Tenti",
+                        "arxiv:affiliation": "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                    },
+                    {
+                        "name": "M. Tucci",
+                        "arxiv:affiliation": "Department of Astronomy, University of Geneva, ch. d'Ecogia 16, 1290 Versoix, Switzerland"
+                    },
+                    {
+                        "name": "M. Viel",
+                        "arxiv:affiliation": [
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy",
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "SISSA, International School for Advanced Studies, Via Bonomea 265, 34136 Trieste TS, Italy",
+                            "INFN, Sezione di Trieste, Via Valerio 2, 34127 Trieste TS, Italy",
+                            "ICSC - Centro Nazionale di Ricerca in High Performance Computing, Big Data e Quantum Computing, Via Magnanelli 2, Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "M. Wiesmann",
+                        "arxiv:affiliation": "Institute of Theoretical Astrophysics, University of Oslo, P.O. Box 1029 Blindern, 0315 Oslo, Norway"
+                    },
+                    {
+                        "name": "J. A. Acevedo Barroso",
+                        "arxiv:affiliation": "Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Pasadena, CA, 91109, USA"
+                    },
+                    {
+                        "name": "Y. Akrami",
+                        "arxiv:affiliation": [
+                            "Instituto de F\u00edsica Te\u00f3rica UAM-CSIC, Campus de Cantoblanco, 28049 Madrid, Spain",
+                            "CERCA/ISO, Department of Physics, Case Western Reserve University, 10900 Euclid Avenue, Cleveland, OH 44106, USA"
+                        ]
+                    },
+                    {
+                        "name": "I. T. Andika",
+                        "arxiv:affiliation": "Universit\u00e4ts-Sternwarte M\u00fcnchen, Fakult\u00e4t f\u00fcr Physik, Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen, Scheinerstr.~1, 81679 M\u00fcnchen, Germany"
+                    },
+                    {
+                        "name": "S. Anselmi",
+                        "arxiv:affiliation": [
+                            "INFN-Padova, Via Marzolo 8, 35131 Padova, Italy",
+                            "Dipartimento di Fisica e Astronomia \"G. Galilei\", Universit\u00e0 di Padova, Via Marzolo 8, 35131 Padova, Italy",
+                            "Laboratoire Univers et Th\u00e9orie, Observatoire de Paris, Universit\u00e9 PSL, Universit\u00e9 Paris Cit\u00e9, CNRS, 92190 Meudon, France"
+                        ]
+                    },
+                    {
+                        "name": "M. Archidiacono",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica \"Aldo Pontremoli\", Universit\u00e0 degli Studi di Milano, Via Celoria 16, 20133 Milano, Italy",
+                            "INFN-Sezione di Milano, Via Celoria 16, 20133 Milano, Italy"
+                        ]
+                    },
+                    {
+                        "name": "G. Aric\u00f2",
+                        "arxiv:affiliation": "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                    },
+                    {
+                        "name": "F. Atrio-Barandela",
+                        "arxiv:affiliation": "Departamento de F{\\'\u0131}sica Fundamental. Universidad de Salamanca. Plaza de la Merced s/n. 37008 Salamanca, Spain"
+                    },
+                    {
+                        "name": "E. Aubourg",
+                        "arxiv:affiliation": [
+                            "Universit\u00e9 Paris Cit\u00e9, CNRS, Astroparticule et Cosmologie, 75013 Paris, France",
+                            "IRFU, CEA, Universit\u00e9 Paris-Saclay 91191 Gif-sur-Yvette Cedex, France"
+                        ]
+                    },
+                    {
+                        "name": "M. Baes",
+                        "arxiv:affiliation": "Universiteit Gent, Department of Physics and Astronomy, Proeftuinstraat 86 N3, 9000 Ghent, Belgium"
+                    },
+                    {
+                        "name": "L. Bazzanini",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Scienze della Terra, Universit\u00e0 degli Studi di Ferrara, Via Giuseppe Saragat 1, 44122 Ferrara, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "D. Bertacca",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"G. Galilei\", Universit\u00e0 di Padova, Via Marzolo 8, 35131 Padova, Italy",
+                            "INAF-Osservatorio Astronomico di Padova, Via dell'Osservatorio 5, 35122 Padova, Italy",
+                            "INFN-Padova, Via Marzolo 8, 35131 Padova, Italy"
+                        ]
+                    },
+                    {
+                        "name": "M. Bethermin",
+                        "arxiv:affiliation": "Universit\u00e9 de Strasbourg, CNRS, Observatoire astronomique de Strasbourg, UMR 7550, 67000 Strasbourg, France"
+                    },
+                    {
+                        "name": "F. Beutler",
+                        "arxiv:affiliation": "Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, UK"
+                    },
+                    {
+                        "name": "A. Blanchard",
+                        "arxiv:affiliation": "Institut de Recherche en Astrophysique et Plan\u00e9tologie"
+                    },
+                    {
+                        "name": "L. Blot",
+                        "arxiv:affiliation": [
+                            "Center for Data-Driven Discovery, Kavli IPMU",
+                            "Laboratoire d'etude de l'Univers et des phenomenes eXtremes, Observatoire de Paris, Universit\u00e9 PSL, Sorbonne Universit\u00e9, CNRS, 92190 Meudon, France"
+                        ]
+                    },
+                    {
+                        "name": "M. L. Brown",
+                        "arxiv:affiliation": "Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Oxford Road, Manchester M13 9PL, UK"
+                    },
+                    {
+                        "name": "S. Bruton",
+                        "arxiv:affiliation": "California Institute of Technology, 1200 E California Blvd, Pasadena, CA 91125, USA"
+                    },
+                    {
+                        "name": "A. Calabro",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Roma, Via Frascati 33, 00078 Monteporzio Catone, Italy"
+                    },
+                    {
+                        "name": "B. Camacho Quevedo",
+                        "arxiv:affiliation": [
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy",
+                            "SISSA, International School for Advanced Studies, Via Bonomea 265, 34136 Trieste TS, Italy",
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                        ]
+                    },
+                    {
+                        "name": "C. S. Carvalho",
+                        "arxiv:affiliation": "Instituto de Astrof\u00edsica e Ci\u00eancias do Espa\u00e7o, Faculdade de Ci\u00eancias, Universidade de Lisboa, Tapada da Ajuda, 1349-018 Lisboa, Portugal"
+                    },
+                    {
+                        "name": "Y. Charles",
+                        "arxiv:affiliation": "Aix-Marseille Universit\u00e9, CNRS, CNES, LAM, Marseille, France"
+                    },
+                    {
+                        "name": "F. Cogato",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, via Piero Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "S. Conseil",
+                        "arxiv:affiliation": "Universit\u00e9 Lyon 1, CNRS/IN2P3, IP2I Lyon, Villeurbanne, France"
+                    },
+                    {
+                        "name": "A. R. Cooray",
+                        "arxiv:affiliation": "Department of Physics \\& Astronomy, University of California Irvine, Irvine CA 92697, USA"
+                    },
+                    {
+                        "name": "P. Corcho-Caballero",
+                        "arxiv:affiliation": "Kapteyn Astronomical Institute, University of Groningen, PO Box 800, 9700 AV Groningen, The Netherlands"
+                    },
+                    {
+                        "name": "B. Csizi",
+                        "arxiv:affiliation": "Universit\u00e4t Innsbruck, Institut f\u00fcr Astro- und Teilchenphysik, Technikerstr. 25/8, 6020 Innsbruck, Austria"
+                    },
+                    {
+                        "name": "O. Cucciati",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "S. Davini",
+                        "arxiv:affiliation": "INFN-Sezione di Genova, Via Dodecaneso 33, 16146, Genova, Italy"
+                    },
+                    {
+                        "name": "T. de Boer",
+                        "arxiv:affiliation": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+                    },
+                    {
+                        "name": "G. Desprez",
+                        "arxiv:affiliation": "Kapteyn Astronomical Institute, University of Groningen, PO Box 800, 9700 AV Groningen, The Netherlands"
+                    },
+                    {
+                        "name": "A. D\u00edaz-S\u00e1nchez",
+                        "arxiv:affiliation": "Departamento F\u00edsica Aplicada, Universidad Polit\u00e9cnica de Cartagena, Campus Muralla del Mar, 30202 Cartagena, Murcia, Spain"
+                    },
+                    {
+                        "name": "S. Di Domizio",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica, Universit\u00e0 di Genova, Via Dodecaneso 33, 16146, Genova, Italy",
+                            "INFN-Sezione di Genova, Via Dodecaneso 33, 16146, Genova, Italy"
+                        ]
+                    },
+                    {
+                        "name": "J. M. Diego",
+                        "arxiv:affiliation": "Instituto de F\u00edsica de Cantabria, Edificio Juan Jord\u00e1, Avenida de los Castros, 39005 Santander, Spain"
+                    },
+                    {
+                        "name": "P. -A. Duc",
+                        "arxiv:affiliation": "Universit\u00e9 de Strasbourg, CNRS, Observatoire astronomique de Strasbourg, UMR 7550, 67000 Strasbourg, France"
+                    },
+                    {
+                        "name": "V. Duret",
+                        "arxiv:affiliation": "Aix-Marseille Universit\u00e9, CNRS/IN2P3, CPPM, Marseille, France"
+                    },
+                    {
+                        "name": "M. Y. Elkhashab",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "INFN, Sezione di Trieste, Via Valerio 2, 34127 Trieste TS, Italy",
+                            "Dipartimento di Fisica - Sezione di Astronomia, Universit\u00e0 di Trieste, Via Tiepolo 11, 34131 Trieste, Italy",
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy"
+                        ]
+                    },
+                    {
+                        "name": "Y. Fang",
+                        "arxiv:affiliation": "Universit\u00e4ts-Sternwarte M\u00fcnchen, Fakult\u00e4t f\u00fcr Physik, Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen, Scheinerstr.~1, 81679 M\u00fcnchen, Germany"
+                    },
+                    {
+                        "name": "A. Farina",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Brera, Via Brera 28, 20122 Milano, Italy",
+                            "INFN-Sezione di Genova, Via Dodecaneso 33, 16146, Genova, Italy"
+                        ]
+                    },
+                    {
+                        "name": "A. G. Ferrari",
+                        "arxiv:affiliation": "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                    },
+                    {
+                        "name": "A. Finoguenov",
+                        "arxiv:affiliation": "Department of Physics, P.O. Box 64, University of Helsinki, 00014 Helsinki, Finland"
+                    },
+                    {
+                        "name": "A. Franco",
+                        "arxiv:affiliation": [
+                            "Department of Mathematics and Physics E. De Giorgi, University of Salento, Via per Arnesano, CP-I93, 73100, Lecce, Italy",
+                            "INFN, Sezione di Lecce, Via per Arnesano, CP-193, 73100, Lecce, Italy",
+                            "INAF-Sezione di Lecce, c/o Dipartimento Matematica e Fisica, Via per Arnesano, 73100, Lecce, Italy"
+                        ]
+                    },
+                    {
+                        "name": "Y. Fu",
+                        "arxiv:affiliation": [
+                            "Leiden Observatory, Leiden University, Einsteinweg 55, 2333 CC Leiden, The Netherlands",
+                            "Kapteyn Astronomical Institute, University of Groningen, PO Box 800, 9700 AV Groningen, The Netherlands"
+                        ]
+                    },
+                    {
+                        "name": "K. Ganga",
+                        "arxiv:affiliation": "Universit\u00e9 Paris Cit\u00e9, CNRS, Astroparticule et Cosmologie, 75013 Paris, France"
+                    },
+                    {
+                        "name": "E. Gaztanaga",
+                        "arxiv:affiliation": [
+                            "Institute of Space Sciences",
+                            "Institut d'Estudis Espacials de Catalunya",
+                            "Institute of Cosmology and Gravitation, University of Portsmouth, Portsmouth PO1 3FX, UK"
+                        ]
+                    },
+                    {
+                        "name": "Z. Ghaffari",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy",
+                            "IFPU, Institute for Fundamental Physics of the Universe, via Beirut 2, 34151 Trieste, Italy"
+                        ]
+                    },
+                    {
+                        "name": "F. Giacomini",
+                        "arxiv:affiliation": "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                    },
+                    {
+                        "name": "F. Gianotti",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "G. Gozaliasl",
+                        "arxiv:affiliation": [
+                            "Department of Computer Science, Aalto University, PO Box 15400, Espoo, FI-00 076, Finland",
+                            "Department of Physics, P.O. Box 64, University of Helsinki, 00014 Helsinki, Finland"
+                        ]
+                    },
+                    {
+                        "name": "A. Gruppuso",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy",
+                            "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "M. Guidi",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia, Universit\u00e0 di Bologna, Via Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "C. M. Gutierrez",
+                        "arxiv:affiliation": [
+                            "Instituto de Astrof\u00edsica de Canarias, E-38205 La Laguna, Tenerife, Spain",
+                            "Universidad de La Laguna, Dpto. Astrof\\'\u0131sica, E-38206 La Laguna, Tenerife, Spain"
+                        ]
+                    },
+                    {
+                        "name": "A. Hall",
+                        "arxiv:affiliation": "Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, UK"
+                    },
+                    {
+                        "name": "C. Hern\u00e1ndez-Monteagudo",
+                        "arxiv:affiliation": [
+                            "Universidad de La Laguna, Dpto. Astrof\\'\u0131sica, E-38206 La Laguna, Tenerife, Spain",
+                            "Instituto de Astrof\u00edsica de Canarias, E-38205 La Laguna, Tenerife, Spain"
+                        ]
+                    },
+                    {
+                        "name": "H. Hildebrandt",
+                        "arxiv:affiliation": "Ruhr University Bochum, Faculty of Physics and Astronomy, Astronomical Institute"
+                    },
+                    {
+                        "name": "J. Hjorth",
+                        "arxiv:affiliation": "DARK, Niels Bohr Institute, University of Copenhagen, Jagtvej 155, 2200 Copenhagen, Denmark"
+                    },
+                    {
+                        "name": "M. Jauzac",
+                        "arxiv:affiliation": [
+                            "Department of Physics, Centre for Extragalactic Astronomy, Durham University, South Road, Durham, DH1 3LE, UK",
+                            "Department of Physics, Institute for Computational Cosmology, Durham University, South Road, Durham, DH1 3LE, UK",
+                            "Astrophysics Research Centre, University of KwaZulu-Natal, Westville Campus, Durban 4041, South Africa",
+                            "School of Mathematics, Statistics \\& Computer Science, University of KwaZulu-Natal, Westville Campus, Durban 4041, South Africa",
+                            "Institut de Recherche en Astrophysique et Plan\u00e9tologie"
+                        ]
+                    },
+                    {
+                        "name": "J. J. E. Kajava",
+                        "arxiv:affiliation": [
+                            "Department of Physics and Astronomy, Vesilinnantie 5, University of Turku, 20014 Turku, Finland",
+                            "Finnish Centre for Astronomy with ESO",
+                            "Serco for European Space Agency"
+                        ]
+                    },
+                    {
+                        "name": "Y. Kang",
+                        "arxiv:affiliation": "Universit\u00e4t Innsbruck, Institut f\u00fcr Astro- und Teilchenphysik, Technikerstr. 25/8, 6020 Innsbruck, Austria"
+                    },
+                    {
+                        "name": "V. Kansal",
+                        "arxiv:affiliation": [
+                            "ARC Centre of Excellence for Dark Matter Particle Physics, Melbourne, Australia",
+                            "Centre for Astrophysics \\& Supercomputing, Swinburne University of Technology, Hawthorn, Victoria 3122, Australia"
+                        ]
+                    },
+                    {
+                        "name": "D. Karagiannis",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Scienze della Terra, Universit\u00e0 degli Studi di Ferrara, Via Giuseppe Saragat 1, 44122 Ferrara, Italy",
+                            "Department of Physics and Astronomy, University of the Western Cape, Bellville, Cape Town, 7535, South Africa"
+                        ]
+                    },
+                    {
+                        "name": "J. Kim",
+                        "arxiv:affiliation": "Department of Physics, University of Oxford, Keble Road, Oxford OX1 3RH, UK"
+                    },
+                    {
+                        "name": "C. C. Kirkpatrick",
+                        "arxiv:affiliation": "Department of Physics and Helsinki Institute of Physics, Gustaf H\u00e4llstr\u00f6min katu 2, University of Helsinki, 00014 Helsinki, Finland"
+                    },
+                    {
+                        "name": "A. Kov\u00e1cs",
+                        "arxiv:affiliation": [
+                            "MTA-CSFK Lend\u00fclet Large-Scale Structure Research Group, Konkoly-Thege Mikl\u00f3s \u00fat 15-17, H-1121 Budapest, Hungary",
+                            "Konkoly Observatory, HUN-REN CSFK, MTA Centre of Excellence, Budapest, Konkoly Thege Mikl\u00f3s {\u00fa}t 15-17. H-1121, Hungary"
+                        ]
+                    },
+                    {
+                        "name": "I. Kova{\u010d}i{\u0107}",
+                        "arxiv:affiliation": "Universiteit Gent, Department of Physics and Astronomy, Proeftuinstraat 86 N3, 9000 Ghent, Belgium"
+                    },
+                    {
+                        "name": "K. Koyama",
+                        "arxiv:affiliation": "Institute of Cosmology and Gravitation, University of Portsmouth, Portsmouth PO1 3FX, UK"
+                    },
+                    {
+                        "name": "M. C. Lam",
+                        "arxiv:affiliation": "Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, UK"
+                    },
+                    {
+                        "name": "M. Lattanzi",
+                        "arxiv:affiliation": "Istituto Nazionale di Fisica Nucleare, Sezione di Ferrara, Via Giuseppe Saragat 1, 44122 Ferrara, Italy"
+                    },
+                    {
+                        "name": "L. Legrand",
+                        "arxiv:affiliation": [
+                            "Brazilian Center for Research in Physics",
+                            "Universit\u00e9 Paris-Saclay, CNRS, Institut d'astrophysique spatiale, 91405, Orsay, France"
+                        ]
+                    },
+                    {
+                        "name": "G. F. Lesci",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, via Piero Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "J. Lesgourgues",
+                        "arxiv:affiliation": "Institute for Theoretical Particle Physics and Cosmology"
+                    },
+                    {
+                        "name": "L. Linke",
+                        "arxiv:affiliation": "Universit\u00e4t Innsbruck, Institut f\u00fcr Astro- und Teilchenphysik, Technikerstr. 25/8, 6020 Innsbruck, Austria"
+                    },
+                    {
+                        "name": "G. Maggio",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                    },
+                    {
+                        "name": "F. Mannucci",
+                        "arxiv:affiliation": "INAF-Osservatorio Astrofisico di Arcetri, Largo E. Fermi 5, 50125, Firenze, Italy"
+                    },
+                    {
+                        "name": "F. R. Marleau",
+                        "arxiv:affiliation": "Universit\u00e4t Innsbruck, Institut f\u00fcr Astro- und Teilchenphysik, Technikerstr. 25/8, 6020 Innsbruck, Austria"
+                    },
+                    {
+                        "name": "C. J. A. P. Martins",
+                        "arxiv:affiliation": [
+                            "Centro de Astrof\u00edsica da Universidade do Porto, Rua das Estrelas, 4150-762 Porto, Portugal",
+                            "Instituto de Astrof\u00edsica e Ci\u00eancias do Espa\u00e7o, Universidade do Porto, CAUP, Rua das Estrelas, PT4150-762 Porto, Portugal"
+                        ]
+                    },
+                    {
+                        "name": "M. Miluzio",
+                        "arxiv:affiliation": [
+                            "ESAC/ESA, Camino Bajo del Castillo, s/n., Urb. Villafranca del Castillo, 28692 Villanueva de la Ca\u00f1ada, Madrid, Spain",
+                            "HE Space for European Space Agency"
+                        ]
+                    },
+                    {
+                        "name": "G. Morgante",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "S. Nadathur",
+                        "arxiv:affiliation": "Institute of Cosmology and Gravitation, University of Portsmouth, Portsmouth PO1 3FX, UK"
+                    },
+                    {
+                        "name": "K. Naidoo",
+                        "arxiv:affiliation": [
+                            "Institute of Cosmology and Gravitation, University of Portsmouth, Portsmouth PO1 3FX, UK",
+                            "Max-Planck-Institut f\u00fcr Astronomie, K\u00f6nigstuhl 17, 69117 Heidelberg, Germany"
+                        ]
+                    },
+                    {
+                        "name": "P. Natoli",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Scienze della Terra, Universit\u00e0 degli Studi di Ferrara, Via Giuseppe Saragat 1, 44122 Ferrara, Italy",
+                            "Istituto Nazionale di Fisica Nucleare, Sezione di Ferrara, Via Giuseppe Saragat 1, 44122 Ferrara, Italy"
+                        ]
+                    },
+                    {
+                        "name": "A. Navarro-Alsina",
+                        "arxiv:affiliation": "Universit\u00e4t Bonn, Argelander-Institut f\u00fcr Astronomie, Auf dem H\u00fcgel 71, 53121 Bonn, Germany"
+                    },
+                    {
+                        "name": "S. Nesseris",
+                        "arxiv:affiliation": "Instituto de F\u00edsica Te\u00f3rica UAM-CSIC, Campus de Cantoblanco, 28049 Madrid, Spain"
+                    },
+                    {
+                        "name": "L. Nicastro",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "M. Oguri",
+                        "arxiv:affiliation": [
+                            "Center for Frontier Science, Chiba University, 1-33 Yayoi-cho, Inage-ku, Chiba 263-8522, Japan",
+                            "Department of Physics, Graduate School of Science, Chiba University, 1-33 Yayoi-Cho, Inage-Ku, Chiba 263-8522, Japan"
+                        ]
+                    },
+                    {
+                        "name": "F. Oppizzi",
+                        "arxiv:affiliation": [
+                            "INFN-Sezione di Genova, Via Dodecaneso 33, 16146, Genova, Italy",
+                            "INFN-Padova, Via Marzolo 8, 35131 Padova, Italy",
+                            "Dipartimento di Fisica e Astronomia \"G. Galilei\", Universit\u00e0 di Padova, Via Marzolo 8, 35131 Padova, Italy"
+                        ]
+                    },
+                    {
+                        "name": "F. Pace",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica, Universit\u00e0 degli Studi di Torino, Via P. Giuria 1, 10125 Torino, Italy",
+                            "INFN-Sezione di Torino, Via P. Giuria 1, 10125 Torino, Italy",
+                            "INAF-Osservatorio Astrofisico di Torino, Via Osservatorio 20, 10025 Pino Torinese",
+                            "Instituto de Astrof\u00edsica e Ci\u00eancias do Espa\u00e7o, Faculdade de Ci\u00eancias, Universidade de Lisboa, Campo Grande, 1749-016 Lisboa, Portugal"
+                        ]
+                    },
+                    {
+                        "name": "D. Paoletti",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy",
+                            "INFN-Bologna, Via Irnerio 46, 40126 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "F. Passalacqua",
+                        "arxiv:affiliation": "INFN-Padova, Via Marzolo 8, 35131 Padova, Italy"
+                    },
+                    {
+                        "name": "K. Paterson",
+                        "arxiv:affiliation": "Max-Planck-Institut f\u00fcr Astronomie, K\u00f6nigstuhl 17, 69117 Heidelberg, Germany"
+                    },
+                    {
+                        "name": "L. Patrizii",
+                        "arxiv:affiliation": "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                    },
+                    {
+                        "name": "C. Pattison",
+                        "arxiv:affiliation": "Institute of Cosmology and Gravitation, University of Portsmouth, Portsmouth PO1 3FX, UK"
+                    },
+                    {
+                        "name": "R. Paviot",
+                        "arxiv:affiliation": [
+                            "Universit\u00e9 Paris-Saclay, Universit\u00e9 Paris Cit\u00e9, CEA, CNRS, AIM, 91191, Gif-sur-Yvette, France",
+                            "Centre National d'Etudes Spatiales -- Centre spatial de Toulouse, 18 avenue Edouard Belin, 31401 Toulouse Cedex 9, France"
+                        ]
+                    },
+                    {
+                        "name": "A. Pisani",
+                        "arxiv:affiliation": "Aix-Marseille Universit\u00e9, CNRS/IN2P3, CPPM, Marseille, France"
+                    },
+                    {
+                        "name": "D. Potter",
+                        "arxiv:affiliation": "Department of Astrophysics, University of Zurich, Winterthurerstrasse 190, 8057 Zurich, Switzerland"
+                    },
+                    {
+                        "name": "G. W. Pratt",
+                        "arxiv:affiliation": "Universit\u00e9 Paris-Saclay, Universit\u00e9 Paris Cit\u00e9, CEA, CNRS, AIM, 91191, Gif-sur-Yvette, France"
+                    },
+                    {
+                        "name": "S. Quai",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, via Piero Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "M. Radovich",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Padova, Via dell'Osservatorio 5, 35122 Padova, Italy"
+                    },
+                    {
+                        "name": "G. Rodighiero",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"G. Galilei\", Universit\u00e0 di Padova, Via Marzolo 8, 35131 Padova, Italy",
+                            "INAF-Osservatorio Astronomico di Padova, Via dell'Osservatorio 5, 35122 Padova, Italy"
+                        ]
+                    },
+                    {
+                        "name": "W. Roster",
+                        "arxiv:affiliation": "Max Planck Institute for Extraterrestrial Physics, Giessenbachstr. 1, 85748 Garching, Germany"
+                    },
+                    {
+                        "name": "S. Sacquegna",
+                        "arxiv:affiliation": "INAF - Osservatorio Astronomico d'Abruzzo, Via Maggini, 64100, Teramo, Italy"
+                    },
+                    {
+                        "name": "M. Sahl\u00e9n",
+                        "arxiv:affiliation": "Theoretical astrophysics, Department of Physics and Astronomy, Uppsala University, Box 524, 751 20 Uppsala, Sweden"
+                    },
+                    {
+                        "name": "D. B. Sanders",
+                        "arxiv:affiliation": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+                    },
+                    {
+                        "name": "A. Schneider",
+                        "arxiv:affiliation": "Department of Astrophysics, University of Zurich, Winterthurerstrasse 190, 8057 Zurich, Switzerland"
+                    },
+                    {
+                        "name": "D. Sciotti",
+                        "arxiv:affiliation": [
+                            "INAF-Osservatorio Astronomico di Roma, Via Frascati 33, 00078 Monteporzio Catone, Italy",
+                            "INFN-Sezione di Roma, Piazzale Aldo Moro, 2 - c/o Dipartimento di Fisica, Edificio G. Marconi, 00185 Roma, Italy"
+                        ]
+                    },
+                    {
+                        "name": "E. Sellentin",
+                        "arxiv:affiliation": [
+                            "Mathematical Institute, University of Leiden, Einsteinweg 55, 2333 CA Leiden, The Netherlands",
+                            "Leiden Observatory, Leiden University, Einsteinweg 55, 2333 CC Leiden, The Netherlands"
+                        ]
+                    },
+                    {
+                        "name": "L. C. Smith",
+                        "arxiv:affiliation": "Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge CB3 0HA, UK"
+                    },
+                    {
+                        "name": "J. G. Sorce",
+                        "arxiv:affiliation": [
+                            "Univ. Lille, CNRS, Centrale Lille, UMR 9189 CRIStAL, 59000 Lille, France",
+                            "Universit\u00e9 Paris-Saclay, CNRS, Institut d'astrophysique spatiale, 91405, Orsay, France"
+                        ]
+                    },
+                    {
+                        "name": "I. Szapudi",
+                        "arxiv:affiliation": "Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA"
+                    },
+                    {
+                        "name": "M. Talia",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica e Astronomia \"Augusto Righi\" - Alma Mater Studiorum Universit\u00e0 di Bologna, via Piero Gobetti 93/2, 40129 Bologna, Italy",
+                            "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                        ]
+                    },
+                    {
+                        "name": "K. Tanidis",
+                        "arxiv:affiliation": "Center for Astrophysics and Cosmology, University of Nova Gorica, Nova Gorica, Slovenia"
+                    },
+                    {
+                        "name": "C. Tao",
+                        "arxiv:affiliation": "Aix-Marseille Universit\u00e9, CNRS/IN2P3, CPPM, Marseille, France"
+                    },
+                    {
+                        "name": "G. Testera",
+                        "arxiv:affiliation": "INFN-Sezione di Genova, Via Dodecaneso 33, 16146, Genova, Italy"
+                    },
+                    {
+                        "name": "R. Teyssier",
+                        "arxiv:affiliation": "Department of Astrophysical Sciences, Peyton Hall, Princeton University, Princeton, NJ 08544, USA"
+                    },
+                    {
+                        "name": "S. Tosi",
+                        "arxiv:affiliation": [
+                            "Dipartimento di Fisica, Universit\u00e0 di Genova, Via Dodecaneso 33, 16146, Genova, Italy",
+                            "INAF-Osservatorio Astronomico di Brera, Via Brera 28, 20122 Milano, Italy",
+                            "INFN-Sezione di Genova, Via Dodecaneso 33, 16146, Genova, Italy"
+                        ]
+                    },
+                    {
+                        "name": "A. Troja",
+                        "arxiv:affiliation": "INAF-Osservatorio Astronomico di Trieste, Via G. B. Tiepolo 11, 34143 Trieste, Italy"
+                    },
+                    {
+                        "name": "C. Uhlemann",
+                        "arxiv:affiliation": [
+                            "Fakult\u00e4t f\u00fcr Physik, Universit\u00e4t Bielefeld, Postfach 100131, 33501 Bielefeld, Germany",
+                            "School of Mathematics, Statistics and Physics, Newcastle University, Herschel Building, Newcastle-upon-Tyne, NE1 7RU, UK"
+                        ]
+                    },
+                    {
+                        "name": "C. Valieri",
+                        "arxiv:affiliation": "INFN-Sezione di Bologna, Viale Berti Pichat 6/2, 40127 Bologna, Italy"
+                    },
+                    {
+                        "name": "A. Venhola",
+                        "arxiv:affiliation": "Space physics and astronomy research unit, University of Oulu, Pentti Kaiteran katu 1, FI-90014 Oulu, Finland"
+                    },
+                    {
+                        "name": "D. Vergani",
+                        "arxiv:affiliation": "INAF-Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Via Piero Gobetti 93/3, 40129 Bologna, Italy"
+                    },
+                    {
+                        "name": "G. Vernardos",
+                        "arxiv:affiliation": [
+                            "Department of Physics and Astronomy, Lehman College of the CUNY, Bronx, NY 10468, USA",
+                            "American Museum of Natural History, Department of Astrophysics, New York, NY 10024, USA"
+                        ]
+                    },
+                    {
+                        "name": "G. Verza",
+                        "arxiv:affiliation": [
+                            "International Centre for Theoretical Physics",
+                            "Center for Computational Astrophysics, Flatiron Institute, 162 5th Avenue, 10010, New York, NY, USA"
+                        ]
+                    },
+                    {
+                        "name": "E. Vilenius",
+                        "arxiv:affiliation": "Mullard Space Science Laboratory, University College London, Holmbury St Mary, Dorking, Surrey RH5 6NT, UK"
+                    },
+                    {
+                        "name": "S. Vinciguerra",
+                        "arxiv:affiliation": "Aix-Marseille Universit\u00e9, CNRS, CNES, LAM, Marseille, France"
+                    },
+                    {
+                        "name": "M. von Wietersheim-Kramsta",
+                        "arxiv:affiliation": [
+                            "Department of Physics, Institute for Computational Cosmology, Durham University, South Road, Durham, DH1 3LE, UK",
+                            "Department of Physics, Centre for Extragalactic Astronomy, Durham University, South Road, Durham, DH1 3LE, UK"
+                        ]
+                    },
+                    {
+                        "name": "N. A. Walton",
+                        "arxiv:affiliation": "Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge CB3 0HA, UK"
+                    },
+                    {
+                        "name": "L. Wang",
+                        "arxiv:affiliation": [
+                            "SRON Netherlands Institute for Space Research, Landleven 12, 9747 AD, Groningen, The Netherlands",
+                            "Kapteyn Astronomical Institute, University of Groningen, PO Box 800, 9700 AV Groningen, The Netherlands"
+                        ]
+                    },
+                    {
+                        "name": "A. H. Wright",
+                        "arxiv:affiliation": "Ruhr University Bochum, Faculty of Physics and Astronomy, Astronomical Institute"
+                    },
+                    {
+                        "name": "H. W. Yeung",
+                        "arxiv:affiliation": "Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, UK"
+                    },
+                    {
+                        "name": "D. Scott",
+                        "arxiv:affiliation": "Department of Physics and Astronomy, University of British Columbia, Vancouver, BC V6T 1Z1, Canada"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.31227v1",
+                "title": "How Far Can Linear Go? BiPert, a Unified Framework for Single-Cell Perturbation Modelling",
+                "updated": "2026-11-23T18:58:32Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.31227v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.31227v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Understanding how genetic perturbations affect cellular behaviour is essential for studying gene function and regulatory mechanisms. Large-scale CRISPR screens measure these effects across thousands of genes, but cover relatively few cellular contexts. Predicting perturbation responses in unseen cell types and identifying perturbed genes from their transcriptional effects therefore remain challenging. Here, we show that both tasks can be addressed through a common linear decomposition of transcriptional responses into shared and perturbation-specific components. Building on this principle, we introduce BiPert, a simple linear framework for both forward perturbation prediction and inverse identification. For forward prediction, BiPert outperforms existing methods that use no external biological knowledge when predicting gene expression changes in unseen cell lines. Its few-shot extension, BiPert-FS, adapts to new cell lines using as few as ten measured perturbations. For inverse identification, BiPert-ID identifies perturbed genes from single-cell expression profiles, outperforming deep-learning methods in unseen cell lines and donors. We further show that perturbations whose effects transfer more consistently across cellular contexts are also easier to identify, even after controlling for perturbation effect size. Together, these results establish a connection between perturbation transfer and identification, and demonstrate that simple linear models provide strong, interpretable baselines for both tasks.",
+                "category": [
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "q-bio.CB",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "q-bio.GN",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "q-bio.QM",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-23T18:58:32Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Abhishek Sharma"
+                    },
+                    {
+                        "name": "Aleksej Zelezniak"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.31225v1",
+                "title": "Self-Supervised Dataset Distillation via Mutual Information Maximization",
+                "updated": "2026-11-23T18:58:27Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.31225v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.31225v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Dataset distillation (DD) aims to compress a large dataset into a small synthetic one that remains effective for training neural networks. Despite its success in supervised learning, DD remains underexplored in self-supervised learning (SSL), where distilled data must preserve the information needed to learn representations that remain consistent across augmentations. To bridge this gap, we introduce Mutual Information Prototype Alignment (MIPA), an efficient SSL dataset distillation approach that optimizes synthetic images to preserve augmentation-invariant information. Specifically, MIPA treats synthetic images as learnable prototypes and uses a frozen encoder to assign real samples to them based on feature similarity. A synthetic dataset that preserves such augmentation invariance should yield stable prototype assignments across multiple augmented views of the same real image. MIPA encourages this by maximizing mutual information between cross-view assignments while avoiding trivial solutions in which all real samples are assigned to only a few synthetic prototypes. Evaluations on image classification benchmarks show that synthetic data generated by MIPA yield higher-quality representations than existing distillation approaches while reducing time and storage demands during distillation.",
+                "category": [
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-23T18:58:27Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Mohammad Hossein Moslemi"
+                    },
+                    {
+                        "name": "Mahdi Beitollahi"
+                    },
+                    {
+                        "name": "Zhimin Mei"
+                    },
+                    {
+                        "name": "Jiale Cai"
+                    },
+                    {
+                        "name": "Bissan Ghaddar"
+                    },
+                    {
+                        "name": "Boyu Wang"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.31223v1",
+                "title": "Agentic AI for Intent Management and Control in Autonomous Communication Networks",
+                "updated": "2026-11-23T18:57:32Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.31223v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.31223v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Artificial intelligence (AI)-driven automation will help future mobile networks translate high-level network intents into concrete network optimization or control actions. However, existing approaches often focus on intent management and orchestration, leaving the adaptation of underlying network optimization and control functions largely unaddressed. This article proposes a triadic agentic AI framework that co-designs intent management and intent fulfillment through three agents: an interpreter, powered by a language model, that translates and refines intents into machine-readable optimization templates; an optimizer that adapts controller policies to intent specifications; and a controller that performs fast decision-making. We discuss the design space of each agent and how the workflow can be embedded across network architectural domains. Finally, we develop a concrete realization combining a language-model interpreter with Bayesian optimization for the optimizer and multi-objective reinforcement learning for the controller, and evaluate it in a radio resource management case study for differentiated connectivity. Results demonstrate how the agentic AI framework can connect high-level intents with runtime network control, showing adaptability of intent specifications and control policies to service requirements and changing network conditions.",
                 "category": {
                     "@term": "cs.LG",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-22T04:51:01Z",
-                "arxiv:comment": "10 pages, 1 figure. Accepted at the 9th Workshop on Machine Learning and the Physical Sciences (ML4PS 2026)",
+                "published": "2026-11-23T18:57:32Z",
+                "arxiv:comment": "Accepted for publication in IEEE Communications Magazine",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
                 "author": [
                     {
-                        "name": "Austin Lutterbach"
+                        "name": "Burak Demirel"
                     },
                     {
-                        "name": "Angus Hoy"
+                        "name": "Yu Wang"
                     },
                     {
-                        "name": "Jasper Chong"
-                    },
-                    {
-                        "name": "Aman Kumar"
-                    },
-                    {
-                        "name": "Michael J. Smith"
+                        "name": "Pablo Soldati"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.29218v1",
-                "title": "Ego-HMB: Human Motion Bridging from Egocentric Images via A Motion Bridge Diffusion Model",
-                "updated": "2026-11-22T04:34:37Z",
+                "id": "http://arxiv.org/abs/2611.31217v1",
+                "title": "A Mixed-Methods Study of Personal Software Creation",
+                "updated": "2026-11-23T18:56:16Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.29218v1",
+                        "@href": "https://arxiv.org/abs/2611.31217v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.29218v1",
+                        "@href": "https://arxiv.org/pdf/2611.31217v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We introduce Egocentric Human Motion Bridging, a task that generates a coherent 3D human motion sequence from two endpoint egocentric images. Unlike conventional motion in-betweening, which requires structured 3D endpoint poses, this setting uses raw first-person observations available from wearable devices in VR/AR and robotics. It presents challenges due to viewpoint variations, partial body visibility, and temporal ambiguity under cross-modal endpoint constraints. To address these challenges, we propose Ego-HMB, a unified diffusion-based framework that learns endpoint pose estimation and temporally consistent motion infilling within a single model through two training stages. First, Egocentric-to-Canonical Pretraining uses a hierarchical curriculum with progressively increasing temporal spans to strengthen endpoint pose priors. Second, Motion Bridge Diffusion Training incorporates endpoint and physics awareness, diffusing from neighboring poses to promote temporal continuity while preserving global endpoint constraints. Extensive experiments compare our approach with one-stage methods that directly generate motion from two egocentric images and two-stage pipelines that combine endpoint pose estimation with motion interpolation. Ego-HMB consistently outperforms these baselines in endpoint accuracy and motion generation quality. Code is available at https://github.com/gaogehan/Ego-HMB.",
+                "summary": "People have long wanted software shaped around their own data, routines, and preferences. We refer to such software as \\emph{personal software}. For decades, programming expertise limited who could build it: people without that expertise could build software only within constrained end-user programming tools, such as spreadsheets. AI coding agents seem to remove this bottleneck by letting people build full applications from natural-language descriptions, and many people now build and share personal software publicly. Yet personal software has rarely been studied at scale: we know little about what people build and why, how they build it, and what opportunities and challenges they encounter. We investigate these questions with a mixed-methods study. A grey-literature review examines 6,168 web and Reddit posts, and an observation study follows eight people as they build software for their own needs with AI coding agents and use it for up to a week. We find that creators value personal software for how closely it fits a particular person or community. The software takes shape as creators react to what the agent builds: most functionality emerged during building, and creators' effort shifted from writing code to checking it.",
+                "category": [
+                    {
+                        "@term": "cs.SE",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.HC",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-23T18:56:16Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.SE"
+                },
+                "author": [
+                    {
+                        "name": "Shaokang Jiang"
+                    },
+                    {
+                        "name": "Kira Yuha Cho"
+                    },
+                    {
+                        "name": "Emerson Murphy-Hill"
+                    },
+                    {
+                        "name": "Daye Nam"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.31216v1",
+                "title": "LeJEPA Features Are Not Isotropic, and Should Not Be",
+                "updated": "2026-11-23T18:56:04Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.31216v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.31216v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "The SIGReg term in LeJEPA regularizes features to have an isotropic Gaussian distribution. Our first result is to show that this regularizer, in practice, cannot achieve its goal. We design a modified regularizer to enforce the objective better. This leads to slightly improved performance. For example, on ImageNet-100, our modified regularizer reaches the final accuracy of SIGReg in 1.3$\\times$ fewer epochs. Our second result argues that self-supervised encoders should not have isotropic Gaussian features. We show that the alignment term in LeJEPA conflicts with SIGReg, because it couples the magnitude of the features with their directions. In contrast, isotropic Gaussian features would entail independent magnitude and directions. Features obtained with LeJEPA are, in fact, not isotropic. So LeJEPA has two issues. Its regularizer is weak, and the isotropic Gaussian target is too strict. Our third result is about reformulating the isotropic Gaussian regularizer to enforce only the marginal distributions of the magnitude and direction, without enforcing independence. This leads to a simple regularization term, PolarReg, that can be optimized reliably across many different datasets, batch sizes and embedding dimensions without any hyper-parameter changes. On ImageNet-1k, our technique matches the accuracy of LeJEPA and its variants in 4.7$\\times$ fewer epochs. It improves the final accuracy by 1.8 points.",
                 "category": [
                     {
                         "@term": "cs.CV",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.AI",
+                        "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-22T04:34:37Z",
-                "arxiv:comment": "Accepted at NeurIPS 2026",
+                "published": "2026-11-23T18:56:04Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CV"
                 },
                 "author": [
                     {
-                        "name": "Gaoge Han"
+                        "name": "Richeek Das"
                     },
                     {
-                        "name": "Yongkang Cheng"
+                        "name": "Pratik Chaudhari"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.31212v1",
+                "title": "Flood forecasting using a physics-guided conditional denoising diffusion probabilistic model",
+                "updated": "2026-11-23T18:55:29Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.31212v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
                     },
                     {
-                        "name": "Shaoli Huang"
+                        "@href": "https://arxiv.org/pdf/2611.31212v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "High-resolution flood forecasting with full two-dimensional shallow water equation (SWE) solvers remains computationally expensive, even on GPUs. We develop a conditional denoising diffusion probabilistic model (DDPM) that forecasts the evolution of 30 m water-depth fields over a four-day horizon for the Des Plaines River watershed, Illinois. The model is trained on SynxFlow SWE simulations of 113 historical storms observed across twelve Midwestern states (2003-2024), each under three antecedent-wetness scenarios, and can optionally be conditioned on coarse 100 m or 150 m hydrodynamic simulations. Because reverse diffusion is stochastic, every forecast is a 20-member ensemble drawn from the same trained model. Coarse conditioning reduces the four-day mean water-depth RMSE of the ensemble mean from 0.170 m to 0.054 m (100 m) and 0.048 m (150 m). The coarser 150 m conditioning also gives the best critical success index (0.839), false alarm ratio, CRPS and Brier score at lower cost, so finer conditioning does not guarantee better skill. Averaging members reduces error by 5-11% relative to a single realization, and the ensemble provides spatially explicit exceedance probabilities, although the ensembles are under-dispersive (spread-to-error ratios 0.35-0.73). On a single GPU, a four-day forecast over 26 non-overlapping patches is 7.8x, 11.0x and 16.3x faster than the 30 m simulation for the 100 m, 150 m and unconditioned configurations, and projected speedups for a 14-day forecast reach 12-49x for one member and 48-58x for 20 members. Physics-guided diffusion models are thus promising probabilistic surrogates for regional-scale flood forecasting.",
+                "category": [
+                    {
+                        "@term": "physics.flu-dyn",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Jing Zhang"
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "name": "Mingming Gong"
+                        "@term": "physics.geo-ph",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-23T18:55:29Z",
+                "arxiv:comment": "47 pages, 25 figures, 9 tables. Submitted to Journal of Hydrology",
+                "arxiv:primary_category": {
+                    "@term": "physics.flu-dyn"
+                },
+                "author": [
+                    {
+                        "name": "Omar Sallam"
                     },
                     {
-                        "name": "Fakhri Karray"
+                        "name": "David Coe"
                     },
                     {
-                        "name": "Tongliang Liu"
+                        "name": "Jeremy Feinstein"
+                    },
+                    {
+                        "name": "Hugo Torres"
+                    },
+                    {
+                        "name": "Sofia Sahagun Covarrubias"
+                    },
+                    {
+                        "name": "Eugene Yan"
                     }
                 ]
             }
