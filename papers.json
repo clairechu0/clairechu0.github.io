@@ -5,36 +5,36 @@
         "@xmlns": "http://www.w3.org/2005/Atom",
         "id": "https://arxiv.org/api/GYXgOfCBQdW2qz4J20yiNWanGQo",
         "title": "arXiv Query: search_query=all:machine OR all:learning, OR all:AI, OR all:deep OR all:learning&id_list=&start=0&max_results=10",
-        "updated": "2026-11-26T01:25:05Z",
+        "updated": "2026-11-26T10:17:40Z",
         "link": {
             "@href": "https://arxiv.org/api/query?search_query=all:machine+OR+(all:learning,+OR+(all:AI,+OR+(all:deep+OR+all:learning)))&start=0&max_results=10&id_list=",
             "@type": "application/atom+xml"
         },
         "opensearch:itemsPerPage": "10",
-        "opensearch:totalResults": "647436",
+        "opensearch:totalResults": "648005",
         "opensearch:startIndex": "0",
         "entry": [
             {
-                "id": "http://arxiv.org/abs/2611.33158v1",
-                "title": "OmniAct: One Policy, One Million Embodiments",
-                "updated": "2026-11-24T18:59:58Z",
+                "id": "http://arxiv.org/abs/2611.34942v1",
+                "title": "Spectrum Adaptation of AI-Native Autoencoder Communications with Transfer Learning",
+                "updated": "2026-11-25T18:59:57Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.33158v1",
+                        "@href": "https://arxiv.org/abs/2611.34942v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.33158v1",
+                        "@href": "https://arxiv.org/pdf/2611.34942v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "A single policy that controls diverse robots must not only transfer task knowledge across embodiments, but also adapt its behavior to each robot's capabilities. Existing approaches facilitate transfer through shared action representations, but these representations do not necessarily capture how differences in robot morphology should shape manipulation strategies. We introduce OmniAct, a cross-embodiment manipulation policy that conditions directly on each robot's kinematics in a specific scene to produce embodiment-specific behavior. This kinematic graph represents the robot's joint positions, motion axes, and connectivity to its visual observation, allowing the policy to account for how its embodiment related to objects and surfaces in the scene. A flow-matching policy predicts relative joint motions for each node, enabling control across robots with different degrees of freedom and kinematic configurations. To learn how physical structure shapes behavior at scale, we procedurally design and filter one million physically feasible robot embodiments; next, we develop algorithms to generate robot trajectories in simulation for all embodiments; finally, we train across diverse simulated manipulation tasks. On 2,000 embodiment-scene-held-out evaluation episodes, OmniAct achieves 63.0% success, compared to 17.8% for pi 0.5 and 57.9% for the strongest baseline; on the task families GPT-6 Astra was evaluated on, it achieves 64.7% against GPT-6 Astra's 41.1%. On a previously unseen real-world robot, it achieves nearly twice the success rate of the next best method, MolmoAct2. Beyond task success, we observe that OmniAct learns distinct manipulation strategies that exploit the capabilities and accommodate the limitations of different morphologies. Project: https://omniact.github.io/",
+                "summary": "End-to-end physical-layer learning replaces separate modulation, coding, and detection operations with an autoencoder (AE) that consists of a jointly trained encoder-decoder pair at the transmitter and the receiver. This paper studies AI-native communications with AEs and quantifies the sensitivity to training-test mismatch in channel models. Models trained only on an AWGN channel achieve low bit error rates (BERs) under matched conditions but degrade severely on Rayleigh fading with practical front-end impairments. To reduce the time and energy required to adapt to new channel conditions, we propose a low-latency transfer-learning procedure that starts from an AWGN-pretrained system and fine-tunes only a small subset of transmitter and receiver layers while freezing the remainder. We further formulate layer selection as a budget-constrained optimization problem that identifies the most informative parameters to update during adaptation. This preserves the learned signal geometry and the deep decision structure while adapting lightweight front ends to fading- and impairment-induced mixing. For AE communications, we show that partial updates remove the mismatch-induced error floor and approach the BER of fully retrained models. We provide a layer-wise study and quantify resource-performance trade-offs, showing that modest adaptation substantially reduces BER while cutting training time, multiply-accumulate (MAC) operations, energy consumption, and the fraction of updated parameters for resource-efficient implementation.",
                 "category": [
                     {
-                        "@term": "cs.RO",
+                        "@term": "cs.NI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -42,418 +42,129 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
+                        "@term": "eess.SP",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-24T18:59:58Z",
+                "published": "2026-11-25T18:59:57Z",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "cs.NI"
                 },
                 "author": [
                     {
-                        "name": "Xiang Fan"
+                        "name": "Yalin E. Sagduyu"
                     },
                     {
-                        "name": "Yuheng Wang"
-                    },
-                    {
-                        "name": "Jiayuan Yan"
-                    },
-                    {
-                        "name": "Bohan Fang"
-                    },
-                    {
-                        "name": "Wisdom Oluchi Ikezogwo"
-                    },
-                    {
-                        "name": "Ainaz Eftekhar"
-                    },
-                    {
-                        "name": "Max Argus"
-                    },
-                    {
-                        "name": "Jason Ren"
-                    },
-                    {
-                        "name": "Jiafei Duan"
-                    },
-                    {
-                        "name": "Ranjay Krishna"
+                        "name": "Tugba Erpek"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.33153v1",
-                "title": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
-                "updated": "2026-11-24T18:59:08Z",
+                "id": "http://arxiv.org/abs/2611.34938v1",
+                "title": "Tokenisation is not in APX",
+                "updated": "2026-11-25T18:59:38Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.33153v1",
+                        "@href": "https://arxiv.org/abs/2611.34938v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.33153v1",
+                        "@href": "https://arxiv.org/pdf/2611.34938v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "We present DiaCap, an audiovisual LLM for comprehensive dialogue captioning, which produces the transcript, timestamps, and a visual description of the speaker for every utterance in a video. Considering that utterance timing and audiovisual diarization are tightly coupled, DiaCap unifies the tasks in a single model, trained in two complementary stages. First, we train DiaCap on 225K curated clips, using synthetic captions that densely label every utterance in detail. Second, we further refine the model via reinforcement learning on 2.9K human-corrected clips, using fine-grained feedback that directly evaluates utterance timing, speaker grouping, and speaker binding. On DiaDemBench, which we extend with utterance-level timestamps and subtitle redaction, both DiaCap with off-the-shelf transcripts and its end-to-end variant DiaCap-E2E achieve strong results. Specifically, DiaCap performs on par with Gemini 4 Argon in audiovisual diarization while clearly outperforming it in timestamp accuracy (76.59 vs. 42.76 TIME). It also maintains strong diarization on multilingual and minute-long videos, and transfers to audiovisual question answering.",
+                "summary": "In this paper, we prove that, unless P=NP, no polynomial-time algorithm can find a tokeniser whose objective is within any constant factor of the optimum, meaning that tokenisation is not in the APX complexity class. We prove this for direct and bottom-up tokenisation, under both a compression or unigram log-likelihood objectives, and for binary or larger alphabets. We further show that, even over unary alphabets, direct tokenisation is APX-hard, and thus admits no polynomial-time approximation scheme.",
                 "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
-                        "@term": "cs.MM",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.SD",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-24T18:59:08Z",
-                "arxiv:comment": "18 pages, 13 figures, 12 tables",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Binfei Ji"
-                    },
-                    {
-                        "name": "Zhiwen Cao"
-                    },
-                    {
-                        "name": "Anqi Yang"
-                    },
-                    {
-                        "name": "Prem Seetharaman"
-                    },
-                    {
-                        "name": "Shuo Yang"
-                    },
-                    {
-                        "name": "Ratheesh Kalarot"
-                    },
-                    {
-                        "name": "Yingyan Celine Lin"
-                    },
-                    {
-                        "name": "Mingze Xu"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.33151v1",
-                "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
-                "updated": "2026-11-24T18:59:04Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.33151v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.33151v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "The development of biomedical vision-language models (VLMs) with contrastive image-text pretraining has been driven by scaling to increasingly large and diverse image-text datasets. Beyond scaling, further progress can come from learning richer representations from existing data. We hypothesize that the structure of scientific literature itself provides an additional source of supervision: figures, panels, captions, and accompanying article text encode rich relationships across modalities. Yet, treating these as independent image-text pairs overlooks their relationships. To address this limitation, we incorporate these structural relationships into contrastive image-text supervision. We preserve exact image-text matches while introducing weaker positive supervision for related pairs, such as a panel and the caption of a sibling panel. We upweight cross-article negatives of the same content type to encourage finer discrimination. We also enrich panel descriptions using visual content, original figure captions, and mentioning paragraphs. Pairing panels with these descriptions and whole figures with their original captions yields Loom52M, a dataset of 52.4 million image-text pairs spanning scientific charts and biomedical images. Using Loom52M, BioLoom (DFN-2B) achieves 56.82% domain-balanced mean accuracy across 67 zero-shot classification tasks from 43 datasets in 10 domains, compared with 48.77% for MedPMC-CLIP. On BioLoomBench with concise captions and BioMedFlickr, it achieves bidirectional mean Recall@1 of 63.20% and 10.59%, versus 46.37% and 7.55% for the respective strongest evaluated baselines, BiomedCLIP and MedPMC-CLIP. Code, datasets, benchmarks, and models are available at https://bioloom-clip.github.io/.",
-                "category": [
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
                         "@term": "cs.LG",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-24T18:59:04Z",
-                "arxiv:comment": "Project page: https://bioloom-clip.github.io/",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yuwei Yang"
-                    },
-                    {
-                        "name": "Xiaoxiao Sun"
-                    },
-                    {
-                        "name": "Alejandro Lozano"
-                    },
-                    {
-                        "name": "Yuan-Sen Ting"
-                    },
-                    {
-                        "name": "Yuhui Yuan"
-                    },
-                    {
-                        "name": "Liang Zheng"
-                    },
-                    {
-                        "name": "Serena Yeung-Levy"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.33148v1",
-                "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
-                "updated": "2026-11-24T18:58:53Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.33148v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.33148v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the strongest teachers are closed models whose chain-of-thought is hidden behind an API. We show that the chain-of-thought can be left out altogether and that the long-horizon policy can be distilled from the teacher's actions alone. The student is trained on these trajectories with its reasoning block left empty, while a KL loss on a replay buffer of its own generations limits drift from its initial model. Surprisingly, the policy learned from these trajectories with an empty reasoning block carries over to inference with thinking enabled, where the student reasons in its own style while acting like the teacher, an effect we call cross-format transfer. Distilling the actions of Qwen3.6-27B raises the task success of Qwen3-4B on AppWorld from 7% to 18% and that of Qwen3-32B from 12% to 25%. We further introduce CoT-proxies, short summaries of the teacher's reasoning placed after the empty reasoning block, which raise Qwen3-4B further, to 35%. Since neither actions nor CoT-proxies need the hidden chain-of-thought, the recipe applies unchanged to closed teachers. Distilling GPT-5.6 Luna from its visible outputs and the reasoning summaries its API returns raises Qwen3-4B from 7% to 48% on AppWorld and from 3% to 28% on SWE-bench Verified.",
-                "category": {
-                    "@term": "cs.CL",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-24T18:58:53Z",
+                "published": "2026-11-25T18:59:38Z",
                 "arxiv:primary_category": {
                     "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Dawid J. Kopiczko"
+                        "name": "Violeta Kastreva"
                     },
                     {
-                        "name": "Tijmen Blankevoort"
+                        "name": "Philip Whittington"
                     },
                     {
-                        "name": "Yuki M. Asano"
+                        "name": "Dennis Komm"
+                    },
+                    {
+                        "name": "Tiago Pimentel"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.33144v1",
-                "title": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
-                "updated": "2026-11-24T18:56:44Z",
+                "id": "http://arxiv.org/abs/2611.34936v1",
+                "title": "DexLink: Synthesizing Dexterous Behaviors from Chained Hand-object Poses",
+                "updated": "2026-11-25T18:59:36Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.33144v1",
+                        "@href": "https://arxiv.org/abs/2611.34936v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.33144v1",
+                        "@href": "https://arxiv.org/pdf/2611.34936v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Learning for dexterous manipulation is limited by the scarcity of high-quality demonstrations: retargeting from human video is imprecise, teleoperation gives no force feedback to the operator, and exoskeleton-based collection is hard to scale up. We present PyRUA-Dex, a framework that enables coding agents to develop dexterous manipulation through programmatic policy, without the need of demonstrations. The programmatic policy is developed in two stages: during exploration, multiple agents explore in parallel for task skills and ways to compose them, and a distilling agent condenses the successful attempts into a task library and one program. During refinement, this program is improved through randomized layouts for enhanced robustness and execution efficiency. In simulated environments, PyRUA-Dex achieves SOTA on Bench2Dex with a score of 72.9 and reaches 81.0% success on DexJoCo under full randomization, ahead of every trained policy on both benchmarks. In real world experiments on a bimanual platform with two 22-DoF hands, PyRUA-Dex learns to play piano, write calligraphy, and other tasks efficiently: learning a new piece from sheet music takes as little as 30 minutes. These results suggest that PyRUA-Dex is an effective framework for developing dexterous manipulation policies with coding agents in the absence of high quality dexterous manipulation demonstrations.",
+                "summary": "Synthesizing diverse dexterous manipulation policies is challenging: existing simulation-based approaches rely on human demonstrations which are difficult to scale, or use generic reward functions, which provide limited control over the hand-object interactions. We propose DexLink, which addresses these limitations by synthesizing diverse dexterous behaviors from sparse, reusable hand-object interaction templates. Given key task waypoints, DexLink retargets static interaction templates to target objects using an optimization that preserves spatial hand-object relationships. It then links the retargeted poses into an approximate reference trajectory and uses residual reinforcement learning to refine this reference into a closed-loop policy in simulation. Experiments spanning single-hand, bimanual, articulated, and dynamic tasks demonstrate that DexLink provides fine-grained control over task timing, grasp types, and high-level execution. The modular interaction templates transfer reliably across object scales, instances, and categories; without object-specific human demonstrations, the framework also matches the performance of dense reference-tracking methods. Finally, zero-shot deployment of policies trained purely in simulation shows promise for the simulation-based framework.",
                 "category": {
                     "@term": "cs.RO",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-24T18:56:44Z",
-                "arxiv:comment": "23 pages, 9 figures, 7 tables. Project page: https://vme0522.github.io/PyRUA-Dex/",
+                "published": "2026-11-25T18:59:36Z",
                 "arxiv:primary_category": {
                     "@term": "cs.RO"
                 },
                 "author": [
                     {
-                        "name": "Feixiang Ruan"
+                        "name": "Meenal Parakh"
                     },
                     {
-                        "name": "Guodong Lv"
+                        "name": "Deep Patel"
                     },
                     {
-                        "name": "Kewei Zhang"
+                        "name": "Beining Han"
                     },
                     {
-                        "name": "Wenbo Huang"
-                    },
-                    {
-                        "name": "Yintianrun Zhang"
-                    },
-                    {
-                        "name": "Qiang Wang"
-                    },
-                    {
-                        "name": "Ruiyang Si"
-                    },
-                    {
-                        "name": "Shunyu Yang"
-                    },
-                    {
-                        "name": "Shulong Jiang"
-                    },
-                    {
-                        "name": "Weicheng Duan"
-                    },
-                    {
-                        "name": "Rui Ni"
-                    },
-                    {
-                        "name": "Jianxin Bi"
-                    },
-                    {
-                        "name": "Lekai Wang"
-                    },
-                    {
-                        "name": "Yuze Fan"
-                    },
-                    {
-                        "name": "Haobo Li"
-                    },
-                    {
-                        "name": "Zeliang Fu"
-                    },
-                    {
-                        "name": "Jiankun Zhang"
-                    },
-                    {
-                        "name": "Duomin Wang"
-                    },
-                    {
-                        "name": "Enze Xie"
-                    },
-                    {
-                        "name": "Daquan Zhou"
+                        "name": "Jia Deng"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.33141v1",
-                "title": "iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction",
-                "updated": "2026-11-24T18:56:04Z",
+                "id": "http://arxiv.org/abs/2611.34935v1",
+                "title": "Can image generation help visual reasoning? An empirical study",
+                "updated": "2026-11-25T18:59:31Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.33141v1",
+                        "@href": "https://arxiv.org/abs/2611.34935v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.33141v1",
+                        "@href": "https://arxiv.org/pdf/2611.34935v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "World-action models (WAMs) build policies on pretrained video-generation models, on the premise that predicting how a scene evolves helps determine how to act. However, generating future scenes is expensive for real-time control. This motivates efficient proxies for future imagination, but how to train such proxies without sacrificing action-prediction quality remains unclear. An effective proxy need not generate a high-resolution frame; it only needs to provide enough information to distinguish between possible futures. This leads to the design principle behind iWAM: rather than denoising an entire future frame, can we condition the action policy on intermediate features from a single video-model evaluation? We show that the answer is yes. Exploiting the reversible dynamics of flow-matching models, we invert each training future into the corresponding latent noise vector. However, a single velocity evaluation at this latent does not necessarily yield informative features for action prediction. We therefore learn a bidirectional flow map that amortizes future-generation computation, enabling a single model evaluation to provide effective conditioning features. At inference, we sample a latent noise vector from the prior and condition the policy using just one video-backbone forward pass. Across simulated benchmarks and real robots, iWAM recovers the generalization benefits of WAMs while substantially reducing its inference cost.",
-                "category": [
-                    {
-                        "@term": "cs.RO",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.CV",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    },
-                    {
-                        "@term": "cs.LG",
-                        "@scheme": "http://arxiv.org/schemas/atom"
-                    }
-                ],
-                "published": "2026-11-24T18:56:04Z",
-                "arxiv:primary_category": {
-                    "@term": "cs.RO"
-                },
-                "author": [
-                    {
-                        "name": "Vansh Kapoor"
-                    },
-                    {
-                        "name": "Max Sobol Mark"
-                    },
-                    {
-                        "name": "Sreyas Venkataraman"
-                    },
-                    {
-                        "name": "Max Simchowitz"
-                    },
-                    {
-                        "name": "Aviral Kumar"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.33137v1",
-                "title": "Physicl Scenes: An Artist-created 3D Dataset for Learning Perception and Action",
-                "updated": "2026-11-24T18:55:07Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.33137v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.33137v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "We present Physicl Scenes, a high-quality artist-created and curated dataset of 6,499 3D scenes spanning household rooms, public interiors, and outdoor spaces. The dataset combines detailed geometry, physically based materials, and carefully composed environments with object- and part-level semantic annotations, providing rich, joint supervision for visual and embodied learning. We demonstrate its value as training data across inverse rendering, 3D reconstruction, scene understanding, and mobile manipulation. Across these tasks, training state-of-the-art methods with our scenes improves performance over alternative synthetic datasets. In addition, we introduce a mobile manipulation benchmark, evaluating vision-language-action models performing physical pick and place in diverse 3D scenes with realistic layouts, and using our part annotations to also score where each object is grasped. Our dataset will be released publicly to facilitate research in visual and embodied AI.",
-                "category": {
-                    "@term": "cs.CV",
-                    "@scheme": "http://arxiv.org/schemas/atom"
-                },
-                "published": "2026-11-24T18:55:07Z",
-                "arxiv:comment": "Project: https://liu115.github.io/physicl video: https://youtu.be/UgyQFQSU-oc",
-                "arxiv:primary_category": {
-                    "@term": "cs.CV"
-                },
-                "author": [
-                    {
-                        "name": "Yueh-Cheng Liu"
-                    },
-                    {
-                        "name": "Snehal Jauhri"
-                    },
-                    {
-                        "name": "Matthias Nie\u00dfner"
-                    },
-                    {
-                        "name": "Angela Dai"
-                    }
-                ]
-            },
-            {
-                "id": "http://arxiv.org/abs/2611.33133v1",
-                "title": "A Bias in Disguise: Tiny Gradient Edits Stop a Small Language Model's Thinking Loops and Complement a Frontier Model's Weight Edit",
-                "updated": "2026-11-24T18:53:22Z",
-                "link": [
-                    {
-                        "@href": "https://arxiv.org/abs/2611.33133v1",
-                        "@rel": "alternate",
-                        "@type": "text/html"
-                    },
-                    {
-                        "@href": "https://arxiv.org/pdf/2611.33133v1",
-                        "@rel": "related",
-                        "@type": "application/pdf",
-                        "@title": "pdf"
-                    }
-                ],
-                "summary": "Qwen3.5-0.8B rarely finishes reasoning in thinking mode: at a 4,096-token budget only 1 or 2 of 500 MATH-500 answers close their think block (two seeds), and accuracy is 15.4%. A recent demonstration had GPT-6 Astra edit 131,072 of the model's weights without gradients and reported MATH-500 rising from 7.9% to 48.1% at a 32,768-token budget. We provide the missing gradient baseline, then combine the two edits. Fine-tuning only the 140 to 139,750 weights with the largest gradient, on the model's own correct answers to MATH training problems, raises thinking-mode MATH-500 at 4k tokens to 39.0-45.5% after 2-9 minutes of training on one GPU; 50 training examples suffice, and 1,398 random positions give only 16.3%. The gradient concentrates the edit on the most nearly constant channel of each of the first three layers. Because the model has no bias terms, an edit confined to those channels acts as a constant vector added to the residual stream: adding three fixed vectors to the unedited model matches the accuracy of such an edit. Under the Astra protocol (32k tokens, presence penalty 1.5), the Astra edit scores 52.1% (finished and correct) in our reproduction and our full-strength edits reach 45.6-45.7%, but ours win at every budget up to 16k tokens (39.5% against 6.7% at 4k). The two edits are complementary. The Astra edit plus our 139,750-weight edit at half strength scores 62.2% at 32k, 10 points above the Astra edit alone (p = 3e-9), with half as many tokens; our half-strength edit alone scores 46.7%.",
+                "summary": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and generator pairs, generation lowers mean accuracy by 3.7 percentage points, with declines on nine of ten tasks. Two unified models, BAGEL and Janus-Pro-7B, each lose accuracy on eight tasks. On VSTAR, adding a generated image to the same planning hint lowers accuracy by 10.47 points. Repeated image edits yield different outcomes across tasks. ChartQAPro and MathVista stay below their no-generation baselines, while ERQA gains three points after ten edits.",
                 "category": [
                     {
                         "@term": "cs.LG",
@@ -462,38 +173,270 @@
                     {
                         "@term": "cs.CL",
                         "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.CV",
+                        "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-24T18:53:22Z",
-                "arxiv:comment": "11 pages, 2 figures, 7 tables",
+                "published": "2026-11-25T18:59:31Z",
                 "arxiv:primary_category": {
                     "@term": "cs.LG"
                 },
-                "author": {
-                    "name": "Hussamuddin Syed"
-                }
+                "author": [
+                    {
+                        "name": "Xueyang Yu"
+                    },
+                    {
+                        "name": "Yifan Jing"
+                    },
+                    {
+                        "name": "Taiming Lu"
+                    },
+                    {
+                        "name": "Linrong Cai"
+                    },
+                    {
+                        "name": "Zhipeng Cai"
+                    },
+                    {
+                        "name": "Yunyang Xiong"
+                    },
+                    {
+                        "name": "Gabriel Sarch"
+                    },
+                    {
+                        "name": "Zhuang Liu"
+                    }
+                ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.33130v1",
-                "title": "Exploratory Midtraining for Robot Policies",
-                "updated": "2026-11-24T18:52:34Z",
+                "id": "http://arxiv.org/abs/2611.34934v1",
+                "title": "Attack Policy Selection can Mislead Monitor Evaluators",
+                "updated": "2026-11-25T18:59:28Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.33130v1",
+                        "@href": "https://arxiv.org/abs/2611.34934v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.33130v1",
+                        "@href": "https://arxiv.org/pdf/2611.34934v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Robot policies predominantly learn from human-collected data emphasizing competent behavior, limiting coverage of the low-level behaviors needed to support autonomous improvement. We study how a form of midtraining can be used to build coverage over diverse low-level behaviors that connect challenging states of the robot and its environment to states from which further progress is possible (\"connected behavioral coverage\"). We also examine how this coverage supports downstream adaptation and online improvement. To this end, we introduce $\u03b2$-Data, a dataset collected via adversarial teleoperation, where a human adversary reversibly perturbs the environment while a human operator continues toward completion without resetting. We relabel trajectory segments with local outcomes in natural language and finetune a pretrained policy conditioned on recent action history. The resulting policy exhibits sustained use of more low-level behaviors. Across manipulation tasks in simulation and on three real-robot platforms, our approach yields more favorable data scaling laws, better zero-shot generalization, and more effective use of additional rollout time than training on standard demonstrations. During online finetuning, these policies need fewer rollouts to collect successful experience and reach higher success rates, suggesting that midtraining can prepare robots for both more robust task execution and continued autonomous improvement. Our project page and robot videos are available at https://kshitiz-1225.github.io/exploratory-midtraining-robot-policies/.",
+                "summary": "AI monitors, classifiers that flag dangerous behaviour by AI agents, are often evaluated against transcripts generated by attack policies acting as proxies for dangerous behaviour in deployment. We evaluate an ex-production OpenAI monitor as a case study and find that measured false negative rate is highly sensitive to both the method used to generate attack policies and the level of optimisation applied within that method. This rate ranged from 0.5\\% to 20.8\\% across optimisation levels of a single method (reinforcement learning), and from 6.4\\% to 23.0\\% across methods at their best observed optimisation level (optimised prompting vs.\\ transcript editing). Every attack policy was developed against proxy monitors only: all reported results show attacks transferring to the held-out GPT-5.4 target monitor. Our results suggest that monitor evasion evaluations can easily mislead: an evaluation using only basic attack methods may give false confidence that a monitor is strong.\n  The sensitivity to attack-policy choice raises a problem: interpreting any particular result as evidence about deployment performance requires justification. The transcripts produced by attack policies are proxies for the dangerous behaviour a monitor must flag in deployment. These proxies can introduce visible artefacts, such as reasoning about a ``side task'' absent from the instructions shown to the monitor, that affect monitor judgements. Given the sensitivity above, the choice of proxy can change an evaluation's conclusion. Reading these results as evidence about deployment therefore requires a separate legitimacy argument for why the proxies are informative, including any justification of conservativeness. Making convincing arguments remains an open problem.",
                 "category": [
                     {
-                        "@term": "cs.RO",
+                        "@term": "cs.LG",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    }
+                ],
+                "published": "2026-11-25T18:59:28Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Charlie Griffin"
+                    },
+                    {
+                        "name": "Oliver Makins"
+                    },
+                    {
+                        "name": "Asa Cooper Stickland"
+                    },
+                    {
+                        "name": "Alessandro Abate"
+                    },
+                    {
+                        "name": "Yarin Gal"
+                    },
+                    {
+                        "name": "Abby D'Cruz"
+                    },
+                    {
+                        "name": "Xander Davies"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.34932v1",
+                "title": "MERLoc: Robust Robot Localization in Dynamic Environments with Pose-Based Retrieval over 3D Gaussian Splatting References",
+                "updated": "2026-11-25T18:59:23Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.34932v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.34932v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Robots operating in previously mapped spaces must localize accurately despite moving people and rearranged objects. Most localization pipelines match the query against a sparse set of captured reference images retrieved by appearance, which is brittle under scene change and repeating structures. We present MERLoc, which turns a single metric 3D Gaussian Splatting scan into a dense Functional Reference Memory. Reference views are sampled over the navigable space for the robot's morphology and sensors at a target density and rendered offline. Pre-encoding them for the chosen off-the-shelf localizer removes the reference encoder from inference. A pose-based retrieval strategy then selects references by spatial proximity and viewing direction rather than appearance, sidestepping visual ambiguities whenever a prior exists. Across one classical and four learned localizers in simulated and real dynamic scenes, pose-based retrieval matches or outperforms appearance retrieval in most cases, even when the latter is gated by the same prior. On real data, it lowers position RMSE by 15-60 % in nine of ten backend/split combinations, and the rendered memory outperforms real-image caches posed by Structure-from-Motion. The system runs onboard a Jetson Orin NX at 5 Hz, enabling a navigation policy to successfully traverse a hallway with people roaming and rearranging objects.",
+                "category": {
+                    "@term": "cs.RO",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-25T18:59:23Z",
+                "arxiv:primary_category": {
+                    "@term": "cs.RO"
+                },
+                "author": [
+                    {
+                        "name": "Michael Baumgartner"
+                    },
+                    {
+                        "name": "Dario Mylonopoulos"
+                    },
+                    {
+                        "name": "Sammy Christen"
+                    },
+                    {
+                        "name": "Markus Gross"
+                    },
+                    {
+                        "name": "Moritz Bacher"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.34930v1",
+                "title": "A gene informed benchmark for BioScoring of pathology foundation models",
+                "updated": "2026-11-25T18:59:13Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.34930v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.34930v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Pathology foundation models are usually compared by their performance on downstream tasks such as classification and retrieval. While such benchmarks measure how useful a model is, they provide no insight into the biology it represents. We introduce BioScore, a benchmark that quantifies how well an image encoder captures cell identities, with spatial transcriptomics of the same tissue as the reference. A sparse autoencoder splits the encoder's patch embeddings into sparse features, which we cluster into a fixed number of groups. BioScore then measures, for each of 52 cell identities defined by marker genes, how specifically one group follows the identity's expression over the tissue. Because the autoencoder training is fully unsupervised, a match shows that the model represents the cell identity from the image alone. We score 8 pathology foundation models and 3 natural-image models. Every pathology model scores above every natural-image model (0.299--0.371 \\vs 0.214--0.232), and paired tests separate three tiers among the pathology models. Unlike a supervised probe, BioScore needs no labels, builds its reference from the data and scores even from few sections, yet it ranks the encoders as a probe does. Its per-identity breakdown indicates which cell identities each encoder captures or misses.",
+                "category": {
+                    "@term": "cs.LG",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-25T18:59:13Z",
+                "arxiv:comment": "32 pages, 18 figures",
+                "arxiv:primary_category": {
+                    "@term": "cs.LG"
+                },
+                "author": [
+                    {
+                        "name": "Paul Vilars"
+                    },
+                    {
+                        "name": "Vincent Quoc-Huy Trinh"
+                    },
+                    {
+                        "name": "Maria Vakalopoulou"
+                    },
+                    {
+                        "name": "Dimitris Samaras"
+                    },
+                    {
+                        "name": "Stergios Christodoulidis"
+                    },
+                    {
+                        "name": "Mahdi S. Hosseini"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.34929v1",
+                "title": "High-Fidelity Image Matting with Pixel-Space Diffusion Transformers",
+                "updated": "2026-11-25T18:59:12Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.34929v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.34929v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Diffusion models have shown strong potential for image matting by transferring generative priors learned from large-scale pretraining. However, existing approaches largely rely on latent diffusion models, whose compressed representations and VAE-based reconstruction introduce a mismatch with the high-frequency precision required for matting. We present PixelMatte, a framework that adapts pretrained pixel-space diffusion transformers for high-fidelity image matting. We show that strong image-conditioned matting capabilities can be acquired even from a pure text-to-image model without paired image-to-image pretraining. Our approach reuses the backbone's native patch embedding to jointly process the input image, trimap, and noisy alpha matte as spatially aligned tokens, enabling direct pixel-space prediction without additional condition encoders or adapters. With pixel-accurate synthetic supervision and real-image fine-tuning, PixelMatte predicts alpha mattes in a single forward pass. Two lightweight calibration modules, LayerShift and High-Pass Refiner, further improve regional opacity accuracy and boundary fidelity. Experiments across four benchmarks and two distinct pixel diffusion backbones demonstrate substantial improvements over existing methods, reducing SAD and gradient errors by 24-44% relative to RenderMatte on P3M-500-NP and AM-2K, while achieving competitive performance on AIM-500 and RenderMatte-2K. These results demonstrate the effectiveness of pixel-space generative priors for precision-sensitive image matting. Project page: https://white-yc.github.io/pixelmatte/.",
+                "category": {
+                    "@term": "cs.CV",
+                    "@scheme": "http://arxiv.org/schemas/atom"
+                },
+                "published": "2026-11-25T18:59:12Z",
+                "arxiv:comment": "11 pages, 5 figures, 5 tables. Project page: https://white-yc.github.io/pixelmatte/",
+                "arxiv:primary_category": {
+                    "@term": "cs.CV"
+                },
+                "author": [
+                    {
+                        "name": "Baihan Yang"
+                    },
+                    {
+                        "name": "Xin Lin"
+                    },
+                    {
+                        "name": "Yufan Wei"
+                    },
+                    {
+                        "name": "Baiang Li"
+                    },
+                    {
+                        "name": "Yuheng Liu"
+                    },
+                    {
+                        "name": "Juanxi Tian"
+                    },
+                    {
+                        "name": "Xiaohui Xie"
+                    },
+                    {
+                        "name": "Truong Nguyen"
+                    }
+                ]
+            },
+            {
+                "id": "http://arxiv.org/abs/2611.34928v1",
+                "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
+                "updated": "2026-11-25T18:59:11Z",
+                "link": [
+                    {
+                        "@href": "https://arxiv.org/abs/2611.34928v1",
+                        "@rel": "alternate",
+                        "@type": "text/html"
+                    },
+                    {
+                        "@href": "https://arxiv.org/pdf/2611.34928v1",
+                        "@rel": "related",
+                        "@type": "application/pdf",
+                        "@title": "pdf"
+                    }
+                ],
+                "summary": "Post-training large language models (LLMs) for mathematical reasoning often relies on accepted traces whose final answers pass a verifier. For hard math problems, however, such traces can be rare under independent Monte Carlo (MC) sampling. To address this, we propose Diverse Alternative Reasoning Traces (DART), a trace-mining method that starts from a rejected trace, decomposes it into reasoning steps, and ranks them by position-weighted uncertainty. It then generates deliberately distinct alternative candidates for highly ranked steps using reference-answer guidance and a meta-thought before completing the resulting traces. On greedy-unsolved DeepMath-103K problems, DART recovers 37% more problems than MC sampling at a matched number of generated traces. Its estimated generation cost per recovered problem is nearly identical, while its cost per accepted trace is 30% lower. Post-training Llama-3.1-8B-Instruct on traces mined by DART achieves the highest point estimate in five of six evaluations across MATH-500 and AIME benchmarks. These results demonstrate that revisiting rejected traces with DART can expand problem coverage and provide effective post-training data.",
+                "category": [
+                    {
+                        "@term": "cs.CL",
+                        "@scheme": "http://arxiv.org/schemas/atom"
+                    },
+                    {
+                        "@term": "cs.AI",
                         "@scheme": "http://arxiv.org/schemas/atom"
                     },
                     {
@@ -501,84 +444,76 @@
                         "@scheme": "http://arxiv.org/schemas/atom"
                     }
                 ],
-                "published": "2026-11-24T18:52:34Z",
+                "published": "2026-11-25T18:59:11Z",
+                "arxiv:comment": "NeurIPS 2026 (Workshops)",
                 "arxiv:primary_category": {
-                    "@term": "cs.RO"
+                    "@term": "cs.CL"
                 },
                 "author": [
                     {
-                        "name": "Kshitiz"
+                        "name": "Lukas Aichberger"
                     },
                     {
-                        "name": "Zheyuan Hu"
+                        "name": "Adam Golinski"
                     },
                     {
-                        "name": "Robyn Wu"
+                        "name": "Arno Blaas"
                     },
                     {
-                        "name": "Yizhou Li"
+                        "name": "Arwen Bradley"
                     },
                     {
-                        "name": "Yunchu Zhang"
+                        "name": "Jacob Springer"
                     },
                     {
-                        "name": "Vattanary Tevy"
+                        "name": "Mehrdad Farajtabar"
                     },
                     {
-                        "name": "Kavya Tayal"
+                        "name": "Michael Kirchhof"
                     },
                     {
-                        "name": "Shawn Yin"
-                    },
-                    {
-                        "name": "Aykut Onol"
-                    },
-                    {
-                        "name": "Kushal Arora"
-                    },
-                    {
-                        "name": "Dhruv Shah"
-                    },
-                    {
-                        "name": "Abhishek Gupta"
-                    },
-                    {
-                        "name": "Zackory Erickson"
-                    },
-                    {
-                        "name": "Aviral Kumar"
+                        "name": "Sinead Williamson"
                     }
                 ]
             },
             {
-                "id": "http://arxiv.org/abs/2611.33126v1",
-                "title": "A note on input-oblivious unambiguous hierarchies",
-                "updated": "2026-11-24T18:51:53Z",
+                "id": "http://arxiv.org/abs/2611.34926v1",
+                "title": "Magnons in solids with correlated atomic and nanoscale disorder",
+                "updated": "2026-11-25T18:58:59Z",
                 "link": [
                     {
-                        "@href": "https://arxiv.org/abs/2611.33126v1",
+                        "@href": "https://arxiv.org/abs/2611.34926v1",
                         "@rel": "alternate",
                         "@type": "text/html"
                     },
                     {
-                        "@href": "https://arxiv.org/pdf/2611.33126v1",
+                        "@href": "https://arxiv.org/pdf/2611.34926v1",
                         "@rel": "related",
                         "@type": "application/pdf",
                         "@title": "pdf"
                     }
                 ],
-                "summary": "Unambiguous hierarchies are defined similarly to the polynomial hierarchy; however, all witnesses must be unique. Their versions differ in the mode of using oracles. We consider input-oblivious unambiguous hierarchies built from the class OUP, in which all positive inputs of the same length have the same unique witness: the hierarchy OUH with language oracles and the hierarchy OUH$_\\bullet$ with loose access to promise oracles, which is the input-oblivious version of the loose unambiguous hierarchy of Hirsch and Sokolov (IPL, 2015). We show that languages in OUH$_\\bullet$ can be decided in deterministic polynomial time with an ONP oracle, and for languages in OUH oracle queries can be made nonadaptive.\n  Moreover, languages in OUH can be decided in deterministic polynomial time with a tally NP oracle, and languages in OUH$_{\\bullet}$ can be decided in P/OptP, that is, a subclass of P/poly where the advice is generated by a function that maximizes outputs of a nondeterministic machine on a unary input. We show that P/OptP can be characterized in terms of OGTD and OUGTD generator--tester--decoder classes recently considered by Hirsch and Volkovich (arXiv:cs.CC/2611.16096) and, in particular, is contained in their \"ultimate\" Karp--Lipton collapse class OUM.\n  We also observe several other facts related to OUP: (1) the hierarchy defined by input-oblivious unambiguous dot-operators collapses, (2) in OUP computations, a single loose query to prOUP can be replaced by a query to OUP, (3) SOUP=OUP$\\cap$coOUP, where SOUP is the same-witness class recently considered by Hirsch, Volkovich, and Williams (2026).",
+                "summary": "Atomic defects and disorder affect both the microscopic magnon excitations and the macroscopic physical properties of real-world magnetic materials. The rationalization of this relation has hitherto remained elusive, because of the intertwined challenges of simulating with quantum accuracy atomic- and nanoscale inhomogeneities and correlations, and their effect on the magnon spectral function determining observables such as spin stiffness. Here, we introduce a theoretical and computational framework to address these challenges. First, we develop the Coupled Optimization of SpIN Environment (COSINE) algorithm for efficiently relaxing the atomic structure and magnetic configuration of a solid with defects or disorder to a local energy minimum. Then, we discuss how to efficiently obtain exchange interactions accounting for local compositional, structural, and magnetic-moment inhomogeneities. Finally, we develop a paraunitary unfolding approach for Bogoliubov bosons, which allows us to predict the magnon spectral function in materials with any magnetic order, including systems with canting and full, partial, or no magnetic-moment compensation. We showcase our approach in a representative defective ferrimagnet for generality, and then combine it with state-of-the-art spin-informed machine-learning potentials to quantitatively predict how nonuniformities in the spatial distribution of vacancy defects control blurring of effective magnon bandstructures.",
                 "category": {
-                    "@term": "cs.CC",
+                    "@term": "cond-mat.dis-nn",
                     "@scheme": "http://arxiv.org/schemas/atom"
                 },
-                "published": "2026-11-24T18:51:53Z",
+                "published": "2026-11-25T18:58:59Z",
+                "arxiv:comment": "17 pages, 7 figures",
                 "arxiv:primary_category": {
-                    "@term": "cs.CC"
+                    "@term": "cond-mat.dis-nn"
                 },
-                "author": {
-                    "name": "Edward A. Hirsch"
-                }
+                "author": [
+                    {
+                        "name": "Alex Moorhouse"
+                    },
+                    {
+                        "name": "Joseph Barker"
+                    },
+                    {
+                        "name": "Michele Simoncelli"
+                    }
+                ]
             }
         ]
     }
